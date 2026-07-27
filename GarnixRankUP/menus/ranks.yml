@@ -15,7 +15,8 @@ cost-format-head: ' &8► &f{amount} &7{display}'
 
 empty-icon:
   slot: 22
-  material: WEB
+  material: BOWL
+  amount: 0
   display: '&cVazio'
   lore:
   - '&7Nenhum rank encontrado.'
@@ -30,8 +31,8 @@ info-icon:
 
 ranking-icon:
   slot: 50
-  material: ARMOR_STAND
-  display: '&aRanking'
+  material: GOLD_NUGGET
+  display: '&6TOP'
   lore:
   - '&7Clique para ver.'
 

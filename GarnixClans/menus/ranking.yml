@@ -24,8 +24,7 @@ clan-icon:
 
 empty-position-icon:
   material: BARRIER
-  display: '&8#{position} &7Nenhum clan'
-  lore: []
+  display: '&8#{position} &7Nenhum'
 
 filters:
   kills-display: Abates
@@ -56,7 +55,7 @@ filter-icon:
 
 back-icon:
   slot: 38
-  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

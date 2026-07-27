@@ -44,9 +44,6 @@ schedule-icon:
 ranking-icon:
   slot: 15
   material: GOLD_NUGGET
-  display: '&bTOP'
+  display: '&6TOP'
   lore:
-  - '&7Veja os jogadores com'
-  - '&7mais vitórias em eventos.'
-  - ''
-  - '&bClique para abrir.'
+  - '&7Clique para ver.'

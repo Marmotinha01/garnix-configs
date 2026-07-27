@@ -9,11 +9,11 @@ shape:
 
 empty-icon:
   slot: 22
-  material: BARRIER
-  display: '&cNenhum aliado'
+  material: BOWL
+  amount: 0
+  display: '&cVazio'
   lore:
-  - '&7Seu clan ainda não possui'
-  - '&7alianças firmadas.'
+  - '&7Nenhum aliado encontrado.'
 
 ally-icon:
   material: DIAMOND
@@ -55,7 +55,7 @@ requests-icon:
 
 back-icon:
   slot: 40
-  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

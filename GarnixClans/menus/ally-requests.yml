@@ -8,8 +8,11 @@ shape:
 
 empty-icon:
   slot: 13
-  material: BARRIER
-  display: '&cNenhuma solicitação'
+  material: BOWL
+  amount: 0
+  display: '&cVazio'
+  lore:
+  - '&7Nenhuma solicitação encontrada.'
 
 request-icon:
   material: PAPER
@@ -22,7 +25,7 @@ request-icon:
 
 back-icon:
   slot: 31
-  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

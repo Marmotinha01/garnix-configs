@@ -19,7 +19,8 @@ lore-inactive:
 
 empty-icon:
   slot: 22
-  material: WEB
+  material: BOWL
+  amount: 0
   display: '&cVazio'
   lore:
-  - '&7Você não possui nenhum VIP ativo.'
+  - '&7Nenhum VIP encontrado.'

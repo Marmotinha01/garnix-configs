@@ -1,7 +1,7 @@
-# Menu — Ranking de Duelos
-
 title: TOP Duelos
 
+# Cada '.' é uma posição do ranking, preenchida em ordem (rank #1 no primeiro '.').
+# A quantidade de '.' define o tamanho do ranking.
 shape:
 - XXXXXXXXX
 - XXX...XXX
@@ -9,7 +9,6 @@ shape:
 - XXXXXXXXX
 - XXXXXXXXX
 
-# Cabeça de cada jogador. {position} {player} {score} {lp_prefix} {lp_suffix}
 user-icon:
   display: '&8#{position} {lp_suffix} {player}'
   wins-lore:
@@ -50,6 +49,6 @@ filter-icon:
 back-icon:
   slot: 38
   texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
-  display: '&cVoltar'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

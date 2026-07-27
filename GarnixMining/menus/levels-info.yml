@@ -9,10 +9,11 @@ shape:
 
 empty-icon:
   slot: 13
-  material: WEB
+  material: BOWL
+  amount: 0
   display: '&cVazio'
   lore:
-  - '&7Nenhum nível disponível.'
+  - '&7Nenhum nível encontrado.'
 
 level-icon:
   material: STAINED_GLASS_PANE

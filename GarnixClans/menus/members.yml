@@ -9,8 +9,11 @@ shape:
 
 empty-icon:
   slot: 22
-  material: BARRIER
-  display: '&cNenhum membro'
+  material: BOWL
+  amount: 0
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum membro encontrado.'
 
 # Renderizado sobre a cabeça de cada membro. O líder vem primeiro, depois os
 # sub-líderes e por fim os membros.
@@ -38,7 +41,7 @@ invite-icon:
 
 back-icon:
   slot: 41
-  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

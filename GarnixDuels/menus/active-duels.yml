@@ -37,14 +37,15 @@ duel-no-bet-icon:
 
 empty-icon:
   slot: 22
-  material: WEB
+  material: BOWL
+  amount: 0
   display: '&cVazio'
   lore:
-  - '&7Nenhum duelo em andamento.'
+  - '&7Nenhum duelo encontrado.'
 
 back-icon:
   slot: 49
   texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
-  display: '&cVoltar'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

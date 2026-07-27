@@ -61,12 +61,9 @@ upgrade-icon:
 ranking-icon:
   slot: 30
   material: GOLD_NUGGET
-  display: '&bTOP'
+  display: '&6TOP'
   lore:
-  - '&7Veja os jogadores que'
-  - '&7mais colhem na fazenda.'
-  - ''
-  - '&bClique para acessar.'
+  - '&7Clique para ver.'
 
 skins-icon:
   slot: 32

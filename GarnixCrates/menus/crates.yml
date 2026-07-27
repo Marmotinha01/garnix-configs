@@ -42,6 +42,6 @@ current-robot-remove-lore:
 ranking-icon:
   slot: 42
   material: GOLD_NUGGET
-  display: '&aTOP'
+  display: '&6TOP'
   lore:
   - '&7Clique para ver.'

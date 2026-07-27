@@ -39,9 +39,6 @@ swords-icon:
 ranking-icon:
   slot: 24
   material: GOLD_NUGGET
-  display: '&aTOP'
+  display: '&6TOP'
   lore:
-  - '&7Veja os jogadores com'
-  - '&7maior eliminações em boss.'
-  - ''
-  - '&aClique para acessar.'
+  - '&7Clique para ver.'

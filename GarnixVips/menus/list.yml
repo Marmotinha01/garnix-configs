@@ -16,7 +16,8 @@ player-head:
 
 empty-icon:
   slot: 22
-  material: WEB
+  material: BOWL
+  amount: 0
   display: '&cVazio'
   lore:
-  - '&7Nenhum jogador possui VIP ativo.'
+  - '&7Nenhum jogador encontrado.'

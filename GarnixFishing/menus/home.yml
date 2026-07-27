@@ -32,12 +32,9 @@ shop-icon:
 ranking-icon:
   slot: 25
   material: GOLD_NUGGET
-  display: '&bTOP'
+  display: '&6TOP'
   lore:
-  - '&7Veja os jogadores que'
-  - '&7mais se destacam na pesca.'
-  - ''
-  - '&bClique para acessar.'
+  - '&7Clique para ver.'
 
 # Shown when the player has at least one active booster (clickable → booster menu).
 booster-icon:

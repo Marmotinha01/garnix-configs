@@ -1,5 +1,7 @@
 title: TOP Bosses
 
+# Cada '.' é uma posição do ranking, preenchida em ordem (rank #1 no primeiro '.').
+# A quantidade de '.' define o tamanho do ranking.
 shape:
 - XXXXXXXXX
 - XXX...XXX
@@ -8,7 +10,7 @@ shape:
 - XXXXXXXXX
 
 user-icon:
-  display: '&8#{position} {lp_prefix} {player}'
+  display: '&8#{position} {lp_suffix} {player}'
   kills-lore:
   - '&fBosses Abatidos: &c{score}'
   damage-lore:
@@ -29,8 +31,8 @@ info-icon:
   material: PAPER
   display: '&aAtualização Periódica'
   lore:
-  - '&7O ranking é atualizado a cada'
-  - '&f{refresh} &7minutos.'
+  - '&7O ranking é atualizado'
+  - '&7a cada &f{refresh} &7minutos.'
   - ''
   - '&8&oÚltima atualização &7&o{last_update}&8&o.'
 
@@ -39,15 +41,14 @@ filter-icon:
   material: HOPPER
   display: '&aFiltrar'
   lore:
-  - '&7Altere o filtro dos top'
-  - '&7com base as opções abaixo.'
   - ''
-  - ' &8▸ &7{filters}'
+  - '{filters}'
   - ''
-  - '&fClique para &7alterar &ffiltro.'
+  - '&aClique para alternar.'
+
 back-icon:
   slot: 38
-  texture: "7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf"
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

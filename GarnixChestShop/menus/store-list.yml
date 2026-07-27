@@ -10,15 +10,16 @@ shape:
 
 empty-icon:
   slot: 22
-  material: WEB
-  display: '&cNenhuma Loja'
+  material: BOWL
+  amount: 0
+  display: '&cVazio'
   lore:
   - '&7Nenhuma loja encontrada.'
 
 ranking-icon:
   slot: 47
   material: GOLD_NUGGET
-  display: '&aTOP'
+  display: '&6TOP'
   lore:
   - '&7Clique para ver.'
 

@@ -13,7 +13,8 @@ drop-lore:
 
 empty-icon:
   slot: 13
-  material: WEB
+  material: BOWL
+  amount: 0
   display: '&cVazio'
   lore:
   - '&7Nenhum drop encontrado.'
@@ -34,7 +35,7 @@ sell-all-empty-icon:
 
 back-icon:
   slot: 30
-  material: ARROW
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

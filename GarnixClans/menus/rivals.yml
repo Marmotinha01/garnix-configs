@@ -9,8 +9,11 @@ shape:
 
 empty-icon:
   slot: 22
-  material: BARRIER
-  display: '&cNenhuma rivalidade'
+  material: BOWL
+  amount: 0
+  display: '&cVazio'
+  lore:
+  - '&7Nenhuma rivalidade encontrada.'
 
 rival-icon:
   material: IRON_SWORD
@@ -52,7 +55,7 @@ declare-icon:
 
 back-icon:
   slot: 38
-  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

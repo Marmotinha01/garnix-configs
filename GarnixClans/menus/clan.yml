@@ -132,13 +132,10 @@ online-clans-icon:
 
 ranking-icon:
   slot: 50
-  material: GOLD_INGOT
-  display: '&6Ranking de Clans'
+  material: GOLD_NUGGET
+  display: '&6TOP'
   lore:
-  - '&7Os clans que mais se'
-  - '&7destacam no servidor.'
-  - ''
-  - '&6Clique para acessar.'
+  - '&7Clique para ver.'
 
 leave-icon:
   slot: 53

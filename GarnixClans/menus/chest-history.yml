@@ -9,11 +9,11 @@ shape:
 
 empty-icon:
   slot: 22
-  material: BARRIER
-  display: '&cSem movimentações'
+  material: BOWL
+  amount: 0
+  display: '&cVazio'
   lore:
-  - '&7Nada entrou ou saiu do'
-  - '&7baú do clan ainda.'
+  - '&7Nenhuma movimentação encontrada.'
 
 # Renderizados sobre o próprio item movimentado.
 deposit-entry:
@@ -30,7 +30,7 @@ withdraw-entry:
 
 back-icon:
   slot: 40
-  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

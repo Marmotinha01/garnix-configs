@@ -11,10 +11,11 @@ shape:
 # Exibido quando não há nenhum ícone disponível.
 empty-icon:
   slot: 22
-  material: BARRIER
-  display: '&cNenhum Ícone'
+  material: BOWL
+  amount: 0
+  display: '&cVazio'
   lore:
-  - '&7Nenhum ícone disponível.'
+  - '&7Nenhum ícone encontrado.'
 
 # Acrescentado ao ícone atualmente selecionado.
 selected-lore:
@@ -23,7 +24,7 @@ selected-lore:
 
 back-icon:
   slot: 40
-  texture: "7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf"
-  display: '&cVoltar'
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&eVoltar'
   lore:
   - '&7Clique para voltar.'

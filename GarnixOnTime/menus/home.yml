@@ -10,7 +10,7 @@ player-head:
 ranking-icon:
   slot: 13
   material: GOLD_NUGGET
-  display: '&aTOP'
+  display: '&6TOP'
   lore:
   - '&7Clique para ver.'
 

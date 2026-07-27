@@ -10,10 +10,11 @@ shape:
 
 empty-icon:
   slot: 22
-  material: WEB
+  material: BOWL
+  amount: 0
   display: '&cVazio'
   lore:
-  - '&7Nenhum item no correio.'
+  - '&7Nenhum item encontrado.'
 
 # Exibido no lugar de um item cujo ícone não pôde ser carregado (dado corrompido).
 broken-icon:
