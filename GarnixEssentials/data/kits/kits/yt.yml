@@ -1,0 +1,28 @@
+display: Kit YT
+
+category: influenciadores
+
+permission: advantages.yt
+
+cooldown: 24h
+
+slot: 10
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  texture: bb7688da46586b859a1cde40cae1cdbc15abe35615c4bc5296fad09394105d0
+  display: '&c&lKit YT'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit YT'
+  lore:
+  - '&7Necessário ser &c&lYT&7.'
+
+content: H4sIAAAAAAAA/8WUTUsjQRCGayaJToYcxNX1aw+93rx4WljYg7CbVRRFDxFhT6EyUzvT2B+z3Z348YfyP/LL7BjHEEdBRbKXhqLet/p5q6FjgCY0uCNpYwBoRRDyFNYkV5QY/Ot+pBylVmnXXmmTBtBo675yQQw1h1kT6qSSfGysh1ATAwGN8H7AEszW22UdTupPT+oViGEx5bYQeBNB/RQlQWs0TEZDcXx0zv6cgzcs/EaJGfnbJpSfp5SZFimpLhaFoBIynjqCB8dGNVfBk0u8ppeThbNJWCXZO8hXqxxzZ1h/5o1zPSDx3zFyEpLcqzHgIzC+VDGSnKzzQ9zrH+ZDUDarKIKyjKvMzhfkmV+gp7WbM8XSlKLQjmtVXt961LKdN2i3q+mc4cUVN9TNtb4sLVElXfCQJpik2YMaNA95SgcCMzvuRxD5gY66vrvQ09aSnQb2g060oWj8WcLWaPi9rZXlGTLseYtKNZs4dr3g62j4rS34vz4xsv40vlug8Voj8ZYUmnuJ7nuz4YYhS3IceLFkfekL5Ne4W2542Sv9htuHPy/22a+zTme/M7tnuANQHMAsBQYAAA==

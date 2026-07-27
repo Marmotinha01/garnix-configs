@@ -1,0 +1,28 @@
+display: Kit Endermite
+
+category: ranks
+
+permission: rank.endermite
+
+cooldown: 8h
+
+slot: 28
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  texture: 1730127e3ac7677122422df0028d9e7368bd157738c8c3cddecc502e896be01c
+  display: '&5Kit Endermite'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Endermite'
+  lore:
+  - '&7Ainda não desbloqueado.'
+
+content: H4sIAAAAAAAA/82UXUsbQRSGz26i3YRCg9aPflxMveuN9MIi9KJgY0RQ2otAb8PJzunu4HxsZyaJ+ofyP/LLOnGzBl0FW6R6s+zLed/D887AtAFasCI8KdcGgJcJxILDlhKaUou//BcuUBnNB25iLI9gpWtG2kdtaHjMWtAknebzYDOGhhxLaMVXCzqw0Empdyodl3r9ln4NbXjBhSskXiTQ/I6KoDObfj4RnvU0J6sCIoTQ6iEqzMIvlKSbS9LMSE56gEUhqQL9tExEi8SberdCpGd4Tve3i2+2Y7V2/0i/UWd5Eo7tO+47N2OSzwIlJ6nIPxgFHgvlfR0lzcn5sMg//JIeDedtHUdSlgmduf8Pc8cLMTTGPwFJZ0lSGC+MrhDYtZd9/AvvTr2ht6KYCEuD3JizKvKq1jBaNIrKRl+hAa1jwelIYubm8wSSsNDTIExXh8Y5csvSYdGpsZTMH1N4N5vud412IkOGwxDR3LAysRsMH2bTva4Uv0fEyIWvDdMCbfBahZek0V5ZzCiErbAMWZrjOJgVG6kgUJzjbnXKa8E5m8ru8cHPHvv2o9/v9W+eM/wBN3MTSiUGAAA=

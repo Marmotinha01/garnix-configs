@@ -1,0 +1,44 @@
+display: "Blaze"
+
+mine-level-unlock: 40
+
+max-level: 100
+
+base-cost: 5000
+increase-cost: 15000
+
+base-chance: 2.5
+increase-chance: 0.05
+
+# --- Fireball barrage ----------------------------------------------------------
+# Blazes hover over the dig site and lob fireballs at the mine; each fireball that
+# lands blasts a CUBE out of the virtual mine.
+
+# Impact blast radius of each fireball (cube side = 2*radius+1).
+fireball-explosion-radius: 1
+
+# How long the blazes keep launching fireballs, in ticks (20 ticks = 1 second).
+fireball-duration-ticks: 72
+
+# Ticks between each fireball launch (20 ticks = 1 second; lower = faster barrage).
+fireball-interval-ticks: 6
+
+messages:
+  - "&6&lBLAZE! &fUma onda de blazes incendiou a mina!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&6&lBLAZE!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 31
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&6{display}"
+  lore:
+    - "&7Tenha a chance de invocar blazes"
+    - "&7que lançam bolas de fogo na mina!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""

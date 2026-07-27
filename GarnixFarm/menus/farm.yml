@@ -1,0 +1,87 @@
+title: Fazenda
+rows: 4
+
+go-icon:
+  slot: 11
+  material: WOOD_HOE
+  display: '&6Entrar na Área'
+  lore:
+  - ''
+  - ' &8Plantação atual: '
+  - ' &8▪ {type}'
+  - ''
+  - '&6Clique para ir colher!'
+  flags:
+  - HIDE_ATTRIBUTES
+
+leave-icon:
+  slot: 11
+  material: BARRIER
+  display: '&cSair da Fazenda'
+  lore:
+  - '&7Clique para sair.'
+
+# Shown when the player has at least one active booster (clickable → booster menu).
+booster-icon:
+  slot: 15
+  material: POTION
+  data: 8227
+  flags:
+  - HIDE_POTION_EFFECTS
+  display: '&aBoosters'
+  lore:
+  - '&7Servem para aumentar'
+  - '&7seus ganhos na pesca.'
+  - ''
+  - '&aClique para gerenciar.'
+
+# Shown when the player has no active boosters (static).
+booster-none-icon:
+  slot: 15
+  material: GLASS_BOTTLE
+  amount: 0
+  display: '&cBoosters'
+  lore:
+  - '&7Servem para aumentar'
+  - '&7seus ganhos na pesca.'
+  - ''
+  - ' &c▾ Nenhum booster ativo. '
+  - ''
+
+upgrade-icon:
+  slot: 13
+  material: NETHER_STAR
+  display: '&aEvoluir Fazenda'
+  lore:
+  - '&7Compre a próxima plantação'
+  - '&7e evolua toda a sua fazenda.'
+  - ''
+  - '&aClique para acessar.'
+
+ranking-icon:
+  slot: 30
+  material: GOLD_NUGGET
+  display: '&bTOP'
+  lore:
+  - '&7Veja os jogadores que'
+  - '&7mais colhem na fazenda.'
+  - ''
+  - '&bClique para acessar.'
+
+skins-icon:
+  slot: 32
+  materials:
+  - WOOD_HOE
+  - STONE_HOE
+  - IRON_HOE
+  - GOLD_HOE
+  - DIAMOND_HOE
+  interval: 20
+  display: '&eSkins de Enxada'
+  lore:
+  - '&7Ganhe bônus ao alterar'
+  - '&7a skin da sua enxada.'
+  - ''
+  - '&eClique para gerenciar.'
+  flags:
+  - HIDE_ATTRIBUTES

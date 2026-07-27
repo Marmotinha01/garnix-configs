@@ -1,0 +1,253 @@
+debug: false
+
+channels:
+  # Canal padrão para o chat digitado sem comando (LOCAL ou GLOBAL).
+  default: LOCAL
+  
+  global:
+    # Delay entre mensagens no canal global (segundos). chat.delay.bypass ignora.
+    delay-seconds: 3
+  
+  local:
+    # Raio (em blocos, mesmo mundo) do canal local.
+    radius: 30
+    # Delay entre mensagens no canal local (segundos). chat.delay.bypass ignora.
+    delay-seconds: 2
+
+# Tempo (segundos) que um [item] mostrado no chat continua clicável.
+item-snapshot-ttl-seconds: 120
+
+# Quantidade de linhas em branco enviadas pelo /chat clear.
+clear-lines: 100
+
+# ── Menção (@nick) ──
+# Quando um jogador escreve @nick no chat, o mencionado recebe title, subtitle,
+# som e uma mensagem no chat. Só notifica quem RECEBE a mensagem naquele canal
+# (no Local, apenas quem está no raio) e nunca quem está ignorando quem mencionou.
+# Os textos ficam no messages.yml (seção "mention").
+mention:
+  # Liga/desliga o sistema de menção por completo.
+  enabled: true
+  # Torna o nome do remetente clicável na mensagem do canal: ao clicar, o outro
+  # jogador recebe "/g @Nick, " (ou /l) sugerido no chat para mencioná-lo de volta.
+  click-name: true
+  # Nome da tag (seção "tags" do messages.yml) usada como NOME DO REMETENTE quando você
+  # usa um sistema de nicks — ex.: uma tag "nick" com text: '%essentials_nickname%' no
+  # lugar do token {player}. Essa tag ganha o mesmo clique de menção do {player} (se ela
+  # não tiver run/suggest próprio) e NUNCA some: sem nick, cai para o nome real. Deixe
+  # vazio para desligar (aí só o {player} é clicável).
+  name-tag: nick
+  title:
+    # Liga/desliga o title + subtitle (o som e a mensagem no chat continuam).
+    enabled: true
+    # Tempos em ticks (20 ticks = 1 segundo).
+    fade-in: 10
+    stay: 40
+    fade-out: 10
+  sound:
+    # Nome válido de org.bukkit.Sound (1.8), ou string vazia para silenciar.
+    name: ORB_PICKUP
+    volume: 1.0
+    pitch: 1.0
+
+# ── Anti-divulgação ──
+# Detecta links/domínios/IPs e, para quem NÃO tem 'chat.ad.bypass', faz um shadow-drop:
+# o remetente vê a própria mensagem normalmente (achando que todos viram), mas NINGUÉM
+# mais recebe, e o staff com 'chat.ad.notify' é avisado (sem punição). Textos no messages.yml.
+#
+# Filosofia: bloquear tudo é impossível, então usamos WHITELIST — qualquer link é pego,
+# menos os que você liberar aqui. Um domínio liberado cobre www e todos os subdomínios
+# (redegarnix.com libera regras.redegarnix.com); um link com caminho libera só aquele caminho
+# (discord.gg/redegarnix passa, discord.gg/outroservidor é pego).
+#
+# Anti-bypass (best-effort): normaliza "ponto"->".", "arroba"->"@", "barra"->"/",
+# "dois pontos"->":", junta letras espaçadas (r e d e g a r n i x) e remove espaços ao redor
+# de pontos (rede . com -> rede.com). Roda depois de remover TODOS os códigos de cor, então
+# nem quem tem chat.colors.bypass escapa colando & no meio do domínio (rede&0garnix.com).
+# O que NÃO pega de propósito: domínio quebrado só por espaços, sem ponto (rede garnix com).
+anti-advertisement:
+  enable: true
+  
+  # Janela (segundos) de deduplicação do alerta ao staff: se o MESMO jogador for pego de novo
+  # dentro desse tempo, o staff recebe só UM alerta no chat (o console sempre loga toda tentativa,
+  # com o número da tentativa). Evita "spam" de alertas quando alguém insiste. 0 desliga a
+  # deduplicação (alerta em toda tentativa). Veja as capturas com /chat stats.
+  alert-dedup-seconds: 8
+  
+  # Só é considerado link se o final bater com um destes TLDs (evita falso-positivo em
+  # "config.yml", "sr.silva", "versao 1.16.5"). Adicione/edite conforme necessário.
+  tlds:
+  - com
+  - net
+  - org
+  - gg
+  - io
+  - br
+  - com.br
+  - me
+  - tv
+  - xyz
+  - online
+  - site
+  - store
+  - club
+  - live
+  - shop
+  - link
+  - click
+  - fun
+  - app
+  - dev
+  - info
+  - biz
+  - co
+  - tk
+  - ml
+  - ga
+  - cf
+  - gq
+  
+  # Links liberados. Sem "/" = domínio (cobre www + subdomínios). Com "/" = caminho específico.
+  whitelist:
+  - redegarnix.com
+  - discord.gg/redegarnix
+  
+  # Domínios de terceiros TOLERADOS (mesma lógica da whitelist: sem "/" cobre www + subdomínios).
+  # Use para sites de mídia/compartilhamento que NÃO são servidores concorrentes.
+  # ATENÇÃO: liberar um domínio inteiro libera TODOS os caminhos dele. Ex.: liberar "discord.gg"
+  # aqui deixaria passar QUALQUER convite de Discord (inclusive de concorrentes) — se você só quer
+  # o seu, mantenha "discord.gg/redegarnix" na whitelist acima e NÃO ponha "discord.gg" aqui.
+  allowed-domains:
+  - youtube.com
+  - youtu.be
+  - imgur.com
+  - hastebin.com
+  - prntscr.com
+  
+  # Nomes de servidores concorrentes conhecidos. Checado ANTES do detector de links (mais barato),
+  # pega quem divulga sem sequer usar link ("entra no MEGACRAFT"). A comparação normaliza para
+  # minúsculo, remove espaços ("m e g a") e funde caracteres sósias (cirílico/grego), então também
+  # pega mascaramento leve. Dica: use nomes DISTINTIVOS (evite pedaços curtos que casem por acidente).
+  blocklist:
+  - servidorconcorrente
+  - exemplocraft
+
+# ── Anti-capslock ──
+# Para mensagens com pelo menos 'min-length' caracteres, se a porcentagem de letras MAIÚSCULAS passar
+# de 'percentage', a mensagem é "des-gritada" (vira minúsculo) — exceto as 'skip-words'. Jogadores com
+# 'chat.caps.bypass' não são afetados. A porcentagem é medida só sobre LETRAS (números/símbolos não
+# contam) e ignora códigos de cor (&x).
+capslock:
+  # Liga/desliga o anti-capslock.
+  enable: true
+  
+  # Tamanho mínimo (caracteres) da mensagem para ser analisada.
+  min-length: 6
+  
+  # Porcentagem de MAIÚSCULAS permitida antes de des-gritar (fallback dos valores por canal abaixo).
+  percentage: 25
+  # Opcional: porcentagem por canal (se ausente, usa 'percentage' acima). Global costuma ser + rígido.
+  percentage-global: 20
+  percentage-local: 30
+  
+  # Só age se houver PELO MENOS esta quantidade de letras maiúsculas (evita punir "OI" curto).
+  min-uppercase: 4
+  
+  # Palavras (sequências de letras) MENORES que isto são ignoradas na medição e na des-gritação,
+  # então acrônimos/gírias curtas sobrevivem (GG, XP, TV...). Use 1 para não ignorar nada.
+  min-word-length: 3
+  
+  # false (recomendado) = normaliza SÓ as palavras gritadas (majoritariamente maiúsculas), mantendo
+  #   o resto exatamente como o jogador escreveu. Ex.: "Venha jogar AGORA" -> "Venha jogar agora".
+  # true = BLOQUEIA a mensagem inteira e avisa o jogador (texto em messages.yml).
+  block: false
+  
+  # Palavras que NÃO perdem o capslock (casadas como palavra inteira). Ex.: a marca do servidor.
+  #  - [CS] = caso sensitivo (diferencia maiúsc./minúsc.)
+  #  - [CI] = caso insensitivo (padrão)
+  skip-words:
+  - '[CI]GARNIX'
+
+# ── Formatação/beautify (cosmético) ──
+# Ajustes aplicados DEPOIS do anti-capslock. Jogadores com 'chat.caps.bypass' não são afetados.
+formatting:
+  # Colapsa repetição excessiva do MESMO caractere (anti-flood): "AAAA"->"AAA", "kkkkk"->"kkk",
+  # "!!!!"->"!!!". Dígitos NUNCA são colapsados (valores como 1000000 ficam intactos). 0 desliga.
+  max-repeated-chars: 3
+  
+  # Troca vírgula final por ponto (erro comum de tecla): "oi galera," -> "oi galera."
+  comma-to-period: true
+  
+  # Adiciona ponto final quando a frase termina em letra/número: "oi galera" -> "oi galera."
+  add-final-period: true
+  
+  # Começa a frase com letra maiúscula (capitalize): "venha jogar" -> "Venha jogar"
+  capitalize-first: true
+
+# Configurações do sistema de substituição de mensagens.
+replace-messages:
+  # Define se o recurso de substituição de mensagens deve ser ativado.
+  enable: true
+  
+  # Regras de substituição, uma por linha, no formato:  "chave1,chave2,...->substituição"
+  # - Várias chaves separadas por vírgula compartilham a mesma substituição.
+  # - Não diferencia maiúsculas de minúsculas (vc = VC = Vc).
+  # - Chave de palavra (só letras/números) só troca a palavra inteira: "vc" nunca altera
+  #   "avcorp"; já atalhos como ":star:" ou "<3" são trocados onde aparecerem.
+  # - Aplicado depois de remover os códigos de cor: para jogadores normais não dá para
+  #   "escapar" escondendo a palavra entre & (ex.: "ma&0caco" continua sendo filtrado).
+  #   Quem tem permissão de cor (chat.colors.bypass) mantém os & e ainda consegue burlar.
+  # - Vale no chat local, global e nas mensagens privadas (/tell e /r).
+  # - Lista de símbolos compatíveis (1.8): https://hypixel.net/threads/%E3%83%84symbols%E2%98%BB.787483/
+  replacers:
+    # ── Correção de escrita / abreviações ──
+
+    # ── Filtro de palavras (troca o xingamento por algo gentil) ──
+    # As variações incluem erros de escrita e "leetspeak" (v14do, macac0) para dificultar
+    # a evasão. Para jogadores normais o filtro roda DEPOIS de remover os códigos de cor, então
+    # "ma&0caco" também é pego. Alongar a vogal final também é pego automaticamente em chaves de
+    # 4+ letras terminadas em vogal ("macacooo", "putaaa" -> "lindo"), sem precisar listar. O que
+    # NÃO dá pra pegar: separar por espaço/ponto ("m a c a c o"), alongar no meio ("caaaralho"),
+    # nem quem tem permissão de cor colando um & no meio da palavra.
+    # Racismo:
+    # Homofobia:
+    # Insultos em geral:
+    # Palavrões:
+    # Abreviações ofensivas:
+    # Frases ofensivas (a expressão inteira vira uma palavra só):
+    - vc,voce,vose,ce->você
+    - voces,vcs->vocês
+    - nois->nós
+    - nao->não
+    - tmb,tbm,tb,tambem->também
+    - pq->porque
+    - q->que
+    - vlw->valeu
+    - blz->beleza
+    - flw->falou
+    - obg,obgd,brigado->obrigado
+    - vdd->verdade
+    - aki,aqi->aqui
+    - agr->agora
+    - hj->hoje
+    - amanha->amanhã
+    - cmg->comigo
+    - ctg->contigo
+    - mt,mto->muito
+    - cade->cadê
+    - eh->é
+    - neh->né
+    - ta->tá
+    - encima,emcima->em cima
+    - familia->família
+    - alguem,algm->alguém
+    - ninguem,ngm->ninguém
+    - porem->porém
+    - atras->atrás
+    - preto,pretinho,pretinha,pret0,macaco,macaca,macacos,macac0,mac4co,makaco,m4kako,m4k4k0,m4k4ko,m4kak0,makako,mcc,mkc,crioulo->lindo
+    - viadinho,viado,viadao,viadão,veado,veadinho,v1ado,v14do,viad0,bixa,bixona,bixinha,bicha,bichona,bichinha,boiola,boiolinha,baitola,mariquinha,sapatao,sapatão,gay,gayzinho,gayzao,gayzão,gei,traveco->lindo
+    - otario,otário,otaria,otarios,0tario,idiota,imbecil,estupido,estúpido,retardado,mongoloide,mongol,debil,débil,babaca,panaca,jumento,jegue,trouxa,mane,mané,paspalho,tapado,arrombado,arrombada,arombado,corno,cornao,cornão,corninho,chifrudo,escroto,escrota,vagabundo,vagabunda,vagaba,desgraça,desgraçado,desgracado,disgraça->lindo
+    - caralho,caralio,karalho,caralh0,kralho,cacete,porra,poha,pora,porraa,p0rra,merda,m3rda,bosta,foder,fodase,fodac,buceta,boceta,xota,xoxota,cuzao,cuzão,cuzinho,puta,putaria,putinha,prostituta,piranha,biscate,rapariga->lindo
+    - fdp,vtnc,vsf,krl,crl,klr,tnc,tmnc->lindo
+    - filho da puta,vai se fuder,vai tomar no cu,toma no cu,tomar no cu,puta que pariu,vai a merda->lindo
+    - pau,pal,pica,rola,cu,puto,nego,neguinho,rato,lixo,verme,burro,gordo,feio,baleia,anta,besta,imenso,imensola,neguinho->lindo

@@ -1,0 +1,76 @@
+# The 3 rod enchantments. Levels live on the rod's NBT and are applied with
+# enchant books (dragged onto the rod). The highest configured level is the cap.
+#   speed  : seconds removed from the catch interval (flat, not percent)
+#   luck   : % weight boost for rewards flagged "rare: true"
+#   double : % chance to catch twice at once
+#
+# Each enchant defines its own book item under "book" (material/display/lore),
+# with the {enchant} (enchant display) and {level} placeholders.
+
+enchantments:
+  
+  speed:
+    display: '&bCorrenteza'
+    book:
+      material: ENCHANTED_BOOK
+      display: '&bLivro de Correnteza &7{level}'
+      lore:
+      - '&fCorrenteza: &b{level}'
+      - ''
+      - '&7Arraste sobre a sua Vara de Pesca'
+      - '&7para aplicar.'
+    levels:
+      '1':
+        value: 1
+      '2':
+        value: 2
+      '3':
+        value: 3
+      '4':
+        value: 4
+      '5':
+        value: 5
+  
+  luck:
+    display: '&aFaro Aguçado'
+    book:
+      material: ENCHANTED_BOOK
+      display: '&aLivro de Faro Aguçado &7{level}'
+      lore:
+      - '&fFaro Aguçado: &a{level}'
+      - ''
+      - '&7Arraste sobre a sua Vara de Pesca'
+      - '&7para aplicar.'
+    levels:
+      '1':
+        value: 15
+      '2':
+        value: 30
+      '3':
+        value: 50
+      '4':
+        value: 75
+      '5':
+        value: 100
+  
+  double:
+    display: '&dFartura'
+    book:
+      material: ENCHANTED_BOOK
+      display: '&dLivro de Fartura &7{level}'
+      lore:
+      - '&fFartura: &d{level}'
+      - ''
+      - '&7Arraste sobre a sua Vara de Pesca'
+      - '&7para aplicar.'
+    levels:
+      '1':
+        value: 5
+      '2':
+        value: 10
+      '3':
+        value: 18
+      '4':
+        value: 28
+      '5':
+        value: 40

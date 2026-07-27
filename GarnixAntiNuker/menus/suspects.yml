@@ -1,0 +1,66 @@
+title:
+  mining: Suspeitos da Mina
+  farming: Suspeitos da Fazenda
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- XX.....XX
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum suspeito encontrado.'
+
+# Ícone de cada suspeito (cabeça do próprio jogador). Uma entrada por posição
+# ocupada da 'shape'; as vazias mostram o item padrão de página vazia do framework.
+# Placeholders: {position} {player} {strikes} {peak_bps} {mode} {last}
+#               {bps} {sustained} {cv} {span} {location} {reasons}
+# (os campos da última detecção mostram 'n/a' quando ainda não há evidência).
+mining-user-icon:
+  display: '&c#{position} &7{player}'
+  lore:
+  - ''
+  - ' &fOcorrências: &c{strikes} '
+  - ' &fMaior BPS: &4{peak_bps} '
+  - ' &fModo: &e{mode} '
+  - ''
+  - ' &6Última detecção &8(&f{last}&8): '
+  - ' &8▶ &fBPS: &c{bps} '
+  - ' &8▶ &fSustentado: &c{sustained} '
+  - ' &8▶ &fRitmo (cv): &c{cv} '
+  - ' &8▶ &fÁrea (span): &c{span} '
+  - ' &8▶ &fLocal: &c{location} '
+  - ' &8▶ &fMotivo: &e{reasons} '
+  - ''
+  - '&eClique para ir até o suspeito. '
+
+farm-user-icon:
+  display: '&c#{position} &7{player}'
+  lore:
+  - ''
+  - ' &fOcorrências: &c{strikes} '
+  - ' &fMaior BPS: &4{peak_bps} '
+  - ' &fModo: &e{mode} '
+  - ''
+  - ' &6Última detecção &8(&f{last}&8): '
+  - ' &8▶ &fBPS: &c{bps} '
+  - ' &8▶ &fSustentado: &c{sustained} '
+  - ' &8▶ &fRitmo (cv): &c{cv} '
+  - ' &8▶ &fÁrea (span): &c{span} '
+  - ' &8▶ &fLocal: &c{location} '
+  - ' &8▶ &fMotivo: &e{reasons} '
+  - ''
+  - '&eClique para ir até o suspeito.'
+
+back-icon:
+  slot: 49
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

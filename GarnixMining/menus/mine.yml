@@ -1,0 +1,104 @@
+# Menu — Mining Hub (/mina)
+
+title: Mineração
+rows: 4
+
+booster-icon:
+  slot: 15
+  amount: 1
+  material: POTION
+  display: '&eBoosters'
+  lore:
+  - '&7Servem para aumentar'
+  - '&7seus ganhos na mina.'
+  - ''
+  - '&eClique para gerenciar.'
+
+booster-none-icon:
+  slot: 15
+  amount: 0
+  material: GLASS_BOTTLE
+  display: '&cBoosters'
+  lore:
+  - '&7Servem para aumentar'
+  - '&7seus ganhos na mina.'
+  - ''
+  - ' &c▾ Nenhum booster ativo. '
+  - ''
+
+skins-icon:
+  materials: ['WOOD_PICKAXE', 'STONE_PICKAXE', 'IRON_PICKAXE', 'GOLD_PICKAXE', 'DIAMOND_PICKAXE']
+  interval: 20
+  slot: 32
+  display: '&eSkins de Picareta'
+  lore:
+  - '&7Ganhe bônus ao alterar'
+  - '&7a skin da sua picareta.'
+  - ''
+  - '&eClique para gerenciar.'
+  flags: ["HIDE_ATTRIBUTES"]
+mine-icon:
+  slot: 10
+  material: WOOD_PICKAXE
+  display: '&6Entrar na área'
+  lore:
+  - ''
+  - ' &8Evolução da Área:'
+  - ' &8▪ &fNível: &7{level}'
+  - ''
+  - ' &8Composição da Mina:'
+  - ' {block_list}'
+  - ''
+  - '&6Clique para ir minerar!'
+  flags:
+  - HIDE_ATTRIBUTES
+  block-entry: ' &8▴ &f{block_name} &c{chance} '
+  reward-separator: '&8▪'
+  reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '
+
+leave-mine-icon:
+  slot: 10
+  material: BARRIER
+  display: '&cSair da Mina'
+  lore:
+  - '&7Clique para sair.'
+
+manage-icon:
+  slot: 16
+  texture: 'dfc3c243fc0894aa4028d32b19a830a2fcadc293270b4cb32c1bae42c78c08be'
+  display: '&4Gerenciar Mina'
+  lore:
+  - '&7Gerencie todas as funções'
+  - '&7da sua área de mineração.'
+  - ''
+  - '&4Clique para acessar.'
+
+friend-mines-icon:
+  slot: 11
+  texture: '76cbae7246cc2c6e888587198c7959979666b4f5a4088f24e26e075f140ae6c3'
+  display: '&dMinas de Amigos'
+  lore:
+  - '&7Acesse a área de mineração'
+  - '&7do seus amigos.'
+  - ''
+  - '&dClique para acessar.'
+
+public-mines-icon:
+  slot: 13
+  material: WOOD_DOOR
+  display: '&aMinas Públicas'
+  lore:
+  - '&7Acesse áreas de mineração'
+  - '&7de outros jogadores.'
+  - ''
+  - '&aClique para acessar.'
+
+ranking-icon:
+  slot: 30
+  material: GOLD_NUGGET
+  display: '&bTOP'
+  lore:
+  - '&7Veja os jogadores que'
+  - '&7mais se destacam na mina.'
+  - ''
+  - '&bClique para acessar.'

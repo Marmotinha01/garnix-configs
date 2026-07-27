@@ -1,0 +1,27 @@
+debug: false
+
+ranking-refresh-minutes: 5
+
+hologram:
+  offset-y: 2.1
+  lines:
+  - '&e{countdown}s'
+  - '&a{display} &8▶ &fx{stack}'
+  - '&7{owner}'
+  no-fuel-lines:
+  - '&cSem Combustível'
+  - '&a{display} &8▶ &fx{stack}'
+  - '&7{owner}'
+
+machine:
+  stack-radius: 5
+  place-break-cooldown: 10
+
+captcha-duration: 30
+
+booster:
+  # Tempo restante mínimo (segundos) para recuperar um booster ativo da máquina.
+  # Ao recuperar, o jogador recebe de volta um item valendo 50% do tempo restante
+  # (perde a outra metade). O piso bloqueia o abuso de recuperar boosters quase
+  # expirados só para reativar outro sem esperar.
+  min-remove-seconds: 30

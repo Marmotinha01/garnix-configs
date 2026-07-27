@@ -1,0 +1,24 @@
+# ╔══════════════════════════════════════╗
+# ║      GarnixDuels — Data              ║
+# ╚══════════════════════════════════════╝
+# Arquivo gerenciado pelo plugin. Não edite manualmente enquanto o
+# servidor estiver ligado.
+#
+# arena.pos1   — onde o desafiante nasce      (/x1 setpos1)
+# arena.pos2   — onde o desafiado nasce        (/x1 setpos2)
+# arena.exit   — para onde os jogadores voltam (/x1 setexit)
+# arena.cabin  — o camarote dos espectadores   (/x1 setcabin)
+arena:
+  pos1: arenas:-23.484320086754405:116.0:-4899.5005467301835:90.00163:-1.9597278
+  pos2: arenas:-47.53220970157135:116.0:-4899.4997697201825:269.98734:-1.9630811
+  cabin: arenas:-16.50596792586914:122.0:-4899.5047506909805:90.004425:0.054883726
+  exit: world:0.5017954264488965:61.0:0.49654941578158374:-89.94496:0.05481981
+
+# Mito atual do servidor.
+#   name      — nome do mito (vazio = nenhum)
+#   last-seen — epoch millis da última vez que o mito esteve online
+#   last-pvp  — epoch millis do último PvP do mito (deu ou levou um hit)
+myth:
+  name: ''
+  last-seen: 0
+  last-pvp: 0

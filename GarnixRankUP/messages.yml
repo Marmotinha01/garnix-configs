@@ -1,0 +1,28 @@
+reload-success: '&aConfigurações do rankup recarregadas com sucesso!'
+
+rankup-success: '&aVocê evoluiu para o rank {rank_tag}&a!'
+max-rank: '&cVocê já está no rank máximo! Use &f/prestigio &cpara reiniciar seu progresso.'
+rank-not-released: '&cEste rank ainda não foi liberado! Liberação: &f{date}'
+
+# {costs} expands into one cost line per requirement (cost-line for currencies, cost-line-head for heads).
+insufficient:
+- ''
+- '  &cVocê não tem recursos suficientes para evoluir!'
+- '  &7Custos necessários:'
+- '  {costs}'
+- ''
+# Currency cost line. Placeholders: {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
+cost-line: '  &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'
+# Head cost line. Placeholders: {amount} {display}
+cost-line-head: '  &8► &f{amount} &7{display}'
+
+prestige-success: '&aVocê evoluiu para o prestígio &f{prestige}&a!'
+prestige-not-last-rank: '&cVocê precisa estar no último rank para prestigiar.'
+
+set:
+  success: '&aRank de &f{player} &adefinido para a ordem &f#{order}&a.'
+  invalid-order: '&cNão existe rank com a ordem &f#{order}&c.'
+
+setprestige:
+  success: '&aPrestígio de &f{player} &adefinido para &f{prestige}&a.'
+  invalid: '&cPrestígio inválido: &f{prestige}&c.'

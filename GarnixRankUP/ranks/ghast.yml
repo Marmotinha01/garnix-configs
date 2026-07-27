@@ -1,0 +1,13 @@
+order: 19
+
+name: "Ghast"
+tag: "&f&l[Ghast]"
+
+texture: '7a8b714d32d7f6cf8b37e221b758b9c599ff76667c7cd45bbc49c5ef19858646'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

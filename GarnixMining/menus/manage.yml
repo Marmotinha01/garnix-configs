@@ -1,0 +1,135 @@
+title: Gerenciando a Mina
+rows: 6
+
+status-public-icon:
+  slot: 11
+  material: INK_SACK
+  data: 10
+  display: '&aMina Pública'
+  lore:
+  - '&7Altere a prividade de'
+  - '&7sua área de mineração.'
+  - ''
+  - ' &8▸ &fRestrição: &aPública'
+  - ''
+  - '&aClique para alterar.'
+
+status-private-icon:
+  slot: 11
+  material: INK_SACK
+  data: 8
+  display: '&cMina Privada'
+  lore:
+  - '&7Altere a prividade de'
+  - '&7sua área de mineração.'
+  - ''
+  - ' &8▸ &fRestrição: &cPrivada'
+  - ''
+  - '&cClique para alterar.'
+
+status-locked-icon:
+  slot: 10
+  material: STAINED_GLASS_PANE
+  data: 14
+  display: '&8Mina Pública'
+  lore:
+  - '&7Recurso exclusivo para'
+  - '&7jogadores VIPs.'
+  - ''
+  - '&fAdquira já seu vip em'
+  - '&c&nhttps://redegarnix.com'
+
+max-players-icon:
+  slot: 12
+  texture: 4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb
+  display: '&eMáximo de Jogadores'
+  lore:
+  - '&7Defina o máximo de'
+  - '&7jogadores na mina.'
+  - ''
+  - '&f Total: &a{total}&8 ▸ &c{max}'
+  - ''
+  - '&8 Opções de acesso:'
+  - '&fEsquerdo: &a+1'
+  - '&fDireito: &c-1'
+
+tax-icon:
+  slot: 13
+  material: REDSTONE_TORCH_ON
+  display: '&cTaxa da Mina'
+  lore:
+  - '&8 ▪ &fAtual: &e{tax}%'
+  - ''
+  - '&7Você recebe &c{tax}% &7dos'
+  - '&7valores p/bloco minerado.'
+  - ''
+  - '&8 Opções de acesso:'
+  - '&fEsquerdo: &7Definir '
+  - '&fDireito: &7Resetar '
+
+collect-tax-icon:
+  slot: 14
+  material: STORAGE_MINECART
+  display: '&aTaxad'
+  lore:
+  - '&7Recolha as taxas acumuladas'
+  - '&7da mineração dos visitantes.'
+  - ''
+  - ' &8Valores a receber:'
+  - '{currency_lines}'
+  - ''
+  - '&aClique para recolher.'
+  currency-format: ' &8▪ {symbol_color}{symbol}{primary_color}{value} {currency}'
+
+collect-tax-empty-icon:
+  slot: 14
+  material: MINECART
+  display: '&cTaxad'
+  lore:
+  - '&7Recolha as taxas acumuladas'
+  - '&7da mineração dos visitantes.'
+  - ''
+  - ' &c▴ Sem taxas acumuladas.'
+  - ''
+
+# Visitor slots / friends. One icon per slot; 'slots' lists the inventory
+# positions, one per slot (must have at least visitor-slots-max entries).
+# A slot renders as:
+#   • locked-icon  — not yet unlocked (activate a Vaga de Visitante item)
+#   • free-icon    — unlocked and empty (click to assign a friend)
+#   • filled       — a friend head (left-click: set tax, right-click: remove)
+friend-slots:
+  slots: [29, 30, 31, 32, 33]
+  locked-icon:
+    material: STAINED_GLASS_PANE
+    data: 14
+    display: '&cSlot Bloqueado'
+    lore:
+    - '&7Esta vaga ainda não foi'
+    - '&7desbloqueada.'
+    - ''
+    - '&7Ative uma &fVaga de Visitante'
+    - '&7para desbloquear.'
+  free-icon:
+    material: STAINED_GLASS_PANE
+    data: 5
+    display: '&aSlot Livre'
+    lore:
+    - '&7Nenhum amigo neste slot.'
+    - ''
+    - '&7Clique para adicionar um amigo.'
+  filled:
+    display: '&e{player}'
+    lore:
+    - '&fStatus: {status}'
+    - '&fTaxa: &c{tax}%'
+    - ''
+    - '&fB. Esquerdo: &7Definir Taxa'
+    - '&fB. Direito: &cRemover Amigo'
+
+back-icon:
+  slot: 49
+  texture: "7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf"
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

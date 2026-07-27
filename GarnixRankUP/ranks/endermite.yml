@@ -1,0 +1,13 @@
+order: 15
+
+name: "Endermite"
+tag: "&5[Endermite]"
+
+texture: '1730127e3ac7677122422df0028d9e7368bd157738c8c3cddecc502e896be01c'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

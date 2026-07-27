@@ -1,0 +1,29 @@
+give:
+  success: '&aVocê entregou &f{amount}x &aLimpador de Terreno para &f{player}&a.'
+  received: '&aVocê recebeu &f{amount}x &aLimpador de Terreno&a.'
+  # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
+  mailed: '&eVocê está em um evento! &f{amount}x &eLimpador de Terreno foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! Os Limpadores que sobraram foram para o seu &6/correio&e.'
+
+usage:
+  not-on-plot: '&cVocê precisa estar dentro de um terreno para usar isto.'
+  plot-no-owner: '&cEste terreno não possui dono.'
+  not-owner: '&cApenas o dono do terreno pode limpá-lo.'
+  already-clearing: '&cEste terreno já está sendo limpo.'
+  no-allowed-blocks: '&cNenhum bloco está configurado para ser removido.'
+
+clear:
+  confirmed: '&aLimpeza iniciada! Acompanhe o progresso na action bar.'
+  cancelled: '&7Limpeza cancelada.'
+  complete: '&aLimpeza concluída! &f{cleared} &ablocos removidos em &f{duration}&a.'
+  interrupted: '&eA limpeza do seu terreno foi interrompida.'
+
+command:
+  no-permission: '&cVocê não tem permissão para usar este comando.'
+  player-not-found: '&cJogador &f{input} &cnão encontrado.'
+  list-header: '&7Limpezas ativas: &f{count}'
+  list-entry: '&8• &f{plot} &7(dono: &f{owner}&7, &f{percent}%&7)'
+  list-empty: '&7Nenhuma limpeza ativa no momento.'
+  stopall: '&aTodas as limpezas foram canceladas. &7({count})'
+
+reload-success: '&aConfigurações recarregadas com sucesso.'

@@ -1,0 +1,49 @@
+# ── Comandos ──
+command:
+  reload-success: '&aConfigurações recarregadas com sucesso!'
+  
+  # /loja additens <categoria> <preço> (coins-shop)
+  additens-usage: '&cUse: &f/loja additens <categoria> <preço>'
+  additens-success: '&aAdicionado(s) &f{count} &aitem(ns) à categoria &f{category}&a!'
+  additens-unknown-category: '&cCategoria &f{category} &cnão encontrada.'
+  additens-invalid-price: '&cPreço inválido.'
+  additens-no-items: '&cSeu inventário está vazio.'
+  additens-menu-full: '&cA categoria não possui slots livres.'
+
+category:
+  no-permission: '&cVocê não tem permissão para acessar esta categoria.'
+
+# ── Compras ──
+# Moeda: {value} {symbol} {symbol_color} {primary_color} {secondary_color} {currency}
+# Sucesso: {amount} {item}
+purchase:
+  
+  cash-shop:
+    success: '&aVocê comprou &fx{amount} {item} &apor {symbol_color}{symbol}{primary_color}{value} {currency}&a!'
+    insufficient-funds: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{value} {currency} &cpara concluir essa compra.'
+    locked: '&cEste item ainda não foi liberado.'
+    already-owned: '&cVocê já adquiriu esse produto.'
+    no-space: '&cSem espaço suficiente no inventário.'
+    invalid-amount: '&cQuantia inválida.'
+    unknown-error: '&cErro ao processar a compra. Tente novamente.'
+  
+  coins-shop:
+    success: '&aVocê comprou &fx{amount} {item} &apor {symbol_color}{symbol}{primary_color}{value} {currency}&a!'
+    insufficient-funds: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{value} {currency} &cpara concluir essa compra.'
+    locked: '&cEste item ainda não foi liberado.'
+    already-owned: '&cVocê já adquiriu esse produto.'
+    no-space: '&cSem espaço suficiente no inventário.'
+    invalid-amount: '&cQuantia inválida.'
+    unknown-error: '&cErro ao processar a compra. Tente novamente.'
+    cancelled: '&cOperação cancelada.'
+    
+    # Quantidade customizada (ask-quantity)
+    cancel-word: cancelar
+    max-quantity: 2304
+    quantity-prompt:
+    - ''
+    - '  &aDigite a quantidade que deseja comprar.'
+    - '  &7Para cancelar digite &8cancelar&7.'
+    - ''
+    invalid-quantity-range: '&cA quantia deve estar entre &f{min} &ce &f{max}&c.'
+    invalid-quantity-number: '&cDigite um número inteiro válido.'

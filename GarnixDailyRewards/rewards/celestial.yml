@@ -1,0 +1,18 @@
+display: 'Celestial'
+
+permission: 'daily.celestial'
+
+cooldown: '1d'
+
+slot: 30
+
+commands:
+  - 'cash add {player} 100'
+
+collect-icon:
+  texture: 'a89b93fd616ed3670ccf647a0f9380398c0d4615634f2deff46c6edbdc712885'
+  display: '&e&lCELESTIAL'
+  lore:
+    - '&fRecompensa: &6❂100 Cash'
+    - ''
+    - '&aClique para coletar!'

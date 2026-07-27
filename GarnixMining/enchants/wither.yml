@@ -1,0 +1,45 @@
+display: "Wither"
+
+mine-level-unlock: 45
+
+max-level: 100
+
+base-cost: 8000
+increase-cost: 20000
+
+base-chance: 2.5
+increase-chance: 0.05
+
+# --- Skull bombardment ---------------------------------------------------------
+# The Wither spins and lobs its own skulls at the mine; each skull that lands
+# blasts a SPHERE out of the virtual mine. The skulls are the whole effect —
+# there is no final crater.
+
+# Sphere radius each skull breaks on impact (in blocks).
+skull-explosion-radius: 3
+
+# How long the Wither keeps launching skulls, in ticks (20 ticks = 1 second).
+skull-duration-ticks: 60
+
+# Ticks between each skull launch (20 ticks = 1 second; lower = faster barrage).
+skull-interval-ticks: 4
+
+messages:
+  - "&8&lWITHER! &fUm Wither girou e destruiu a mina!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&8&lWITHER!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 32
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&8{display}"
+  lore:
+    - "&7Tenha a chance de invocar um Wither"
+    - "&7que gira e destrói tudo ao redor!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""

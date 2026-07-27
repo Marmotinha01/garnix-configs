@@ -1,0 +1,25 @@
+display: "Ceifa"
+max-level: 50
+base-cost: 700.0
+increase-cost: 250.0
+
+# CHANCE flavour (percent)
+base-chance: 3
+increase-chance: 0.2
+harvest-radius: 4
+
+title: "&2&lCEIFA"
+subtitle: "&7+{crops} plantações"
+messages:
+  - "&a&lCEIFA! &7Colheu &f{crops}&7 plantações ao seu redor."
+
+icon:
+  slot: 13
+  material: IRON_HOE
+  display: "&2{display}"
+  lore:
+    - "&7Chance de ceifar todas as"
+    - "&7plantações num raio ao redor."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"
+    - "&7Chance: &f{chance}%"

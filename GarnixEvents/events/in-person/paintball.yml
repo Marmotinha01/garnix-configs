@@ -1,0 +1,268 @@
+# Evento — Paintball
+#
+# Todos entram de couro sem tingir e com uma enxada que dispara bolas de neve. Cada
+# acerto tira um coração de verdade da barra de vida do jogador e pinta uma peça da
+# armadura dele; quem ficaria sem nenhum coração é eliminado, e o último sobrevivente
+# vence.
+#
+# Não há um ponto único de arena: os jogadores esperam no lobby e, quando as entradas
+# encerram, cada um cai num spawn sorteado entre os espalhados pelo mapa.
+#
+# Locais necessários: lobby, exit e ao menos um spawn. O cabin (camarote) é opcional.
+#   /paintball setloc lobby|exit|cabin
+#   /paintball addspawn        (repita para espalhar vários pelo mapa)
+#   /paintball delspawn <n>
+
+display: '&aPaintball'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&a'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_paintball%. Deixe vazio para o evento não dar tag.
+tag: '&a[Chroma]'
+
+join-time: 1m
+start-time: 10s
+duration: 10m
+
+min-players: 2
+max-players: 0
+
+# Quantos corações o jogador tem dentro do evento — é a barra de vida dele mesmo, e o
+# valor é só deste evento (o sniper tem o seu). Cada acerto tira 1; o último não chega a
+# ser tirado, vira eliminação. Não há regeneração enquanto o evento roda.
+#
+# Com 5 corações são 4 acertos sobrevividos, que é exatamente o número de peças da
+# armadura: quem está todo colorido está a um acerto de sair. Mudar este valor não quebra
+# nada — só desfaz essa leitura.
+lives: 5
+
+# Item que dispara a bola de neve ao clicar com o botão direito.
+launcher-material: DIAMOND_HOE
+# Intervalo mínimo entre dois disparos, em milissegundos.
+fire-rate-millis: 500
+
+# ── Tinta ─────────────────────────────────────────────────────────────
+# Cada acerto que não elimina pinta uma peça da armadura do alvo com uma cor sorteada
+# da paleta. Peças ainda sem tinta vêm primeiro, então dá pra ler de longe quantos
+# acertos alguém levou; com as quatro pintadas, os acertos seguintes repintam ao acaso.
+#
+# A cor é sorteada no DISPARO, não no acerto: o rastro da bola é a cor que vai parar na
+# armadura de quem for atingido.
+#
+# Só peças de COURO são pintadas — a cor mora no couro e em mais nada. Trocar o kit
+# abaixo por ferro desliga o efeito (com um aviso no console) em vez de substituir o kit.
+splash:
+  enabled: true
+  
+  # Cores sorteadas, em #RRGGBB. Uma entrada ilegível é ignorada com aviso no console e o
+  # resto da paleta continua valendo.
+  colors:
+    # rosa
+    # ciano
+    # lima
+    # laranja
+    # roxo
+    # amarelo
+    - '#FF3DA5'
+    - '#00E5FF'
+    - '#B8FF29'
+    - '#FF7A00'
+    - '#9D4EDD'
+    - '#FFE600'
+  
+  # Rastro da bola no ar, na cor que ela carrega.
+  trail:
+    enabled: true
+    # De quantos em quantos ticks sai uma partícula. 1 = a cada tick (rastro contínuo e o
+    # dobro de pacotes), 2 = a cada 0,1s. Subir aqui é o primeiro botão a mexer se o
+    # evento pesar com muita gente.
+    every-ticks: 2
+    # Distância, em blocos, dentro da qual o rastro é enviado. Quem está mais longe não
+    # recebe o pacote — é o que impede um evento lotado de ser transmitido ao servidor
+    # inteiro.
+    radius: 32
+
+# Slot da hotbar em que o jogador fica preso enquanto joga: o scroll do mouse é recusado
+# e a roda volta sozinha para cá. O loadout deste evento é um item só, então rolar a roda
+# — de propósito ou sem querer, que é o comum em trackpad — só serve para desarmar quem
+# está jogando.
+#
+# Deixe vazio ou apague a chave para liberar o scroll. Valores válidos: 0 a 8.
+hotbar-lock: 0
+
+kit:
+  # Couro sem tingir: é a tela em branco que a tinta vai marcando.
+  armor:
+    helmet:
+      material: LEATHER_HELMET
+      display: '&fUniforme'
+      unbreakable: true
+      flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+    chestplate:
+      material: LEATHER_CHESTPLATE
+      display: '&fUniforme'
+      unbreakable: true
+      flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+    leggings:
+      material: LEATHER_LEGGINGS
+      display: '&fUniforme'
+      unbreakable: true
+      flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+    boots:
+      material: LEATHER_BOOTS
+      display: '&fUniforme'
+      unbreakable: true
+      flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+  items:
+    launcher:
+      slot: 0
+      material: DIAMOND_HOE
+      display: '&dMarcadora'
+      lore:
+      - '&7Clique com o botão direito para atirar.'
+      unbreakable: true
+      flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_UNBREAKABLE
+
+rewards:
+- eco give {player} 5000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&a&lVALENDO!'
+    subtitle: '&7Boa sorte!'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/paintball entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lPaintball {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/paintball entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+# {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lPaintball {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+# {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lPaintball {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+# {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lPaintball&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &ffoi o último de pé no Paintball.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+
+  # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
+  # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  walkover: |2
+
+      &8▎ {c}Evento {c}&lPaintball&f, {c}vitória por W.O.!
+      &r
+      &8▶ &7{player} &fficou sem alvos no campo.
+      &r
+      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &r
+
+# ── Eliminações ─────────────────────────────────────────────────────
+# Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+# {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lPaintball {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém sobrou para vencer.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lPaintball {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+# {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lPaintball {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+# ── Actionbar ───────────────────────────────────────────────────────
+# Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  
+  # ── Tinta ───────────────────────────────────────────────────────────
+  # {attacker}/{victim} · {lives} corações que sobraram
+  hit-taken: '&cVocê foi marcado por &7{attacker}&c! &f({lives} corações)'
+  hit-dealt: '&aVocê marcou &7{victim}&a! &f({lives} corações)'

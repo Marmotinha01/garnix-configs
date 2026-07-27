@@ -1,0 +1,110 @@
+info:
+  order: 5
+  starting: '0'
+  formatter: 'SUFFIX' # DECIMAL ou SUFFIX
+  text:
+    singular: 'coral'
+    plural: 'corais'
+    symbol: '✶'
+    ranking-tag: '&3[✶]'
+  colors:
+    symbol: '&3'
+    primary: '&3'
+    secondary: '&3'
+
+icon:
+  material: 'INK_SACK'
+  data: 6
+  display: '&3Corais'
+
+command:
+  name: 'corais'
+  aliases: ['coral']
+  cooldown: 5 # segundos
+  subcommands:
+    help:
+      enabled: true
+      aliases: ['ajuda']
+      cooldown: 5 # segundos
+      admin-permission: 'currencies.admin'
+    ranking:
+      enabled: true
+      aliases: ['top']
+      cooldown: 5 # segundos
+    send:
+      enabled: true
+      aliases: ['enviar', 'pay', 'transfer']
+      cooldown: 5 # segundos
+      tax:
+        enabled: true
+        message:
+          to-sender: true
+          to-receiver: true
+        percentage: 10
+        bypass-permission: 'currencies.tax.bypass'
+    set:
+      enabled: true
+      aliases: ['definir']
+      permission: 'currencies.admin'
+    add:
+      enabled: true
+      aliases: ['give', 'dar']
+      permission: 'currencies.admin'
+    remove:
+      enabled: true
+      aliases: ['take', 'remover']
+      permission: 'currencies.admin'
+
+ranking:
+  mode: 'MENU' # CHAT ou MENU
+  chat:
+    format: '  &8#{position}º {lp_prefix}{player} &8▶ {symbol_color}{symbol}{primary_color}{balance}'
+    empty: '  &7Nenhum jogador no ranking.'
+    header:
+      - ''
+      - '  &3&lRANKING DE CORAIS'
+      - ''
+    footer:
+      - ''
+  menu:
+    title: 'TOP Corais'
+    shape:
+      - 'XXXXXXXXX'
+      - 'XXX...XXX'
+      - 'X.......X'
+      - 'XXXXXXXXX'
+      - 'XXXXXXXXX'
+    position-user:
+      display: '&8#{position}º {lp_prefix} {player}'
+      lore:
+        - '&fCorais: {symbol_color}{symbol}{primary_color}{balance}'
+    empty-position-icon:
+      material: 'BARRIER'
+      display: '&8#{position}º &7Ninguém'
+    info-icon:
+      slot: 40
+      material: 'PAPER'
+      display: '&eAtualização Periódica'
+      lore:
+        - '&7O ranking é atualizado'
+        - '&7a cada &f{refresh} &7minutos.'
+        - ''
+        - '&8&oÚltima atualização &7&o{last_update}&8&o.'
+
+help:
+  - ''
+  - '  &3&lCORAIS &8▶ &3Comandos de Ajuda'
+  - ''
+  - '  &3/{command} &8- &7Ver seus corais.'
+  - '  &3/{command} <jogador> &8- &7Ver os corais de alguém.'
+  - '  &3/{command} ranking &8- &7Ver o top corais.'
+  - '  &3/{command} enviar <jogador> <quantia> &8- &7Envia corais para alguém.'
+  - ''
+
+help-admin:
+  - '  &4&lCORAIS ADMIN &8▶ &4Comandos Administrativos'
+  - ''
+  - '  &c/{command} set <jogador> <quantia> &8- &7Define os corais de alguém.'
+  - '  &c/{command} add <jogador> <quantia> &8- &7Adiciona corais a alguém.'
+  - '  &c/{command} remove <jogador> <quantia> &8- &7Remove corais de alguém.'
+  - ''

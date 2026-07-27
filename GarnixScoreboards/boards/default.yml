@@ -1,0 +1,64 @@
+enabled: true
+priority: 0
+worlds: ["world", "plotworld"]
+permission: ''
+update-ticks: 20
+
+title:
+  interval: 2
+  frames:
+  - '&f&lHEADS &8▪ &a%bungee_total%'
+  - '&e&lHEADS &8▪ &a%bungee_total%'
+  - '&6&lH&f&lEADS &8▪ &a%bungee_total%'
+  - '&6&lH&e&lEADS &8▪ &a%bungee_total%'
+  - '&6&lHE&f&lADS &8▪ &a%bungee_total%'
+  - '&6&lHE&e&lADS &8▪ &a%bungee_total%'
+  - '&6&lHE&f&lADS &8▪ &a%bungee_total%'
+  - '&6&lHE&e&lADS &8▪ &a%bungee_total%'
+  - '&6&lHEA&f&lDS &8▪ &a%bungee_total%'
+  - '&6&lHEA&e&lDS &8▪ &a%bungee_total%'
+  - '&6&lHEAD&f&lS &8▪ &a%bungee_total%'
+  - '&6&lHEAD&e&lS &8▪ &a%bungee_total%'
+  - '&e&lHEADS &8▪ &a%bungee_total%'
+  - '&6&lHEADS &8▪ &a%bungee_total%'
+  - '&f&lHEADS &8▪ &a%bungee_total%'
+  - '&6&lHEADS &8▪ &a%bungee_total%'
+
+lines:
+- ''
+- ' &fRank: %rankup_rank_tag%'
+- ' %rankup_progress_bar% &7%rankup_progress_percentage%'
+
+- text: ''
+  condition: '%clans_name%'
+
+- text: '  &7%clans_name%'
+  condition: '%clans_name%'
+
+- text: '   &fTag: %clans_tag_colored%'
+  condition: '%clans_name%'
+
+- text: '   &fMembros: &7%clans_members%&8/&c%clans_max_members%'
+  condition: '%clans_name%'
+
+- text: '   &fOnline: &a%clans_members_online%'
+  condition: '%clans_name%'
+
+- ''
+- ' &fCoins: &2$&a%currencies_coins%'
+- ' &fCash: &6❂%currencies_cash%'
+
+- frames:
+  - ' &fGemas: &d۞%currencies_gemas%'
+  - ' &fCorais: &3✶%currencies_corais%'
+  - ' &fDracmas: &e✆%currencies_dracmas%'
+  - ' &fSementes: &5❋%currencies_sementes%'
+  interval: 40
+
+- frames:
+  - ' &fS. Limite: &b∞%currencies_spawnerslimite%'
+  - ' &fM. Limite: &9∞%currencies_maquinaslimite%'
+  interval: 60
+
+- ''
+- '&eredegarnix.com'

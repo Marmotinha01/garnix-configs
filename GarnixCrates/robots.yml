@@ -1,0 +1,16 @@
+robots:
+  lendarioI:
+    seconds: 4
+    item:
+      texture: 53ce76602d3fec7c0273da60009007be4140ac9fac0341450c0757e53d751577
+      display: '&cRobô'
+      lore:
+      - '&7Com este robô você terá um'
+      - '&7delay reduzido e autoamtico.'
+      - ''
+      - ' &cInformações:'
+      - '&c▎ &fTier: &7I'
+      - '&c▎ &fRaridade: &7Lendário'
+      - '&c▎ &fAbre a cada: &74s'
+      - ''
+      - '&cEquipe no /crates.'

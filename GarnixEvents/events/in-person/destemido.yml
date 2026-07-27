@@ -1,0 +1,452 @@
+# Evento — Destemido
+#
+# Nasce um Wither com bastante vida atacando os jogadores. Há PvP entre eles, então
+# além de bater no Wither é preciso segurar os rivais — quem der o último golpe no
+# Wither vence.
+#
+# KIT DO EVENTO: o equipamento é emprestado pelo plugin. Para entrar é preciso estar
+# com o inventário e a armadura vazios, então nada do jogador fica em posse do plugin
+# e ninguém dropa nada ao morrer — nem para o Wither, nem para os rivais. O kit abaixo
+# é só o ponto de partida: equipe-se em jogo e rode /destemido setkit para gravar o
+# que você está vestindo por cima dele.
+#
+# Locais necessários: lobby, join, exit. O cabin (camarote) e o boss são opcionais.
+#   /destemido setloc lobby|join|exit|cabin|boss
+#
+# Os jogadores entram na arena pelo 'join'. O Wither nasce no 'boss' — defina-o para
+# afastar a luta da entrada. Se o 'boss' não for definido, o Wither nasce no próprio
+# 'join', ou seja, em cima de quem acabou de entrar.
+
+display: '&8Destemido'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&8'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_destemido%. Deixe vazio para o evento não dar tag.
+tag: '&8[Destemido]'
+
+join-time: 1m
+start-time: 10s
+duration: 15m
+
+min-players: 2
+max-players: 0
+
+# Há PvP no Destemido: o fogo amigo de clãs é suspenso entre os participantes.
+pvp: true
+
+boss:
+  type: WITHER
+  health: 800.0
+  name: '&8&lWITHER'
+  # Dano de cada golpe do boss no jogador, em meios-corações (8.0 = 4 corações).
+  # Vale para o corpo e para as caveiras do Wither. Substitui o dano da dificuldade.
+  damage: 8.0
+  # Efeito Wither (corações pretos) aplicado quando o boss acerta o jogador — corpo
+  # OU caveira. Funciona em qualquer dificuldade (não depende do mundo estar em Hard).
+  # Cada acerto renova a duração. Deixe enabled: false para não aplicar.
+  wither-effect:
+    enabled: true
+    duration: 6s
+    amplifier: 0 # 0 = Wither I, 1 = Wither II, ...
+  # Tempo de graça no início: se ninguém tiver coragem de bater no boss nesse
+  # tempo, ele escolhe um participante aleatório para focar. Se alguém bater antes,
+  # o boss já parte pra cima de quem bateu.
+  aim-delay: 10s
+  # De quanto em quanto tempo o boss troca de alvo (escolhido aleatoriamente),
+  # para não caçar o mesmo azarado a luta inteira.
+  retarget-interval: 8s
+  
+  # ── Partículas da morte do chefe ─────────────────────────────────────
+  #
+  # O que aparece quando o Wither cai. Cada evento tem a sua, então esta não precisa
+  # ser parecida com a do MVP — aqui é preto e roxo, à altura do bicho.
+  #
+  # Você também pode escrever só 'death-particles: true' (ou false) no lugar da
+  # seção inteira: true = o estouro padrão do plugin, false = nada.
+  death-particles:
+    enabled: true
+    # Quantas vezes o conjunto abaixo é desenhado, e o intervalo entre uma vez e
+    # outra em ticks (20 ticks = 1 segundo). repeat: 1 desenha uma vez só.
+    repeat: 5
+    interval-ticks: 4
+    # Altura em blocos acima dos pés do mob. O Wither é alto, então sobe mais.
+    height: 2.0
+    # De quantos blocos de distância os jogadores enxergam. Vale para todos os
+    # efeitos abaixo, mas cada um pode ter o seu próprio 'radius'.
+    radius: 64
+    # Os efeitos são desenhados todos de uma vez, na ordem em que estão aqui.
+    # O nome de cada um ('estouro', 'fumaca') é só um rótulo seu.
+    #
+    #   effect  = nome da partícula (EXPLOSION_HUGE, EXPLOSION_LARGE, CLOUD, FLAME,
+    #             LARGE_SMOKE, CRIT, MAGIC_CRIT, HEART, SPELL, WITCH_MAGIC, PORTAL,
+    #             LAVA_POP, SLIME, NOTE, FIREWORKS_SPARK, TILE_DUST, ITEM_BREAK...)
+    #   amount  = quantas partículas
+    #   spread  = espalhamento em blocos nos três eixos. Para desenhar uma forma
+    #             (um disco, uma coluna) use spread-x, spread-y e spread-z separados.
+    #   speed   = velocidade com que elas saem. 0 = paradas.
+    #   id/data = só para as partículas feitas de bloco/item: TILE_DUST e TILE_BREAK
+    #             usam o id do bloco, ITEM_BREAK o id do item. As outras ignoram.
+    effects:
+      estouro:
+        effect: EXPLOSION_HUGE
+        amount: 6
+        spread: 1.0
+        speed: 0.0
+      fumaca:
+        effect: LARGE_SMOKE
+        amount: 40
+        spread: 1.2
+        speed: 0.02
+      # Uma coluna de portal subindo: espalha pouco nos lados e muito na altura.
+      coluna:
+        effect: PORTAL
+        amount: 60
+        spread-x: 0.6
+        spread-y: 2.0
+        spread-z: 0.6
+        speed: 0.4
+
+minions:
+  enabled: true
+  # Wither skeletons: o servo do Wither. Escreva WITHER_SKELETON mesmo — na 1.8 o
+  # jogo não tem esse tipo separado (é um SKELETON com variante), e o plugin resolve
+  # isso para você. Eles nascem com a espada de pedra do próprio jogo, que é o que
+  # faz virem para cima em vez de ficarem atirando flecha de longe.
+  type: WITHER_SKELETON
+  health: 30.0
+  name: '&8Servo do Wither'
+  # Dano de cada golpe no jogador, em meios-corações (5.0 = 2 corações e meio).
+  # Substitui o dano da dificuldade — e vale mesmo com a espada da mão deles.
+  damage: 5.0
+  # Wither skeleton não tem forma filhote; deixe false. (A chave existe porque a
+  # seção é a mesma do MVP, onde os zumbis nascem baby.)
+  baby: false
+  # Velocidade de movimento, em blocos por tick. O esqueleto comum anda a 0.25.
+  # Deixe 0 para não mexer na velocidade padrão do mob.
+  speed: 0.28
+  # Chance de um acerto dar Náusea em quem apanha, igual à do MVP. Desligado aqui —
+  # o Destemido já tem o efeito Wither do chefe e PvP no meio. Suba a chance
+  # (0.0-1.0) se quiser ligar.
+  nausea:
+    chance: 0.0
+    duration: 4s
+    amplifier: 0
+    immunity: 6s
+  # Máximo de servos vivos ao mesmo tempo. Menor que o do MVP de propósito: aqui os
+  # jogadores também estão se matando entre si, a arena já é cheia.
+  max-alive: 20
+  # Quantos nascem por vez (nunca ultrapassa o máximo acima).
+  per-wave: 3
+  # Tempo entre uma leva e outra.
+  spawn-interval: 8s
+  # Raio (blocos) em volta do chefe em que eles nascem.
+  spawn-radius: 8.0
+  
+  # Conjuntos de equipamento, iguais aos do MVP: cada servo que nasce sorteia UM.
+  # 'chance' é a chance em %, somada na ordem em que os conjuntos aparecem; o que
+  # faltar para 100% é a chance de nascer só com a espada de pedra padrão.
+  # Um conjunto com 'hand' troca a espada; sem 'hand', ela fica. Nunca dropam nada.
+  gear:
+    elmo-de-osso:
+      chance: 30
+      armor:
+        helmet:
+          material: SKULL_ITEM
+          data: 1
+          flags:
+          - HIDE_ATTRIBUTES
+    veterano:
+      chance: 10
+      hand:
+        material: IRON_SWORD
+        display: '&8Espada Carbonizada'
+        flags:
+        - HIDE_ATTRIBUTES
+      armor:
+        helmet:
+          material: CHAINMAIL_HELMET
+          flags:
+          - HIDE_ATTRIBUTES
+        chestplate:
+          material: CHAINMAIL_CHESTPLATE
+          flags:
+          - HIDE_ATTRIBUTES
+  
+  # Partículas quando um servo morre. Mesmas chaves da seção do chefe lá em cima.
+  # Ligado com algo pequeno: eles morrem muito, um efeito grande cobriria a luta.
+  death-particles:
+    enabled: true
+    repeat: 1
+    interval-ticks: 5
+    height: 1.0
+    radius: 32
+    effects:
+      fumaca:
+        effect: LARGE_SMOKE
+        amount: 10
+        spread: 0.3
+        speed: 0.01
+
+# Deixa o jogador mexer no próprio inventário durante o evento: trocar armadura, mudar
+# item de slot. Faz sentido aqui porque o kit é um conjunto inteiro e ele se gasta.
+# Dropar continua proibido.
+allow-inventory-move: true
+
+# Raio (blocos) em volta dos pontos de jogo da arena varrido ao fim do evento e ao ligar
+# o servidor: remove as flechas cravadas no chão e os mobs que o evento tiver criado.
+# Itens dropados só existem no Killer. Sem esta chave o evento não varre nada.
+cleanup-radius: 60.0
+
+rewards:
+- eco give {player} 15000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&a&lVALENDO!'
+    subtitle: '&7Boa sorte!'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/destemido entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lDestemido {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/destemido entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}15K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+  # {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lDestemido {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+  # {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lDestemido {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+  # {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lDestemido&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &fderrubou o Wither.
+      &r
+      &8▪ &fPrêmio: {c}15K de Cash
+      &r
+  # ── Eliminações ─────────────────────────────────────────────────────
+  # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+  # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lDestemido {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7O Wither sobreviveu.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lDestemido {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+  # {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lDestemido {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+  # ── Actionbar ───────────────────────────────────────────────────────
+  # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  
+  # ── Chefe ───────────────────────────────────────────────────────────
+  boss-spawned: '{c}&lO WITHER APARECEU! &fEle chamou os servos — e há PvP liberado!'
+  # Actionbar da luta. Não aceita clique.
+  # {health} vida atual · {max} vida total · {minions} servos vivos
+  boss-bar: '{c}Wither: &7{health}&f/&7{max}'
+  boss-survived: '&cO Wither sobreviveu! Ninguém venceu o evento.'
+  boss-killed-unclaimed: '&fO Wither morreu, mas ninguém pôde reivindicar a vitória.'
+kit:
+  unbreakable: false
+  armor:
+    helmet:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    chestplate:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    leggings:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    boots:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+  items:
+    slot-0:
+      material: DIAMOND_SWORD
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      unbreakable: true
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      - KNOCKBACK:2
+      slot: 0
+    slot-1:
+      material: DIAMOND_AXE
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      unbreakable: true
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      slot: 1
+    slot-2:
+      material: GOLDEN_APPLE
+      data: 1
+      amount: 64
+      display: §8Evento §lDESTEMIDO
+      slot: 2
+    slot-3:
+      material: BOW
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      unbreakable: true
+      enchants:
+      - ARROW_DAMAGE:5
+      - ARROW_KNOCKBACK:2
+      - ARROW_FIRE:2
+      - ARROW_INFINITE:1
+      slot: 3
+    slot-4:
+      material: POTION
+      data: 8233
+      amount: 16
+      display: §8Evento §lDESTEMIDO
+      slot: 4
+    slot-5:
+      material: POTION
+      data: 8226
+      amount: 16
+      display: §8Evento §lDESTEMIDO
+      slot: 5
+    slot-6:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 6
+    slot-7:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 7
+    slot-17:
+      material: ARROW
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      slot: 17
+    slot-33:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 33
+    slot-34:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 34

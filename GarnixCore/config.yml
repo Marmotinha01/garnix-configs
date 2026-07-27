@@ -1,0 +1,227 @@
+# =======================================
+# GarnixCore Configuration
+# =======================================
+
+# Habilita logs de debug detalhados no console
+debug: false
+
+# ── Database ───────────────────────────────────────────────────────────
+# MySQL e MongoDB são centralizados no core.
+# Todos os plugins usam a mesma conexão.
+# SQLite é por plugin (não precisa configurar aqui).
+database:
+  
+  # Número de threads dedicadas para operações async de banco.
+  threads: 4
+  
+  # ── MySQL (HikariCP) ─────────────────────────────────────────────────
+  mysql:
+    enabled: true
+    address: 45.154.159.247:3306
+    database: s7_rankup
+    username: u7_HRFPzww5jV
+    password: 'y2cGgHJ1Rt0VIMGrNW!+lIhd'
+    pool:
+      max-size: 10
+      min-idle: 2
+      idle-timeout: 600000
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      leak-detection-threshold: 0
+  
+  # ── MongoDB ──────────────────────────────────────────────────────────
+  mongodb:
+    enabled: false
+    address: 45.154.159.247:27017
+    database: admin
+    username: 'admin'
+    password: 'Gm$CFi_ES5O=7PO)X03'
+
+# ── Redis ──────────────────────────────────────────────────────────────
+# Centralizado no core. Todos os plugins compartilham a mesma conexão.
+# Usado para cache e pub/sub entre servidores.
+
+redis:
+  enabled: true
+  host: 45.154.159.247
+  port: 15000
+  password: '=zcCbFEJW[h1HW4$CBKY=v'
+  max-connections: 8
+  max-idle: 8
+  min-idle: 1
+
+# ── Geo (ipinfo.io) ────────────────────────────────────────────────────
+# Token do ipinfo.io para consultas geográficas.
+# Crie uma conta gratuita em https://ipinfo.io para obter seu token.
+
+geo-token: 977091f764302d
+
+# ── Menu (ícones padrão) ───────────────────────────────────────────────
+# Ícones padrão usados pelo MenuDefaults para navegação de menus paginados.
+# Os plugins podem usar MenuDefaults.previousPageItem() e nextPageItem()
+# para automaticamente pegar esses ícones sem precisar redefinir.
+#
+# Suporta todas as propriedades do ItemBuilder:
+#   material, data, amount, display, lore, enchants, glow, flags,
+#   texture (head base64), owner (head por nome)
+
+menu:
+  previous-page:
+    texture: 'bd69e06e5dadfd84e5f3d1c21063f2553b2fa945ee1d4d7152fdc5425bc12a9'
+    data: 8
+    display: '&cPágina Anterior'
+    lore:
+    - '&7Clique para recuar.'
+  next-page:
+    texture: '19bf3292e126a105b54eba713aa1b152d541a1d8938829c56364d178ed22bf' 
+    data: 10
+    display: '&aPróxima Página'
+    lore:
+    - '&7Clique para avançar.'
+  empty-page:
+    material: WEB
+    display: '&cNenhum item encontrado'
+
+# ── Captcha ────────────────────────────────────────────────────────────
+# Sistema anti-bot reutilizável. Cada plugin instancia seu próprio Captcha
+# com caches independentes — a config dos itens é compartilhada aqui.
+
+captcha:
+  title: Clique no(a) {item}
+  rows: 3
+  slots:
+  - 10
+  - 12
+  - 14
+  - 16
+  fail-message: '&cVocê errou o captcha! Tente novamente.'
+  items:
+    apple:
+      material: APPLE
+      data: 0
+      display: Maçã
+    diamond:
+      material: DIAMOND
+      data: 0
+      display: Diamante
+    emerald:
+      material: EMERALD
+      data: 0
+      display: Esmeralda
+    golden-apple:
+      material: GOLDEN_APPLE
+      data: 0
+      display: Maçã Dourada
+    iron-ingot:
+      material: IRON_INGOT
+      data: 0
+      display: Ferro
+    gold-ingot:
+      material: GOLD_INGOT
+      data: 0
+      display: Ouro
+    raw-fish:
+      material: RAW_FISH
+      data: 0
+      display: Peixe
+    bread:
+      material: BREAD
+      data: 0
+      display: Pão
+    bone:
+      material: BONE
+      data: 0
+      display: Osso
+    arrow:
+      material: ARROW
+      data: 0
+      display: Flecha
+    coal:
+      material: COAL
+      data: 0
+      display: Carvão
+    ender-pearl:
+      material: ENDER_PEARL
+      data: 0
+      display: Pérola do End
+    blaze-rod:
+      material: BLAZE_ROD
+      data: 0
+      display: Vara de Blaze
+    redstone:
+      material: REDSTONE
+      data: 0
+      display: Redstone
+    quartz:
+      material: QUARTZ
+      data: 0
+      display: Quartzo
+    flint:
+      material: FLINT
+      data: 0
+      display: Pederneira
+    feather:
+      material: FEATHER
+      data: 0
+      display: Pena
+    string:
+      material: STRING
+      data: 0
+      display: Linha
+    leather:
+      material: LEATHER
+      data: 0
+      display: Couro
+    slime-ball:
+      material: SLIME_BALL
+      data: 0
+      display: Bola de Slime
+    sugar:
+      material: SUGAR
+      data: 0
+      display: Açúcar
+    egg:
+      material: EGG
+      data: 0
+      display: Ovo
+    clay-ball:
+      material: CLAY_BALL
+      data: 0
+      display: Argila
+    glowstone-dust:
+      material: GLOWSTONE_DUST
+      data: 0
+      display: Pó de Glowstone
+    nether-star:
+      material: NETHER_STAR
+      data: 0
+      display: Estrela do Nether
+    ghast-tear:
+      material: GHAST_TEAR
+      data: 0
+      display: Lágrima de Ghast
+    magma-cream:
+      material: MAGMA_CREAM
+      data: 0
+      display: Creme de Magma
+
+# ── Confirm ────────────────────────────────────────────────────────────
+# Menu de confirmação (Sim/Não) reutilizável.
+# Plugins chamam: Confirm.open(player, "Título", onConfirm, onCancel);
+
+confirm:
+  rows: 3
+  confirm:
+    slot: 11
+    material: WOOL
+    data: 5
+    display: '&aConfirmar'
+    lore:
+    - '&7Clique para confirmar.'
+  cancel:
+    slot: 15
+    material: WOOL
+    data: 14
+    display: '&cCancelar'
+    lore:
+    - '&7Clique para cancelar.'

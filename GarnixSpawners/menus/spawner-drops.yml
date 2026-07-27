@@ -1,0 +1,40 @@
+title: Drops - {display}
+
+shape:
+- XXXXXXXXX
+- <X.....X>
+- XXXXXXXXX
+- XXXXXXXXX
+
+drop-lore:
+- '&fValor: {symbol_color}{symbol}{primary_color}{amount} {currency} '
+- ''
+- '&7Clique para coletar.'
+
+empty-icon:
+  slot: 13
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum drop encontrado.'
+
+sell-all-icon:
+  slot: 32
+  material: STORAGE_MINECART
+  display: '&aColetar Tudo'
+  lore:
+  - '&7Clique para coletar.'
+
+sell-all-empty-icon:
+  slot: 32
+  material: MINECART
+  display: '&cColetar Tudo'
+  lore:
+  - '&7Nenhum drop para coletar.'
+
+back-icon:
+  slot: 30
+  material: ARROW
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

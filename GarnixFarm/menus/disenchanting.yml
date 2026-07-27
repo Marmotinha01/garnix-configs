@@ -1,0 +1,91 @@
+# Menu — Desencantar (seleção de níveis)
+
+title: Desencantar
+rows: 4
+
+# ── Opção -1 ──────────────────────────────────────────────────────
+option-1:
+  slot: 11
+  material: INK_SACK
+  data: 1
+  display: '&cDesencantar 1 Nível'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &c{target}'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ''
+  - '&cClique para desencantar.'
+
+# ── Opção -10 ─────────────────────────────────────────────────────
+option-10:
+  slot: 12
+  material: INK_SACK
+  data: 1
+  display: '&cDesencantar 10 Níveis'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &c{target}'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ''
+  - '&cClique para desencantar.'
+
+# ── Opção -25 ─────────────────────────────────────────────────────
+option-25:
+  slot: 13
+  material: INK_SACK
+  data: 1
+  display: '&cDesencantar 25 Níveis'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &c{target}'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ''
+  - '&cClique para desencantar.'
+
+# ── Opção -50 ─────────────────────────────────────────────────────
+option-50:
+  slot: 14
+  material: INK_SACK
+  data: 1
+  display: '&cDesencantar 50 Níveis'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &c{target}'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ''
+  - '&cClique para desencantar.'
+
+# ── Desencantar tudo ──────────────────────────────────────────────
+option-all:
+  slot: 15
+  material: EXPLOSIVE_MINECART
+  display: '&4Desencantar Tudo'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &4{target}'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ''
+  - '&4Clique para desencantar.'
+
+# ── Ícone: nada para desencantar ──────────────────────────────────
+empty:
+  material: STAINED_GLASS_PANE
+  data: 14
+  display: '&c{label}'
+  lore:
+  - '&7Nada para desencantar.'
+
+# ── Ícone: excede os níveis ───────────────────────────────────────
+option-exceeded:
+  material: STAINED_GLASS_PANE
+  data: 14
+  display: '&cDesencantar &l{label} &cNível(eis)'
+  lore:
+  - '&7Sem níveis suficientes.'
+
+back-icon:
+  slot: 31
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

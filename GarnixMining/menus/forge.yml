@@ -1,0 +1,33 @@
+# Menu — Skin Forge
+
+title: Forja de Skins
+rows: 5
+cost: 7
+input-slots:
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+result-slot: 31
+
+filler:
+  material: STAINED_GLASS_PANE
+  data: 15
+  display: '&7 '
+
+incomplete-icon:
+  material: BARRIER
+  display: '&cIncompleto'
+  lore:
+  - '&7Coloque {cost} skins iguais'
+  - '&7para forjar uma melhor.'
+
+max-tier-icon:
+  material: BARRIER
+  display: '&cSkin Máxima'
+  lore:
+  - '&7Esta skin já é a mais'
+  - '&7avançada disponível.'

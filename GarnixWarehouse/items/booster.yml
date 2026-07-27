@@ -1,0 +1,15 @@
+material: POTION
+data: 8260
+display: '&aBooster de Armazém'
+lore:
+  - '&7Use este booster para ter'
+  - '&7seus ganhos aumentados.'
+  - ''
+  - ' &8Informações:'
+  - ' &8▪ &fTipo: &aVenda de Cactos'
+  - ' &8▪ &fBônus: &a{multiplier}'
+  - ' &8▪ &fDuração: &7{duration}'
+  - ''
+  - '&bOpções de uso:'
+  - '&fBotão Direito &8➟ &7Ativar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'

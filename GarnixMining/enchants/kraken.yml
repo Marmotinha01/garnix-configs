@@ -1,0 +1,84 @@
+display: "Kraken"
+
+mine-level-unlock: 50
+
+max-level: 100
+
+base-cost: 10000
+increase-cost: 25000
+
+base-chance: 2.5
+increase-chance: 0.05
+
+# --- Kraken shape --------------------------------------------------------------
+# A body hovers over the dig site and lashes out with tentacles that writhe
+# outward and dive into the mine, carving everything they sweep through. Every
+# part (body, tentacle segments, tip) is an invisible armor stand wearing a
+# textured player head, so the shape reads as a real kraken.
+
+# Number of tentacles radiating from the body.
+tentacles: 6
+
+# Thick (full-size heads) when true, or thin (small heads) when false.
+tentacle-thick: true
+
+# Head "beads" per tentacle. For a SEAMLESS arm the beads must sit closer than a
+# head is wide, so use about 2 segments per block of reach (e.g. reach 10 -> 20).
+# Fewer = visible gaps; more = smoother but more entities/packets per tick.
+tentacle-length: 20
+
+# Max horizontal reach of each tentacle, in blocks.
+reach: 10
+
+# How far the tentacle tips dive downward as they extend, in blocks.
+drop: 6
+
+# Total animation length, in ticks (20 ticks = 1 second).
+duration-ticks: 100
+
+# Carve thickness around each tentacle, as a radius: 0 = a 1-wide arm, 1 = a 3x3
+# channel, 2 = 5x5. This drives how many blocks the kraken breaks (and the packet
+# volume) — raise it with care.
+area-radius: 1
+
+# --- Head (mantle) -------------------------------------------------------------
+# A single armor-stand head cannot be scaled on 1.8, so the big kraken head is
+# built as a dense DOME of "beads" plus two eyes on the front — so it reads as one
+# solid mantle. The head does NOT spin; it gently bobs, in keeping with the body.
+
+# Dome radius in blocks (decimals allowed). 0 falls back to the old single body
+# head. Bigger = more imposing but more entities/packets per viewer.
+head-radius: 1.4
+
+# Mantle and eye "skin". Each accepts EITHER a player-head texture hash OR a solid
+# block name (e.g. PRISMARINE) — a block is uniform and seamless, a head hash lets
+# you style it. Left blank, they use block defaults (PRISMARINE / QUARTZ_BLOCK).
+head-skin-texture: "4bf58283ffca8bdc59436e83d94e9f134426316b99bab5b9af90dffdb082a056"
+eye-texture: "e93d87355afea5a4bc76ac09e90fc51b97c44f4e9acde7a680677765d289588c"
+
+# --- Textures (player-head hashes from minecraft-heads.com) --------------------
+# Swap any of these for another head hash to restyle the kraken; the tip falls
+# back to the tentacle texture when left blank.
+body-texture: "f3fe935048624881cac3479bf83ef1d4b40e8d277bad1df25b454a38cc07d95a"
+tentacle-texture: "4bf58283ffca8bdc59436e83d94e9f134426316b99bab5b9af90dffdb082a056"
+tip-texture: "4ba74e76b3a99f146db628ede6be2f3c3720daa8f6829ccc1251d9db42bc2d63"
+
+messages:
+  - "&3&lKRAKEN! &fUm kraken emergiu e dilacerou a mina com seus tentáculos!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&3&lKRAKEN!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 33
+  texture: "f3fe935048624881cac3479bf83ef1d4b40e8d277bad1df25b454a38cc07d95a"
+  display: "&3{display}"
+  lore:
+    - "&7Tenha a chance de invocar um kraken"
+    - "&7que devora a mina com tentáculos!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""

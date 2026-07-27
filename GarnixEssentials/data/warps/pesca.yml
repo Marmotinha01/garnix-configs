@@ -1,0 +1,28 @@
+location: world:6.447749278435514:61.0:5.533067441834249:-91.59506:-11.4000025
+icon:
+  material: 349
+  data: 2
+  display: '&bPesca'
+  lore:
+  - '&7Na pesca além de você ganhar'
+  - '&7peixes, você consegue itens'
+  - '&7especiais.'
+  - ''
+  - ' &bAcesso rápido:'
+  - ' &8▸ &f/pesca'
+  - ''
+  - '&bClique para teleportar.'
+locked-icon:
+  material: BARRIER
+  display: '&cpesca'
+  lore:
+  - ''
+  - '&cVocê não tem permissão.'
+permission: ''
+slot: 15
+messages:
+  success: '&aVocê foi teleportado para a warp &f{warp}&a.'
+  no-permission: '&cVocê não tem permissão para ir à warp &f{warp}&c.'
+  title: ''
+  subtitle: ''
+  actionbar: ''

@@ -1,0 +1,25 @@
+display: "Laser"
+max-level: 50
+base-cost: 800.0
+increase-cost: 300.0
+
+# CHANCE flavour (percent)
+base-chance: 4
+increase-chance: 0.25
+max-line-radius: 6
+
+title: "&b&lLASER"
+subtitle: "&7+{crops} plantações"
+messages:
+  - "&a&lLASER! &7Colheu &f{crops}&7 plantações em linha."
+
+icon:
+  slot: 14
+  material: BLAZE_ROD
+  display: "&b{display}"
+  lore:
+    - "&7Chance de disparar um laser e"
+    - "&7colher plantações em linha reta."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"
+    - "&7Chance: &f{chance}%"

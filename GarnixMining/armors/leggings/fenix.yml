@@ -1,0 +1,17 @@
+item:
+# Fênix Leggings
+  display: "&cCalça Fênix"
+  material: LEATHER_LEGGINGS
+  color: "#FF5555"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 3.0
+    percent: true
+  gemas:
+    value: 3.0
+    percent: true

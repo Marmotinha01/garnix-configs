@@ -1,0 +1,217 @@
+# GarnixPunishments — messages.yml
+# Values are in Portuguese (what players see). Placeholders:
+#   {player} {staff} {reason} {proof} {duration} {expires} {code} {id}
+# {code} is the public punishment code shown to players; {id} is the internal numeric id (still
+# available if needed). Kick screens keep {expires} unresolved in the file — filled at kick time.
+
+# Chat feedback for commands and menu actions. {player} {code} {id} {count} {ip} {input} {error}
+commands:
+  apply:
+    success: '&aPunição aplicada em {player} &7({code}).'
+    exempt: '&c{player} é imune a punições.'
+    duplicate: '&c{player} já possui uma punição ativa desse tipo.'
+    self: '&cVocê não pode se punir.'
+    no-ip: '&cNão há um IP registrado para {player} (ele nunca entrou).'
+    exempt-alt: '&cNão é possível: uma conta imune está online neste IP.'
+    error: '&cErro ao aplicar punição: {error}'
+  pardon:
+    success: '&a{player} foi perdoado de {count} punição(ões).'
+    none: '&e{player} não possui punições ativas.'
+    error: '&cErro ao perdoar: {error}'
+  revoke:
+    success: '&aPunição {code} revogada.'
+    not-found: '&cPunição não encontrada ou já inativa.'
+    no-permission: '&cVocê não pode revogar punições aplicadas por outros staffs.'
+    forbidden: '&cVocê não tem permissão para revogar punições.'
+    error: '&cErro ao revogar: {error}'
+  edit:
+    success: '&aPunição {code} atualizada.'
+    not-found: '&cPunição não encontrada.'
+    no-permission: '&cVocê não pode editar punições aplicadas por outros staffs.'
+    error: '&cErro ao editar: {error}'
+  dupeip:
+    error: '&cErro: {error}'
+  checkid:
+    usage: '&cUso: &f/checkid <id>'
+    not-found: '&cNenhuma punição encontrada com o ID &f{code}&c.'
+    proof: '&7Prova de &f{code}&7: &f{proof}'
+    error: '&cErro ao buscar punição: {error}'
+  invalid-duration: '&cDuração inválida: {input}'
+  punish-locked: '&c{staff} já está aplicando uma punição em {player}.'
+  warn-usage: '&cUso: &f/warn <jogador> <motivo> <prova>  &7(a prova deve começar com https://)'
+  exempt-protected: '&c{player} é imune e não pode ser inspecionado.'
+  menu-error: '&cNão foi possível abrir o menu. Tente novamente.'
+  reload:
+    success: '&aConfigurações recarregadas com sucesso.'
+    error: '&cErro ao recarregar configurações: {error}'
+
+# Conversation prompts (chat). Opened from the /punir menu.
+conversation:
+  proof:
+    prompt:
+    - ''
+    - ' &b&lPROVA'
+    - ' &7Cole a URL da prova &8(ou ''cancelar''):'
+    - ''
+    invalid: '&cURL inválida. Ex.: https://imgur.com/...'
+  revoke:
+    prompt:
+    - ''
+    - ' &e&lREVOGAR'
+    - ' &7Motivo da revogação &8(ou ''cancelar''):'
+    - ''
+    invalid: '&cO motivo não pode ser vazio.'
+  pardon:
+    prompt:
+    - ''
+    - ' &a&lPERDOAR'
+    - ' &7Motivo do perdão &8(ou ''cancelar''):'
+    - ''
+    invalid: '&cO motivo não pode ser vazio.'
+
+# Display names per type (used in {punishment} of warn-limit-reached).
+type-names:
+  ban: Banimento
+  tempban: Banimento Temporário
+  mute: Mute
+  tempmute: Mute Temporário
+  warn: Aviso
+  ipban: Banimento de IP
+
+# ── Kick screens (shown to the punished player on ban) ──────────────────
+screens:
+  ban:
+  - '&c&lVOCÊ FOI BANIDO'
+  - ''
+  - '&7Motivo: &f{reason}'
+  - '&7Prova: &f{proof}'
+  - '&7Recorra no Discord: &fdiscord.gg/garnix'
+  - ''
+  - '&8ID da punição: {code}'
+  tempban:
+  - '&c&lVOCÊ FOI BANIDO TEMPORARIAMENTE'
+  - ''
+  - '&7Motivo: &f{reason}'
+  - '&7Prova: &f{proof}'
+  - '&7Expira em: &f{expires}'
+  - '&7Recorra no Discord: &fdiscord.gg/garnix'
+  - ''
+  - '&8ID da punição: {code}'
+  ipban:
+  - '&c&lVOCÊ FOI BANIDO POR IP'
+  - ''
+  - '&7Motivo: &f{reason}'
+  - '&7Prova: &f{proof}'
+  - '&7Nenhuma conta neste IP pode entrar.'
+  - '&7Recorra no Discord: &fdiscord.gg/garnix'
+  - ''
+  - '&8ID da punição: {code}'
+
+# ── In-chat notices ────────────────────────────────────────────────────
+mute-notice:
+  permanent:
+  - '&e&lVocê está silenciado permanentemente e não pode falar.'
+  - '&7Motivo: &f{reason}'
+  - '&8ID: {code}'
+  temp:
+  - '&e&lVocê está silenciado e não pode falar.'
+  - '&7Motivo: &f{reason}  &7Expira: &f{expires}'
+  - '&8ID: {code}'
+
+# Personal warn notice (shown to the warned player when the current stage is NOT yet reached).
+# {warn_count} = active warns after this one, {warn_next} = warns required at the current stage,
+# {next_punishment}/{next_duration} = the punishment that will be applied at this stage.
+warn-notice:
+- '&8&m----------------------------------------'
+- '&6&l⚠ VOCÊ RECEBEU UM AVISO'
+- ''
+- '&7Motivo: &f{reason}'
+- '&7Aplicado por: &f{staff}'
+- '&7Avisos ativos: &f{warn_count}&7/&f{warn_next}'
+- '&7Próxima punição: &f{next_punishment} &7({next_duration})'
+- ''
+- '&7Ao atingir &f{warn_next} &7avisos ela será aplicada automaticamente.'
+- '&8&m----------------------------------------'
+
+# Replaces warn-notice when THIS warn reaches the limit and an escalation punishment is applied.
+# {punishment} = display name of the applied punishment, {duration} = its duration (or permanent).
+warn-limit-reached:
+- '&8&m----------------------------------------'
+- '&c&l⚠ LIMITE DE AVISOS ATINGIDO'
+- ''
+- '&7Você recebeu um aviso por: &f{reason}'
+- '&7Isso completou &f{warn_count} &7avisos.'
+- ''
+- '&c&lPunição aplicada: &f{punishment} &7({duration})'
+- '&7Seus avisos foram zerados.'
+- '&8&m----------------------------------------'
+
+# ── Public broadcast per punishment type ───────────────────────────────
+broadcast-messages:
+  ban:
+  - '&8&m----------------------------------------'
+  - '&c&lBANIMENTO &7» &f{player} foi banido permanentemente.'
+  - '&7Motivo: &f{reason}   &7Staff: &f{staff}'
+  - '&7Prova: &f{proof}'
+  - '&8&m----------------------------------------'
+  tempban:
+  - '&8&m----------------------------------------'
+  - '&c&lBANIMENTO &7» &f{player} foi banido por &f{duration}&f.'
+  - '&7Motivo: &f{reason}   &7Staff: &f{staff}'
+  - '&7Prova: &f{proof}'
+  - '&8&m----------------------------------------'
+  mute:
+  - '&e&lMUTE &7» &f{player} foi silenciado permanentemente. &7({reason})'
+  - '&7Prova: &f{proof}   &7Staff: &f{staff}'
+  tempmute:
+  - '&e&lMUTE &7» &f{player} foi silenciado por &f{duration}&f. &7({reason})'
+  - '&7Prova: &f{proof}   &7Staff: &f{staff}'
+  warn:
+  - '&6&lAVISO &7» &f{player} recebeu um aviso. &7({reason})'
+  - '&7Prova: &f{proof}   &7Staff: &f{staff}'
+  ipban:
+  - '&8&m----------------------------------------'
+  - '&c&lBAN DE IP &7» &f{player} foi banido por IP permanentemente.'
+  - '&7Motivo: &f{reason}   &7Staff: &f{staff}'
+  - '&7Prova: &f{proof}'
+  - '&8&m----------------------------------------'
+
+# ── Revoke broadcast (per punishment type, plus the full pardon) ────────
+revoke-messages:
+  ban:
+  - '&a&lREVOGADO &7» &f{player} teve o banimento {code} removido por {staff}.'
+  tempban:
+  - '&a&lREVOGADO &7» &f{player} teve o banimento temporário {code} removido por {staff}.'
+  mute:
+  - '&a&lREVOGADO &7» &f{player} teve o mute {code} removido por {staff}.'
+  tempmute:
+  - '&a&lREVOGADO &7» &f{player} teve o mute temporário {code} removido por {staff}.'
+  warn:
+  - '&a&lREVOGADO &7» &f{player} teve o aviso {code} removido por {staff}.'
+  ipban:
+  - '&a&lREVOGADO &7» &f{player} teve o banimento de IP {code} removido por {staff}.'
+  # Full pardon (all punishments at once — no single id)
+  pardon:
+  - '&a&lPERDÃO &7» &f{player} foi perdoado de todas as punições por {staff}.'
+
+# ── /dupeip <jogador/ip> — contas no mesmo IP com marcadores de status ──
+# Nome verde = online, cinza = offline. Marcadores '*' empilham ANTES do nick, na ordem fixa
+# ipban → ban/tempban → mute/tempmute → warn (um único '*' de warn, mesmo com várias).
+# Placeholders: header/footer → {player} {ip} {count}; line → {markers} {name} {seen}.
+dupeip:
+  header:
+  - '&8&m----------------------------------------'
+  - '&7Contas no IP de &f{player} &7(&f{ip}&7) &8— &f{count} &7conta(s):'
+  - ''
+  line: ' {markers}{name} &8» &7visto: &f{seen}'
+  footer:
+  - '&8&m----------------------------------------'
+  not-found: '&cNenhum jogador encontrado para &f{input}&c.'
+  # Cor aplicada ao nick conforme presença.
+  name-online: '&a'
+  name-offline: '&7'
+  # Marcadores por tipo de punição ativa (deixe vazio para ocultar um deles).
+  marker-ipban: '&4*'
+  marker-ban: '&c*'
+  marker-mute: '&e*'
+  marker-warn: '&6*'

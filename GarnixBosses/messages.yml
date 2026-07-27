@@ -1,0 +1,44 @@
+actionbar:
+  hit: '{boss_name} &4❤{health} &8&l▏ &fTotal: &a&lx&a{stack}'
+  kill: '&a&lx&a{killed} {boss} &fabatidos! &e(/correio)'
+
+spawn:
+  success: '&aBoss {boss} &ainvocado com sucesso!'
+  stacked: '&aBoss {boss} &7empilhado! &8(&7x{stack}&8)'
+  not-in-plot: '&cVocê precisa estar em um plot para invocar um boss!'
+  no-permission: '&cVocê não tem permissão para invocar bosses neste plot!'
+  already-exists: '&cJá existe um boss desse tipo invocado no plot!'
+
+boss-item:
+  invalid-type: '&cTipo de boss inválido!'
+  merge-success: '&eVocê empilhou todos os bosses em um só! &8(&7{stacks}x&8)'
+  merge-nothing: '&cVocê não possui outros bosses para empilhar!'
+
+sword:
+  required: '&cVocê precisa de uma &4Matadora &cpara atacar bosses! &8(&c/matadora&8)'
+  received: '&aVocê recebeu uma &cMatadora&a!'
+  # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
+  mailed: '&eVocê está em um evento! Sua &cMatadora &efoi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário está cheio! Sua &cMatadora &efoi para o seu &6/correio&e.'
+
+kill-stack:
+  applied: '&a&l+&a{level} &fKill-Stack &7aplicado! &8(&7{total}&8)'
+  merge-success: '&eVocê empilhou &fx{count} livros de &6Kill-Stack &eem um só! &8(&7{level}&8)'
+  merge-nothing: '&cVocê não possui outros Kill-Stacks para empilhar!'
+
+boss-not-found: '&cBoss &f{input} &cnão encontrado.'
+variant-not-found: '&cMatadora &f{input} &cnão encontrada.'
+
+admin:
+  boss-given: '&6Boss {boss} &6enviado para &f{player}&6!'
+  sword-given: '&6Matadora &e{variant} &6enviada para &f{player}&6!'
+  kill-stack-given: '&6Kill-Stack &e+{level} &6enviado para &f{player}&6!'
+  reloaded: '&aConfigurações dos bosses recarregadas com sucesso!'
+  bosses-killed: '&e{count} &7bosses removidos do mundo!'
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
+# leftover: inventário cheio — só a sobra foi ao correio.
+delivery:
+  mailed: '&eVocê está em um evento! &eSeu item dos bosses foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'

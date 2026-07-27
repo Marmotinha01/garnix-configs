@@ -1,0 +1,55 @@
+lp-group: "celestial"
+display: "CELESTIAL"
+color: "&e"
+weight: 110
+
+switcher-icon:
+  texture: "200bf4bf14c8699c0f9209ca79fe18253e901e9ec3876a2ba095da052f69eba7"
+  display: "{color}&l{display}"
+
+advantages-icon:
+  slot: 11
+  texture: "200bf4bf14c8699c0f9209ca79fe18253e901e9ec3876a2ba095da052f69eba7"
+  display: "{color}&lVIP {color}&l{display}"
+  lore:
+    - "&7Veja todas as vantagens"
+    - "&7presentes nesse vip."
+    - ""
+    - "&8┌ &fTag: {color}Tab &8╺ {color}Cabeça &8╺ {color}Chat "
+    - "&8└ &fKits Exclusivos: {color}Diário &8╺ {color}Semanal &8╺ {color}Mensal "
+    - ""
+    - "&8┌ &fDesconto em compras: &c-&l10&c% "
+    - "&8└ &fBônus em vendas: &a+&l10&a% "
+    - ""
+    - "&8┌ &fHomes: {color}&l3 {color}homes "
+    - "&8├ &fEchest: {color}&l4 {color}linhas "
+    - "&8├ &fLeilão: {color}&l2 {color}itens "
+    - "&8├ &fMercado: {color}&l2 {color}itens "
+    - "&8└ &fTerrenos: {color}&l2 {color}terrenos "
+    - ""
+    - " &8Comandos disponíveis: "
+    - " &8▪ {color}/setloja &7╺ {color}/anunciarloja &7╺ {color}/nick "
+    - " {color}/fly &7╺ {color}/stack &7╺ {color}/autoclick &7╺ {color}/craft "
+    - " {color}/cor &7╺ {color}/hat "
+    - ""
+    - " &8Outras vantagens: "
+    - " &8▪ &fCor no {color}chat &fe em {color}placas&f. "
+    - " &8▪ &fNão perde {color}XP &fao &cmorrer&f. "
+    - " &8▪ &fPode usar {color}[item] &fnos chats. "
+    - " &8▪ &fFila {color}&lVIP &fprioritária nos {color}Lobbies&f. "
+    - " &8▪ &fNão é afetado pelo delay do {color}/g &fe {color}/l&f. "
+    - " &8▪ &fPode coletar {color}Recompensa Diária &fexclusiva. "
+    - ""
+
+add-broadcast:
+  title:
+    title: "{color}{player} &fativou"
+    subtitle: "{color}&lVIP {color}&l{display}"
+    fade-in: 10
+    stay: 60
+    fade-out: 10
+  chat:
+    - ""
+    - "  &e{player} &fativou {color}&lVIP {color}&l{display}&f!"
+    - ""
+  sound: AMBIENCE_THUNDER

@@ -1,0 +1,73 @@
+no-item: '&cSelecione um item para leiloar!'
+limit-reached: '&cVocê atingiu o limite de &l{limit} &cleilões simultâneos!'
+reload-success: '&aConfigurações dos leilões recarregadas com sucesso!'
+
+auction:
+  created: '&aSeu leilão de &f{item} &a(&8#{id}&a) foi criado com sucesso!'
+  sold: '&aSeu leilão de &f{item} &a(&8#{id}&a) foi vendido por {currency_prefix}{amount}&a!'
+  # Usada no lugar de 'sold' quando a economia cobra taxa. {amount} é o que o
+  # vencedor pagou e {net} é o que entrou na sua conta.
+  sold-tax: '&aSeu leilão de &f{item} &a(&8#{id}&a) foi vendido por {currency_prefix}{amount}&a! Você recebeu {currency_prefix}{net} &7(taxa de &f{tax}%&7).'
+  expired: '&eSeu leilão de &f{item} &e(&8#{id}&e) expirou sem lances. Resgate no &f/correio&e.'
+  expired-click: '&cEsse leilão já expirou!'
+  won: '&aVocê venceu o leilão de &f{item} &a(&8#{id}&a)! Resgate no &f/correio&a.'
+  outbid: '&cVocê foi superado no leilão de &f{item} &c(&8#{id}&c)! Seu lance foi devolvido.'
+
+bid:
+  placed: '&aLance de {currency_prefix}{amount} &ano &f{item} &a(&8#{id}&a) realizado com sucesso!'
+  too-low: '&cSeu lance deve ser maior que {currency_prefix}{minimum}&c!'
+  self: '&cVocê não pode dar lance no seu próprio leilão!'
+  no-funds: '&cVocê não tem saldo suficiente!'
+  auction-ended: '&cEsse leilão já foi encerrado!'
+
+conversations:
+  start-bid:
+  - ''
+  - '  &aInforme o valor do lance inicial.'
+  - '  &7Para cancelar digite &8cancelar&7!'
+  - ''
+  place-bid:
+  - ''
+  - '  &aInforme o valor do lance que deseja dar.'
+  - '  &7Para cancelar digite &8cancelar&7.'
+  - ''
+
+create-auction:
+  bid-too-low: '&cO lance mínimo é {currency_prefix}1&c!'
+  bid-invalid: '&cInforme um valor válido!'
+  no-item: '&cSelecione um item para leiloar!'
+  no-duration: '&cSelecione uma duração para o leilão!'
+  no-bid: '&cDefina o lance inicial do leilão!'
+
+auction-view:
+  bid-too-low: '&cO lance mínimo é {currency_prefix}{minimum}&c!'
+  bid-invalid: '&cInforme um valor válido!'
+
+broadcast:
+  auction-created:
+  - ''
+  - '  &a&lLEILAO &8▶ &7(/leilao)'
+  - '  &e{seller} &7colocou &e{item} &7em leilão &8(#{id}) &7começando em {currency_prefix}{amount}&7!'
+  - ''
+  bid-placed:
+  - ''
+  - '  &a&lLEILAO &8▶ &7(/leilao)'
+  - '  &e{player} &7deu um lance de {currency_prefix}{amount} &7em &e{item} &7(&8#{id}&7)!'
+  - ''
+  bid-placed-snipe:
+  - ''
+  - '  &a&lLEILAO &8▶ &7(/leilao)'
+  - '  &e{player} &7deu um lance de {currency_prefix}{amount} &7em &e{item} &7(&8#{id}&7)!'
+  - ''
+  - '  &eTempo estendido em &f{seconds}s &edevido a lance de última hora!'
+  - ''
+  auction-won:
+  - ''
+  - '  &a&lLEILAO &8▶ &7(/leilao)'
+  - '  &e{player} &7venceu o leilão de &e{item} &7(&8#{id}&7) por {currency_prefix}{amount}&7!'
+  - ''
+  auction-expired:
+  - ''
+  - '  &a&lLEILAO &8▶ &7(/leilao)'
+  - '  &7O leilão de &e{item} &7(&8#{id}&7) de &e{seller} &7expirou sem lances.'
+  - ''

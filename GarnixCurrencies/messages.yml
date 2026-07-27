@@ -1,0 +1,31 @@
+help:
+  - ''
+  - '  &e&lGARNIX CURRENCIES &8- &fAjuda'
+  - ''
+  - '  &e/currencies &8- &7Exibe esta mensagem de ajuda.'
+  - '  &e/currencies list &8- &7Lista todas as moedas carregadas.'
+  - '  &e/currencies reload &8- &7Recarrega as configurações.'
+  - ''
+
+list-header: '&e&lMOEDAS &8(&7{count}&8)'
+list-format: '  &8- &e{id}'
+list-empty: '&cNenhuma moeda carregada.'
+
+balance: '&fSeu saldo: {symbol_color}{symbol}{primary_color}{balance}'
+balance-other: '&fSaldo de &7{player}&7: {symbol_color}{symbol}{primary_color}{balance}'
+
+transfer-sent: '&fVocê enviou {symbol_color}{symbol}{primary_color}{amount} {currency} &fpara &7{target}&f.'
+transfer-sent-tax: '&fVocê enviou {symbol_color}{symbol}{primary_color}{amount} {currency} &fpara &7{target}&f. &fTaxa: &4{symbol}&c{tax_amount} {currency} &8(&7{tax_percentage}%&8)'
+transfer-received: '&fVocê recebeu {symbol_color}{symbol}{primary_color}{amount} {currency} &fde &7{sender}&f.'
+transfer-received-tax: '&fVocê recebeu {symbol_color}{symbol}{primary_color}{amount} {currency} &fde &7{sender}&f. &fTaxa: &4{symbol}&c{tax_amount} {currency} &8(&7{tax_percentage}%&8)'
+
+set-success: '&7Saldo de &f{player} &7definido para {symbol_color}{symbol}{primary_color}{amount} {currency}&7.'
+give-success: '&7Adicionados {symbol_color}{symbol}{primary_color}{amount} {currency} &7para &f{player}&7.'
+take-success: '&7Removidos {symbol_color}{symbol}{primary_color}{amount} {currency} &7de &f{player}&7.'
+
+insufficient-funds: '&cVocê não possui saldo suficiente para essa transação!'
+invalid-amount: '&cInforme um valor válido!'
+self-transfer: '&cVocê não pode transferir para si mesmo!'
+player-not-found: '&cJogador &4{player} &cnão encontrado!'
+
+reload-success: '&aArquivos de configurações recarregados!'

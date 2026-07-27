@@ -1,0 +1,114 @@
+# GarnixFishing — messages (keys in English, values in pt-BR).
+
+general:
+  only-players: '&cApenas jogadores podem usar este comando.'
+  reloaded: '&aConfigurações recarregadas.'
+
+fishing:
+  started: '&aVocê arremessou a linha!'
+  stopped: '&cVocê recolheu a linha.'
+
+actionbar:
+  fishing: '&bPescando... &f{remaining}s'
+  not-fishing: '&7Arremesse a linha na água para pescar.'
+
+catch:
+  title: '&b&lFISGOU!'
+  # Currency placeholders: {symbol_color}{symbol}{primary_color}{secondary_color}
+  # {currency} (singular/plural) {amount}. {quantity} = how many were fished.
+  subtitle: '&f{reward} &7x{quantity} &8■ &a+ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  bad-luck: '&8Que azar... nada dessa vez.'
+
+level:
+  up: '&b&lLEVEL UP! &fSua vara alcançou o nível &b&l{level}&f!'
+  reward-unlocked-header: '&3&lNOVAS RECOMPENSAS DESBLOQUEADAS!'
+  reward-unlocked-entry: ' &8▶ &f{reward}'
+
+enchant:
+  # Applied with books dragged onto the rod. {enchant} carries its own color.
+  applied: '&aEncantamento &f{enchant} &aaplicado! Nível atual: &f{level}&a.'
+  partial: '&aEncantamento &f{enchant} &aelevado ao nível &f{level}&a. Livro restante: &f{remaining}&a.'
+  already-max: '&cA vara já está no nível máximo de &f{enchant}&c.'
+
+# Rod purchase (home menu).
+rod:
+  # {item} placeholder is not used; a fixed confirmation is enough.
+  purchased: '&aVocê comprou uma Vara de Pesca!'
+  # Currency placeholders resolved by the hook: {symbol_color}{symbol}{primary_color}{amount} {currency}.
+  insufficient: '&cSaldo insuficiente! Você precisa de {symbol_color}{symbol}{primary_color}{amount} {currency}&c.'
+  inventory-full: '&cSeu inventário está cheio.'
+
+skin:
+  invalid: '&cEssa skin não existe mais.'
+  need-rod: '&cVocê precisa de uma Vara de Pesca no inventário.'
+  # Applied by dragging a skin item onto the rod (swaps out the previous one).
+  applied: '&aSkin {skin} &aaplicada na sua vara!'
+  already-equipped: '&cEssa vara já está com a skin {skin}&c.'
+  removed: '&eSkin {skin} &eremovida e devolvida como item.'
+  inventory-full: '&cSeu inventário está cheio.'
+
+shop:
+  # {item} = the bought product's icon display (carries its own colors).
+  purchased: '&aVocê comprou {item}&a!'
+  # Currency placeholders resolved by the hook: {symbol_color}{symbol}{primary_color}{amount} {currency}.
+  insufficient: '&cVocê não tem corais suficientes! Você precisa de {symbol_color}{symbol}{primary_color}{amount} {currency}&c.'
+
+forge:
+  no-item: '&cVocê não possui mais o item de forja.'
+  inventory-full: '&cSeu inventário está cheio.'
+  success: '&aVocê forjou a skin {skin}&a!'
+
+booster:
+  # {type} já vem colorido (booster-types); {bonus} = ex. 2x.
+  activated: '&aBooster de {type} &f{bonus} &aativado!'
+  stacked: '&aBooster de {type} &f{bonus} &aempilhado!'
+  # Empilhar no inventário (shift + botão direito). Tokens: {type} {bonus} {amount} {duration}
+  merged: '&aVocê juntou &f{amount}&a boosters de {type} &f{bonus}&a em um só! &7Duração total: &f{duration}&a.'
+  merge-none: '&eVocê não tem outros boosters de {type} &f{bonus}&e no inventário para juntar.'
+  expired: '&cSeu booster de {type} &f{bonus} &cexpirou!'
+  removed: '&eBooster de {type} &f{bonus} &eremovido. &7Devolvido &f{remaining}&7.'
+  blocked: '&cVocê já tem um booster de {type}&c ativo!'
+  conflict: '&cVocê não pode combinar um booster &fAmbos&c com boosters de tipo específico. &7Aguarde o atual expirar ou desative-o.'
+  too-little-time: '&cTempo restante insuficiente para remover este booster.'
+
+admin:
+  usage: '&cUso: &f{usage}'
+  usages:
+    setlevel: /pesca setlevel <jogador> <nível>
+    addxp: /pesca addxp <jogador> <quantia>
+    setenchant: /pesca setenchant <jogador> <speed|luck|double> <nível>
+    givebook: /pesca givebook <jogador> <speed|luck|double> <nível> [quantia]
+    giverod: /pesca giverod <jogador>
+    giveskin: /pesca giveskin <jogador> <skin> [quantia]
+    giveforge: /pesca giveforge <jogador> [quantia]
+    givearmor: /pesca givearmor <jogador> <armadura|coleção> [quantia]
+    givebooster: /pesca givebooster <jogador> <tipo> <multiplicador> <duração> [quantia]
+  player-not-found: '&cJogador &f{player} &cnão encontrado.'
+  player-no-rod: '&f{player} &cprecisa estar segurando uma Vara de Pesca.'
+  invalid-number: '&cNúmero inválido: &f{value}&c.'
+  level-range: '&cO nível deve estar entre 0 e {max}.'
+  level-set: '&aNível da vara de &f{player} &adefinido para &f{level}&a.'
+  xp-added: '&aAdicionado &f{value} &aXP à vara de &f{player}&a.'
+  enchant-not-found: '&cEncantamento &f{enchant} &cnão encontrado.'
+  enchant-set: '&aEncantamento &f{enchant} &ada vara de &f{player} &adefinido para o nível &f{level}&a.'
+  skin-not-found: '&cSkin &f{skin} &cnão encontrada.'
+  skin-given: '&aEntregue a skin {skin} &a(x{amount}) para &f{player}&a.'
+  forge-given: '&aEntregue &f{amount} &aitem(ns) de forja para &f{player}&a.'
+  rod-given: '&aEntregue uma Vara de Pesca para &f{player}&a.'
+  book-given: '&aEntregue livro de &f{enchant} &f{level} &a(x{amount}) para &f{player}&a.'
+  armor-not-found: '&cArmadura/coleção não encontrada: &f{armor}'
+  armor-given: '&aArmadura {armor} &adada para &f{player}&a.'
+  collection-given: '&aColeção &f{collection} &adada para &f{player}&a.'
+  booster-type-invalid: '&cTipo de booster inválido: &f{type}&c.'
+  booster-multiplier-invalid: '&cMultiplicador inválido: &f{value}&c. Use por exemplo &f2x&c.'
+  duration-invalid: '&cDuração inválida: &f{value}&c. Ex.: &f1d&c, &f12h&c, &f30m&c.'
+  booster-given: '&aBooster de {type} &f{bonus} &aentregue para &f{player}&a. &7(x{quantity})'
+
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
+# leftover: inventário cheio — só a sobra foi ao correio.
+# Deixe "" para não avisar nada.
+delivery:
+  mailed: '&eVocê está em um evento! &eSeu item da pesca foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'

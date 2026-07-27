@@ -1,0 +1,28 @@
+display: 'Vinculado'
+
+permission: 'daily.linked'
+
+cooldown: '1d'
+
+slot: 14
+
+commands:
+  - 'cash add {player} 50'
+
+collect-icon:
+  texture: 'e00afa9898346fbaca43bbf93ddc13db64d23202b30de479457ca883871aa86c'
+  display: '&d&lVINCULADO'
+  lore:
+    - '&fRecompensa: &6❂50 Cash'
+    - ''
+    - '&aClique para coletar!'
+
+no-permission-icon:
+  texture: '5726d9d0632e40bda5bcf65839ba2cc98a87bd619c53adf00310d6fc71f042b5'
+  display: '&cRecompensa por Vincular'
+  lore:
+  - '&7Destinada a jogadores'
+  - '&7que vincularam o discord.'
+  - ''
+  - ' &8▪ &fUse &e/comovincular&f.'
+  - ''

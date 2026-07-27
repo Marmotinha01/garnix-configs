@@ -1,0 +1,13 @@
+order: 18
+
+name: "Golem"
+tag: "&7&l[Golem]"
+
+texture: 'da6e0429ccaabb6f5f0c5d513c795bed6d80fce72f57f4bc3a616aee23e12572'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

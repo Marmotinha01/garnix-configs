@@ -1,0 +1,21 @@
+default:
+  display: '&eCombustível'
+  material: COAL
+  data: 0
+  item:
+    display: '&eCombustível &7(Máquinas)'
+    lore:
+    - '&fLitros: &c{liters}'
+    - ''
+    - '&fB. Direito: &7Aplicar'
+    - '&fB. Direito + SHIFT: &7Empilhar'
+
+infinite:
+  display: '&b&lCombustível Infinito'
+  material: COAL
+  data: 1
+  item:
+    glow: true
+    display: '&b&lCombustível Infinito &7(Máquinas)'
+    lore:
+    - '&fB. Direito: &7Aplicar em máquina'

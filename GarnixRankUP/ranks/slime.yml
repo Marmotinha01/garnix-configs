@@ -1,0 +1,13 @@
+order: 12
+
+name: "Slime"
+tag: "&a[Slime]"
+
+texture: '6061f98aaff1e406e06f6f13ffe06005873f3d1eaddb1b59e19dda0ed9ffb270'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

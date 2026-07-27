@@ -1,0 +1,52 @@
+title: Eventos
+rows: 3
+
+stats-icon:
+  slot: 11
+  display: '&bSuas Estatísticas'
+  lore:
+  - '&7Veja todas as suas'
+  - '&7estatísticas em eventos.'
+  - ''
+  - ' &8Eventos vencidos:'
+  - '{events}'
+  - ''
+  - ' &b▎ &fVitórias Totais: &a{total} '
+  - ''
+
+stats:
+  line: ' &8▪ &7{event} &a{wins}x '
+  none: ' &8▪ &cNenhuma vitória. '
+
+# Ícone só de leitura, no meio do menu: não tem clique nenhum e não sai do lugar.
+# O plugin não agenda evento nenhum — quem escreve o cronograma é você, aqui nas
+# linhas de 'lore'. Apague a seção inteira para tirar o ícone do menu.
+schedule-icon:
+  slot: 13
+  material: WATCH
+  display: '&eCronograma'
+  lore:
+  - '&7Os horários dos eventos'
+  - '&7ao longo do dia.'
+  - ''
+  - ' &8Durante a semana:'
+  - ' &e▪ &f12:00 &8- &7Evento de arena '
+  - ' &e▪ &f16:00 &8- &7Evento de chat '
+  - ' &e▪ &f20:00 &8- &7Evento de arena '
+  - ''
+  - ' &8Fim de semana:'
+  - ' &e▪ &f15:00 &8- &7Evento de arena '
+  - ' &e▪ &f19:00 &8- &7Evento de chat '
+  - ' &e▪ &f21:00 &8- &7Evento de arena '
+  - ''
+  - '&8&oOs horários podem variar.'
+
+ranking-icon:
+  slot: 15
+  material: GOLD_NUGGET
+  display: '&bTOP'
+  lore:
+  - '&7Veja os jogadores com'
+  - '&7mais vitórias em eventos.'
+  - ''
+  - '&bClique para abrir.'

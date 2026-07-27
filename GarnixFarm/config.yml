@@ -1,0 +1,150 @@
+# GarnixFarm — Config
+
+# Minutos entre cada rebuild do ranking (top-10).
+ranking-refresh-minutes: 5
+
+# ── Scan ──
+# /fazenda scan <tipo> <raio> detecta a cultura madura do tipo (trigo/cenoura/
+# batata/fungo) sobre terra arada (SOIL). Cada tipo é uma região física própria.
+scan:
+  max-radius: 2000 # maior raio aceito
+  y-below: 4 # blocos abaixo do jogador na varredura
+  y-above: 4 # blocos acima
+  chunks-per-tick: 8 # chunks processados por tick (evita travar a TPS)
+  require-grown: true # só registra a cultura totalmente crescida
+
+# ── Colheita ──
+regrow-delay-seconds: 20 # segundos até uma plantação colhida voltar
+
+harvest:
+  # Efeitos ancorados no jogador (Ceifa/Espantalho) colhem um disco que acompanha o
+  # relevo, então funcionam voando. Este é o teto: quantos blocos acima da plantação
+  # o jogador ainda alcança. 0 = só colhe no nível do pé.
+  max-height: 25
+
+# Moedas. Os IDs das currencies ficam aqui; o VALOR por colheita é definido
+# POR TIPO em farms.yml (currencies.primary / currencies.secondary).
+economies:
+  primary-id: coins # currency principal (GarnixCurrencies)
+  secondary-id: sementes # currency secundária (Sementes); vazio = desligada
+
+# Action bar a cada quebra (estilo mina). Tokens: {providers} {separator} {level}
+#   {max_level} {xp} {xp_needed}.
+# {providers} = ganhos das duas economias, cada um montado do provider-display e
+#   juntado pelo separator (economia com ganho 0 é omitida).
+# provider-display (por moeda): {symbol_color}{symbol}{primary_color}{value} {currency}
+#   (currency = nome no singular/plural pelo valor).
+actionbar:
+  separator: ' &8■ '
+  provider-display: '{primary_color}&l+&r {symbol_color}{symbol}{primary_color}{value} &7{currency}'
+  message: '{providers}{separator}&7Nível &a{level}&7/&a{max_level}{separator}&7XP &e{xp}&7/&e{xp_needed}'
+
+# Barra de progresso do XP (actionbar + placeholder %farm_level_bar%).
+progress-bar:
+  length: 10           # nº de caracteres
+  short-length: 5      # nº de caracteres da versão curta (%farm_level_bar_short%)
+  symbol: '▪'          # caractere de cada segmento
+  completed-color: '&a'
+  incomplete-color: '&c'
+
+# Expansão do token {bonus} nas lores de skin/armadura.
+bonus-lore-format: ' &8► {color}+{value}{unit} {display}'
+
+# ── Encantamentos ──
+enchant-currency: sementes # currency usada pra comprar/desencantar níveis
+enchant-refund-percentage: 40.0 # % do custo devolvido ao desencantar
+# Teto global de animações-companheiro simultâneas (swarm/scarecrow) no servidor.
+# Ao estourar, o proc ainda paga a colheita mas pula o visual. 0 = ilimitado.
+enchant-max-simultaneous-global: 80
+
+# ── Enxada dada dentro da fazenda (mesmo game design da picareta da mina) ──
+# {crops} = total colhido; {skin} = nome da skin equipada; {enchants} = encantamentos possuídos.
+hoe-item:
+  hotbar-slot: 4
+  display-name: '&eEnxada &7[{crops}]'
+  lore:
+  - ''
+  - ' &e▎ &fEncantamentos: '
+  - '{enchants}'
+  - ''
+  - ' &e▎ &fSkin: {skin-display} &a+&l{skin-bonus}&a% '
+  - '' 
+  - '&eOpções de uso:'
+  - '&fBotão Dir. + SHIFT &8➟ &7Gerenciar'
+  enchant-entry: ' &8◗ &7{enchant} {level} '
+  no-enchants: ' &8◗ &cNenhum encantamento '
+
+# Rótulo do provider "xp" (XP da fazenda): não é uma currency, então o nome vem
+# daqui em vez do GarnixCurrencies. Usado pelo booster de xp e onde o tipo aparece.
+xp-display:
+  symbol: ''
+  color: '&b'
+  display: XP
+
+# Rótulo do booster "both": um único booster que aumenta TODAS as recompensas da
+# fazenda (currency primária + secundária) e o XP de uma vez. Mesma forma do
+# xp-display (não é uma currency). Mostrado onde o nome da currency do booster aparece.
+both-display:
+  symbol: ''
+  color: ''
+  display: '&bXP &7+ &aCoins &7+ &5Sementes'
+
+booster:
+  # Tempo restante mínimo (segundos) para recuperar um booster ativo pelo menu.
+  # Ao recuperar, o jogador recebe de volta um item valendo 50% do tempo restante
+  # (perde a outra metade). O piso bloqueia recuperar boosters quase expirados só
+  # para reativar outro sem esperar.
+  min-remove-seconds: 30
+
+# Item de booster (clique-direito ativa). Tokens: {multiplier} {duration} + currency.
+# 'activation-lore' é anexado apenas ao item físico (não aparece no menu de boosters).
+booster-icon:
+  material: POTION
+  data: 8227
+  flags:
+  - HIDE_POTION_EFFECTS
+  display: '&eBooster de Fazenda'
+  lore:
+  - '&7Use este booster para ter'
+  - '&7seus ganhos aumentados.'
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fTipo: {symbol_color}{primary_color}{display} '
+  - ' &8▪ &fBônus: &a{multiplier}x '
+  - ' &8▪ &fDuração: &7{duration} '
+  activation-lore:
+  - ''
+  - '&eOpções de uso:'
+  - '&fBotão Direito &8➟ &7Ativar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'
+
+# Item de forja (clique-direito abre). Consumido ao forjar com sucesso.
+forge-icon:
+  texture: "13cfc3cbc0cf6f81774fa37b1f6608417c36aa19e5a429c97698ff94dafb3a6"
+  display: '&eForja de Skins'
+  lore:
+  - '&7Combine skins para'
+  - '&7forjar uma melhor.'
+  - ''
+  - ' &e▎ &fTipo: &eEnxada '
+  - ''
+  - ' &8Requisitos:'
+  - ' &8▪ &c7 Skins Iguais'
+  - ''
+  - '&eOpções de uso:'
+  - '&fBotão Dir. + SHIFT &8➟ &7Abrir'
+
+# Comandos permitidos dentro da fazenda (sem farm.bypass.commands).
+allowed-commands:
+- fazenda
+- farm
+- g
+- tell
+- r
+
+# ── Tasks (segundos) ──
+tasks:
+  hoe-display-seconds: 5 # intervalo do refresh do contador {crops} na enxada
+  booster-expiry-seconds: 60
+  clover-flush-seconds: 30
+  farm-report-seconds: 60 # intervalo do relatório periódico

@@ -1,0 +1,73 @@
+title: Ranks
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+# Currency cost line. Placeholders: {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
+cost-format: ' &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'
+# Head cost line. Placeholders: {amount} {display}
+cost-format-head: ' &8► &f{amount} &7{display}'
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum rank encontrado.'
+
+info-icon:
+  slot: 48
+  material: BOOK
+  display: '&aSuas Informações'
+  lore:
+  - '&fRank: {rank_tag}'
+  - '&fPrestígio: &b★{prestige}'
+
+ranking-icon:
+  slot: 50
+  material: ARMOR_STAND
+  display: '&aRanking'
+  lore:
+  - '&7Clique para ver.'
+
+initial-icon:
+  display: '{rank_tag}'
+  lore:
+  - '&8Rank inicial.'
+
+completed-icon:
+  display: '{rank_tag}'
+  lore:
+  - '&7Rank já desbloqueado.'
+
+current-icon:
+  display: '{rank_tag}'
+  lore:
+  - '&eVocê está neste rank.'
+
+available-icon:
+  display: '{rank_tag}'
+  lore:
+  - ''
+  - ' &fCustos:'
+  - '{costs}'
+  - ''
+  - '&aClique para evoluir.'
+
+locked-icon:
+  display: '{rank_tag}'
+  lore:
+  - '&cLibere o rank anterior.'
+
+unreleased-icon:
+  material: BARRIER
+  display: '&cRank Indisponível'
+  lore:
+  - '&fLibera em: &7{date}'
+  - ''
+  - '&cAinda não foi liberado!'

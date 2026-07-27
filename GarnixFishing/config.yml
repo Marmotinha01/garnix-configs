@@ -1,0 +1,122 @@
+# GarnixFishing — config
+
+# Currency credited on each catch (a GarnixCurrencies id).
+currency: corais
+# Base currency per fished unit (before the rod-skin bonus; per-reward override in rewards.yml).
+currency-per-catch: '10'
+# Base XP per fished unit (per-reward override in rewards.yml).
+xp-per-catch: 5.0
+# Shown as {xp_needed} once a rod is at the level cap.
+max-level-display: ∞
+
+# Rod-XP display (XP is not a currency). Fills the {color}/{display}/{symbol}
+# tokens of a {bonus} line whose provider is "xp" on armor pieces.
+xp-display:
+  symbol: ''
+  color: '&b'
+  display: XP
+
+# Auto-generated bonus lines for armor pieces (armors/*.yml): put {bonus} on a
+# lore line and it expands to one line per entry of that piece's 'bonuses' table,
+# so a percentage is written once (in 'bonuses') instead of by hand. Per line:
+# {value} = the number, {unit} = "%" for a percent bonus (empty otherwise);
+# {color} and {display} come from the provider — "xp" uses xp-display above, the
+# corais currency comes from GarnixCurrencies. An armor file may override this
+# layout with its own 'bonus-format'.
+bonus-lore-format: ' &8◗ {color}+&l{value}{color}{unit} {display} '
+
+# Minutes between leaderboard rebuilds (the ranking keeps the top 10).
+ranking-refresh-minutes: 5
+
+# Shared style for the XP bar ({level_bar}).
+progress-bar:
+  length: 10
+  symbol: ▪
+  completed-color: '&a'
+  incomplete-color: '&7'
+
+# Seconds between catches. The Speed enchantment subtracts its flat seconds from this.
+fishing-base-interval-seconds: 15
+
+# Fishing rod (real, tradeable item). Bought in the home menu; all progression
+# (level, XP, enchants, skins) lives on the item NBT. Material comes from the
+# equipped skin.
+# Placeholders: {skin}, {level}, {xp}, {xp_needed}, {bonus}, {enchants}, {level_bar}.
+rod:
+  # Purchase price and the GarnixCurrencies id it is paid with (a main economy
+  # currency — buying with corais would be circular, since corais come from fishing).
+  price: 10000
+  currency: coins
+  display: '&bVara de Pesca'
+  lore:
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fNível: &e{level}'
+  - ' &8▪ &fXP: &7{xp}&8/&c{xp_needed} {level_bar} '
+  - ' &8▪ &fSkin: {skin-display} &a+&l{skin-bonus}&a% '
+  - ''
+  - ' &b▎ &fEncantamentos: '
+  - '{enchants}'
+  - '' 
+  - '&bOpções de uso:'
+  - '&fBotão Dir. + SHIFT &8➟ &7Gerenciar'
+  enchant-entry: ' &8◗ &7{enchant} {level} '
+  no-enchants: ' &8◗ &cNenhum encantamento '
+
+# Skin forge item (consumed on use).
+forge-item:
+  texture: c03563c9259bdc86b44d1a02fee3853dea696770a28c4724d13f713f6c5ec54f
+  display: '&bForja de Skins'
+  lore:
+  - '&7Combine skins para'
+  - '&7forjar uma melhor.'
+  - ''
+  - ' &b▎ &fTipo: &bVara de Pesca '
+  - ''
+  - ' &8Requisitos:'
+  - ' &8▪ &c7 Skins Iguais'
+  - ''
+  - '&bOpções de uso:'
+  - '&fBotão Dir. + SHIFT &8➟ &7Abrir'
+
+# Boosters: per-catch multipliers given as items. Two types — "xp" (fishing XP)
+# and the currency id above ("corais"). Activated by right-clicking the item.
+booster:
+  # How often (seconds) expired boosters are swept off online players (and they
+  # are notified). Offline players are pruned lazily.
+  expiry-task-seconds: 60
+  # Minimum remaining seconds required to remove an active booster back to the
+  # inventory — blocks the park-and-refund loop near expiry.
+  min-remove-seconds: 30
+
+# Type labels shown wherever a booster's {type} appears (item, menu, messages).
+booster-types:
+  xp:
+    display: '&bXP'
+  corais:
+    display: '&3Corais'
+  # The "both" booster boosts corais and fishing XP at once.
+  both:
+    display: '&bXP &7+ &3Corais'
+
+# Booster item template (also the icon shown in the booster menu).
+# Placeholders: {type}, {bonus} (e.g. 2x / 10%), {duration}.
+booster-item:
+  material: POTION
+  data: 8203
+  flags:
+  - HIDE_POTION_EFFECTS
+  display: '&bBooster de Pesca'
+  lore:
+  - '&7Use este booster para ter'
+  - '&7seus ganhos aumentados.'
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fTipo: {type} '
+  - ' &8▪ &fBônus: &a{bonus} '
+  - ' &8▪ &fDuração: &7{duration} '
+  activation-lore:
+  - ''
+  - '&bOpções de uso:'
+  - '&fBotão Direito &8➟ &7Ativar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'

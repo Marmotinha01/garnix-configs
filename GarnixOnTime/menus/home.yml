@@ -1,0 +1,22 @@
+title: Tempo Online
+rows: 3
+
+player-head:
+  slot: 11
+  display: '&aTempo Online'
+  lore:
+  - '&fOnline por: &7{time}'
+
+ranking-icon:
+  slot: 13
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Clique para ver.'
+
+rewards-icon:
+  slot: 15
+  material: CHEST
+  display: '&aRecompensas'
+  lore:
+  - '&7Clique para ver.'

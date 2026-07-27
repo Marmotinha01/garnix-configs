@@ -1,0 +1,13 @@
+item:
+  display: "&aPeitoral Floral"
+  material: LEATHER_CHESTPLATE
+  color: "#55DD55"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 2
+    percent: true

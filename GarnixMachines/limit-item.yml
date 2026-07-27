@@ -1,0 +1,10 @@
+material: INK_SACK
+data: 4
+glow: true
+display: '&9Limite de Máquinas'
+lore:
+- '&8▎ &fQuantia: &9{amount}'
+- ''
+- '&9Opções de uso:'
+- '&fBotão Direito &8➟ &7Ativar'
+- '&fBotão Dir + SHIFT &8➟ &7Empilhar'

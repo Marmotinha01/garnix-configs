@@ -1,0 +1,20 @@
+command: "tutorial"
+aliases: []
+
+permission: ""          # vazio = qualquer jogador pode abrir
+permission-message: "&cVocê não tem permissão para abrir este menu."  # enviado a quem não tem a permission
+
+open-sound: ""
+
+title: "Tutorial"
+rows: 6
+
+items:
+  locais:
+    slot: 10
+    material: STONE
+    display: "&bWarps"
+    lore:
+      - "&8Warps"
+    player-commands:
+      - "warps"

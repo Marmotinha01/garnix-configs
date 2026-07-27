@@ -1,0 +1,110 @@
+# GarnixFarm — Tipos de farm (progressão só avança, nunca volta).
+#
+# Ordem fixa no código (GarnixFarm.FARM_TYPES): trigo -> cenoura -> batata -> fungo.
+# É UMA ÁREA SÓ: o tipo muda só QUAL cultura o jogador vê/colhe (render por-jogador).
+# Um /fazenda scan <raio> registra as posições e /fazenda setspawn define o spawn.
+#
+# crop: WHEAT | CARROT | POTATO | NETHER_WART
+# exp: XP de fazenda ganho por plantação colhida deste tipo (alimenta o nível; a curva
+#   de XP por nível fica em levels.yml). Boostável pelo provider "xp".
+# currencies.primary / secondary: pagamento por colheita (o primeiro tipo é o inicial,
+#   sem upgrade/require).
+#
+# upgrade (evoluir PARA este tipo):
+#   cost / currency: preço.  (cost 0 = grátis; a linha de custo some da lore.)
+# require (requisito além do custo). O requisito que NÃO for usar: REMOVA a linha (não
+#   deixe vazia). Sem nenhum requisito, remova o bloco 'require' inteiro.
+#   level:      nível de fazenda mínimo. Remova a linha se não exigir nível.
+#   crops:      quantas colheitas são necessárias.
+#   crop-type:  de QUAL tipo contam essas colheitas — OBRIGATÓRIO quando há 'crops'.
+#               A contagem é POR TIPO, não a soma geral (o total geral fica no
+#               ranking/estatísticas). Ex.: cenoura conta trigo; batata conta cenoura.
+#   permission:         node checado — NUNCA aparece pro jogador. Remova se não usar.
+#   permission-display: rótulo amigável na lore (ex. "&6VIP+"). Remova se não usar.
+#               Ex.: permission "grupo.vip" + permission-display "&6VIP+".
+#
+# Tokens de currency na lore do ícone (pagamento por colheita):
+#   {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}{primary_currency}
+#   {secondary_*} idem.  ({*_currency} = nome da moeda no plural.)
+
+farms:
+  trigo:
+    display: '&eTrigo'
+    crop: WHEAT
+    exp: 1.0
+    currencies:
+      primary: 5.0
+      secondary: 10.0
+    icon:
+      slot: 11
+      material: WHEAT
+      display: '&eTrigo'
+      lore:
+      - '&7O tipo inicial de fazenda.'
+      - '&7Por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
+  
+  cenoura:
+    display: '&6Cenoura'
+    crop: CARROT
+    exp: 3.0
+    upgrade:
+      cost: 50000.0
+      currency: coins
+    require:
+      level: 5
+      crops: 500
+      crop-type: trigo
+    currencies:
+      primary: 45.0
+      secondary: 20.0
+    icon:
+      slot: 12
+      material: CARROT_ITEM
+      display: '&6Cenoura'
+      lore:
+      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
+      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
+  
+  batata:
+    display: '&eBatata'
+    crop: POTATO
+    exp: 6.0
+    upgrade:
+      cost: 500000.0
+      currency: coins
+    require:
+      level: 20
+      crops: 15000
+      crop-type: cenoura
+    currencies:
+      primary: 120.0
+      secondary: 30.0
+    icon:
+      slot: 13
+      material: POTATO_ITEM
+      display: '&eBatata'
+      lore:
+      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
+      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
+  
+  fungo:
+    display: '&cFungo do Nether'
+    crop: NETHER_WART
+    exp: 12.0
+    upgrade:
+      cost: 5000000.0
+      currency: coins
+    require:
+      level: 50
+      crops: 300000
+      crop-type: batata
+    currencies:
+      primary: 350.0
+      secondary: 40.0
+    icon:
+      slot: 14
+      material: NETHER_STALK
+      display: '&cFungo do Nether'
+      lore:
+      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
+      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'

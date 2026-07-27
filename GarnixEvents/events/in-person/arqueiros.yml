@@ -1,0 +1,280 @@
+# Evento — Arqueiros
+#
+# Dois times, azul e vermelho. Todos entram num lobby só e, ao iniciar, o plugin
+# divide 50/50 de forma justa (sorteia a ordem e alterna os lados, então a diferença
+# nunca passa de um jogador). Quem morrer está eliminado e o time que sobrar vence.
+#
+# As RECOMPENSAS vão para TODOS do time vencedor. A TAG vai para um só: o jogador do
+# time vencedor que mais matou.
+#
+# Locais necessários: lobby, exit, blue, red — este evento não tem 'join'. O cabin
+# (camarote) é opcional.
+#   /arqueiros setloc lobby|exit|cabin » sala de espera, saída e camarote (opcional)
+#   /arqueiros setloc blue|red         » onde cada time nasce ao começar
+#
+# Este evento NÃO tem /arqueiros setkit: cada time tem o seu kit, configurado abaixo. Por isso o kit
+# é sempre emprestado — entra-se com inventário e armadura vazios, o golpe letal vira eliminação e
+# nada cai no chão. Flecha e corpo a corpo machucam igual; só não se acerta o próprio time.
+
+display: '&2Arqueiros'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&2'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_arqueiros%. Deixe vazio para o evento não dar tag.
+tag: '&2[Arqueiro]'
+
+join-time: 1m
+start-time: 10s
+duration: 30m
+
+min-players: 2
+max-players: 0
+
+# ── Times ─────────────────────────────────────────────────────────────
+# Cada lado tem sua armadura e sua hotbar. A armadura de couro é tingida com a cor
+# do time (color aceita hex '#RRGGBB' ou nome de cor).
+teams:
+  blue:
+    display: '&9Azul'
+    kit:
+      armor:
+        helmet:
+          material: LEATHER_HELMET
+          color: '#5555FF'
+          display: '&9Elmo Azul'
+          flags:
+          - HIDE_ATTRIBUTES
+        chestplate:
+          material: LEATHER_CHESTPLATE
+          color: '#5555FF'
+          display: '&9Peitoral Azul'
+          flags:
+          - HIDE_ATTRIBUTES
+        leggings:
+          material: LEATHER_LEGGINGS
+          color: '#5555FF'
+          display: '&9Calça Azul'
+          flags:
+          - HIDE_ATTRIBUTES
+        boots:
+          material: LEATHER_BOOTS
+          color: '#5555FF'
+          display: '&9Bota Azul'
+          flags:
+          - HIDE_ATTRIBUTES
+      items:
+        bow:
+          slot: 0
+          material: BOW
+          display: '&9Arco Azul'
+          enchants:
+          - ARROW_INFINITE:1
+          unbreakable: true
+          flags:
+          - HIDE_ATTRIBUTES
+          - HIDE_ENCHANTS
+          - HIDE_UNBREAKABLE
+        arrow:
+          slot: 9
+          material: ARROW
+          amount: 1
+  
+  red:
+    display: '&cVermelho'
+    kit:
+      armor:
+        helmet:
+          material: LEATHER_HELMET
+          color: '#FF5555'
+          display: '&cElmo Vermelho'
+          flags:
+          - HIDE_ATTRIBUTES
+        chestplate:
+          material: LEATHER_CHESTPLATE
+          color: '#FF5555'
+          display: '&cPeitoral Vermelho'
+          flags:
+          - HIDE_ATTRIBUTES
+        leggings:
+          material: LEATHER_LEGGINGS
+          color: '#FF5555'
+          display: '&cCalça Vermelha'
+          flags:
+          - HIDE_ATTRIBUTES
+        boots:
+          material: LEATHER_BOOTS
+          color: '#FF5555'
+          display: '&cBota Vermelha'
+          flags:
+          - HIDE_ATTRIBUTES
+      items:
+        bow:
+          slot: 0
+          material: BOW
+          display: '&cArco Vermelho'
+          enchants:
+          - ARROW_INFINITE:1
+          unbreakable: true
+          flags:
+          - HIDE_ATTRIBUTES
+          - HIDE_ENCHANTS
+          - HIDE_UNBREAKABLE
+        arrow:
+          slot: 9
+          material: ARROW
+          amount: 1
+
+# Raio (blocos) em volta dos spawns dos times varrido ao fim do evento e ao ligar o
+# servidor. Aqui o que sobra são as flechas: toda flecha errada fica cravada onde caiu,
+# e sem varrer a arena vai juntando um tapete delas, um evento de cada vez. Sem esta
+# chave o evento não varre nada.
+cleanup-radius: 80.0
+
+# Executados no console para CADA jogador do time vencedor.
+rewards:
+- eco give {player} 5000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&3&lATIREM!'
+    subtitle: '&9Azul &7vs &cVermelho'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/arqueiros entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lArqueiros {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/arqueiros entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+# {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lArqueiros {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+# {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lArqueiros {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+# {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lArqueiros&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &ffoi o destaque e levou a tag.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+
+  # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
+  # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  walkover: |2
+
+      &8▎ {c}Evento {c}&lArqueiros&f, {c}vitória por W.O.!
+      &r
+      &8▶ &7{player} &fficou sem adversários no campo.
+      &r
+      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &r
+
+  # ── Eliminações ─────────────────────────────────────────────────────
+  # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+  # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lArqueiros {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Nenhum time sobrou de pé.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lArqueiros {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+# {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lArqueiros {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+# ── Actionbar ───────────────────────────────────────────────────────
+# Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  
+  # ── Times ───────────────────────────────────────────────────────────
+  # {blue}/{red} quantos de cada lado · {team} o time · {player}/{kills} o destaque
+  team-assigned-blue: '&fVocê entrou para o time &9&lAZUL&f!'
+  team-assigned-red: '&fVocê entrou para o time &c&lVERMELHO&f!'
+  teams-formed: '&fTimes formados: &9{blue} azuis &fvs &c{red} vermelhos&f.'
+  battle-start: '&fA batalha começou! &9{blue} &fvs &c{red}'
+  # Actionbar do placar durante a batalha. Não aceita clique.
+  team-count: '&9Azul: &7{blue} &8| &cVermelho: &7{red}'
+  time-up-draw: '&eO tempo acabou empatado! Ninguém venceu.'
+  time-up-team: '&eO tempo acabou! O time {team} &etinha mais jogadores de pé.'
+  
+  # As recompensas vão para o time todo; a tag vai só para o destaque.
+  team-won: |2
+
+    {c}Evento {c}&lArqueiros&7, {c}temos um time vencedor!
+    &7O time {team} &7venceu a batalha.
+    &7Destaque: &f{player}&7 com &f{kills}&7 eliminação(ões).
+    &7Prêmio: {c}5K de Cash &7para todo o time

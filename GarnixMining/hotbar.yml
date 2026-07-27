@@ -1,0 +1,31 @@
+# Hotbar buttons inside the mine.
+report-enabled-icon:
+  slot: 1
+  material: INK_SACK
+  data: 10
+  display: '&aRelatório Ativado'
+  lore:
+  - '&7Clique para desativar.'
+
+report-disabled-icon:
+  slot: 1
+  material: INK_SACK
+  data: 8
+  display: '&cRelatório Desativado'
+  lore:
+  - '&7Clique para ativar.'
+
+reset-icon:
+  slot: 5
+  material: WATCH
+  display: '&cResetar Mina'
+  lore:
+  - '&7Clique para resetar.'
+
+exit-icon:
+  slot: 7
+  material: INK_SACK
+  data: 1
+  display: '&cSair da Mina'
+  lore:
+  - '&7Clique para sair.'

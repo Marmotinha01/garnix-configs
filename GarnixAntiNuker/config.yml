@@ -1,0 +1,8 @@
+# Monitores carregados quando o plugin habilita — cria o profiles/<id>.yml
+# (a partir do resource empacotado) se ainda não existir. Os plugins consumidores
+# (GarnixMining/GarnixFarm) também criam o monitor sob demanda ao chamar a API,
+# então esta lista serve principalmente para gerar os arquivos de config na
+# primeira execução.
+preload:
+- mining
+- farm

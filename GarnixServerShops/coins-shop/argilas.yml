@@ -1,0 +1,156 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Argilas
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: true
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 21
+  material: STAINED_CLAY
+  data: 1
+  display: '&aArgilas'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  stained-clay:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 0
+      amount: 1
+  stained-clay-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 1
+      amount: 1
+  stained-clay-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 2
+      amount: 1
+  stained-clay-4:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 3
+      amount: 1
+  stained-clay-5:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 4
+      amount: 1
+  stained-clay-6:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 5
+      amount: 1
+  stained-clay-7:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 6
+      amount: 1
+  stained-clay-8:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 7
+      amount: 1
+  stained-clay-9:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 8
+      amount: 1
+  stained-clay-10:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 9
+      amount: 1
+  stained-clay-11:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 10
+      amount: 1
+  stained-clay-12:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 11
+      amount: 1
+  stained-clay-13:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 12
+      amount: 1
+  stained-clay-14:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 13
+      amount: 1
+  stained-clay-15:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STAINED_CLAY
+      data: 14
+      amount: 1

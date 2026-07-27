@@ -1,0 +1,499 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Blocos
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: true
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 20
+  material: LOG
+  display: '&aBlocos'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  stone:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STONE
+      data: 0
+      amount: 1
+  cobblestone:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: COBBLESTONE
+      data: 0
+      amount: 1
+  stone-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STONE
+      data: 1
+      amount: 1
+  stone-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STONE
+      data: 3
+      amount: 1
+  stone-4:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STONE
+      data: 5
+      amount: 1
+  stone-5:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STONE
+      data: 2
+      amount: 1
+  stone-6:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STONE
+      data: 4
+      amount: 1
+  stone-7:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: STONE
+      data: 6
+      amount: 1
+  grass:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: GRASS
+      data: 0
+      amount: 1
+  dirt:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: DIRT
+      data: 0
+      amount: 1
+  dirt-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: DIRT
+      data: 1
+      amount: 1
+  dirt-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: DIRT
+      data: 2
+      amount: 1
+  mycel:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: MYCEL
+      data: 0
+      amount: 1
+  log:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LOG
+      data: 0
+      amount: 1
+  log-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LOG
+      data: 1
+      amount: 1
+  log-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LOG
+      data: 2
+      amount: 1
+  log-4:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LOG
+      data: 3
+      amount: 1
+  log-2-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LOG_2
+      data: 0
+      amount: 1
+  log-2-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LOG_2
+      data: 1
+      amount: 1
+  wood:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOD
+      data: 0
+      amount: 1
+  wood-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOD
+      data: 1
+      amount: 1
+  wood-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOD
+      data: 2
+      amount: 1
+  wood-4:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOD
+      data: 3
+      amount: 1
+  wood-5:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOD
+      data: 4
+      amount: 1
+  wood-6:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOD
+      data: 5
+      amount: 1
+  sandstone:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SANDSTONE
+      data: 0
+      amount: 1
+  sandstone-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SANDSTONE
+      data: 1
+      amount: 1
+  sandstone-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SANDSTONE
+      data: 2
+      amount: 1
+  red-sandstone:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: RED_SANDSTONE
+      data: 0
+      amount: 1
+  red-sandstone-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: RED_SANDSTONE
+      data: 1
+      amount: 1
+  red-sandstone-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: RED_SANDSTONE
+      data: 2
+      amount: 1
+  gravel:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: GRAVEL
+      data: 0
+      amount: 1
+  sponge:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SPONGE
+      data: 0
+      amount: 1
+  sponge-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SPONGE
+      data: 1
+      amount: 1
+  brick:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: BRICK
+      data: 0
+      amount: 1
+  bookshelf:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: BOOKSHELF
+      data: 0
+      amount: 1
+  mossy-cobblestone:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: MOSSY_COBBLESTONE
+      data: 0
+      amount: 1
+  obsidian:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: OBSIDIAN
+      data: 0
+      amount: 1
+  snow-block:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SNOW_BLOCK
+      data: 0
+      amount: 1
+  clay:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CLAY
+      data: 0
+      amount: 1
+  jack-o-lantern:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: JACK_O_LANTERN
+      data: 0
+      amount: 1
+  netherrack:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: NETHERRACK
+      data: 0
+      amount: 1
+  glowstone:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: GLOWSTONE
+      data: 0
+      amount: 1
+  smooth-brick:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SMOOTH_BRICK
+      data: 0
+      amount: 1
+  smooth-brick-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SMOOTH_BRICK
+      data: 1
+      amount: 1
+  smooth-brick-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SMOOTH_BRICK
+      data: 2
+      amount: 1
+  smooth-brick-4:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SMOOTH_BRICK
+      data: 3
+      amount: 1
+  nether-brick:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: NETHER_BRICK
+      data: 0
+      amount: 1
+  ender-stone:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: ENDER_STONE
+      data: 0
+      amount: 1
+  quartz-block:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: QUARTZ_BLOCK
+      data: 0
+      amount: 1
+  quartz-block-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: QUARTZ_BLOCK
+      data: 1
+      amount: 1
+  quartz-block-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: QUARTZ_BLOCK
+      data: 2
+      amount: 1
+  prismarine:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: PRISMARINE
+      data: 0
+      amount: 1
+  prismarine-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: PRISMARINE
+      data: 1
+      amount: 1
+  prismarine-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: PRISMARINE
+      data: 2
+      amount: 1
+  sea-lantern:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: SEA_LANTERN
+      data: 0
+      amount: 1
+  hay-block:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: HAY_BLOCK
+      data: 0
+      amount: 1
+  hard-clay:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: HARD_CLAY
+      data: 0
+      amount: 1

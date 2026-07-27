@@ -1,0 +1,78 @@
+title: Venda Automática
+rows: 4
+
+status-on-icon:
+  slot: 13
+  material: INK_SACK
+  data: 10
+  display: '&aVenda Automática'
+  lore:
+  - '&7Clique para desativar.'
+
+status-off-icon:
+  slot: 13
+  material: INK_SACK
+  data: 8
+  display: '&cVenda Automática'
+  lore:
+  - '&7Clique para ativar.'
+
+summary-on-icon:
+  slot: 15
+  material: INK_SACK
+  data: 10
+  display: '&aRelatório'
+  lore:
+  - '&7Clique para desativar.'
+
+summary-off-icon:
+  slot: 15
+  material: INK_SACK
+  data: 8
+  display: '&cRelatório'
+  lore:
+  - '&7Clique para ativar.'
+
+upgrade-icon:
+  slot: 11
+  material: FIREWORK
+  display: '&6Evolução'
+  lore-can:
+  - '&7Diminua ainda mais o tempo'
+  - '&7entre cada venda de cactos.'
+  - ''
+  - ' &8Próxima Evolução:'
+  - ' &8▪ &e{current}s &7➡ &a{next}s &7({cost}&7)'
+  - ''
+  - ' &6▎ &fVenda em: &7{remaining}s'
+  - ''
+  - '&eClique para evoluir!'
+  lore-cant:
+  - '&7Diminua ainda mais o tempo'
+  - '&7entre cada venda de cactos.'
+  - ''
+  - ' &8Próxima Evolução:'
+  - ' &8▪ &e{current}s &7➡ &a{next}s &7({cost}&7) '
+  - ''
+  - ' &6▎ &fPróxima venda: &7{remaining}s'
+  - ''
+  - '&cCash insuficiente!'
+
+upgrade-max-icon:
+  slot: 11
+  material: BARRIER
+  display: '&cEvolução'
+  lore:
+  - ''
+  - ' &8Informações:'
+  - ' &8▎ &fPróxima venda: &e{remaining}s '
+  - ' &8▎ &fTempo entre vendas: &a{interval}s '
+  - ''
+  - '&cEvolução máxima já atingida!'
+
+back-icon:
+  slot: 31
+  texture: "7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf"
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

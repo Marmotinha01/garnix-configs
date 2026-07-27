@@ -1,0 +1,110 @@
+info:
+  order: 6
+  starting: '1'
+  formatter: 'SUFFIX' # DECIMAL ou SUFFIX
+  text:
+    singular: 's.limite'
+    plural: 's.limite'
+    symbol: '∞'
+    ranking-tag: '&b[∞]'
+  colors:
+    symbol: '&b'
+    primary: '&b'
+    secondary: '&b'
+
+icon:
+  material: 'INK_SACK'
+  data: 12
+  display: '&bS.Limite'
+
+command:
+  name: 'slimite'
+  aliases: []
+  cooldown: 5 # segundos
+  subcommands:
+    help:
+      enabled: true
+      aliases: ['ajuda']
+      cooldown: 5 # segundos
+      admin-permission: 'currencies.admin'
+    ranking:
+      enabled: true
+      aliases: ['top']
+      cooldown: 5 # segundos
+    send:
+      enabled: true
+      aliases: ['enviar', 'pay', 'transfer']
+      cooldown: 5 # segundos
+      tax:
+        enabled: true
+        message:
+          to-sender: true
+          to-receiver: true
+        percentage: 10
+        bypass-permission: 'currencies.tax.bypass'
+    set:
+      enabled: true
+      aliases: ['definir']
+      permission: 'currencies.admin'
+    add:
+      enabled: true
+      aliases: ['give', 'dar']
+      permission: 'currencies.admin'
+    remove:
+      enabled: true
+      aliases: ['take', 'remover']
+      permission: 'currencies.admin'
+
+ranking:
+  mode: 'MENU' # CHAT ou MENU
+  chat:
+    format: '  &8#{position}º {lp_prefix}{player} &8▶ {symbol_color}{symbol}{primary_color}{balance}'
+    empty: '  &7Nenhum jogador no ranking.'
+    header:
+      - ''
+      - '  &b&lRANKING DE S.LIMITE'
+      - ''
+    footer:
+      - ''
+  menu:
+    title: 'TOP S. Limite'
+    shape:
+      - 'XXXXXXXXX'
+      - 'XXX...XXX'
+      - 'X.......X'
+      - 'XXXXXXXXX'
+      - 'XXXXXXXXX'
+    position-user:
+      display: '&8#{position}º {lp_prefix} {player}'
+      lore:
+        - '&fS.Limite: {symbol_color}{symbol}{primary_color}{balance}'
+    empty-position-icon:
+      material: 'BARRIER'
+      display: '&8#{position}º &7Ninguém'
+    info-icon:
+      slot: 40
+      material: 'PAPER'
+      display: '&eAtualização Periódica'
+      lore:
+        - '&7O ranking é atualizado'
+        - '&7a cada &f{refresh} &7minutos.'
+        - ''
+        - '&8&oÚltima atualização &7&o{last_update}&8&o.'
+
+help:
+  - ''
+  - '  &b&lS.LIMITE DE COMPRA &8▶ &bComandos de Ajuda'
+  - ''
+  - '  &b/{command} &8- &7Ver seu limite de compra.'
+  - '  &b/{command} <jogador> &8- &7Ver o limite de compra de alguém.'
+  - '  &b/{command} ranking &8- &7Ver o top limite de compra.'
+  - '  &b/{command} enviar <jogador> <quantia> &8- &7Envia limite de compra para alguém.'
+  - ''
+
+help-admin:
+  - '  &4&lS.LIMITE DE COMPRA ADMIN &8▶ &4Comandos Administrativos'
+  - ''
+  - '  &c/{command} set <jogador> <quantia> &8- &7Define o limite de compra de alguém.'
+  - '  &c/{command} add <jogador> <quantia> &8- &7Adiciona limite de compra a alguém.'
+  - '  &c/{command} remove <jogador> <quantia> &8- &7Remove limite de compra de alguém.'
+  - ''

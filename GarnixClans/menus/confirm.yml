@@ -1,0 +1,22 @@
+title: Confirmação
+rows: 3
+
+confirm-icon:
+  slot: 11
+  material: INK_SACK
+  data: 10
+  display: '&aConfirmar'
+  lore:
+  - '{question}'
+  - ''
+  - '&aClique para confirmar.'
+
+cancel-icon:
+  slot: 15
+  material: INK_SACK
+  data: 1
+  display: '&cCancelar'
+  lore:
+  - '&7Nada será alterado.'
+  - ''
+  - '&cClique para voltar.'

@@ -1,0 +1,64 @@
+order: 2
+
+delay: 10s
+
+translated: Cash
+display: '&e{translated}'
+
+texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
+
+release: ''
+
+rank: ''
+
+buy-permission: machines.buy.cash
+
+block:
+  material: GOLD_BLOCK
+  data: 0
+
+fuels:
+- default
+- infinite
+
+machine-item:
+  texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
+  display: '&aMáquina de {translated}'
+  lore:
+  - '&fQuantia: &7{amount}'
+  - ''
+  - '&eColoque em seu terreno!'
+
+costs:
+  coins: 1000
+
+# Tipos: CURRENCY, ITEM, COMMAND
+# icon: aceita tudo do ItemBuilder (material, texture, data, display, lore)
+# Para CURRENCY sem icon:, usa o ícone da própria currency automaticamente.
+drops:
+  coins:
+    type: CURRENCY
+    currency-id: coins
+    chance: 100
+    amount: 5
+  
+  madeira:
+    type: ITEM
+    chance: 50
+    amount: 1
+    icon:
+      display: '&aCash'
+      texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
+    sell-value:
+      coins: 10
+  
+  recompensa:
+    type: COMMAND
+    chance: 5
+    amount: 1
+    icon:
+      display: '&dRecompensa Especial'
+      texture: "64d3243735d15d777245a4df25e40df1e777809a49a304929aebb617a6bd0b8"
+    commands:
+    - give {player} diamond {amount}
+    physical: true # O comando giva itens físicos — limita pela capacidade do inventário

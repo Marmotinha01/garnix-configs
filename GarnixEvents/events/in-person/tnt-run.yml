@@ -1,0 +1,179 @@
+# Evento — TNT Run
+#
+# Várias camadas empilhadas de cascalho sobre TNT. O bloco pisado some depois de um
+# instante — a superfície e a TNT de baixo juntas — e o jogador cai para a camada
+# seguinte; ao cair da última há água e ele é eliminado.
+#
+# Locais necessários: lobby, join, exit. O cabin (camarote) é opcional.
+# Áreas necessárias: UMA por camada (por isso o nome é obrigatório aqui)
+#   /eventos wand              » pega o graveto (use 'circulo' se a arena for redonda)
+#   (selecione a camada de cima)
+#   /tnt-run setarea camada1
+#   (selecione a próxima camada, mais abaixo)
+#   /tnt-run setarea camada2    » e assim por diante
+#
+# Selecione só a SUPERFÍCIE de cada camada: a TNT de baixo é gerada pelo plugin.
+#
+# Os jogadores nascem espalhados na camada mais alta.
+
+display: '&cTNT Run'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&c'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_tnt-run%. Deixe vazio para o evento não dar tag.
+tag: '&c[Dinamite]'
+
+join-time: 1m
+start-time: 10s
+duration: 10m
+
+min-players: 2
+max-players: 0
+
+# Cada camada é montada com DOIS blocos de altura:
+#
+#   floor-material  » a superfície, que é a área que você selecionou. É nela que o jogador
+#                     pisa e é ela que ele vê sumir.
+#   under-material  » a carga, gerada automaticamente UM BLOCO ABAIXO de cada bloco da
+#                     área. Deixe vazio ('') para camada de um bloco só.
+#
+# Os dois somem juntos: o passo leva a superfície e a carga que a segura, então o buraco
+# é buraco e não beirada. Selecione as áreas normalmente — o bloco de baixo é gerado pelo
+# plugin, você não precisa selecionar nada a mais.
+#
+# Deixe pelo menos 3 blocos entre uma camada e a próxima: cada uma ocupa 2 de altura, e a
+# carga nunca é gerada por cima da superfície da camada de baixo (o plugin pula).
+floor-material: GRAVEL
+under-material: TNT
+
+# Ticks entre pisar no bloco e ele sumir (20 ticks = 1 segundo).
+vanish-delay-ticks: 5
+
+rewards:
+- eco give {player} 5000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&c&lCORRA!'
+    subtitle: '&7O chão está sumindo!'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/tnt-run entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lTNT Run {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/tnt-run entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+# {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lTNT Run {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+# {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lTNT Run {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+# {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lTNT Run&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &ffoi o último de pé no TNT Run.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+
+  # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
+  # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  walkover: |2
+
+      &8▎ {c}Evento {c}&lTNT Run&f, {c}vitória por W.O.!
+      &r
+      &8▶ &7{player} &fficou sozinho na pista.
+      &r
+      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &r
+
+# ── Eliminações ─────────────────────────────────────────────────────
+# Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+# {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &fcaiu na água! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lTNT Run {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém sobrou para vencer.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lTNT Run {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+# {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lTNT Run {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+# ── Actionbar ───────────────────────────────────────────────────────
+# Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'

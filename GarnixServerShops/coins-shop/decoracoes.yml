@@ -1,0 +1,525 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Decorações
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: true
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 30
+  material: LEAVES
+  data: 0
+  display: '&aDecorações'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  sapling:
+    amount: 1
+    price: 2500
+    item:
+      material: SAPLING
+      data: 0
+      amount: 1
+  sapling-2:
+    amount: 1
+    price: 2500
+    item:
+      material: SAPLING
+      data: 1
+      amount: 1
+  sapling-3:
+    amount: 1
+    price: 2500
+    item:
+      material: SAPLING
+      data: 2
+      amount: 1
+  sapling-4:
+    amount: 1
+    price: 2500
+    item:
+      material: SAPLING
+      data: 3
+      amount: 1
+  sapling-5:
+    amount: 1
+    price: 2500
+    item:
+      material: SAPLING
+      data: 4
+      amount: 1
+  sapling-6:
+    amount: 1
+    price: 2500
+    item:
+      material: SAPLING
+      data: 5
+      amount: 1
+  leaves:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LEAVES
+      data: 0
+      amount: 1
+  leaves-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LEAVES
+      data: 1
+      amount: 1
+  leaves-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LEAVES
+      data: 2
+      amount: 1
+  leaves-4:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LEAVES
+      data: 3
+      amount: 1
+  leaves-2-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LEAVES_2
+      data: 0
+      amount: 1
+  leaves-2-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: LEAVES_2
+      data: 1
+      amount: 1
+  long-grass:
+    amount: 64
+    price: 2500
+    item:
+      material: LONG_GRASS
+      data: 1
+      amount: 64
+  long-grass-2:
+    amount: 64
+    price: 2500
+    item:
+      material: LONG_GRASS
+      data: 2
+      amount: 64
+  dead-bush:
+    amount: 64
+    price: 2500
+    item:
+      material: DEAD_BUSH
+      data: 0
+      amount: 64
+  yellow-flower:
+    amount: 64
+    price: 2500
+    item:
+      material: YELLOW_FLOWER
+      data: 0
+      amount: 64
+  red-rose:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 0
+      amount: 64
+  red-rose-2:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 1
+      amount: 64
+  red-rose-3:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 2
+      amount: 64
+  red-rose-4:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 3
+      amount: 64
+  red-rose-5:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 4
+      amount: 64
+  red-rose-6:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 5
+      amount: 64
+  red-rose-7:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 6
+      amount: 64
+  red-rose-8:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 7
+      amount: 64
+  red-rose-9:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_ROSE
+      data: 8
+      amount: 64
+  brown-mushroom:
+    amount: 64
+    price: 2500
+    item:
+      material: BROWN_MUSHROOM
+      data: 0
+      amount: 64
+  red-mushroom:
+    amount: 64
+    price: 2500
+    item:
+      material: RED_MUSHROOM
+      data: 0
+      amount: 64
+  vine:
+    amount: 64
+    price: 2500
+    item:
+      material: VINE
+      data: 0
+      amount: 64
+  double-plant:
+    amount: 64
+    price: 2500
+    item:
+      material: DOUBLE_PLANT
+      data: 0
+      amount: 64
+  double-plant-2:
+    amount: 64
+    price: 2500
+    item:
+      material: DOUBLE_PLANT
+      data: 1
+      amount: 64
+  double-plant-3:
+    amount: 64
+    price: 2500
+    item:
+      material: DOUBLE_PLANT
+      data: 2
+      amount: 64
+  double-plant-4:
+    amount: 64
+    price: 2500
+    item:
+      material: DOUBLE_PLANT
+      data: 3
+      amount: 64
+  double-plant-5:
+    amount: 64
+    price: 2500
+    item:
+      material: DOUBLE_PLANT
+      data: 4
+      amount: 64
+  double-plant-6:
+    amount: 64
+    price: 2500
+    item:
+      material: DOUBLE_PLANT
+      data: 5
+      amount: 64
+  web:
+    amount: 16
+    price: 2500
+    item:
+      material: WEB
+      data: 0
+      amount: 16
+  iron-fence:
+    amount: 16
+    price: 2500
+    item:
+      material: IRON_FENCE
+      data: 0
+      amount: 16
+  nether-fence:
+    amount: 16
+    price: 2500
+    item:
+      material: NETHER_FENCE
+      data: 0
+      amount: 16
+  fence:
+    amount: 16
+    price: 2500
+    item:
+      material: FENCE
+      data: 0
+      amount: 16
+  spruce-fence:
+    amount: 16
+    price: 2500
+    item:
+      material: SPRUCE_FENCE
+      data: 0
+      amount: 16
+  birch-fence:
+    amount: 16
+    price: 2500
+    item:
+      material: BIRCH_FENCE
+      data: 0
+      amount: 16
+  jungle-fence:
+    amount: 16
+    price: 2500
+    item:
+      material: JUNGLE_FENCE
+      data: 0
+      amount: 16
+  dark-oak-fence:
+    amount: 16
+    price: 2500
+    item:
+      material: DARK_OAK_FENCE
+      data: 0
+      amount: 16
+  acacia-fence:
+    amount: 16
+    price: 2500
+    item:
+      material: ACACIA_FENCE
+      data: 0
+      amount: 16
+  flower-pot-item:
+    amount: 16
+    price: 2500
+    item:
+      material: FLOWER_POT_ITEM
+      data: 0
+      amount: 16
+  painting:
+    amount: 16
+    price: 2500
+    item:
+      material: PAINTING
+      data: 0
+      amount: 16
+  item-frame:
+    amount: 16
+    price: 2500
+    item:
+      material: ITEM_FRAME
+      data: 0
+      amount: 16
+  ladder:
+    amount: 16
+    price: 2500
+    item:
+      material: LADDER
+      data: 0
+      amount: 16
+  lever:
+    amount: 16
+    price: 2500
+    item:
+      material: LEVER
+      data: 0
+      amount: 16
+  wood-plate:
+    amount: 16
+    price: 2500
+    item:
+      material: WOOD_PLATE
+      data: 0
+      amount: 16
+  stone-plate:
+    amount: 16
+    price: 2500
+    item:
+      material: STONE_PLATE
+      data: 0
+      amount: 16
+  gold-plate:
+    amount: 16
+    price: 2500
+    item:
+      material: GOLD_PLATE
+      data: 0
+      amount: 16
+  iron-plate:
+    amount: 16
+    price: 2500
+    item:
+      material: IRON_PLATE
+      data: 0
+      amount: 16
+  wood-button:
+    amount: 16
+    price: 2500
+    item:
+      material: WOOD_BUTTON
+      data: 0
+      amount: 16
+  stone-button:
+    amount: 16
+    price: 2500
+    item:
+      material: STONE_BUTTON
+      data: 0
+      amount: 16
+  trap-door:
+    amount: 16
+    price: 2500
+    item:
+      material: TRAP_DOOR
+      data: 0
+      amount: 16
+  fence-gate:
+    amount: 16
+    price: 2500
+    item:
+      material: FENCE_GATE
+      data: 0
+      amount: 16
+  spruce-fence-gate:
+    amount: 16
+    price: 2500
+    item:
+      material: SPRUCE_FENCE_GATE
+      data: 0
+      amount: 16
+  birch-fence-gate:
+    amount: 16
+    price: 2500
+    item:
+      material: BIRCH_FENCE_GATE
+      data: 0
+      amount: 16
+  jungle-fence-gate:
+    amount: 16
+    price: 2500
+    item:
+      material: JUNGLE_FENCE_GATE
+      data: 0
+      amount: 16
+  dark-oak-fence-gate:
+    amount: 16
+    price: 2500
+    item:
+      material: DARK_OAK_FENCE_GATE
+      data: 0
+      amount: 16
+  acacia-fence-gate:
+    amount: 16
+    price: 2500
+    item:
+      material: ACACIA_FENCE_GATE
+      data: 0
+      amount: 16
+  iron-door:
+    amount: 16
+    price: 2500
+    item:
+      material: IRON_DOOR
+      data: 0
+      amount: 16
+  wood-door:
+    amount: 16
+    price: 2500
+    item:
+      material: WOOD_DOOR
+      data: 0
+      amount: 16
+  spruce-door-item:
+    amount: 16
+    price: 2500
+    item:
+      material: SPRUCE_DOOR_ITEM
+      data: 0
+      amount: 16
+  birch-door-item:
+    amount: 16
+    price: 2500
+    item:
+      material: BIRCH_DOOR_ITEM
+      data: 0
+      amount: 16
+  jungle-door-item:
+    amount: 16
+    price: 2500
+    item:
+      material: JUNGLE_DOOR_ITEM
+      data: 0
+      amount: 16
+  acacia-door-item:
+    amount: 16
+    price: 2500
+    item:
+      material: ACACIA_DOOR_ITEM
+      data: 0
+      amount: 16
+  dark-oak-door-item:
+    amount: 16
+    price: 2500
+    item:
+      material: DARK_OAK_DOOR_ITEM
+      data: 0
+      amount: 64
+  furnace:
+    amount: 1
+    price: 2500
+    item:
+      material: FURNACE
+      data: 0
+      amount: 1

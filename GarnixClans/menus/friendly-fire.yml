@@ -1,0 +1,73 @@
+title: Fogo Amigo
+rows: 3
+
+members-on-icon:
+  slot: 11
+  material: IRON_SWORD
+  glow: true
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&cFogo Amigo: Membros'
+  lore:
+  - '&7Membros do clan podem'
+  - '&7causar dano uns nos outros.'
+  - ''
+  - ' &8 ▪ &fEstado: {members_state}'
+  - ''
+  - '&cClique para desativar.'
+
+members-off-icon:
+  slot: 11
+  material: IRON_SWORD
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&aFogo Amigo: Membros'
+  lore:
+  - '&7Membros do clan estão'
+  - '&7protegidos entre si.'
+  - ''
+  - ' &8 ▪ &fEstado: {members_state}'
+  - ''
+  - '&aClique para ativar.'
+
+allies-on-icon:
+  slot: 15
+  material: DIAMOND_SWORD
+  glow: true
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&cFogo Amigo: Aliados'
+  lore:
+  - '&7Aliados podem causar dano'
+  - '&7nos membros do seu clan.'
+  - ''
+  - '&8Cada clan controla apenas a'
+  - '&8proteção dos próprios membros.'
+  - ''
+  - ' &8 ▪ &fEstado: {allies_state}'
+  - ''
+  - '&cClique para desativar.'
+
+allies-off-icon:
+  slot: 15
+  material: DIAMOND_SWORD
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&aFogo Amigo: Aliados'
+  lore:
+  - '&7Seus membros estão protegidos'
+  - '&7contra os clans aliados.'
+  - ''
+  - '&8Cada clan controla apenas a'
+  - '&8proteção dos próprios membros.'
+  - ''
+  - ' &8 ▪ &fEstado: {allies_state}'
+  - ''
+  - '&aClique para ativar.'
+
+back-icon:
+  slot: 22
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

@@ -1,0 +1,35 @@
+debug: false
+
+redis:
+  # Prefixo das chaves e da fila. PRECISA ser igual ao configurado no bot.
+  namespace: garnix:dsync
+
+bedrock:
+  # Prefixo aplicado pelo Floodgate aos nicks Bedrock.
+  prefix: '*'
+  # Remove o prefixo antes de mandar o nome para o bot (apelido no Discord).
+  # O nick CRU continua sendo a identidade no banco e nos comandos de console.
+  strip-prefix: true
+
+code:
+  # Tamanho do código gerado pelo bot. Só valida o formato antes de ir ao Redis.
+  length: 6
+  # Cooldown do /vincular em segundos. Anti brute-force.
+  cooldown: 3
+
+rewards:
+  # Executados UMA ÚNICA VEZ na vida da conta. Controlado por reward_claimed no
+  # banco, então desvincular e vincular de novo NÃO repete estes comandos.
+  #
+  # Placeholders: {player} nick sem prefixo | {raw} nick cru | {discord_id}
+  # Nos comandos de console prefira {raw} — é o nick que o servidor conhece.
+  first-time:
+  - vip add {raw} celestial 3d
+  
+  # Executados TODA VEZ que o jogador vincula.
+  on-link:
+  - lp user {player} permission set daily.linked
+  
+  # Executados TODA VEZ que o jogador desvincula.
+  on-unlink:
+  - lp user {player} permission unset daily.linked

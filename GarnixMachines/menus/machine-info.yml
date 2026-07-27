@@ -1,0 +1,112 @@
+title: Máquina de {display}
+rows: 5
+
+info-icon:
+  slot: 10
+  display: '&a{display}'
+  lore:
+  - '&fStack: &7x{stack}'
+  - '&fDono: &7{owner}'
+
+friends-icon:
+  slot: 11
+  texture: 76cbae7246cc2c6e888587198c7959979666b4f5a4088f24e26e075f140ae6c3
+  display: '&aAmigos'
+  lore:
+  - '&fTotal: &7{friends_count}'
+  - ''
+  - '&aClique para gerenciar.'
+
+hologram-status:
+  color-on: '&a'
+  color-off: '&c'
+  on: '&aAtivado'
+  off: '&cDesativado'
+
+toggle-hologram-icon:
+  slot: 12
+  material: BEACON
+  display: '{color}Holograma'
+  lore:
+  - '&fStatus: {hologram_status}'
+  - ''
+  - '&7Clique para alternar.'
+
+shop-icon:
+  slot: 15
+  material: SIGN
+  display: '&aLoja'
+  lore:
+  - '&7Clique para ver.'
+
+ranking-icon:
+  slot: 16
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Clique para ver.'
+
+sell-drops-icon:
+  slot: 28
+  material: CHEST
+  display: '&aGerenciar Drops'
+  lore:
+  - '&7Clique para ver.'
+
+fuel-icon:
+  slot: 30
+  lore:
+    - '&fRestante: &e{fuel_remaining}'
+    - ''
+    - '&7Clique para remover.'
+  lore-infinite:
+    - '&fCombustível: &eInfinito'
+    - ''
+    - '&7Clique para remover.'
+
+fuel-empty-icon:
+  slot: 30
+  material: HOPPER_MINECART
+  display: '&cCombustível'
+  lore:
+  - '&7Nenhum combustível ativo.'
+
+booster-icon:
+  slot: 32
+  material: POTION
+  data: 8237
+  display: '&dBooster de Máquina'
+  flags:
+  - HIDE_POTION_EFFECTS
+  lore:
+  - '&7Use este booster para ter'
+  - '&7seus ganhos aumentados.'
+  - ''
+  - ' &8Informações:'
+  - ' &8▪ &fTipo: &aDrops'
+  - ' &8▪ &fBônus: &a{multiplier}'
+  - ' &8▪ &fDuração: &7{time_remaining}'
+  - ''
+  - ' &cAo remover &c&l50&c% do tempo'
+  - ' &cdo booster será perdido.'
+  - ''
+  - '&aClique para remover.'
+
+booster-none-icon:
+  slot: 32
+  material: GLASS_BOTTLE
+  amount: 0
+  display: '&cBooster'
+  lore:
+  - '&7Serve para aumentar'
+  - '&7seus ganhos na pesca.'
+  - ''
+  - ' &c▾ Nenhum booster ativo. '
+  - ''
+
+remove-stack-icon:
+  slot: 34
+  material: SHEARS
+  display: '&cRemover Stack'
+  lore:
+  - '&7Clique para remover.'

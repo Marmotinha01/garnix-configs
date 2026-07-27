@@ -1,0 +1,22 @@
+title: Suas Cabeças
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhuma cabeça encontrada.'
+
+head-template:
+  display: '&aCabeças de {display}'
+  lore:
+  - '&fQuantia: &e{amount}'
+  - ''
+  - '&7Clique para retirar.'

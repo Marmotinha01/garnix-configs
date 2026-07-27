@@ -1,0 +1,19 @@
+# Coral — helmet. Bônus equilibrado de XP e corais.
+item:
+  display: "&cCapacete de Coral"
+  material: LEATHER_HELMET
+  color: "#FF6F61"
+  lore:
+    - ""
+    - " &7Feito dos recifes de coral mais raros."
+    - ""
+    - " &fBônus:"
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  xp:
+    value: 1.5
+    percent: true
+  corais:
+    value: 1.5
+    percent: true

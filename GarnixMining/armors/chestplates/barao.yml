@@ -1,0 +1,14 @@
+item:
+# Barão Chestplate
+  display: "&3Peitoral Barão"
+  material: LEATHER_CHESTPLATE
+  color: "#00AAAA"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  gemas:
+    value: 1.5
+    percent: true

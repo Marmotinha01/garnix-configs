@@ -1,0 +1,19 @@
+# Registra no console cada ativação entregue e cada duplicata ignorada.
+# Útil para diagnosticar entregas; deixe desligado no dia a dia.
+debug: false
+
+api:
+  # Endereço base da API pública da loja (sem barra no final).
+  url: https://hyren.net/api/v1/public
+  
+  # Token de API gerado no painel. Sem ele nada é ativado.
+  token: '4e79c686-d7d0-4d2f-9511-361c7178c423_4531b7aa-7412-4f65-8c6e-1f57ea1bafcc_1768671819796_f3fcdcf551c120e2'
+  
+  # Nome do servidor no painel. Só as ativações desse servidor são entregues aqui.
+  server: RankUP
+  
+  # Intervalo, em segundos, entre cada consulta à loja. Mínimo 1.
+  # Se a loja não responder, o intervalo dobra a cada falha (teto de 60s) e volta
+  # a este valor assim que ela responder de novo. A entrada de um jogador e o
+  # comando /ativacoes check disparam uma consulta imediata, ignorando essa espera.
+  check-interval: 10

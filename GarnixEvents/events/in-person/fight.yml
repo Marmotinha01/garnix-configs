@@ -1,0 +1,243 @@
+# Evento — Fight
+#
+# Torneio 1v1: os participantes são sorteados de dois em dois até sobrar um. Quem
+# perde a luta está fora do evento.
+#
+# Locais necessários: lobby, join, exit, left, right. O cabin (camarote) é opcional.
+#   /fight setloc lobby|join|exit|cabin  » espera, bancada, saída e camarote (opcional)
+#   /fight setloc left|right       » os dois spawns da arena de luta
+# Os lutadores esperam a vez no 'join'; só a dupla sorteada vai para a arena.
+
+display: '&cFight'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&c'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_fight%. Deixe vazio para o evento não dar tag.
+tag: '&c[Lutador]'
+
+join-time: 1m
+start-time: 5s
+bout-time: 3m
+intermission: 3s
+duration: ''
+
+min-players: 2
+max-players: 0
+
+rewards:
+- eco give {player} 5000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&a&lVALENDO!'
+    subtitle: '&7Boa sorte!'
+  bout:
+    title: '&c&lLUTE!'
+    subtitle: '&f{left} &7vs &f{right}'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/fight entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lFight {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/fight entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+  # {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lFight {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+  # {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lFight {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+  # {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lFight&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &flevou o torneio de Fight.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+      
+  # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
+  # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  walkover: |2
+
+      &8▎ {c}Evento {c}&lFight&f, {c}vitória por W.O.!
+      &r
+      &8▶ &7{player} &fficou sem adversários no torneio.
+      &r
+      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &r
+      
+  # ── Eliminações ─────────────────────────────────────────────────────
+  # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+  # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lFight {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém sobrou para vencer.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lFight {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+  # {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lFight {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+  # ── Actionbar ───────────────────────────────────────────────────────
+  # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  
+  # ── Torneio ─────────────────────────────────────────────────────────
+  # {left}/{right} a dupla · {waiting} na fila · {winner}/{loser} · {remaining}
+  tournament-start: '&fO evento começou com &7{count} &fparticipantes!'
+  bout-start: '&fLutando agora: &7{left} &fvs &7{right}&f. &8({waiting} na fila)'
+  bout-win: '&7{winner} &fvenceu a luta contra &7{loser}&f! &8({remaining} restantes)'
+  bout-timeout: '&fTempo esgotado! &7{loser} &fperdeu por ter menos vida.'
+kit:
+  unbreakable: false
+  armor:
+    helmet:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §cEvento §lFIGHT
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    chestplate:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §cEvento §lFIGHT
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    leggings:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §cEvento §lFIGHT
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    boots:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §cEvento §lFIGHT
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+  items:
+    slot-0:
+      material: DIAMOND_SWORD
+      data: 0
+      amount: 1
+      display: §cEvento §lFIGHT
+      unbreakable: true
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      - KNOCKBACK:2
+      flags:
+      - HIDE_UNBREAKABLE
+      slot: 0
+    slot-1:
+      material: DIAMOND_AXE
+      data: 0
+      amount: 1
+      display: §cEvento §lFIGHT
+      unbreakable: true
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      flags:
+      - HIDE_UNBREAKABLE
+      slot: 1
+    slot-2:
+      material: GOLDEN_APPLE
+      data: 1
+      amount: 16
+      display: §cEvento §lFIGHT
+      slot: 2
+    slot-3:
+      material: POTION
+      data: 8233
+      amount: 8
+      display: §cEvento §lFIGHT
+      slot: 3
+    slot-4:
+      material: POTION
+      data: 8226
+      amount: 8
+      display: §cEvento §lFIGHT
+      slot: 4

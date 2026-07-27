@@ -1,0 +1,113 @@
+title: Criar Loja
+rows: 6
+
+selected-item-icon:
+  slot: 13
+
+no-item-selected-icon:
+  slot: 13
+  material: BARRIER
+  display: '&cNenhum Item'
+  lore:
+  - '&7Clique em um item do seu'
+  - '&finventário &7para selecionar.'
+
+shop-type-icon:
+  slot: 37
+  material: HOPPER
+  display: '&aTipo de Loja'
+  lore:
+  - ''
+  - '{filters}'
+  - ''
+  - '&aClique para alternar.'
+
+shop-type-filters:
+  buy-display: Compra
+  sell-display: Venda
+  both-display: Ambas
+  line: ' &8► &7{display} '
+  line-selected: ' &a► &f{display} '
+
+currency-icon:
+  slot: 38
+  lore:
+  - '&7Clique para trocar.'
+
+display-icon:
+  slot: 39
+  material: NAME_TAG
+  display: '&aNome do Item'
+  none-display: '&7Nenhum'
+  lore:
+  - '&fAtual: {display}'
+  - ''
+  - '&7Clique para definir.'
+
+
+amount-icon:
+  slot: 43
+  material: ANVIL
+  display: '&aQuantia'
+  lore:
+  - '&fAtual: &ex{amount}'
+  - ''
+  - '&7Clique para alterar.'
+
+buy-price-icon:
+  slot: 40
+  material: EMERALD
+  display: '&aPreço de Compra'
+  free-display: '&aGrátis'
+  selected-lore:
+  - '&fAtual: {symbol_color}{symbol}{primary_color}{price}'
+  - '{tax_info}'
+  - ''
+  - '&7Clique para alterar.'
+  # {tax_info}: a taxa da economia (garnix-currencies) incide sobre quem RECEBE. Na compra
+  # quem recebe é você (dono), então mostra o líquido após a taxa. Some se o item for grátis.
+  tax-free: '&fTaxa: &aIsento'
+  # Mostrada enquanto o preço ainda é Grátis (sem valor definido): só a alíquota, sem líquido.
+  tax-charged-noprice: '&fTaxa: &c&l{tax}&c%'
+  tax-charged: '&fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
+  disabled-lore:
+  - '&8&oEsta função é desabilitada'
+  - '&8&oneste tipo de loja.'
+
+sell-price-icon:
+  slot: 41
+  material: REDSTONE
+  display: '&cPreço de Venda'
+  free-display: '&cGrátis'
+  selected-lore:
+  - '&fAtual: {symbol_color}{symbol}{primary_color}{price}'
+  - '{tax_info}'
+  - ''
+  - '&7Clique para alterar.'
+  # {tax_info}: na venda quem recebe é o cliente que vende para a loja (você paga o valor
+  # cheio), então mostra o líquido que ele recebe após a taxa. Some se o preço for grátis.
+  tax-free: '&fTaxa: &aIsento'
+  # Mostrada enquanto o preço ainda é Grátis (sem valor definido): só a alíquota, sem líquido.
+  tax-charged-noprice: '&fTaxa: &c&l{tax}&c%'
+  tax-charged: '&fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
+  disabled-lore:
+  - '&8&oEsta função é desabilitada'
+  - '&8&oneste tipo de loja.'
+
+notify-on-icon:
+  slot: 42
+  material: BOOK_AND_QUILL
+  display: '&aNotificações'
+  lore:
+  - '&fStatus: &aAtivadas'
+  - ''
+  - '&7Clique para desativar.'
+
+notify-off-icon:
+  slot: 42
+  material: BOOK
+  display: '&cNotificações'
+  lore:
+  - '&fStatus: &cDesativadas'
+  - ''
+  - '&7Clique para ativar.'

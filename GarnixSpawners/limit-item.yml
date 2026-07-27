@@ -1,0 +1,10 @@
+material: INK_SACK
+data: 12
+glow: true
+display: '&bLimite de Spawners'
+lore:
+- '&8▎ &fQuantia: &b{amount}'
+- ''
+- '&bOpções de uso:'
+- '&fBotão Direito &8➟ &7Ativar'
+- '&fBotão Dir + SHIFT &8➟ &7Empilhar'

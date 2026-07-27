@@ -1,0 +1,15 @@
+title: Recompensas Diárias
+rows: 5
+
+cooldown-icon:
+  material: WATCH
+  display: '&c{reward}'
+  lore:
+  - '&7Aguarde &e{time}'
+  - '&7para coletar novamente!'
+
+no-permission-icon:
+  material: BARRIER
+  display: '&c{reward}'
+  lore:
+  - '&7Você não pode coletar.'

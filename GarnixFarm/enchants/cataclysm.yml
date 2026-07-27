@@ -1,0 +1,25 @@
+display: "Cataclismo"
+max-level: 50
+base-cost: 500.0
+increase-cost: 200.0
+
+# CHANCE flavour (percent)
+base-chance: 5
+increase-chance: 0.3
+explosion-radius: 2
+
+title: "&c&lCATACLISMO"
+subtitle: "&7+{crops} plantações"
+messages:
+  - "&a&lCATACLISMO! &7Colheu &f{crops}&7 plantações extras."
+
+icon:
+  slot: 12
+  material: TNT
+  display: "&c{display}"
+  lore:
+    - "&7Chance de explodir e colher"
+    - "&7plantações num raio ao redor."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"
+    - "&7Chance: &f{chance}%"

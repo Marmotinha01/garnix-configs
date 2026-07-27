@@ -1,0 +1,53 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Farm
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: false
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+rows: 4
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 31
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 33
+  material: CACTUS
+  display: '&aFarm'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  cactus:
+    amount: 1
+    price: 5000
+    slot: 11
+    item:
+      material: CACTUS
+      data: 0
+      amount: 1
+  sand:
+    amount: 1
+    price: 5000
+    slot: 13
+    item:
+      material: SAND
+      data: 0
+      amount: 1
+  string:
+    amount: 1
+    price: 5000
+    slot: 15
+    item:
+      material: STRING
+      data: 0
+      amount: 1

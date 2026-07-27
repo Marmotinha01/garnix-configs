@@ -1,0 +1,95 @@
+# GarnixClans — config
+
+debug: false
+
+# Segundos entre cada gravação em disco. Vale para os dois caminhos: o write-behind do cache de
+# clans e a cópia periódica do baú aberto para dentro do modelo. É a janela máxima de perda em
+# caso de crash — como o baú é compartilhado, mantenha baixo.
+save-interval-seconds: 30
+
+clan:
+  max-members: 20
+  # Quantidade EXATA de caracteres alfanuméricos da tag (cores '&a' não contam).
+  tag-length: 3
+  # Cor aplicada à tag quando o jogador digita sem nenhum código de cor.
+  default-tag-color: '&7'
+  name-min-length: 3
+  name-max-length: 16
+  # Minutos até um convite pendente expirar sozinho.
+  invite-expire-minutes: 1440
+  # Tags e nomes que ninguém pode registrar. A comparação ignora caixa e códigos de cor, então
+  # '&cS&fT&cF' é barrado por 'STF'. A correspondência é EXATA — 'STAFF' não barra 'STAFF2', liste
+  # as variações que quiser bloquear.
+  blacklist:
+    tags:
+    - STF
+    - ADM
+    - MOD
+    names:
+    - Staff
+    - Equipe
+    - Administracao
+    - Administração
+    - Moderacao
+    - Moderação
+
+chest:
+  rows: 6
+  # {clan} é a tag colorida. Títulos de inventário são truncados em 32 caracteres pelo cliente 1.8.
+  title: 'Baú do Clan'
+
+# Nomes exibidos dos cargos e as permissões que cada um recebe ao criar o clan.
+# O líder sempre possui todas as permissões — não é configurável.
+# Permissões válidas: chest-access, chest-history, base-teleport, manage-allies, manage-rivals,
+#                     change-tag-color, change-name, manage-friendly-fire, promote, demote,
+#                     kick, invite
+roles:
+  leader:
+    display: '&cLíder'
+  subleader:
+    display: '&eSub-Líder'
+    default-permissions:
+    - chest-access
+    - chest-history
+    - base-teleport
+    - invite
+    - kick
+  member:
+    display: '&7Membro'
+    default-permissions:
+    - chest-access
+    - base-teleport
+
+log:
+  # Quantas movimentações do boletim (entradas/saídas/expulsões/cargos) ficam guardadas por clan.
+  bulletin-size: 10
+  # Quantas movimentações de item do baú ficam guardadas por clan.
+  chest-history-size: 45
+
+# Ícone que ocupa o lugar de qualquer botão que o cargo do jogador não pode usar. Antes o botão
+# simplesmente sumia do menu; agora este entra no lugar dele, no mesmo slot, para explicar o porquê.
+# É o mesmo ícone para todos os menus — o slot vem de cada menus/*.yml.
+no-access-icon:
+  material: INK_SACK
+  data: 8
+  display: '&cSem acesso'
+  lore:
+  - '&7Seu cargo não possui permissão'
+  - '&7para usar esta opção.'
+
+ranking:
+  # Quantos clans cada filtro do ranking guarda. Nunca precisa passar da quantidade de posições
+  # ('.') do shape em menus/ranking.yml — o que sobrar não é exibido.
+  size: 10
+  # Minutos entre cada reconstrução do ranking (abates/mortes/KDR).
+  refresh-minutes: 5
+
+# Item consumível entregue por /clan giveresetkdr. A identificação é feita por NBT, então
+# renomear ou alterar a lore aqui não invalida os itens já distribuídos.
+reset-kdr-item:
+  material: NETHER_STAR
+  glow: true
+  display: '&bReset de KDR'
+  lore:
+  - '&aOpções de uso:'
+  - '&fBotão Direito &8➟ &7Ativar'

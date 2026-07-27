@@ -1,0 +1,37 @@
+# Menu — Manage Pickaxe
+
+title: Gerenciar Picareta
+rows: 6
+
+skins-icon:
+  slot: 48
+  materials: ['WOOD_PICKAXE', 'STONE_PICKAXE', 'IRON_PICKAXE', 'GOLD_PICKAXE', 'DIAMOND_PICKAXE']
+  interval: 20
+  display: '&eSkins de Picareta'
+  lore:
+  - '&7Ganhe bônus ao alterar'
+  - '&7a skin da sua picareta.'
+  - ''
+  - '&eClique para gerenciar.'
+  flags: ["HIDE_ATTRIBUTES"]
+
+info-icon:
+  slot: 50
+  display: '&aSuas Informações'
+  lore:
+  - '&fGemas: {symbol_color}{symbol}{primary_color}{gems}'
+  - '&fB. Quebrados: &7{blocks}'
+
+locked-enchant-icon:
+  material: BARRIER
+  display: '&c{display}'
+  lore:
+  - '&7Requer mina nível &c&l{mine-level}&7.'
+
+maxed-enchant-lore:
+- '&cNível máximo atingido.'
+- ''
+- '&aClique para gerenciar.'
+
+enchant-lore:
+- '&aClique para gerenciar.'

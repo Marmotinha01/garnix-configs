@@ -1,0 +1,59 @@
+swords:
+  default:
+    damage: 500
+    item:
+      material: GOLD_SWORD
+      display: '&cMatadora Inicial'
+      lore:
+      - '&7Toda lenda começa aqui.'
+      - ''
+      - ' &fDano: &e{damage}'
+      - ' &fKill-Stack: &e{kill_stack}'
+      - ''
+      - ' &fBosses Abatidos: &e{kills}'
+      glow: true
+  
+  sombria:
+    damage: 750
+    item:
+      material: IRON_SWORD
+      display: '&5Matadora Sombria'
+      lore:
+      - '&7Uma matadora criada'
+      - '&7das trevas eternas.'
+      - ''
+      - ' &fDano: &e{damage}'
+      - ' &fKill-Stack: &e{kill_stack}'
+      - ''
+      - ' &fBosses Abatidos: &e{kills}'
+      glow: true
+  
+  ancestral:
+    damage: 1500
+    item:
+      material: DIAMOND_SWORD
+      display: '&bMatadora Ancestral'
+      lore:
+      - '&7Uma matadora forjada'
+      - '&7pelos deuses antigos.'
+      - ''
+      - ' &fDano: &e{damage}'
+      - ' &fKill-Stack: &e{kill_stack}'
+      - ''
+      - ' &fBosses Abatidos: &e{kills}'
+      glow: true
+  
+  hk:
+    hit-kill: true
+    item:
+      material: STICK
+      display: '&4Matadora Hit-Kill'
+      lore:
+      - '&7O primeiro golpe é o último.'
+      - ''
+      - ' &fKill-Stack: &e{kill_stack}'
+      - ''
+      - ' &fBosses Abatidos: &e{kills}'
+      glow: true
+  
+  

@@ -1,0 +1,28 @@
+display: Kit MagmaCube
+
+category: ranks
+
+permission: rank.magmacube
+
+cooldown: 8h
+
+slot: 25
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  texture: a1c97a06efde04d00287bf20416404ab2103e10f08623087e1b0c1264a1c0f0c
+  display: '&4Kit MagmaCube'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit MagmaCube'
+  lore:
+  - '&7Ainda não desbloqueado.'
+
+content: H4sIAAAAAAAA/82UTU8bMRCGZzcBNlFVRYW29OPgcuuFUyUkDkiwpUIC2kOkXqPJ7tRr4Y/F9oaPP5T/kV9Wh7BEYUEChEovlkfzvqPnHUvuAnRgSXhSrgsArxKIRQ7vldCUWfzjt3OByuh84M6MzSNYSk2lfdSFlkfegTbprJga2zG05EhCEl8N6MFivVHX8axevVWvQRdWcuFKiRcJtH+iIuhNxt8OhWfHyBWm1ZAgmJa/o0IerjAjfTcn5UbmpAdYlpJqUDZ3RNeOD81spchO8JzuTxcvpmGNdE+kf9tkeRGO9TveuzAjkv8FSkFSkX8wCjwXyucmSlaQ82GQf/gjPRvOxyaOJM6F5u7fw9zxQwyN8S9A0puTlMYLo2uE9Rst+/oI7UYzobeiPBOWBoUxJ7XldSNhdJ0omiXagRZ0DkROPyRyN+0nkISBngahuzw0zpGbhw6DjoylZPqZwqfJeCs12gmODIfBonPDZo7NIPgSFpNKcVoRIxdOG7ol2qC1Ci9Jo72SmCqYrbAMWVbgKIgVq1QoUJzjZr3lN0E5Gcv0YPf3Ptv71e/v9xf3DH8BlDh5AiUGAAA=

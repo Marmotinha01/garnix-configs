@@ -1,0 +1,13 @@
+friend-permissions:
+  SELL:
+    default: true
+    display: Vender
+    material: GOLD_INGOT
+  COLLECT:
+    default: true
+    display: Recolher
+    material: CHEST
+  MANAGE_FRIENDS:
+    default: false
+    display: Gerenciar Amigos
+    material: BOOK_AND_QUILL

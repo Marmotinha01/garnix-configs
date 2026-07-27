@@ -1,0 +1,17 @@
+item:
+# Arcano Leggings
+  display: "&bCalça Arcano"
+  material: LEATHER_LEGGINGS
+  color: "#55FFFF"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  gemas:
+    value: 1.0
+    percent: true
+  xp:
+    value: 1.0
+    percent: true

@@ -1,0 +1,268 @@
+# ── Tags do chat ──
+# Cada chave abaixo (menos "message") vira um token {chave} que você pode usar nos formatos dos
+# canais (global.format / local.format). Cada tag vira um pedaço com hover (e clique opcional):
+#   text:    placeholder (PlaceholderAPI) mostrado como a tag. Resolvido para o AUTOR da mensagem,
+#            então todos veem as tags de quem falou. Se o resultado for VAZIO, a tag some junto com
+#            o espaço extra — ou seja, a tag só aparece para quem realmente a tem (ex.: magnata).
+#   hover:   tooltip ao passar o mouse (aceita &-cores, PlaceholderAPI e várias linhas com |- ).
+#   suggest: (opcional) ao clicar, SUGERE o comando na caixa de chat do jogador.
+#   run:     (opcional) ao clicar, EXECUTA o comando direto. Use run OU suggest (run tem prioridade).
+#
+# A tag indicada em "mention.name-tag" (config.yml, padrão "nick") é a TAG DE NOME: use-a no lugar
+# do {player} se você tem sistema de nicks (text: '%essentials_nickname%'). Ela é a única que não
+# some quando o text vem vazio (cai para o nome real) e, com "mention.click-name: true", ganha o
+# clique de menção do {player} automaticamente — a menos que você defina run/suggest nela.
+#
+# A chave especial "message" NÃO é um token: seu "hover" é aplicado sobre o TEXTO da mensagem, com
+# {data} = data/hora de envio (dd/MM/yyyy às HH:mm). Um [item] dentro da mensagem mantém o próprio
+# hover ("Clique para ver o item.").
+tags:
+  clan:
+    text: '%clans_tag_colored_bracket%'
+    hover: |-
+      &fNome: &7%clans_name%
+      &fLíder: &7%clans_leader%
+      &fMembros: &7%clans_members%&8/&c20 &a%clans_members_online% online
+      &fAbates: &a%clans_kills%
+      &fMortes: &c%clans_deaths%
+      &fKDR: &e%clans_kdr%
+  cash:
+    text: '%currencies_cash_ranking_tag%'
+    hover: |-
+      &6Jogador com mais cash do servidor.
+      &7
+      &fCash: &6❂%currencies_cash%
+  coins:
+    text: '%currencies_coins_ranking_tag%'
+    hover: |-
+      &aJogador com mais coins do servidor.
+      &7
+      &fCoins: &2$&a%currencies_coins%
+  dracmas:
+    text: '%currencies_dracmas_ranking_tag%'
+    hover: |-
+      &eJogador com mais dracmas do servidor.
+      &7
+      &fDracmas: &e✆%currencies_dracmas%
+  gemas:
+    text: '%currencies_gemas_ranking_tag%'
+    hover: |-
+      &dJogador com mais gemas do servidor.
+      &7
+      &fGemas: &d۞%currencies_gemas%
+  sementes:
+    text: '%currencies_sementes_ranking_tag%'
+    hover: |-
+      &5Jogador com mais sementes do servidor.
+      &7
+      &fSementes: &5❋%currencies_sementes%
+  corais:
+    text: '%currencies_corais_ranking_tag%'
+    hover: |-
+      &3Jogador com mais corais do servidor.
+      &7
+      &fCorais: &3✶%currencies_corais%
+  slimite:
+    text: '%currencies_spawnerslimite_ranking_tag%'
+    hover: |-
+      &bJogador com mais limite de spawner do servidor.
+      &7
+      &fS. Limite: &b∞%currencies_spawnerslimite%
+  mlimite:
+    text: '%currencies_maquinaslimite_ranking_tag%'
+    hover: |-
+      &9Jogador com mais limite de máquina do servidor.
+      &7
+      &fM. Limite: &9∞%currencies_maquinaslimite%
+  rank:
+    text: '%rankup_rank_tag_chat%'
+    hover: '&fPrestígio: &b★%rankup_prestige%'
+    run: /ranks
+  fight:
+    text: '%events_tag_fight%'
+    hover: '&cVencedor do evento Fight.'
+  sumo:
+    text: '%events_tag_sumo%'
+    hover: '&bVencedor do evento Sumô.'
+  parkour:
+    text: '%events_tag_parkour%'
+    hover: '&dVencedor do evento Parkour.'
+  corrida:
+    text: '%events_tag_corrida%'
+    hover: '&3Vencedor do evento Corrida.'
+  spleef:
+    text: '%events_tag_spleef%'
+    hover: '&3Vencedor do evento Spleef.'
+  splegg:
+    text: '%events_tag_splegg%'
+    hover: '&eVencedor do evento Splegg.'
+  destemido:
+    text: '%events_tag_destemido%'
+    hover: '&8Vencedor do evento Destemido.'
+  mvp:
+    text: '%events_tag_mvp%'
+    hover: '&2Vencedor do evento MVP.'
+  arqueiros:
+    text: '%events_tag_arqueiros%'
+    hover: '&2Vencedor e destaque do evento Arqueiros.'
+  killer:
+    text: '%events_tag_killer%'
+    hover: '&4Vencedor do evento Killer.'
+  paintball:
+    text: '%events_tag_paintball%'
+    hover: '&aVencedor do evento Paintball.'
+  sniper:
+    text: '%events_tag_sniper%'
+    hover: '&9Vencedor do evento Sniper.'
+  tnt-run:
+    text: '%events_tag_tnt-run%'
+    hover: '&cVencedor do evento TNT Run.'
+  batata-quente:
+    text: '%events_tag_batata-quente%'
+    hover: '&6Vencedor do evento Batata Quente.'
+  nick:
+    text: '%essentials_nickname%'
+    hover: |-
+      &f
+      &f Nome: &6%player_name%
+      &f
+      &f Rank: %rankup_rank_tag%
+      &f Prestígio: &b★%rankup_prestige%
+      &f
+      &f Coins: &2$&a%currencies_coins%
+      &f Gemas: &d۞%currencies_gemas%
+      &f Dracmas: &e✆%currencies_dracmas%
+      &f Sementes: &5❋%currencies_sementes%
+      &f Corais: &3✶%currencies_corais%
+      &f
+      &f S. Limite: &b∞%currencies_spawnerslimite%
+      &f M. Limite: &9∞%currencies_maquinaslimite%
+      &f
+      &f Cash: &6❂%currencies_cash%
+      &f
+      &aClique para mencionar.
+  message:
+    hover: '&fData de Envio: &7{data}'
+
+# ── Formato dos canais ── tokens: {player}, {message}, {lp_prefix}, {lp_suffix}, %papi%
+global:
+  format: '&8[&7&lG&8] {clan} {lp_suffix} {rank} {cash} {coins} {dracmas} {gemas} {sementes} {corais} {slimite} {mlimite} {rank} {sumo} {fight} {parkour} {corrida} {spleef} {splegg} {killer} {destemido} {mvp} {tnt-run} {sniper} {paintball} {arqueiros} {batata-quente} &f{nick}&7: &7{message}'
+
+local:
+  # tokens extras: {message}
+  format: '&8[&e&lL&8] {clan} {lp_suffix} {rank} {cash} {coins} {dracmas} {gemas} {sementes} {corais} {slimite} {mlimite} {rank} {sumo} {fight} {parkour} {corrida} {spleef} {splegg} {killer} {destemido} {mvp} {tnt-run} {sniper} {paintball} {arqueiros} {batata-quente} &f{nick}&7: &e{message}'
+  # Enviado quando não há nenhum outro jogador válido no raio.
+  alone: '&cVocê está sozinho... ninguém por perto para conversar.'
+
+# ── Foco de canal (/g e /l sem mensagem)
+focus:
+  global: '&aVocê agora está focado no canal &fGlobal&a.'
+  local: '&aVocê agora está focado no canal &fLocal&a.'
+
+# ── Chat mutado
+muted:
+  global: '&cO chat global está mutado no momento.'
+  local: '&cO chat local está mutado no momento.'
+
+# ── Delay ── token: {time}
+delay: '&cAguarde &e{time}s &cpara enviar outra mensagem.'
+
+# ── [item] ── tokens: {player}
+item:
+  label: '&b[item]'
+  hover: '&eClique para ver o item.'
+  empty-hand: '&cVocê não está segurando nenhum item.'
+  preview-title: Preview Item de {player}
+  expired: '&cEste item não está mais disponível para visualização.'
+
+# ── Cor pré-definida (/cor) ── tokens: {color}
+color:
+  set: '&aCor definida com sucesso.'
+  reset: '&cCor removida com sucesso.'
+
+# ── Mensagens privadas (/tell e /r) ── tokens: {sender}, {target}, {message}
+tell:
+  format-sender: '&7[&aVocê &7→ &a{target}&7] &f{message}'
+  format-receiver: '&7[&e{sender} &7→ &eVocê&7] &f{message}'
+  not-found: '&cJogador não encontrado.'
+  self: '&cVocê não pode enviar mensagem para si mesmo.'
+reply:
+  none: '&cNão há mensagem para responder.'
+  offline: '&cO jogador não está mais online.'
+
+# ── Menção (@nick) ── tokens: {player} (quem mencionou), {channel}
+mention:
+  # Title/subtitle exibidos na tela de quem foi mencionado.
+  title: '&e&lMENÇAO'
+  subtitle: '&f{player} &7te mencionou no canal {channel}&7!'
+  # Mensagem enviada no chat de quem foi mencionado.
+  chat: '&eVocê foi mencionado no canal {channel} &epor &b{player}&e.'
+  # Nome clicável na mensagem do canal. Tokens: {cmd} (g|l) e {player} (quem enviou).
+  # O hover aparece ao passar o mouse; o click-suggest é preenchido no chat ao clicar.
+  click-hover: '&7Clique para mencionar o jogador.'
+  click-suggest: '/{cmd} @{player}, '
+  # Nome de cada canal, usado no token {channel}.
+  channel:
+    global: '&7Global'
+    local: '&eLocal'
+
+# ── Ignorar (/ignore) ── tokens: {player}, {list}
+ignore:
+  added: '&aVocê passou a ignorar &f{player}&a.'
+  removed: '&aVocê deixou de ignorar &f{player}&a.'
+  cannot: '&cVocê não pode ignorar esse jogador.'
+  self: '&cVocê não pode ignorar a si mesmo.'
+  list: '&fJogador ignorados: &c{list}'
+
+# ── Spy (/spy) ── tokens: {player}, {from}, {to}, {message}
+spy:
+  format: '&8[&cSPY&8] &7{from} &8-> &7{to}&8: &f{message}'
+  enabled-global: '&aModo espião ativado com sucesso.'
+  disabled: '&cModo espião desativado com sucesso.'
+  target-on: '&aVocê agora está espionando &f{player}&a.'
+  target-off: '&cVocê parou de espionar &f{player}&c.'
+
+# ── Anti-divulgação ── tokens: {player}, {channel}, {link}, {message}
+# Aviso NEUTRO para quem tem 'chat.ad.notify'. A mensagem foi ocultada apenas do restante
+# do chat (o remetente ainda a viu). Como pode ser falso positivo, o texto NÃO acusa: a
+# ideia é o staff conferir com calma, nunca punir de forma automática.
+anti-ad-alert:
+- ''
+- '  &b&lSENTINELA &8▶ &fUma mensagem necessita de conferência.'
+- ''
+- '  &8▎ &fJogador: &c{player}'
+- '  &8▎ &fCanal: &7{channel}'
+- '  &8▎ &fDivulgação: &e{link}'
+- '  &8▎ &fConteúdo: &7{message}'
+- ''
+- '  &eOcultada automaticamente. Pode ser engano, confira antes.'
+- ''
+
+# ── Administração (/chat) ── tokens: {channel}, {player}
+admin:
+  muted: '&aCanal &f{channel} &amutado.'
+  unmuted: '&aCanal &f{channel} &adesmutado.'
+  invalid-channel: '&cCanal inválido. Use &flocal&c, &fglobal &cou &ftodos&c.'
+  clear-broadcast: '&eO chat foi limpo por um staff.'
+  reload: '&aConfigurações do chat recarregadas com sucesso!'
+  stats:
+  - ''
+  - '  &c&lAnti-Divulgação &8- &7capturas desde o último reinício'
+  - '  &8▎ &fTotal: &7{total}'
+  - '  &8▎ &fGlobal: &7{global} &8▪  &fLocal: &7{local}'
+  - ''
+  - '  &e&lAnti-Capslock &8- &7capturas desde o último reinício'
+  - '  &8▎ &fDes-gritadas: &7{caps} &8▪ &fBloqueadas: &7{caps_blocked}'
+  - ''
+  - '  &b&lSubstituição &8- &7desde o último reinício'
+  - '  &8▎ &fMensagens alteradas: &7{replaced}'
+  - '  &8▎ &fFiltro: {replacer_active} &8▪ &f{replacer_rules} &7regras'
+  - ''
+  help:
+  - '&8&m----------------------------------------'
+  - '&e/chat mute <local|global|todos> &7- muta um canal'
+  - '&e/chat unmute <local|global|todos> &7- desmuta um canal'
+  - '&e/chat clear &7- limpa o chat de todos'
+  - '&e/chat stats &7- estatísticas de moderação do chat'
+  - '&e/chat reload &7- recarrega as configurações'
+  - '&8&m----------------------------------------'

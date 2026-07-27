@@ -1,0 +1,8 @@
+# Linhas extras na lore do item físico do fragmento.
+# Placeholders: {amount} = fragmentos no item, {display} = nome.
+fragment-lore:
+- ''
+- '&fQuantia: &e{amount} &7fragmento(s)'
+- ''
+- '&aBotão direito &7para ativar todos da mão.'
+- '&aShift + Botão direito &7para empilhar tudo em um só.'

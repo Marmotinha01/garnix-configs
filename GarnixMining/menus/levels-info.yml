@@ -1,0 +1,30 @@
+# Menu — Mine Levels (Info)
+
+title: Níveis da Mina
+
+shape:
+- XXXXXXXXX
+- <X.....X>
+- XXXXXXXXX
+
+empty-icon:
+  slot: 13
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum nível disponível.'
+
+level-icon:
+  material: STAINED_GLASS_PANE
+  data: 4
+  display: '&eNível &l{level}'
+  lore:
+  - '&fXP Necessário: &7{xp} '
+  - ''
+  - ' &8Composição da Mina: '
+  - '{block_list}'
+  - ''
+
+block-entry: ' &8▴ &f{block_name} &c{chance} '
+reward-separator: '&8▪'
+reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '

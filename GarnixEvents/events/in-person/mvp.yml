@@ -1,0 +1,457 @@
+# Evento — MVP (Mobs vs Players)
+#
+# Nasce um Zumbi Gigante ("chefe") e o evento só acaba quando ele morre. Enquanto
+# ele vive, mini zumbis nascem ao redor dele atrapalhando os jogadores, até o limite
+# configurado — só nascem novos quando os jogadores matam os que estão vivos.
+# Quem der o último golpe no Gigante vence.
+#
+# KIT DO EVENTO: o equipamento é emprestado pelo plugin. Para entrar é preciso estar
+# com o inventário e a armadura vazios, então nada do jogador fica em posse do plugin
+# e ninguém dropa nada ao morrer. O kit abaixo é só o ponto de partida: equipe-se em
+# jogo e rode /mvp setkit para gravar o que você está vestindo por cima dele.
+#
+# Locais necessários: lobby, join, exit. O cabin (camarote) e o boss são opcionais.
+#   /mvp setloc lobby|join|exit|cabin|boss
+#
+# Os jogadores entram na arena pelo 'join'. O chefe nasce no 'boss' — defina-o para
+# afastar a luta da entrada. Se o 'boss' não for definido, o chefe nasce no próprio
+# 'join', ou seja, em cima de quem acabou de entrar.
+
+display: '&2MVP'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&2'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_mvp%. Deixe vazio para o evento não dar tag.
+tag: '&2[General]'
+
+join-time: 1m
+start-time: 10s
+duration: 15m
+
+min-players: 2
+max-players: 0
+
+# PvP entre os participantes. No MVP o inimigo são os mobs.
+pvp: false
+
+boss:
+  type: GIANT
+  health: 600.0
+  name: '&2&lZUMBI GIGANTE'
+  # Dano de cada golpe do boss no jogador, em meios-corações (8.0 = 4 corações).
+  # Substitui o dano da dificuldade.
+  damage: 8.0
+  # Tempo de graça no início: se ninguém tiver coragem de bater no boss nesse
+  # tempo, ele escolhe um participante aleatório para focar. Se alguém bater antes,
+  # o boss já parte pra cima de quem bateu.
+  aim-delay: 10s
+  # De quanto em quanto tempo o boss troca de alvo (escolhido aleatoriamente),
+  # para não caçar o mesmo azarado a luta inteira.
+  retarget-interval: 8s
+  
+  # ── Partículas da morte do chefe ─────────────────────────────────────
+  #
+  # O que aparece quando o chefe cai. Os mini zumbis têm a seção igualzinha a esta
+  # em 'minions.death-particles' logo abaixo — as duas aceitam exatamente as mesmas
+  # chaves, então dá para dar um visual para cada um.
+  #
+  # Você também pode escrever só 'death-particles: true' (ou false) no lugar da
+  # seção inteira: true = o estouro padrão do plugin, false = nada.
+  death-particles:
+    enabled: true
+    # Quantas vezes o conjunto abaixo é desenhado, e o intervalo entre uma vez e
+    # outra em ticks (20 ticks = 1 segundo). repeat: 1 desenha uma vez só.
+    repeat: 3
+    interval-ticks: 5
+    # Altura em blocos acima dos pés do mob onde as partículas nascem.
+    height: 1.0
+    # De quantos blocos de distância os jogadores enxergam. Vale para todos os
+    # efeitos abaixo, mas cada um pode ter o seu próprio 'radius'.
+    radius: 48
+    # Os efeitos são desenhados todos de uma vez, na ordem em que estão aqui.
+    # O nome de cada um ('estouro', 'fumaca') é só um rótulo seu.
+    #
+    #   effect  = nome da partícula (EXPLOSION_HUGE, EXPLOSION_LARGE, CLOUD, FLAME,
+    #             LARGE_SMOKE, CRIT, MAGIC_CRIT, HEART, SPELL, WITCH_MAGIC, PORTAL,
+    #             LAVA_POP, SLIME, NOTE, FIREWORKS_SPARK, TILE_DUST, ITEM_BREAK...)
+    #   amount  = quantas partículas
+    #   spread  = espalhamento em blocos nos três eixos. Para desenhar uma forma
+    #             (um disco, uma coluna) use spread-x, spread-y e spread-z separados.
+    #   speed   = velocidade com que elas saem. 0 = paradas.
+    #   id/data = só para as partículas feitas de bloco/item: TILE_DUST e TILE_BREAK
+    #             usam o id do bloco, ITEM_BREAK o id do item. As outras ignoram.
+    effects:
+      estouro:
+        effect: EXPLOSION_HUGE
+        amount: 4
+        spread: 0.5
+        speed: 0.0
+      fumaca:
+        effect: CLOUD
+        amount: 24
+        spread: 0.8
+        speed: 0.03
+
+minions:
+  enabled: true
+  type: ZOMBIE
+  health: 20.0
+  name: '&aMini Zumbi'
+  # Nascem filhotes (baby) — menores e mais rápidos, que é o que faz deles "mini".
+  # false = nascem zumbis adultos normais.
+  baby: true
+  # Velocidade de movimento, em blocos por tick. O zumbi comum do jogo anda a 0.23;
+  # acima de 0.35 eles ficam bem difíceis de despistar. Deixe 0 para não mexer na
+  # velocidade padrão do mob. Filhote já ganha um bônus do próprio jogo por cima disso.
+  speed: 0.25
+  # Partículas quando um mini zumbi morre. Aceita exatamente as mesmas chaves da
+  # seção do chefe lá em cima. Vem desligado porque eles morrem às dezenas e o
+  # estouro de todos eles cobre a luta — mas está tudo pronto aqui: troque para
+  # 'enabled: true' e ajuste à vontade. Um efeito pequeno e sem repetição
+  # (repeat: 1) é o que costuma ficar bom para uma morte que acontece o tempo todo.
+  death-particles:
+    enabled: false
+    repeat: 1
+    interval-ticks: 5
+    height: 1.0
+    radius: 32
+    effects:
+      fumaca:
+        effect: LARGE_SMOKE
+        amount: 8
+        spread: 0.2
+        speed: 0.01
+  # Dano de cada golpe de um mini zumbi no jogador, em meios-corações (4.0 = 2 corações).
+  # Substitui o dano da dificuldade.
+  damage: 4.0
+  # Chance de um acerto de mini zumbi dar Náusea em quem apanha. Depois que a náusea
+  # acaba, o jogador fica imune por 'immunity' antes de poder tomar outra (não leva
+  # náusea em sequência). chance: 0.0-1.0 (0.25 = 25%). Deixe chance: 0 para desligar.
+  nausea:
+    chance: 0.25
+    duration: 4s
+    amplifier: 0 # 0 = Náusea I, 1 = Náusea II, ...
+    immunity: 6s # imune a nova náusea por esse tempo DEPOIS que a náusea acabar
+  # Máximo de mini zumbis vivos ao mesmo tempo.
+  max-alive: 50
+  # Quantos nascem por vez (nunca ultrapassa o máximo acima).
+  per-wave: 5
+  # Tempo entre uma leva e outra.
+  spawn-interval: 5s
+  # Raio (blocos) em volta do chefe em que eles nascem.
+  spawn-radius: 6.0
+  
+  # Conjuntos de equipamento. Cada mini zumbi que nasce sorteia UM conjunto.
+  #
+  # 'chance' é a chance em % daquele conjunto. As chances vão sendo somadas na ordem
+  # em que os conjuntos aparecem aqui, e o que faltar para 100% é a chance de nascer
+  # sem nada: 25 + 10 + 5 = 40%, ou seja, 60% dos mini zumbis nascem desarmados.
+  # Coloque chance: 0 para desativar um conjunto sem apagá-lo.
+  #
+  # Cada conjunto aceita 'hand' (item na mão) e 'armor' com helmet/chestplate/
+  # leggings/boots. A peça que você não escrever fica como o mob nasceu — ou seja,
+  # um conjunto só com 'hand' não mexe na armadura. Eles NUNCA dropam esse equipamento.
+  # O formato do item é o mesmo dos kits: material, display, lore, enchantments, flags.
+  gear:
+    couro:
+      chance: 25
+      armor:
+        helmet:
+          material: LEATHER_HELMET
+          flags:
+          - HIDE_ATTRIBUTES
+        chestplate:
+          material: LEATHER_CHESTPLATE
+          flags:
+          - HIDE_ATTRIBUTES
+    espada:
+      chance: 10
+      hand:
+        material: WOOD_SWORD
+        flags:
+        - HIDE_ATTRIBUTES
+      armor:
+        helmet:
+          material: CHAINMAIL_HELMET
+          flags:
+          - HIDE_ATTRIBUTES
+    ferro:
+      chance: 5
+      hand:
+        material: IRON_SWORD
+        display: '&fLâmina do Gigante'
+        flags:
+        - HIDE_ATTRIBUTES
+      armor:
+        helmet:
+          material: IRON_HELMET
+          flags:
+          - HIDE_ATTRIBUTES
+        chestplate:
+          material: IRON_CHESTPLATE
+          flags:
+          - HIDE_ATTRIBUTES
+
+# Deixa o jogador mexer no próprio inventário durante o evento: trocar armadura, mudar
+# item de slot. Faz sentido aqui porque o kit é um conjunto inteiro e ele se gasta.
+# Dropar continua proibido.
+allow-inventory-move: true
+
+# Raio (blocos) em volta dos pontos de jogo da arena varrido ao fim do evento e ao ligar
+# o servidor: remove as flechas cravadas no chão e os mobs que o evento tiver criado.
+# Itens dropados só existem no Killer. Sem esta chave o evento não varre nada.
+cleanup-radius: 60.0
+
+rewards:
+- eco give {player} 10000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&a&lVALENDO!'
+    subtitle: '&7Boa sorte!'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/mvp entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lMVP {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/mvp entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}10K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+  # {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lMVP {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+  # {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lMVP {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+  # {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lMVP&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &fdeu o golpe final no Zumbi Gigante.
+      &r
+      &8▪ &fPrêmio: {c}10K de Cash
+      &r
+  # ── Eliminações ─────────────────────────────────────────────────────
+  # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+  # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lMVP {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7O Zumbi Gigante sobreviveu.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lMVP {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+  # {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lMVP {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+  # ── Actionbar ───────────────────────────────────────────────────────
+  # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  
+  # ── Chefe ───────────────────────────────────────────────────────────
+  boss-spawned: '{c}&lO ZUMBI GIGANTE APARECEU! &fAtaquem!'
+  # Actionbar da luta. Não aceita clique.
+  # {health} vida atual · {max} vida total · {minions} mini zumbis vivos
+  boss-bar: '{c}Zumbi Gigante: &7{health}&f/&7{max}'
+  boss-survived: '&cO Zumbi Gigante sobreviveu! Ninguém venceu o evento.'
+  boss-killed-unclaimed: '&fO Zumbi Gigante morreu, mas ninguém pôde reivindicar a vitória.'
+kit:
+  unbreakable: false
+  armor:
+    helmet:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    chestplate:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    leggings:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    boots:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+  items:
+    slot-0:
+      material: DIAMOND_SWORD
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      unbreakable: true
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      - KNOCKBACK:2
+      slot: 0
+    slot-1:
+      material: DIAMOND_AXE
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      unbreakable: true
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      slot: 1
+    slot-2:
+      material: GOLDEN_APPLE
+      data: 1
+      amount: 64
+      display: §2Evento §lMVP
+      slot: 2
+    slot-3:
+      material: BOW
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      unbreakable: true
+      enchants:
+      - ARROW_DAMAGE:5
+      - ARROW_KNOCKBACK:2
+      - ARROW_FIRE:2
+      - ARROW_INFINITE:1
+      slot: 3
+    slot-4:
+      material: POTION
+      data: 8233
+      amount: 16
+      display: §2Evento §lMVP
+      slot: 4
+    slot-5:
+      material: POTION
+      data: 8226
+      amount: 16
+      display: §2Evento §lMVP
+      slot: 5
+    slot-6:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 6
+    slot-7:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 7
+    slot-17:
+      material: ARROW
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      slot: 17
+    slot-33:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 33
+    slot-34:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §2Evento §lMVP
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 34

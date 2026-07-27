@@ -1,0 +1,37 @@
+friend-permissions:
+  INTERACT:
+    default: true
+    display: Interagir
+    material: REDSTONE_COMPARATOR
+  MANAGE_DROPS:
+    default: true
+    display: Gerenciar Drops
+    material: CHEST
+  BREAK:
+    default: false
+    display: Quebrar
+    material: IRON_PICKAXE
+  ADD_STACK:
+    default: true
+    display: Empilhar
+    material: SKULL_ITEM
+  MANAGE_FRIENDS:
+    default: false
+    display: Gerenciar Amigos
+    material: BOOK_AND_QUILL
+  TOGGLE_HOLOGRAM:
+    default: true
+    display: Holograma
+    material: BEACON
+  ADD_BOOSTER:
+    default: true
+    display: Aplicar Booster
+    material: STORAGE_MINECART
+  REMOVE_BOOSTER:
+    default: false
+    display: Remover Booster
+    material: EXPLOSIVE_MINECART
+  MANAGE_FUEL:
+    default: true
+    display: Gerenciar Combustível
+    material: COAL

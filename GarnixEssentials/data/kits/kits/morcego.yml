@@ -1,0 +1,28 @@
+display: Kit Morcego
+
+category: ranks
+
+permission: rank.morcego
+
+cooldown: 6h
+
+slot: 14
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  texture: 6de75a2cc1c950e82f62abe20d42754379dfad6f5ff546e58f1c09061862bb92
+  display: '&8Kit Morcego'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Morcego'
+  lore:
+  - '&7Ainda não desbloqueado.'
+
+content: H4sIAAAAAAAA/82TyUoDQRCGa7LoZA4igruH1gfwJCgeBI2K4HYIeA2VmbKnsZexuxOXF8p75MlsnYQgI+ghqJeGov7/r48qOgFoQVN4Ui4BgCSGmshgVQlNqcV7f5gJVEZnXfdkbBZBs2362kcJ1D3yFjRIp/m7sVaDuhxIaNY+AhZhXNfLegcSmM+EKyS+xNC4QUWwMBoeXArPro1NiZuQAXOnqJBTyCs5VqYc3MiMdBeLQtIEY37qiMaO9Sp5IdIHfKYfs7PZsC9XSf6AYu2LS+ZmQPIfgOQkFfnvQRrlYJgNyFYVJM3J+RDjf3Ce2cJsVGEkcS40d7+N8sWf7xnj/5LDW1E8CUvd3JiHCUezwhGN50bl3COoQ+tCZHQukbv3fgxxCPTUDd25nnGO3BQtBF0ZS3EQNmBzNNxvG+0ER4a9YNGZYaVjNwi2R8O9thSPfWLkwmtDt0AbtFbhK2m0HxLTD2YrLEOW5jgIYsX6KhQonnF3souloBwNZfvi+O6Mndx2Omedz/uAN1iJ/kWdBQAA

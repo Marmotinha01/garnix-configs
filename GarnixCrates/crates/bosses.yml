@@ -1,0 +1,96 @@
+location: world:84:60:2
+
+hologram:
+  height: 2.3
+  lines:
+  - '&4&lCAIXA BOSSES'
+  - ''
+  - '&4Opções de uso:'
+  - '&fBotão Esquerdo &8➟ &7Preview'
+  - '&fBotão Direito &8➟ &7Abrir'
+
+# Slot que esta crate ocupa no menu /crates.
+slot: 14
+
+# Item visual no menu de crates.
+crate-item:
+  glow: true
+  material: TRIPWIRE_HOOK
+  display: '&4&lCHAVE BOSSES'
+  lore:
+  - '&7Consiga abatendo bosses.'
+
+# Item físico da chave (segurar e clicar com botão direito na crate abre).
+key-item:
+  glow: true
+  material: TRIPWIRE_HOOK
+  display: '&4&lCHAVE BOSSES'
+  lore:
+  - '&7Consiga abatendo bosses.'
+  - ''
+  - '&4Clique esquerdo para armazenar'
+  - '&4ou abrir a chave em uma caixa.'
+
+# Tipos disponíveis: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+rewards:
+  azar:
+    type: NONE
+    chance: 0.5
+    display: '&cAzar!'
+    icon:
+      material: BARRIER
+      display: '&c&lAzar!'
+      lore:
+      - '&7Não foi dessa vez!'
+  
+  coins:
+    type: CURRENCY
+    chance: 50.0
+    display: '&6Moedas'
+    currency-id: coins
+    amount: 5000
+    icon:
+      material: DOUBLE_PLANT
+      display: '&6&lMoedas'
+  
+  xp:
+    type: COMMAND
+    chance: 25.0
+    display: '&aExperiência'
+    command: xp {amount} {player}
+    amount: 500
+    icon:
+      material: EXP_BOTTLE
+      display: '&aExperiência'
+  
+  stone:
+    type: COMMAND_ITEM
+    chance: 15.0
+    display: '&7Pedra'
+    command: give {player} minecraft:stone {amount}
+    amount: 100
+    item:
+      material: STONE
+      display: '&9Pedra'
+      lore:
+      - '&7Pedra TOP!'
+  
+  diamonds:
+    type: ITEM
+    chance: 8.0
+    display: '&bDiamantes'
+    item:
+      material: DIAMOND
+      amount: 5
+      display: '&b&lDiamantes'
+  
+  leather-armor:
+    type: ITEM
+    chance: 1.5
+    display: '&cArmadura'
+    item:
+      material: LEATHER_CHESTPLATE
+      color: '#FF5555'
+      display: '&cArmadura Vermelha'
+      lore:
+      - '&7Uma armadura de couro vermelha!'

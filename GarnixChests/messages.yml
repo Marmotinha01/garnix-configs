@@ -1,0 +1,73 @@
+# GarnixChests — Mensagens (cores com '&').
+
+help:
+- '&8&m----------------------------------------'
+- '&d&lBaús &7- Comandos'
+- ''
+- '&f/bau &7- Abre o menu dos seus baús.'
+- '&f/bau <id> &7- Abre o baú com esse número.'
+- '&f/echest &7- Abre seu ender chest.'
+- ''
+- '&7Admin:'
+- '&f/bau <jogador> &7- Vê os baús de um jogador.'
+- '&f/bau <id> <jogador> &7- Abre o baú de um jogador.'
+- '&f/bau give <jogador> &7- Libera o próximo baú.'
+- '&f/bau giveitem <jogador> [qtd] &7- Dá o item ativador.'
+- '&f/bau reload &7- Recarrega as configurações.'
+- '&8&m----------------------------------------'
+
+# Geral
+no-permission-other: '&cVocê não tem permissão para acessar os baús de outros jogadores.'
+chest-not-found: '&cEsse baú não existe ou ainda não foi liberado.'
+chest-locked: '&cVocê ainda não possui este baú.'
+chest-usage: '&cUso: &f/bau [id] &7ou &f/bau <jogador>'
+
+# Ender chest
+echest-opened-other: '&aAbrindo o ender chest de &f{player}&a.'
+
+# Admin: liberar baú / item ativador
+give-success: '&aBaú &f#{id} &aliberado para &f{player}&a.'
+give-max: '&c{player} já possui o número máximo de baús.'
+giveitem-success: '&aVocê deu &f{amount}x &aativador(es) de baú para &f{player}&a.'
+giveitem-received: '&aVocê recebeu um &fativador de baú&a! Use-o com o botão direito.'
+# Mostradas NO LUGAR de 'giveitem-received', nunca junto — uma mensagem por jogador.
+giveitem-mailed: '&eVocê está em um evento! Seu &fativador de baú &efoi para o seu &6/correio&e.'
+giveitem-leftover: '&eSeu inventário encheu! O ativador que sobrou foi para o seu &6/correio&e.'
+player-offline: '&cO jogador &f{player} &cprecisa estar online para receber o item.'
+
+# Ativador (clique-direito)
+chest-activate-success: '&aNovo baú liberado! &8(&7#{id}&8)'
+chest-activate-max: '&cVocê já possui o número máximo de baús.'
+
+# Renomear
+rename:
+  cancel-word: cancelar
+  prompt:
+  - ''
+  - ' &aDigite o novo nome do baú no chat.'
+  - ' &7Aceita cores &f(&)&7, até &f{max} &7caracteres.'
+  - ' &7Digite &fcancelar &7para cancelar.'
+  - ''
+  empty: '&cO nome não pode ser vazio.'
+  too-long: '&cO nome pode ter no máximo {max} caracteres (sem contar cores).'
+rename-success: '&aNome do baú atualizado com sucesso.'
+rename-cancelled: '&7Renomeação cancelada.'
+
+# Expandir
+expand-success: '&aBaú expandido para &f{rows} &alinhas! &8(&7-{cost} {currency}&8)'
+expand-max: '&cEste baú já está no tamanho máximo.'
+expand-insufficient: '&cVocê precisa de &f{cost} {currency} &cpara expandir este baú.'
+
+# Ícone
+icon-changed: '&aÍcone do baú atualizado.'
+
+# Admin: reload
+reload-success: '&aGarnixChests recarregado com sucesso.'
+
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# Usadas quando o tamanho do ender chest por permissão diminui e os itens
+# que não cabem mais são devolvidos ao jogador.
+delivery:
+  mailed: '&eVocê está em um evento! &eOs itens que não couberam no seu ender chest foram para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! Os itens do ender chest que sobraram foram para o seu &6/correio&e.'

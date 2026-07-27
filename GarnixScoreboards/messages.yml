@@ -1,0 +1,9 @@
+general:
+  only-players: '&cApenas jogadores podem usar este comando.'
+  reloaded: '&aConfigurações recarregadas. &7({count} scoreboards)'
+
+toggle:
+  shown: '&aScoreboard ativada.'
+  hidden: '&cScoreboard desativada.'
+
+usage: '&cUse: /scoreboard <on/off>'

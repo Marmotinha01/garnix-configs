@@ -1,0 +1,148 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Corantes
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: true
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 29
+  material: INK_SACK
+  data: 14
+  display: '&aCorantes'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  ink-sack:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 0
+      amount: 16
+  ink-sack-2:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 1
+      amount: 16
+  ink-sack-3:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 2
+      amount: 16
+  ink-sack-4:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 3
+      amount: 16
+  ink-sack-5:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 4
+      amount: 16
+  ink-sack-6:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 5
+      amount: 16
+  ink-sack-7:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 6
+      amount: 16
+  ink-sack-8:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 7
+      amount: 16
+  ink-sack-9:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 8
+      amount: 16
+  ink-sack-10:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 9
+      amount: 16
+  ink-sack-11:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 10
+      amount: 16
+  ink-sack-12:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 11
+      amount: 16
+  ink-sack-13:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 12
+      amount: 16
+  ink-sack-14:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 13
+      amount: 16
+  ink-sack-15:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 14
+      amount: 16
+  ink-sack-16:
+    amount: 16
+    price: 1500
+    item:
+      material: INK_SACK
+      data: 15
+      amount: 16

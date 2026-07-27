@@ -1,0 +1,61 @@
+title: Aliados
+
+shape:
+- XXXXXXXXX
+- X.......X
+- X.......X
+- X.......X
+- <XXXXXXX>
+
+empty-icon:
+  slot: 22
+  material: BARRIER
+  display: '&cNenhum aliado'
+  lore:
+  - '&7Seu clan ainda não possui'
+  - '&7alianças firmadas.'
+
+ally-icon:
+  material: DIAMOND
+  display: '&r{tag} &f{clan}'
+  lore:
+  - ' &8 ▪ &fLíder: &7{leader}'
+  - ' &8 ▪ &fMembros: &7{members} &8(&a{online} &8online)'
+  - ''
+  - '&cClique para desfazer a aliança.'
+
+ally-locked-icon:
+  material: DIAMOND
+  display: '&r{tag} &f{clan}'
+  lore:
+  - ' &8 ▪ &fLíder: &7{leader}'
+  - ' &8 ▪ &fMembros: &7{members} &8(&a{online} &8online)'
+
+request-icon:
+  slot: 38
+  material: NETHER_STAR
+  display: '&aSolicitar Aliança'
+  lore:
+  - '&7Envie um pedido de aliança'
+  - '&7informando a tag do clan.'
+  - ''
+  - '&aClique para solicitar.'
+
+requests-icon:
+  slot: 42
+  material: PAPER
+  display: '&eSolicitações Recebidas'
+  lore:
+  - '&7Pedidos de aliança que'
+  - '&7outros clans enviaram.'
+  - ''
+  - ' &8 ▪ &fPendentes: &7{requests}'
+  - ''
+  - '&eClique para acessar.'
+
+back-icon:
+  slot: 40
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

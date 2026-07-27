@@ -1,0 +1,63 @@
+# Materiais seguem o Bukkit 1.8.8 (legacy): "MATERIAL" (data 0) ou
+# "MATERIAL:DATA" (ex: STAINED_GLASS:14, LOG_2:1).
+
+preview:
+  enabled: true
+  # Ticks entre cada atualização do preview. 20 ticks = 1 segundo.
+  update-ticks: 5
+  # Mostrar o preview apenas enquanto o jogador estiver agachado (shift).
+  shift: false
+
+# Distância máxima, em blocos, para construir a torre.
+distance: 5
+
+# Só constrói onde há ar.
+only-air: true
+
+# Bloco mostrado no preview onde não é possível construir.
+cannot-place: STAINED_GLASS:14
+
+# Título do menu de confirmação (os ícones vêm do garnix-core).
+confirm-title: Deseja construir a torre?
+
+# Item entregue por /cactustower give. {floors} é substituído pela quantidade
+# de andares na entrega.
+item:
+  material: CACTUS
+  display: '&aTorre de Cacto &8[{floors} Andares]'
+  lore:
+  - '&aOpções de uso:'
+  - '&fBotão Direito &8➟ &7Construir'
+
+# Partículas geradas em cada bloco. BLOCK_CRACK/BLOCK_DUST usam a textura do bloco.
+particles:
+  particle: BLOCK_CRACK
+  amount: 10
+
+# Cada caractere do pattern mapeia para um bloco. AIR = vazio.
+blocks:
+  C: CACTUS
+  A: AIR
+  S: SAND
+  L: TRIPWIRE
+
+# Camadas de um andar, de baixo (1) para cima. Cada camada é uma lista de linhas
+# (eixo Z); cada caractere é o eixo X. A torre é centralizada no bloco alvo e o
+# padrão é repetido para cada andar.
+pattern:
+  '1':
+  - SAS
+  - ASA
+  - SAS
+  '2':
+  - CLC
+  - LCL
+  - CLC
+  '3':
+  - ASA
+  - SAS
+  - ASA
+  '4':
+  - LCL
+  - CLC
+  - LCL

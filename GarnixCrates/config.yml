@@ -1,0 +1,4 @@
+debug: false
+
+# Ranking de crates abertas (reconstruído do banco neste intervalo, em minutos).
+ranking-refresh-minutes: 5

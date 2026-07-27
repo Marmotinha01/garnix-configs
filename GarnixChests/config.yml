@@ -1,0 +1,66 @@
+# GarnixChests — Ender Chest + Baús Virtuais
+# Cores com '&'. Materiais com nomes do Spigot 1.8.
+# Títulos de inventário no 1.8 têm limite de 32 caracteres.
+
+debug: false
+
+# Intervalo (segundos) do sync das mãos abertas com o modelo (segurança contra crash).
+save-interval-seconds: 60
+
+sounds:
+  open: CHEST_OPEN
+  expand: LEVEL_UP
+  activate: LEVEL_UP
+
+permissions:
+  echest-admin: chests.admin
+  chest-admin: chests.admin
+
+# Ender chest (/echest). O tamanho vem da permissão <permission-node>.<linhas>
+# (ex.: echest.rows.6 = 6 linhas), da maior para a menor; sem permissão usa default-rows.
+echest:
+  command:
+    name: echest
+    aliases:
+    - ec
+    - enderchest
+  permission-node: echest.rows
+  default-rows: 3
+  max-rows: 6
+  title: Echest - {player}
+
+# Baús virtuais (/bau, /baus).
+chest:
+  max: 10
+  default-rows: 3
+  max-rows: 6
+  max-name-length: 20
+  title: 'Baú #{id}'
+  default-icon: CHEST
+  
+  # Expansão de linhas usando uma moeda do GarnixCurrencies.
+  expand:
+    currency: coins
+    # Custo para ALCANÇAR cada linha. Sem entrada = não expande mais.
+    costs:
+      '4': '10000'
+      '5': '25000'
+      '6': '50000'
+  
+  # Item físico dado por /bau giveitem — clique-direito libera um baú.
+  activator-item:
+    material: CHEST
+    display: '&6Ativador de Baú'
+    glow: true
+    lore:
+    - '&6Opções de uso:'
+    - '&fBotão Direito &8➟ &7Ativar'
+  
+  # Ícones selecionáveis no menu de troca. {display} = nome traduzido do material.
+  icons:
+  - CHEST
+  - ENDER_CHEST
+  - EMERALD_BLOCK
+  icons-display: '&a{display}'
+  icons-lore:
+  - '&7Clique para usar o ícone.'

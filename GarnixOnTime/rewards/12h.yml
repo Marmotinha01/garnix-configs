@@ -1,0 +1,30 @@
+required-time: '12h'
+
+display: '&a12 Horas Online'
+
+reward-icon:
+  material: WATCH
+  display: '&a&l12 Horas Online'
+  lore:
+    - ''
+    - ' &7Recompensas:'
+    - ' &8▶ &f&l1&fx &4&lCHAVE BOSSES'
+    - ''
+
+rewards:
+  coins:
+    type: CURRENCY
+    currency-id: coins
+    amount: 5000
+    icon:
+      material: DOUBLE_PLANT
+      display: '&6&l5.000 Moedas'
+
+  diamonds:
+    type: ITEM
+    item:
+      material: DIAMOND
+      amount: 8
+      display: '&b&lDiamantes'
+      lore:
+        - '&7Recompensa por tempo online.'

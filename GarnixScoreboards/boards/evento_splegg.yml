@@ -1,0 +1,49 @@
+# Board de evento. Só o selector do GarnixEvents chega até ela.
+#
+# A permission é de propósito um nó que ninguém tem: o casamento normal por
+# mundo passa por appliesTo(), que checa permissão, então essa board nunca é
+# escolhida por estar no mundo dos eventos. O selector busca a board pelo id e
+# não passa por appliesTo(), então para quem está na run ela aparece igual.
+# Sem isso, bastava o eventos_lobby.yml perder o priority para as boards de
+# evento aparecerem no lobby.
+
+enabled: true
+priority: 0
+worlds: ['eventos']
+permission: 'garnix.eventos.board'
+update-ticks: 20
+
+title:
+  interval: 2
+  frames:
+  - '&f&lSPLEGG &8► &a%events_alive%'
+  - '&e&lSPLEGG &8► &a%events_alive%'
+  - '&6&lSPLEGG &8► &a%events_alive%'
+  - '&6&lS&f&lPLEGG &8► &a%events_alive%'
+  - '&6&lS&e&lPLEGG &8► &a%events_alive%'
+  - '&6&lSP&f&lLEGG &8► &a%events_alive%'
+  - '&6&lSP&e&lLEGG &8► &a%events_alive%'
+  - '&6&lSPL&f&lEGG &8► &a%events_alive%'
+  - '&6&lSPL&e&lEGG &8► &a%events_alive%'
+  - '&6&lSPLE&f&lGG &8► &a%events_alive%'
+  - '&6&lSPLE&e&lGG &8► &a%events_alive%'
+  - '&6&lSPLEG&f&lG &8► &a%events_alive%'
+  - '&6&lSPLEG&e&lG &8► &a%events_alive%'
+  - '&e&lSPLEGG &8► &a%events_alive%'
+  - '&6&lSPLEGG &8► &a%events_alive%'
+  - '&f&lSPLEGG &8► &a%events_alive%'
+  - '&6&lSPLEGG &8► &a%events_alive%'
+
+lines:
+- ''
+
+- text: ' &fComeça em: &7%events_countdown%s'
+  condition: '%events_state% == starting'
+
+- text: ' &fTempo: &7%events_elapsed%'
+  condition: '%events_state% == running'
+
+- ' &fParticipantes: &a%events_alive%&8/&c%events_players%'
+- ' &fStatus: %events_status%'
+- ''
+- '&eredegarnix.com'

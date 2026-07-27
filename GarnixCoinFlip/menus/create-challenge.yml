@@ -1,0 +1,52 @@
+title: Criar Desafio
+rows: 4
+
+# O ícone da economia vem do próprio GarnixCurrencies — só a lore é definida aqui.
+currency-icon:
+  slot: 11
+  lore:
+  - '&7Clique para trocar.'
+
+amount-icon:
+  slot: 15
+  material: GOLD_INGOT
+  display: '&aValor da Aposta'
+  unselected-lore:
+  - '&7Clique para definir.'
+  selected-lore:
+  - '&fAtual: {currency_prefix}{amount}'
+  - ''
+  - '&7Clique para alterar.'
+
+confirm-icon:
+  slot: 32
+  material: INK_SACK
+  data: 10
+  display: '&aCriar Desafio'
+  lore:
+  - ''
+  - '{tax_info}'
+  - ''
+  - '&aClique para criar.'
+
+# A linha {tax_info}, que sempre diz se uma vitória sua paga taxa — a alíquota é
+# travada neste clique. A taxa incide só sobre o lucro: a sua aposta volta
+# inteira de qualquer jeito. {net} é o lucro líquido e {tax} é a alíquota.
+tax-free: ' &fTaxa: &aIsento '
+tax-charged: ' &fTaxa: &c&l{tax}&c% '
+
+no-amount-icon:
+  slot: 32
+  material: BARRIER
+  data: 8
+  display: '&cCriar Desafio'
+  lore:
+  - '&7Defina o valor da aposta'
+  - '&7para poder confirmar.'
+
+back-icon:
+  slot: 30
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

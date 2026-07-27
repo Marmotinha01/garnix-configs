@@ -1,0 +1,72 @@
+title: Armazém
+
+rows: 4
+
+# Slot do ícone do cacto no menu principal (configurável).
+cactus-icon:
+  slot: 13
+
+info-icon:
+  slot: 28
+  material: PAPER
+  display: '&aLimite do Armazém'
+  lore:
+  - '&fAtual: &7{total}&8/&c{limit}'
+
+booster-active-icon:
+  slot: 32
+  material: POTION
+  data: 8260
+  display: '&aBooster de Armazém'
+  lore:
+    - '&7Use este booster para ter'
+    - '&7seus ganhos aumentados.'
+    - ''
+    - ' &8Informações:'
+    - ' &8▪ &fTipo: &aVenda de Cactos'
+    - ' &8▪ &fBônus: &a{multiplier}'
+    - ' &8▪ &fDuração: &7{duration}'
+    - ''
+    - ' &cAo remover &c&l50&c% do tempo'
+    - ' &cdo booster será perdido.'
+    - ''
+    - '&aClique para remover.'
+
+booster-empty-icon:
+  slot: 32
+  material: GLASS_BOTTLE
+  amount: 0
+  display: '&cBoosters'
+  lore:
+  - '&7Servem para aumentar'
+  - '&7seus ganhos na venda.'
+  - ''
+  - ' &c▾ Nenhum booster ativo. '
+  - ''
+
+autosell-icon:
+  slot: 34
+  material: DIODE
+  display: '&6Venda Automática'
+  lore:
+  - '&7Clique para gerenciar.'
+
+autosell-locked-icon:
+  slot: 34
+  material: BARRIER
+  display: '&cVenda Automática'
+  lore:
+  - '&7Venda suas plantações de'
+  - '&7maneira totalmente automática!'
+  - ''
+  - '&fAdquira em nosso site:'
+  - '&c&nhttps://redegarnix.com/'
+
+friends-icon:
+  slot: 30
+  texture: '76cbae7246cc2c6e888587198c7959979666b4f5a4088f24e26e075f140ae6c3'
+  display: '&aAmigos'
+  lore:
+  - '&fTotal: &7{count}'
+  - ''
+  - '&aClique para gerenciar.'

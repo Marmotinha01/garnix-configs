@@ -1,0 +1,92 @@
+title: Sorteando...
+result-title: '&a{winner} venceu!'
+
+rows: 3
+
+# Slot central. É o único item do menu — durante a contagem mostra o número,
+# depois alterna as cabeças dos dois participantes.
+head-slot: 13
+
+# ── Contagem regressiva ─────────────────────────────────────────────
+# Roda antes do sorteio, dando tempo do criador clicar em [ASSISTIR].
+# A duração vem de start-delay no config.yml (200 ticks = 10 segundos).
+countdown:
+  # Título do menu durante a contagem. Trocado a cada segundo por packet.
+  title: Iniciando em {seconds}s
+  display: '&a&lINICIANDO EM {seconds}'
+  lore:
+  - ''
+  - ' &fDesafio: &a{creator} &8vs &c{opponent} '
+  - ' &fAposta: {currency_prefix}{amount} '
+  - ''
+  tick-sound: CLICK
+  tick-volume: 0.7
+  tick-pitch: 1.0
+  
+  # Textura da cabeça de cada segundo restante.
+  # Aceita o hash, a URL completa de textures.minecraft.net, ou o base64.
+  heads:
+    '10': a7e567cd53cede046d63d688df4f529e9a9d913948ab50753e3e0d9436104e7f
+    # ATENÇÃO: este hash tem 63 caracteres (os outros têm 64) — provavelmente veio
+    # truncado. Se o "9" aparecer como cabeça padrão, é isso.
+    '9': 7e4eab5c8c82e0a91828f0a5dbd43d26076bc4b57ce1d135eca2d7bd0b1de30
+    '8': cef83d0279a2e51e7e532d202df5ec7db83f96d3fbb245da1b628c1f0b1eecbd
+    '7': f43f8b105ec3b48963e981aff825c5ab94dffee5d84a869ad072afa8fd214e7e
+    '6': 795544a4080f6a4af19e0801da492838fb04bc534fc84600e04c8815e131e29d
+    '5': 33cd934f11f0766f5410eba9e7b5f0ceb66f6b317e845cb6a501f37258556a43
+    '4': 21bd898ccb1e5af71d64411a159c0d469af6391062e802bfe8199565e8d7be68
+    '3': ea79daa9208a056500c83cd2090faec91eae5405792e4f5472697b0e7dac323a
+    '2': b3d93e8b5fb0b5d50abd4ef88532f46874b9924f668ddb01091468e4e61b9c83
+    '1': 21d859e8b14f62646859cf3804a64f1060d6879341b4c3385b46a0ec40faf73c
+
+# ── Sorteio ─────────────────────────────────────────────────────────
+spinning-display: '&e&l{player}'
+lore:
+- ''
+- ' &fDesafio: &a{creator} &8vs &c{opponent} '
+- ' &fAposta: {currency_prefix}{amount} '
+- ''
+winner-lore:
+- ''
+- '&6&lVENCEDOR'
+
+# Número de trocas de cabeça até parar.
+shifts: 40
+# Intervalo (em ticks) entre trocas: começa no mínimo e desacelera até o máximo.
+min-interval: 1
+max-interval: 8
+# Ticks até o menu fechar sozinho após o resultado.
+close-delay: 60
+
+tick-sound: NOTE_STICKS
+tick-volume: 0.6
+tick-pitch-min: 0.8
+tick-pitch-max: 2.0
+
+win-sound: LEVEL_UP
+win-volume: 1.0
+lose-sound: NOTE_BASS
+lose-volume: 1.0
+
+# ── Fogos do vencedor ───────────────────────────────────────────────
+# Enviado por packet: só o vencedor vê e ouve. A entidade nunca entra no
+# mundo, então ninguém mais é afetado.
+winner-firework:
+  enabled: true
+  # Ticks entre o lançamento e a explosão.
+  explode-delay: 10
+  # Altura (em blocos) acima do jogador onde o foguete aparece.
+  height: 1.0
+  power: 1
+  # BALL, BALL_LARGE, STAR, BURST ou CREEPER.
+  type: BALL_LARGE
+  colors:
+  - '#00FF00'
+  - '#FFFF00'
+  fade:
+  - '#FFFFFF'
+  trail: true
+  flicker: true
+  sound: FIREWORK_BLAST
+  volume: 1.0
+  pitch: 1.0

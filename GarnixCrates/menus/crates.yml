@@ -1,0 +1,47 @@
+title: Caixas
+rows: 5
+
+crate-lore:
+- ''
+- ' &8▶ &fArmazenadas: &a{amount}'
+- ''
+- '&aClique para gerenciar.'
+
+opens-upgrade-icon:
+  slot: 38
+  material: FIREWORK
+  display: '&aEvoluir Abertura'
+  lore:
+  - '&fAgora: &7{keys} p/click'
+
+opens-upgrade-lore-status:
+  max-level-reached:
+  - ''
+  - '&cNível máximo já alcançado!'
+  upgrade-available:
+  - ''
+  - ' &aPróximo nível:'
+  - ' &8▶ &fAbre: &7{next-keys} p/click'
+  - ' &8▶ &fCusto: &a{next-cost} coins'
+  - ''
+  can-afford: '&aClique para evoluir.'
+  cannot-afford: '&cSem coins suficientes.'
+
+current-robot-empty-icon:
+  slot: 40
+  material: BARRIER
+  display: '&cNenhum Robô Equipado'
+  lore:
+  - '&7Clique no robô em seu'
+  - '&finventário &7para equipá-lo.'
+
+current-robot-remove-lore:
+- ''
+- '&cClique para remover o robô.'
+
+ranking-icon:
+  slot: 42
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Clique para ver.'

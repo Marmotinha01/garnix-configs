@@ -1,0 +1,49 @@
+# GarnixPunishments — config.yml
+# Keys are in English; player-facing text lives in messages.yml.
+
+# Logical name of this server (stored on each punishment; used in audit/broadcast).
+server: rankup
+
+# Values substituted when reason/proof are omitted (console commands or staff bypass),
+# and the name recorded as the punisher when a punishment comes from the console.
+defaults:
+  reason-text: Não especificado
+  proof-url: Não especificada
+  console-name: CONSOLE
+
+# Public punishment code — the short, random id a player sees on the ban screen and quotes when
+# opening a ticket (/checkid <code>). It replaces the numeric id for everything player-facing; the
+# internal numeric id still exists in the database. The code is stored raw and only formatted for
+# display, so changing separator/prefix here never invalidates codes already generated.
+codes:
+  # Number of characters in a code. 6 over the 27-char alphabet below is ~387M combinations.
+  length: 6
+  # Character pool. Vowels are left out (no accidental profanity) along with 0/1/L (no 0-vs-O,
+  # 1-vs-I-vs-L transcription mistakes). Keep it uppercase.
+  alphabet: 23456789BCDFGHJKMNPQRSTVWXZ
+  # Insert the separator every N characters on display (K7P2Q9 -> K7P-2Q9). 0 disables grouping.
+  group-size: 3
+  # Display group separator. Must not contain any character from the alphabet above.
+  separator: '-'
+  # Fixed display prefix (e.g. "GX-"). Leave empty for no prefix.
+  prefix: ''
+
+# Shared player-facing labels reused across several menus — kept here so they are set once
+# instead of being repeated in every menu file.
+labels:
+  online: '&aOnline'
+  offline: '&cOffline'
+  permanent: Permanente
+  # Shown for "last seen" when the player has never connected.
+  never-seen: Nunca
+  # Punishment status shown in the /check and /staff item lores.
+  status:
+    active: '&aAtiva'
+    expired: '&7Expirada'
+    revoked: '&cRevogada'
+
+# Commands a muted player cannot use (chat bypass prevention). Lowercase, no slash.
+mute-blocked-commands:
+- g
+- global
+- local

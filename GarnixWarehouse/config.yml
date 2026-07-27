@@ -1,0 +1,39 @@
+# Mundo dos terrenos (deve casar com o plot world do PlotSquared).
+world: plotworld
+
+# Limite inicial de armazenamento de cada armazém ao ser criado.
+initial-limit: 1500
+
+# Duração (segundos) da isenção do captcha após resolvê-lo.
+captcha-duration: 30
+
+booster:
+  # Tempo restante mínimo (segundos) para recuperar um booster ativo do armazém.
+  # Ao recuperar, o jogador recebe de volta um item valendo 50% do tempo restante
+  # (perde a outra metade). O piso bloqueia o abuso de recuperar boosters quase
+  # expirados só para reativar outro sem esperar.
+  min-remove-seconds: 30
+
+autosell:
+  # Intervalo padrão (segundos) ao desbloquear a venda automática.
+  default-interval: 20
+  # Moeda usada para comprar melhorias de velocidade.
+  upgrade-currency: cash
+  # <segundos_alvo>: <custo>. Aponta sempre para o menor alvo abaixo do intervalo atual.
+  upgrade-prices:
+    '18': 1000
+    '16': 1500
+    '14': 2000
+    '12': 2500
+    '10': 3000
+
+# Plantação suportada (apenas cacto). material/data = ícone,
+# currency = moeda (GarnixCurrencies), sell-price = preço unitário base,
+# release (opcional) = data dd/MM/yyyy HH:mm.
+farms:
+  CACTUS:
+    material: CACTUS
+    data: 0
+    display: '&aCacto'
+    currency: coins
+    sell-price: 10

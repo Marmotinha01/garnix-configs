@@ -1,0 +1,34 @@
+title: Spawners do Servidor
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum spawner encontrado.'
+
+stats-icon:
+  slot: 49
+  material: BOOK
+  display: '&aEstatísticas'
+  lore:
+  - '&fTotal de spawners: &7{total_spawners} '
+  - '&fDonos únicos: &7{unique_owners}'
+
+spawner-template:
+  display: '&a{display} &7(x{stack})'
+  lore:
+  - '&fDono: &7{owner}'
+  - '&fPlot: &7{plot_id}'
+  - '&fLocal: &7{world} {x},{y},{z}'
+  - '&fMob Stack: &7{mob_stack}'
+  - ''
+  - '&aClique para teleportar.'

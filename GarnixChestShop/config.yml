@@ -1,0 +1,25 @@
+# Cooldown de interação com lojas (ms)
+interaction-cooldown: 1000
+
+# Cooldown de anúncio de loja (segundos)
+announce-cooldown-seconds: 1800
+
+# Cooldown para editar avaliação (horas)
+rating-edit-cooldown-hours: 24
+
+# Intervalo mínimo entre visitas do mesmo jogador (horas)
+visit-interval-hours: 1
+
+# Intervalo de atualização do ranking de lojas (minutos)
+ranking-refresh-minutes: 5
+
+# Mundo de terrenos onde lojas podem ser criadas/definidas.
+# Placas de loja e o ponto de teleporte só são permitidos neste mundo,
+# e somente em terrenos que o jogador é dono (sem bypass).
+plot-world: plotworld
+
+# Moedas que não podem ser usadas em lojas
+currency-blacklist: []
+
+# Título do menu de confirmação ao deletar uma loja (quebrar a placa com shift)
+delete-confirm-title: Deseja deletar a loja?

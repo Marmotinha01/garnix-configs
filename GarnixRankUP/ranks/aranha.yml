@@ -1,0 +1,13 @@
+order: 10
+
+name: "Aranha"
+tag: "&c[Aranha]"
+
+texture: 'c87a96a8c23b83b32a73df051f6b84c2ef24d25ba4190dbe74f11138629b5aef'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

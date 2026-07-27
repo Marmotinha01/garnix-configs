@@ -1,0 +1,180 @@
+# Evento — Spleef
+#
+# Piso de neve sobre água. Cada um recebe uma pá e cava o chão dos outros; quem cai
+# na água é eliminado. O piso é reconstruído no início e no fim de cada evento.
+#
+# Locais necessários: lobby, join, exit. O cabin (camarote) é opcional.
+# Área necessária: a camada do piso
+#   /eventos wand           » pega o graveto
+#   (clique esquerdo/direito nos dois cantos do piso, na MESMA altura)
+#   /spleef setarea         » salva a seleção
+
+display: '&bSpleef'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&b'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_spleef%. Deixe vazio para o evento não dar tag.
+tag: '&b[Spleef]'
+
+join-time: 1m
+start-time: 10s
+duration: 10m
+
+min-players: 2
+max-players: 0
+
+# Bloco que forma o piso. É ele que a pá quebra e é ele que é reconstruído.
+floor-material: SNOW_BLOCK
+
+# Slot da hotbar em que o jogador fica preso enquanto joga: o scroll do mouse é recusado
+# e a roda volta sozinha para cá. O loadout deste evento é um item só, então rolar a roda
+# — de propósito ou sem querer, que é o comum em trackpad — só serve para desarmar quem
+# está jogando.
+#
+# Deixe vazio ou apague a chave para liberar o scroll. Valores válidos: 0 a 8.
+hotbar-lock: 0
+
+kit:
+  items:
+    shovel:
+      slot: 0
+      material: DIAMOND_SPADE
+      display: '&fPá de Spleef'
+      lore:
+      - '&7Cave o chão dos outros!'
+      enchants:
+      - DIG_SPEED:5
+      unbreakable: true
+      flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+
+rewards:
+- eco give {player} 5000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&a&lVALENDO!'
+    subtitle: '&7Boa sorte!'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/spleef entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lSpleef {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/spleef entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+# {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lSpleef {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+# {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lSpleef {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+# {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lSpleef&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &ffoi o último de pé no Spleef.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+
+  # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
+  # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  walkover: |2
+
+      &8▎ {c}Evento {c}&lSpleef&f, {c}vitória por W.O.!
+      &r
+      &8▶ &7{player} &fficou sozinho na plataforma.
+      &r
+      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &r
+
+# ── Eliminações ─────────────────────────────────────────────────────
+# Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+# {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &fcaiu na água! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi derrubado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lSpleef {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém sobrou para vencer.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lSpleef {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+# {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lSpleef {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+# ── Actionbar ───────────────────────────────────────────────────────
+# Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'

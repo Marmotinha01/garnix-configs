@@ -1,0 +1,13 @@
+item:
+  display: "&aCapacete Floral"
+  material: LEATHER_HELMET
+  color: "#55DD55"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 2
+    percent: true

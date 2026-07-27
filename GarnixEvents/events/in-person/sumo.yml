@@ -1,0 +1,206 @@
+# Evento — Sumô
+#
+# Torneio 1v1 em cima de uma plataforma sobre água. O graveto só empurra (o dano é
+# zerado pelo plugin), e quem cair na água perde a luta.
+#
+# Locais necessários: lobby, join, exit, left, right. O cabin (camarote) é opcional.
+#   /sumo setloc lobby|join|exit|cabin  » espera, bancada, saída e camarote (opcional)
+#   /sumo setloc left|right       » os dois cantos do ringue
+# Os lutadores esperam a vez no 'join'; só a dupla sorteada vai para o ringue.
+
+display: '&bSumô'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&b'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_sumo%. Deixe vazio para o evento não dar tag.
+tag: '&b[Sensei]'
+
+join-time: 1m
+start-time: 5s
+bout-time: 3m
+intermission: 3s
+duration: ''
+
+min-players: 2
+max-players: 0
+
+# Armadura de streak — puramente visual, já que nada dá dano no Sumô.
+# A cor muda conforme o jogador vence lutas seguidas, então dá para ver de longe
+# quem está indo bem. A chave de cada faixa é o número de vitórias que a libera, e
+# vale sempre a MAIOR faixa até o streak atual — não precisa listar todos os números.
+streak-armor:
+  enabled: true
+  # Nome exibido nas peças ("" para não mostrar nada).
+  display: '&7Armadura de Sumô'
+  tiers:
+    '0': '#A06540' # couro normal
+    '1': '#55FF55' # 1 vitória
+    '2': '#FFFF55' # 2 vitórias
+    '3': '#FF5555' # 3 vitórias
+    '5': '#AA00AA' # 5 vitórias ou mais
+
+# Slot da hotbar em que o jogador fica preso enquanto joga: o scroll do mouse é recusado
+# e a roda volta sozinha para cá. O loadout deste evento é um item só, então rolar a roda
+# — de propósito ou sem querer, que é o comum em trackpad — só serve para desarmar quem
+# está lutando.
+#
+# Deixe vazio ou apague a chave para liberar o scroll. Valores válidos: 0 a 8.
+hotbar-lock: 0
+
+kit:
+  items:
+    stick:
+      slot: 0
+      material: STICK
+      display: '&bGraveto de Sumô'
+      lore:
+      - '&7Empurre o adversário para a água!'
+      enchants:
+      - KNOCKBACK:1
+      unbreakable: true
+      flags:
+      - HIDE_ATTRIBUTES
+      - HIDE_ENCHANTS
+      - HIDE_UNBREAKABLE
+
+# Comandos executados no console para o vencedor. {player} = nome do vencedor.
+rewards:
+- eco give {player} 5000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&a&lVALENDO!'
+    subtitle: '&7Boa sorte!'
+  bout:
+    title: '&b&lSUMÔ'
+    subtitle: '&f{left} &7vs &f{right}'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/sumo entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lSumô {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/sumo entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+# {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lSumô {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+# {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lSumô {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+# {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lSumô&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &flevou o torneio de Sumô.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+
+  # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
+  # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  walkover: |2
+
+      &8▎ {c}Evento {c}&lSumô&f, {c}vitória por W.O.!
+      &r
+      &8▶ &7{player} &fficou sem adversários no torneio.
+      &r
+      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &r
+
+# ── Eliminações ─────────────────────────────────────────────────────
+# Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+# {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lSumô {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém sobrou para vencer.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lSumô {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+# {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lSumô {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+# ── Actionbar ───────────────────────────────────────────────────────
+# Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  
+  # ── Torneio ─────────────────────────────────────────────────────────
+  # {left}/{right} a dupla · {waiting} na fila · {winner}/{loser} · {remaining}
+  tournament-start: '&fO evento de Sumô começou com &7{count} &fparticipantes!'
+  bout-start: '&fNa plataforma agora: &7{left} &fvs &7{right}&f. &8({waiting} na fila)'
+  bout-win: '&7{winner} &fempurrou &7{loser} &fna água! &8({remaining} restantes)'
+  bout-timeout: '&fTempo esgotado! &7{loser} &fperdeu por ter menos vida.'
+  # {wins} vitórias seguidas — a armadura de sequência muda de cor a cada faixa.
+  streak-up: '&aVocê está com &7{wins} &avitória(s) seguidas! Sua armadura mudou de cor.'

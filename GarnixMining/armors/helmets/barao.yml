@@ -1,0 +1,14 @@
+item:
+# Barão Helmet
+  display: "&3Capacete Barão"
+  material: LEATHER_HELMET
+  color: "#00AAAA"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  gemas:
+    value: 1.5
+    percent: true

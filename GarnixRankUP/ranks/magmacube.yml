@@ -1,0 +1,13 @@
+order: 14
+
+name: "MagmaCube"
+tag: "&4[MagmaCube]"
+
+texture: 'a1c97a06efde04d00287bf20416404ab2103e10f08623087e1b0c1264a1c0f0c'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

@@ -1,0 +1,33 @@
+title: Amigos do Spawner
+
+shape:
+- XXXXXXXXX
+- <X.....X>
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 13
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum amigo encontrado.'
+
+add-friend-icon:
+  slot: 32
+  texture: 6c48ddfdcd6d98a1b0aa3c71e8dad4edde732a68b2b0a5ab142600dca7587c32
+  display: '&aAdicionar Amigo'
+  lore:
+  - '&7Clique para adicionar.'
+
+back-icon:
+  slot: 30
+  material: ARROW
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'
+
+friend-template:
+  display: '&a{player_name}'
+  lore:
+  - '&7Clique para gerenciar.'

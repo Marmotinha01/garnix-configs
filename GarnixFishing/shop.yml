@@ -1,0 +1,15 @@
+# Coral-shop products. Each product is placed at its own slot in menus/shop.yml.
+#   slot    — inventory slot in the shop menu.
+#   cost    — price in the config currency (corais).
+#   command — run as console on purchase; {player} = buyer's name.
+#   icon    — material/display/lore shown in the menu (shared buy-lore appended).
+products:
+  spawner-limit:
+    slot: 10
+    cost: 1500
+    command: spawner give {player} 1500
+    icon:
+      material: PAPER
+      display: '&bLimite de Spawner'
+      lore:
+      - '&fQuantia: &71.5K'

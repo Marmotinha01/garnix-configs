@@ -1,0 +1,258 @@
+# GarnixMining — Messages
+# Use & for color codes. Common placeholders: {player}, {tax}, {x}, {y}, {z}
+
+general:
+  reloaded: '&aArquivos de configuração recarregados com sucesso!'
+  only-players: '&cApenas jogadores podem usar este comando.'
+
+selection:
+  pos1-set: '&aPos1 definida em &f{x}&7, &f{y}&7, &f{z}&7.'
+  pos2-set: '&aPos2 definida em &f{x}&7, &f{y}&7, &f{z}&7.'
+  region-set: '&aRegião da mina definida com sucesso!'
+  spawn-set: '&aSpawn da mina definido com sucesso!'
+  no-positions: '&cDefina a &fpos1 &ce a &fpos2 &cantes.'
+  no-region: '&cA região da mina ainda não foi definida.'
+  wand-received: '&aVocê recebeu o seletor de mina!'
+  manager-set: '&aBloco de gerenciamento definido.'
+  levels-info-set: '&aBloco de níveis definido.'
+  look-at-block: '&cVocê precisa estar olhando para um bloco.'
+
+mine:
+  entered: '&aTeleportado para a área de mineração!'
+  left: '&cVocê saiu da mina.'
+  already-in: '&cVocê já está em uma mina.'
+  not-in: '&cVocê não está em uma mina.'
+  not-owner: '&cApenas o dono da mina pode fazer isso.'
+  reset: '&aA mina foi regenerada!'
+  full: '&cA mina de &f{player} &cestá cheia! Vagas: &f{max}&c.'
+
+protection:
+  inventory-not-empty: '&cEsvazie seu inventário e armadura para entrar na mina!'
+  hotbar-not-empty: '&cAs armaduras de mineração devem ficar equipadas ou no inventário, não na hotbar!'
+  no-drop: '&cVocê não pode dropar itens na mina.'
+  command-blocked: '&cVocê não pode usar esse comando dentro da mina!'
+
+bomb:
+  no-target: '&cMire em um bloco da mina para lançar a bomba!'
+  # Shown when the item is used outside the mine, where it does nothing.
+  outside: '&cVocê só pode usar a bomba dentro da mina!'
+  limit: '&cVocê já atingiu o limite de &f{max} &cbombas ativas!'
+  # Shown when a bomb detonates. {blocks} = blocks destroyed, {rewards} = earnings.
+  explode-title: '&c&lBOOM!'
+  explode-subtitle: '&e{blocks} &7blocos destruídos'
+  explode-actionbar: '&aVocê ganhou: {rewards}'
+
+drill:
+  no-target: '&cClique em um bloco da mina para usar a britadeira!'
+  # Shown when the item is used outside the mine, where it does nothing.
+  outside: '&cVocê só pode usar a britadeira dentro da mina!'
+  limit: '&cVocê já atingiu o limite de &f{max} &cbritadeiras ativas!'
+  # Shown when a drill finishes at the mine floor. {blocks} = blocks drilled,
+  # {rewards} = earnings.
+  finish-title: '&b&lBRITADEIRA'
+  finish-subtitle: '&e{blocks} &7blocos perfurados'
+  finish-actionbar: '&aVocê ganhou: {rewards}'
+
+public:
+  enabled: '&aSua mina agora é &apública&7!'
+  disabled: '&cSua mina agora é &cprivada&7.'
+
+labels:
+  online: '&aOnline'
+  offline: '&cOffline'
+  mine-public: '&aPública'
+  mine-private: '&cPrivada'
+  wand-name: '&eSeletor de Mina'
+  wand-lore:
+  - '&7Clique esquerdo → &aPos1'
+  - '&7Clique direito → &aPos2'
+
+tax:
+  set: '&aTaxa definida para &f{tax}%&a!'
+  reset: '&aTaxa resetada para &f0%&a!'
+  cancelled: '&cOperação cancelada.'
+  collected: '&aVocê recolheu todos os royalties acumulados!'
+  invalid-number: '&cInforme um número válido! Exemplo: &f5&7, &f10.5'
+  out-of-range: '&cA taxa deve estar entre &f0 &ce &f40&c!'
+  friend-set: '&aTaxa de &f{player} &adefinida para &f{tax}%&a!'
+  prompt:
+  - ''
+  - '  &aInforme a taxa desejada &7(0 a 40)'
+  - '  &7Digite &ccancelar &7para cancelar.'
+  - ''
+  friend-prompt:
+  - ''
+  - '  &aInforme a taxa para &f{player} &7(0 a 40)'
+  - '  &7Digite &ccancelar &7para cancelar.'
+  - ''
+
+friend:
+  added: '&f{player} &afoi adicionado como amigo da mina.'
+  removed: '&f{player} &cfoi removido da lista de amigos.'
+  already: '&f{player} &cjá é seu amigo.'
+  cancelled: '&cOperação cancelada.'
+  add-invalid-name: '&cDigite um nome válido!'
+  add-self: '&cVocê não pode se adicionar como amigo!'
+  all-removed: '&aTodos os amigos foram removidos.'
+  slot-taken: '&cEssa vaga já foi ocupada. Tente novamente.'
+  add-prompt:
+  - ''
+  - '  &aDigite o nome do jogador que deseja adicionar.'
+  - '  &7Digite &ccancelar &7para cancelar.'
+  - ''
+
+visit:
+  not-public: '&cA mina de &f{player} &cnão é pública.'
+  player-not-found: '&cJogador não encontrado.'
+  success: '&aVocê entrou na mina de &f{player}&a!'
+  tax-info: '&eTaxa de mineração: &c{tax}%'
+  friend-no-tax: '&aVocê é amigo de &f{player}&a, sem cobrança de taxa!'
+  usage: '&cUso: &f/mina visitar <jogador>'
+  self: '&cVocê não pode visitar sua própria mina.'
+
+slot:
+  activated: '&aVaga desbloqueada! Sua mina agora tem &f{slots} &avaga(s) de visitante.'
+  max-reached: '&cVocê já atingiu o máximo de &f{max} &cvagas de visitante.'
+  locked: '&cEsta vaga está bloqueada. Ative uma &fVaga de Visitante &cpara desbloquear.'
+  no-free: '&cVocê não tem vagas livres. Desbloqueie mais vagas primeiro.'
+
+booster:
+  # {type} já vem colorido (cor da moeda/xp/tudo); {bonus} = ex. 2x.
+  activated: '&aBooster de {type} &f{bonus} &aativado!'
+  stacked: '&aBooster de {type} &f{bonus} &aempilhado!'
+  # Empilhar no inventário (shift + botão direito). Tokens: {type} {bonus} {amount} {duration}
+  merged: '&aVocê juntou &f{amount}&a boosters de {type} &f{bonus}&a em um só! &7Duração total: &f{duration}&a.'
+  merge-none: '&eVocê não tem outros boosters de {type} &f{bonus}&e no inventário para juntar.'
+  expired: '&cSeu booster de {type} &f{bonus} &cexpirou!'
+  removed: '&eBooster de {type} &f{bonus} &eremovido. &7Devolvido &f{remaining}&7.'
+  too-little-time: '&cTempo restante insuficiente para remover este booster.'
+  blocked: '&cVocê já tem um booster de {type}&c ativo!'
+  conflict: '&cVocê não pode combinar um booster &fAmbos&c com boosters de tipo específico. &7Aguarde o atual expirar ou desative-o.'
+  inventory-full: '&cInventário cheio! &7Libere um espaço para receber o booster.'
+
+skin:
+  unlocked: '&aSkin &f{skin} &adesbloqueada!'
+  already-unlocked: '&cVocê já possui a skin &f{skin}&c.'
+  invalid: '&cEssa skin não existe.'
+  inventory-full: '&cInventário cheio! Libere um espaço para receber a skin removida.'
+
+forge:
+  success: '&aVocê forjou a skin &f{skin}&a!'
+  no-item: '&cO item de forja não foi encontrado no seu inventário!'
+  inventory-full: '&cInventário cheio! Libere um espaço para receber a skin forjada.'
+
+reset:
+  owner-present: '&cEnquanto o dono estiver presente, só ele pode resetar!'
+  cooldown-active: '&cAguarde &f{remaining}s &cpara resetar novamente.'
+  success: '&aMina resetada com sucesso!'
+
+inspect:
+  usage: '&cUso: &f/mina inspect <jogador>'
+  not-in-mine: '&cEste jogador não está em nenhuma mina.'
+  already-inspecting: '&cVocê já está em uma mina. Use &f/spawn &cpara sair.'
+  kicked: '&cTodos os jogadores saíram da mina. Inspeção encerrada.'
+  friends-none: '&7Nenhum'
+  friends-separator: '&8, &7'
+  friends-prefix: '&7'
+  success:
+  - ''
+  - '&aInspecionando a mina de &f{player}&a.'
+  - ''
+  - '  &8▶ &7Dono: &f{owner}'
+  - '  &8▶ &7Nível: &f{level}'
+  - '  &8▶ &7Amigos: {friends}'
+  - ''
+  - '&7Use &f/spawn &7para sair.'
+  - ''
+
+admin:
+  usage: '&cUso: &f{usage}'
+  usages:
+    setlevel: /mina setlevel <nível> <jogador>
+    level: /mina level <add|rem|set> <jogador> <valor>
+    xp: /mina xp <add|rem> <jogador> <valor>
+    givebooster: /mina givebooster <jogador> <tipo> <multiplicador> <duração> [quantia]
+    giveskin: /mina giveskin <jogador> <skinId> [quantidade]
+    giveforge: /mina giveforge <jogador> <quantia>
+    givearmor: /mina givearmor <jogador> <armorId|coleção> [quantidade]
+    givebomb: /mina givebomb <jogador> <bombId> [quantidade]
+    givedrill: /mina givedrill <jogador> [quantidade]
+    giveslot: /mina giveslot <jogador> [quantidade]
+    setslots: /mina setslots <jogador> <quantidade>
+    resetpick: /mina resetpick <jogador>
+    resetblocks: /mina resetblocks <jogador>
+    setblocks: /mina setblocks <jogador> <quantidade>
+    setenchant: /mina setenchant <jogador> <encantamento> <nível>
+    reset: /mina reset <jogador>
+  player-not-found: '&cJogador não encontrado: &f{player}'
+  invalid-number: '&cValor inválido: &f{value}'
+  invalid-amount: '&cQuantidade inválida: &f{value}'
+  level-range: '&cO nível deve estar entre &f0 &ce &f{max}&c.'
+  level-set: '&aNível da mina de &f{player} &adefinido para &f{level}&a.'
+  xp-updated: '&aXP da mina de &f{player} &aatualizado.'
+  blocks-set: '&aBlocos de &f{player} &adefinidos para &f{amount}&a.'
+  blocks-reset: '&aBlocos de &f{player} &aresetados.'
+  enchants-reset: '&aEncantamentos de &f{player} &aresetados.'
+  enchant-set: '&aEncantamento &f{enchant} &ade &f{player} &adefinido para &f{level}&a.'
+  enchant-not-found: '&cEncantamento não encontrado: &f{enchant}'
+  booster-type-invalid: '&cTipo de booster inválido: &f{type}&c.'
+  booster-multiplier-invalid: '&cMultiplicador inválido: &f{value}&c. Use por exemplo &f2x&c.'
+  duration-invalid: '&cDuração inválida: &f{value}&c. Ex.: &f1d&c, &f12h&c, &f30m&c.'
+  booster-given: '&aBooster de {type} &f{bonus} &aentregue para &f{player}&a. &7(x{quantity})'
+  skin-not-found: '&cSkin não encontrada: &f{skin}'
+  skin-default: '&cA skin padrão não pode ser dada como item.'
+  skin-given: '&aSkin &f{skin} &adada para &f{player}&a.'
+  forge-given: '&aForja de skins &f({amount}x) &adada para &f{player}&a.'
+  armor-not-found: '&cArmadura/coleção não encontrada: &f{armor}'
+  armor-given: '&aArmadura &f{armor} &adada para &f{player}&a.'
+  collection-given: '&aColeção &f{collection} &adada para &f{player}&a.'
+  bomb-not-found: '&cBomba não encontrada: &f{bomb}'
+  bomb-given: '&aBomba &f{bomb} &adada para &f{player}&a.'
+  drill-given: '&aBritadeira &f({amount}x) &adada para &f{player}&a.'
+  drill-invalid: '&cA britadeira está mal configurada no config.yml (material inválido).'
+  slot-given: '&aVaga de visitante &f({amount}x) &adada para &f{player}&a.'
+  slot-invalid: '&cA vaga de visitante está mal configurada no config.yml (item inválido).'
+  slots-set: '&aVagas de visitante de &f{player} &adefinidas para &f{slots}&a.'
+  slots-range: '&cA quantidade de vagas deve estar entre &f0 &ce &f{max}&c.'
+
+mining-report:
+  messages:
+  - ''
+  - '  &a&lWOW! &7Aqui está seu progresso na mineração!'
+  - '  &7(Progresso após 1 minuto minerado)'
+  - ''
+  - '  &fBlocos quebrados: &7{blocks}'
+  - '{currencies}'
+  - ''
+  - '  &fEncantamentos ativados:'
+  - '{enchants}'
+  - ''
+  currency-entry: '   &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  enchant-entry: '   &e{display} &7x{count}'
+  no-enchants: '   &7Nenhum encantamento ativado.'
+
+levelup:
+  xp-gate:
+  - ''
+  - '  &a&lGG! &7A mina de &f{owner} &7subiu para o nível &a&l{level}&7!'
+  - '  &7Próximo upgrade de blocos em &c{levels-until} &7níveis.'
+  - ''
+  blocks-changed:
+  - ''
+  - '  &e&lGG! &7A mina de &f{owner} &7subiu para o nível &e&l{level}&7!'
+  - '  &7Novos blocos desbloqueados! A mina foi regenerada!'
+  - ''
+  max-level:
+  - ''
+  - '  &6&lGG! &7A mina de &f{owner} &7chegou ao nível &c&l{level}&7!'
+  - '  &7Parabéns! A mina atingiu o último nível!'
+  - ''
+
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
+# leftover: inventário cheio — só a sobra foi ao correio.
+# Deixe "" para não avisar nada.
+delivery:
+  mailed: '&eVocê está em um evento! &eSeu item da mineração foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'

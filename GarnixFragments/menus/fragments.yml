@@ -1,0 +1,37 @@
+title: Seus Fragmentos
+
+# . = fragmento (paginado)  | < = página anterior  | > = próxima página
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum fragmento disponível.'
+
+shop-icon:
+  slot: 49
+  material: EMERALD
+  display: '&aLoja de Fragmentos'
+  lore:
+  - '&7Clique para abrir.'
+
+# Lore dos fragmentos que o jogador possui (clicável).
+# Placeholders: {amount}, {display}.
+withdraw-lore:
+- ''
+- '&fArmazenados: &e{amount}'
+- ''
+- '&aClique para retirar.'
+
+# Lore dos fragmentos que o jogador ainda não possui.
+locked-lore:
+- ''
+- '&7Você ainda não possui este fragmento.'

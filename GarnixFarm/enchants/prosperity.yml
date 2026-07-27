@@ -1,0 +1,19 @@
+display: "Prosperidade"
+max-level: 100
+base-cost: 100.0
+increase-cost: 50.0
+
+# MULTIPLIER flavour (coins)
+base-multiplier: 1.05
+increase-multiplier: 0.02
+multiplier-provider: "coins"
+
+icon:
+  slot: 10
+  material: GOLD_INGOT
+  display: "&6{display}"
+  lore:
+    - "&7Aumenta o &fmultiplicador de dinheiro"
+    - "&7ganho a cada colheita."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"

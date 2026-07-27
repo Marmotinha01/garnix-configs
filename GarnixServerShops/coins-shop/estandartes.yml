@@ -1,0 +1,164 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Estandartes
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: true
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 24
+  material: BANNER
+  base-color: ORANGE
+  display: '&aEstandartes'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  banner:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 15
+      amount: 16
+      base-color: WHITE
+  banner-2:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 14
+      amount: 16
+      base-color: ORANGE
+  banner-3:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 13
+      amount: 16
+      base-color: MAGENTA
+  banner-4:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 12
+      amount: 16
+      base-color: LIGHT_BLUE
+  banner-5:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 11
+      amount: 16
+      base-color: YELLOW
+  banner-6:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 10
+      amount: 16
+      base-color: LIME
+  banner-7:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 9
+      amount: 16
+      base-color: PINK
+  banner-8:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 8
+      amount: 16
+      base-color: GRAY
+  banner-9:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 7
+      amount: 16
+      base-color: SILVER
+  banner-10:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 6
+      amount: 16
+      base-color: CYAN
+  banner-11:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 5
+      amount: 16
+      base-color: PURPLE
+  banner-12:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 4
+      amount: 16
+      base-color: BLUE
+  banner-13:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 3
+      amount: 16
+      base-color: BROWN
+  banner-14:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 2
+      amount: 16
+      base-color: GREEN
+  banner-15:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 1
+      amount: 16
+      base-color: RED
+  banner-16:
+    amount: 16
+    price: 15000
+    item:
+      material: BANNER
+      data: 0
+      amount: 16
+      base-color: BLACK

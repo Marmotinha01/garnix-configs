@@ -1,0 +1,98 @@
+# Todas as mensagens são listas de strings — inclusive as de uma linha só.
+# Deixe a lista vazia ([]) para silenciar uma mensagem.
+
+reload-success:
+- '&aConfigurações do coinflip recarregadas!'
+
+create:
+  cooldown:
+  - '&cAguarde &f{time} &cpara criar um novo desafio!'
+  limit-reached:
+  - '&cVocê já tem um desafio aberto nessa economia!'
+  no-funds:
+  - '&cVocê não tem {currency_prefix}{amount} &cpara criar esse desafio!'
+  invalid-amount:
+  - '&cInforme um valor válido!'
+  no-currency:
+  - '&cSelecione uma economia!'
+  no-amount:
+  - '&cDefina o valor da aposta!'
+  blacklisted:
+  - '&cEssa economia não pode ser usada em desafios!'
+  failed:
+  - '&cNão foi possível criar o desafio. Seu valor foi devolvido.'
+  success:
+  - '&aDesafio de {currency_prefix}{amount} &acriado com sucesso!'
+
+conversations:
+  amount:
+  - ''
+  - '  &aInforme o valor da aposta.'
+  - '  &7Para cancelar digite &8cancelar&7.'
+  - ''
+
+challenge:
+  unavailable:
+  - '&cEsse desafio não está mais disponível!'
+  own:
+  - '&cVocê não pode aceitar o seu próprio desafio!'
+  no-funds:
+  - '&cVocê não tem {currency_prefix}{amount} &cpara aceitar esse desafio!'
+  accept-failed:
+  - '&cNão foi possível aceitar esse desafio. Tente novamente.'
+  cancelled:
+  - '&aDesafio cancelado. {currency_prefix}{amount} &adevolvido.'
+  cancel-too-late:
+  - '&cAlguém acabou de aceitar esse desafio!'
+  expired:
+  - '&eSeu desafio de {currency_prefix}{amount} &eexpirou. O valor foi devolvido.'
+  starting:
+  - ''
+  - '  &6&lCOINFLIP &8▶ &f{opponent} &7aceitou o seu desafio!'
+  - '  &7O sorteio começa em &f{seconds}s&7. {watch}'
+  - ''
+  watch-text: '&a&l[ASSISTIR]'
+  watch-hover: '&7Clique para acompanhar a animação.'
+  spectate-unavailable:
+  - '&cEsse desafio não está mais em andamento!'
+  won:
+  - '&aVocê venceu &f{opponent} &ae ganhou {currency_prefix}{amount}&a!'
+  won-tax:
+  - '&aVocê venceu &f{opponent} &ae ganhou {currency_prefix}{amount} &a(taxa de &f{tax}%&a).'
+  lost:
+  - '&cVocê perdeu para &f{opponent} &ce perdeu {currency_prefix}{amount}&c.'
+
+inbox:
+  header:
+  - ''
+  - '  &6&lCOINFLIP &8▶ &7Resultados de enquanto você estava offline:'
+  - ''
+  line-won:
+  - '  &a▶ Venceu &f{opponent} &ae ganhou {currency_prefix}{amount}&a.'
+  line-lost:
+  - '  &c▶ Perdeu para &f{opponent} &ce perdeu {currency_prefix}{amount}&c.'
+  footer:
+  - ''
+
+# Cada broadcast pode ser desligado individualmente com enabled: false.
+#
+# Definir 'command' deixa a MENSAGEM INTEIRA clicável — cada linha, de ponta a
+# ponta — com 'hover' como tooltip. Sem 'command', a mensagem é enviada como
+# texto simples. Linhas em branco continuam sendo só espaçamento.
+broadcasts:
+  challenge-created:
+    enabled: true
+    command: /coinflip
+    hover: '&7Clique para abrir o menu do coinflip.'
+    message:
+    - ''
+    - '  &6&lCOINFLIP &8▶ &e{player} &7criou um desafio!'
+    - '  &7Aposta de {currency_prefix}{amount}'
+    - ''
+  challenge-finished:
+    enabled: true
+    message:
+    - ''
+    - '  &6&lCOINFLIP &8▶ &7(/coinflip)'
+    - '  &e{winner} &7venceu &e{loser} &7e levou {currency_prefix}{amount}&7!'
+    - ''

@@ -1,0 +1,162 @@
+title: Meu Clan
+rows: 6
+
+# Renderizado sobre a cabeça do próprio jogador.
+player-icon:
+  slot: 10
+  display: '&b{player}'
+  lore:
+  - '&7Suas estatísticas dentro'
+  - '&7do clan {tag}&7.'
+  - ''
+  - ' &8Cargo: &r{role}'
+  - ''
+  - ' &8Abates:'
+  - ' &8 ▪ &fCivis: &7{kills_civil}'
+  - ' &8 ▪ &fNeutros: &7{kills_neutral}'
+  - ' &8 ▪ &fRivais: &7{kills_rival}'
+  - ''
+  - ' &8 ▪ &fMortes: &c{deaths}'
+  - ' &8 ▪ &fKDR: &a{kdr}'
+  - ''
+  - ' &8Entrou em &7{joined}&8.'
+  - ''
+
+clan-icon:
+  slot: 13
+  material: BANNER
+  base-color: WHITE
+  flags:
+  - HIDE_POTION_EFFECTS
+  display: '&r{tag} &f{clan}'
+  lore:
+  - '&7Informações gerais do'
+  - '&7seu clan.'
+  - ''
+  - ' &8 ▪ &fLíder: &7{leader}'
+  - ' &8 ▪ &fMembros: &7{members}&8/&7{max_members}'
+  - ' &8 ▪ &fOnline agora: &a{online}'
+  - ' &8 ▪ &fVagas restantes: &7{slots}'
+  - ''
+  - ' &8Criado em &7{created}&8.'
+  - ''
+
+bulletin-icon:
+  slot: 16
+  material: BOOK
+  display: '&eBoletim do Clan'
+  lore:
+  - '&7Últimas movimentações'
+  - '&7no quadro de membros.'
+  - ''
+  - '&eClique para ver.'
+
+base-icon:
+  slot: 28
+  material: COMPASS
+  display: '&aBase do Clan'
+  lore:
+  - '&7Teleporte, defina ou remova'
+  - '&7o ponto de encontro do clan.'
+  - ''
+  - '&aClique para acessar.'
+
+chest-icon:
+  slot: 29
+  material: CHEST
+  display: '&6Baú do Clan'
+  lore:
+  - '&7Armazenamento compartilhado'
+  - '&7entre todos os membros.'
+  - ''
+  - '&6Clique para acessar.'
+
+members-icon:
+  slot: 30
+  material: SKULL_ITEM
+  data: 3
+  display: '&bMembros'
+  lore:
+  - '&7Gerencie quem faz parte'
+  - '&7do seu clan.'
+  - ''
+  - ' &8 ▪ &fMembros: &7{members}&8/&7{max_members}'
+  - ''
+  - '&bClique para acessar.'
+
+allies-icon:
+  slot: 32
+  material: DIAMOND
+  display: '&dAliados'
+  lore:
+  - '&7Clans com quem vocês'
+  - '&7firmaram aliança.'
+  - ''
+  - ' &8 ▪ &fAliados: &7{allies}'
+  - ''
+  - '&dClique para acessar.'
+
+rivals-icon:
+  slot: 33
+  material: IRON_SWORD
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&cRivalidades'
+  lore:
+  - '&7Clans marcados como'
+  - '&7inimigos do seu.'
+  - ''
+  - ' &8 ▪ &fRivais: &7{rivals}'
+  - ''
+  - '&cClique para acessar.'
+
+manage-icon:
+  slot: 34
+  material: REDSTONE_COMPARATOR
+  display: '&eGerenciar Clan'
+  lore:
+  - '&7Tag, nome, cargos, fogo'
+  - '&7amigo e liderança.'
+  - ''
+  - '&eClique para acessar.'
+
+online-clans-icon:
+  slot: 48
+  material: BEACON
+  display: '&aClans Online'
+  lore:
+  - '&7Veja quais clans possuem'
+  - '&7membros jogando agora.'
+  - ''
+  - '&aClique para acessar.'
+
+ranking-icon:
+  slot: 50
+  material: GOLD_INGOT
+  display: '&6Ranking de Clans'
+  lore:
+  - '&7Os clans que mais se'
+  - '&7destacam no servidor.'
+  - ''
+  - '&6Clique para acessar.'
+
+leave-icon:
+  slot: 53
+  material: INK_SACK
+  data: 1
+  display: '&cSair do Clan'
+  lore:
+  - '&7Você deixa de fazer parte'
+  - '&7do clan &r{tag}&7.'
+  - ''
+  - '&cClique para sair.'
+
+disband-icon:
+  slot: 53
+  material: BARRIER
+  display: '&4Desfazer Clan'
+  lore:
+  - '&7O clan deixa de existir e'
+  - '&7todos os membros ficam sem clan.'
+  - ''
+  - '&4Clique para desfazer.'

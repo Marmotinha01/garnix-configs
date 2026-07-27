@@ -1,0 +1,107 @@
+# One ready-made reward of EACH type, as a template. Copy a block to add more.
+# Each reward:
+#   required-level : level at which it unlocks
+#   chance         : relative draw weight (higher = caught more often)
+#   weight         : the reward's PESO — the rod gate: a rod skin only catches
+#                    rewards whose weight <= its max-weight
+#   rare           : if true, receives the Luck enchantment boost
+#   bad-luck       : if true, an "unlucky" catch — delivers nothing (= type NONE)
+#   xp             : XP granted per unit (works on every type, incl. bad-luck);
+#                    omit to use the global xp-per-catch
+#   type           : how the payload is delivered to the mailbox (GarnixMail):
+#                      ITEM         → physical item to the mailbox
+#                      COMMAND      → console command, virtual (no inv check)
+#                      COMMAND_ITEM → console command that gives an item (mailbox)
+#                      CURRENCY     → deposit {amount} of {currency-id}
+#                      NONE         → nothing (bad luck)
+#   display        : reward display name
+#   icon           : icon shown in the reward catalog/menus
+#   item           : physical item delivered (type ITEM)
+#   command        : console command, with {player} / {amount} (COMMAND, COMMAND_ITEM)
+#   currency-id    : currency deposited (type CURRENCY)
+#   amount         : per-catch quantity — {amount} in commands, or the CURRENCY deposit
+#   currency       : (optional) per-catch INCOME override (immediate, credited on the
+#                    catch — independent of the type; NOT the CURRENCY payload)
+
+rewards:
+  
+  # ── NONE — bad luck (stores/gives nothing; weight 1 so every rod can "miss") ─
+  bad_luck:
+    required-level: 0
+    chance: 25
+    weight: 1
+    bad-luck: true
+    xp: 1
+    display: '&8Azar'
+    icon:
+      material: INK_SACK
+      data: 8
+      display: '&8Azar'
+      lore:
+      - '&7Nada dessa vez...'
+  
+  # ── ITEM — physical item delivered to the inventory on collect ─────
+  fish:
+    required-level: 0
+    chance: 50
+    weight: 1
+    xp: 5
+    type: ITEM
+    display: '&7Peixe'
+    item:
+      material: RAW_FISH
+      data: 0
+      display: '&7Peixe'
+      lore:
+      - '&7Um peixe comum.'
+  
+  # ── CURRENCY — deposits coins on collect (default rod, weight 2) ───
+  coins:
+    required-level: 2
+    chance: 15
+    weight: 2
+    xp: 8
+    type: CURRENCY
+    currency-id: corais
+    amount: 250
+    display: '&6Saco de Moedas'
+    icon:
+      material: GOLD_NUGGET
+      display: '&6Saco de Moedas'
+      lore:
+      - '&7Vale &e250 &7moedas ao sacar.'
+  
+  # ── COMMAND_ITEM — command that gives a physical item (Reinforced rod, weight 4) ─
+  diamonds:
+    required-level: 6
+    chance: 8
+    weight: 4
+    xp: 15
+    type: COMMAND_ITEM
+    command: give {player} diamond {amount}
+    amount: 2
+    display: '&bCarga de Diamantes'
+    icon:
+      material: DIAMOND
+      display: '&bCarga de Diamantes'
+      lore:
+      - '&7Dá &b2 diamantes &7ao sacar.'
+  
+  # ── COMMAND — virtual command (crate key), rare, Golden rod (weight 8) ─
+  treasure:
+    required-level: 12
+    chance: 2
+    weight: 8
+    rare: true
+    xp: 50
+    type: COMMAND
+    command: crate givekey {player} fishing {amount}
+    amount: 1
+    currency: '100'
+    display: '&6&lTesouro do Mar'
+    icon:
+      material: CHEST
+      display: '&6&lTesouro do Mar'
+      lore:
+      - '&7Uma chave de crate exclusiva!'
+      glow: true

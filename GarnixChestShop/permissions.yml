@@ -1,0 +1,25 @@
+friend-permissions:
+  ACCESS_CHEST:
+    default: true
+    display: Acessar Baú
+    material: CHEST
+  EDIT_PRICES:
+    default: false
+    display: Editar Preços
+    material: GOLD_INGOT
+  EDIT_AMOUNT:
+    default: false
+    display: Editar Quantia
+    material: PAPER
+  TOGGLE_NOTIFY:
+    default: false
+    display: Alterar Notificações
+    material: NOTE_BLOCK
+  DELETE_SHOP:
+    default: false
+    display: Deletar Loja
+    material: BARRIER
+  MANAGE_FRIENDS:
+    default: false
+    display: Gerenciar Amigos
+    material: BOOK_AND_QUILL

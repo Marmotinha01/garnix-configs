@@ -1,0 +1,137 @@
+reload-success: '&aConfigurações das lojas recarregadas com sucesso!'
+
+shop:
+  not-plot-owner: '&cVocê só pode criar lojas em terrenos seus.'
+  no-chest: '&cNenhum baú encontrado adjacente à placa.'
+  chest-in-use: '&cEste baú já está vinculado a uma loja.'
+  limit-reached: '&cVocê atingiu o limite de &e{max} &clojas.'
+  created: '&aLoja criada com sucesso!'
+  
+  chest-protected: '&cEste baú pertence a uma loja.'
+  
+  buy-success: '&aComprou &fx{amount} {item} &apor {currency_prefix}{price}&a!'
+  buy-error: '&cErro ao processar a compra.'
+  not-buying: '&cEsta loja não compra itens.'
+  no-stock: '&cEsta loja está sem estoque.'
+  no-money: '&cVocê não tem dinheiro suficiente.'
+  no-space: '&cVocê não tem espaço no inventário.'
+  
+  sell-success: '&aVendeu &fx{amount} {item} &apor {currency_prefix}{price}&a!'
+  # Usada no lugar de 'sell-success' quando a economia cobra taxa. {price} é o valor cheio da
+  # venda e {net} é o que entrou na sua conta após a taxa de {tax}%.
+  sell-success-tax: '&aVendeu &fx{amount} {item} &apor {currency_prefix}{price} &arecebendo {currency_prefix}{net} &7(taxa de &f{tax}%&7)&a!'
+  sell-error: '&cErro ao processar a venda.'
+  not-selling: '&cEsta loja não vende itens.'
+  no-items: '&cVocê não tem itens suficientes.'
+  owner-no-money: '&cO dono da loja não tem dinheiro suficiente.'
+  chest-full: '&cO baú da loja está cheio.'
+  
+  notify-buy: '&f{player} &acomprou &fx{amount} {item} &apor {currency_prefix}{price}&a.'
+  # Usada no lugar de 'notify-buy' quando a economia cobra taxa. Você é quem recebe, então
+  # {net} é o que caiu na sua conta após a taxa de {tax}%.
+  notify-buy-tax: '&f{player} &acomprou &fx{amount} {item} &apor {currency_prefix}{price}&a. Você recebeu {currency_prefix}{net} &7(taxa de &f{tax}%&7)&a.'
+  notify-sell: '&f{player} &avendeu &fx{amount} {item} &apor {currency_prefix}{price}&a.'
+  
+  break-denied: '&cVocê não pode destruir esta loja.'
+  removed: '&aLoja removida.'
+  delete-hint: '&eSegure Shift e quebre a placa para deletar a loja.'
+  already-deleted: '&cEsta loja já foi deletada por outro jogador.'
+  
+  type:
+    buy: '&aCompra'
+    sell: '&cVenda'
+    both: '&eAmbas'
+
+setup:
+  cancelled: '&cCriação de loja cancelada.'
+  price-too-low: '&cO preço deve ser maior que &e0&c.'
+  price-invalid: '&cDigite um número válido.'
+  amount-invalid: '&cA quantia deve ser entre &e1 &ce &e2304&c.'
+  buy-price-prompt:
+  - ''
+  - '  &aInforme o preço de compra.'
+  - '  &7Para cancelar digite &8cancelar&7.'
+  - ''
+  sell-price-prompt:
+  - ''
+  - '  &aInforme o preço de venda.'
+  - '  &7Para cancelar digite &8cancelar&7.'
+  - ''
+  amount-prompt:
+  - ''
+  - '  &aInforme a quantia de itens.'
+  - '  &7Para cancelar digite &8cancelar&7.'
+  - ''
+  display-prompt:
+  - ''
+  - '  &aInforme o nome customizado para o item.'
+  - '  &7Para cancelar digite &8cancelar&7.'
+  - ''
+
+edit:
+  type-changed: '&aTipo de loja alterado para {type}&a.'
+  buy-price-changed: '&aPreço de compra alterado para &e{price}&a.'
+  sell-price-changed: '&aPreço de venda alterado para &e{price}&a.'
+  amount-changed: '&aQuantia alterada para &fx{amount}&a.'
+  item-set: '&aItem da loja definido!'
+  item-removed: '&cItem removido da loja.'
+  display-changed: '&aDisplay alterado para {display}&a.'
+  notify-toggled: '&aNotificações {state}&a.'
+  notify-on: '&aligadas'
+  notify-off: '&cdesligadas'
+
+friends:
+  add-prompt:
+  - ''
+  - '  &aInforme o nome do jogador para adicionar como amigo.'
+  - '  &7Para cancelar digite &8cancelar&7.'
+  - ''
+  invalid-name: '&cNome inválido.'
+  add-self: '&cVocê não pode se adicionar.'
+  already-friend: '&cEste jogador já é seu amigo.'
+  added: '&f{player} &aadicionado como amigo!'
+  removed: '&f{player} &cremovido dos amigos.'
+
+store:
+  created: '&aLoja registrada com sucesso!'
+  vip-only: '&cApenas jogadores &eVIP &cpodem criar uma loja.'
+  opened: '&aSua loja agora está visível no &e/lojas&a!'
+  closed: '&cSua loja foi fechada e não aparece mais no &e/lojas&c.'
+  not-found: '&cLoja não encontrada.'
+  not-open: '&cEsta loja está fechada.'
+  not-exists: '&cEsta loja não existe mais.'
+  deleted: '&cSua loja foi removida com sucesso.'
+  admin-deleted: '&aLoja de &f{player} &adeletada.'
+  teleported: '&aTeleportado para a loja!'
+  spawn-updated: '&aPonto de teleporte redefinido para a sua posição atual!'
+  not-plot-owner: '&cVocê só pode definir sua loja seus plots.'
+  
+  announce-cooldown: '&cAguarde &e{time} &cpara anunciar novamente.'
+  announcement:
+  - ''
+  - '  &e&lLOJAS &8» &7A loja de &f{player} &7está vendendo itens!'
+  - '  &7Clique {click} &7para visitar a loja!'
+  - ''
+  announce-click-text: '&a&lAQUI'
+  announce-click-hover: '&7Clique para visitar a loja.'
+  
+  rated: '&aAvaliou a loja de &f{player}&a!'
+  rate-cooldown: '&cVocê já avaliou recentemente. Aguarde &e24h&c.'
+  
+  description-prompt:
+  - ''
+  - '  &aInforme a descrição da sua loja.'
+  - '  &7Para cancelar digite &8cancelar&7.'
+  - ''
+  description-too-long: '&cA descrição não pode ter mais de &e98 &ccaracteres.'
+  description-changed: '&aDescrição alterada para &f{description}&a.'
+
+admin:
+  help:
+  - ''
+  - '  &e&lLOJAS ADMIN &8- &fComandos'
+  - ''
+  - '  &e/lojasadmin ajuda &8- &7Exibe esta mensagem'
+  - '  &e/lojasadmin reload &8- &7Recarrega configurações'
+  - '  &e/lojasadmin deletar <jogador> &8- &7Deleta a loja de um jogador'
+  - ''

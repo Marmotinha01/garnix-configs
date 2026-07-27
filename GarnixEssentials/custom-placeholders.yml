@@ -1,0 +1,4 @@
+# Placeholders criados via config, expostos como %essentials_<placeholder>%.
+# from: valor lido via PlaceholderAPI. Se resolver em algo, retorna return-has;
+# senao retorna return-empty. Ambos aceitam cores e outros placeholders.
+placeholders: {}

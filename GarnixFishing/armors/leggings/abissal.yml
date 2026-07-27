@@ -1,0 +1,16 @@
+# Abissal — leggings. Foco em corais.
+item:
+  display: "&5Calças Abissais"
+  material: LEATHER_LEGGINGS
+  color: "#8E24AA"
+  lore:
+    - ""
+    - " &7Forjadas nas profundezas abissais."
+    - ""
+    - " &fBônus:"
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  corais:
+    value: 2.5
+    percent: true

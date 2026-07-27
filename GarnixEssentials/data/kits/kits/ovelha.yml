@@ -1,0 +1,28 @@
+display: Kit Ovelha
+
+category: ranks
+
+permission: rank.ovelha
+
+cooldown: 6h
+
+slot: 12
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  texture: 84e5cdb0edb362cb454586d1fd0ebe971423f015b0b1bfc95f8d5af8afe7e810
+  display: '&fKit Ovelha'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Ovelha'
+  lore:
+  - '&7Ainda não desbloqueado.'
+
+content: H4sIAAAAAAAA/8WTy0oDQRBFazKJTgYEEXy7aP0AV4LgQtCoCIouAm5DZaacaezH2N2Jjx/Kf+TLLI0hyLjIIuimoah7bx2q6BSgDS0ZSPsUANIEGjKHTS0NZQ4fw0kuUVuT9/yLdXkErY4dmBClEAcs2tAkk5WfxkYDYjVUEDe+AlbhZ30AKSzn0lcK3xJo3qEmWBmPHm9kEPdDUiVyBCxdoMaCOG6CsTHDKKzKyfSwqhRNKVozR/Tt2K6DVzJ7wleaG10sBH29DvL3EFu/nLG0LP9/jpKUpjA3ByyEY6/OkZXkA6eE+W+zGJadOouiopCm8H9M8stn71sb/hEjOFm9SEe90tqnKUZcw4i+x0aTsacQQ/ta5nSlsPCf/QQSDgzU4+5S33pPfkbGQbfWUcLCJuyOR8cda7wsUGCfLSa3YuI4ZMH+eHTUUfJ5QII8v467FTrWOo3vZNB9SeyAzU46gSIrcchiLQaaC5SveDhdxRorxyPVuT57uBTn993uZffnPuAD8gLz1pUFAAA=

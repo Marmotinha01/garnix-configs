@@ -1,0 +1,229 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - GOD
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: false
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+rows: 6
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 4
+  material: DIAMOND_CHESTPLATE
+  display: '&cLoja GOD'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  H-P5:
+    amount: 1
+    price: 250000
+    slot: 10
+    item:
+      material: DIAMOND_HELMET
+      data: 0
+      display: "&cCapacete P5"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - PROTECTION_ENVIRONMENTAL:5
+        - DURABILITY:5
+  C-P5:
+    amount: 1
+    price: 250000
+    slot: 19
+    item:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      display: "&cPeitoral P5"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - PROTECTION_ENVIRONMENTAL:5
+        - DURABILITY:5
+  L-P5:
+    amount: 1
+    price: 250000
+    slot: 28
+    item:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      display: "&cCalças P5"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - PROTECTION_ENVIRONMENTAL:5
+        - DURABILITY:5
+  B-P5:
+    amount: 1
+    price: 250000
+    slot: 37
+    item:
+      material: DIAMOND_BOOTS
+      data: 0
+      display: "&cBotas P5"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - PROTECTION_ENVIRONMENTAL:5
+        - DURABILITY:5
+  H-P6:
+    amount: 1
+    price: 500000
+    slot: 11
+    item:
+      material: DIAMOND_HELMET
+      data: 0
+      display: "&cCapacete P6"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - PROTECTION_ENVIRONMENTAL:6
+        - DURABILITY:6
+  C-P6:
+    amount: 1
+    price: 500000
+    slot: 20
+    item:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      display: "&cPeitoral P6"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - PROTECTION_ENVIRONMENTAL:6
+        - DURABILITY:6
+  L-P6:
+    amount: 1
+    price: 500000
+    slot: 29
+    item:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      display: "&cCalças P6"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - PROTECTION_ENVIRONMENTAL:6
+        - DURABILITY:6
+  B-P6:
+    amount: 1
+    price: 500000
+    slot: 38
+    item:
+      material: DIAMOND_BOOTS
+      data: 0
+      display: "&cBotas P6"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - PROTECTION_ENVIRONMENTAL:6
+        - DURABILITY:6
+  S-S5:
+    amount: 1
+    price: 150000
+    slot: 15
+    item:
+      material: DIAMOND_SWORD
+      data: 0
+      display: "&cEspada S5"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - DAMAGE_ALL:5
+        - KNOCKBACK:2
+        - FIRE_ASPECT:2
+        - DURABILITY:5
+  M-S5:
+    amount: 1
+    price: 150000
+    slot: 16
+    item:
+      material: DIAMOND_AXE
+      data: 0
+      display: "&cMachado S5"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - DAMAGE_ALL:5
+        - FIRE_ASPECT:2
+        - DURABILITY:5
+  S-S6:
+    amount: 1
+    price: 300000
+    slot: 33
+    item:
+      material: DIAMOND_SWORD
+      data: 0
+      display: "&cEspada S6"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - DAMAGE_ALL:6
+        - KNOCKBACK:2
+        - FIRE_ASPECT:2
+        - DURABILITY:6
+  M-S6:
+    amount: 1
+    price: 300000
+    slot: 34
+    item:
+      material: DIAMOND_AXE
+      data: 0
+      display: "&cMachado S6"
+      lore:
+        - ''
+        - '&eAdquirido em &c/lojagod&e!'
+      enchants:
+        - DAMAGE_ALL:6
+        - FIRE_ASPECT:2
+        - DURABILITY:6
+  CAP:
+    amount: 1
+    price: 500000
+    slot: 13
+    ask-quantity: true
+    item:
+      material: GOLDEN_APPLE
+      data: 1
+  pot-forca:
+    amount: 16
+    price: 31250
+    slot: 22
+    item:
+      material: POTION
+      data: 8233
+      amount: 16
+      display: "&dPoção de Força &7[II]"
+  pot-velo:
+    amount: 16
+    price: 31250
+    slot: 31
+    item:
+      material: POTION
+      data: 8226
+      amount: 16
+      display: "&bPoção de Velocidade &7[II]"

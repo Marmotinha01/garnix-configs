@@ -1,0 +1,110 @@
+info:
+  order: 4
+  starting: '0'
+  formatter: 'SUFFIX' # DECIMAL ou SUFFIX
+  text:
+    singular: 'dracma'
+    plural: 'dracmas'
+    symbol: '✆'
+    ranking-tag: '&e[✆]'
+  colors:
+    symbol: '&e'
+    primary: '&e'
+    secondary: '&e'
+
+icon:
+  material: 'INK_SACK'
+  data: 11
+  display: '&eDracmas'
+
+command:
+  name: 'dracmas'
+  aliases: ['dracma']
+  cooldown: 5 # segundos
+  subcommands:
+    help:
+      enabled: true
+      aliases: ['ajuda']
+      cooldown: 5 # segundos
+      admin-permission: 'currencies.admin'
+    ranking:
+      enabled: true
+      aliases: ['top']
+      cooldown: 3 # segundos
+    send:
+      enabled: true
+      aliases: ['enviar', 'pay', 'transfer']
+      cooldown: 5 # segundos
+      tax:
+        enabled: true
+        message:
+          to-sender: true
+          to-receiver: true
+        percentage: 10
+        bypass-permission: 'currencies.tax.bypass'
+    set:
+      enabled: true
+      aliases: ['definir']
+      permission: 'currencies.admin'
+    add:
+      enabled: true
+      aliases: ['give', 'dar']
+      permission: 'currencies.admin'
+    remove:
+      enabled: true
+      aliases: ['take', 'remover']
+      permission: 'currencies.admin'
+
+ranking:
+  mode: 'MENU' # CHAT ou MENU
+  chat:
+    format: '  &8#{position}º {lp_prefix}{player} &8▶ {symbol_color}{symbol}{primary_color}{balance}'
+    empty: '  &7Nenhum jogador no ranking.'
+    header:
+      - ''
+      - '  &e&lRANKING DE DRACMAS'
+      - ''
+    footer:
+      - ''
+  menu:
+    title: 'TOP Dracmas'
+    shape:
+      - 'XXXXXXXXX'
+      - 'XXX...XXX'
+      - 'X.......X'
+      - 'XXXXXXXXX'
+      - 'XXXXXXXXX'
+    position-user:
+      display: '&8#{position}º {lp_prefix} {player}'
+      lore:
+        - '&fDracmas: {symbol_color}{symbol}{primary_color}{balance}'
+    empty-position-icon:
+      material: 'BARRIER'
+      display: '&8#{position}º &7Ninguém'
+    info-icon:
+      slot: 40
+      material: 'PAPER'
+      display: '&eAtualização Periódica'
+      lore:
+        - '&7O ranking é atualizado'
+        - '&7a cada &f{refresh} &7minutos.'
+        - ''
+        - '&8&oÚltima atualização &7&o{last_update}&8&o.'
+
+help:
+  - ''
+  - '  &e&lDRACMAS &8▶ &eComandos de Ajuda'
+  - ''
+  - '  &e/{command} &8- &7Ver suas dracmas.'
+  - '  &e/{command} <jogador> &8- &7Ver as dracmas de alguém.'
+  - '  &e/{command} ranking &8- &7Ver o ranking de dracmas.'
+  - '  &e/{command} enviar <jogador> <quantia> &8- &7Envia dracmas para alguém.'
+  - ''
+
+help-admin:
+  - '  &4&lDRACMAS ADMIN &8▶ &4Comandos Administrativos'
+  - ''
+  - '  &c/{command} set <jogador> <quantia> &8- &7Define as dracmas de alguém.'
+  - '  &c/{command} add <jogador> <quantia> &8- &7Adiciona dracmas a alguém.'
+  - '  &c/{command} remove <jogador> <quantia> &8- &7Remove dracmas de alguém.'
+  - ''

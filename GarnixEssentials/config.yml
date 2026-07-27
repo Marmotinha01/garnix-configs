@@ -1,0 +1,231 @@
+# Vanish
+vanish-chest-title: Baú - {x},{y},{z} @readonly
+
+void-teleport-y: 0
+
+# Regras aplicadas 5 segundos após o start do servidor.
+world-rules:
+  # gamerule randomTickSpeed (aplicado em todos os mundos)
+  random-tick-speed: 3
+  # Mundo que recebe "time set 0" e "gamerule doDaylightCycle false"
+  static-time-world: "plotworld"
+
+# Nicknames — /nick, /resetnick, /trocarnick, /resetarnick.
+# Comprimento medido apenas no texto visível: os códigos de cor não contam.
+nick:
+  min-length: 3
+  max-length: 16
+
+# Blacklist de mundos por feature (bypass: essentials.<feature>.bypass).
+blacklisted-worlds:
+  back:
+  - eventos
+  homes:
+  - eventos
+  fly:
+  - eventos
+  clear-lag:
+  - eventos
+  combat-log:
+  - eventos
+  - batalha
+  - nether
+  death-messages:
+  - eventos
+
+# Items that cannot be crafted (material names)
+blocked-crafts:
+- TNT
+- ARMOR_STAND
+
+# Temporary Fly Item
+temporary-fly-item:
+  material: FEATHER
+  display: '&aFly Temporário'
+  lore:
+  - '&fDuração: &7{duration}'
+  - ''
+  - '&eClique para ativar!'
+
+# Auto Click valid entities
+auto-click:
+  radius: 5.0
+  interval: 20
+  allowed-worlds:
+  - plotworld
+  allowed-entities:
+  - PIG
+  - ZOMBIE
+
+# Commands executed on first join (use {player} placeholder)
+first-join-commands: []
+
+# ── Limite de homes ──
+# Todo jogador tem 'default-homes-limit'. Para dar mais, conceda a permissão
+# "essentials.homes.limit.<N>" — o N é o limite (ex: essentials.homes.limit.5
+# = 5 homes). As faixas NÃO somam: vale sempre a MAIOR que o jogador tiver, e
+# nunca menos que o default. O nó exato precisa estar concedido — curinga
+# (essentials.homes.limit.*) não funciona, porque o número é lido do próprio nó.
+# Quem tem 'essentials.bypass' ignora o limite por completo.
+default-homes-limit: 1
+
+warps-menu:
+  title: Locais
+  rows: 5
+
+kits-categories-menu:
+  title: Categorias de Kits
+  rows: 3
+
+kit-preview-menu:
+  title: Preview - {kit}
+  shape:
+  - XXXXXXXXX
+  - XX.....XX
+  - <X.....X>
+  - XX.....XX
+  - XXXXXXXXX
+  - XXXXXXXXX
+  back-icon:
+    slot: 48
+    texture: "7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf"
+    display: '&cVoltar'
+    lore:
+    - '&7Clique para voltar.'
+  collect-icon:
+    slot: 50
+    material: STORAGE_MINECART
+    display: '&aColetar Kit'
+    lore:
+    - '&7Clique para coletar.'
+  cooldown-icon:
+    slot: 50
+    material: MINECART
+    display: '&cJá Coletado'
+    lore:
+    - '&7Aguarde &f{time}&7.'
+  empty-icon:
+    slot: 22
+    material: WEB
+    display: '&cVazio'
+    lore:
+    - '&7Nenhum conteúdo encontrado.'
+
+# Combat Log
+# Blacklisted worlds: blacklisted-worlds.combat-log
+combat:
+  time: 15
+  allowed-commands:
+  - /g
+  - /tell
+  - /r
+  - /lobby
+
+# Death Messages
+# Regiões WorldGuard onde a mensagem de kill (PvP) não é anunciada.
+death-messages-blacklisted-regions:
+- spawn
+- arena
+
+# Clear Lag
+# Blacklisted worlds: blacklisted-worlds.clear-lag
+clearlag:
+  interval: 660
+  blacklist-items:
+  - MOB_SPAWNER:0
+  - SKULL_ITEM:3
+  - DIAMOND_SWORD:0
+  - GOLD_SWORD:0
+  - IRON_SWORD:0
+  - STONE_SWORD:0
+  - WOOD_SWORD:0
+  - DIAMOND_AXE:0
+  - GOLD_AXE:0
+  - IRON_AXE:0
+  - STONE_AXE:0
+  - WOOD_AXE:0
+  warnings:
+    '600': 10m
+    '300': 5m
+    '60': 1m
+    '30': 30s
+    '15': 15s
+    '10': 10s
+    '5': 5s
+
+# ------------------------------------------------------------
+#  Proteção de comandos (/pl, namespaces, etc.)
+#  Bypass total: essentials.protect.admin
+#  Bypass do tab: essentials.protect.tabcomplete
+# ------------------------------------------------------------
+command-protect:
+  plugins-message: '&fPlugins (1): &aGarnixPlugins'
+  unknown-message: '&cComando desconhecido.'
+  blocked:
+    - '/ver'
+    - '/say'
+    - '/version'
+    - '/ban-ip'
+    - '/op'
+    - '/deop'
+    - '/minecraft'
+    - '/bukkit'
+    - '/me'
+    - '/about'
+    - '/icanhasbukkit'
+    - '/?'
+    - '/help'
+    - '/clipboard'
+    - '/bungeeguard'
+    - '/papi'
+    - '/placeholderapi'
+    - '/tab'
+    - '/worldborder'
+    - '/spark'
+    - '/tps'
+    - '/protocol'
+    - '/filter'
+    - '/packet'
+    - '/packet_filter'
+    - '/packetlog'
+    - '/protocollib'
+    - '/lp'
+    - '/luckperms'
+    - '/pardon'
+    - '/pardon-ip'
+    - '/particle'
+    - '/perm'
+    - '/permission'
+    - '/permissions'
+    - '/perms'
+    - '/tree'
+    - '/testfor'
+    - '/testforblock'
+    - '/halt-activity'
+    - '/haltactivity'
+    - '/summon'
+    - '/stats'
+    - '/spawnpoint'
+    - '/restart'
+    - '/reload'
+    - '/spreadplayers'
+    - '/sr'
+    - '/stack'
+    - '/stop'
+    - '/stopfire'
+    - '/save'
+    - '/save-all'
+    - '/save-off'
+    - '/save-on'
+    - '/setblock'
+    - '/setidletimeout'
+    - '/setworldspawn'
+    - '/seed'
+    - '/znpcs'
+
+# Chain Arena
+chain-allowed-commands:
+- /chain
+- /tell
+- /r
+- /g

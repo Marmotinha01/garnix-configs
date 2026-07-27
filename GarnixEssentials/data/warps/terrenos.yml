@@ -1,0 +1,33 @@
+location: plotworld:-140.6886852428296:65.0:68.26227063803528:88.799805:-5.850012
+icon:
+  material: DIRT
+  display: '&dTerrenos'
+  lore:
+  - '&7Aqui você poderá considerar'
+  - '&7como seu próprio lar, além'
+  - '&7de farmar e lucrar muito.'
+  - '' 
+  - ' &dAcesso rápido:'
+  - ' &8▸ &f/plot home'
+  - ''
+  - '&dlique para teleportar.'
+locked-icon:
+  material: BARRIER
+  display: '&cTerrenos'
+  lore:
+  - '&7Aqui você poderá considerar'
+  - '&7como seu próprio lar, além'
+  - '&7de farmar e lucrar muito.'
+  - '' 
+  - ' &dAcesso rápido:'
+  - ' &8▸ &f/plot home'
+  - ''
+  - '&cVocê não tem permissão.'
+permission: ''
+slot: 29
+messages:
+  success: '&aVocê foi teleportado para a warp &f{warp}&a.'
+  no-permission: '&cVocê não tem permissão para ir à warp &f{warp}&c.'
+  title: ''
+  subtitle: ''
+  actionbar: ''

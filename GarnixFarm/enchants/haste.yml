@@ -1,0 +1,16 @@
+display: "Agilidade"
+max-level: 2
+base-cost: 400.0
+increase-cost: 400.0
+
+# PASSIVE flavour (sem chance): tendo nível ≥ 1, o jogador ganha velocidade
+# infinita ao entrar na fazenda (amplificador = nível - 1), até sair ou desencantar.
+icon:
+  slot: 16
+  material: SUGAR
+  display: "&e{display}"
+  lore:
+    - "&7Colha mais rápido com"
+    - "&7efeito de velocidade permanente."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"

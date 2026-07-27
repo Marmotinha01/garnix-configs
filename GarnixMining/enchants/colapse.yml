@@ -1,0 +1,33 @@
+display: "Colapso"
+
+mine-level-unlock: 30
+
+max-level: 100
+
+base-cost: 1000
+increase-cost: 3000
+
+base-chance: 0.20
+increase-chance: 0.02
+
+effect-radius: 3
+
+messages:
+  - "&a&lCOLAPSO! &fVocê colapsou uma esfera na mina!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&a&lCOLAPSO!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 15
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&a{display}"
+  lore:
+    - "&7Tenha a chance de colapsar"
+    - "&7uma esfera na mina!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""

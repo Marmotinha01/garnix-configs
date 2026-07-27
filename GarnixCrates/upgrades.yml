@@ -1,0 +1,25 @@
+# Cooldown (em segundos) entre cada clique do botão "Abrir Chaves" no menu.
+open-seconds: 1
+
+# Currency usada para pagar os upgrades (GarnixCurrencies).
+currency: coins
+
+# Cada nível define quantas keys abre por clique e o custo para chegar nele.
+# O nível 0 é o inicial (jogadores novos começam aqui).
+# O último nível definido é o nível máximo. Adicione/remova conforme quiser.
+levels:
+  '0':
+    opens: 20
+    cost: 0
+  '1':
+    opens: 50
+    cost: 5000
+  '2':
+    opens: 100
+    cost: 15000
+  '3':
+    opens: 200
+    cost: 50000
+  '4':
+    opens: 500
+    cost: 150000

@@ -1,0 +1,55 @@
+display: "Chuva de Meteoro"
+
+mine-level-unlock: 55
+
+max-level: 100
+
+base-cost: 12000
+increase-cost: 30000
+
+base-chance: 2.5
+increase-chance: 0.05
+
+# --- Meteor storm --------------------------------------------------------------
+# Fireballs rain down over the WHOLE mine, spawning above the region top at random
+# columns and falling straight down until each hits a still-standing block, where
+# it blasts a SPHERE out of the virtual mine. A meteor falling down an already-
+# mined column just passes through and despawns — it never wastes a blast on air.
+
+# Sphere radius each meteor breaks on impact (in blocks).
+meteor-explosion-radius: 2
+
+# How long meteors keep raining, in ticks (20 ticks = 1 second).
+meteor-duration-ticks: 100
+
+# Ticks between each spawn wave (lower = denser storm).
+meteor-interval-ticks: 5
+
+# How many meteors are dropped on each wave.
+meteors-per-wave: 2
+
+# How fast a meteor descends, in blocks per tick.
+meteor-fall-speed: 1.4
+
+# How far above the top of the mine a meteor spawns, in blocks.
+meteor-spawn-height: 10
+
+messages:
+  - "&c&lCHUVA DE METEORO! &fO céu desabou sobre a mina!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&c&lCHUVA DE METEORO!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 30
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&c{display}"
+  lore:
+    - "&7Tenha a chance de invocar uma chuva"
+    - "&7de meteoros que bombardeia toda a mina!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""

@@ -1,0 +1,31 @@
+display: "Demolição"
+
+mine-level-unlock: 40
+
+max-level: 100
+
+base-cost: 2500
+increase-cost: 6000
+
+base-chance: 0.15
+increase-chance: 0.009
+
+messages:
+  - "&a&lDEMOLIÇÃO! &fVocê quebrou em 8 direções na mina!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&a&lDEMOLIÇÃO!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 20
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&a{display}"
+  lore:
+    - "&7Tenha a chance de quebrar"
+    - "&7uma linha de 8 direções na mina!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""

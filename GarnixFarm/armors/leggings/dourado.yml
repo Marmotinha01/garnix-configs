@@ -1,0 +1,13 @@
+item:
+  display: "&6Calça Dourada"
+  material: LEATHER_LEGGINGS
+  color: "#FFD700"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 4
+    percent: true

@@ -1,0 +1,28 @@
+display: Kit Golem
+
+category: ranks
+
+permission: rank.golem
+
+cooldown: 12h
+
+slot: 31
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  texture: da6e0429ccaabb6f5f0c5d513c795bed6d80fce72f57f4bc3a616aee23e12572
+  display: '&7&lKit Golem'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Golem'
+  lore:
+  - '&7Ainda não desbloqueado.'
+
+content: H4sIAAAAAAAA/82UwW7TQBCGx05aHAuJCihQ4LD0xqXiUAmJAwJCoRIIDpG4RhN7sFfd3TG7m7T0hfIeeTImTaMouEgtqgoXS6P5//H3z2o3B+jBho5kQw4AtzNIdQkPrXZUePweX5UaLbtyGI7Zlwls9HnsYpJDJ2LVgy65op4buyl0zMRAnp4N2IL1endZp4v63m/1fcjhVqlDY/BnBt0vaAnuzKYvZ1PzSUf1kQ1ZEM/me7RYkfxwAfpgBVqxKckNsWkMLTnfrBzJuWOnHa3RxRGe0J/DpethVCvc38Fvt1H+BcajCw675gmZ/4GkJmMpXpoEronkaZukqClEmRMvf0LXRfO4TWOoqrSrwo2zXPA0jJjjzYNsrUAajppd+9Kr51fQ7rYDRq+bY+1pWDMfLS0vWgGT80DJItBr6EDvUJf0wWAV5v0MMhkYaSjdzRGHQGGVWQZ9Zk/Z/BGFJxK8zy7oChWOxOJKVgvHngiezab7faN/jElRkK+XboNetN7iKTn0ZxIei9lrr1AVNU5EbNXYSoH6BPeWS74rSlly//DttwP17utgcDBY3zP8Agt7+q0dBgAA

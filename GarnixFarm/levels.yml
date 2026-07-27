@@ -1,0 +1,16 @@
+# GarnixFarm — Curva de XP dos níveis de fazenda.
+#
+# O XP por plantação colhida é definido POR TIPO em farms.yml (exp:). Esta curva diz
+# quanto XP cada nível exige, por uma fórmula progressiva (sem listar nível a nível).
+# xp(L) = XP para avançar do nível L-1 para o L.
+#
+# type: polynomial | geometric | linear
+#   polynomial: xp(L) = base * L^growth        (growth = expoente, ~2.0–2.5)
+#   geometric:  xp(L) = base * growth^(L-1)    (growth = fator ×/nível, ~1.06–1.10)
+#   linear:     xp(L) = base + growth*(L-1)    (growth = passo/nível)
+
+max-level: 100
+formula:
+  type: polynomial
+  base: 100.0
+  growth: 2.2

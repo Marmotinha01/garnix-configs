@@ -1,0 +1,43 @@
+# Menu — Gerenciar Enxada (abre com Shift + Botão-direito na enxada)
+
+title: Gerenciar Enxada
+rows: 6
+
+# Ícone de skins (animado pelos materiais da enxada) — abre a galeria de skins.
+skins-icon:
+  slot: 48
+  materials:
+  - WOOD_HOE
+  - STONE_HOE
+  - IRON_HOE
+  - GOLD_HOE
+  - DIAMOND_HOE
+  interval: 20
+  display: '&eSkins de Enxada'
+  lore:
+  - '&7Ganhe bônus ao alterar'
+  - '&7a skin da sua enxada.'
+  - ''
+  - '&eClique para gerenciar.'
+  flags:
+  - HIDE_ATTRIBUTES
+
+# Cabeça do jogador com o saldo e o total colhido.
+info-icon:
+  slot: 50
+  display: '&aSuas Informações'
+  lore:
+  - '&fSementes: {symbol_color}{symbol}{primary_color}{sementes}'
+  - '&fColhidas: &7{crops}'
+
+# Anexado ao ícone de cada encantamento (abaixo do máximo).
+enchant-lore:
+- ''
+- '&aClique para gerenciar.'
+
+# Anexado ao ícone de um encantamento já no nível máximo.
+maxed-enchant-lore:
+- ''
+- '&cNível máximo atingido.'
+- ''
+- '&aClique para gerenciar.'

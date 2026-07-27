@@ -1,0 +1,303 @@
+# Evento — Killer
+#
+# PvP livre: todos contra todos, sem aliança nenhuma. O fogo amigo de clãs é suspenso
+# APENAS entre os participantes enquanto o evento acontece (GarnixClans), então
+# membros e aliados que não estão no evento continuam protegidos normalmente.
+#
+# KIT DO EVENTO: o equipamento é emprestado pelo plugin e é igual para todo mundo —
+# num todos-contra-todos é isso que faz a luta valer pela mão do jogador e não pelo
+# que ele conseguiu juntar antes. Para entrar é preciso estar com o inventário e a
+# armadura vazios, então ninguém dropa nada ao morrer. O kit abaixo é só o ponto de
+# partida: equipe-se em jogo e rode /killer setkit para gravar o seu por cima dele.
+#
+# Locais necessários: lobby, join, exit. O cabin (camarote) é opcional.
+#   /killer setloc lobby|join|exit|cabin
+
+display: '&4Killer'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&4'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_killer%. Deixe vazio para o evento não dar tag.
+tag: '&4[SerialKiller]'
+
+join-time: 1m
+start-time: 10s
+duration: 15m
+
+min-players: 2
+max-players: 0
+
+# Quem morre deixa o kit no chão, onde caiu — e só aqui. O equipamento é o espólio do
+# todos-contra-todos: como ele se gasta, trocar a armadura surrada pela de um morto é
+# jogada, e é por isso que só neste evento é permitido pegar item do chão. Vale apenas
+# para quem perde em jogo: sair pelo /killer sair, levar kick ou trocar de mundo não
+# dropa nada, senão entregar o kit a um amigo seria só uma questão de digitar.
+drop-on-death: true
+
+# Deixa o jogador mexer no próprio inventário durante o evento: trocar armadura, mudar
+# item de slot. Dropar continua proibido — o que cai no chão, cai por morte.
+allow-inventory-move: true
+
+# Raio (blocos) em volta dos pontos de jogo da arena varrido ao fim do evento e ao ligar
+# o servidor: remove o que ficou no chão (aqui, o espólio que ninguém foi buscar), as
+# flechas cravadas e os mobs que o evento tiver criado. Sem esta chave o evento não
+# varre nada.
+cleanup-radius: 60.0
+
+rewards:
+- eco give {player} 10000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&4&lMATEM!'
+    subtitle: '&7Sem aliança que valha aqui.'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/killer entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lKiller {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/killer entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}10K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+  # {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lKiller {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+  # {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lKiller {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+  # {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lKiller&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &fganhou o evento Killer.
+      &r
+      &8▪ &fPrêmio: {c}10K de Cash
+      &r
+
+  # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
+  # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  walkover: |2
+
+      &8▎ {c}Evento {c}&lKiller&f, {c}vitória por W.O.!
+      &r
+      &8▶ &7{player} &fficou sozinho na arena.
+      &r
+      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &r
+
+  # ── Eliminações ─────────────────────────────────────────────────────
+  # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+  # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{killer} &fmatou &7{player}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lKiller {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém sobrou para vencer.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lKiller {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+  # {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lKiller {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+  # ── Actionbar ───────────────────────────────────────────────────────
+  # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+kit:
+  unbreakable: false
+  armor:
+    helmet:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    chestplate:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    leggings:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+    boots:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+  items:
+    slot-0:
+      material: DIAMOND_SWORD
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      unbreakable: true
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      - KNOCKBACK:2
+      slot: 0
+    slot-1:
+      material: DIAMOND_AXE
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      unbreakable: true
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      slot: 1
+    slot-2:
+      material: GOLDEN_APPLE
+      data: 1
+      amount: 64
+      display: §4Evento §lKILLER
+      slot: 2
+    slot-3:
+      material: BOW
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      unbreakable: true
+      enchants:
+      - ARROW_DAMAGE:5
+      - ARROW_KNOCKBACK:2
+      - ARROW_FIRE:2
+      - ARROW_INFINITE:1
+      slot: 3
+    slot-4:
+      material: POTION
+      data: 8233
+      amount: 16
+      display: §4Evento §lKILLER
+      slot: 4
+    slot-5:
+      material: POTION
+      data: 8226
+      amount: 16
+      display: §4Evento §lKILLER
+      slot: 5
+    slot-6:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 6
+    slot-7:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 7
+    slot-17:
+      material: ARROW
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      slot: 17
+    slot-33:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 33
+    slot-34:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §4Evento §lKILLER
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 34

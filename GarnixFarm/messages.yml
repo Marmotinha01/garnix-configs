@@ -1,0 +1,146 @@
+# GarnixFarm — Mensagens (use & para cores)
+
+players-only: '&cApenas jogadores podem usar isso.'
+reloaded: '&aConfigurações recarregadas.'
+
+command:
+  ir-no-spawn: '&cO spawn dessa fazenda ainda não foi definido.'
+  ir-spawn-outside: '&cO spawn dessa fazenda está fora da região. Avise um admin.'
+  ir-success: '&aBem-vindo à sua fazenda! Colha a plantação com a enxada.'
+  sair-not-in-farm: '&cVocê não está na fazenda.'
+  setspawn-success: '&aSpawn da fazenda definido.'
+  type-unknown: '&cTipo de fazenda desconhecido: &f{type}&c.'
+  scan-usage: '&cUso: /fazenda scan <raio>'
+  scan-invalid: '&cRaio inválido.'
+  scan-too-large: '&cRaio máximo permitido: &f{max}&c.'
+  scan-busy: '&cJá existe um scan em andamento.'
+  scan-started: '&eEscaneando num raio de &f{radius}&e...'
+  scan-actionbar: '&eScan &f{percent}% &8({done}/{total})'
+  scan-success: '&aScan concluído: &f{count}&a plantações registradas (raio {radius}).'
+  scan-empty: '&eNada encontrado — os dados anteriores foram mantidos.'
+  givebooster-usage: '&cUso: &f/fazenda givebooster <jogador> <tipo> <multiplicador> <duração> [quantia]'
+  givebooster-invalid-type: '&cTipo de booster inválido: &f{type}&c.'
+  givebooster-invalid-multiplier: '&cMultiplicador inválido: &f{value}&c. Use por exemplo &f2x&c.'
+  givebooster-bad-duration: '&cDuração inválida: &f{value}&c. Ex.: &f1d&c, &f12h&c, &f30m&c.'
+  givebooster-success: '&aBooster de {type} &f{bonus} &aentregue para &f{player}&a. &7(x{quantity})'
+  giveskin-usage: '&cUso: /fazenda giveskin <jogador> <skin> [quantia]'
+  giveskin-unknown: '&cSkin desconhecida: &f{skin}&c.'
+  giveskin-default: '&cA skin padrão não pode ser dada como item.'
+  giveskin-success: '&aVocê deu a skin &f{skin}&a para &f{player}&a. &7(x{quantity})'
+  giveforge-usage: '&cUso: /fazenda giveforge <jogador> [quantia]'
+  giveforge-success: '&aVocê deu a forja de skins para &f{player}&a. &7(x{quantity})'
+  givearmor-usage: '&cUso: /fazenda givearmor <jogador> <armadura>'
+  givearmor-unknown: '&cArmadura desconhecida: &f{armor}&c.'
+  givearmor-success: '&aVocê deu a armadura &f{armor}&a para &f{player}&a.'
+  resetenchants-usage: '&cUso: /fazenda resetenchants <jogador>'
+  resetenchants-success: '&aEncantamentos de &f{player}&a resetados.'
+  settype-usage: '&cUso: /fazenda settype <jogador> <tipo>'
+  settype-success: '&aTipo de fazenda de &f{player}&a definido para &f{type}&a.'
+  addcrops-usage: '&cUso: /fazenda addcrops <jogador> <quantia>'
+  addcrops-success: '&aAdicionadas &f{amount}&a colheitas para &f{player}&a.'
+  inspect-usage: '&cUso: /fazenda inspecionar <jogador>'
+  inspect-self: '&cVocê não pode inspecionar a si mesmo.'
+  inspect-in-farm: '&cSaia da sua fazenda antes de inspecionar.'
+  inspect-already: '&cVocê já está inspecionando. Use &f/spawn &cpara sair.'
+  inspect-not-in-farm: '&f{player}&c não está na fazenda.'
+  inspect-ended: '&cO jogador saiu da fazenda. Inspeção encerrada.'
+  inspect-success:
+  - ''
+  - '&aInspecionando a fazenda de &f{player}&a.'
+  - ''
+  - '  &8▶ &7Nível: &f{level}'
+  - '  &8▶ &7Tipo: &f{type}'
+  - ''
+  - '&7Use &f/spawn &7para sair.'
+  - ''
+  player-not-found: '&cJogador não encontrado: &f{player}&c.'
+  player-no-data: '&f{player}&c não tem dados de fazenda.'
+  invalid-number: '&cNúmero inválido: &f{value}&c.'
+
+protection:
+  inventory-not-empty: '&cEsvazie seu inventário e armadura para entrar na fazenda!'
+  hotbar-not-empty: '&cAs armaduras de fazenda devem ficar equipadas ou no inventário, não na hotbar!'
+  no-drop: '&cVocê não pode dropar itens na fazenda.'
+  command-blocked: '&cVocê não pode usar esse comando dentro da fazenda.'
+
+booster:
+  # {type} já vem colorido (cor da moeda/xp/tudo); {bonus} = ex. 2x.
+  activated: '&aBooster de {type} &f{bonus} &aativado!'
+  stacked: '&aBooster de {type} &f{bonus} &aempilhado!'
+  # Empilhar no inventário (shift + botão direito). Tokens: {type} {bonus} {amount} {duration}
+  merged: '&aVocê juntou &f{amount}&a boosters de {type} &f{bonus}&a em um só! &7Duração total: &f{duration}&a.'
+  merge-none: '&eVocê não tem outros boosters de {type} &f{bonus}&e no inventário para juntar.'
+  expired: '&cSeu booster de {type} &f{bonus} &cexpirou!'
+  removed: '&eBooster de {type} &f{bonus} &eremovido. &7Devolvido &f{remaining}&7.'
+  blocked: '&cVocê já tem um booster de {type}&c ativo!'
+  conflict: '&cVocê não pode combinar um booster &fAmbos&c com boosters de tipo específico. &7Aguarde o atual expirar ou desative-o.'
+  inventory-full: '&cInventário cheio! &7Libere um espaço para receber o booster.'
+  too-little-time: '&cTempo restante insuficiente para recuperar este booster.'
+
+enchant:
+  maxed: '&cEsse encantamento já está no nível máximo.'
+  no-coins: '&cVocê não tem sementes suficiente.'
+  bought: '&aVocê comprou &f{levels}&a nível(is) de &f{display}&a!'
+
+skin:
+  equipped: '&aSkin &f{skin}&a equipada!'
+  unlocked: '&aSkin &f{skin}&a desbloqueada!'
+  already-unlocked: '&cVocê já possui a skin &f{skin}&c.'
+  invalid: '&cEssa skin não existe.'
+  inventory-full: '&cInventário cheio! Libere um espaço para receber a skin removida.'
+
+# Forja de skins: combine skins iguais para forjar a próxima. Tokens: {skin}
+forge:
+  success: '&aVocê forjou a skin &f{skin}&a!'
+  no-item: '&cO item de forja não foi encontrado no seu inventário!'
+  inventory-full: '&cInventário cheio! Libere um espaço para receber a skin forjada.'
+
+# Compra/desbloqueio de plantação (one-way). Tokens: {display} {cost} {crops}
+upgrade:
+  maxed: '&eVocê já desbloqueou a última plantação.'
+  need-level: '&cVocê precisa ser nível &f{level} &cde fazenda para desbloquear &r{display}&c.'
+  need-crops: '&cVocê precisa colher &f{crops} {crop} &cpara desbloquear &r{display}&c.'
+  need-permission: '&cVocê não tem permissão para desbloquear &r{display}&c.'
+  no-money: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{cost} &7{currency}&c para comprar &r{display}&c.'
+  success: '&aVocê desbloqueou &r{display}&a! Toda a sua fazenda foi atualizada. Não há como voltar.'
+
+report:
+  enabled: '&aRelatório da fazenda ativado.'
+  disabled: '&cRelatório da fazenda desativado.'
+
+# Relatório periódico. Tokens da mensagem: {crops} {currencies} {enchants}
+farm-report:
+  messages:
+  - ''
+  - '  &a&lWOW! &7Aqui está seu progresso na fazenda!'
+  - '  &7(Progresso após 1 minuto colhendo)'
+  - ''
+  - '  &fPlantações colhidas: &7{crops}'
+  - '{currencies}'
+  - ''
+  - '  &fEncantamentos ativados:'
+  - '{enchants}'
+  - ''
+  currency-entry: '   &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  enchant-entry: '   &e{display} &7x{count}'
+  no-enchants: '   &7Nenhum encantamento ativado.'
+
+# Subida de nível de fazenda. Tokens: {level} {max_level} {old_level}
+levelup:
+  up:
+  - ''
+  - '  &a&lGG! &7Você subiu para o nível &a&l{level}&7 de fazenda!'
+  - ''
+  max-level:
+  - ''
+  - '  &6&lGG! &7Você chegou ao nível máximo &c&l{level}&7 de fazenda!'
+  - ''
+
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
+# leftover: inventário cheio — só a sobra foi ao correio.
+# Deixe "" para não avisar nada.
+delivery:
+  mailed: '&eVocê está em um evento! &eSeu item da fazenda foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'

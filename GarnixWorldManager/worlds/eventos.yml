@@ -1,0 +1,10 @@
+void: true
+gamerules:
+  naturalRegeneration: false
+  doDaylightCycle: false
+  doMobSpawning: false
+  randomTickSpeed: 0
+time: 6000
+storm: false
+monsters: false
+animals: false

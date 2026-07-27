@@ -1,0 +1,27 @@
+title: Gerenciando {player_name}
+rows: 5
+
+remove-friend-icon:
+  slot: 41
+  texture: 6f05afec2a6ec675cd5505a8f44bb6a4d556935689528321ead4edef685f2d10
+  display: '&cRemover Amigo'
+  lore:
+  - '&7Clique para remover.'
+
+back-icon:
+  slot: 39
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'
+
+toggle-status:
+  color-on: '&a'
+  color-off: '&c'
+  on: '&aSim'
+  off: '&cNão'
+
+permission-lore:
+- '&fPermitido: {status}'
+- ''
+- '&7Clique para alternar.'

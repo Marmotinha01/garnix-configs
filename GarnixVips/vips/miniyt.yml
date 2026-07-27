@@ -1,0 +1,21 @@
+lp-group: "miniyt"
+display: "MINI YT"
+color: "&b"
+weight: 30
+
+switcher-icon:
+  texture: "c0c9a3a4ffbee61d1ee1c3a533355bda9cdc377e07b0ff8bc618d3977b7f86cc"
+  display: "{color}&l{display}"
+
+add-broadcast:
+  title:
+    title: "{color}{player} &ftornou-se"
+    subtitle: "{color}&l{color}&l{display}"
+    fade-in: 10
+    stay: 60
+    fade-out: 10
+  chat:
+    - ""
+    - "  &e{player} &ftornou-se {color}&l{color}&l{display}&f!"
+    - ""
+  sound: AMBIENCE_THUNDER

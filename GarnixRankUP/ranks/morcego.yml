@@ -1,0 +1,13 @@
+order: 5
+
+name: "Morcego"
+tag: "&8[Morcego]"
+
+texture: '6de75a2cc1c950e82f62abe20d42754379dfad6f5ff546e58f1c09061862bb92'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

@@ -1,0 +1,57 @@
+debug: false
+
+item:
+  material: GOLD_SPADE
+  data: 0
+  glow: true
+  display: '&eLimpador de Terreno'
+  lore:
+  - '&eOpções de uso:'
+  - '&fBotão Direito &8➟ &7Ativar'
+  flags:
+  - HIDE_ATTRIBUTES
+
+# Um único agendador limpa todos os terrenos, dividindo o orçamento global entre
+# eles — assim 1 ou 50 limpezas simultâneas custam o mesmo por tick.
+clearing:
+  # Intervalo do agendador, em ticks.
+  tick-interval: 20
+  # Teto de blocos varridos por tick somando todas as limpezas.
+  global-blocks-per-tick: 4000
+  # Teto de blocos varridos por tick para uma única limpeza.
+  per-job-blocks-per-tick: 1500
+  # Teto de blocos removidos por tick, por limpeza (limita pacotes para Bedrock/Geyser).
+  max-block-changes-per-tick: 512
+  # Disparar física ao quebrar (areia caindo, água, etc.). Mantenha false por desempenho.
+  apply-physics: false
+  # Intervalo, em segundos, para salvar o progresso no banco.
+  persist-interval-seconds: 10
+  # Atraso, em ticks, antes de retomar limpezas no boot (dá tempo do PlotSquared carregar).
+  startup-resume-delay-ticks: 100
+  # Blocos que o item pode remover. Formato: "MATERIAL" ou "MATERIAL:DATA" (1.8.8 legacy).
+  allowed-blocks:
+  - DIRT
+  - GRASS
+
+actionbar:
+  interval-ticks: 10
+  format: '{bar} &f{percent}% &8| &7Restante: &f{eta} &8| &aRemovidos: &f{cleared}'
+  eta-calculating: Calculando...
+  progress-bar:
+    total-chars: 10
+    bar-char: ▌
+    completed-color: '&a'
+    uncompleted-color: '&7'
+
+# Título do menu de confirmação (ícones e linhas vêm do garnix-core).
+confirm-title: Limpar o terreno?
+
+sounds:
+  start:
+    sound: NOTE_PLING
+    volume: 1.0
+    pitch: 1.5
+  complete:
+    sound: LEVEL_UP
+    volume: 1.0
+    pitch: 1.0

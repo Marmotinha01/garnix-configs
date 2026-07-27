@@ -1,0 +1,27 @@
+debug: false
+
+# Limite padrão de leilões. (auctions.limit.<N>)
+default-auction-limit: 1
+
+# Intervalo (em segundos) para checar leilões expirados.
+expiration-check-interval: 5
+
+# Moedas que não podem ser usadas em leilões.
+#
+# A taxa sobre a venda vem do GarnixCurrencies (currencies/<id>.yml →
+# command.subcommands.send.tax), junto com a sua bypass-permission.
+# Cada economia tem a sua. O vencedor sempre paga o lance cheio e os lances
+# superados voltam inteiros; a taxa sai da parte do leiloeiro, na alíquota
+# travada quando ele criou o leilão.
+currency-blacklist: []
+
+# Estende o tempo do leilão quando um lance é feito perto do fim.
+anti-snipe:
+  enabled: true
+  # Janela (em segundos) que ativa a extensão.
+  threshold: 30
+  # Tempo adicionado (em segundos) ao ativar.
+  extension: 15
+
+# Porcentagem mínima acima do lance atual para um novo lance ser válido.
+min-bid-increment-percentage: 5

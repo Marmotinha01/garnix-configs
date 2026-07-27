@@ -1,0 +1,29 @@
+display: Kit Celestial Semanal
+
+category: vips
+
+permission: vip.celestial
+
+cooldown: 7d
+
+slot: 20
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  material: STAINED_GLASS_PANE
+  data: 4
+  display: '&e&lCELESTIAL SEMANAL'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&c&lCELESTIAL SEMANAL'
+  lore:
+  - '&7Necessário ser &e&lCELESTIAL&7.'
+
+content: H4sIAAAAAAAA/83Uy0rDQBQG4D83TeOmIF5xEbrzFdxJ7aJY3Nh9GTPHyeBcQjNWfaK+R5/M1rRmkYIVKnF54Jx/vsOBSYAOIulIlwmAoxi+5DjT0lA2Zc/uhkumreGT8s1OuYeob1+N8xIEjokOQjJZvhr0fQRqphD5XwFdrOugqntIcMhlWSj2ESN8YJpwvJjTYq7uh+O0PxgNHsfD29EyCAd3TDNBy9AKc1pjhFWczIQVhaKNJa4nvPXERZNfyOyFvdPOC6R7XOCkyWmLcr7lsLmdkfovmpyUJvezJqxexx41V01NllPpllluh2v9geiyKVIkhDSibMWz5Vt4sta1g+nWmMI6ac1G4X/3pte/6O0Bn5lSDzQNBQAA

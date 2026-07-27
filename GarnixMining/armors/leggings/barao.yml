@@ -1,0 +1,14 @@
+item:
+# Barão Leggings
+  display: "&3Calça Barão"
+  material: LEATHER_LEGGINGS
+  color: "#00AAAA"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  gemas:
+    value: 1.5
+    percent: true

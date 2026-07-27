@@ -1,0 +1,106 @@
+reload-success: '&aConfigurações recarregadas com sucesso!'
+
+general:
+  outside-plot-world: '&cVocê só pode usar isso no mundo dos terrenos.'
+  outside-plot: '&cVocê precisa estar em um terreno.'
+  plot-no-owner: '&cEste terreno não possui dono.'
+  no-access: '&cVocê não tem acesso ao armazém deste terreno.'
+
+farm:
+  unripe: '&cPara remover a plantação, quebre usando SHIFT!'
+  add: '&a+{amount} {display} &7(/armazem)'
+  partial-add: '&c+{amount} {display} &7(/armazem)'
+  full: '&cO armazém do terreno está cheio! &7(/armazem)'
+  sold: '&aVocê vendeu &f{display} &apor {symbol_color}{symbol}{primary_color}{amount} {currency}&a!'
+
+farm-item:
+  amount: '&fQuantia: &7{amount}'
+  sell: '&fVenda: {symbol_color}{symbol}{primary_color}{amount}'
+  click-action: '&aClique para gerenciar.'
+  empty: '&cNenhum cacto armazenado.'
+  locked-display: '&cPlantação Bloqueada'
+  locked-release: '&fLibera: &7{release}'
+  locked: '&cPlantação ainda bloqueada.'
+
+limit:
+  applied: '&aVocê adicionou &f{amount} &ade limite ao armazém! &8(&7{used}x&8)'
+  no-permission: '&cVocê não pode usar isso neste terreno.'
+  merge-none: '&cNão há outros itens de limite para empilhar.'
+  merged: '&aVocê empilhou &fx{amount} &aitens de limite em &f{total}&a!'
+
+autosell:
+  already-unlocked: '&cVocê já possui a Venda Automática desbloqueada!'
+  unlocked:
+  - ''
+  - '  &6&lGG! &6Você desbloqueou seu &lAUTO VENDER &6no &7(/armazem)&6!'
+  - '  &cLembre-se, você só pode utilizá-lo em seus terrenos!'
+  - ''
+  summary-booster: '{multiplier}'
+  summary-no-booster: '&cNenhum'
+  summary-header:
+  - ''
+  - '  &a&lAUTO VENDER &7(Armazém)'
+  - ''
+  - '  &8Sumário:'
+  - '  &8▪ &fBooster: &a{booster}'
+  summary-entry: '  &8▪ &7x{qty} {display} &7► {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  summary-footer:
+  - ''
+
+booster:
+  applied: '&aBooster &f{bonus} &7por &e{duration} &aativado!'
+  stacked: '&aBooster &f{bonus} &e{duration} &7empilhado!'
+  mismatch: '&cVocê já tem um booster ativo de &f{current}&c. Não é possível aplicar &f{new}&c.'
+  merge-none: '&cNão há boosters iguais para empilhar.'
+  merged: '&ex{amount} &7boosters &f{bonus} &7empilhados! &fTotal: &e{duration}'
+  use-on-air: '&cUse este booster com o botão direito.'
+  removed: '&eBooster &f{bonus} &erecuperado. &7Devolvido &f{remaining}&7.'
+  too-little-time: '&cTempo restante insuficiente para recuperar este booster.'
+
+friends:
+  no-permission: '&cVocê não pode gerenciar os amigos deste armazém.'
+  added: '&f{player} &afoi adicionado como amigo do armazém.'
+  removed: '&f{player} &cfoi removido do armazém.'
+  add-self: '&cVocê não pode se adicionar como amigo.'
+  already-friend: '&cEsse jogador já é amigo do armazém.'
+  add-prompt:
+  - ''
+  - '  &aDigite o nome do jogador para adicionar ao armazém.'
+  - '  &7Para cancelar digite ''&8cancelar&7''.'
+  - ''
+
+collect:
+  success: '&aVocê recolheu os itens para o inventário.'
+
+commands:
+  admin-help:
+  - ''
+  - '  &6&lARMAZÉM ADMIN &7— Comandos'
+  - ''
+  - '  &c/armazem reload &8- &7Recarrega configurações.'
+  - '  &c/armazem givelimititem <jogador> <quantia> [qtd] &8- &7Envia item de limite.'
+  - '  &c/armazem giveautosell <jogador> [qtd] &8- &7Envia item de auto-venda.'
+  - '  &c/armazem givebooster <jogador> <multi> <duração> [qtd] &8- &7Envia booster.'
+  - '  &c/armazem setlimite <dono> <quantia> &8- &7Define o limite do armazém.'
+  - '  &c/armazem addlimite <dono> <quantia> &8- &7Soma ao limite do armazém.'
+  - '  &c/armazem remlimite <dono> <quantia> &8- &7Subtrai do limite do armazém.'
+  - ''
+  player-offline: '&cO jogador &f{player} &cnão está online.'
+  invalid-amount: '&cInforme uma quantia válida.'
+  invalid-multiplier: '&cInforme um multiplicador maior que 1.'
+  invalid-duration: '&cInforme uma duração válida (ex: 30s, 5m, 1h, 2d).'
+  no-warehouse: '&cNenhum armazém encontrado para &f{player}&c.'
+  give-limit-item: '&aItem de limite (&f{amount}&a) enviado a &f{player}&a.'
+  give-autosell: '&aAuto-vender enviado a &f{player}&a.'
+  give-booster: '&aBooster &f{bonus} &e{duration} &aentregue para &f{player}&a. &7(x{quantity})'
+  set-limit: '&aLimite de &f{player} &adefinido para &f{amount} &8(&7{count} armazém(s)&8).'
+  add-limit: '&a+{amount} &7de limite somado a &f{player} &8(&7{count} armazém(s)&8).'
+  rem-limit: '&c-{amount} &7de limite removido de &f{player} &8(&7{count} armazém(s)&8).'
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
+# leftover: inventário cheio — só a sobra foi ao correio.
+# Deixe "" para não avisar nada.
+delivery:
+  mailed: '&eVocê está em um evento! &eSeu item do armazém foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'

@@ -1,0 +1,34 @@
+display: "Espantalho de Palha"
+max-level: 50
+base-cost: 1500.0
+increase-cost: 600.0
+
+# CHANCE flavour (percent): ao colher, chance de invocar o espantalho.
+base-chance: 2
+increase-chance: 0.15
+
+# Companion: flutua acima do jogador por duration-ticks, seguindo-o, e a cada
+# harvest-interval-ticks colhe um disco de raio harvest-radius ao redor dele,
+# acompanhando o relevo (paga o jogador e rola Trevo por plantação, como um encanto
+# de área). Funciona voando, até harvest.max-height do config.yml acima da plantação.
+duration-ticks: 200
+harvest-radius: 3
+harvest-interval-ticks: 2   # rápido: acompanha o jogador voando sem deixar buracos
+armor-color: "#00AA00"
+head-material: PUMPKIN
+
+# Mensagens do companheiro (só 1x ao ativar e 1x ao acabar). Enquanto ativo, os
+# ganhos da colheita aparecem na action bar como numa quebra normal.
+activate-message: "&6&lESPANTALHO! &7Um espantalho surgiu e vai colher por você."
+end-message: "&6&lESPANTALHO! &7O espantalho foi embora."
+
+icon:
+  slot: 19
+  material: PUMPKIN
+  display: "&6{display}"
+  lore:
+    - "&7Chance de invocar um espantalho que"
+    - "&7colhe sozinho numa esfera ao seu redor."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"
+    - "&7Chance: &f{chance}%"

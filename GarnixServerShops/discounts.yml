@@ -1,0 +1,26 @@
+# Descontos por permissão (apenas coins-shop). O maior valor sempre prevalece.
+# value: porcentagem de desconto · color: cor da tag · tag: texto · perm: permissão
+
+garnix:
+  value: 15
+  color: b
+  tag: '[Garnix]'
+  perm: vip.garnix
+
+supremo:
+  value: 10
+  color: c
+  tag: '[Supremo]'
+  perm: vip.supremo
+
+imortal:
+  value: 5
+  color: a
+  tag: '[Imortal]'
+  perm: vip.imortal
+
+celestial:
+  value: 3
+  color: '3'
+  tag: '[Celestial]'
+  perm: vip.celestial

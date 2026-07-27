@@ -1,0 +1,66 @@
+title: Gerenciar Clan
+rows: 4
+
+tag-colour-icon:
+  slot: 10
+  material: INK_SACK
+  data: 4
+  display: '&bCor da Tag'
+  lore:
+  - '&7Troque as cores da tag'
+  - '&7mantendo as mesmas letras.'
+  - ''
+  - ' &8 ▪ &fAtual: &r{tag}'
+  - ''
+  - '&bClique para alterar.'
+
+rename-icon:
+  slot: 12
+  material: NAME_TAG
+  display: '&eNome do Clan'
+  lore:
+  - '&7Altere o nome exibido'
+  - '&7do seu clan.'
+  - ''
+  - ' &8 ▪ &fAtual: &f{clan}'
+  - ''
+  - '&eClique para alterar.'
+
+roles-icon:
+  slot: 14
+  material: REDSTONE_COMPARATOR
+  display: '&aCargos e Permissões'
+  lore:
+  - '&7Defina o que sub-líderes'
+  - '&7e membros podem fazer.'
+  - ''
+  - '&aClique para acessar.'
+
+friendly-fire-icon:
+  slot: 16
+  material: IRON_CHESTPLATE
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&cFogo Amigo'
+  lore:
+  - '&7Controle quem pode causar'
+  - '&7dano nos seus membros.'
+  - ''
+  - '&cClique para acessar.'
+
+transfer-icon:
+  slot: 22
+  material: GOLDEN_APPLE
+  display: '&6Transferir Liderança'
+  lore:
+  - '&7Passe o clan para outro'
+  - '&7membro. Você vira membro comum.'
+  - ''
+  - '&6Clique para transferir.'
+
+back-icon:
+  slot: 31
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

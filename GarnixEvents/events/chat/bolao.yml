@@ -1,0 +1,123 @@
+# Evento — Bolão (chat)
+#
+# Os jogadores pagam uma taxa para entrar; quando as entradas fecham, UM pagante é
+# sorteado e leva o pote inteiro. Se não houver gente suficiente (ou a staff
+# cancelar), todas as entradas são devolvidas.
+#
+# A moeda e o valor da taxa são escolhidos ao INICIAR (usa o GarnixCurrencies):
+#   /bolao iniciar <moeda> <valor>  » abre o bolão (staff)  (também /bolão)
+#   /bolao cancelar                 » cancela e devolve tudo (staff)
+#   /bolao entrar                   » paga a taxa e entra
+#
+# Placeholders de moeda disponíveis nas mensagens (resolvidos pela API):
+#   {fee} = taxa   {pot} = pote acumulado
+#   {symbol} {symbol_color} {primary_color} {secondary_color}
+#   {currency} = nome da moeda (singular/plural automático)
+
+display: '&6&lBOLÃO'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&6'
+
+# Tempo de entradas abertas.
+join-time: 1m
+
+# Abaixo disso o bolão é cancelado e reembolsado.
+min-players: 2
+# 0 = sem limite de participantes.
+max-players: 0
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>       clicar executa o comando
+#   <click:suggest_command:/comando >texto</click>  clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>           o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas.
+#
+# ATENÇÃO no 'suggest_command': o espaço antes do '>' faz parte do comando
+# sugerido. É ele que deixa o cursor pronto para o jogador digitar só a resposta.
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens estão anotados em comentário acima de cada mensagem.
+messages:
+  
+  # Mostrado por /bolao sem argumento. {command} = bolao
+  help: |2
+
+      &8▎ {c}&lBolão
+      &8▪ &a/{command} entrar &8- &fPaga a taxa e entra no bolão.
+      &r
+# {fee} taxa · {pot} pote atual · {currency} nome da moeda · {seconds} para fechar
+# {symbol}/{symbol_color}/{primary_color}/{secondary_color} vêm da moeda configurada
+  announce: |2
+
+      &8▎ {c}Evento {c}&lBolão {c}iniciando!
+      &8▎ &fEntre clicando &a&l<click:run_command:/bolao entrar><hover:show_text:&fClique para pagar a taxa e entrar.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPote atual: {symbol_color}{symbol}{pot} {primary_color}{currency}
+      &r
+      &8▪ &fTaxa de entrada: {symbol_color}{symbol}{fee}
+      &8▪ &fEntradas fecham em: &7{seconds}s
+      &r
+# ── Entrada e saída do dinheiro ─────────────────────────────────────
+# Linha única e sem a barra lateral: são avisos soltos, não blocos.
+# {count} quantos já entraram
+  paid: '&aVocê entrou no bolão! Pote: {symbol_color}{symbol}{pot} {primary_color}{currency}&a. &f({count} participantes)'
+  no-money: '&cVocê não tem {symbol_color}{symbol}{fee} &cpara entrar.'
+  refunded: '&fBolão cancelado — devolvemos {symbol_color}{symbol}{fee}&f.'
+  # Actionbar enviada a TODOS quando alguém entra. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  
+  # {player} levou · {pot} o pote pago
+  winner: |2
+
+      &8▎ {c}Evento {c}&lBolão&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &flevou o pote inteiro.
+      &r
+      &8▪ &fPrêmio: {symbol_color}{symbol}{pot} {primary_color}{currency}
+      &r
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lBolão {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém entrou no bolão.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lBolão {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &8▪ &fAs entradas foram devolvidas.
+      &r
+# {count} de {min} participantes
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lBolão {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Participantes insuficientes — &f{count}&7 de &f{min}
+      &8▪ &fAs entradas foram devolvidas.
+      &r
+# ── Recusas do /bolao iniciar (só a staff vê) ───────────────────────
+  unknown-currency: '&cMoeda inválida. Verifique o ID da moeda.'
+  invalid-fee: '&cValor inválido. Use um número maior que zero.'
+  currency-unavailable: '&cO sistema de economia está indisponível no momento.'

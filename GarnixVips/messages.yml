@@ -1,0 +1,78 @@
+command:
+  no-permission: '&cVocê não tem permissão para isso.'
+  invalid-duration: '&cTempo inválido: &f{input}&c. Use algo como &f30d&c, &f12h &cou &f1d6h&c.'
+  unknown-vip: '&cO VIP &f{input} &cnão existe.'
+  player-not-found: '&cO jogador &f{player} &cnão foi encontrado online.'
+
+admin:
+  help:
+  - ''
+  - '  &e&lVIPS &8- &fComandos administrativos'
+  - ''
+  - '  &e/vip add <jogador> <vip> <duração> &8- &7Concede um VIP.'
+  - '  &e/vip remove <jogador> <vip> [duração] &8- &7Remove um VIP (ou parte do tempo).'
+  - '  &e/vip info <jogador> &8- &7Mostra os VIPs de um jogador.'
+  - '  &e/vip genkey <vip> <duração> &8- &7Gera uma chave de VIP.'
+  - '  &e/vip listkeys &8- &7Lista todas as chaves criadas.'
+  - '  &e/vip delkey <chave> &8- &7Apaga uma chave.'
+  - '  &e/vip listvips &8- &7Abre o menu de jogadores com VIP.'
+  - '  &e/vip givepaper <jogador> <vip> <duração> [quantidade] &8- &7Dá um papel VIP clicável.'
+  - '  &e/vip freeze &8- &7Congela o tempo de todos os VIPs. &8(console)'
+  - '  &e/vip unfreeze &8- &7Descongela o tempo de todos os VIPs. &8(console)'
+  - '  &e/vip reload &8- &7Recarrega configs, mensagens e VIPs.'
+  - ''
+
+add:
+  success: '&aConcedido {vip} &apara &f{player} &apor &e{duration}&a.'
+
+remove:
+  player-no-vip: '&f{player} &cnão possui o VIP {vip}&c.'
+  duration-too-high: '&cO tempo informado (&f{input}&c) é maior que o restante de {vip} &c(&e{remaining}&c).'
+  removed-completely: '&aRemovido o VIP {vip} &ade &f{player} &apor completo.'
+  removed-time: '&aRemovido &e{duration} &ado VIP {vip} &ade &f{player}&a. Restante: &e{remaining}&a.'
+
+info:
+  header: '&eVIPs de &f{player}&e:'
+  line: '  &8- {vip} &8- &e{remaining}'
+  line-active: '  &8- {vip} &8- &e{remaining} &a(ativo)'
+  no-vips: '&f{player} &cnão possui nenhum VIP ativo.'
+
+genkey:
+  created: '&aChave de {vip} &a(&e{duration}&a) criada: &f{key}'
+
+listkeys:
+  header: '&eChaves criadas &8(&7{count}&8)&e:'
+  line: '  &8- &f{key} &8- {vip} &8(&e{duration}&8)'
+  empty: '&cNenhuma chave foi criada ainda.'
+
+delkey:
+  deleted: '&aChave &f{key} &aapagada.'
+  not-found: '&cA chave &f{key} &cnão existe.'
+
+reload:
+  success: '&aConfigs, mensagens e VIPs recarregados.'
+
+freeze:
+  frozen: '&aO tempo de todos os VIPs foi &fcongelado&a. Os dias restantes estão preservados.'
+  unfrozen: '&aO tempo de todos os VIPs foi &fdescongelado&a. A contagem voltou a correr.'
+  already-frozen: '&cO tempo dos VIPs já está congelado.'
+  already-unfrozen: '&cO tempo dos VIPs já está correndo.'
+
+redeem:
+  success: '&aVocê ativou {vip} &apor &e{duration}&a!'
+  invalid-key: '&cA chave &f{key} &cé inválida.'
+  already-used: '&cA chave &f{key} &cjá foi utilizada.'
+  unavailable: '&cEste VIP está temporariamente indisponível. Sua chave foi preservada — tente novamente mais tarde.'
+
+givepaper:
+  success: '&e{amount}x &aPapel de {vip} &adado para &f{player} &apor &e{duration}&a.'
+  vip-not-found: '&cO VIP &f{vip} &cnão existe mais.'
+  invalid-data: '&cO papel está corrompido. Dados inválidos.'
+  paper-not-found: '&cO papel VIP não está mais na sua mão.'
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
+# leftover: inventário cheio — só a sobra foi ao correio.
+delivery:
+  mailed: '&eVocê está em um evento! &eSeu papel VIP foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'

@@ -1,0 +1,130 @@
+# Evento — Clique Rápido (chat)
+#
+# Uma grade de X cinzas aparece no chat com UM X verde escondido no meio. O primeiro
+# jogador que clicar no X verde vence. Não se digita nada — é só clicar. Clicar num
+# X cinza dá "errou". Sem clique certo na duração, termina sem vencedor.
+#
+# O X verde carrega um token secreto sorteado a cada rodada, então não dá para
+# "adivinhar" o comando: só clicando.
+#
+#   /clique-rapido iniciar  » abre o evento (staff)  (também /clique)
+#   /clique-rapido cancelar » encerra sem vencedor (staff)
+
+display: '&2&lCLIQUE RÁPIDO'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&2'
+
+start-time: 3s
+duration: 20s
+# De quantos em quantos segundos a grade é REDESENHADA enquanto ninguém clica no X
+# verde — o chat anda rápido e a grade sobe. O X verde vai para outro lugar, mas o
+# das grades antigas continua valendo: quem voltar e clicar nele vence do mesmo jeito.
+# Vazio ("") ou "0s" = manda só uma vez, no começo.
+repeat: 10s
+
+# ── Grade ─────────────────────────────────────────────────────────────
+grid:
+  rows: 5
+  cols: 8
+  # Caractere de cada célula. Use algo que renderize na fonte do servidor.
+  symbol: X
+  # Cor dos X cinzas (isca) e do X verde (o certo).
+  gray-color: '&8'
+  green-color: '&a'
+  # Recuo no começo de cada linha da grade (alinha com o cabeçalho acima).
+  indent: '  '
+  # O que separa uma coluna da outra. Use "  " para espalhar mais a grade.
+  separator: ' '
+
+rewards:
+- eco give {player} 5000
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>       clicar executa o comando
+#   <click:suggest_command:/comando >texto</click>  clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>           o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas.
+#
+# ATENÇÃO no 'suggest_command': o espaço antes do '>' faz parte do comando
+# sugerido. É ele que deixa o cursor pronto para o jogador digitar só a resposta.
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens estão anotados em comentário acima de cada mensagem.
+messages:
+  
+  # Mostrado por /clique-rapido sem argumento. {command} = clique-rapido
+  help: |2
+
+      &8▎ {c}&lClique Rápido
+      &8▪ &fClique no &aX verde &fda grade quando o evento começar.
+      &r
+# {seconds} até a grade aparecer
+  announce: |2
+
+      &8▎ {c}Evento {c}&lClique Rápido {c}iniciando!
+      &8▎ &fPrepare o mouse e clique no &aX verde&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fRevela em: &7{seconds}s
+      &r
+# Cabeçalho enviado logo antes da grade. A grade em si é montada pelo plugin.
+  prompt: |2
+
+      &8▎ {c}Evento {c}&lClique Rápido {c}iniciado!
+      &8▶ &fClique no &aX verde&f:
+      &r
+# Cabeçalho do reenvio, a cada 'repeat' segundos enquanto ninguém acerta. Apague
+# este bloco para que o 'prompt' acima seja reenviado no lugar.
+  reminder: |2
+
+      &8▎ {c}Evento {c}&lClique Rápido {c}rolando - ninguém achou ainda!
+      &8▶ &fClique no &aX verde&f:
+      &r
+# Dica ao passar o mouse sobre um X. Deixe vazio para não ter.
+  click-hover: '&fClique!'
+  
+  wrong: '&cErrou! Esse não era o X verde.'
+  
+  # {player} achou o verde
+  winner: |2
+
+      &8▎ {c}Evento {c}&lClique Rápido&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &fachou o &aX verde &fprimeiro.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lClique Rápido {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Tempo esgotado - ninguém clicou.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lClique Rápido {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r

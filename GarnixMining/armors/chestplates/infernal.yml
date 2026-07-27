@@ -1,0 +1,20 @@
+item:
+# Infernal Chestplate
+  display: "&4Peitoral Infernal"
+  material: LEATHER_CHESTPLATE
+  color: "#AA0000"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 4.0
+    percent: true
+  gemas:
+    value: 4.0
+    percent: true
+  xp:
+    value: 4.0
+    percent: true

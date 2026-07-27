@@ -1,0 +1,17 @@
+material: POTION
+data: 8237
+display: '&aBooster de Máquina'
+flags:
+  - HIDE_POTION_EFFECTS
+lore:
+  - '&7Use este booster para ter'
+  - '&7seus ganhos aumentados.'
+  - ''
+  - ' &8Informações:'
+  - ' &8▪ &fTipo: &aCabeças'
+  - ' &8▪ &fBônus: &a{multiplier}'
+  - ' &8▪ &fDuração: &7{duration}'
+  - ''
+  - '&aOpções de uso:'
+  - '&fBotão Direito &8➟ &7Ativar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'

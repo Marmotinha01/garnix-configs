@@ -1,0 +1,187 @@
+# Evento — Quiz (chat)
+#
+# Uma pergunta é sorteada do banco e anunciada no chat. O primeiro jogador que
+# responder corretamente com /quiz <resposta> vence. Se ninguém acertar dentro da
+# duração, o evento termina sem vencedor e revela a resposta.
+#
+# É um evento de CHAT: não tem arena, não precisa de setup de local. Roda em
+# paralelo a um evento de arena e não conta no ranking (só na estatística do jogador).
+#
+#   /quiz iniciar   » abre o evento (staff)
+#   /quiz cancelar  » encerra sem vencedor (staff)
+#   /quiz <resposta> » palpite de um jogador
+
+display: '&b&lQUIZ'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&b'
+
+# Contagem antes de revelar a pergunta. "0s" (ou vazio) revela junto com o anúncio.
+start-time: 3s
+# Tempo máximo para alguém acertar. Vazio = sem limite (segue até acertarem ou a
+# staff cancelar).
+duration: 45s
+# De quantos em quantos segundos a pergunta é REENVIADA enquanto ninguém acerta —
+# o chat anda rápido e quem chegou no meio da rodada não viu o enunciado.
+# Vazio ("") ou "0s" = manda só uma vez, no começo. Nunca cai no segundo em que o
+# evento acaba: a última mensagem é sempre o resultado.
+repeat: 15s
+
+# Quantas rodadas uma pergunta fica de molho antes de poder ser sorteada de novo.
+# SEM esta chave vale o banco inteiro menos uma: uma pergunta só volta depois que
+# todas as outras já saíram. "no-repeat: 0" desliga e volta ao sorteio puramente
+# aleatório (que pode repetir na rodada seguinte). A memória é do servidor ligado —
+# reiniciar o servidor zera; o /eventos reload não.
+#no-repeat: 20
+
+# ── Rigor da comparação ───────────────────────────────────────────────
+#
+# As duas chaves são independentes: cada uma aperta um lado, e o que vale aqui
+# não mexe em nenhum outro evento. Sem a chave, vale false (o perdão). Espaço
+# sobrando nas pontas e espaço repetido no meio são sempre ignorados, nas duas.
+# Em corrija-o-acento a primeira vira true; em digite-rápido, as duas.
+#
+# FALSE: ignora o acento — "toquio" passa por "Tóquio".
+accent-sensitive: false
+# FALSE: ignora a caixa — "tóquio" passa por "Tóquio". Ninguém deve perder um
+# quiz por não ter apertado Shift no nome próprio.
+case-sensitive: false
+
+# ── Banco de perguntas ────────────────────────────────────────────────
+#
+# Uma pergunta por linha, no formato "Pergunta|resposta1|resposta2|...".
+# A PRIMEIRA resposta é a que aparece quando o evento revela a solução; as demais
+# são apenas formas aceitas (apelidos, grafias). Não use "|" dentro da pergunta.
+perguntas:
+  # ── Minecraft ──
+  # ── Conhecimentos gerais ──
+  - No Minecraft, qual item acende o portal do Nether?|isqueiro|flint and steel
+  - No Minecraft, qual mob explode quando chega perto de você?|creeper|o creeper
+  - No Minecraft, qual mob dropa pérola do End?|enderman|o enderman
+  - No Minecraft, quem é o mob final do jogo?|ender dragon|dragao do end|dragão do end|dragao
+  - No Minecraft, o que acontece com um zumbi quando o sol nasce?|pega fogo|queima|ele queima|ele pega fogo
+  - No Minecraft, qual item domestica um lobo?|osso|ossos|o osso
+  - No Minecraft, quantos blocos de ferro fazem um Golem de Ferro?|4|quatro
+  - No Minecraft, qual animal dá lã?|ovelha|a ovelha
+  - No Minecraft, quantos slots tem a hotbar?|9|nove
+  - No Minecraft, em qual dimensão tem uma fortaleza?|nether|no nether
+  - No Minecraft, o que se planta com sementes e vira pão?|trigo|o trigo
+  - No Minecraft, qual mob atira flechas?|skeleton|esqueleto|o esqueleto
+  - Qual é a capital do Japão?|Tóquio|toquio|tokyo
+  - Qual é a capital do Brasil?|Brasília|brasilia
+  - Qual planeta é conhecido como o Planeta Vermelho?|Marte|marte
+  - Qual é o maior planeta do Sistema Solar?|Júpiter|jupiter
+  - Quem pintou a Mona Lisa?|Leonardo da Vinci|da vinci|davinci|leonardo
+  - Quantos lados tem um hexágono?|6|seis
+  - Em que continente fica o Egito?|África|africa
+  - Qual é o maior oceano do mundo?|Pacífico|pacifico|oceano pacifico
+  - Quantos minutos tem uma hora?|60|sessenta
+  - Quantas cores tem o arco-íris?|7|sete
+  - Quantas patas tem uma aranha?|8|oito
+  - Qual é o maior animal do mundo?|baleia azul|baleia-azul|a baleia azul
+  - Em que país fica a Torre Eiffel?|França|franca|na franca
+  - Quantos jogadores de um time ficam em campo no futebol?|11|onze
+  - Qual é a moeda do Brasil?|real|o real
+  - Quem escreveu Dom Casmurro?|Machado de Assis|machado de assis|machado
+  - Qual é o rio mais extenso do Brasil?|Amazonas|rio amazonas|o amazonas
+  - Qual idioma se fala na Argentina?|espanhol|o espanhol
+  - Quantos dias tem um ano bissexto?|366
+
+# Comandos executados no console para o vencedor. {player} = nome do vencedor.
+rewards:
+- eco give {player} 5000
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>       clicar executa o comando
+#   <click:suggest_command:/comando >texto</click>  clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>           o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas.
+#
+# ATENÇÃO no 'suggest_command': o espaço antes do '>' faz parte do comando
+# sugerido. É ele que deixa o cursor pronto para o jogador digitar só a resposta.
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens estão anotados em comentário acima de cada mensagem.
+messages:
+  
+  # Mostrado por /quiz sem argumento. {command} = quiz (sem barra)
+  help: |2
+
+      &8▎ {c}&lQuiz
+      &8▪ &a/{command} <resposta> &8- &fSeja o primeiro a acertar a pergunta sorteada.
+      &r
+# {seconds} até revelar · {command} = /quiz
+  announce: |2
+
+      &8▎ {c}Evento {c}&lQuiz {c}iniciando!
+      &8▎ &fResponda clicando &a&l<click:suggest_command:/quiz ><hover:show_text:&fClique para já digitar &7/quiz &fno chat.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fRevela em: &7{seconds}s
+      &r
+# {prompt} = o que foi sorteado nesta rodada
+  prompt: |2
+
+      &8▎ {c}Evento {c}&lQuiz {c}iniciado!
+      &r
+      &8▶ &fPergunta: &7{prompt}
+      &r
+      &8▪ &fResponda clicando &a&l<click:suggest_command:/quiz ><hover:show_text:&fClique para já digitar &7/quiz &fno chat.>AQUI</hover></click>&f.
+      &r
+# Reenviada a cada 'repeat' segundos enquanto ninguém acerta. Apague este bloco
+# para que o 'prompt' acima seja reenviado no lugar. {prompt} = a pergunta sorteada
+  reminder: |2
+
+      &8▎ {c}Evento {c}&lQuiz {c}rolando - ninguém acertou ainda!
+      &r
+      &8▶ &fPergunta: &7{prompt}
+      &r
+      &8▪ &fResponda clicando &a&l<click:suggest_command:/quiz ><hover:show_text:&fClique para já digitar &7/quiz &fno chat.>AQUI</hover></click>&f.
+      &r
+  wrong: '&cResposta errada! Tente de novo.'
+  
+  # {player} acertou · {answer} a resposta certa
+  winner: |2
+
+      &8▎ {c}Evento {c}&lQuiz&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &facertou a pergunta primeiro.
+      &r
+      &8▪ &fResposta: &7{answer}
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+# {answer} a resposta que ninguém acertou
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lQuiz {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Tempo esgotado - ninguém acertou.
+      &8▪ &fResposta: &7{answer}
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lQuiz {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r

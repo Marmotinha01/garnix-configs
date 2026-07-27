@@ -1,0 +1,268 @@
+enabled: true
+
+# Modo de operação:
+#   enforce = segura recompensa + aplica punições (comportamento normal).
+#   observe = só alerta/loga/registra métricas, SEM segurar recompensa nem punir
+#             (ideal para calibrar os limiares num servidor cheio sem dano colateral).
+#
+# Está em `observe` de propósito: rode assim por alguns dias, acompanhe os alertas
+# e só volte para `enforce` quando os limiares abaixo pararem de pegar jogador
+# legítimo. Trocar para `enforce` sem calibrar traz os falsos positivos de volta.
+mode: observe
+
+# ── Sinal primário: taxa instantânea (blocos-por-segundo) ────────────
+# Blocos-por-segundo considerado suspeito. 24 dá margem sobre o colhedor denso
+# legítimo (~14-18 bps) e sobre rajada de rede; o médio/fraco fica com os sinais
+# independentes de taxa abaixo (envelope/farm-y), não com este.
+blocks-per-second: 24
+# Janela deslizante de detecção (segundos).
+detection-window-seconds: 3
+# Período de carência antes da checagem começar (segundos).
+grace-period-seconds: 2
+# Intervalo mínimo entre alertas do mesmo jogador (segundos).
+alert-cooldown-seconds: 5
+# Tempo após o qual os strikes expiram por inatividade (segundos).
+strike-expire-seconds: 180
+
+inspect-command: '/fazenda inspect {player}'  # Comando para inspecionar o suspeito (placeholder: {player}).
+
+# ── Camada de corroboração (sinais secundários) ──────────────────────
+# Pega o cheater sutil (abaixo do blocks-per-second) SEM aumentar falso-positivo:
+# só flagra quando pelo menos `min-signals` sinais independentes concordam ao
+# mesmo tempo. Deixe enabled:false para voltar ao detector puro de taxa.
+corroboration:
+  enabled: true
+  # Fallback (só vale quando scoring.enabled: false). Mantido por compatibilidade.
+  min-signals: 3
+  # Segurar recompensa também quando o flag vier só da corroboração (não da taxa).
+  withhold: false
+  # Histerese da corroboração ponderada. Na fazenda o colhedor legítimo segue o plano
+  # das plantas e é difícil separar por geometria, então aqui a histerese é mais longa
+  # (12 quebras / 900ms) para exigir persistência real antes de um strike.
+  min-consecutive-breaks: 12
+  min-consecutive-millis: 900
+  # Tick do servidor (ms) — usado pelo `cadence` (desligado aqui, ver abaixo).
+  tick-period-ms: 50
+
+  # ── Fusão ponderada ────────────────────────────────────────────────
+  # Cada sinal secundário tem um peso; flagra quando a soma >= score-threshold.
+  # Na fazenda o envelope-XZ e o farm-y são corroboradores (não flagram sozinhos):
+  # 0.6 + 0.6 = 1.2 >= 1.0, então é preciso os DOIS (alcance de área E dispersão
+  # vertical) concordarem — um colhedor honesto sobre relevo não dispara os dois.
+  scoring:
+    enabled: true
+    score-threshold: 1.0
+    weights:
+      timing: 0.6
+      sustained: 0.6
+      spatial: 0.4
+      envelope: 0.6
+      farm-y: 0.6
+
+  # S2 — automação. NÃO relaxar o gate: crop instant-break é tick-locked a ~50ms
+  # (colhedor denso parado), então relaxar o intervalo aqui geraria falso positivo.
+  timing:
+    enabled: true
+    min-breaks: 24
+    max-cv: 0.05
+    max-mean-interval-ms: 45
+  # S3 — anti-throttle: média sustentada numa janela longa.
+  sustained:
+    enabled: true
+    window-seconds: 60
+    blocks-per-second: 18      # colhedor denso legítimo chega a ~14-18
+  # S4 — área (2º maior eixo). DESLIGADO: a varredura serpentina legítima espalha
+  # nos dois eixos do plano, então este sinal é FP na fazenda. Usa-se o `envelope`.
+  spatial:
+    enabled: false
+    sample-size: 16
+    max-span: 12
+
+  # ── Sinais NOVOS (independentes de taxa) ─────────────────────────────
+  # S5 — CADENCE: DESLIGADO na fazenda. Crops quebram instantâneo, então a colheita
+  # é ritmada pelo MOVIMENTO (segurar-atacar correndo) — pode ser regular E off-grid
+  # ao mesmo tempo sem ser cheat. Ligar aqui traria falso positivo.
+  cadence:
+    enabled: false
+    standalone: false
+  # S6 — ENVELOPE (só XZ na fazenda) — alcance/área no plano. Corroborador (não
+  # flagra sozinho): precisa somar com o farm-y. 2R + caminhada na fileira → 15.
+  envelope:
+    enabled: true
+    standalone: false
+    window-ms: 600
+    axes: XZ
+    max-extent: 15
+    min-breaks: 4
+    min-span-ms: 300
+  # S7 — FARM_Y_SPREAD: dispersão vertical numa janela curta. Colheita legítima é 2D
+  # num Y que varia devagar com o relevo (~0-2 local); quebra em vários níveis de Y =
+  # área/volume. Tolerância 3 absorve o relevo pequeno da planície. Corroborador.
+  farm-y:
+    enabled: true
+    window-ms: 1000
+    max-y-spread: 4            # dispara em Y >= 5 (relevo pequeno passa)
+    min-breaks: 4
+    min-span-ms: 300
+
+# Buffer de evidência por suspeito (para /antinuker info). 0 desliga.
+evidence:
+  size: 10
+
+# ── Bypass / permissões ──────────────────────────────────────────────
+# Permite bypass para quem tem a permissão de bypass abaixo.
+bypass-enabled: false
+# Quem recebe os alertas de anti-nuker em jogo.
+staff-permission: farm.staff.antinuker
+# Quem ignora a detecção (só se bypass-enabled estiver true).
+bypass-permission: farm.antinuker.bypass
+
+# ── Punições ─────────────────────────────────────────────────────────
+punishments-enabled: true
+# Comando executado pela ação EJECT (o {player} é executor). Padrão: spawn.
+eject-command: spawn
+# Ações por contagem de strike. EJECT = executa o eject-command,
+# COMMAND:cmd = roda o comando no console. Placeholder: {player}.
+#
+# O banimento automático saiu daqui de propósito: com o cooldown de alerta em 5s,
+# 20 strikes são ~100s de colheita contínua sinalizada — um único surto de falso
+# positivo bastava para IP-banir um jogador honesto. Enquanto os limiares não
+# estiverem calibrados, a punição automática é só a ejeção (reversível).
+actions:
+  '25': EJECT
+# Reative só depois de calibrar, e de preferência num strike bem alto:
+#  '60': COMMAND:banip -s {player} 30m Colheita suspeita
+
+# ── Alerta da staff ──────────────────────────────────────────────────
+# Placeholders (valem na linha e no hover):
+#   {player}, {bps}, {peak_bps}, {sustained}, {cv}, {span}, {location},
+#   {strikes}, {reasons}, {mode}, {ping}, {tps}, {brand}, {version}
+# {ping}/{tps} vêm do Vulcan (se instalado), senão do NMS; {brand}/{version} só do
+# Vulcan (mostram 'n/a' sem ele).
+#
+# Linha única enviada no chat da staff. Passar o mouse mostra o `alert-hover`
+# e clicar executa o `inspect-command` lá de cima.
+# Deixe vazio ('') para desligar o alerta em jogo — o log no console, o webhook
+# e as punições continuam funcionando normalmente.
+alert-line: '&4[AntiNuker] &e{player} &7detectado em &aFazenda &8» &7vl&8: &c{strikes} &8| &7bps&8: &c{bps} &8| &7ping&8: &c{ping}ms'
+
+# Detalhes mostrados ao passar o mouse na linha acima.
+alert-hover:
+- '&8» &7Suspeito &8- &e{player}'
+- '&8» &7Cliente &8- &f{brand} &7({version})'
+- '&8» &7Detecção &8- &f{reasons}'
+- '&8» &7Ocorrência &8- &f{strikes}ª'
+- '&8» &7BPS &8- &f{bps} &8(&7pico &f{peak_bps}&8)'
+- '&8» &7Sustentado &8- &f{sustained}'
+- '&8» &7Ritmo (cv) &8- &f{cv}'
+- '&8» &7Área (span) &8- &f{span}'
+- '&8» &7Local &8- &f{location}'
+- '&8» &7Latência &8- &f{ping}ms'
+- '&8» &7Servidor &8- &fTPS {tps}'
+- ''
+- '&c[!] Pode ser um falso positivo.'
+- ''
+- '&8» &eClique para inspecionar &b{player}&e.'
+
+# Webhook do Discord para os alertas de anti-nuker.
+# Qualquer propriedade abaixo pode ser removida para omitir aquele campo.
+# Placeholders: {player}, {bps}, {peak_bps}, {sustained}, {cv}, {span}, {location}, {strikes}, {reasons}, {mode}, {ping}, {tps}, {brand}, {version}
+# Cores aceitam #HEX ou decimal.
+webhook:
+  enabled: true
+  # Cole a URL do webhook do Discord aqui. O envio é pulado enquanto estiver vazio.
+  url: ''
+  bot-name: '' # Deixe vazio se já estiver configurado no webhook do canal.
+  bot-avatar: '' # Deixe vazio se já estiver configurado no webhook do canal.
+  # Imagem do embed ({player} é substituído). Padrão: avatar do jogador.
+  avatar-image: 'https://minotar.net/avatar/{player}/100.png'
+  # Padrão SimpleDateFormat usado para renderizar o placeholder {time} nos embeds.
+  timestamp-format: "dd/MM/yyyy 'às' HH:mm:ss"
+  embeds:
+    strike:
+      color: '#FF5555'
+      title: '**{player}**'
+      description: '> {mode}Pode estar colhendo de **Nuker**! `{reasons}`'
+      fields:
+      - name: BPS
+        value: '`{bps}`'
+        inline: true
+      - name: Sustentado
+        value: '`{sustained}`'
+        inline: true
+      - name: Pico BPS
+        value: '`{peak_bps}`'
+        inline: true
+      - name: Ritmo (CV)
+        value: '`{cv}`'
+        inline: true
+      - name: Área
+        value: '`{span}`'
+        inline: true
+      - name: Local
+        value: '`{location}`'
+        inline: true
+      - name: Ocorrências
+        value: '`{strikes}`'
+        inline: true
+      footer:
+        text: Rede Garnix • {time}
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+    eject:
+      color: '#FF5555'
+      title: '**{player}**'
+      description: '> Foi ejetado da fazenda por suspeita de **Nuker**! `{reasons}`'
+      fields:
+      - name: BPS
+        value: '`{bps}`'
+        inline: true
+      - name: Sustentado
+        value: '`{sustained}`'
+        inline: true
+      - name: Pico BPS
+        value: '`{peak_bps}`'
+        inline: true
+      - name: Ritmo (CV)
+        value: '`{cv}`'
+        inline: true
+      - name: Área
+        value: '`{span}`'
+        inline: true
+      - name: Local
+        value: '`{location}`'
+        inline: true
+      - name: Ocorrências
+        value: '`{strikes}`'
+        inline: true
+      footer:
+        text: Rede Garnix • {time}
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+    temp-ban:
+      color: '#FF5555'
+      title: '**{player}**'
+      description: '> Foi banido por suspeita de **Nuker**! `{reasons}`'
+      fields:
+      - name: BPS
+        value: '`{bps}`'
+        inline: true
+      - name: Sustentado
+        value: '`{sustained}`'
+        inline: true
+      - name: Pico BPS
+        value: '`{peak_bps}`'
+        inline: true
+      - name: Ritmo (CV)
+        value: '`{cv}`'
+        inline: true
+      - name: Área
+        value: '`{span}`'
+        inline: true
+      - name: Local
+        value: '`{location}`'
+        inline: true
+      - name: Ocorrências
+        value: '`{strikes}`'
+        inline: true
+      footer:
+        text: Rede Garnix • {time}
+        icon-url: https://i.imgur.com/0fFefDs.jpeg

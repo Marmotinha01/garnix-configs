@@ -1,0 +1,222 @@
+# ─────────────────────────────────────────────────────────────────────
+# Pickaxe skins
+# ─────────────────────────────────────────────────────────────────────
+# Each skin can declare:
+#   display   — colored display name
+#   material  — visual pickaxe material inside the mine
+#   icon      — menu icon (supports texture: and material:)
+#   bonuses   — per-provider bonuses (value + percent flag)
+#
+# Put {bonus} on an icon lore line and it expands to one line per entry of that
+# skin's 'bonuses' table (colour and name come from the currency), so a
+# percentage is written once — in 'bonuses' — instead of by hand. The line
+# layout is 'bonus-format' below (overrides config.yml's bonus-lore-format).
+#
+# The "default" skin is given to new players.
+# Skins are unlocked via items (created with /mina giveskin).
+# Players can remove unlocked skins back to item form to trade them.
+# ─────────────────────────────────────────────────────────────────────
+
+unlock-lore:
+- ''
+- '&aClique para desbloquear.'
+
+# {bonus} line layout for skins (see config.yml → bonus-lore-format for tokens).
+bonus-format: "  &8► {color}+{value}{unit} {display}"
+
+skins:
+  default:
+    display: '&eSkin de Madeira'
+    material: WOOD_PICKAXE
+    icon:
+      material: WOOD_PICKAXE
+      display: '&eSkin de Madeira'
+      lore:
+      - '&cSem bônus.'
+      flags:
+      - HIDE_ATTRIBUTES
+  
+  pedra:
+    display: '&7Skin de Pedra'
+    material: STONE_PICKAXE
+    icon:
+      material: STONE_PICKAXE
+      display: '&7Skin de Pedra'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 1.0
+        percent: true
+      gemas:
+        value: 0.5
+        percent: true
+  
+  ferro:
+    display: '&fSkin de Ferro'
+    material: IRON_PICKAXE
+    icon:
+      material: IRON_PICKAXE
+      display: '&fSkin de Ferro'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 2.0
+        percent: true
+      gemas:
+        value: 1.0
+        percent: true
+  
+  ouro:
+    display: '&6Skin de Ouro'
+    material: GOLD_PICKAXE
+    icon:
+      material: GOLD_PICKAXE
+      display: '&6Skin de Ouro'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 3.0
+        percent: true
+      gemas:
+        value: 1.5
+        percent: true
+  
+  diamante:
+    display: '&bSkin de Diamante'
+    material: DIAMOND_PICKAXE
+    icon:
+      material: DIAMOND_PICKAXE
+      display: '&bSkin de Diamante'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 4.0
+        percent: true
+      gemas:
+        value: 2.5
+        percent: true
+  
+  esmeralda:
+    display: '&2Skin de Esmeralda'
+    material: DIAMOND_PICKAXE
+    forgeable: false
+    icon:
+      material: DIAMOND_PICKAXE
+      display: '&2Skin de Esmeralda'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 5.0
+        percent: true
+      gemas:
+        value: 3.5
+        percent: true
+  
+  jade:
+    display: '&aSkin de Jade'
+    material: DIAMOND_PICKAXE
+    forgeable: false
+    icon:
+      material: DIAMOND_PICKAXE
+      display: '&aSkin de Jade'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 6.5
+        percent: true
+      gemas:
+        value: 4.5
+        percent: true
+  
+  rubi:
+    display: '&cSkin de Rubi'
+    material: DIAMOND_PICKAXE
+    forgeable: false
+    icon:
+      material: DIAMOND_PICKAXE
+      display: '&cSkin de Rubi'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 8.0
+        percent: true
+      gemas:
+        value: 6.0
+        percent: true
+  
+  obsidiana:
+    display: '&8Skin de Obsidiana'
+    material: DIAMOND_PICKAXE
+    forgeable: false
+    icon:
+      material: DIAMOND_PICKAXE
+      display: '&8Skin de Obsidiana'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 10.0
+        percent: true
+      gemas:
+        value: 7.5
+        percent: true
+  
+  netherita:
+    display: '&4Skin de Netherita'
+    material: DIAMOND_PICKAXE
+    forgeable: false
+    icon:
+      material: DIAMOND_PICKAXE
+      display: '&4Skin de Netherita'
+      lore:
+      - ''
+      - ' &fBônus:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 12.5
+        percent: true
+      gemas:
+        value: 10.0
+        percent: true

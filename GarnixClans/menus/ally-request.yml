@@ -1,0 +1,31 @@
+title: Responder Aliança
+rows: 3
+
+accept-icon:
+  slot: 11
+  material: INK_SACK
+  data: 10
+  display: '&aAceitar Aliança'
+  lore:
+  - '&7Firma a aliança com o'
+  - '&7clan &r{tag}&7.'
+  - ''
+  - '&aClique para aceitar.'
+
+deny-icon:
+  slot: 15
+  material: INK_SACK
+  data: 1
+  display: '&cRecusar Aliança'
+  lore:
+  - '&7Descarta a solicitação do'
+  - '&7clan &r{tag}&7.'
+  - ''
+  - '&cClique para recusar.'
+
+back-icon:
+  slot: 22
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

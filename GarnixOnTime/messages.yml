@@ -1,0 +1,14 @@
+command:
+  players-only: '&cApenas jogadores podem abrir o menu de tempo online.'
+  time-other: '&7Tempo online de &f{player}&7: &e{time}&7.'
+  never-joined: '&cO jogador &f{player} &7nunca entrou no servidor.'
+
+milestone:
+  received: '&aVocê atingiu &f{reward} &7(&e{time}&7)! As recompensas foram enviadas ao seu &f/correio&7.'
+
+admin:
+  reloaded: '&aConfigurações recarregadas com sucesso!'
+  invalid-duration: '&cTempo inválido: &f{input}&7. Use algo como &f2h30m&7.'
+  time-added: '&aAdicionado &e{time} &7ao tempo online de &f{player}&7.'
+  time-set: '&aTempo online de &f{player} &7definido para &e{time}&7.'
+  time-reset: '&aTempo online e marcos de &f{player} &7foram resetados.'

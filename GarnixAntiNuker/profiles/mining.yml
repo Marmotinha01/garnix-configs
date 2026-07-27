@@ -1,0 +1,308 @@
+enabled: true
+
+# Modo de operação:
+#   enforce = segura recompensa + aplica punições (comportamento normal).
+#   observe = só alerta/loga/registra métricas, SEM segurar recompensa nem punir
+#             (ideal para calibrar os limiares num servidor cheio sem dano colateral).
+#
+# Calibrado com contas de teste (SmokyTrain legítimo + JubileuMaluco nuker): RATE,
+# SUSTAINED, CADENCE, REACH e WALL_BYPASS deram ZERO falso positivo, e o REACH pegou o
+# nuker de range alto. MESMO ASSIM fica em `observe` de propósito até recalibrar com o
+# SERVIDOR ABERTO (jogadores reais, skill/latência variados). Quando abrir: rode uns dias
+# em observe, confira nos logs/alertas que nenhum minerador honesto é flagrado, e só então
+# troque para `enforce` (aí o `withhold: true` abaixo passa a valer). NOTA: o nuker
+# "legit-mode" (dentro do alcance, na visão, ~20bps travado no tick) é indistinguível de
+# minerador honesto só com posição/tempo — fica como piso aceito, revisado pela staff.
+mode: observe
+
+# ── Sinal primário: taxa instantânea (blocos-por-segundo) ────────────
+# Blocos-por-segundo considerado suspeito. 30 pega o nuker forte; o médio/fraco
+# fica com os sinais independentes de taxa abaixo (cadence/envelope), não com este.
+blocks-per-second: 30
+# Janela deslizante de detecção (segundos).
+detection-window-seconds: 3
+# Período de carência antes da checagem começar (segundos).
+grace-period-seconds: 2
+# Intervalo mínimo entre alertas do mesmo jogador (segundos).
+alert-cooldown-seconds: 5
+# Tempo após o qual os strikes expiram por inatividade (segundos).
+strike-expire-seconds: 180
+
+inspect-command: '/mina inspect {player}'  # Comando para inspecionar o suspeito (placeholder: {player}).
+
+# ── Camada de corroboração (sinais secundários) ──────────────────────
+# Pega o cheater sutil (abaixo do blocks-per-second) SEM aumentar falso-positivo:
+# só flagra quando pelo menos `min-signals` sinais independentes concordam ao
+# mesmo tempo. Deixe enabled:false para voltar ao detector puro de taxa.
+corroboration:
+  enabled: true
+  # Fallback (só vale quando scoring.enabled: false). Mantido por compatibilidade.
+  min-signals: 3
+  # Segurar recompensa também quando o flag vier só da corroboração/sinal físico (não da
+  # taxa). Só tem efeito em `enforce` — em `observe` NADA é segurado, independente disto.
+  # Deixado `true` porque REACH/WALL/CADENCE são conclusivos e deram 0 FP: quando você
+  # enforçar, eles já negam o ganho do cheater. Volte para `false` se quiser que o primeiro
+  # enforce só alerte/EJETE sem segurar recompensa.
+  withhold: true
+  # Histerese da corroboração ponderada: por quantas quebras SEGUIDAS e por quanto
+  # tempo REAL a condição precisa se manter antes de virar flag. O tempo real é o que
+  # anula o travo de rede (a fila destrava e despeja tudo em poucos ms — passa na
+  # contagem mas não atravessa o tempo). Suba se ainda vier falso positivo.
+  min-consecutive-breaks: 10
+  min-consecutive-millis: 500
+  # Tick do servidor (ms). O sinal `cadence` mede o quão longe o ritmo está do grid
+  # do tick — se o seu servidor roda cronicamente abaixo de 20 TPS, ajuste aqui.
+  tick-period-ms: 50
+
+  # ── Fusão ponderada ────────────────────────────────────────────────
+  # Em vez de "N sinais precisam concordar" (que deixava o nuker médio invisível),
+  # cada sinal secundário tem um PESO e flagra quando a soma >= score-threshold.
+  # Assim um sinal forte não precisa esperar dois fracos concordarem. Deixe
+  # enabled:false para voltar ao caminho antigo de contagem (min-signals).
+  scoring:
+    enabled: true
+    score-threshold: 1.0
+    weights:
+      timing: 0.6
+      sustained: 0.6
+      spatial: 0.4
+      envelope: 0.6   # só entra no score quando envelope.standalone: false (fazenda)
+      farm-y: 0.6
+
+  # S2 — automação: intervalo entre quebras robótico (baixa variação) e rápido.
+  # (Continua exigindo ~22+ bps pelo gate de intervalo; é o sinal do nuker FORTE.)
+  timing:
+    enabled: true
+    min-breaks: 24
+    max-cv: 0.05               # coeficiente de variação abaixo disto = robótico
+    max-mean-interval-ms: 45   # e só se o intervalo médio for <= isto (abaixo do tick)
+  # S3 — anti-throttle: média sustentada numa janela longa.
+  sustained:
+    enabled: true
+    window-seconds: 60
+    blocks-per-second: 24      # média sustentada acima disto = suspeito
+  # S4 — área (2º maior eixo). DESLIGADO: no cuboid compactado o minerador honesto
+  # espalha nos 3 eixos re-mirando dentro do alcance, então este sinal é FP aqui.
+  # Foi substituído pelo `envelope`, que usa janela de TEMPO em vez de contagem.
+  spatial:
+    enabled: false
+    sample-size: 16
+    max-span: 14
+
+  # ── Sinais NOVOS (independentes de taxa — pegam o nuker médio/fraco) ──
+  # S5 — CADENCE: ritmo robótico E fora do grid do tick. O servidor completa quebras
+  # no tick (~50ms), então o intervalo de um jogador legítimo cai em múltiplos de
+  # 50ms; um delay-nuker dorme um valor fixo (ex. 120/175ms) que fica ENTRE as linhas
+  # do tick e trava ali. Off-grid + CV baixo é impossível pra jogador tick-locked.
+  # Pega o "delay nuker" de 3-18 bps que o `timing` acima ignora. Flagra sozinho
+  # (standalone) com histerese própria mais estrita, porque é fisicamente conclusivo.
+  cadence:
+    enabled: true
+    standalone: true
+    min-breaks: 24             # aquecimento
+    min-mean-interval-ms: 55   # ACIMA do tick de 50ms → exclui instamine legítimo
+    max-mean-interval-ms: 300  # até ~3.3 bps ainda conta
+    max-cv: 0.06               # firewall: confirme no log de `cv` legítimo antes de enforce
+    off-tick-ms: 12            # distância mínima do múltiplo de tick (legítimo mede ~0-6)
+    min-consecutive-breaks: 12
+    min-consecutive-millis: 900
+  # S6 — ENVELOPE: DESLIGADO na mina. A calibragem com jogador legítimo provou que
+  # aqui o sinal é INVERTIDO: quem minera honesto SE MOVE (cava pra baixo e cai,
+  # sprinta, muda de direção), então o envelope de 600ms dele estoura 17-22 — enquanto
+  # o nuker "legit-mode" fica PARADO quebrando em volta dentro do alcance, com envelope
+  # 3-8. Ou seja, ligado ele pegava o minerador honesto (6 falsos positivos [Alcance])
+  # e deixava o nuker passar. Só reative com max-extent bem alto (~28+) se quiser pegar
+  # nuker de ÁREA LARGA, ciente do risco de FP em quem cai minerando pra baixo.
+  envelope:
+    enabled: false
+    standalone: true
+    window-ms: 600
+    axes: XYZ
+    max-extent: 28
+    min-breaks: 4
+    min-span-ms: 300
+    min-consecutive-breaks: 10
+    min-consecutive-millis: 500
+  # ── Sinais FÍSICOS (computados pelo GarnixMining, que é dono do estado da mina) ──
+  # Pegam o nuker "legit-mode" e o de área (esfera) que ficam no piso dos sinais de
+  # tempo/posição: eles são fisicamente impossíveis pra jogador honesto. Contagem em
+  # janela (não streak) porque o nuker intercala quebra exposta e enterrada.
+  #
+  # S8 — REACH: quebrou bloco além do alcance físico (o `Range` do cheat). O host mede
+  # a distância olho→bloco; acima de `max-distance` conta uma violação.
+  reach:
+    enabled: true
+    standalone: true
+    max-distance: 6.5          # alcance legítimo ~4.5-5; 6.5 dá folga
+    window-ms: 3000
+    min-count: 3               # nº de violações na janela para flagar
+  # S9 — WALL_BYPASS: quebrou bloco ENTERRADO (sem nenhuma face exposta a ar/quebrado) —
+  # o `Wall Range` e o `Area Mode: Sphere` do cheat. Impossível pra quem minera honesto
+  # (ele carva a superfície). O host calcula pelo SharedMineState.
+  wall:
+    enabled: true
+    standalone: true
+    window-ms: 3000
+    min-count: 3
+
+# Buffer de evidência por suspeito (para /antinuker info). 0 desliga.
+evidence:
+  size: 10
+
+# ── Bypass / permissões ──────────────────────────────────────────────
+# Permite bypass para quem tem a permissão de bypass abaixo.
+bypass-enabled: false
+# Quem recebe os alertas de anti-nuker em jogo.
+staff-permission: mining.staff.antinuker
+# Quem ignora a detecção (só se bypass-enabled estiver true).
+bypass-permission: mining.antinuker.bypass
+
+# ── Punições ─────────────────────────────────────────────────────────
+punishments-enabled: true
+# Comando executado pela ação EJECT (o {player} é executor). Padrão: spawn.
+eject-command: spawn
+# Ações por contagem de strike. EJECT = executa o eject-command,
+# COMMAND:cmd = roda o comando no console. Placeholder: {player}.
+#
+# O banimento automático saiu daqui de propósito. Com o cooldown de alerta em 5s,
+# 20 strikes são ~100s de mineração contínua sinalizada — ou seja, um único surto
+# de falso positivo bastava para IP-banir um jogador honesto. Enquanto os limiares
+# não estiverem calibrados, a punição automática é só a ejeção (reversível) e o
+# banimento fica como decisão da staff, depois de olhar o /antinuker info.
+actions:
+  '25': EJECT
+# Reative só depois de calibrar, e de preferência num strike bem alto:
+#  '60': COMMAND:banip -s {player} 30m Mineração suspeita
+# ── Alerta da staff ──────────────────────────────────────────────────
+# Placeholders (valem na linha e no hover):
+#   {player}, {bps}, {peak_bps}, {sustained}, {cv}, {span}, {location},
+#   {strikes}, {reasons}, {mode}, {ping}, {tps}, {brand}, {version}
+# {ping}/{tps} vêm do Vulcan (se instalado), senão do NMS; {brand}/{version} só do
+# Vulcan (mostram 'n/a' sem ele).
+#
+# Linha única enviada no chat da staff. Passar o mouse mostra o `alert-hover`
+# e clicar executa o `inspect-command` lá de cima.
+# Deixe vazio ('') para desligar o alerta em jogo — o log no console, o webhook
+# e as punições continuam funcionando normalmente.
+alert-line: '&4[AntiNuker] &e{player} &7detectado em &eMineração &8» &7vl&8: &c{strikes} &8| &7bps&8: &c{bps} &8| &7ping&8: &c{ping}ms'
+
+# Detalhes mostrados ao passar o mouse na linha acima.
+alert-hover:
+- '&8» &7Suspeito &8- &e{player}'
+- '&8» &7Cliente &8- &f{brand} &7({version})'
+- '&8» &7Detecção &8- &f{reasons}'
+- '&8» &7Ocorrência &8- &f{strikes}ª'
+- '&8» &7BPS &8- &f{bps} &8(&7pico &f{peak_bps}&8)'
+- '&8» &7Sustentado &8- &f{sustained}'
+- '&8» &7Ritmo (cv) &8- &f{cv}'
+- '&8» &7Área (span) &8- &f{span}'
+- '&8» &7Local &8- &f{location}'
+- '&8» &7Latência &8- &f{ping}ms'
+- '&8» &7Servidor &8- &fTPS {tps}'
+- ''
+- '&c[!] Pode ser um falso positivo.'
+- ''
+- '&8» &eClique para inspecionar &b{player}&e.'
+
+# Webhook do Discord para os alertas de anti-nuker.
+# Qualquer propriedade abaixo pode ser removida para omitir aquele campo.
+# Placeholders: {player}, {bps}, {peak_bps}, {sustained}, {cv}, {span}, {location}, {strikes}, {reasons}, {mode}, {ping}, {tps}, {brand}, {version}
+# Cores aceitam #HEX ou decimal.
+webhook:
+  enabled: true
+  # Cole a URL do webhook do Discord aqui. O envio é pulado enquanto estiver vazio.
+  url: ''
+  bot-name: '' # Deixe vazio se já estiver configurado no webhook do canal.
+  bot-avatar: '' # Deixe vazio se já estiver configurado no webhook do canal.
+  # Imagem do embed ({player} é substituído). Padrão: avatar do jogador.
+  avatar-image: 'https://minotar.net/avatar/{player}/100.png'
+  # Padrão SimpleDateFormat usado para renderizar o placeholder {time} nos embeds.
+  timestamp-format: "dd/MM/yyyy 'às' HH:mm:ss"
+  embeds:
+    strike:
+      color: '#FF5555'
+      title: '**{player}**'
+      description: '> {mode}Pode estar minerando de **Nuker**! `{reasons}`'
+      fields:
+      - name: BPS
+        value: '`{bps}`'
+        inline: true
+      - name: Sustentado
+        value: '`{sustained}`'
+        inline: true
+      - name: Pico BPS
+        value: '`{peak_bps}`'
+        inline: true
+      - name: Ritmo (CV)
+        value: '`{cv}`'
+        inline: true
+      - name: Área
+        value: '`{span}`'
+        inline: true
+      - name: Local
+        value: '`{location}`'
+        inline: true
+      - name: Ocorrências
+        value: '`{strikes}`'
+        inline: true
+      footer:
+        text: Rede Garnix • {time}
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+    eject:
+      color: '#FF5555'
+      title: '**{player}**'
+      description: '> Foi ejetado da mina por suspeita de **Nuker**! `{reasons}`'
+      fields:
+      - name: BPS
+        value: '`{bps}`'
+        inline: true
+      - name: Sustentado
+        value: '`{sustained}`'
+        inline: true
+      - name: Pico BPS
+        value: '`{peak_bps}`'
+        inline: true
+      - name: Ritmo (CV)
+        value: '`{cv}`'
+        inline: true
+      - name: Área
+        value: '`{span}`'
+        inline: true
+      - name: Local
+        value: '`{location}`'
+        inline: true
+      - name: Ocorrências
+        value: '`{strikes}`'
+        inline: true
+      footer:
+        text: Rede Garnix • {time}
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+    temp-ban:
+      color: '#FF5555'
+      title: '**{player}**'
+      description: '> Foi banido por suspeita de **Nuker**! `{reasons}`'
+      fields:
+      - name: BPS
+        value: '`{bps}`'
+        inline: true
+      - name: Sustentado
+        value: '`{sustained}`'
+        inline: true
+      - name: Pico BPS
+        value: '`{peak_bps}`'
+        inline: true
+      - name: Ritmo (CV)
+        value: '`{cv}`'
+        inline: true
+      - name: Área
+        value: '`{span}`'
+        inline: true
+      - name: Local
+        value: '`{location}`'
+        inline: true
+      - name: Ocorrências
+        value: '`{strikes}`'
+        inline: true
+      footer:
+        text: Rede Garnix • {time}
+        icon-url: https://i.imgur.com/0fFefDs.jpeg

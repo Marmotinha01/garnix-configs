@@ -1,0 +1,258 @@
+# Evento — Batata Quente
+#
+# Alguns jogadores ficam marcados com uma batata e um relógio corre. Quem estiver
+# com ela na mão quando o tempo zerar explode e é eliminado. Passa-se a batata
+# clicando (botão esquerdo OU direito) em outro jogador.
+#
+# Ninguém toma dano neste evento: o clique só serve para passar a batata.
+#
+# Locais necessários: lobby, join, exit. O cabin (camarote) é opcional.
+#   /batata-quente setloc lobby|join|exit|cabin  » espera, arena, saída e camarote (opcional)
+#
+# O comando também atende por /batataquente e /batata.
+
+display: '&6Batata Quente'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&6'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_batata-quente%. Deixe vazio para o evento não dar tag.
+tag: '&6[Batatudo]'
+
+join-time: 1m
+start-time: 5s
+duration: ''
+
+min-players: 2
+max-players: 0
+
+# ── Batatas ───────────────────────────────────────────────────────────
+#
+# Quantos jogadores VIVOS cada batata representa. Com 10, um evento de 25
+# jogadores começa com 2 batatas; conforme o pessoal explode a conta é refeita
+# no início de cada rodada, então o número cai sozinho até sobrar uma só.
+#
+# A conta é sempre limitada a (vivos - 1): uma rodada nunca marca todo mundo,
+# senão o evento acabaria sem vencedor.
+players-per-potato: 10
+
+# ── Relógio ───────────────────────────────────────────────────────────
+#
+# Cada rodada é mais curta que a anterior, até o piso. Deixe 'round-decrement'
+# vazio ou em "0s" para o tempo ser sempre o mesmo.
+round-time: 30s
+round-decrement: 3s
+min-round-time: 10s
+
+# Quanto tempo o jogador precisa segurar a batata antes de poder passá-la.
+# É o que evita o ping-pong entre duas pessoas clicando o mais rápido possível.
+# Devolver para quem acabou de te passar é permitido — só precisa respeitar isto.
+pass-cooldown-millis: 1500
+
+# ── Explosão ──────────────────────────────────────────────────────────
+#
+# Partícula e som são tocados separadamente: partícula não emite som nenhum.
+# É só efeito visual — não quebra bloco, não dá dano e não empurra ninguém.
+explosion:
+  particle: EXPLOSION_HUGE
+  # Distância (em blocos) até onde a partícula é enviada aos jogadores.
+  radius: 48
+  sound: EXPLODE
+  volume: 1.0
+  pitch: 1.0
+
+# ── Armadura que amadurece ────────────────────────────────────────────
+#
+# Só quem está com a batata veste armadura, e a cor vai mudando conforme o
+# relógio desce — dá para ver de longe quem está prestes a explodir.
+#
+# As chaves são a PORCENTAGEM da rodada já decorrida (0 = acabou de receber,
+# 100 = vai explodir agora). Tudo entre duas paradas é interpolado, então
+# poucas entradas já descrevem um degradê contínuo.
+ripen:
+  enabled: true
+  # Nome exibido nas peças ("" para não mostrar nada).
+  display: '&6&lBATATA QUENTE'
+  stops:
+    '0': '#55FF55' # verde — acabou de pegar
+    '50': '#FFFF55' # amarelo — metade do tempo
+    '85': '#FF8800' # laranja — corre
+    '100': '#FF0000' # vermelho — vai explodir
+  # De quantos em quantos ticks a cor é recalculada (20 ticks = 1 segundo).
+  every-ticks: 5
+
+# Slot da hotbar em que o jogador fica preso enquanto joga: o scroll do mouse é
+# recusado e a roda volta sozinha para cá. O loadout deste evento é um item só,
+# então rolar a roda — de propósito ou sem querer — só serviria para o portador
+# esconder a batata da própria mão.
+#
+# Deixe vazio ou apague a chave para liberar o scroll. Valores válidos: 0 a 8.
+hotbar-lock: 0
+
+# O kit NÃO é entregue no início: só quem recebe a batata é vestido, e ele é
+# recolhido quando ela é passada adiante.
+#
+# NÃO adicione uma seção 'armor' aqui. A armadura deste evento é colorida a cada
+# tick pelo plugin, e o kit preserva justamente as peças sobre as quais ele não
+# tem opinião — declarar 'armor' apagaria o degradê a cada passe.
+kit:
+  items:
+    potato:
+      slot: 0
+      material: BAKED_POTATO
+      display: '&6&lBATATA QUENTE'
+      lore:
+      - '&7Clique em outro jogador para passar!'
+      - ''
+      - '&cSe explodir na sua mão, você é eliminado.'
+      flags:
+      - HIDE_ATTRIBUTES
+
+# Comandos executados no console para o vencedor. {player} = nome do vencedor.
+rewards:
+- eco give {player} 5000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&a&lVALENDO!'
+    subtitle: '&7Passe a batata antes que ela exploda!'
+  potato:
+    title: '&c&lBATATA QUENTE!'
+    subtitle: '&7Clique em alguém para passar!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/batata-quente entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lBatata Quente {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/batata-quente entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+# {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lBatata Quente {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+# {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lBatata Quente {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+# {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lBatata Quente&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &fficou com a última batata sem explodir.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+      
+
+  # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
+  # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  walkover: |2
+
+      &8▎ {c}Evento {c}&lBatata Quente&f, {c}vitória por W.O.!
+      &r
+      &8▶ &7{player} &fficou sem ninguém para passar a batata.
+      &r
+      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &r
+      
+# ── Eliminações ─────────────────────────────────────────────────────
+# Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+# {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lBatata Quente {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém sobrou para vencer.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lBatata Quente {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+# {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lBatata Quente {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+# ── Actionbar ───────────────────────────────────────────────────────
+# Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  
+  # ── Batata ──────────────────────────────────────────────────────────
+  # {round} a rodada · {potatoes} batatas em jogo · {seconds} no relógio
+  round-start: '&fRodada &7{round}&f! &c{potatoes} &fbatata(s) em jogo — &7{seconds}s &fno relógio.'
+  potato-lost: '&7{player} &fsaiu do evento com a última batata! Sorteando de novo...'
+  # {player} o outro lado do passe
+  pass-sent: '&aVocê passou a batata para &7{player}&a!'
+  pass-received: '&c&lVOCÊ ESTÁ COM A BATATA! &f(de &7{player}&f)'
+  pass-occupied: '&c{player} já está com uma batata!'
+  pass-cooldown: '&cSegure a batata mais &7{seconds}s &cantes de passar.'
+  # Actionbar do relógio. Não aceita clique.
+  timer-actionbar: '&c&l{seconds}s &faté explodir &8• &7{potatoes} &fbatata(s) em jogo'
+  timer-actionbar-holder: '&4&lVOCÊ ESTÁ COM A BATATA! &c&l{seconds}s &f» passe!'

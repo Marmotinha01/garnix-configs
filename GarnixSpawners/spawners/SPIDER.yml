@@ -1,0 +1,92 @@
+order: 10
+
+type: SPIDER
+
+delay: "10s"
+
+translated: "Aranha"
+display: "&c{translated}"
+
+texture: "c87a96a8c23b83b32a73df051f6b84c2ef24d25ba4190dbe74f11138629b5aef"
+
+release: "05/03/2025 13:00"
+
+rank: "&c[Rank 10]"
+
+permissions:
+  buy: "spawner.buy.spider"
+  kill: "spawner.kill.spider"
+
+costs:
+  coins: 5000000000
+
+drops:
+  coins:
+    chance: 100
+    amount: 5000000000
+  gems:
+    chance: 25
+    amount: 50
+
+spawner-item:
+  material: MOB_SPAWNER
+  display: "&aSpawner de {translated}"
+  lore:
+    - "&fQuantia: &7{amount}"
+    - ""
+    - "&eColoque em seu terreno!"
+
+head-item:
+  display: "&aCabeça de {translated}"
+  lore:
+    - "&fQuantia: &e{amount}"
+    - ""
+    - "&7Clique para armazenar!"
+
+upgrades:
+  mob-stack:
+    base: 1
+    1:
+      value: 2
+      costs:
+        coins: 10000000000
+    2:
+      value: 3
+      costs:
+        coins: 50000000000
+        gems: 100
+    3:
+      value: 3
+      costs:
+        coins: 200000000000
+        gems: 500
+  spawner-stack:
+    base: 64
+    1:
+      value: 128
+      costs:
+        coins: 20000000000
+    2:
+      value: 256
+      costs:
+        coins: 100000000000
+    3:
+      value: 512
+      costs:
+        coins: 500000000000
+        gems: 1000
+  speed:
+    1:
+      delay: "8s"
+      costs:
+        coins: 15000000000
+    2:
+      delay: "6s"
+      costs:
+        coins: 75000000000
+        gems: 200
+    3:
+      delay: "4s"
+      costs:
+        coins: 300000000000
+        gems: 500

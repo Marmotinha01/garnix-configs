@@ -1,0 +1,53 @@
+title: Boosters - {display}
+rows: 4
+
+drops-empty-icon:
+  slot: 11
+  material: GLASS_BOTTLE
+  display: '&cBooster de Drops'
+  lore:
+  - '&7Nenhum booster ativo.'
+
+drops-active-icon:
+  slot: 11
+  material: POTION
+  data: 8227
+  display: '&dBooster de Drops'
+  lore:
+  - '&fBônus: &a{multiplier}'
+  - '&fDuração: &c{time_remaining}'
+  - ''
+  - '&fB. Esquerdo: &7Remover Booster'
+  - ''
+  - ' &cApenas &l50&c% do tempo do '
+  - ' &cbooster será devolvido. '
+  - ''
+
+heads-empty-icon:
+  slot: 15
+  material: GLASS_BOTTLE
+  display: '&cBooster de Cabeças'
+  lore:
+  - '&7Nenhum booster ativo.'
+
+heads-active-icon:
+  slot: 15
+  material: POTION
+  data: 8227
+  display: '&eBooster de Cabeças'
+  lore:
+  - '&fBônus: &a{multiplier}'
+  - '&fDuração: &c{time_remaining}'
+  - ''
+  - '&fB. Esquerdo: &7Remover Booster'
+  - ''
+  - ' &cApenas &l50&c% do tempo do '
+  - ' &cbooster será devolvido. '
+  - ''
+
+back-icon:
+  slot: 31
+  material: ARROW
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

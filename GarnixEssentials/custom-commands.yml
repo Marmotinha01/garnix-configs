@@ -1,0 +1,21 @@
+# Comandos criados via config. Todas as acoes sao opcionais:
+# send-msg, player-exec-cmd, console-exec-cmd (texto unico ou lista).
+# Placeholders: {player}, {world}. cooldown em segundos (0 = sem cooldown).
+commands:
+  discord:
+    name: discord
+    aliases:
+    - dc
+    send-msg:
+    - ''
+    - '  &9&lDISCORD &8▶ &7https://discord.gg/redegarnix '
+    - ''
+  regras:
+    name: regras
+    aliases:
+    - rules
+    - regra
+    send-msg:
+    - ''
+    - '  &4&lREGRAS &8▶ &7https://redegarnix.com/rules '
+    - ''

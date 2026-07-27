@@ -1,0 +1,22 @@
+title: Jogadores com VIP
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XX.....XX
+- XXXXXXXXX
+
+player-head:
+  display: '&e{player}'
+  lore-header:
+  - '&7VIPs ativos:'
+  lore-line: '{vip} &8- &e{remaining}'
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum jogador possui VIP ativo.'

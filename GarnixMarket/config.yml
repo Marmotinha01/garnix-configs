@@ -1,0 +1,35 @@
+debug: false
+
+# Duração (em segundos) até um item anunciado expirar sem ser vendido.
+# Ao expirar, o item vai para o /correio do vendedor.
+listing-duration: 86400
+
+# Intervalo (em segundos) para checar anúncios expirados.
+expiration-check-interval: 5
+
+# Cooldown (em segundos) para anunciar um novo item.
+# Ignorado por quem tem a permissão market.cooldown.bypass.
+sell-cooldown: 60
+
+# Preço mínimo de um anúncio (em qualquer economia).
+min-price: '1'
+
+# Dias até anúncios já encerrados serem removidos do banco e da memória.
+purge-after-days: 7
+
+# ── Limite de anúncios simultâneos ──
+# Todo jogador tem 'default-market-limit'. Para dar mais, conceda a permissão
+# "market.limit.<N>" — o N é o limite (ex: market.limit.8 = 8 anúncios).
+# As faixas NÃO somam: vale sempre a MAIOR que o jogador tiver, e nunca menos
+# que o default. O nó exato precisa estar concedido — curinga (market.limit.*)
+# não funciona, porque o número é lido do próprio nó.
+default-market-limit: 1
+
+# Economias que não podem ser usadas no mercado.
+#
+# A taxa sobre a venda vem do GarnixCurrencies (currencies/<id>.yml →
+# command.subcommands.send.tax), junto com a sua bypass-permission.
+# Cada economia tem a sua. O comprador sempre paga o preço anunciado;
+# a taxa sai da parte do vendedor, na alíquota lida NO MOMENTO DA VENDA —
+# quem comprar uma isenção com o item já anunciado recebe o benefício.
+currency-blacklist: []

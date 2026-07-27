@@ -1,0 +1,37 @@
+title: Cargos do Clan
+rows: 3
+
+subleader-icon:
+  slot: 11
+  material: GOLD_CHESTPLATE
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&r{role}'
+  lore:
+  - '&7Permissões concedidas ao'
+  - '&7cargo de sub-líder.'
+  - ''
+  - ' &8 ▪ &fLiberadas: &a{granted}&8/&7{total}'
+  - ''
+  - '&bClique para editar.'
+
+member-icon:
+  slot: 15
+  material: LEATHER_CHESTPLATE
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&r{role}'
+  lore:
+  - '&7Permissões concedidas ao'
+  - '&7cargo de membro.'
+  - ''
+  - ' &8 ▪ &fLiberadas: &a{granted}&8/&7{total}'
+  - ''
+  - '&bClique para editar.'
+
+back-icon:
+  slot: 22
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

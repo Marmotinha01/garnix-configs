@@ -1,0 +1,113 @@
+info:
+  order: 1
+  starting: '0'
+  formatter: 'SUFFIX' # DECIMAL ou SUFFIX
+  text:
+    singular: 'coin'
+    plural: 'coins'
+    symbol: '$'
+    ranking-tag: '&2[$]'
+  colors:
+    symbol: '&2'
+    primary: '&a'
+    secondary: '&a'
+
+icon:
+  material: 'INK_SACK'
+  data: 10
+  display: '&aCoins'
+
+command:
+  name: 'coins'
+  aliases:
+    - 'coin'
+    - 'money'
+    - 'moedas'
+  cooldown: 5 # segundos
+  subcommands:
+    help:
+      enabled: true
+      aliases: ['ajuda']
+      cooldown: 5 # segundos
+      admin-permission: 'currencies.admin'
+    ranking:
+      enabled: true
+      aliases: ['top']
+      cooldown: 5 # segundos
+    send:
+      enabled: true
+      aliases: ['enviar', 'pay', 'transfer']
+      cooldown: 3 # segundos
+      tax:
+        enabled: true
+        message:
+          to-sender: true
+          to-receiver: true
+        percentage: 10
+        bypass-permission: 'currencies.tax.bypass'
+    set:
+      enabled: true
+      aliases: ['definir']
+      permission: 'currencies.admin'
+    add:
+      enabled: true
+      aliases: ['give', 'dar']
+      permission: 'currencies.admin'
+    remove:
+      enabled: true
+      aliases: ['take', 'remover']
+      permission: 'currencies.admin'
+
+ranking:
+  mode: 'MENU' # CHAT ou MENU
+  chat:
+    format: '  &8#{position}º {lp_prefix}{player} &8▶ {symbol_color}{symbol}{primary_color}{balance}'
+    empty: '  &7Nenhum jogador no ranking.'
+    header:
+      - ''
+      - '  &a&lRANKING DE COINS'
+      - ''
+    footer:
+      - ''
+  menu:
+    title: 'TOP Coins'
+    shape:
+      - 'XXXXXXXXX'
+      - 'XXX...XXX'
+      - 'X.......X'
+      - 'XXXXXXXXX'
+      - 'XXXXXXXXX'
+    position-user:
+      display: '&8#{position}º {lp_prefix} {player}'
+      lore:
+        - '&fCoins: {symbol_color}{symbol}{primary_color}{balance}'
+    empty-position-icon:
+      material: 'BARRIER'
+      display: '&8#{position}º &7Ninguém'
+    info-icon:
+      slot: 40
+      material: 'PAPER'
+      display: '&aAtualização Periódica'
+      lore:
+        - '&7O ranking é atualizado'
+        - '&7a cada &f{refresh} &7minutos.'
+        - ''
+        - '&8&oÚltima atualização &7&o{last_update}&8&o.'
+
+help:
+  - ''
+  - '  &a&lCOINS &8▶ &aComandos de Ajuda'
+  - ''
+  - '  &a/{command} &8- &7Ver seus coins.'
+  - '  &a/{command} <jogador> &8- &7Ver os coins de alguém.'
+  - '  &a/{command} ranking &8- &7Ver o ranking de coins.'
+  - '  &a/{command} enviar <jogador> <quantia> &8- &7Envia coins para alguém.'
+  - ''
+
+help-admin:
+  - '  &4&lCOINS ADMIN &8▶ &4Comandos Administrativos'
+  - ''
+  - '  &c/{command} set <jogador> <quantia> &8- &7Define os coins de alguém.'
+  - '  &c/{command} add <jogador> <quantia> &8- &7Adiciona coins a alguém.'
+  - '  &c/{command} remove <jogador> <quantia> &8- &7Remove coins de alguém.'
+  - ''

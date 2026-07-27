@@ -1,0 +1,13 @@
+order: 8
+
+name: "Zumbi"
+tag: "&2[Zumbi]"
+
+texture: '783aaaee22868cafdaa1f6f4a0e56b0fdb64cd0aeaabd6e83818c312ebe66437'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

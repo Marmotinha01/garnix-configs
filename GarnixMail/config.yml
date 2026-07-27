@@ -1,0 +1,43 @@
+debug: false
+
+# Delay em ticks antes de notificar o jogador sobre itens no correio ao entrar
+login-notify-delay: 60
+
+# Som tocado na notificação de login. Use um nome válido de org.bukkit.Sound,
+# ou string vazia para silenciar.
+login-notify-sound: NOTE_PLING
+
+# Som tocado no destinatário quando um jogador envia um item ao correio dele.
+# Nome válido de org.bukkit.Sound, ou string vazia para silenciar.
+player-mail-notify-sound: ORB_PICKUP
+
+# Lembrete periódico enviado a jogadores online que ainda têm itens para resgatar.
+# Cada jogador pode desativar isso no menu de preferências (/correio).
+periodic-notify:
+  # Liga/desliga o recurso para todo o servidor.
+  enabled: true
+  # Intervalo entre lembretes, em segundos.
+  interval-seconds: 300
+  # Som do lembrete. Nome válido de org.bukkit.Sound, ou string vazia para silenciar.
+  sound: NOTE_PLING
+
+# Textos da placeholder %mail_pending%, exibida em um de dois estados conforme o
+# jogador tenha ou não itens no correio esperando para serem resgatados.
+#
+# A contagem é a mesma que o jogador vê ao abrir o /correio: cada ícone do menu
+# conta como 1. Envios idênticos empilham num ícone só (6x diamantes do mesmo
+# remetente = 1), e a quantidade dentro do item é ignorada (50x pedra = 1).
+#
+#   {amount}         — quantos ícones estão aguardando resgate
+#   {reward_plural}  — 'reward-singular' quando {amount} for 1, 'reward-plural' caso contrário
+#
+# Existe também %mail_pending_amount%, que devolve só o número (0 quando não há
+# nenhum), caso você prefira montar o texto no próprio scoreboard/tab.
+placeholder:
+  # Usado quando há pelo menos 1 item para resgatar.
+  has-rewards: '&a{amount} {reward_plural}!'
+  # Usado quando o correio não tem nada para resgatar.
+  no-rewards: '&cNada para coletar!'
+  # Palavra substituída em {reward_plural}, concordando com {amount}.
+  reward-singular: 'entrega'
+  reward-plural: 'entregas'

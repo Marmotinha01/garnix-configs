@@ -1,0 +1,46 @@
+# Lista de baús (/bau, /baus).
+title: Seus Baús
+rows: 6
+
+# Posições dos baús, na ordem dos ids (1..10).
+slots:
+- 11
+- 12
+- 13
+- 14
+- 15
+- 20
+- 21
+- 22
+- 23
+- 24
+
+# Baú desbloqueado. O ícone vem do baú; {id}, {rows} são preenchidos.
+chest-icon:
+  display: '&aBaú #{id}'
+  lore:
+  - ''
+  - ' &8Informações:'
+  - ' &fLinhas: &7{rows}'
+  - ''
+  - '&8 Opções de acesso:'
+  - '&fEsquerdo &7Abrir.'
+  - '&fDireito &7Gerenciar.'
+
+# Posição ainda não desbloqueada.
+locked-icon:
+  material: BARRIER
+  display: '&cBaú Bloqueado'
+  lore:
+  - '&7Você ainda não possui este baú.'
+
+# Atalho para o ender chest. {player} = dono da lista.
+echest-icon:
+  slot: 40
+  material: ENDER_CHEST
+  display: '&eEnder Chest'
+  lore:
+  - '&7Acesse o seu báu do fim'
+  - '&7para armazenar itens.'
+  - ''
+  - '&eClique para acessar.'

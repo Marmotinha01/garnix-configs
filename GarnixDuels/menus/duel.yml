@@ -1,0 +1,27 @@
+# Menu — Duelos (hub do /x1)
+
+title: Duelos
+rows: 3
+
+challenge-icon:
+  slot: 11
+  material: DIAMOND_SWORD
+  display: '&aDesafiar'
+  lore:
+  - '&7Clique para desafiar.'
+  flags:
+  - HIDE_ATTRIBUTES
+
+active-icon:
+  slot: 13
+  material: BOOK
+  display: '&aDuelos Ativos'
+  lore:
+  - '&7Clique para ver.'
+
+ranking-icon:
+  slot: 15
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Clique para ver.'

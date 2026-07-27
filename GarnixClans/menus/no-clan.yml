@@ -1,0 +1,47 @@
+title: Clans
+rows: 3
+
+create-icon:
+  slot: 10
+  material: NETHER_STAR
+  glow: true
+  display: '&bCriar Clan'
+  lore:
+  - '&7Monte o seu clan escolhendo'
+  - '&7uma tag e um nome.'
+  - ''
+  - '&bClique para criar.'
+
+online-clans-icon:
+  slot: 12
+  material: BEACON
+  display: '&aClans Online'
+  lore:
+  - '&7Veja quais clans possuem'
+  - '&7membros jogando agora.'
+  - ''
+  - '&8 ▪ &fClans existentes: &7{clans}'
+  - ''
+  - '&aClique para acessar.'
+
+invites-icon:
+  slot: 14
+  material: PAPER
+  display: '&eConvites Recebidos'
+  lore:
+  - '&7Convites que outros clans'
+  - '&7enviaram para você.'
+  - ''
+  - '&8 ▪ &fPendentes: &7{invites}'
+  - ''
+  - '&eClique para acessar.'
+
+ranking-icon:
+  slot: 16
+  material: GOLD_INGOT
+  display: '&6Ranking de Clans'
+  lore:
+  - '&7Os clans que mais se'
+  - '&7destacam no servidor.'
+  - ''
+  - '&6Clique para acessar.'

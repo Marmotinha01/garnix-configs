@@ -1,0 +1,19 @@
+debug: false
+
+ranking-refresh-minutes: 5
+ranking-size: 10
+
+boss-stack-radius: 5
+
+boss-nametag: '{display} §7x{stack}'
+
+kill-stack-item:
+  material: written_book
+  display: '&4Kill-Stack +{level}'
+  lore:
+  - '&7Aplique este livro'
+  - '&7em sua matadora.'
+  - ''
+  - ' &8▸ &f/matadora'
+  - ''
+  glow: true

@@ -1,0 +1,69 @@
+unlock-lore:
+- '&aArraste a skin para cima'
+- '&ade uma vara para aplicar.'
+
+rod-skins:
+  default:
+    display: '&eSkin de Madeira'
+    material: FISHING_ROD
+    forgeable: true
+    currency-bonus: 0
+    max-weight: 3
+    icon:
+      material: FISHING_ROD
+      display: '&eSkin de Madeira'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8▪ &fBônus: &a+&l{bonus}&a%'
+      - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+      - ''
+  
+  reinforced:
+    display: '&aSkin Reforçada'
+    material: FISHING_ROD
+    forgeable: true
+    currency-bonus: 5
+    max-weight: 5
+    icon:
+      material: FISHING_ROD
+      display: '&aSkin Reforçada'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8▪ &fBônus: &a+&l{bonus}&a%'
+      - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+      - ''
+  
+  golden:
+    display: '&6Skin Dourada'
+    material: FISHING_ROD
+    forgeable: true
+    currency-bonus: 12
+    max-weight: 10
+    icon:
+      material: FISHING_ROD
+      display: '&6Vara Dourada'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8▪ &fBônus: &a+&l{bonus}&a%'
+      - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+      - ''
+  
+  emerald:
+    display: '&2Skin de Esmeralda'
+    material: FISHING_ROD
+    forgeable: false
+    currency-bonus: 25
+    max-weight: 20
+    icon:
+      material: FISHING_ROD
+      display: '&2Skin de Esmeralda'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8▪ &fBônus: &a+&l{bonus}&a%'
+      - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+      - ''
+      glow: true

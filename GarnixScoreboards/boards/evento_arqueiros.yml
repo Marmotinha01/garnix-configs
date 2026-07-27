@@ -1,0 +1,56 @@
+# Board de evento. Só o selector do GarnixEvents chega até ela.
+#
+# A permission é de propósito um nó que ninguém tem: o casamento normal por
+# mundo passa por appliesTo(), que checa permissão, então essa board nunca é
+# escolhida por estar no mundo dos eventos. O selector busca a board pelo id e
+# não passa por appliesTo(), então para quem está na run ela aparece igual.
+# Sem isso, bastava o eventos_lobby.yml perder o priority para as boards de
+# evento aparecerem no lobby.
+
+enabled: true
+priority: 0
+worlds: ['eventos']
+permission: 'garnix.eventos.board'
+update-ticks: 20
+
+title:
+  interval: 2
+  frames:
+  - '&b&lARQUEIROS &8► &a%events_alive%'
+  - '&f&lARQUEIROS &8► &a%events_alive%'
+  - '&3&lARQUEIROS &8► &a%events_alive%'
+  - '&3&lA&b&lRQUEIROS &8► &a%events_alive%'
+  - '&3&lA&f&lRQUEIROS &8► &a%events_alive%'
+  - '&3&lAR&b&lQUEIROS &8► &a%events_alive%'
+  - '&3&lAR&f&lQUEIROS &8► &a%events_alive%'
+  - '&3&lARQ&b&lUEIROS &8► &a%events_alive%'
+  - '&3&lARQ&f&lUEIROS &8► &a%events_alive%'
+  - '&3&lARQU&b&lEIROS &8► &a%events_alive%'
+  - '&3&lARQU&f&lEIROS &8► &a%events_alive%'
+  - '&3&lARQUE&b&lIROS &8► &a%events_alive%'
+  - '&3&lARQUE&f&lIROS &8► &a%events_alive%'
+  - '&3&lARQUEI&b&lROS &8► &a%events_alive%'
+  - '&3&lARQUEI&f&lROS &8► &a%events_alive%'
+  - '&3&lARQUEIR&b&lOS &8► &a%events_alive%'
+  - '&3&lARQUEIR&f&lOS &8► &a%events_alive%'
+  - '&3&lARQUEIRO&b&lS &8► &a%events_alive%'
+  - '&3&lARQUEIRO&f&lS &8► &a%events_alive%'
+  - '&f&lARQUEIROS &8► &a%events_alive%'
+  - '&3&lARQUEIROS &8► &a%events_alive%'
+  - '&b&lARQUEIROS &8► &a%events_alive%'
+  - '&3&lARQUEIROS &8► &a%events_alive%'
+
+lines:
+- ''
+
+- text: ' &fComeça em: &7%events_countdown%&7s'
+  condition: '%events_state% == starting'
+
+- text: ' &fTempo: &7%events_elapsed%'
+  condition: '%events_state% == running'
+
+- ' &fParticipantes: &7%events_alive%&8/&c%events_players%'
+- ' &fStatus: %events_status%'
+
+- ''
+- '&eredegarnix.com'

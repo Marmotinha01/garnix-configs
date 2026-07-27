@@ -1,0 +1,43 @@
+title: Abrindo {box}!
+won-title: Você ganhou!
+
+rows: 3
+reel-slots:
+- 9
+- 10
+- 11
+- 12
+- 13
+- 14
+- 15
+- 16
+- 17
+center-index: 4
+pointer-slots:
+- 4
+- 22
+
+filler-item:
+  material: STAINED_GLASS_PANE
+  data: 15
+  display: ' '
+
+pointer-item:
+  material: STAINED_GLASS_PANE
+  data: 4
+  display: '&e&l▼ SORTEANDO ▼'
+
+# Quantos deslizes antes de travar e os ticks por deslize (início rápido → fim lento).
+shifts: 45
+min-interval: 1
+max-interval: 9
+# Ticks que o resultado fica na tela antes de fechar (20 ticks = 1s).
+close-delay: 60
+
+tick-sound: NOTE_STICKS
+tick-volume: 0.6
+tick-pitch-min: 0.8
+tick-pitch-max: 2.0
+win-sound: LEVEL_UP
+win-volume: 1.0
+win-pitch: 1.0

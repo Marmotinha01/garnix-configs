@@ -1,0 +1,201 @@
+# GarnixClans — messages (chaves em inglês, valores em pt-BR).
+# Tokens são sempre {token}. Texto vindo do jogador ({message}) é substituído por último.
+
+general:
+  no-clan: '&cVocê não está em um clan.'
+  leader-only: '&cApenas o líder do clan pode fazer isso.'
+  no-clan-permission: '&cSeu cargo não possui permissão para isso.'
+  clan-full: '&cO clan já está com todas as vagas preenchidas.'
+  player-offline: '&cO jogador &f{player} &cnão está online.'
+  clan-not-found: '&cNenhum clan encontrado com a tag &f{tag}&c.'
+  not-a-member: '&cO jogador &f{player} &cnão faz parte deste clan.'
+  reloaded: '&aConfigurações recarregadas.'
+
+status:
+  online: '&aOnline'
+  offline: '&cOffline'
+
+state:
+  enabled: '&aAtivado'
+  disabled: '&cDesativado'
+
+permission:
+  granted: '&aPermitido'
+  denied: '&cNegado'
+
+create:
+  invalid-tag: '&cA tag deve ter exatamente 3 caracteres alfanuméricos e aceita apenas códigos de cor (&a&&a&c, &b&&b&c...).'
+  tag-taken: '&cJá existe um clan com essa tag.'
+  tag-blacklisted: '&cEssa tag não pode ser usada.'
+  invalid-name: '&cO nome deve ter entre 3 e 16 caracteres alfanuméricos.'
+  name-taken: '&cJá existe um clan com esse nome.'
+  name-blacklisted: '&cEsse nome não pode ser usado.'
+  already-in-clan: '&cVocê já está em um clan.'
+  success: '&aClan &f{tag} &a(&f{clan}&a) criado com sucesso!'
+
+invite:
+  pending: '&eVocê possui &f{amount} &econvite(s) de clan pendente(s). Use &f/clan &epara ver.'
+  already-in-clan: '&cO jogador &f{player} &cjá está em um clan.'
+  already-invited: '&cO jogador &f{player} &cjá foi convidado.'
+  sent: '&aConvite enviado para &f{player}&a.'
+  received: '&eO clan &f{tag} &e(&f{clan}&e) te convidou. Convidado por &f{player}&e.'
+  accepted: '&aVocê entrou no clan &f{tag} &a(&f{clan}&a)!'
+  declined: '&cVocê recusou o convite do clan &f{tag}&c.'
+  not-found: '&cVocê não possui um convite pendente do clan &f{tag}&c.'
+
+leave:
+  success: '&cVocê saiu do clan &f{clan}&c.'
+
+disband:
+  success: '&cO clan &f{clan} &cfoi desfeito.'
+  chest-mailed: '&eOs itens do baú do clan foram enviados para o seu correio.'
+
+chest:
+  in-use: '&cO baú do clan está sendo usado por &f{player}&c. Aguarde ele fechar.'
+
+base:
+  set: '&aBase do clan definida na plot &f{plot}&a.'
+  deleted: '&cBase do clan removida.'
+  teleported: '&aVocê foi teleportado para a base do clan.'
+  not-set: '&cO clan ainda não possui uma base definida.'
+  world-missing: '&cO mundo da base do clan não está carregado.'
+  not-in-plot: '&cVocê precisa estar dentro de uma plot para definir a base.'
+  not-plot-owner: '&cVocê só pode definir a base do clan em uma plot sua.'
+
+members:
+  promoted: '&aVocê promoveu &f{player} &apara &r{role}&a.'
+  demoted: '&aVocê rebaixou &f{player} &apara &r{role}&a.'
+  kicked: '&cVocê expulsou &f{player} &cdo clan.'
+
+ally:
+  request-sent: '&aSolicitação de aliança enviada para &f{tag}&a.'
+  request-received: '&eO clan &f{tag} &esolicitou uma aliança com o seu clan.'
+  started: '&aSua aliança com o clan &f{tag} &acomeçou!'
+  broken: '&cA aliança com o clan &f{tag} &cfoi desfeita.'
+  denied: '&cVocê recusou a aliança com o clan &f{tag}&c.'
+  same-clan: '&cVocê não pode se aliar ao seu próprio clan.'
+  already-ally: '&cVocês já são aliados.'
+  already-requested: '&cJá existe uma solicitação de aliança pendente.'
+  no-allies: '&cSeu clan não possui aliados.'
+  request-not-found: '&cNão há solicitação de aliança pendente do clan &f{tag}&c.'
+
+rival:
+  started: '&cSeu clan iniciou uma rivalidade contra &f{tag}&c.'
+  declared-against: '&cO clan &f{tag} &cdeclarou rivalidade contra o seu clan.'
+  ended: '&aA rivalidade contra o clan &f{tag} &afoi desfeita.'
+  same-clan: '&cVocê não pode rivalizar com o seu próprio clan.'
+  already-rival: '&cEste clan já é seu rival.'
+
+manage:
+  renamed: '&aO clan agora se chama &f{clan}&a. (por &f{player}&a)'
+  tag-changed: '&aA tag do clan agora é &r{tag}&a. (por &f{player}&a)'
+  tag-letters-changed: '&cVocê só pode alterar as cores da tag, não as letras.'
+  already-leader: '&cEste jogador já é o líder do clan.'
+  leadership-transferred: '&e{player} &eé o novo líder do clan.'
+
+# Botões clicáveis anexados aos convites e às solicitações de aliança.
+click:
+  accept: ' &a&l[ACEITAR]'
+  accept-hover: '&7Clique para aceitar.'
+  decline: ' &c&l[RECUSAR]'
+  decline-hover: '&7Clique para recusar.'
+
+chat:
+  clan-format: '&b[C] &7[{tag}&7] &f{player}&7: &b{message}'
+  ally-format: '&3[A] &7[{tag}&7] &f{player}&7: &3{message}'
+
+spy:
+  enabled: '&aModo espião de clans ativado.'
+  disabled: '&cModo espião de clans desativado.'
+  clan-format: '&8[&cSPY&8/&bCLAN&8] &r{tag} &f{player}&8: &7{message}'
+  ally-format: '&8[&cSPY&8/&dALIADOS&8] &r{tag} &f{player}&8: &7{message}'
+
+reset-kdr:
+  success: '&aO KDR de todos os membros do clan &f{clan} &afoi zerado.'
+  received: '&aVocê recebeu &f{amount}x &aReset de KDR.'
+  given: '&aVocê entregou &f{amount}x &aReset de KDR para &f{player}&a.'
+
+admin:
+  disbanded: '&cO clan &r{tag} &cfoi desfeito.'
+  kicked: '&cVocê expulsou &f{player} &cdo clan &r{tag}&c.'
+  joined: '&aVocê adicionou &f{player} &aao clan &r{tag}&a.'
+  leader-set: '&a{player} &aé o novo líder do clan &r{tag}&a.'
+  cannot-kick-leader: '&cO líder não pode ser expulso — transfira a liderança ou desfaça o clan.'
+  already-in-clan: '&cO jogador &f{player} &cjá está em um clan.'
+
+confirm:
+  disband: '&cIsso desfaz o clan permanentemente.'
+  leave: '&cVocê vai sair do clan.'
+  kick: '&cO membro será expulso do clan.'
+  break-alliance: '&cA aliança será desfeita para os dois clans.'
+  end-rivalry: '&cA rivalidade será desfeita.'
+  admin-disband: '&cDigite o comando novamente para confirmar o desfazimento do clan.'
+
+info:
+  no-clan: '&cO jogador &f{player} &cnão está em um clan.'
+  clan:
+  - ''
+  - ' &r{tag} &f{clan}'
+  - ' &8▪ &fLíder: &7{leader}'
+  - ' &8▪ &fMembros: &7{members}&8/&7{max_members}'
+  - ' &8▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths}'
+  - ' &8▪ &fAliados: &7{allies} &8| &fRivais: &7{rivals}'
+  - ''
+  player:
+  - ''
+  - ' &f{player}'
+  - ' &8▪ &fClan: &r{tag} &7{clan}'
+  - ' &8▪ &fCargo: &r{role}'
+  - ' &8▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths}'
+  - ''
+
+conversation:
+  timeout: '&cTempo esgotado! Operação cancelada.'
+  create-tag:
+  - ''
+  - ' &aInforme a tag do clan.'
+  - ' &7Para cancelar digite &8cancelar&7.'
+  - ''
+  create-name:
+  - ''
+  - ' &aInforme o nome do clan.'
+  - ' &7Para cancelar digite &8cancelar&7.'
+  - ''
+  invite:
+  - ''
+  - ' &aInforme o nome do jogador que deseja convidar.'
+  - ' &7Para cancelar digite &8cancelar&7.'
+  - ''
+  ally:
+  - ''
+  - ' &aInforme a tag do clan para solicitar aliança.'
+  - ' &7Para cancelar digite &8cancelar&7.'
+  - ''
+  rival:
+  - ''
+  - ' &aInforme a tag do clan para declarar rivalidade.'
+  - ' &7Para cancelar digite &8cancelar&7.'
+  - ''
+  rename:
+  - ''
+  - ' &aInforme o novo nome do clan.'
+  - ' &7Para cancelar digite &8cancelar&7.'
+  - ''
+  tag-colour:
+  - ''
+  - ' &aInforme a tag do clan com as novas cores.'
+  - ' &7Para cancelar digite &8cancelar&7.'
+  - ''
+  transfer:
+  - ''
+  - ' &aInforme o nome do novo líder do clan.'
+  - ' &7Para cancelar digite &8cancelar&7.'
+  - ''
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
+# leftover: inventário cheio — só a sobra foi ao correio.
+# Deixe "" para não avisar nada.
+delivery:
+  mailed: '&eVocê está em um evento! &eSeu item do clã foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'

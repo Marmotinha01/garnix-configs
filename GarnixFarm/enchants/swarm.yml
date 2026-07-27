@@ -1,0 +1,33 @@
+display: "Enxame"
+max-level: 50
+base-cost: 1200.0
+increase-cost: 450.0
+
+# CHANCE flavour (percent): ao colher, chance de invocar o enxame.
+base-chance: 3
+increase-chance: 0.2
+
+# Companion visual + buff (sem colheita própria):
+# as abelhas orbitam o jogador por duration-ticks e, enquanto ativas, dão um bônus
+# de ganhos (polinização) sobre tudo que o jogador colher.
+duration-ticks: 200
+bonus-percentage: 10.0   # bônus base de ganhos (%) no nível 1
+increase-bonus: 0.4      # +bônus de ganhos (%) por nível
+bee-count: 4
+head-texture: "a806a03b5fc939085f2191890d6eaec5b85ac7dc692f08bf4104e5d6672cdc9f"
+
+# Mensagens do companheiro (só 1x ao ativar e 1x ao acabar). {bonus} = % do buff,
+# {duration} = segundos.
+activate-message: "&e&lENXAME! &7As abelhas chegaram: &a+{bonus}%&7 de ganhos por &f{duration}s&7."
+end-message: "&e&lENXAME! &7As abelhas foram embora."
+
+icon:
+  slot: 18
+  material: BLAZE_POWDER
+  display: "&e{display}"
+  lore:
+    - "&7Chance de invocar um enxame que"
+    - "&7dá bônus de ganhos enquanto ativo."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"
+    - "&7Chance: &f{chance}%"

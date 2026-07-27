@@ -1,0 +1,13 @@
+order: 7
+
+name: "Lobo"
+tag: "&f[Lobo]"
+
+texture: '69d1d3113ec43ac2961dd59f28175fb4718873c6c448dfca8722317d67'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

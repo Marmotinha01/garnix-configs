@@ -1,0 +1,23 @@
+display: "Afortunado"
+
+mine-level-unlock: 5
+
+max-level: 100
+
+base-cost: 50
+increase-cost: 100
+
+base-multiplier: 1.05
+increase-multiplier: 1.0
+multiplier-provider: "coins"
+
+icon:
+  slot: 22
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&a{display}"
+  lore:
+    - "&7Receba mais coins"
+    - "&7ao minerar na mina!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - ""

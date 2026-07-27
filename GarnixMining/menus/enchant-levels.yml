@@ -1,0 +1,173 @@
+# Menu — Enchant (Level Selection)
+
+title: Encantar
+rows: 4
+rows-chanceable: 6
+
+# ── Option +1 ────────────────────────────────────────────────────────
+option-1:
+  slot: 11
+  material: SLIME_BALL
+  data: 0
+  display: '&aEvoluir &l1 &aNível'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &a{target}'
+  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ''
+  - '&aClique para evoluir.'
+
+# ── Option +10 ───────────────────────────────────────────────────────
+option-10:
+  slot: 12
+  material: SLIME_BALL
+  data: 0
+  display: '&aEvoluir &l10 &aNíveis'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &a{target}'
+  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ''
+  - '&aClique para evoluir.'
+
+# ── Option +25 ───────────────────────────────────────────────────────
+option-25:
+  slot: 13
+  material: SLIME_BALL
+  data: 0
+  display: '&aEvoluir &l25 &aNíveis'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &a{target}'
+  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ''
+  - '&aClique para evoluir.'
+
+# ── Option +50 ───────────────────────────────────────────────────────
+option-50:
+  slot: 14
+  material: SLIME_BALL
+  data: 0
+  display: '&aEvoluir &l50 &aNíveis'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &a{target}'
+  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ''
+  - '&aClique para evoluir.'
+
+# ── Evolve to Maximum ───────────────────────────────────────────────
+option-max:
+  slot: 15
+  material: ENCHANTMENT_TABLE
+  display: '&2Evoluir ao Máximo'
+  lore:
+  - ''
+  - '&f Nível: &7{current} &8─ &2{target}'
+  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ''
+  - '&2Clique para evoluir.'
+  
+# ── Shared icon: Max Level Reached ──────────────────────────
+maxed-icon:
+  material: BLAZE_POWDER
+  display: '&8Nível Máximo'
+  lore:
+  - '&7Nível máximo atingido.'
+
+# ── Shared icon: Insufficient Gems ────────────────────────
+cant-afford:
+  material: STAINED_GLASS_PANE
+  data: 14
+  display: '&c{label}'
+  lore:
+  - ''
+  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - '&f Nível: &7{current} &8─ &a{target}'
+  - ''
+  - '&cGemas insuficientes!'
+
+# ── Shared icon: Exceeds Maximum ────────────────────────────
+option-exceeded:
+  material: STAINED_GLASS_PANE
+  data: 14
+  display: '&cEvoluir &l{label} &cNível(eis)'
+  lore:
+  - '&7Excede o nível máximo.'
+  - '&7Use &2Evoluir ao Máximo&7.'
+
+titles-enabled:
+  slot: 29
+  material: INK_SACK
+  data: 10
+  display: '&aTítulos Ativados'
+  lore:
+  - '&7Clique para desativar.'
+
+titles-disabled:
+  slot: 29
+  material: INK_SACK
+  data: 8
+  display: '&cTítulos Desativados'
+  lore:
+  - '&7Clique para ativar.'
+
+messages-enabled:
+  slot: 31
+  material: INK_SACK
+  data: 10
+  display: '&aMensagens Ativadas'
+  lore:
+  - '&7Clique para desativar.'
+
+messages-disabled:
+  slot: 31
+  material: INK_SACK
+  data: 8
+  display: '&cMensagens Desativadas'
+  lore:
+  - '&7Clique para ativar.'
+
+activation-enabled:
+  slot: 33
+  material: INK_SACK
+  data: 10
+  display: '&aEncantamento Ativo'
+  lore:
+  - '&7Clique para desativar.'
+
+activation-disabled:
+  slot: 33
+  material: INK_SACK
+  data: 8
+  display: '&cEncantamento Desativado'
+  lore:
+  - '&7Clique para ativar.'
+
+disenchant-icon:
+  slot: 32
+  slot-chanceable: 50
+  material: ANVIL
+  display: '&cDesencantar'
+  lore:
+  - '&7Receba &c{refund-percentage}% &7do valor'
+  - '&7investido no encantamento.'
+  - ''
+  - '&cClique para desencantar.'
+
+no-level-to-disenchant-icon:
+  slot: 32
+  slot-chanceable: 50
+  material: BARRIER
+  data: 14
+  display: '&cDesencantar'
+  lore:
+  - '&7Sem níveis para desencantar.'
+
+back-icon:
+  slot: 30
+  slot-chanceable: 48
+  texture: "7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf"
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

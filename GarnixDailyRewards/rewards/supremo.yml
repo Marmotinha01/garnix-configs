@@ -1,0 +1,18 @@
+display: 'Supremo'
+
+permission: 'daily.supremo'
+
+cooldown: '1d'
+
+slot: 32
+
+commands:
+  - 'cash add {player} 200'
+
+collect-icon:
+  texture: '68d40935279771adc63936ed9c8463abdf5c5ba78d2e86cb1ec10b4d1d225fb'
+  display: '&4&lSUPREMO'
+  lore:
+    - '&fRecompensa: &6❂200 Cash'
+    - ''
+    - '&aClique para coletar!'

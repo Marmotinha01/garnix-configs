@@ -1,0 +1,13 @@
+order: 16
+
+name: "Bruxa"
+tag: "&d[Bruxa]"
+
+texture: 'baf818b04d6ae98a69ad8d9463d8d0379921d3eb79222e1c6272f65372d80775'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

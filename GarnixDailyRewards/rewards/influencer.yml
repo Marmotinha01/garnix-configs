@@ -1,0 +1,18 @@
+display: 'Influencer'
+
+permission: 'daily.influencer'
+
+cooldown: '1d'
+
+slot: 28
+
+commands:
+  - 'cash add {player} 100'
+
+collect-icon:
+  texture: '63f79b207d61e122523b83d61508d99cfa079d45bf23df2a9a5127f9071d4b00'
+  display: '&c&lINFLUENCER'
+  lore:
+    - '&fRecompensa: &6❂100 Cash'
+    - ''
+    - '&aClique para coletar!'

@@ -1,0 +1,19 @@
+display: "Fertilidade"
+max-level: 100
+base-cost: 150.0
+increase-cost: 60.0
+
+# MULTIPLIER flavour (sementes — economia secundária)
+base-multiplier: 1.05
+increase-multiplier: 0.02
+multiplier-provider: "sementes"
+
+icon:
+  slot: 11
+  material: EMERALD
+  display: "&a{display}"
+  lore:
+    - "&7Aumenta o &fmultiplicador de sementes"
+    - "&7ganho a cada colheita."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"

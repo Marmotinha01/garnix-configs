@@ -1,0 +1,31 @@
+display: "Ruptura"
+
+mine-level-unlock: 20
+
+max-level: 100
+
+base-cost: 500
+increase-cost: 1200
+
+base-chance: 0.35
+increase-chance: 0.033
+
+messages:
+  - "&a&lRUPTURA! &fVocê quebrou uma linha inteira na mina!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&a&lRUPTURA!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 13
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&a{display}"
+  lore:
+    - "&7Tenha a chance de quebrar"
+    - "&7uma linha reta na mina!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""

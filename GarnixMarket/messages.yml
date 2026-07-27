@@ -1,0 +1,92 @@
+# Todas as mensagens são listas de strings — inclusive as de uma linha só.
+# Deixe a lista vazia ([]) para silenciar uma mensagem.
+#
+# As únicas exceções são as linhas de entrega (*-mailed / *-leftover / cancel.mailed
+# / cancel.leftover), que o ItemDelivery do core exige como texto simples.
+#
+# Essas linhas são mostradas PELA PRÓPRIA ENTREGA, no lugar da mensagem normal —
+# nunca junto com ela. Por isso são frases completas: quem estava em um evento ou
+# com o inventário cheio lê só a linha de correio, e ela precisa contar a história
+# inteira. É a mesma regra do /give do essentials.
+
+reload-success:
+- '&aConfigurações do mercado recarregadas!'
+
+sell:
+  # Mostrada pelo ícone informativo do menu principal, que fecha o menu antes.
+  how-to:
+  - '&ePara vender itens no mercado use &f/mercado vender <valor> &ecom o item na mão.'
+  no-item:
+  - '&cSegure na mão o item que deseja vender!'
+  invalid-price-input:
+  - '&cInforme um valor válido! &7(ex: 1000, 10k, 1.5M)'
+  invalid-price:
+  - '&cO valor mínimo de um anúncio é {currency_prefix}{price}&c!'
+  invalid-currency:
+  - '&cEssa economia não pode ser usada no mercado!'
+  cooldown:
+  - '&cAguarde &f{time} &cpara anunciar outro item!'
+  limit-reached:
+  - '&cVocê já tem &f{limit} &citens à venda!'
+  - '&7Cancele um anúncio ou adquira mais espaços para vender.'
+  item-changed:
+  - '&cO item não está mais na sua mão!'
+  failed:
+  - '&cNão foi possível anunciar o item. Ele continua com você.'
+  failed-mailed: '&cNão foi possível anunciar &f{item}&c. Você está em um evento, então ele foi para o seu &6/correio&c.'
+  failed-leftover: '&cNão foi possível anunciar &f{item}&c. Seu inventário está cheio, então ele foi para o seu &6/correio&c.'
+  success:
+  - '&aVocê anunciou &f{item} &apor {currency_prefix}{price}&a!'
+  sold:
+  - '&aSeu &f{item} &afoi comprado por &f{buyer} &apor {currency_prefix}{price}&a!'
+  # Usada no lugar de 'sold' quando a economia cobra taxa. {price} é o que o
+  # comprador pagou e {net} é o que entrou na sua conta.
+  sold-tax:
+  - '&aSeu &f{item} &afoi comprado por &f{buyer} &apor {currency_prefix}{price}&a!'
+  - '&aVocê recebeu {currency_prefix}{net} &7(taxa de &f{tax}%&7).'
+
+buy:
+  unavailable:
+  - '&cEsse item não está mais à venda!'
+  own:
+  - '&cVocê não pode comprar o seu próprio item!'
+  no-funds:
+  - '&cVocê não tem {currency_prefix}{price} &cpara comprar esse item!'
+  failed:
+  - '&cNão foi possível concluir a compra. Nada foi cobrado de você.'
+  success:
+  - '&aVocê comprou &f{item} &ade &f{seller} &apor {currency_prefix}{price}&a!'
+  received-mailed: '&aVocê comprou &f{item} &ade &f{seller} &apor {currency_prefix}{price}&a! &eVocê está em um evento, então o item foi para o seu &6/correio&e.'
+  received-leftover: '&aVocê comprou &f{item} &ade &f{seller} &apor {currency_prefix}{price}&a! &eSeu inventário encheu, então o resto foi para o seu &6/correio&e.'
+
+cancel:
+  unavailable:
+  - '&cEsse anúncio não é seu ou não existe mais!'
+  too-late:
+  - '&cNão foi possível cancelar — &f{item} &cjá foi vendido!'
+  failed:
+  - '&cNão foi possível recuperar esse item. Avise a administração.'
+  success:
+  - '&aAnúncio cancelado. &f{item} &avoltou para você.'
+  mailed: '&aAnúncio cancelado! &eVocê está em um evento, então &f{item} &efoi para o seu &6/correio&e.'
+  leftover: '&aAnúncio cancelado! &eSeu inventário encheu, então &f{item} &efoi para o seu &6/correio&e.'
+
+listing:
+  expired:
+  - '&eSeu anúncio de &f{item} &eexpirou. O item foi para o seu &6/correio&e.'
+
+# O ÚNICO broadcast do plugin: um item novo entrou no mercado.
+#
+# Definir 'command' deixa a MENSAGEM INTEIRA clicável — cada linha, de ponta a
+# ponta — com 'hover' como tooltip. Sem 'command', a mensagem sai como texto
+# simples. Linhas em branco continuam sendo só espaçamento.
+broadcasts:
+  listing-created:
+    enabled: true
+    command: /mercado
+    hover: '&7Clique para abrir o &f/mercado&7.'
+    message:
+    - ''
+    - '  &6&lMERCADO &8▶ &e{player} &7colocou um item à venda!'
+    - '  &f{item} &7por {currency_prefix}{price}'
+    - ''

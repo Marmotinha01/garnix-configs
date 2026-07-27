@@ -1,0 +1,31 @@
+display: "Aniquilação"
+
+mine-level-unlock: 60
+
+max-level: 100
+
+base-cost: 5000
+increase-cost: 15000
+
+base-chance: 60
+increase-chance: 0.05
+
+messages:
+  - "&a&lANIQUILAÇÃO! &fVocê destruiu uma camada inteira!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&a&lANIQUILAÇÃO!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 12
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&a{display}"
+  lore:
+    - "&7Tenha a chance de quebrar"
+    - "&7uma camada inteira na mina!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""

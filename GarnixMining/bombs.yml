@@ -1,0 +1,63 @@
+# Countdown hologram shown above a thrown bomb. {time} is the seconds left,
+# counted down in 0.1s steps (5, 4.9, 4.8 ... 0.1) before it detonates.
+custom-displayname: "&e{time}s"
+
+# Fuse length in seconds: how long a landed bomb counts down before it blows.
+time-to-explode: 5
+
+# Most simultaneous thrown bombs a single player may have live at once. Extra
+# throws while at the cap are rejected.
+max-simultaneous-per-player: 5
+
+# Throw physics. 'throw-speed' is the launch speed (blocks/tick) along the
+# player's look direction; 'gravity' is how fast the bomb arcs downward each
+# tick. The bomb detonates where it first strikes a standing mine block.
+throw-speed: 1.3
+gravity: 0.06
+
+# Each bomb: 'radius' is the sphere (blocks) carved out of the mine on impact.
+bombs:
+  2x2:
+    radius: 2
+    material: "FIREBALL"
+    display: "&4Explosivo"
+    lore:
+    - '&7Explode uma área da mina.'
+    - ''
+    - ' &4▎ &fÁrea: &42x2 '
+    - ''
+    - '&4Opções de uso:'
+    - '&fBotão Direito &8➟ &7Usar'
+  4x4:
+    radius: 4
+    material: "FIREBALL"
+    display: "&4Explosivo"
+    lore:
+    - '&7Explode uma área da mina.'
+    - ''
+    - ' &4▎ &fÁrea: &44x4 '
+    - ''
+    - '&4Opções de uso:'
+    - '&fBotão Direito &8➟ &7Usar'
+  6x6:
+    radius: 6
+    material: "FIREBALL"
+    display: "&4Explosivo"
+    lore:
+    - '&7Explode uma área da mina.'
+    - ''
+    - ' &4▎ &fÁrea: &46x6 '
+    - ''
+    - '&4Opções de uso:'
+    - '&fBotão Direito &8➟ &7Usar'
+  8x8:
+    radius: 8
+    material: "FIREBALL"
+    display: "&4Explosivo"
+    lore:
+    - '&7Explode uma área da mina.'
+    - ''
+    - ' &4▎ &fÁrea: &48x8 '
+    - ''
+    - '&4Opções de uso:'
+    - '&fBotão Direito &8➟ &7Usar'

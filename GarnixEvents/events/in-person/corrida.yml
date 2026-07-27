@@ -1,0 +1,152 @@
+# Evento — Corrida
+#
+# Um circuito com obstáculos no chão. Vence o primeiro a alcançar a chegada do outro
+# lado do mapa. Ninguém é eliminado e não há queda: quem trava num obstáculo apenas
+# perde tempo, que é a graça do evento. Durante a contagem regressiva os corredores
+# ficam TRAVADOS na largada — dá para olhar em volta e se mexer dentro do próprio
+# bloco, mas o passo que sairia do bloco é recusado até o VALENDO.
+#
+# Locais necessários: lobby, join, exit e ao menos uma chegada. O cabin é opcional.
+#   /corrida setloc lobby|join|exit|cabin  » espera, largada, saída e camarote (opcional)
+#   /corrida addsign                 » arma o modo; clique na placa para adicioná-la
+#   /corrida delsign <numero>        » remove uma das placas
+#   /corrida addplate                » a placa de pressão em que você está vira chegada
+#   /corrida delplate <numero>       » remove uma das placas de pressão de chegada
+#
+# A chegada pode ser PLACA (clicar nela) ou PLACA DE PRESSÃO (pisar nela), e a arena
+# pode ter as duas: vale a que o corredor alcançar primeiro. Pode haver várias de cada
+# — use uma por bloco da linha para o corredor não precisar mirar no meio dela.
+
+display: '&3Corrida'
+
+# A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
+# o evento inteiro é editar esta linha e mais nada.
+color: '&3'
+
+# Tag do último vencedor deste evento, exibida pela placeholder
+# %events_tag_corrida%. Deixe vazio para o evento não dar tag.
+tag: '&3[UsainBolt]'
+
+join-time: 1m
+start-time: 10s
+duration: 10m
+
+min-players: 2
+max-players: 0
+
+rewards:
+- eco give {player} 5000
+
+# Títulos mostrados no meio da tela durante o evento.
+titles:
+  countdown:
+    title: '&c&l{seconds}'
+    subtitle: '&7Prepare-se!'
+    fade-in: 0
+    stay: 30
+    fade-out: 10
+  go:
+    title: '&e&lVALENDO!'
+    subtitle: '&7Corra até a placa!'
+
+# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+#
+# As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
+#
+# O '2' é o que preserva os DOIS ESPAÇOS de recuo no começo de cada linha — sem
+# ele o YAML come o recuo e o texto cola na borda do chat. Na prática: o conteúdo
+# fica a 6 espaços da margem do arquivo, e os 2 que sobram são os que aparecem.
+# Uma linha com só '&r' vira uma linha em branco.
+#
+# O desenho do bloco:
+#   &8▎  barra lateral, só nas linhas de texto corrido — é o cabeçalho do bloco
+#   &8▶  o item principal (o prêmio, a chamada para agir) — sem a barra
+#   &8▪  os detalhes secundários — sem a barra
+# Uma linha em branco (só '&r') separa os grupos: ela entra quando o marcador muda,
+# não entre dois '▪' seguidos. Nunca leva barra nem marcador.
+#
+# O formato antigo (lista com '- ') continua funcionando em qualquer mensagem.
+#
+# Tags de chat, válidas em qualquer mensagem:
+#   <click:run_command:/comando>texto</click>      clicar executa o comando
+#   <click:suggest_command:/comando >texto</click> clicar escreve no chat
+#   <hover:show_text:&fdica>texto</hover>          o mouse em cima mostra a dica
+# As duas se combinam — o normal é um botão ter as duas:
+#   <click:run_command:/corrida entrar><hover:show_text:&fdica>AQUI</hover></click>
+#
+# Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
+#                            {event} = o nome colorido do evento
+# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+messages:
+  
+  # {count} participantes até agora · {seconds} para fechar as entradas
+  announce: |2
+
+      &8▎ {c}Evento {c}&lCorrida {c}iniciando!
+      &8▎ &fParticipe clicando &a&l<click:run_command:/corrida entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
+      &r
+      &8▶ &fPrêmio: {c}5K de Cash
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &8▪ &fEntradas fecham em &7{seconds}s
+      &r
+# {count} participantes · {seconds} para começar
+  locked: |2
+
+      &8▎ {c}Evento {c}&lCorrida {c}iniciando!
+      &8▎ &fAs entradas foram &7fechadas&f.
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+      &8▶ &fComeça em {c}&l{seconds}s
+      &r
+# {count} participantes
+  started: |2
+
+      &8▎ {c}Evento {c}&lCorrida {c}iniciado!
+      &r
+      &8▪ &fParticipantes: &7{count}
+      &r
+# {player} venceu
+  winner: |2
+
+      &8▎ {c}Evento {c}&lCorrida&f, {c}temos um vencedor!
+      &r
+      &8▶ &7{player} &fcruzou a linha de chegada em primeiro.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash
+      &r
+# ── Eliminações ─────────────────────────────────────────────────────
+# Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
+# {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
+  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento!'
+  
+  # ── Fim sem vencedor ────────────────────────────────────────────────
+  no-winner: |2
+
+      &8▎ {c}Evento {c}&lCorrida {c}encerrado.
+      &r
+      &8▪ &fMotivo: &7Ninguém chegou ao fim do circuito.
+      &r
+  cancelled: |2
+
+      &8▎ {c}Evento {c}&lCorrida {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Cancelado pela staff.
+      &r
+# {count} de {min} jogadores
+  not-enough-players: |2
+
+      &8▎ {c}Evento {c}&lCorrida {c}cancelado.
+      &r
+      &8▪ &fMotivo: &7Jogadores insuficientes.
+      &r
+# ── Actionbar ───────────────────────────────────────────────────────
+# Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  
+  # ── Corrida ─────────────────────────────────────────────────────────
+  time-up: '&eO tempo do evento &7{event} &eacabou!'

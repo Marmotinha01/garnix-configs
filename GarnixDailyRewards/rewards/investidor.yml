@@ -1,0 +1,18 @@
+display: 'Investidor'
+
+permission: 'daily.investidor'
+
+cooldown: '1d'
+
+slot: 34
+
+commands:
+  - 'cash add {player} 500'
+
+collect-icon:
+  texture: '925b8eed5c565bd440ec47c79c20d5cf370162b1d9b5dd3100ed6283fe01d6e'
+  display: '&a&lINVESTIDOR'
+  lore:
+    - '&fRecompensa: &6❂500 Cash'
+    - ''
+    - '&aClique para coletar!'

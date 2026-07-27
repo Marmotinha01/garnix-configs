@@ -1,0 +1,56 @@
+title: Coin Flip
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum desafio encontrado.'
+
+create-icon:
+  slot: 47
+  material: NETHER_STAR
+  display: '&aCriar Desafio'
+  lore:
+  - '&7Clique para criar.'
+
+my-challenges-icon:
+  slot: 49
+  material: EMPTY_MAP
+  display: '&aSeus Desafios'
+  lore:
+  - '&7Clique para ver.'
+
+ranking-icon:
+  slot: 51
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Clique para ver.'
+
+# Lore de cada desafio. O item é a cabeça do criador.
+challenge-lore:
+- ''
+- ' &fAposta: {currency_prefix}{amount} '
+- ' &fExpira em: &c{time_remaining} '
+- '{tax_info}'
+- ''
+- '{action}'
+
+action-accept: '&aClique para aceitar.'
+action-own: '&cEste desafio é seu.'
+
+# A linha {tax_info}, que sempre diz se uma vitória sua paga taxa. A taxa incide
+# só sobre o lucro — a sua aposta volta inteira de qualquer jeito. {net} é o
+# lucro líquido e {tax} é a alíquota. Nos desafios dos outros mostra o que VOCÊ
+# pagaria ao aceitar; no seu, a alíquota travada quando você criou.
+tax-free: ' &fTaxa: &aIsento '
+tax-charged: ' &fTaxa: &c&l{tax}&c% '

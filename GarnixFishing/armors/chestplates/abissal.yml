@@ -1,0 +1,16 @@
+# Abissal — chestplate. Foco em corais.
+item:
+  display: "&5Peitoral Abissal"
+  material: LEATHER_CHESTPLATE
+  color: "#8E24AA"
+  lore:
+    - ""
+    - " &7Forjado nas profundezas abissais."
+    - ""
+    - " &fBônus:"
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  corais:
+    value: 2.5
+    percent: true

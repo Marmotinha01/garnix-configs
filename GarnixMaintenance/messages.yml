@@ -1,0 +1,38 @@
+# Mensagens do GarnixMaintenance. Cores legacy com &. Placeholders: {server}, {player}, {lp_prefix}, {lp_suffix}.
+messages:
+  usage: '&cUse: /manu <on/off/add/rem/status> ...'
+  no-permission: '&cVocê não pode executar este comando.'
+  server-not-found: '&cEsse servidor não existe.'
+  already-enabled: '&cA manutenção desse servidor já está ativada.'
+  already-disabled: '&cA manutenção desse servidor já está desativada.'
+  enabled-server: '&eA manutenção do servidor &f{server}&e foi &aativada&e.'
+  disabled-server: '&eA manutenção do servidor &f{server}&e foi &cdesativada&e.'
+  enabled-all: '&eA manutenção de &ftodos os servidores&e foi &aativada&e.'
+  disabled-all: '&eA manutenção de &ftodos os servidores&e foi &cdesativada&e.'
+  player-added: "&aO jogador &f{player}&a foi adicionado à manutenção do servidor &f{server}&a."
+  player-added-all: "&aO jogador &f{player}&a foi adicionado à manutenção de todos os servidores."
+  player-already-added: "&cO jogador &f{player}&c já está adicionado à manutenção."
+  player-removed: "&eO jogador &f{player}&e foi removido da manutenção do servidor &f{server}&e."
+  player-removed-all: "&eO jogador &f{player}&e foi removido da manutenção de todos os servidores."
+  player-not-added: "&cO jogador &f{player}&c não está adicionado à manutenção."
+  status:
+    header: '&e&lMANUTENÇÃO - STATUS'
+    server-active: '&b{server} &cManutenção ativa'
+    server-inactive: '&b{server} &8Manutenção inativa'
+    player: '&8  - {lp_suffix} {player}'
+    no-players: '&8  ▶ &cNenhum jogador adicionado'
+  # Kick/disconnect (manutenção total ou conexão inicial).
+  kick:
+  - '&c&lREDE GARNIX'
+  - ''
+  - '&cO servidor está passando por uma breve manutenção!'
+  - ''
+  - '&cAcesse nosso discord para saber mais:'
+  - '&ediscord.gg/redegarnix'
+  # Chat quando a troca para um backend em manutenção é negada.
+  switch-denied:
+  - ''
+  - '&c&l  REDE GARNIX'
+  - ''
+  - '&c  Este servidor está em manutenção no momento!'
+  - ''

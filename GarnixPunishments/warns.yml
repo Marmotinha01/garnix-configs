@@ -1,0 +1,29 @@
+# Warn escalation — a PROGRESSIVE ladder with a persistent per-player tier.
+# Each warn expires individually after `expire-after`. When a player's active warns reach the
+# current stage's `warns-required`, that stage's punishment is applied, the warns reset, and the
+# player advances to the NEXT stage. The tier is never forgotten (only the warns reset), so
+# reoffenders climb toward harsher punishments. The last stage repeats (usually a permanent ban).
+# Stages are ordered by their numeric key.
+warns:
+  expire-after: 7d
+  escalation-reason: Reincidência de avisos
+  stages:
+    '1':
+      warns-required: 5
+      type: TEMPMUTE
+      duration: 5m
+      reason-id: warn_stage_1
+    '2':
+      warns-required: 3
+      type: TEMPMUTE
+      duration: 30m
+      reason-id: warn_stage_2
+    '3':
+      warns-required: 2
+      type: TEMPBAN
+      duration: 1d
+      reason-id: warn_stage_3
+    '4':
+      warns-required: 1
+      type: BAN
+      reason-id: warn_stage_final

@@ -1,0 +1,31 @@
+location: world:-3.538067481319857:61.0:-6.378093730251594:179.15541:1.1861324E-6
+icon:
+  material: 422
+  display: '&cMaquinas'
+  lore:
+  - '&7Adquira suas maquinas'
+  - '&7para lucrar.'
+  - ''
+  - ' &cAcesso rápido:'
+  - ' &8▸ &f/maquinas'
+  - ''
+  - '&cClique para teleportar.'
+locked-icon:
+  material: BARRIER
+  display: '&cMaquinas'
+  lore:
+  - '&7Adquira suas maquinas'
+  - '&7para lucrar.'
+  - ''
+  - ' &cAcesso rápido:'
+  - ' &8▸ &f/maquinas'
+  - ''
+  - '&cVocê não tem permissão.'
+permission: ''
+slot: 33
+messages:
+  success: '&aVocê foi teleportado para a warp &f{warp}&a.'
+  no-permission: '&cVocê não tem permissão para ir à warp &f{warp}&c.'
+  title: ''
+  subtitle: ''
+  actionbar: ''

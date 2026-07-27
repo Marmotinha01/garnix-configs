@@ -1,0 +1,39 @@
+title: Vender Item
+rows: 4
+
+# O item que está na mão do jogador. Apenas preview — não é clicável e só sai da
+# mão quando o anúncio é confirmado. As linhas entram sob a lore original dele.
+item-icon:
+  slot: 11
+  lore:
+  - ''
+  - ' &fPreço: {currency_prefix}{price} '
+  - '{tax_info}'
+  - ''
+  - '&7Este item será anunciado.'
+
+# A linha {tax_info}, que sempre diz se a economia escolhida cobra taxa — trocar
+# de economia troca a linha. {net} é o que sobra para você e {tax} é a alíquota.
+tax-free: ' &fTaxa: &aIsento '
+tax-charged: ' &fTaxa: &c&l{tax}&c% '
+
+# O ícone da economia vem do próprio GarnixCurrencies — só a lore é definida aqui.
+currency-icon:
+  slot: 15
+  lore:
+  - '&7Clique para trocar.'
+
+confirm-icon:
+  slot: 32
+  material: INK_SACK
+  data: 10
+  display: '&aColocar à Venda'
+  lore:
+  - '&7Clique para anunciar.'
+
+cancel-icon:
+  slot: 30
+  texture: 7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf
+  display: '&cCancelar'
+  lore:
+  - '&7Clique para fechar.'

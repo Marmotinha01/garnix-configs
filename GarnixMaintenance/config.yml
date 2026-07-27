@@ -1,0 +1,6 @@
+# GarnixMaintenance (backend) — rede de segurança local; o estado é gerido pelo proxy.
+# Requer o GarnixCore com Redis habilitado.
+
+# Nome deste servidor, idêntico ao registrado no Velocity.
+# Obrigatório: se ficar vazio o plugin se desativa.
+server-name: 'rankup'

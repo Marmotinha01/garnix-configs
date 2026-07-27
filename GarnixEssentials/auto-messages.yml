@@ -1,0 +1,40 @@
+# GarnixEssentials — Auto Messages
+# Grupos enviados em ordem, um por intervalo.
+
+enabled: true
+interval: 180 # segundos entre cada mensagem
+sound: '' # som para todos (vazio = sem som). Ex.: "NOTE_PLING:1:1"
+
+# Trecho clicável: <diretivas texto visível>. Ex.:
+#   <hover(&7Abrir loja) run(/loja)&bClique AQUI>
+# Diretivas: hover(...) run(/cmd) suggest(/cmd) url(https://...)
+messages:
+  discord:
+  - ''
+  - '  &9Acesse o nosso &lDiscord&9!'
+  - '  <hover(&7Clique para acessar!)&fhttps://discord.gg/redegarnix>'
+  - ''
+  
+  site:
+  - ''
+  - '  &6Ajude o servidor a continuar &lonline&6.'
+  - '  <hover(&7Clique para acessar!)&fhttps://redegarnix.com>'
+  - ''
+  
+  regras:
+  - ''
+  - '  &cFique atento as &lregras &cdo servidor!'
+  - '  <hover(&7Clique para acessar!)&4https://redegarnix.com/rules>'
+  - ''
+  
+  vincular:
+  - ''
+  - '  &aVincule sua conta com nosso Discord.'
+  - '  <hover(&7Clique para vincular!) run(/vincular)&fClique &lAQUI &fpara vincular!> &e(VIP Grátis)'
+  - ''
+  
+  equipe:
+  - ''
+  - '  &bAs vagas para nossa equipe estão abertas!'
+  - '  &7Faça o formulário em &f#aplicação-staff &7em nosso Discord.'
+  - ''

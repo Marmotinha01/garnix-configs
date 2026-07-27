@@ -1,0 +1,13 @@
+order: 17
+
+name: "Blaze"
+tag: "&6[Blaze]"
+
+texture: '737623f79f7eb4f3f80da65b652cc44b2148eea41f9ffe2e86a23bdf49ab77b1'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

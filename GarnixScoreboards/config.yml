@@ -1,0 +1,25 @@
+# Ticks de espera após o login antes de montar a scoreboard. Dá tempo dos
+# outros plugins carregarem os dados do jogador, para a primeira renderização
+# já sair com os valores certos. 0 = imediato.
+join-delay-ticks: 20
+
+# De quanto em quanto tempo um jogador SEM scoreboard é reavaliado — quem está
+# com ela desligada, num mundo desativado ou sem nenhuma board aplicável. Nada
+# nesse estado muda sozinho, então não precisa ser rápido.
+idle-recheck-ticks: 20
+
+# Intervalo padrão entre frames de uma animação que não declara o seu próprio
+# 'interval'. 20 ticks = 1 segundo.
+default-animation-interval: 4
+
+
+# ── Exibição ──────────────────────────────────────────────────────────────
+
+# true  = linhas que resolvem para vazio somem (as de baixo sobem).
+# false = a linha vazia é renderizada como espaço em branco.
+# Dá para decidir linha a linha com 'hide-if-empty: true'.
+hide-empty-lines: false
+
+# Mundos onde nenhuma scoreboard é exibida, independente do que as boards
+# digam.                                              Ex.: ['eventos', 'minas']
+disabled-worlds: []

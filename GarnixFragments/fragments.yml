@@ -1,0 +1,33 @@
+# Cada entrada é um tipo de fragmento. A chave (ex.: fogo) é o id usado nos
+# comandos e no custo da loja. Campos: display, icon.
+fragments:
+  fogo:
+    display: '&cFragmento de Fogo'
+    icon:
+      material: BLAZE_POWDER
+      display: '&c&lFragmento de Fogo'
+      glow: true
+      lore:
+      - '&7Um fragmento ardente,'
+      - '&7forjado nas chamas.'
+  
+  gelo:
+    display: '&bFragmento de Gelo'
+    icon:
+      material: ICE
+      display: '&b&lFragmento de Gelo'
+      glow: true
+      lore:
+      - '&7Um fragmento congelante,'
+      - '&7frio como o inverno.'
+  
+  natureza:
+    display: '&aFragmento de Natureza'
+    icon:
+      material: SAPLING
+      data: 0
+      display: '&a&lFragmento de Natureza'
+      glow: true
+      lore:
+      - '&7Um fragmento vivo,'
+      - '&7pulsando com energia natural.'

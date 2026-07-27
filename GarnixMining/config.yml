@@ -1,0 +1,319 @@
+# GarnixMining — Config
+
+# Minutes between mining-ranking rebuilds (top 10 blocks/level).
+ranking-refresh-minutes: 5
+
+# Mine XP display (XP is not a currency).
+xp-display:
+  symbol: ''
+  color: '&b'
+  display: XP
+
+# Label for the "both" booster: one booster that boosts every mine reward
+# (coins, gemas) AND mine XP at once. Same shape as xp-display (it is not a
+# currency). Shown wherever a booster's currency name is rendered.
+both-display:
+  symbol: ""
+  color: ""
+  display: "&bXP &7+ &aCoins &7+ &dGemas"
+
+# Currency used to buy/refund enchant levels. Must be a GarnixCurrencies id.
+enchant-currency: gemas
+
+# Refund percentage applied when disenchanting (40 = 40% of the paid cost).
+enchant-refund-percentage: 40.0
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ORÇAMENTO DAS ANIMAÇÕES DE ENCANTAMENTO (blaze / snake / wither / kraken /
+# meteor), somando TODOS os jogadores do servidor.
+#
+# A unidade é "packets por tick": quanto trabalho a main thread precisa montar a
+# cada 50 ms para animar os efeitos. Quando o orçamento acaba, os próximos procs
+# são recusados até algum efeito em andamento terminar.
+#
+# ── POR QUE ESTÁ EM 0 ────────────────────────────────────────────────────────
+# 0 = ilimitado, e é o padrão de propósito.
+#
+# Os limites por jogador já seguram a carga no dia a dia: cada um pode ter no
+# máximo 1 kraken, 1 blaze, 1 wither, 1 meteoro e 3 cobras ao mesmo tempo. Só um
+# servidor com MUITOS jogadores de nível alto minerando junto chega perto do teto
+# da main thread. Ligar o orçamento antes disso só faz encantamento deixar de
+# disparar sem necessidade, e o jogador sente como se o item tivesse quebrado.
+# Então ele fica desligado até o servidor mostrar que precisa.
+#
+# ── QUANTO CADA EFEITO CUSTA ─────────────────────────────────────────────────
+#   kraken 185   wither 21   blaze 18   meteor 9   snake 4
+#
+# O orçamento conta TRABALHO e não quantidade, porque os efeitos não são nem de
+# longe equivalentes: "50 efeitos" são 200 packets/tick se forem cobras e 9250 se
+# forem krakens. Um kraken sozinho custa o mesmo que 46 cobras.
+#
+# O custo do kraken sai de 'tentacles' x 'tentacle-length' do kraken.yml, então
+# diminuir esses valores barateia cada kraken aqui também, automaticamente.
+#
+# ── QUANDO AUMENTAR ──────────────────────────────────────────────────────────
+# Se você ligou o orçamento e os jogadores estão reclamando que os encantamentos
+# "não pegam", mas o TPS está estável em 20. Nesse caso sobra folga na main
+# thread e o orçamento está apertado demais. Suba aos poucos (por exemplo de
+# 10000 para 15000) e observe o TPS depois de cada mudança.
+#
+# ── QUANDO DIMINUIR ──────────────────────────────────────────────────────────
+# Se o TPS cai nos horários de pico e o /timings aponta as tasks de animação.
+# Cada corte no orçamento reduz proporcionalmente o trabalho por tick.
+#
+# ── NÚMEROS DE REFERÊNCIA (simulados: 500 jogadores, tudo nível 100) ─────────
+#   ilimitado -> 77000 packets/tick   (a main thread não dá conta: 3-5 TPS)
+#      20000  -> 20000 packets/tick   (67% dos procs recusados)
+#      10000  -> 10000 packets/tick   (79% recusados) <- pesado mas sustentável
+#       5000  ->  5000 packets/tick   (89% recusados)
+#
+# ── O DETALHE IMPORTANTE ─────────────────────────────────────────────────────
+# O orçamento NÃO deixa os efeitos mais baratos, ele só decide quem ganha um.
+# Com 500 jogadores maxados a demanda é 77000 e o teto seguro é ~10000, então a
+# maioria dos procs vai ser recusada — isso é matemática, não configuração.
+#
+# Para ter MAIS procs acontecendo, o caminho não é aumentar o orçamento (aí o
+# servidor trava de novo) e sim baratear cada efeito: baixar 'tentacle-length' do
+# kraken.yml de 20 para 12 leva o kraken de 185 para 137, e cabe um quarto a mais
+# de krakens no mesmo orçamento. É trocar aparência por quantidade.
+# ─────────────────────────────────────────────────────────────────────────────
+enchant-animation-budget: 0
+
+# Auto-generated bonus lines for pickaxe skins (skins.yml) and armor pieces
+# (armors/*.yml): put {bonus} on a lore line and it expands to one line per entry
+# of that item's 'bonuses' table, so a percentage is written once (in 'bonuses')
+# instead of by hand. Per line: {value} = the number, {unit} = "%" for a percent
+# bonus (empty otherwise); {color} and {display} (plus every currency placeholder
+# above) come from GarnixCurrencies — xp uses xp-display. A skins.yml or armor
+# file may override this layout with its own 'bonus-format'.
+bonus-lore-format: " &8► {color}+{value}{unit} {display}"
+
+# Commands allowed inside the mine for players without mining.bypass.commands.
+mine-command-whitelist:
+- mina
+- g
+- .
+- fly
+- voar
+- clan
+- plot
+- spawn
+- coins
+- money
+- gemas
+- gema
+- aura
+- dracma
+- dracmas
+- cash
+- msg
+- r
+- tell
+
+# Min/max mine tax (percentage). The owner cannot set a rate outside this range.
+tax:
+  min: 0.0
+  max: 40.0
+
+# Percentage of block XP visitors contribute to the owner's mine (0-100).
+visitor-xp-percentage: 35
+
+# Percentage of block XP a visitor also earns toward their OWN mine while mining
+# in someone else's mine (0-100). Independent of visitor-xp-percentage.
+visitor-self-xp-percentage: 10
+
+# Visitor slots — the per-mine capacity of simultaneous VISITORS (non-owner
+# miners). Every player starts with 0 unlocked slots (only the owner may mine);
+# each activated "slot item" unlocks +1, up to 'max'. A slot is the capacity a
+# visitor occupies only while actually inside — a friend assigned to a slot does
+# not reserve capacity when absent, so public miners can fill any free room. The
+# same unlocked-slot count also caps how many friends the owner may assign in the
+# manage menu. 'max' must not exceed the number of friend-slot positions defined
+# in menus/manage.yml (friend-slots.slots).
+visitor-slots-max: 5
+
+# Activatable visitor-slot item, handed out by /mina givevaga. Right-click to
+# activate: unlocks +1 visitor slot (up to visitor-slots.max) and is consumed.
+# 'texture' builds a player-head icon; swap for 'material'/'data' for a normal
+# item. 'flags' is optional (Bukkit ItemFlags).
+slot-item:
+  texture: "4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb"
+  display: "&aVaga de Visitante"
+  lore:
+    - "&7Ative para desbloquear &a+1 vaga"
+    - "&7de visitante na sua mina."
+    - ""
+    - "&c[!] Item consumível após o uso."
+    - ""
+    - "&7Use com &fBotão Direito &7para ativar."
+
+booster:
+  # Minimum remaining time (seconds) required to recover an active booster.
+  # On recovery the player gets back an item worth 50% of the remaining time
+  # (the other half is lost). This floor blocks the abuse of recovering
+  # almost-expired boosters just to re-activate another without waiting.
+  min-remove-seconds: 30
+
+# Booster item template. Currency placeholders + {bonus} {duration} {remaining}.
+booster-icon:
+  material: POTION
+  data: 8201
+  flags: ["HIDE_POTION_EFFECTS"]
+  display: '&6Booster de Mineração'
+  lore:
+  - '&7Use este booster para ter'
+  - '&7seus ganhos aumentados.'
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fTipo: {symbol_color}{primary_color}{display} '
+  - ' &8▪ &fBônus: &a{bonus} '
+  - ' &8▪ &fDuração: &7{duration} '
+  activation-lore:
+  - ''
+  - '&6Opções de uso:'
+  - '&fBotão Direito &8➟ &7Ativar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'
+
+# Action bar shown while mining. Placeholders: {providers} {separator}
+# {mine_level} {max_level} {mine_exp} {mine_need_exp}.
+# "provider-display" is per-currency: currency placeholders + {value}.
+actionbar:
+  separator: ' &8■ '
+  tax-display: '&fTaxa &c&l{tax}&c%'
+  provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value} {currency}'
+  message: '{providers}{separator}&7Nível &a{mine_level}&7/&a{max_level}{separator}&7XP &e{mine_exp}&7/&e{mine_need_exp}'
+
+# Per-currency entry for the {rewards} placeholder of enchant messages/titles.
+# Currency placeholders + {value}.
+enchant-reward-entry: '{symbol_color}{symbol}{primary_color}{value} {currency}'
+
+# Pickaxe item shown while mining.
+pickaxe-icon:
+  slot: 3
+  display: '&6Picareta &7[{blocks}]'
+  lore:
+  - ''
+  - ' &6▎ &fEncantamentos: '
+  - '{enchants}'
+  - ''
+  - ' &6▎ &fSkin: {skin-display} &a+&l{skin-bonus}&a% '
+  - '' 
+  - '&6Opções de uso:'
+  - '&fBotão Dir. + SHIFT &8➟ &7Gerenciar'
+  enchant-entry: ' &8◗ &7{enchant} {level} '
+  no-enchants: ' &8◗ Quebra Rápida ∞ '
+
+# Per-mine reset cooldown, in seconds.
+reset-cooldown: 30
+
+# Repeating-task intervals in seconds.
+tasks:
+  pickaxe-display-seconds: 5
+  blessed-flush-seconds: 30
+  booster-expiry-seconds: 60
+  mining-report-seconds: 60
+
+# Skin-forge item (consumed on use). Texture is the player-head base hash.
+forge-icon:
+  texture: 818f83eb64f438e3f6ae3a5c2dea8ed10303bad85ac34a798659a275aa096506
+  display: '&6Forja de Skins'
+  lore:
+  - '&7Combine skins para'
+  - '&7forjar uma melhor.'
+  - ''
+  - ' &e▎ &fTipo: &6Picareta '
+  - ''
+  - ' &8Requisitos:'
+  - ' &8▪ &c7 Skins Iguais'
+  - ''
+  - '&6Opções de uso:'
+  - '&fBotão Dir. + SHIFT &8➟ &7Abrir'
+
+# Drill ("britadeira", the pt-BR display name). A single, unique consumable item:
+# right-click a standing mine block to plant it. A trapdoor/iron/hopper body then
+# bores straight down that column, carving a (2*dig-radius+1) square out of the mine
+# at each level until it breaks the mine floor, then vanishes and shows the earnings
+# title (like a bomb). The body is drawn as real fake blocks, visible to every viewer
+# of the mine. 'data'/'flags' are optional, like the item templates above.
+drill:
+  material: HOPPER
+  display: "&cBritadeira"
+  glow: true
+  lore:
+  - '&7Perfura a camada'
+  - '&7até o fim da mina.'
+  - ''
+  - ' &c▎ &fÁrea: &c3x3 '
+  - ''
+  - '&cOpções de uso:'
+  - '&fBotão Direito &8➟ &7Usar'
+  # Half-width of the square carved at each level: 1 = 3x3, 2 = 5x5, 0 = column only.
+  dig-radius: 1
+  # Ticks between each downward step (lower = faster). 2 = 10 levels per second.
+  descend-period-ticks: 10
+  # Ticks the assembled body pauses at the clicked block before descending, so it is
+  # clearly seen starting there. 20 ticks = 1 second. 0 = no pause (descend at once).
+  start-hold-ticks: 10
+  # Most drills a single player may have boring at once.
+  max-simultaneous-per-player: 10
+  # The three fake blocks of the drill body, top to bottom.
+  top-block: IRON_TRAPDOOR
+  middle-block: IRON_BLOCK
+  bottom-block: HOPPER
+  
+# ── Progress bar ──
+progress-bar:
+  # Number of characters in the bar.
+  length: 5
+  # Character repeated for each segment.
+  symbol: '▪'
+  # Color of completed segments.
+  completed-color: '&e'
+  # Color of incomplete segments.
+  incomplete-color: '&7'
+
+# ── Frenzy (infinite mission) ──
+# Mining manual blocks fills a meter; once full, a timed window opens during which
+# ALL of that player's mining gains are multiplied. The active window lives only in
+# memory: it survives a quit/reconnect but is lost on a full server restart.
+frenzy:
+  # Master switch for the whole mechanic.
+  enabled: true
+  # How the meter fills:
+  #   volume — count manual blocks up to 'blocks-required' (simple, predictable).
+  #   streak — the meter DECAYS when you stop mining, forcing sustained digging.
+  mode: volume
+  # (volume) Manually mined blocks needed to trigger the frenzy. Enchants, drill and
+  # bombs do NOT count — only blocks broken by hand.
+  blocks-required: 1000
+  # (streak) Only used when mode: streak.
+  streak:
+    blocks-required: 5000
+    # Meter units lost per second once you stop mining.
+    decay-per-second: 20
+    # Seconds of not mining before the decay starts.
+    decay-grace-seconds: 2
+  # Duration of the doubled-gains window. Accepts DurationFormatter syntax: "3m", "90s", "1m30s".
+  duration: "3m"
+  # Multiplier applied to ALL mining gains while active (base block, enchants, drill, bombs).
+  multiplier: 2.0
+  # Also multiply the mine XP gained while active?
+  multiply-xp: false
+  # true  = multiply the gross reward BEFORE tax, so a mine owner receives doubled tax
+  #         from a visitor in frenzy.
+  # false = only the player's own net take is doubled; the owner's tax is unchanged.
+  multiply-before-tax: false
+  # Accumulation bar shown by %mining_frenzy% while filling the meter.
+  bar:
+    length: 5
+    symbol: '▪'
+    completed-color: '&4'
+    incomplete-color: '&7'
+  inactive-entry: '{bar} &a{progress}&8/&c{required}'
+  # %mining_frenzy% text while the window is ACTIVE. {time} = remaining time.
+  active-entry: '&fDuração: &7{time}'
+  # Feedback fired when the frenzy activates. {duration} = the configured duration.
+  activation:
+    title: '&c&lFRENESI!'
+    subtitle: '&eGanhos dobrados por &c{duration}&e!'
+    sound: LEVEL_UP

@@ -1,0 +1,13 @@
+order: 3
+
+name: "Ovelha"
+tag: "&f[Ovelha]"
+
+texture: '84e5cdb0edb362cb454586d1fd0ebe971423f015b0b1bfc95f8d5af8afe7e810'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

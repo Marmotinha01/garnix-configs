@@ -1,0 +1,37 @@
+enabled: true
+priority: 0
+worlds: ["mina"]
+permission: ''
+update-ticks: 20
+
+title:
+  interval: 2
+  frames:
+  - '&f&lMINA &8► &a%bungee_total%'
+  - '&e&lMINA &8► &a%bungee_total%'
+  - '&6&lMINA &8► &a%bungee_total%'
+  - '&6&lM&f&lINA &8► &a%bungee_total%'
+  - '&6&lM&e&lINA &8► &a%bungee_total%'
+  - '&6&lMI&f&lNA &8► &a%bungee_total%'
+  - '&6&lMI&e&lNA &8► &a%bungee_total%'
+  - '&6&lMIN&f&lA &8► &a%bungee_total%'
+  - '&6&lMIN&e&lA &8► &a%bungee_total%'
+  - '&e&lMINA &8► &a%bungee_total%'
+  - '&6&lMINA &8► &a%bungee_total%'
+  - '&f&lMINA &8► &a%bungee_total%'
+  - '&6&lMINA &8► &a%bungee_total%'
+
+lines:
+- ''
+- ' &fNível: &6%mining_mine_level%'
+- ' %mining_level_bar% &a%mining_xp%&8/&c%mining_xp_needed%'
+- ''
+- ' &fCoins: &2$&a%currencies_coins%'
+- ' &fGemas: &d۞%currencies_gemas%'
+- ''
+- ' &fCash: &6❂%currencies_cash%'
+- ''
+- ' &c&lFRENESI &e[2x]'
+- ' %mining_frenzy%'
+- ''
+- '&eredegarnix.com'

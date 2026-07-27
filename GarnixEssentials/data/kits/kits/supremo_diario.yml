@@ -1,0 +1,29 @@
+display: Kit Supremo Diário
+
+category: vips
+
+permission: vip.supremo
+
+cooldown: 1d
+
+slot: 31
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  material: INK_SACK
+  data: 1
+  display: '&4&lKit Supremo Diário'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Supremo Diário'
+  lore:
+  - '&7Necessário ser &4&lSUPREMO&7.'
+
+content: H4sIAAAAAAAA/72QzUoDMRDHp+227vYkInjQQ3yBngTBg1DXlh78AAtey3R3ug3mY02y9eOF9gl8gfbFnFURBUFPXhKS+f1nkl8fIIGuDKR9HwDaMbRlDntaGsocLsJJcLJ8kI5mS2vvWtBNbWVC1IdOwCKBiEy2bIKtNnTUSjV70+AUOpBMZE5jhYVv6jHE3DDQjKu9ufWeeOBWLn2p8IkbXVhHMYMR7K/r49QaLwsUOOeIya14TwwYOFzXR6mS9xUJ8rw6rpbomHUan8mge0NsxWEnnUCRLXHFsBaV5gPKRxzEEF2hJthhcl2rdDK8HYmz6+l0NGUJ0DtHjQXxtH/xES347T/a6MLuFxv827lD1gEHfMuoCbipNy/km995qkSpbPiQhL9Lwr9J2mbyU9J4eHP5XRG8AikRHcBEAgAA

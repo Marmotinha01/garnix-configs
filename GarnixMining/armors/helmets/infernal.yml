@@ -1,0 +1,20 @@
+item:
+# Infernal Helmet
+  display: "&4Capacete Infernal"
+  material: LEATHER_HELMET
+  color: "#AA0000"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 4.0
+    percent: true
+  gemas:
+    value: 4.0
+    percent: true
+  xp:
+    value: 4.0
+    percent: true

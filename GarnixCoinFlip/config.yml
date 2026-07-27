@@ -1,0 +1,33 @@
+debug: false
+
+# Duração (em segundos) até um desafio expirar sem ser aceito.
+challenge-duration: 86400
+
+# Intervalo (em segundos) para checar desafios expirados.
+expiration-check-interval: 5
+
+# Delay (em ticks) entre o aceite e o início da animação, quando o criador está
+# online. É a janela que ele tem para clicar em [ASSISTIR]. Com o criador offline
+# a animação começa imediatamente.
+start-delay: 200
+
+# Intervalo (em minutos) de atualização do ranking.
+ranking-refresh-minutes: 5
+
+# Cooldown (em segundos) para criar um novo desafio.
+# Ignorado por quem tem a permissão coinflip.cooldown.bypass.
+create-cooldown: 30
+
+# Delay (em ticks) e som do aviso de resultados pendentes ao entrar no servidor.
+login-notify-delay: 60
+login-notify-sound: NOTE_PLING
+
+# Dias até desafios já encerrados serem removidos da memória na inicialização.
+purge-after-days: 7
+
+# Moedas que não podem ser usadas em desafios.
+#
+# A taxa sobre o prêmio vem do GarnixCurrencies (currencies/<id>.yml →
+# command.subcommands.send.tax), junto com a sua bypass-permission.
+# Cada economia tem a sua.
+currency-blacklist: []

@@ -1,0 +1,11 @@
+# How often (in seconds) the plugin folds live session time into the persisted
+# total and checks for newly-reached milestones. 60s keeps the ranking accurate
+# with negligible cost, even at 500 players.
+tick-interval-seconds: 60
+
+# How often (in minutes) the top-10 ranking is rebuilt from the database.
+ranking-refresh-minutes: 5
+
+# Sound played when a player reaches a milestone (1.8 sound name).
+# Leave empty to disable.
+milestone-sound: LEVEL_UP

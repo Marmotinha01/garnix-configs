@@ -1,0 +1,149 @@
+# GarnixEvents — Mensagens
+#
+# Aqui ficam as mensagens do staff (comandos, setup e ajuda) e as mensagens de
+# entrada/saída, que são iguais em todos os eventos e ficariam repetidas treze vezes.
+#
+# O que cada evento fala do seu próprio jeito — anúncio, contagem, eliminação,
+# vitória — vive em events/<evento>.yml, na seção 'messages' de cada um.
+
+general:
+  only-players: '&cApenas jogadores podem usar este comando.'
+  reloaded: '&aConfigurações recarregadas com sucesso!'
+
+# ── Entrada e saída (todos os eventos) ────────────────────────────────
+# {event} = nome do evento em que a mensagem aconteceu.
+event:
+  joined: '&aVocê entrou no evento &f{event}&a! &7({count} participantes)'
+  left: '&eVocê saiu do evento.'
+  left-world: '&eVocê saiu do mundo do evento e foi retirado dele.'
+  kicked: '&cVocê foi retirado do evento por &f{staff}&c.'
+  already-joined: '&cVocê já está participando deste evento.'
+  join-closed: '&cAs entradas para este evento já foram encerradas.'
+  join-full: '&cO evento já está lotado.'
+  join-denied: '&cVocê não pode entrar neste evento agora.'
+  inventory-not-empty: '&cEsvazie seu inventário e sua armadura para entrar no &f{event}&c.'
+  not-participating: '&cVocê não está participando deste evento.'
+  not-running: '&cEste evento não está acontecendo no momento.'
+  # Actionbar constante mostrada a quem está esperando no lobby, enquanto as entradas
+  # estão abertas. {participants} = quantos já entraram.
+  lobby-waiting: '&eAguardando participantes... &7({participants} participando)'
+  already-running: '&cJá existe um evento acontecendo. Aguarde ele terminar.'
+  unknown-event: '&cEsse evento não existe.'
+  command-blocked: '&cVocê não pode usar comandos durante o evento.'
+  
+  # ── Camarote ──
+  # Quem não está participando pode assistir ao evento de perto, só enquanto ele
+  # está em andamento. Ao terminar, todos são enviados para a saída.
+  cabin-joined: '&aVocê foi para o camarote do &f{event}&a. Use &f/{command} sair &apara voltar.'
+  cabin-left: '&eVocê saiu do camarote.'
+  cabin-ended: '&eO evento terminou e o camarote foi fechado.'
+  cabin-closed: '&cO camarote só abre com o evento em andamento.'
+  cabin-already: '&cVocê já está no camarote.'
+  cabin-participating: '&cVocê está participando do evento: não dá para assistir do camarote.'
+  cabin-unset: '&cEste evento não tem camarote.'
+
+# ── Setup (staff) ─────────────────────────────────────────────────────
+setup:
+  location-set: '&aLocal &f{anchor} &ado evento &f{event} &adefinido em &f{x}, {y}, {z}&a.'
+  unknown-anchor: '&cLocal inválido. Disponíveis: &f{anchors}&c.'
+  location-removed: '&aLocal &f{anchor} &ado evento &f{event} &aremovido.'
+  location-not-set: '&cO local &f{anchor} &cdo evento &f{event} &cnão estava definido.'
+  missing: '&cO evento &f{event} &cnão está configurado. Faltando: &f{missing}&c.'
+  
+  sign-armed: '&aClique numa placa de vitória do evento &f{event}&a para adicioná-la.'
+  sign-set: '&aPlaca &f#{number} &ado evento &f{event} &acriada em &f{x}, {y}, {z}&a.'
+  sign-not-a-sign: '&cIsso não é uma placa. Clique em uma placa.'
+  sign-removed: '&aPlaca &f#{number} &aremovida.'
+  sign-unknown: '&cNão existe a placa &f#{number}&c.'
+  
+  # Chegada por placa de pressão: quem pisar nela vence, igual a clicar na placa de vitória.
+  # A arena pode ter as duas — vale a que o corredor alcançar primeiro.
+  plate-added: '&aPlaca de pressão de vitória &f#{number} &ado &f{event} &acriada em &f{x}, {y}, {z}&a.'
+  plate-not-a-plate: '&cFique em cima de uma placa de pressão: é nela que a chegada é criada.'
+  plate-removed: '&aPlaca de pressão de vitória &f#{number} &aremovida.'
+  plate-unknown: '&cNão existe a placa de pressão de vitória &f#{number}&c.'
+  
+  kit-set: '&aKit do evento &f{event} &adefinido com &f{count} &aitem(ns) do seu inventário.'
+  kit-empty: '&cSeu inventário está vazio. Equipe o kit desejado antes de usar o setkit.'
+  
+  # /{evento} getkit — veste em você o mesmo kit que o evento entrega, para testar sem abrir evento.
+  # São itens marcados como kit: somem sozinhos ao relogar, então não precisa limpar depois.
+  kit-given: '&aKit do evento &f{event} &aequipado em você: &f{count} &aitem(ns). &7Some ao relogar.'
+  kit-given-team: '&aKit do time &f{team} &ado evento &f{event} &aequipado em você: &f{count} &aitem(ns). &7Some ao relogar.'
+  kit-unset: '&cO evento &f{event} &cnão tem kit definido. Use &f/{command} setkit &cpara gravar um.'
+  kit-unknown-team: '&cInforme o time do kit. Disponíveis: &f{teams}&c.'
+  kit-inventory-not-empty: '&cEsvazie seu inventário e sua armadura antes: o kit substitui tudo o que você está carregando.'
+  
+  checkpoint-added: '&aCheckpoint &f#{number} &ado &f{event} &acriado na placa em &f{x}, {y}, {z}&a.'
+  checkpoint-not-a-plate: '&cFique em cima de uma placa de pressão: é nela que o checkpoint é criado.'
+  checkpoint-removed: '&aCheckpoint &f#{number} &aremovido.'
+  checkpoint-unknown: '&cNão existe o checkpoint &f#{number}&c.'
+  
+  spawn-added: '&aSpawn &f#{number} &ado &f{event} &acriado em &f{x}, {y}, {z}&a.'
+  spawn-removed: '&aSpawn &f#{number} &aremovido.'
+  spawn-unknown: '&cNão existe o spawn &f#{number}&c.'
+  
+  incomplete-selection: '&cSeleção incompleta. Faltam &f{missing} &cponto(s).'
+  area-name-required: '&cEste evento usa várias áreas: informe um nome no comando setarea.'
+  area-set: '&aÁrea &f{area} &ado evento &f{event} &adefinida. &7({shape}, {volume} blocos)'
+  area-too-big: '&cSeleção grande demais: &f{volume} &cblocos (máximo &f{max}&c).'
+  area-removed: '&aÁrea &f{area} &aremovida.'
+  area-unknown: '&cNão existe nenhuma área chamada &f{area}&c.'
+  
+  kick-not-participating: '&f{player} &cnão está participando do evento &f{event}&c.'
+
+# ── Graveto de seleção ────────────────────────────────────────────────
+wand:
+  given-cuboid:
+  - ''
+  - '  &a&lGRAVETO &7» &fModo Cuboide'
+  - '  &7Clique &fesquerdo &7para o primeiro ponto.'
+  - '  &7Clique &fdireito &7para o segundo ponto.'
+  - ''
+  given-poly:
+  - ''
+  - '  &a&lGRAVETO &7» &fModo Polígono'
+  - '  &7Clique &fesquerdo &7para o primeiro ponto.'
+  - '  &7Cada clique &fdireito &7adiciona mais um ponto.'
+  - '  &8&oO topo e a base seguem o ponto mais alto e mais baixo clicados.'
+  - ''
+  # Modo círculo: os cliques são a BORDA de um círculo/oval, não os cantos de um polígono.
+  # Os 4 extremos (N, S, L, O) já dão a área exata; as 4 diagonais entram para conferir a curva.
+  # O que manda são os extremos: clique no bloco MAIS DE FORA de cada lado.
+  given-circle:
+  - ''
+  - '  &a&lGRAVETO &7» &fModo Círculo'
+  - '  &7Clique &fesquerdo &7para o primeiro ponto da borda.'
+  - '  &7Cada clique &fdireito &7adiciona mais um ponto da borda.'
+  - '  &7Clique os &f4 extremos &7(N, S, L, O) — as &f4 diagonais &7podem entrar junto.'
+  - '  &8&oPise no bloco mais de fora de cada lado: é ele que define o raio.'
+  - '  &8&oA área vira o círculo/oval inteiro, sem cortar os cantos entre os pontos.'
+  - ''
+  primary: '&aPrimeiro ponto definido em &f{x}, {y}, {z}&a.'
+  secondary: '&aPonto &f#{point} &adefinido em &f{x}, {y}, {z}&a. &7(faltam {missing})'
+  other-world: '&cEsse ponto está em outro mundo. Recomece a seleção.'
+  looks-round: '&eSeus pontos parecem um círculo. &7Com o graveto de polígono a área vira um polígono e corta os cantos entre os pontos — use &f/eventos wand circulo &7para a área sair redonda.'
+
+# ── Ajuda ─────────────────────────────────────────────────────────────
+# Mostrada por /{evento} sem argumentos. {event} = nome, {command} = comando.
+event-help:
+- ''
+- '  &f{event}'
+- ''
+- '  &a/{command} entrar &8- &7Entra no evento.'
+- '  &a/{command} sair &8- &7Sai do evento ou do camarote.'
+- '  &a/{command} camarote &8- &7Assiste ao evento em andamento.'
+- ''
+
+admin-help:
+- ''
+- '  &a&lEventos &8- &fAjuda &7(Staff)'
+- ''
+- '  &a/eventos &8- &7Abre o menu de estatísticas.'
+- '  &a/eventos ajuda &8- &7Mostra esta ajuda.'
+- '  &a/eventos reload &8- &7Recarrega as configurações.'
+- '  &a/eventos wand &7[cuboid/poly/circulo] &8- &7Recebe o graveto de seleção.'
+- ''
+- '  &7Eventos: &fsumo&8, &ffight&8, &fparkour&8, &fcorrida&8, &fspleef&8, &fsplegg&8, &fkiller&8,'
+- '  &fdestemido&8, &fmvp&8, &ftnt-run&8, &fsniper&8, &fpaintball&8, &farqueiros&8, &fbatata-quente'
+- ''

@@ -1,0 +1,22 @@
+title: Selecionar Duração
+rows: 4
+
+durations:
+  5m: 10
+  15m: 12
+  30m: 14
+  1h: 16
+
+duration-icon:
+  material: WATCH
+  display: '&a{duration}'
+  lore:
+  - '&7Clique para selecionar.'
+
+back-icon:
+  slot: 31
+  texture: "7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf"
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'
+

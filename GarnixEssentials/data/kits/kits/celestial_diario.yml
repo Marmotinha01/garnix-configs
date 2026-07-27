@@ -1,0 +1,29 @@
+display: Kit Celestial Diário
+
+category: vips
+
+permission: vip.celestial
+
+cooldown: 1d
+
+slot: 29
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  material: INK_SACK
+  data: 11
+  display: '&e&lCELESTIAL DIARIO'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&c&lCELESTIAL DIARIO'
+  lore:
+  - '&7Necessário ser &e&lCELESTIAL&7.'
+
+content: H4sIAAAAAAAA/72QS0oDQRCGK8kkTmYlIrjQRXuBrAKCCyGOCS58gAG3oSZTmTT2Y+zuiY8LzQm8QHIxa1REQdCVm2666/v/gi8B6ENXBtI+AYB2DG2Zw56WhuYOF+E4OFk+SEezpbV3LeimtjKhlUAnYNGHiMx82QRbbeiolWrupuAEOtA/lzlNFBa+mccQc2GgGU+jBTqdwFYufanwiWsurKOYsS7sruuj1BovCxT3FWUOTW7hgH8ZNQE39eaFvCAtPFWiVDYMOHe4rjFVkgOCPJ8ut6JEh4IX4TMZdG+IrQRmTjqBYr7EFTU1leYHykccxBBdoSbYZnJdq/R8dDsWk9HNJXuB3hlqLIh3/YuiXma9J/+jpAj2v0jCjCPsSLwnPmwMf7cx/JuNHSY/bZxeT6fj6Xcf8ArcS60mRAIAAA==

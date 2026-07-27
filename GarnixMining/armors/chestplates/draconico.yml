@@ -1,0 +1,20 @@
+item:
+# Dracônico Chestplate
+  display: "&6Peitoral Dracônico"
+  material: LEATHER_CHESTPLATE
+  color: "#FFAA00"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 2.0
+    percent: true
+  gemas:
+    value: 2.0
+    percent: true
+  xp:
+    value: 2.0
+    percent: true

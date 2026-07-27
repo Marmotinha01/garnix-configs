@@ -1,0 +1,25 @@
+display: "Encruzilhada"
+max-level: 50
+base-cost: 800.0
+increase-cost: 300.0
+
+# CHANCE flavour (percent)
+base-chance: 4
+increase-chance: 0.25
+max-line-radius: 6
+
+title: "&d&lENCRUZILHADA"
+subtitle: "&7+{crops} plantações"
+messages:
+  - "&a&lENCRUZILHADA! &7Colheu &f{crops}&7 plantações na diagonal."
+
+icon:
+  slot: 15
+  material: ARROW
+  display: "&d{display}"
+  lore:
+    - "&7Chance de colher plantações"
+    - "&7nas quatro diagonais."
+    - ""
+    - "&7Nível: &f{level}&7/&f{max-level}"
+    - "&7Chance: &f{chance}%"

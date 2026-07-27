@@ -1,0 +1,72 @@
+# Menu — Configurar Desafio
+
+title: Configurar Desafio
+rows: 4
+
+opponent-icon:
+  slot: 10
+  material: NAME_TAG
+  display: '&aOponente'
+  lore:
+  - '&7Nenhum oponente selecionado.'
+  - ''
+  - '&7Clique para escolher.'
+  selected-lore:
+  - '&fSelecionado: &7{opponent}'
+  - ''
+  - '&7Clique para trocar.'
+
+bet-icon:
+  slot: 12
+  material: GOLD_NUGGET
+  display: '&aAposta'
+  lore:
+  - '&fStatus: &cDesativada'
+  - ''
+  - '&7Clique para ativar.'
+  enabled-lore:
+  - '&fStatus: &aAtivada'
+  - ''
+  - '&7Clique para desativar.'
+
+# O ícone é o da própria moeda; aqui só ficam slot e lore de troca.
+currency-icon:
+  slot: 13
+  lore:
+  - '&7Clique para trocar.'
+
+amount-icon:
+  slot: 14
+  material: ANVIL
+  display: '&aValor da Aposta'
+  lore:
+  - '&7Nenhuma quantia definida.'
+  - ''
+  - '&7Clique para definir.'
+  selected-lore:
+  - '&fValor: {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  - ''
+  - '&7Clique para alterar.'
+
+mode-icon:
+  slot: 16
+  material: CHEST
+  display: '&aModo de Duelo'
+  lore:
+  - '&fModo: &7{mode}'
+  - ''
+  - '&7Clique para alternar.'
+
+confirm-icon:
+  slot: 32
+  material: ENDER_PEARL
+  display: '&aEnviar Desafio'
+  lore:
+  - '&7Clique para confirmar.'
+
+back-icon:
+  slot: 30
+  texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

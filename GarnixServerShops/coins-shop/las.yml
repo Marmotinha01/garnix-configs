@@ -1,0 +1,292 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Lãs
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: true
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 23
+  material: WOOL
+  data: 1
+  display: '&aLãs'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  wool:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 0
+      amount: 1
+  wool-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 1
+      amount: 1
+  wool-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 2
+      amount: 1
+  wool-4:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 3
+      amount: 1
+  wool-5:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 4
+      amount: 1
+  wool-6:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 5
+      amount: 1
+  wool-7:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 6
+      amount: 1
+  wool-8:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 7
+      amount: 1
+  wool-9:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 8
+      amount: 1
+  wool-10:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 9
+      amount: 1
+  wool-11:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 10
+      amount: 1
+  wool-12:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 11
+      amount: 1
+  wool-13:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 12
+      amount: 1
+  wool-14:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 13
+      amount: 1
+  wool-15:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 14
+      amount: 1
+  wool-16:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: WOOL
+      data: 15
+      amount: 1
+  carpet:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 0
+      amount: 1
+  carpet-2:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 1
+      amount: 1
+  carpet-3:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 2
+      amount: 1
+  carpet-4:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 3
+      amount: 1
+  carpet-5:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 4
+      amount: 1
+  carpet-6:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 5
+      amount: 1
+  carpet-7:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 6
+      amount: 1
+  carpet-8:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 7
+      amount: 1
+  carpet-9:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 8
+      amount: 1
+  carpet-10:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 9
+      amount: 1
+  carpet-11:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 10
+      amount: 1
+  carpet-12:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 11
+      amount: 1
+  carpet-13:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 12
+      amount: 1
+  carpet-14:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 13
+      amount: 1
+  carpet-15:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 14
+      amount: 1
+  carpet-16:
+    amount: 1
+    price: 2500
+    ask-quantity: true
+    item:
+      material: CARPET
+      data: 15
+      amount: 1

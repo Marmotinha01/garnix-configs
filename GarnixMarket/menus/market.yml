@@ -1,0 +1,46 @@
+title: Mercado
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum item encontrado.'
+
+my-listings-icon:
+  slot: 48
+  material: EMPTY_MAP
+  display: '&aSeus Anúncios'
+  lore:
+  - '&7Clique para ver.'
+
+# Fecha o menu e explica no chat como anunciar (mensagem: sell.how-to).
+info-icon:
+  slot: 50
+  material: BOOK
+  display: '&eComo Vender'
+  lore:
+  - ''
+  - ' &b/mercado vender <valor> '
+  - ' &7Anuncia o item da sua mão. '
+  - ''
+
+# Linhas adicionadas ABAIXO da lore original do item à venda.
+listing-lore:
+- ''
+- ' &fVendedor: &7{seller} '
+- ' &fPreço: {currency_prefix}{price} '
+- ' &fExpira em: &c{time_remaining} '
+- ''
+- '{action}'
+
+action-buy: '&aClique para comprar.'
+action-own: '&cEste anúncio é seu.'

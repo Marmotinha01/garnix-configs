@@ -1,0 +1,78 @@
+title: Máquinas
+
+shape:
+- XXXXXXXXX
+- XXXXXXXXX
+- XX.....XX
+- XX.....XX
+- XX.....XX
+- XXXXXXXXX
+
+formats:
+  cost: ' &8► {symbol}{formatted_value} {currency_name}'
+  cost-discount: ' &8► &8{symbol_clean}&7&m{old_value}&r &f➟ {symbol}{formatted_value} {currency_name}'
+  drop: ' &8► {symbol}{formatted_value} {currency_name}'
+  drop-bonus: ' &8► &8{symbol_clean}&7&m{old_value}&r &f➟{symbol}{formatted_value} {currency_name}'
+
+info-icon:
+  slot: 3
+  material: BOOK
+  display: '&aInformações'
+  lore:
+  - ''
+  - ' &fSeu Limite: &b∞{limit} '
+  - ' &fComprados: &7x{total_bought} '
+  - ''
+  - '{entity_lines}'
+  - ''
+  entity-line: ' &f{entity_display} &7(x{entity_bought}) '
+  spent-line: ' &8► {symbol}{color}{value} {display} '
+  entity-empty: ' &cNenhuma máquina comprada. '
+
+ranking-icon:
+  slot: 5
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Clique para ver.'
+
+icons:
+  unreleased:
+    display: '&cMáquina Bloqueada'
+    lore:
+    - '&fLibera: &7{date}'
+    - ''
+    - '&cMáquina ainda bloqueada!'
+  locked:
+    display: '&cMáquina Bloqueada'
+    lore:
+    - '&fRank necessário: {rank}'
+    - ''
+    - '&cMáquina ainda bloqueada!'
+  unlocked:
+    lore:
+    - ''
+    - ' &fCustos de compra:'
+    - '{costs}'
+    - ''
+    - ' &fValor de venda p/drop:'
+    - '{drops}'
+    - ''
+    - '&fB. Esquerdo: &6Escolher Quantia'
+    - '&fB. Direito: &aComprar 1x'
+    - '&fB. Dropar: &bComprar Limite'
+  unlocked-discount:
+    lore:
+    - ''
+    - ' &fDesconto VIP: &c&l{discount_value}&c% {discount_tag}'
+    - ' &fBônus VIP: &c&l{bonus_value}&c% {bonus_tag}'
+    - ''
+    - ' &fCustos de compra:'
+    - '{costs}'
+    - ''
+    - ' &fValor de venda p/drop:'
+    - '{drops}'
+    - ''
+    - '&fB. Esquerdo: &eEscolher Quantia'
+    - '&fB. Direito: &aComprar Unidade'
+    - '&fB. Dropar: &bComprar Limite'

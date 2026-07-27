@@ -1,0 +1,15 @@
+# Textos da placeholder %dailyrewards_pending%, exibida em um de dois estados
+# conforme o jogador tenha ou não recompensas prontas para coletar.
+#
+#   {amount} — quantas recompensas estão disponíveis agora
+#
+# Existe também %dailyrewards_pending_amount%, que devolve só o número (0 quando
+# não há nenhuma), caso você prefira montar o texto no próprio scoreboard/tab.
+placeholder:
+  # Usado quando há pelo menos 1 recompensa para coletar.
+  has-rewards: '&a{amount} {reward_plural}!'
+  # Usado quando não há nenhuma recompensa disponível.
+  no-rewards: '&cNada para coletar!'
+  # Palavra substituída em {reward_plural}, concordando com {amount}.
+  reward-singular: 'recompensa'
+  reward-plural: 'recompensas'

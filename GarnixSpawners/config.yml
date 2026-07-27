@@ -1,0 +1,33 @@
+hologram:
+  offset-y: 2.0
+  lines:
+  - '&e{countdown}s'
+  - '&a{display} &8▶ &fx{stack}'
+  - '&7{owner}'
+
+spawner:
+  stack-radius: 5
+  activation-radius: 16
+  place-break-cooldown: 10
+
+nametag-format: '&a{display} &8▶ &fx{stack}'
+
+use-heads: true
+
+use-sword: true
+
+lamina-cooldown: 30
+
+use-upgrades: true
+
+captcha-duration: 30
+
+# Ranking de spawners (reconstruído do banco neste intervalo, em minutos).
+ranking-refresh-minutes: 5
+
+booster:
+  # Tempo restante mínimo (segundos) para recuperar um booster ativo do spawner.
+  # Ao recuperar, o jogador recebe de volta um item valendo 50% do tempo restante
+  # (perde a outra metade). O piso bloqueia o abuso de recuperar boosters quase
+  # expirados só para reativar outro sem esperar.
+  min-remove-seconds: 30

@@ -1,0 +1,20 @@
+item:
+# Dracônico Helmet
+  display: "&6Capacete Dracônico"
+  material: LEATHER_HELMET
+  color: "#FFAA00"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 2.0
+    percent: true
+  gemas:
+    value: 2.0
+    percent: true
+  xp:
+    value: 2.0
+    percent: true

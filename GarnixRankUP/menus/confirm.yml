@@ -1,0 +1,24 @@
+# Currency cost line. Placeholders: {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
+cost-format: ' &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'
+# Head cost line. Placeholders: {amount} {display}
+cost-format-head: ' &8► &f{amount} &7{display}'
+
+rankup:
+  info-icon:
+    slot: 4
+    material: BOOK
+    display: '&aEvoluir para {rank_tag}'
+    lore:
+    - ''
+    - ' &fCustos:'
+    - '{costs}'
+    - ''
+
+prestige:
+  info-icon:
+    slot: 4
+    material: NETHER_STAR
+    display: '&b&lPRESTIGIAR'
+    lore:
+    - '&cSeu rank será resetado'
+    - '&cpara o inicial!'

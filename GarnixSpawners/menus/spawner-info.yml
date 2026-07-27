@@ -1,0 +1,96 @@
+title: Spawner de {display}
+rows: 5
+
+info-icon:
+  slot: 10
+  material: MOB_SPAWNER
+  display: '&a{display}'
+  lore:
+  - '&fStack: &7x{stack}'
+  - '&fDono: &7{owner}'
+
+friends-icon:
+  slot: 11
+  texture: 4ede35ef87e539b3d198dc17a8c241b7795644a730519375ddf7584f7c28754b
+  display: '&aAmigos'
+  lore:
+  - '&fTotal: &e{friends_count}'
+  - ''
+  - '&7Clique para gerenciar.'
+
+hologram-status:
+  color-on: '&a'
+  color-off: '&c'
+  on: '&aAtivado'
+  off: '&cDesativado'
+
+toggle-hologram-icon:
+  slot: 12
+  material: BEACON
+  display: '{color}Holograma'
+  lore:
+  - '&fStatus: {hologram_status}'
+  - ''
+  - '&7Clique para alternar.'
+
+shop-icon:
+  slot: 15
+  material: SIGN
+  display: '&aLoja'
+  lore:
+  - '&7Clique para ver.'
+
+ranking-icon:
+  slot: 16
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Clique para ver.'
+
+sell-drops-icon:
+  slot: 28
+  material: CHEST
+  display: '&aGerenciar Drops'
+  lore:
+  - '&7Clique para gerenciar.'
+
+collect-heads-icon:
+  slot: 29
+  display: '&aHeads de {mob}'
+  lore:
+  - '&fQuantia: &ex{heads_count}'
+  - ''
+  - '&7Clique para coletar.'
+
+collect-heads-empty-icon:
+  display: '&cHeads de {mob}'
+  lore:
+  - '&7Nenhuma cabeça disponível.'
+
+upgrades-icon:
+  slot: 30
+  material: FURNACE
+  display: '&aUpgrades'
+  lore:
+  - '&7Clique para evoluir.'
+
+remove-stack-icon:
+  slot: 34
+  material: SHEARS
+  display: '&cRemover Stack'
+  lore:
+  - '&7Clique para remover.'
+
+booster-icon:
+  slot: 32
+  material: POTION
+  display: '&aBoosters'
+  lore:
+  - '&7Clique para gerenciar.'
+
+booster-none-icon:
+  slot: 32
+  material: GLASS_BOTTLE
+  display: '&7Boosters'
+  lore:
+  - '&7Nenhum booster ativo.'

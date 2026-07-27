@@ -1,0 +1,25 @@
+title: Seus VIPs
+
+shape:
+- XXXXXXXXX
+- <X.....X>
+- XXXXXXXXX
+
+glow-active: true
+
+lore-active:
+- '&fTempo restante: &7{remaining}'
+- ''
+- '&eVIP ativo no momento.'
+
+lore-inactive:
+- '&fTempo restante: &e{remaining}'
+- ''
+- '&aClique para trocar para o VIP.'
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Você não possui nenhum VIP ativo.'

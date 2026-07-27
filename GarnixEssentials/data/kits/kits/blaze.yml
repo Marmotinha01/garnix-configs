@@ -1,0 +1,28 @@
+display: Kit Blaze
+
+category: ranks
+
+permission: rank.blaze
+
+cooldown: 12h
+
+slot: 30
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  texture: 737623f79f7eb4f3f80da65b652cc44b2148eea41f9ffe2e86a23bdf49ab77b1
+  display: '&6&lKit Blaze'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Blaze'
+  lore:
+  - '&7Ainda não desbloqueado.'
+
+content: H4sIAAAAAAAA/82UT2/TQBDFx05aHAuJCgqUwmHpjUvFoSpSDwgaWlWioodIXKOJPdir7h93d5MWvlC+Rz4ZkzomKi5Si6rCxfLTvjf6vVlpU4AerMhA2qcA8DCBWObwXEtDmcNvYS+XqK3Jh/7cujyClb4dmxCl0AlY9KBLJivnwW4MHTVRkMaXA9ZgoXu13mp0XOsnv+l1SOFBLn2l8HsC3S+oCR7Npruzqfosg9hX+IOAM6ufUGPBv1CDPluCFlblZIZYVYoazg/LRLRIvGhXq2R2ihf053Lx1XKiVe7v4J+2Uf4FxsY1l13aCan/gaQkpSncmATuiORVmyQryQeeE25+Q3dFs9mmUVQU0hT+3lmueRpG1ob7B1lbglQ2SGsagre/vOLNLbxb7YLByepcOhqW1p42EdEqGC0KRXWh99CB3pHM6VBh4efnCSQ8MNCQT1dH1nvyy8486Ng6SuaPKLycTd/1rfGyQIEjjpjcijqxzYbXs+lOX8mzMQny/HV8WqFjr9O8JoPu0mLHHHbSCRRZiRM2azHWLFBe4Haz5Mfs5CX3jz5+PRD7J4PBweDqnuEnE9fMth0GAAA=

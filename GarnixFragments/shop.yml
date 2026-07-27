@@ -1,0 +1,41 @@
+# Cada entrada é um item da loja. Campos:
+#   icon     — ícone exibido (o custo é gerado automaticamente)
+#   cost     — fragmentos exigidos: <id>: <quantia> (aceita sufixos: 1.5K)
+#   commands — comandos executados no console ao comprar ({player} = comprador)
+items:
+  diamantes:
+    icon:
+      material: DIAMOND
+      display: '&b&lKit de Diamantes'
+      lore:
+      - '&7Receba 16 diamantes.'
+    cost:
+      fogo: 100
+    commands:
+    - give {player} diamond 16
+  
+  espada-encantada:
+    icon:
+      material: DIAMOND_SWORD
+      display: '&c&lEspada Lendária'
+      glow: true
+      lore:
+      - '&7Uma espada muito poderosa.'
+    cost:
+      fogo: 250
+      natureza: 100
+    commands:
+    - give {player} diamond_sword 1
+  
+  tag-vip:
+    icon:
+      material: NAME_TAG
+      display: '&6&lTag VIP (7 dias)'
+      lore:
+      - '&7Garanta uma tag exclusiva.'
+    cost:
+      fogo: 500
+      gelo: 500
+      natureza: 500
+    commands:
+    - lp user {player} parent addtemp vip 7d

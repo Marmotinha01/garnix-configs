@@ -1,0 +1,44 @@
+# ┌──────────────────────────────────────────────────────────────────────┐
+# │ Webhook do Discord — GarnixStoreActivation                           │
+# │ Avisa um canal a cada produto entregue no jogo.                      │
+# └──────────────────────────────────────────────────────────────────────┘
+#
+# Placeholders disponíveis nos embeds:
+#   {player}   → jogador que recebeu o produto
+#   {product}  → nome do produto
+#   {price}    → valor de tabela do produto (ex.: R$ 49,90)
+#   {paid_at}  → data e hora do pagamento
+#   {time}     → data e hora do envio deste aviso
+#
+# Datas usam o formato dd/MM/yyyy 'às' HH:mm no fuso America/Sao_Paulo.
+#
+# Atenção: {price} é o preço cadastrado no painel, NÃO o valor efetivamente
+# pago. A API não informa cupom nem valor com desconto, então uma compra
+# feita com cupom aparece aqui pelo preço cheio.
+
+enabled: false
+# Cole a URL do webhook do Discord aqui. O envio é pulado enquanto estiver vazio.
+url: ''
+bot-name: '' # Deixe vazio se já estiver configurado no webhook do canal.
+bot-avatar: '' # Deixe vazio se já estiver configurado no webhook do canal.
+# Imagem do embed ({player} é substituído). Padrão: avatar do jogador.
+avatar-image: https://minotar.net/avatar/{player}/100.png
+
+embeds:
+  activation:
+    color: '#2ECC71'
+    title: '**{player}**'
+    description: '> Ativou o produto **{product}**!'
+    fields:
+    - name: Produto
+      value: '`{product}`'
+      inline: true
+    - name: Valor
+      value: '`{price}`'
+      inline: true
+    - name: Pagamento
+      value: '`{paid_at}`'
+      inline: true
+    footer:
+      text: Rede Garnix • {time}
+      icon-url: https://i.imgur.com/0fFefDs.jpeg

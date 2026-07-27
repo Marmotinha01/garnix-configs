@@ -1,0 +1,29 @@
+display: Kit Investidor Mensal
+
+category: vips
+
+permission: vip.investidor
+
+cooldown: 30d
+
+slot: 15
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  material: STAINED_GLASS
+  data: 5
+  display: '&a&lKit Investidor Mensal'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Investidor Mensal'
+  lore:
+  - '&7Necessário ser &a&lINVESTIDOR&7.'
+
+content: H4sIAAAAAAAA/82US0/bQBSFr50ATsQi4tEni4FdN4gFElIXVduQKlERSA1iG93Yt/aIebgzk0D7h/I/8ss6ieNGYCpRFSlsLB3NOdffuSNNE6ABa9yRtE0A2Iwg5Am8lFxRbPC7e59wlFolA3ujTRLAWluPlAuaUHOYNqBOKs5mwXoINTEW0AjnA1qw0FGhD0odFnr7nt6BJmwk3OYCf0ZQP0dJsDOd4HQivvYuWe/8qtO/7J1efAMfXD9FiSn5vxa0L5a0qRYJqQHmuaAS9miZCBaJ19V+OY+v8Zb+3jC825BVGv5Hg90qz8pYXj1w95kek3g2OBkJSe7ROPCUOHtVnDgj6/ww9/gLe1KkN1UkQWnKVWpXA/TA6zHU2q2IprWkybXjWpUYH/942bt/8B5UWzrD8xtuaJBpfV1GWpWWwaJVULT6ADVodHlCXwSmdnYeQeQHOhr40/WhtpbssrgfdKYNRbPHFt5OJydtrSxPkeHQR1SiWZE49Ib96eS4LfiPETGy/mv8aY7Ge43EX6TQzC165MOGG4YsznDszZKNpBfIb/Gw3PSWd/pNt7ufrjrs80W/3+nf3TP8Bscka8tFBgAA

@@ -1,0 +1,46 @@
+world:
+  # /world (sem argumentos) — ajuda
+  help:
+  - '&6&lGarnixWorldManager &7— comandos:'
+  - '&e/world createvoidworld <nome> [id] &7- cria um mundo void'
+  - '&e/world load <mundo> &7- carrega uma pasta de mundo existente'
+  - '&e/world unload <mundo> &7- descarrega um mundo'
+  - '&e/world delete <mundo> &7- apaga um mundo (descarregue-o antes)'
+  - '&e/world list &7- lista os mundos carregados'
+  - '&e/world reload &7- recarrega mensagens e configurações'
+  
+  # /world createvoidworld
+  create-void-creating: '&eCriando mundo void &f{world}&e...'
+  create-void-success: '&aMundo void &f{world} &acriado com sucesso!'
+  create-void-failed: '&cFalha ao criar o mundo void &f{world}&c. Pode já existir ou ocorreu um erro.'
+  
+  # /world load
+  load-loading: '&eCarregando mundo &f{world}&e...'
+  load-success: '&aMundo &f{world} &acarregado e registrado com sucesso!'
+  load-already-loaded: '&cO mundo &f{world} &cjá está carregado.'
+  load-folder-not-found: '&cA pasta do mundo &f{world} &cnão foi encontrada no servidor.'
+  load-invalid: '&cA pasta &f{world} &cnão é um mundo válido (level.dat ausente).'
+  load-failed: '&cFalha ao carregar o mundo &f{world}&c.'
+  
+  # Validação de nome (compartilhada por create/load)
+  invalid-name: '&cNome inválido. Use apenas minúsculas, números, _ e - (sem ponto/espaço).'
+  
+  # /world unload
+  unload-success: '&aMundo &f{world} &adescarregado.'
+  unload-failed: '&cNão foi possível descarregar &f{world} &c(inexistente ou é o mundo principal).'
+  
+  # /world delete (precisa estar descarregado)
+  delete-success: '&aMundo &f{world} &aapagado.'
+  delete-still-loaded: '&cDescarregue o mundo primeiro: &f/world unload {world}'
+  delete-main: '&cNão é possível apagar o mundo principal.'
+  delete-not-found: '&cMundo &f{world} &cnão encontrado.'
+  delete-failed: '&cFalha ao apagar &f{world}&c (arquivos em uso? tente novamente).'
+  
+  # /world reload
+  reload-success: '&aMensagens e configurações dos mundos recarregadas.'
+  
+  # /world list
+  list-header: '&6Mundos carregados &7({count})&6:'
+  list-entry: '&7- &f{world} &8[{type}&8] &7• &f{players}&7 jogador(es)'
+  list-type-void: '&avoid'
+  list-type-normal: '&7normal'

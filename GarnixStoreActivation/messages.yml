@@ -1,0 +1,101 @@
+# ┌──────────────────────────────────────────────────────────────────────┐
+# │ Mensagens do GarnixStoreActivation                                   │
+# │ Qualquer lista vazia ([]) silencia a mensagem correspondente.        │
+# └──────────────────────────────────────────────────────────────────────┘
+
+activation:
+  # Nome usado quando a loja não informa o produto.
+  unknown-product: '&7Desconhecido'
+  
+  # Enviada ao comprador, se ele estiver online no momento da entrega.
+  received:
+  - '&6[Ativação] &fParabéns! Você ativou o produto &a{product}&f!'
+
+# ── Anúncios ──────────────────────────────────────────────────────────
+# Só são exibidos se a opção 'Anunciar ativação no jogo' estiver marcada
+# no produto, dentro do painel da loja.
+#
+# Placeholders: {player} e {product}.
+announcements:
+  # Usado por todo produto que não casar com nenhum padrão em 'custom'.
+  default:
+    enabled: true
+    # Apague a linha 'sound' para deixar o anúncio silencioso.
+    sound: NOTE_PLING
+    message:
+    - ""
+    - "    &a&lGG! &7{player} &fadquiriu &a{product}&f!"
+    - "    &7Adquira você também em &a&nhttps://redegarnix.com&7!"
+    - ""
+  
+  # Anúncios sob medida, escolhidos pelo nome do produto.
+  #
+  # O primeiro caractere da chave define a regra de comparação:
+  #   ~Cash   → contém ......... casa com "500 Cash", "Cash Extra", "Pacote de Cash"
+  #   ^VIP    → começa com ..... casa com "VIP", "VIP+", "VIP++"
+  #   _Gold   → termina com .... casa com "Super Gold", "Mega Gold"
+  #   VIP Ouro → sem prefixo, comparação exata (ignora maiúsculas/minúsculas)
+  #
+  # Se mais de um padrão casar, vence o mais específico, nesta ordem:
+  # exato > começa com > termina com > contém. Entre padrões da mesma
+  # regra, vence o mais longo — ou seja, '^VIP+' ganha de '^VIP' para "VIP+".
+  #
+  # Evite pontos (.) nas chaves: eles são interpretados como separadores de seção.
+  custom:
+    ~Cash:
+      enabled: true
+      sound: LEVEL_UP
+      message:
+      - ""
+      - "    &6&lGG! &7{player} &fadquiriu &6{product}&f!"
+      - "    &7Adquira você também em &6&nhttps://redegarnix.com&7!"
+      - ""
+
+# ── Comando /ativacoes ────────────────────────────────────────────────
+command:
+  usage: '&cUse: /ativacoes <status|check|bloqueadas|liberar|reload>'
+  reload: '&aConfigurações recarregadas com sucesso!'
+  reload-failed: '&cConfigurações recarregadas, mas a consulta continua parada.'
+  check: '&aConsulta manual enviada à loja.'
+  not-running: '&cA consulta está parada.'
+  state-running: '&aAtiva'
+  state-stopped: '&cParada'
+  # A loja não respondeu e o intervalo entre tentativas está aumentando.
+  state-backoff: '&eAguardando a loja'
+  never: '&cNunca'
+  no-error: '&cNenhum'
+  time-ago: '&eHá {time}'
+  # ── Entregas bloqueadas ────────────────────────────────────────────
+  # Produtos que chegaram ao jogador mas que a loja nunca confirmou.
+  # 'liberar' reenvia a confirmação; como o endpoint é idempotente, não
+  # há risco de entregar o produto de novo.
+  blocked-none: '&aNenhuma entrega bloqueada.'
+  blocked-header: '&6&lENTREGAS BLOQUEADAS &7({count})'
+  blocked-entry:
+  - ''
+  - '  &f{product} &7→ &f{player}'
+  - '  &7ID: &f{id}'
+  - '  &7Bloqueada há &f{since} &7— &c{error}'
+  blocked-footer:
+  - ''
+  - '  &7Use &f/ativacoes liberar <id> &7ou &f/ativacoes liberar todas&7.'
+  - ''
+  release-ok: '&a{count} entrega(s) confirmada(s) e liberada(s).'
+  release-not-found: '&cNenhuma entrega bloqueada com o id &f{id}&c.'
+  release-failed: '&cA loja recusou a confirmação de &f{id}&c: {error}'
+  status:
+  - ''
+  - '  &6&lATIVAÇÕES DA LOJA'
+  - ''
+  - '  &fConsulta: {state} &7(a cada &a{interval}s&7)'
+  - '  &fServidor: &6{server}'
+  - '  &fÚltima consulta: {last-poll}'
+  - ''
+  - '  &fPendentes na última consulta: &7{pending}'
+  - '  &fEntregues nesta sessão: &a{delivered}'
+  - '  &fEm processamento: &e{in-flight}'
+  - '  &fBloqueadas (sem confirmação): &c{quarantined}'
+  - '  &fAnúncios personalizados: &e{announcements}'
+  - ''
+  - '  &fÚltimo erro: &c{error}'
+  - ''

@@ -1,0 +1,36 @@
+# ── Prestige ──
+prestige:
+  # Cost increase per prestige level (percent). E.g. 10 = +10% per level.
+  cost-increase-percent: 10
+  # Commands run on prestige. Placeholders: {player}, {prestige}.
+  commands: []
+
+# Ranking refresh interval (minutes). Top size is fixed at 10.
+ranking-refresh-minutes: 5
+
+# ── Confirmation menu titles ──
+confirm:
+  rankup-title: Evoluir de Rank
+  prestige-title: Evoluir Prestígio
+
+# Placeholders
+placeholders:
+  # Shown by %rankup_next_rank_name% / %rankup_next_rank_tag% at the last rank.
+  no-next: '&b/prestigio'
+  # LuckPerms primary groups that make %rankup_rank_tag_chat% return empty.
+  chat-tag-blacklist:
+    - 'master'
+    - 'gerente'
+    - 'admin'
+  
+# ── Progress bar ──
+# Look of %rankup_progress_bar%.
+progress-bar:
+  # Number of characters in the bar.
+  length: 10
+  # Character repeated for each segment.
+  symbol: '▪'
+  # Color of completed segments.
+  completed-color: '&a'
+  # Color of incomplete segments.
+  incomplete-color: '&c'

@@ -1,0 +1,96 @@
+title: Punir {player}
+rows: 4
+
+proof-set:
+  slot: 11
+  material: PAPER
+  display: '&aProva anexada'
+  lore:
+  - '&7A prova já foi vinculada'
+  - '&7a esta punição.'
+  - ''
+  - ' &8 ▪ &fLink: &7{proof}'
+  - ''
+  - '&eClique para trocar.'
+proof-unset:
+  slot: 11
+  material: PAPER
+  display: '&eAnexar prova'
+  lore:
+  - '&7Cole o link da prova da'
+  - '&7infração (print ou vídeo).'
+  - ''
+  - '&eClique para anexar.'
+
+punishment-set:
+  slot: 13
+  material: IRON_SWORD
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&aPunição definida'
+  lore:
+  - '&7O tipo e o motivo já'
+  - '&7foram escolhidos.'
+  - ''
+  - ' &8 ▪ &fTipo: &7{type}'
+  - ' &8 ▪ &fMotivo: &7{reason}'
+  - ' &8 ▪ &fDuração: &7{duration}'
+  - ''
+  - '&eClique para trocar.'
+punishment-unset:
+  slot: 13
+  material: IRON_SWORD
+  flags:
+  - HIDE_ATTRIBUTES
+  display: '&eEscolher punição'
+  lore:
+  - '&7Defina o tipo e o motivo'
+  - '&7da punição a ser aplicada.'
+  - ''
+  - '&eClique para escolher.'
+
+mode-public:
+  slot: 15
+  material: WOOL
+  data: 5
+  display: '&aModo: &fPública'
+  lore:
+  - '&7O aviso da punição vai'
+  - '&7para toda a rede.'
+  - ''
+  - '&eClique para alternar.'
+mode-silent:
+  slot: 15
+  material: WOOL
+  data: 8
+  display: '&7Modo: &fSilenciosa'
+  lore:
+  - '&7Apenas a staff com permissão'
+  - '&7verá o aviso da punição.'
+  - ''
+  - '&eClique para alternar.'
+
+confirm-ready:
+  slot: 31
+  material: INK_SACK
+  data: 10
+  glow: true
+  display: '&aConfirmar punição'
+  lore:
+  - '&7Revise os dados e aplique'
+  - '&7a punição ao jogador.'
+  - ''
+  - '&aClique para confirmar.'
+confirm-not-ready:
+  slot: 31
+  material: INK_SACK
+  data: 8
+  display: '&cConfirmar punição'
+  lore:
+  - '&7Preencha os campos obrigatórios'
+  - '&7antes de aplicar:'
+  - ''
+  - ' &8 ▪ &fPunição &7(tipo e motivo)'
+  - ' &8 ▪ &fProva'
+  - ''
+  - '&cCampos incompletos.'

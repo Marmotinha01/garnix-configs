@@ -1,0 +1,90 @@
+command:
+  # Placeholders: {monitors}
+  usage:
+  - '&8&m------------------------------------'
+  - '  &4&lANTI-NUKER &7- Comandos'
+  - ''
+  - '  &e/antinuker reload'
+  - '  &e/antinuker info &6<sistema> <player>'
+  - '  &e/antinuker reset &6<sistema> <player>'
+  - '  &e/antinuker stats &6<sistema>'
+  - '  &e/antinuker debug &6<sistema> <player>'
+  - '  &e/antinuker menu'
+  - ''
+  - '  &7Monitores: &f{monitors}'
+  - '&8&m------------------------------------'
+  
+  only-players: '&cApenas jogadores podem abrir o menu.'
+  
+  debug-usage: '&cUso: /antinuker debug <sistema> <player>'
+  # Loga as métricas ao vivo do jogador no console (throttle ~1/s), mesmo sem flag —
+  # para calibrar contra um cheat que evade. Rode o comando de novo para desligar.
+  debug-on: '&aDebug LIGADO para &e{player} &aem &e{monitor}&a — veja as métricas no console.'
+  debug-off: '&7Debug desligado para &e{player} &7em &e{monitor}&7.'
+  
+  reload: '&aAnti-Nuker recarregado (perfis, mensagens e menus): &f{monitors}' # {monitors}
+  monitor-not-found: '&cMonitor &e{monitor} &cnão encontrado. Carregados: &f{monitors}' # {monitor} {monitors}
+  
+  info-usage: '&cUso: /antinuker info <sistema> <player>'
+  reset-usage: '&cUso: /antinuker reset <sistema> <player>'
+  stats-usage: '&cUso: /antinuker stats <sistema>'
+  
+  reset-ok: '&aStrikes de &e{player} &azerados em &e{monitor}&a.' # {player} {monitor}
+  
+  info:
+    # Placeholders: {player} {monitor} {strikes} {peak_bps}
+    header:
+    - '&8&m----------------------------------'
+    - '  &4&lANTI-NUKER &7- &e{player} &7@ &e{monitor}'
+    - '  &7Strikes: &c{strikes} &8| &7Maior BPS: &4{peak_bps}'
+    no-evidence: '  &8(sem evidências recentes)'
+    evidence-title: '  &7Evidências (mais recentes por último):'
+    # Placeholders: {time} {bps} {sustained} {cv} {span} {location} {reasons}
+    evidence-line: '  &8{time} &7bps &c{bps} &7sust &c{sustained} &7cv &c{cv} &7span &c{span} &7loc &c{location} &8» &e{reasons}'
+    footer: '&8&m----------------------------------'
+    # SimpleDateFormat usado no horário de cada evidência (não leva cores).
+    time-format: HH:mm:ss
+  
+  stats:
+    # Placeholders: {monitor} {state} {mode} {total} {hour} {last}
+    lines:
+    - '&8&m----------------------------------'
+    - '  &4&lANTI-NUKER &7- stats &e{monitor}'
+    - '  &7Estado: {state} &8| &7Modo: &e{mode}'
+    - '  &7Strikes (total): &c{total}'
+    - '  &7Strikes (última hora): &c{hour}'
+    - '  &7Último strike: {last}'
+    - '&8&m----------------------------------'
+    state-enabled: '&aativo'
+    state-disabled: '&cdesativado'
+    last-never: '&8nunca'
+    last-ago: '&f{seconds}s atrás' # {seconds}
+  
+  # Menu de suspeitos (/antinuker menu). Placeholders: {monitor}
+  # (o clique roda o inspect-command do perfil; o próprio mining/farm dá o feedback)
+  menu:
+    monitor-unavailable: '&cO monitor &e{monitor} &cnão está carregado.'
+    last-never: nunca # exibido no {last} do ícone quando não há detecção registrada
+
+# Rótulos dos sinais de detecção (aparecem em {reasons} nos alertas/webhook/info).
+signals:
+  rate: Taxa
+  timing: Ritmo robótico
+  sustained: Sustentado
+  spatial: Área
+  cadence: Cadência travada # ritmo robótico fora do tick (delay nuker)
+  envelope: Alcance # extensão de alcance/área numa janela curta
+  farm-y: Vertical # quebra em vários níveis de Y na fazenda plana
+  reach: Alcance impossível # quebrou bloco além do alcance físico (host)
+  wall: Através de parede # quebrou bloco enterrado/atrás de parede (host)
+
+# Exibido quando {cv}/{span}/{location} ainda não têm amostras suficientes.
+not-available: n/a
+
+# Tag do modo de operação, injetada no placeholder {mode} dos alertas/webhook.
+# observe-tag aparece durante a calibração (mode: observe) para a staff não
+# confundir um alerta de observação com uma punição real; no webhook as cores
+# são removidas automaticamente. enforce-tag fica vazia (operação normal).
+mode:
+  observe-tag: '&e[OBSERVAÇÃO] '
+  enforce-tag: ''

@@ -1,0 +1,396 @@
+# Vanish
+vanish:
+  enabled: '&aVocê agora está invisível para outros jogadores.'
+  disabled: '&aVocê agora está visível para outros jogadores.'
+  enabled-other: '&aO jogador &f{player} &aagora está invisível.'
+  disabled-other: '&aO jogador &f{player} &aagora está visível.'
+  status: '&cVocê e mais &4{vanished} &cstaffs estão invisíveis!'
+  chest-readonly: '&cInteração com baús está bloqueada.'
+  interact-blocked: '&cInteração bloqueada.'
+
+# God
+god:
+  enabled: '&aModo GOD ativado.'
+  disabled: '&cModo GOD desativado.'
+  enabled-other: '&aModo GOD ativado para &f{player}&a.'
+  disabled-other: '&cModo GOD desativado para &f{player}&c.'
+
+# Fly
+fly:
+  enabled: '&aModo de voo ativado.'
+  disabled: '&cModo de voo desativado.'
+  enabled-other: '&aModo de voo ativado para &f{player}&a.'
+  disabled-other: '&cModo de voo desativado para &f{player}&c.'
+  disabled-world: '&cVocê não pode voar neste mundo.'
+
+# Temporary Fly
+tempfly:
+  given: '&aVocê deu &ex{amount} &aFly Temporário (&f{duration}&a) para &f{player}&a.'
+  invalid-duration: '&cDuração inválida: &f{input}&c.'
+  none: '&cVocê não tem Fly Temporário ativo.'
+  remaining: '&aTempo restante: &f{remaining}&a.'
+  extended: '&aTempo de Fly estendido em &f{added}&a. Total: &f{remaining}&a.'
+  already-has-permission: '&cVocê já possui permissão de voo.'
+  activated:
+  - ''
+  - '  &a&lFLY TEMPORÁRIO &aativado!'
+  - '  &7Duração: &f{remaining}'
+  - '  &7Use &f/fly &7para alternar o voo.'
+  - ''
+  expired:
+  - ''
+  - '  &cSeu tempo de voo temporário acabou.'
+  - ''
+
+# Placas
+sign:
+  no-sign: "&cVocê precisa estar olhando para uma placa."
+  success: "&aLinha &f{line} &ada placa alterada para &r{content}&a."
+
+# Back
+back:
+  success: '&aTeleportado para sua localização anterior.'
+  no-location: '&cVocê não tem uma localização anterior.'
+
+# Clear
+clear:
+  success: '&aSeu inventário foi limpo.'
+  success-other: '&aO inventário de &f{player} &afoi limpo.'
+
+# Enchant
+enchant:
+  success: '&aEncantamento aplicado com sucesso.'
+  invalid: '&cEncantamento inválido.'
+  no-item: '&cVocê não tem nenhum item na mão.'
+  removed: '&aEncantamento removido com sucesso.'
+  no-items: '&cVocê não tem nenhum item no inventário.'
+  success-all: '&aEncantamento aplicado em &f{amount} &aitens.'
+  removed-all: '&aEncantamento removido de &f{amount} &aitens.'
+
+# Rename
+rename:
+  no-item: '&cVocê não tem nenhum item na mão.'
+  no-items: '&cVocê não tem nenhum item no inventário.'
+  success: '&aItem renomeado para &r{name}&a.'
+  success-all: '&aRenomeados &f{amount} &aitens para &r{name}&a.'
+
+# Lore
+lore:
+  no-item: '&cVocê não tem nenhum item na mão.'
+  no-items: '&cVocê não tem nenhum item no inventário.'
+  success: '&aLinha de lore adicionada.'
+  success-all: '&aLinha de lore adicionada em &f{amount} &aitens.'
+
+# Feed
+feed:
+  success: '&aSua fome foi saciada.'
+  success-other: '&aA fome de &f{player} &afoi saciada.'
+
+# Heal
+heal:
+  success: '&aSua vida foi restaurada.'
+  success-other: '&aA vida de &f{player} &afoi restaurada.'
+
+# GameMode
+gamemode:
+  success: '&aModo de jogo alterado para &f{mode}&a.'
+  success-other: '&aModo de jogo de &f{player} &aalterado para &f{mode}&a.'
+  invalid: '&cModo de jogo inválido.'
+
+# Give
+give:
+  success: '&aVocê deu &ex{amount} &f{item} &apara &f{player}&a.'
+  received: '&aVocê recebeu &ex{amount} &f{item}&a.'
+  invalid: '&cItem inválido. Use &fMATERIAL &cou &fMATERIAL:data&c, ex: &fLOG:1&c.'
+  # Material que só existe como bloco no mundo (WATER, BED_BLOCK...). Dar isso
+  # entregaria uma stack vazia e a mensagem de sucesso seria mentira.
+  not-item: '&f{item} &cnão existe como item — só como bloco no mundo.'
+  not-item-alias: '&f{item} &cnão existe como item. Você quis dizer &f{alias}&c?'
+  # Mostradas NO LUGAR de 'received' — nunca junto, para o jogador receber
+  # exatamente uma mensagem e ela ser verdadeira.
+  #
+  # mailed:   estava em um evento, então NADA entrou no inventário.
+  # leftover: o inventário encheu; só o que sobrou foi para o correio.
+  mailed: '&eVocê está em um evento! &ex{amount} &f{item} &efoi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou de &ex{amount} &f{item} &efoi para o seu &6/correio&e.'
+
+# Give All
+giveall-success: '&aVocê deu &ex{amount} &f{item} &apara todos os jogadores online.'
+
+# Give Hand
+givehand:
+  success: '&aVocê deu o item da sua mão para &f{player}&a.'
+  no-item: '&cVocê não tem nenhum item na mão.'
+
+# Give Hand All
+givehandall-success: '&aVocê deu o item da sua mão para todos os jogadores online.'
+
+# Hat
+hat:
+  success: '&aItem colocado na sua cabeça.'
+  invalid: '&cEsse item não é um chapéu válido.'
+  no-item: '&cVocê não tem nenhum item na mão.'
+
+# Invsee
+invsee-success: '&aAbrindo o inventário de &f{player}&a.'
+
+# Light
+light:
+  enabled: '&aVisão noturna ativada.'
+  disabled: '&cVisão noturna desativada.'
+  enabled-other: '&aVisão noturna ativada para &f{player}&a.'
+  disabled-other: '&cVisão noturna desativada para &f{player}&c.'
+
+# Ping
+ping:
+  self: '&aSeu ping: &f{ping}ms&a.'
+  other: '&aPing de &f{player}&a: &f{ping}ms&a.'
+  error: '&cNão foi possível obter o ping.'
+
+# Skull
+skull:
+  success: '&aA cabeça de &f{player} &afoi dada para &f{target}&a.'
+  texture-success: '&aA cabeça com a textura informada foi dada para &f{target}&a.'
+
+# Speed
+speed-success: '&aVelocidade de &f{target} &aalterada para &f{speed}&a.'
+
+# Spawn
+spawn:
+  success: '&aTeleportado para o spawn.'
+  not-set: '&cO spawn ainda não foi definido.'
+  teleported-other: '&aO jogador &f{player} &afoi teleportado para o spawn.'
+
+# Set Spawn
+setspawn-success: '&aSpawn definido com sucesso.'
+
+# Teleport
+tp-success: '&aTeleportado para &f{player}&a.'
+
+tphere-success: '&aVocê teleportou &f{player} &apara você.'
+
+tpall-success: '&aTodos os jogadores foram teleportados para você.'
+
+# Sudo
+sudo-success: '&aComando forçado em &f{player}&a.'
+
+# Area
+area:
+  success: '&aComando na área &8(&f{radius}&7x&f{height}&8) &ainiciado.'
+  no-players: '&cNenhum jogador encontrado na área.'
+
+# Auto Click
+autoclick:
+  enabled: '&aAuto Click ativado.'
+  disabled: '&cAuto Click desativado.'
+  enabled-other: '&aAuto Click ativado para &f{player}&a.'
+  disabled-other: '&cAuto Click desativado para &f{player}&c.'
+  no-sword: '&cÉ necessário uma espada na mão para ativar o Auto Click.'
+  disabled-no-sword: '&cAuto Click desativado: você precisa segurar uma espada.'
+  disabled-world: '&cAuto Click não pode ser usado neste mundo.'
+
+# Sound
+sound:
+  success: '&aSom tocado com sucesso.'
+  invalid: '&cSom inválido.'
+
+# Item Info
+iteminfo:
+  info:
+  - ''
+  - '  &e&lITEM INFO'
+  - ''
+  - '  &7Material: &f{material}'
+  - '  &7ID/Data: &f{id}&8:&f{data}'
+  - '  &7Encantamentos: &f{enchants}'
+  - '  &7NBT Tags: &f{nbttags}'
+  - '  &7Item Flags: &f{itemflags}'
+  - ''
+  no-item: '&cVocê não tem nenhum item na mão.'
+
+# Random TP
+randomtp:
+  success: '&aTeleportado para o jogador aleatório &f{player}&a.'
+  no-players: '&cNão há outros jogadores online.'
+
+# Summon
+summon:
+  success: '&aEntidade &f{type} &aspawnada com sucesso.'
+  invalid: '&cTipo de entidade inválido.'
+
+# Stack
+stack:
+  success: '&e{amount} &atipo(s) de poção agrupados com sucesso.'
+  no-potions: '&cNenhuma poção para agrupar encontrada.'
+
+# Bazinga
+bazinga-success: '&aO jogador &f{player} &afoi bazingado.'
+
+# TPA
+tpa:
+  sent:
+  - ''
+  - '  &aPedido de TPA enviado para &f{player}&a.'
+  - '  &7Clique {cancel} &7para cancelar.'
+  - ''
+  cancel-text: '&c&lCANCELAR'
+  cancel-hover: '&7Clique para cancelar o pedido de TPA.'
+  cancelled: '&ePedido para &f{player} &ecancelado.'
+  received:
+  - ''
+  - '  &f{player} &7enviou um pedido de TPA.'
+  - '  &7Clique {accept} &7para aceitar ou {reject} &7para recusar.'
+  - ''
+  accept-text: '&a&lACEITAR'
+  accept-hover: '&7Clique para aceitar o pedido de TPA.'
+  reject-text: '&c&lRECUSAR'
+  reject-hover: '&7Clique para recusar o pedido de TPA.'
+  accepted: '&aVocê aceitou o pedido de &f{player}&a.'
+  accepted-requester: '&f{player} &aaceitou seu pedido.'
+  rejected: '&cVocê recusou o pedido de &f{player}&c.'
+  rejected-requester: '&f{player} &crecusou seu pedido.'
+  cancelled-target: '&f{player} &ccancelou o pedido.'
+  expired-requester: '&cSeu pedido para &f{player} &cexpirou.'
+  expired-target: '&cO pedido de &f{player} &cexpirou.'
+  self: '&cVocê não pode enviar TPA para si mesmo.'
+  already-pending: '&cVocê já tem um pedido pendente.'
+  already-sent: '&cVocê já enviou um pedido para &f{player}&c.'
+  no-request: '&cVocê não tem um pedido de &f{player}&c.'
+  no-pending: '&cVocê não tem nenhum pedido pendente.'
+
+# Warps
+warp:
+  set-success: '&aWarp &f{warp} &adefinida com sucesso.'
+  del-success: '&aWarp &f{warp} &adeletada com sucesso.'
+  not-found: '&cA warp &f{warp} &cnão foi encontrada.'
+  teleported-other: '&aO jogador &f{player} &afoi teleportado para a warp &f{warp}&a.'
+
+# Homes
+home:
+  set-success: '&aHome &f{home} &adefinida com sucesso.'
+  set-overwrite: '&aHome &f{home} &aatualizada com sucesso.'
+  set-limit: '&cVocê atingiu seu limite de &f{max} &chomes.'
+  del-success: '&aHome &f{home} &adeletada com sucesso.'
+  success: '&aTeleportado para a home &f{home}&a.'
+  not-found: '&cA home &f{home} &cnão foi encontrada.'
+  empty: '&cVocê não tem nenhuma home definida.'
+  list:
+  - ''
+  - '  &aSuas homes:'
+  - '  {homes}'
+  - ''
+  separator: '&8, '
+  text: '&a{home}'
+  hover: '&7Clique para teleportar.'
+  blacklisted-world: '&cVocê não pode definir homes neste mundo.'
+
+# Kits
+kit:
+  not-found: '&cO kit &f{kit} &cnão foi encontrado.'
+  darkit-success: '&aVocê deu o kit &f{kit} &apara &f{player}&a.'
+  editkit-saved: '&aConteúdo do kit &f{kit} &asalvo com sucesso.'
+  no-space: '&cInventário sem espaço para o kit &f{kit}&c.'
+  player-not-found: '&cJogador &f{player} &cnão encontrado ou offline.'
+  reset-delay-kit: '&aCooldown do kit &f{kit} &ade &f{player} &aresetado.'
+  reset-delay-player: '&aTodos os cooldowns de kits de &f{player} &aresetados.'
+  reset-delay-all: '&aTodos os cooldowns de kits de &ftodos &aos jogadores resetados.'
+  reset-delay-all-kit: '&aCooldown do kit &f{kit} &aresetado para &ftodos &aos jogadores.'
+
+# Combat Log
+combat:
+  tagged: '&cNão deslogue, você perderá seus itens!'
+  untagged: '&aVocê saiu de combate, agora pode deslogar.'
+  actionbar: '&cEm combate por mais &f{time}s&c!'
+  actionbar-out: '&aVocê saiu de combate!'
+  blocked-command: '&cComando bloqueado em combate!'
+
+# Death Messages
+# {victim}/{player} = quem morreu   {killer} = quem matou / estava em combate.
+# Deixe vazio ("") para desativar.
+death:
+  kill: '&f{victim} &7foi morto por &f{killer}&7.'
+  combat-log: '&f{player} &7peidou na farofa e deslogou em combate!'
+
+# Clear Lag
+clearlag:
+  warning:
+  - ''
+  - '  &8♽ &eOs itens no chão serão limpos em &l{time}&e! &7(/lixeiro)'
+  - ''
+  cleared:
+  - ''
+  - '  &8♽ &cForam limpos x&l{items} &citens do chão.'
+  - ''
+  next-clean: "&8♽ &aA próxima limpeza será em &f&l{time}&a!"
+  forced: '&aLimpeza forçada executada com sucesso.'
+
+# Chain Arena
+chain:
+  entered: '&f{player} &aentrou na arena!'
+  left: '&f{player} &csaiu da arena!'
+  died: '&f{player} &cfoi eliminado por &f{killer}&c!'
+  not-set: '&cA arena chain ainda não foi configurada!'
+  setspawn: '&aSpawn da chain definido com sucesso.'
+  setexit: '&aSaída da chain definida com sucesso.'
+  setkit: '&aKit da arena salvo com sucesso.'
+  blocked-command: '&cComando bloqueado dentro da arena!'
+  already-in: '&cVocê já está na arena!'
+  not-in: '&cVocê não está na arena!'
+  inventory-not-empty: '&cSeu inventário precisa estar vazio para entrar!'
+  help:
+  - ''
+  - '  &c&lCHAIN ADMIN'
+  - ''
+  - '  &c/chain &8- &7Entrar na arena'
+  - '  &c/chain entrar &8- &7Entrar na arena'
+  - '  &c/chain sair &8- &7Sair da arena'
+  - '  &c/chain setspawn &8- &7Definir spawn da arena'
+  - '  &c/chain setexit &8- &7Definir saída da arena'
+  - '  &c/chain setkit &8- &7Salvar kit da arena'
+  - ''
+
+# Welcome
+welcome:
+  chat:
+  - ''
+  - '  &aBem-vindo ao servidor, &f{player}&a!'
+  - ''
+  actionbar: '&eBem-vindo, &f{player}&e!'
+  title: '&6Bem-vindo!'
+  subtitle: '&eDivirta-se, &f{player}&e!'
+
+# Custom commands
+custom-commands:
+  cooldown: '&cAguarde &f{time} &cpara usar esse comando novamente.'
+
+# General
+general:
+  reload-success: '&aConfigurações recarregadas com sucesso!'
+  permission-denied: '&cVocê não tem permissão para usar esse comando.'
+  permission-denied-others: '&cSem permissão para fazer isso em outros jogadores.'
+
+# Worlds
+world:
+  tp-not-found: '&cO mundo &f{world} &cnão foi encontrado ou não está carregado.'
+  tp-success: '&aTeleportado para o mundo &f{world}&a.'
+
+# Nicknames
+nick:
+  set: '&aSeu nick foi alterado para &f{nick}&a.'
+  reset: '&aSeu nick foi removido, você voltou ao normal.'
+  none: '&cVocê não possui um nick.'
+  none-other: '&f{player} &cnão possui um nick.'
+  set-other: '&aO nick de &f{player} &afoi alterado para &f{nick}&a.'
+  reset-other: '&aO nick de &f{player} &afoi removido.'
+  set-by-staff: '&aSeu nick foi alterado para &f{nick} &apor um staff.'
+  reset-by-staff: '&cSeu nick foi removido por um staff.'
+  invalid-chars: '&cO nick só pode conter letras, números, espaço e códigos de cores.'
+  too-short: '&cO nick precisa ter no mínimo &f{min} &ccaracteres.'
+  too-long: '&cO nick pode ter no máximo &f{max} &ccaracteres.'
+# ── Entrega de itens ───────────────────────────────────────────────────
+# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
+# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
+# leftover: inventário cheio — só a sobra foi ao correio.
+delivery:
+  mailed: '&eVocê está em um evento! &eSeu item foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'

@@ -1,0 +1,18 @@
+display: 'Garnix'
+
+permission: 'daily.garnix'
+
+cooldown: '1d'
+
+slot: 33
+
+commands:
+  - 'cash add {player} 250'
+
+collect-icon:
+  texture: '2090d09e173ee34138c3b01b48ee0be534bbb1ace0ddf5ff98e66f7b02113995'
+  display: '&6&lGARNIX'
+  lore:
+    - '&fRecompensa: &6❂250 Cash'
+    - ''
+    - '&aClique para coletar!'

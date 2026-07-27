@@ -1,0 +1,323 @@
+# GarnixPunishments — webhooks.yml
+# Um webhook do Discord por tipo de evento, para que cada canal receba só o seu.
+# Mesma estrutura de configuração do garnix-anti-nuker: cada bloco tem enabled/url/bot-name/
+# bot-avatar/avatar-image e um embed (color/title/description/fields/footer).
+#
+# Chaves disponíveis (uma por canal):
+#   ban        — banimento permanente
+#   temp-ban   — banimento temporário
+#   ip-ban     — banimento de IP
+#   mute       — silenciamento permanente
+#   temp-mute  — silenciamento temporário
+#   warn       — aviso
+#   revoke     — revogação de UMA punição
+#   pardon     — perdão total (limpa todas as punições do jogador)
+#
+# O envio é pulado enquanto `enabled` for false OU a `url` estiver vazia.
+# Cores aceitam #HEX ou decimal. Qualquer propriedade do embed pode ser removida para omitir o campo.
+# Os campos (fields) são uma lista, na ordem em que aparecem.
+# O placeholder {date} usa o formato dd/MM/yyyy 'às' HH:mm (data da punição / revogação / perdão).
+# Placeholders (aplicação):  {player} {type} {staff} {reason} {reason_id} {proof} {duration} {code} {id} {silent} {ip} {date}
+# Placeholders (revoke):     {player} {type} {staff} {reason} {code} {id} {date}
+# {code} = public punishment code (what the player quotes); {id} = internal numeric id.
+# Placeholders (pardon):     {player} {staff} {reason} {cleared} {date}
+webhooks:
+  
+  ban:
+    enabled: true
+    # Cole a URL do webhook do Discord aqui. O envio é pulado enquanto estiver vazio.
+    url: https://discord.com/api/webhooks/1520984005908889632/yt2mJf9N9EprxM25pnFcLH3wEIEGryIZzYSmuyQhrN-zHGEAJS0WhC0wj54nMDPzp1os
+    bot-name: '' # Deixe vazio se já estiver configurado no webhook do canal.
+    bot-avatar: '' # Deixe vazio se já estiver configurado no webhook do canal.
+    # Imagem do embed ({player} é substituído). Padrão: avatar do jogador.
+    avatar-image: https://minotar.net/avatar/{player}/100.png
+    embed:
+      color: '#E74C3C'
+      title: '**{player}** foi banido'
+      description: '> Banimento permanente aplicado por **{staff}**.'
+      fields:
+      - name: Jogador
+        value: '`{player}`'
+        inline: true
+      - name: Staff
+        value: '`{staff}`'
+        inline: true
+      - name: Duração
+        value: '`{duration}`'
+        inline: true
+      - name: Motivo
+        value: '`{reason}`'
+        inline: false
+      - name: Prova
+        value: '{proof}'
+        inline: false
+      - name: ID
+        value: '`{code}`'
+        inline: true
+      - name: Silencioso
+        value: '`{silent}`'
+        inline: true
+      - name: Data da punição
+        value: '`{date}`'
+        inline: true
+      footer:
+        text: Rede Garnix
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+  
+  temp-ban:
+    enabled: true
+    url: https://discord.com/api/webhooks/1520984005908889632/yt2mJf9N9EprxM25pnFcLH3wEIEGryIZzYSmuyQhrN-zHGEAJS0WhC0wj54nMDPzp1os
+    bot-name: ''
+    bot-avatar: ''
+    avatar-image: https://minotar.net/avatar/{player}/100.png
+    embed:
+      color: '#E74C3C'
+      title: '**{player}** foi banido temporariamente'
+      description: '> Banimento temporário aplicado por **{staff}**.'
+      fields:
+      - name: Jogador
+        value: '`{player}`'
+        inline: true
+      - name: Staff
+        value: '`{staff}`'
+        inline: true
+      - name: Duração
+        value: '`{duration}`'
+        inline: true
+      - name: Motivo
+        value: '`{reason}`'
+        inline: false
+      - name: Prova
+        value: '{proof}'
+        inline: false
+      - name: ID
+        value: '`{code}`'
+        inline: true
+      - name: Silencioso
+        value: '`{silent}`'
+        inline: true
+      - name: Data da punição
+        value: '`{date}`'
+        inline: true
+      footer:
+        text: Rede Garnix
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+  
+  ip-ban:
+    enabled: true
+    url: https://discord.com/api/webhooks/1520984005908889632/yt2mJf9N9EprxM25pnFcLH3wEIEGryIZzYSmuyQhrN-zHGEAJS0WhC0wj54nMDPzp1os
+    bot-name: ''
+    bot-avatar: ''
+    avatar-image: https://minotar.net/avatar/{player}/100.png
+    embed:
+      color: '#992D22'
+      title: '**{player}** teve o IP banido'
+      description: '> Banimento de IP aplicado por **{staff}**.'
+      fields:
+      - name: Jogador
+        value: '`{player}`'
+        inline: true
+      - name: Staff
+        value: '`{staff}`'
+        inline: true
+      - name: IP
+        value: '`{ip}`'
+        inline: true
+      - name: Motivo
+        value: '`{reason}`'
+        inline: false
+      - name: Prova
+        value: '{proof}'
+        inline: false
+      - name: ID
+        value: '`{code}`'
+        inline: true
+      - name: Silencioso
+        value: '`{silent}`'
+        inline: true
+      - name: Data da punição
+        value: '`{date}`'
+        inline: true
+      footer:
+        text: Rede Garnix
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+  
+  mute:
+    enabled: true
+    url: https://discord.com/api/webhooks/1520984005908889632/yt2mJf9N9EprxM25pnFcLH3wEIEGryIZzYSmuyQhrN-zHGEAJS0WhC0wj54nMDPzp1os
+    bot-name: ''
+    bot-avatar: ''
+    avatar-image: https://minotar.net/avatar/{player}/100.png
+    embed:
+      color: '#E67E22'
+      title: '**{player}** foi silenciado'
+      description: '> Silenciamento permanente aplicado por **{staff}**.'
+      fields:
+      - name: Jogador
+        value: '`{player}`'
+        inline: true
+      - name: Staff
+        value: '`{staff}`'
+        inline: true
+      - name: Duração
+        value: '`{duration}`'
+        inline: true
+      - name: Motivo
+        value: '`{reason}`'
+        inline: false
+      - name: Prova
+        value: '{proof}'
+        inline: false
+      - name: ID
+        value: '`{code}`'
+        inline: true
+      - name: Silencioso
+        value: '`{silent}`'
+        inline: true
+      - name: Data da punição
+        value: '`{date}`'
+        inline: true
+      footer:
+        text: Rede Garnix
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+  
+  temp-mute:
+    enabled: true
+    url: https://discord.com/api/webhooks/1520984005908889632/yt2mJf9N9EprxM25pnFcLH3wEIEGryIZzYSmuyQhrN-zHGEAJS0WhC0wj54nMDPzp1os
+    bot-name: ''
+    bot-avatar: ''
+    avatar-image: https://minotar.net/avatar/{player}/100.png
+    embed:
+      color: '#E67E22'
+      title: '**{player}** foi silenciado temporariamente'
+      description: '> Silenciamento temporário aplicado por **{staff}**.'
+      fields:
+      - name: Jogador
+        value: '`{player}`'
+        inline: true
+      - name: Staff
+        value: '`{staff}`'
+        inline: true
+      - name: Duração
+        value: '`{duration}`'
+        inline: true
+      - name: Motivo
+        value: '`{reason}`'
+        inline: false
+      - name: Prova
+        value: '{proof}'
+        inline: false
+      - name: ID
+        value: '`{code}`'
+        inline: true
+      - name: Silencioso
+        value: '`{silent}`'
+        inline: true
+      - name: Data da punição
+        value: '`{date}`'
+        inline: true
+      footer:
+        text: Rede Garnix
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+  
+  warn:
+    enabled: true
+    url: https://discord.com/api/webhooks/1520984005908889632/yt2mJf9N9EprxM25pnFcLH3wEIEGryIZzYSmuyQhrN-zHGEAJS0WhC0wj54nMDPzp1os
+    bot-name: ''
+    bot-avatar: ''
+    avatar-image: https://minotar.net/avatar/{player}/100.png
+    embed:
+      color: '#F1C40F'
+      title: '**{player}** recebeu um aviso'
+      description: '> Aviso aplicado por **{staff}**.'
+      fields:
+      - name: Jogador
+        value: '`{player}`'
+        inline: true
+      - name: Staff
+        value: '`{staff}`'
+        inline: true
+      - name: Duração
+        value: '`{duration}`'
+        inline: true
+      - name: Motivo
+        value: '`{reason}`'
+        inline: false
+      - name: Prova
+        value: '{proof}'
+        inline: false
+      - name: ID
+        value: '`{code}`'
+        inline: true
+      - name: Silencioso
+        value: '`{silent}`'
+        inline: true
+      - name: Data da punição
+        value: '`{date}`'
+        inline: true
+      footer:
+        text: Rede Garnix
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+  
+  revoke:
+    enabled: true
+    url: https://discord.com/api/webhooks/1520984005908889632/yt2mJf9N9EprxM25pnFcLH3wEIEGryIZzYSmuyQhrN-zHGEAJS0WhC0wj54nMDPzp1os
+    bot-name: ''
+    bot-avatar: ''
+    avatar-image: https://minotar.net/avatar/{player}/100.png
+    embed:
+      color: '#2ECC71'
+      title: Punição de **{player}** revogada
+      description: '> A punição `{code}` ({type}) foi revogada por **{staff}**.'
+      fields:
+      - name: Jogador
+        value: '`{player}`'
+        inline: true
+      - name: Revogado por
+        value: '`{staff}`'
+        inline: true
+      - name: Tipo
+        value: '`{type}`'
+        inline: true
+      - name: Motivo
+        value: '`{reason}`'
+        inline: false
+      - name: ID
+        value: '`{code}`'
+        inline: true
+      - name: Data da revogação
+        value: '`{date}`'
+        inline: true
+      footer:
+        text: Rede Garnix
+        icon-url: https://i.imgur.com/0fFefDs.jpeg
+  
+  pardon:
+    enabled: true
+    url: https://discord.com/api/webhooks/1520984005908889632/yt2mJf9N9EprxM25pnFcLH3wEIEGryIZzYSmuyQhrN-zHGEAJS0WhC0wj54nMDPzp1os
+    bot-name: ''
+    bot-avatar: ''
+    avatar-image: https://minotar.net/avatar/{player}/100.png
+    embed:
+      color: '#2ECC71'
+      title: '**{player}** foi perdoado'
+      description: '> Perdão total aplicado por **{staff}**.'
+      fields:
+      - name: Jogador
+        value: '`{player}`'
+        inline: true
+      - name: Perdoado por
+        value: '`{staff}`'
+        inline: true
+      - name: Punições limpas
+        value: '`{cleared}`'
+        inline: true
+      - name: Motivo
+        value: '`{reason}`'
+        inline: false
+      - name: Data do perdão
+        value: '`{date}`'
+        inline: true
+      footer:
+        text: Rede Garnix
+        icon-url: https://i.imgur.com/0fFefDs.jpeg

@@ -1,0 +1,43 @@
+enabled: true
+priority: 0
+worlds: ['fazenda']
+permission: ''
+update-ticks: 20
+
+title:
+  interval: 2
+  frames:
+  - '&f&lFAZENDA &8► &a%bungee_total%'
+  - '&e&lFAZENDA &8► &a%bungee_total%'
+  - '&6&lFAZENDA &8► &a%bungee_total%'
+  - '&6&lF&f&lAZENDA &8► &a%bungee_total%'
+  - '&6&lF&e&lAZENDA &8► &a%bungee_total%'
+  - '&6&lFA&f&lZENDA &8► &a%bungee_total%'
+  - '&6&lFA&e&lZENDA &8► &a%bungee_total%'
+  - '&6&lFAZ&f&lENDA &8► &a%bungee_total%'
+  - '&6&lFAZ&e&lENDA &8► &a%bungee_total%'
+  - '&6&lFAZE&f&lNDA &8► &a%bungee_total%'
+  - '&6&lFAZE&e&lNDA &8► &a%bungee_total%'
+  - '&6&lFAZEN&f&lDA &8► &a%bungee_total%'
+  - '&6&lFAZEN&e&lDA &8► &a%bungee_total%'
+  - '&6&lFAZEND&f&lA &8► &a%bungee_total%'
+  - '&6&lFAZEND&e&lA &8► &a%bungee_total%'
+  - '&e&lFAZENDA &8► &a%bungee_total%'
+  - '&6&lFAZENDA &8► &a%bungee_total%'
+  - '&f&lFAZENDA &8► &a%bungee_total%'
+  - '&6&lFAZENDA &8► &a%bungee_total%'
+
+lines:
+- ''
+- ' &fNível: &6%farm_level%'
+- ' %farm_level_bar_short% &a%farm_xp%&8/&c%farm_xp_needed%'
+- ''
+- ' &fPlantação: %farm_type%'
+- ' &fColhidas: &7%farm_type_crops%'
+- ''
+- ' &fCoins: &2$&a%currencies_coins%'
+- ' &fSementes: &5❋%currencies_sementes%'
+- ''
+- ' &fCash: &6❂%currencies_cash%'
+- ''
+- '&eredegarnix.com'

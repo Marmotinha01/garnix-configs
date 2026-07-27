@@ -1,0 +1,60 @@
+# GarnixFarm — Skins da enxada. A skin muda o material da enxada e pode dar bônus.
+
+unlock-lore:
+  - "&cBloqueada"
+
+bonus-format: "  &7+{value}{unit} em {color}{display}"
+
+skins:
+  default:
+    display: "&fPadrão"
+    material: WOOD_HOE
+    icon:
+      material: WOOD_HOE
+      display: "&fPadrão"
+      lore:
+        - "&7A enxada básica."
+
+  ferro:
+    display: "&7Ferro"
+    material: IRON_HOE
+    forgeable: true
+    icon:
+      material: IRON_HOE
+      display: "&7Ferro"
+      lore:
+        - "&7Uma enxada de ferro."
+        - "{bonus}"
+    bonuses:
+      coins:
+        value: 5
+        percent: true
+
+  ouro:
+    display: "&6Ouro"
+    material: GOLD_HOE
+    forgeable: true
+    icon:
+      material: GOLD_HOE
+      display: "&6Ouro"
+      lore:
+        - "&7Uma enxada dourada."
+        - "{bonus}"
+    bonuses:
+      coins:
+        value: 10
+        percent: true
+
+  diamante:
+    display: "&bDiamante"
+    material: DIAMOND_HOE
+    icon:
+      material: DIAMOND_HOE
+      display: "&bDiamante"
+      lore:
+        - "&7Uma enxada de diamante."
+        - "{bonus}"
+    bonuses:
+      coins:
+        value: 15
+        percent: true

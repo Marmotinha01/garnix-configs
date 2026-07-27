@@ -1,0 +1,91 @@
+# Cash Shop — categoria de exemplo.
+
+title: 'SHOP - Especiais'
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: false
+
+# Número de linhas do menu (1 a 6). Obrigatório quando paginated: false.
+rows: 6
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 13
+  material: OBSIDIAN
+  display: '&6Especiais'
+  lore:
+    - '&7Clique para visualizar.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'especiais'
+# command-aliases: ['esp']
+# command-permission: 'shop.especiais'
+
+# Broadcast (apenas Cash Shop) — usado por produtos com 'broadcast: true'.
+# Placeholders: {player} {item} {amount} + placeholders de moeda.
+broadcast-message:
+  - ''
+  - ' &6&lCASH SHOP &8» &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
+  - ''
+
+# Em categorias fixas, todo produto declara um 'slot'.
+products:
+
+  pedra:
+    slot: 10
+    amount: 64
+    price: 10
+    item:
+      material: STONE
+      display: '&7Pedra'
+      lore:
+        - '&7Bloco básico para construção.'
+
+  booster:
+    slot: 12
+    amount: 1
+    price: 55
+    broadcast: true
+    commands:
+      - 'say {player} adquiriu um Booster de XP por {amount} unidade(s)!'
+    item:
+      material: EXP_BOTTLE
+      display: '&6Booster de XP'
+      lore:
+        - '&fDuração: &a30 minutos'
+        - '&fBônus: &a2x de XP'
+
+  pacote-lendario:
+    slot: 14
+    amount: 1
+    price: 500
+    release-in: '01/06/2026 18:00'
+    show-release-date: true
+    permission: 'cashshop.bought.pacote-lendario'
+    broadcast: true
+    commands:
+      - 'lp user {player} permission set cashshop.bought.pacote-lendario true'
+      - 'broadcast &6{player} adquiriu o Pacote Lendário!'
+    item:
+      material: NETHER_STAR
+      display: '&6Pacote Lendário'
+      glow: true
+      lore:
+        - '&fInclui: &aKit completo + cosméticos'
+
+  preview-castelo:
+    slot: 16
+    amount: 1
+    price: 250
+    right-command: 'preview castelo'
+    commands:
+      - 'schematic give {player} castelo'
+    item:
+      material: GRASS
+      display: '&aSchematic - Castelo'
+      lore:
+        - '&fGigante e detalhado.'

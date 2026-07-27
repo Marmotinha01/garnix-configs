@@ -1,0 +1,98 @@
+# GarnixEvents — Config
+#
+# As configurações de cada evento (tempos, kit, recompensas e mensagens próprias)
+# ficam em events/<evento>.yml. Aqui só o que vale para o plugin inteiro.
+
+# Intervalo (minutos) de atualização dos rankings.
+ranking-refresh-minutes: 5
+
+# Texto de %events_running% e %events_winner_<evento>% quando não há ninguém.
+placeholder-none: Nenhum
+
+# Texto de %events_status% — a situação de quem está olhando a scoreboard dentro
+# de uma run. Fora dela o placeholder fica vazio.
+placeholder-status:
+  alive: '&aVivo'
+  eliminated: '&cEliminado'
+  watching: '&eEspectando'
+
+# Segundos restantes em que o anúncio de entrada é repetido no chat.
+announce-at:
+- 60
+- 30
+- 15
+- 10
+- 5
+- 3
+- 1
+
+# Comandos liberados para quem está EM JOGO no evento.
+# Bypass: events.bypass.commands
+participants-command-whitelist:
+- eventos
+- evento
+- events
+- event
+- sumo
+- fight
+- parkour
+- corrida
+- spleef
+- splegg
+- killer
+- destemido
+- mvp
+- tnt-run
+- tntrun
+- sniper
+- paintball
+- arqueiros
+- batata-quente
+- batataquente
+- batata
+
+# Comandos liberados para quem já foi eliminado e está assistindo no camarote.
+# Costuma ser mais permissivo — quem está aqui não influencia mais o resultado.
+spectators-command-whitelist:
+- eventos
+- evento
+- events
+- event
+- sumo
+- fight
+- parkour
+- corrida
+- spleef
+- splegg
+- killer
+- destemido
+- mvp
+- tnt-run
+- tntrun
+- sniper
+- paintball
+- arqueiros
+- batata-quente
+- batataquente
+- batata
+- spawn
+- tell
+- msg
+- r
+
+setup:
+  # Volume máximo (em blocos) de uma área selecionada com o graveto.
+  # Evita que uma seleção errada trave o servidor ao montar o piso. 0 = sem limite.
+  max-area-volume: 250000
+  
+  # O graveto de seleção. É reconhecido por NBT, então um graveto comum
+  # continua funcionando normalmente.
+  wand-item:
+    material: STICK
+    display: '&aGraveto de Seleção'
+    lore:
+    - '&7Use para marcar as áreas dos eventos.'
+    - ''
+    - '&aClique esquerdo &7» &fprimeiro ponto'
+    - '&aClique direito &7» &fdemais pontos'
+    glow: true

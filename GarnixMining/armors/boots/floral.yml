@@ -1,0 +1,14 @@
+item:
+# Floral Boots
+  display: "&2Bota Floral"
+  material: LEATHER_BOOTS
+  color: "#00AA00"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  xp:
+    value: 3.5
+    percent: true

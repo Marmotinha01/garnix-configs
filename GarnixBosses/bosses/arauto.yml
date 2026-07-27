@@ -1,0 +1,101 @@
+order: 3
+
+type: ENDERMITE
+
+health: 75000
+
+translated: 'Boss Arauto'
+display: '&d{translated}'
+
+texture: '38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677'
+
+reward-rolls: 3
+
+boss-icon:
+  texture: '38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677'
+  display: '{display}'
+  lore:
+    - '&7Utilize este boss dentro'
+    - '&7do seu terreno.'
+    - ''
+    - ' &8▸ &fVida: &c❤{health}'
+    - ' &8▸ &fStacks: &7x{stacks}'
+    - ''
+    - '&fColoque-o em um terreno!'
+
+# Types:
+# NONE, CURRENCY, ITEM, COMMAND, COMMAND_ITEM
+
+rewards:
+  bad-luck:
+    type: NONE
+    chance: 40.0
+    display: '&cAzar!'
+    icon:
+      material: WEB
+      display: '&c&lAzar!'
+
+  coins-reward:
+    type: CURRENCY
+    chance: 100.0
+    display: '&6Moedas'
+    currency-id: coins
+    amount: 50000
+    icon:
+      material: DOUBLE_PLANT
+      display: '&6&lMoedas'
+
+  gems-reward:
+    type: CURRENCY
+    chance: 25.0
+    display: '&bGemas'
+    currency-id: gems
+    amount: 10
+    icon:
+      material: EMERALD
+      display: '&b&lGemas'
+
+  xp-reward:
+    type: COMMAND
+    chance: 50.0
+    display: '&aExperiência'
+    command: 'xp {amount} {player}'
+    amount: 500
+    icon:
+      material: EXP_BOTTLE
+      display: '&aExperiência'
+
+  key-reward:
+    type: COMMAND_ITEM
+    chance: 10.0
+    display: '&dChave Lendária'
+    command: 'crate givekey {player} lendaria {amount}'
+    amount: 1
+    icon:
+      material: TRIPWIRE_HOOK
+      display: '&d&lChave Lendária'
+      glow: true
+
+  diamond-reward:
+    type: ITEM
+    chance: 30.0
+    display: '&bDiamantes'
+    item:
+      material: DIAMOND
+      amount: 5
+      display: '&b&lDiamantes do Boss'
+      lore:
+        - '&7Recompensa do Golem'
+
+  helmet-reward:
+    type: ITEM
+    chance: 5.0
+    display: '&6Capacete Dourado'
+    item:
+      material: GOLD_HELMET
+      display: '&6&lCapacete do Golem'
+      lore:
+        - '&7Um capacete forjado pelo'
+        - '&7poderoso Golem de Ferro.'
+      enchants:
+        - 'PROTECTION_ENVIRONMENTAL:3'

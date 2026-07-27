@@ -1,0 +1,79 @@
+# GarnixDuels — Config
+
+# Intervalo (minutos) de atualização do ranking.
+ranking-refresh-minutes: 5
+
+# Apostas
+bet:
+  min-amount: 1.0
+  max-amount: 1.0E9
+
+# Moedas que NÃO podem ser apostadas (ids do GarnixCurrencies).
+currency-blacklist: []
+
+duel:
+  # Contagem regressiva (segundos) antes de liberar o PvP.
+  countdown-seconds: 5
+  # Tempo (segundos) que um convite fica válido.
+  request-timeout-seconds: 30
+  # Duração máxima de um duelo (segundos); ao estourar, empate e apostas devolvidas.
+  time-limit-seconds: 600
+  # Modo "Itens Próprios": segundos para o vencedor recolher os itens do perdedor.
+  item-pickup-seconds: 15
+  # Raio (blocos) do isolamento de sons entre duelos na mesma arena.
+  sound-radius: 3.0
+  # Comandos liberados durante o duelo/camarote (bypass: duels.bypass.commands).
+  command-whitelist:
+  - x1
+  - duelo
+  - duel
+  - duelos
+  - duels
+
+# Kit do modo "Kit Setado" (removido no fim do duelo; nada cai no chão).
+kit:
+  armor:
+    helmet:
+      material: DIAMOND_HELMET
+    chestplate:
+      material: DIAMOND_CHESTPLATE
+    leggings:
+      material: DIAMOND_LEGGINGS
+    boots:
+      material: DIAMOND_BOOTS
+  items:
+    sword:
+      slot: 0
+      material: DIAMOND_SWORD
+      enchants:
+      - DAMAGE_ALL:2
+    bow:
+      slot: 1
+      material: BOW
+      enchants:
+      - ARROW_DAMAGE:2
+    golden-apples:
+      slot: 2
+      material: GOLDEN_APPLE
+      data: 1
+      amount: 8
+    food:
+      slot: 3
+      material: COOKED_BEEF
+      amount: 16
+    arrows:
+      slot: 9
+      material: ARROW
+      amount: 64
+
+myth:
+  # Dias máximos sem ENTRAR no servidor antes do resorteio automático.
+  max-offline-days: 3
+  # Dias máximos sem PVP antes do resorteio automático.
+  max-no-pvp-days: 4
+  # Intervalo (minutos) da verificação de expiração do mito.
+  check-interval-minutes: 30
+  # Som tocado a todos quando o mito muda (""=desativado).
+  change-sound: AMBIENCE_THUNDER
+  # Texto da placeholder %duels_myth_tag% quando o jogador é o mito.
+  tag: '&c[⚔]'

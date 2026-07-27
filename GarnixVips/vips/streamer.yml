@@ -1,0 +1,21 @@
+lp-group: "streamer"
+display: "STREAMER"
+color: "&5"
+weight: 60
+
+switcher-icon:
+  texture: "2f18fa43d4d9378948b56b85b531979074119c125232e715ce4bd52780ac4d76"
+  display: "{color}&l{display}"
+
+add-broadcast:
+  title:
+    title: "{color}{player} &ftornou-se"
+    subtitle: "{color}&l{color}&l{display}"
+    fade-in: 10
+    stay: 60
+    fade-out: 10
+  chat:
+    - ""
+    - "  &e{player} &ftornou-se {color}&l{color}&l{display}&f!"
+    - ""
+  sound: AMBIENCE_THUNDER

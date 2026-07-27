@@ -1,0 +1,28 @@
+display: Kit Vaca
+
+category: ranks
+
+permission: rank.vaca
+
+cooldown: 6h
+
+slot: 13
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  texture: dc4b5f6d75126380f520a67ca57bc9a56aa11db8afe7e5dcb2a52dfcfeae0785
+  display: '&eKit Vaca'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Vaca'
+  lore:
+  - '&7Ainda não desbloqueado.'
+
+content: H4sIAAAAAAAA/8WTy0oDQRBFa5IxTsaNCL5dtH5AVoLgQtAYCSi6CGQbKjPlTGM/xu7OQ38o/5EvszUJQSaLLIJuGoq699ahio4B6rDFHUkbA0AcQYWncCi5osTgq7tOOUqt0p4daZMGsNXUA+WCGKoOszqEpJL821ipQFUMBYSVn4BdmNfVWX0BMWyn3BYCPyIIn1ES7Ewn9Mgd62KCPgBq9ygxIx82gzhYQmRapKR6WBSCFgy1pSOYO47L2AVP3nBMa4OzDYDvlzH+GuFoxQFzPSTx3xQ5CUlubQrYAMVZmSLJyTqf4da/yiZITsokgrKMq8z+KceK793X2v0bhDO8GHFDvVzrtwVEWIII5kOD2dAbqEK9zVN6EJjZ734EkQ901PPdWl9bS3bJ5YOetKHIC0M4nU6umlpZniHDvreoVLOZo+EF59PJZVPw9wExsv41vlug8Voj8ZMUmh+JHniz4YYhS3IcerFkA+kL5GNsLBax55XTiWi2b7stdvfS6bQ6v/cBX9k9UUuFBQAA

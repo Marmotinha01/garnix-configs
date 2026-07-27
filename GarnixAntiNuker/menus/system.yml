@@ -1,0 +1,16 @@
+title: Sistema Anti Nuker
+rows: 3
+
+mining-suspects-icon:
+  slot: 11
+  material: DIAMOND_PICKAXE
+  display: '&aSuspeitos de Mina'
+  lore:
+  - '&7Clique para visualizar.'
+
+farming-suspects-icon:
+  slot: 15
+  material: DIAMOND_HOE
+  display: '&aSuspeitos da Fazenda'
+  lore:
+  - '&7Clique para visualizar.'

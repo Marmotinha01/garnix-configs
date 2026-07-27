@@ -1,0 +1,77 @@
+# Board de evento. Só o selector do GarnixEvents chega até ela.
+#
+# A permission é de propósito um nó que ninguém tem: o casamento normal por
+# mundo passa por appliesTo(), que checa permissão, então essa board nunca é
+# escolhida por estar no mundo dos eventos. O selector busca a board pelo id e
+# não passa por appliesTo(), então para quem está na run ela aparece igual.
+# Sem isso, bastava o eventos_lobby.yml perder o priority para as boards de
+# evento aparecerem no lobby.
+
+enabled: true
+priority: 0
+worlds: ['eventos']
+permission: 'garnix.eventos.board'
+update-ticks: 20
+
+title:
+  interval: 2
+  frames:
+  - '&f&lBATATA QUENTE &8► &a%events_alive%'
+  - '&e&lBATATA QUENTE &8► &a%events_alive%'
+  - '&6&lBATATA QUENTE &8► &a%events_alive%'
+  - '&6&lB&f&lATATA QUENTE &8► &a%events_alive%'
+  - '&6&lB&e&lATATA QUENTE &8► &a%events_alive%'
+  - '&6&lBA&f&lTATA QUENTE &8► &a%events_alive%'
+  - '&6&lBA&e&lTATA QUENTE &8► &a%events_alive%'
+  - '&6&lBAT&f&lATA QUENTE &8► &a%events_alive%'
+  - '&6&lBAT&e&lATA QUENTE &8► &a%events_alive%'
+  - '&6&lBATA&f&lTA QUENTE &8► &a%events_alive%'
+  - '&6&lBATA&e&lTA QUENTE &8► &a%events_alive%'
+  - '&6&lBATAT&f&lA QUENTE &8► &a%events_alive%'
+  - '&6&lBATAT&e&lA QUENTE &8► &a%events_alive%'
+  - '&6&lBATATA&f&l QUENTE &8► &a%events_alive%'
+  - '&6&lBATATA&e&l QUENTE &8► &a%events_alive%'
+  - '&6&lBATATA &f&lQUENTE &8► &a%events_alive%'
+  - '&6&lBATATA &e&lQUENTE &8► &a%events_alive%'
+  - '&6&lBATATA Q&f&lUENTE &8► &a%events_alive%'
+  - '&6&lBATATA Q&e&lUENTE &8► &a%events_alive%'
+  - '&6&lBATATA QU&f&lENTE &8► &a%events_alive%'
+  - '&6&lBATATA QU&e&lENTE &8► &a%events_alive%'
+  - '&6&lBATATA QUE&f&lNTE &8► &a%events_alive%'
+  - '&6&lBATATA QUE&e&lNTE &8► &a%events_alive%'
+  - '&6&lBATATA QUEN&f&lTE &8► &a%events_alive%'
+  - '&6&lBATATA QUEN&e&lTE &8► &a%events_alive%'
+  - '&6&lBATATA QUENT&f&lE &8► &a%events_alive%'
+  - '&6&lBATATA QUENT&e&lE &8► &a%events_alive%'
+  - '&e&lBATATA QUENTE &8► &a%events_alive%'
+  - '&6&lBATATA QUENTE &8► &a%events_alive%'
+  - '&f&lBATATA QUENTE &8► &a%events_alive%'
+  - '&6&lBATATA QUENTE &8► &a%events_alive%'
+
+lines:
+- ''
+
+- text: ' &fComeça em: &7%events_countdown%s'
+  condition: '%events_state% == starting'
+
+- text: ' &fTempo: &7%events_elapsed%'
+  condition: '%events_state% == running'
+
+- ' &fParticipantes: &a%events_alive%&8/&c%events_players%'
+- ''
+
+- text: ' &fRound: &7%events_stat_round%'
+  condition: '%events_state% == running'
+
+- text: ' &fBatatas: &c%events_stat_batatas%'
+  condition: '%events_state% == running'
+
+- text: ' &c&lVOCÊ ESTÁ COM ELA!'
+  condition: '%events_stat_batata% == sim'
+
+- text: ''
+  condition: '%events_state% == running'
+
+- ' &fStatus: %events_status%'
+- ''
+- '&eredegarnix.com'

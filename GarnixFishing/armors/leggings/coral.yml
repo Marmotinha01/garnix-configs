@@ -1,0 +1,19 @@
+# Coral — leggings. Bônus equilibrado de XP e corais.
+item:
+  display: "&cCalças de Coral"
+  material: LEATHER_LEGGINGS
+  color: "#FF6F61"
+  lore:
+    - ""
+    - " &7Feitas dos recifes de coral mais raros."
+    - ""
+    - " &fBônus:"
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  xp:
+    value: 1.5
+    percent: true
+  corais:
+    value: 1.5
+    percent: true

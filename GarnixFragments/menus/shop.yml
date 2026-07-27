@@ -1,0 +1,35 @@
+title: Loja de Fragmentos
+
+# . = item (paginado)  | < = página anterior  | > = próxima página
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhum item à venda.'
+
+back-icon:
+  slot: 49
+  texture: "7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf"
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'
+
+# Formato de cada linha de custo. Placeholders: {amount}, {display}.
+cost-line: ' &8• &e{amount} &7de &f{display}'
+
+# Lore de cada item. {cost} vira uma linha por fragmento exigido.
+purchase-lore:
+- ''
+- ' &fCustos:'
+- '{cost}'
+- ''
+- '&aClique para comprar.'

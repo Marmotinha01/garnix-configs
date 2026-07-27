@@ -1,0 +1,44 @@
+# XP required to ADVANCE into each level. Level 0 is the start; the highest
+# configured level is the cap. Rewards (rewards.yml) unlock by level.
+
+levels:
+  '1':
+    exp: 100
+  '2':
+    exp: 250
+  '3':
+    exp: 450
+  '4':
+    exp: 700
+  '5':
+    exp: 1000
+  '6':
+    exp: 1400
+  '7':
+    exp: 1900
+  '8':
+    exp: 2500
+  '9':
+    exp: 3200
+  '10':
+    exp: 4000
+  '11':
+    exp: 5000
+  '12':
+    exp: 6200
+  '13':
+    exp: 7600
+  '14':
+    exp: 9200
+  '15':
+    exp: 11000
+  '16':
+    exp: 13500
+  '17':
+    exp: 16500
+  '18':
+    exp: 20000
+  '19':
+    exp: 24000
+  '20':
+    exp: 29000

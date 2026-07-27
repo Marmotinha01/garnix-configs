@@ -1,0 +1,13 @@
+order: 9
+
+name: "Esqueleto"
+tag: "&7[Esqueleto]"
+
+texture: 'fca445749251bdd898fb83f667844e38a1dff79a1529f79a42447a0599310ea4'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

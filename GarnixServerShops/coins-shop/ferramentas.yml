@@ -1,0 +1,55 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Ferramentas
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: false
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+rows: 4
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 31
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 32
+  material: DIAMOND_SPADE
+  display: '&aFerramentas'
+  lore:
+  - '&7Clique para ver.'
+  flags:
+  - HIDE_ATTRIBUTES
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  diamond-spade:
+    amount: 1
+    price: 5000
+    slot: 12
+    item:
+      material: DIAMOND_SPADE
+      data: 0
+      amount: 1
+  diamond-pickaxe:
+    amount: 1
+    price: 5000
+    slot: 13
+    item:
+      material: DIAMOND_PICKAXE
+      data: 0
+      amount: 1
+  diamond-axe:
+    amount: 1
+    price: 5000
+    slot: 14
+    item:
+      material: DIAMOND_AXE
+      data: 0
+      amount: 1

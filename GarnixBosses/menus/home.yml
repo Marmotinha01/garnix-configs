@@ -1,0 +1,47 @@
+title: Bosses
+rows: 4
+
+player-head:
+  slot: 4
+  display: '&eInformações'
+  lore:
+  - '&7Confira seu desempenho'
+  - '&7enfrentando os bosses.'
+  - ' '
+  - ' &8Estatísticas:'
+  - '&8 ▪ &fBosses Abatidos: &c{total_kills}'
+  - '&8 ▪ &fDano Total: &4❤{total_damage}'
+  - ''
+
+bosses-icon:
+  slot: 20
+  material: MONSTER_EGG
+  data: 59
+  display: '&BBosses'
+  lore:
+  - '&7Acesse a lista de bosses'
+  - '&7e suas recompensas.'
+  - ''
+  - '&bClique para acessar.'
+
+swords-icon:
+  slot: 22
+  material: WOOD_SWORD
+  display: '&4Matadoras'
+  lore:
+  - '&7Confira as matadoras'
+  - '&7com mais dano em bosses.'
+  - ''
+  - '&4Clique para acessar.'
+  flags:
+  - HIDE_ATTRIBUTES
+
+ranking-icon:
+  slot: 24
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Veja os jogadores com'
+  - '&7maior eliminações em boss.'
+  - ''
+  - '&aClique para acessar.'

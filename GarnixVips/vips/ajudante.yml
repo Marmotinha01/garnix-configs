@@ -1,0 +1,21 @@
+lp-group: "ajudante"
+display: "AJUDANTE"
+color: "&9"
+weight: 10
+
+switcher-icon:
+  texture: "3b5106b060eaf398217349f3cfb4f2c7c4fd9a0b0307a17eba6af7889be0fbe6"
+  display: "{color}&l{display}"
+
+add-broadcast:
+  title:
+    title: "{color}{player} &fpromovido a"
+    subtitle: "{color}&l{display}"
+    fade-in: 10
+    stay: 60
+    fade-out: 10
+  chat:
+    - ""
+    - "  &e{player} &7foi promovido a {color}&l{display}&f!"
+    - ""
+  sound: NOTE_PLING

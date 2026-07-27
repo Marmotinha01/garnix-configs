@@ -1,0 +1,8 @@
+debug: false
+
+ranking-refresh-minutes: 5
+
+# Requer o Vault instalado (soft-depend). Ignorado se o Vault não estiver presente.
+vault-hook:
+  enabled: false
+  currency-id: 'coins'    # ID da moeda a usar (precisa existir em currencies/)

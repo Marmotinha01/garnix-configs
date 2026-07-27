@@ -1,0 +1,18 @@
+display: 'Imortal'
+
+permission: 'daily.imortal'
+
+cooldown: '1d'
+
+slot: 31
+
+commands:
+  - 'cash add {player} 150'
+
+collect-icon:
+  texture: '2d6a8b47da923b7d10142447fdbdcfd1e8e82eb484964252bb36ddb5f73b51c2'
+  display: '&b&lIMORTAL'
+  lore:
+    - '&fRecompensa: &6❂150 Cash'
+    - ''
+    - '&aClique para coletar!'

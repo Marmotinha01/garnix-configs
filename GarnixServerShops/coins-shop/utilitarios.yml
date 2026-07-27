@@ -1,0 +1,124 @@
+# Coins Shop — categoria de exemplo (sem broadcast).
+
+title: Loja - Utilitários
+
+# paginated: true  → produtos fluem pelas páginas usando o 'shape'
+# paginated: false → cada produto tem seu 'slot' e 'rows' é obrigatório
+paginated: true
+
+# Layout paginado. Caracteres: . = produto · < = página anterior · > = próxima · resto = decoração
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+# Slot do botão de voltar (omita para não exibir).
+back-slot: 49
+
+# Ícone da categoria no menu de categorias.
+icon:
+  slot: 31
+  material: CHEST
+  data: 0
+  display: '&aUtilitários'
+  lore:
+  - '&7Clique para ver.'
+
+# Comando direto opcional que abre a categoria:
+# command: 'lojagod'
+# command-aliases: ['god']
+# command-permission: 'loja.god'
+
+# Em categorias paginadas, produtos NÃO declaram 'slot'.
+products:
+  chest:
+    amount: 16
+    price: 5000
+    item:
+      material: CHEST
+      data: 0
+      amount: 16
+  trapped-chest:
+    amount: 16
+    price: 5000
+    item:
+      material: TRAPPED_CHEST
+      data: 0
+      amount: 16
+  workbench:
+    amount: 16
+    price: 5000
+    item:
+      material: WORKBENCH
+      data: 0
+      amount: 16
+  ender-chest:
+    amount: 16
+    price: 5000
+    item:
+      material: ENDER_CHEST
+      data: 0
+      amount: 16
+  sign:
+    amount: 16
+    price: 5000
+    item:
+      material: SIGN
+      data: 0
+      amount: 16
+  lava-bucket:
+    amount: 16
+    price: 5000
+    item:
+      material: WATER_BUCKET
+      data: 0
+      amount: 16
+  lava-bucket:
+    amount: 16
+    price: 5000
+    item:
+      material: LAVA_BUCKET
+      data: 0
+      amount: 16
+  beacon:
+    amount: 1
+    price: 5000000
+    item:
+      material: BEACON
+      data: 0
+      amount: 16
+  iron-block:
+    amount: 1
+    price: 500000
+    ask-quantity: true
+    item:
+      material: IRON_BLOCK
+      data: 0
+      amount: 1
+  gold-block:
+    amount: 1
+    price: 500000
+    ask-quantity: true
+    item:
+      material: GOLD_BLOCK
+      data: 0
+      amount: 1
+  diamond-block:
+    amount: 1
+    price: 500000
+    ask-quantity: true
+    item:
+      material: DIAMOND_BLOCK
+      data: 0
+      amount: 1
+  emerald-block:
+    amount: 1
+    price: 500000
+    ask-quantity: true
+    item:
+      material: EMERALD_BLOCK
+      data: 0
+      amount: 1

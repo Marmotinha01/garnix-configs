@@ -1,0 +1,14 @@
+item:
+# Magnata Boots
+  display: "&aBota Magnata"
+  material: LEATHER_BOOTS
+  color: "#55FF55"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 4.5
+    percent: true

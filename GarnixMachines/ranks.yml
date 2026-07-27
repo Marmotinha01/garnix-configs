@@ -1,0 +1,11 @@
+vip:
+  discount: 5 # porcentagem de desconto na compra
+  bonus: 5 # porcentagem de bônus nos drops
+  tag: '&a[VIP]'
+  permission: machines.rank.vip
+
+mvp:
+  discount: 10
+  bonus: 10
+  tag: '&b[MVP]'
+  permission: machines.rank.mvp

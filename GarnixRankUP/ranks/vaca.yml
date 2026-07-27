@@ -1,0 +1,13 @@
+order: 4
+
+name: "Vaca"
+tag: "&e[Vaca]"
+
+texture: 'dc4b5f6d75126380f520a67ca57bc9a56aa11db8afe7e5dcb2a52dfcfeae0785'
+
+commands:
+- 'crate givevirtualkey rankup {player} 1'
+
+costs:
+- 'coins 15000'
+- 'head COW 100'

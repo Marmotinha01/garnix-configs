@@ -1,0 +1,34 @@
+title: Máquinas do Servidor
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cVazio'
+  lore:
+  - '&7Nenhuma máquina encontrada.'
+
+stats-icon:
+  slot: 49
+  material: BOOK
+  display: '&aEstatísticas'
+  lore:
+  - '&fTotal de máquinas: &7{total_machines} '
+  - '&fDonos únicos: &7{unique_owners}'
+
+machine-template:
+  display: '&a{display} &7(x{stack})'
+  lore:
+  - '&fDono: &7{owner}'
+  - '&fPlot: &7{plot_id}'
+  - '&fLocal: &7{world} {x},{y},{z}'
+  - '&fCombustível: &7{fuel_display}'
+  - ''
+  - '&aClique para teleportar.'

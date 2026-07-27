@@ -1,0 +1,29 @@
+display: Kit Imortal Mensal
+
+category: vips
+
+permission: vip.imortal
+
+cooldown: 30d
+
+slot: 12
+
+messages:
+  success: '&aVocê coletou o &f{kit}&a!'
+  no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
+  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+
+icon:
+  material: STAINED_GLASS
+  data: 3
+  display: '&b&lKit Imortal Mensal'
+  lore:
+  - '&7Clique para ver.'
+
+locked-icon:
+  material: BARRIER
+  display: '&cKit Imortal Mensal'
+  lore:
+  - '&7Necessário ser &b&lIMORTAL&7.'
+
+content: H4sIAAAAAAAA/82UTU8bMRCGZzchbCIOtAUKtAfDrRdOlZB6qAQhCMSXRFCv0WR32LXwx9Z2Qto/lP+RX4ZD2EZhQQKElF4sjeZ9x887ltwAqMMCdyRtAwCWIgh5Ap8lVxQbvHY/Eo5Sq6Rjb7VJAlho6p5yQQMqDtM6VEnF2dhYDaEi+gIWw/sByzBbbxd1OKk/PapXoAGLCbe5wD8RVM9REnwYDbujoTg5vmLHZxeXV3un4F21A5SYkr9ygro2RU21SEh1MM8FFaQrU0fw4Ngoh8t5fIMDej5eOBuHleK9FX+1DDMfkPUnnjzTfRL/B0tGQpJ7MQu8G8vXMkuckXV+knv5O70fz2aZR1CacpXaOdA88VF0tXbzQFmeouTaca0Khuifln17hXa7HNEZnt9yQ51M65vCUitFDB4iBZNIP6EC9SOe0KHA1I77EUR+oKOO79a62lqy09R+0Kk2FI0/VfgyGu42tbI8RYZdb1GJZhPHjhdsjYbfm4L/7hEj60/juzkarzUS/5JCcy/RPW823DBkcYZ9L5asJ32BfIA7xZo/eqVfc/No71eL7V+026327J7hDhY5u74tBgAA

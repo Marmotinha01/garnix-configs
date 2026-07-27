@@ -1,0 +1,101 @@
+title: Lojas do Servidor
+
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
+- XXXXXXXXX
+
+empty-icon:
+  slot: 22
+  material: WEB
+  display: '&cNenhuma Loja'
+  lore:
+  - '&7Nenhuma loja encontrada.'
+
+ranking-icon:
+  slot: 47
+  material: GOLD_NUGGET
+  display: '&aTOP'
+  lore:
+  - '&7Clique para ver.'
+
+sort-icon:
+  slot: 49
+  material: HOPPER
+  display: '&aOrdenar'
+  lore:
+  - ''
+  - '{filters}'
+  - ''
+  - '&aClique para alternar.'
+
+filters:
+  most-visited-display: 'Mais Visitadas '
+  best-rated-display: 'Melhor Avaliadas '
+  line: ' &8► &7{display}'
+  line-selected: ' &a► &f{display}'
+
+# Ícone contextual da sua loja (slot 51). Só um dos três é exibido:
+# - my-store-icon: você já tem uma loja → abre o gerenciamento.
+# - create-store-icon: você tem permissão (chestshop.store.create) e ainda não tem loja → cria.
+# - vip-store-icon: você não tem permissão → apenas informa que é exclusivo de VIP.
+my-store-icon:
+  slot: 51
+  material: CHEST
+  display: '&aMinha Loja'
+  lore:
+  - '&7Gerencie a sua loja.'
+  - ''
+  - '&aClique para gerenciar.'
+
+create-store-icon:
+  slot: 51
+  material: EMERALD
+  display: '&aCriar Loja'
+  lore:
+  - '&7Você ainda não tem uma loja.'
+  - ''
+  - '&aClique para criar.'
+
+vip-store-icon:
+  slot: 51
+  material: BARRIER
+  display: '&cCriar Loja'
+  lore:
+  - '&7Apenas jogadores &eVIP'
+  - '&7podem criar uma loja.'
+  - ''
+  - '&eAdquira VIP para desbloquear.'
+
+store-item-lore:
+- ''
+- ' &fDono: &7{owner} '
+- ' &fStatus: {status} '
+- ''
+- ' &fDescrição: '
+- ' &7{description} '
+- ''
+- ' &fVisitas: &7{visits} '
+- ' &fReputação: &6{rating}★ '
+- ''
+- '&aOpções de uso:'
+- '&fBotão Esquerdo &8➟ &7Visitar'
+- '&fBotão Direito &8➟ &7Avaliar'
+
+store-item-owner-lore:
+- ''
+- ' &fDono: &7{owner} '
+- ' &fStatus: {status} '
+- ''
+- ' &fDescrição: '
+- ' &7{description} '
+- ''
+- ' &fVisitas: &7{visits} '
+- ' &fReputação: &6{rating}★ '
+- ''
+- '&aOpções de uso:'
+- '&fBotão Esquerdo &8➟ &7Visitar'
+- '&fBotão Direito &8➟ &7Gerenciar'

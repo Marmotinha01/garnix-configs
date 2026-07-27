@@ -1,0 +1,68 @@
+# Board do lobby dos eventos — vale para todo o mundo dos eventos.
+#
+# priority acima das evento_*.yml de propósito: elas moram no mesmo mundo, e no
+# empate o desempate é por id — 'evento_arqueiros' viria antes de
+# 'eventos_lobby' e viraria a board do lobby. Enquanto uma run segura o jogador,
+# quem troca pela board do evento é o selector do GarnixEvents, que passa na
+# frente do casamento por mundo.
+
+enabled: true
+priority: 10
+worlds: ['eventos']
+permission: ''
+update-ticks: 20
+
+title:
+  interval: 2
+  frames:
+  - '&f&lEVENTOS &8► &a%bungee_total%'
+  - '&e&lEVENTOS &8► &a%bungee_total%'
+  - '&6&lEVENTOS &8► &a%bungee_total%'
+  - '&6&lE&f&lVENTOS &8► &a%bungee_total%'
+  - '&6&lE&e&lVENTOS &8► &a%bungee_total%'
+  - '&6&lEV&f&lENTOS &8► &a%bungee_total%'
+  - '&6&lEV&e&lENTOS &8► &a%bungee_total%'
+  - '&6&lEVE&f&lNTOS &8► &a%bungee_total%'
+  - '&6&lEVE&e&lNTOS &8► &a%bungee_total%'
+  - '&6&lEVEN&f&lTOS &8► &a%bungee_total%'
+  - '&6&lEVEN&e&lTOS &8► &a%bungee_total%'
+  - '&6&lEVENT&f&lOS &8► &a%bungee_total%'
+  - '&6&lEVENT&e&lOS &8► &a%bungee_total%'
+  - '&6&lEVENTO&f&lS &8► &a%bungee_total%'
+  - '&6&lEVENTO&e&lS &8► &a%bungee_total%'
+  - '&e&lEVENTOS &8► &a%bungee_total%'
+  - '&6&lEVENTOS &8► &a%bungee_total%'
+  - '&f&lEVENTOS &8► &a%bungee_total%'
+  - '&6&lEVENTOS &8► &a%bungee_total%'
+
+lines:
+- ''
+- ' &fEvento: %events_running%'
+- ''
+
+- text: ' &fEntradas: &a%events_countdown%&7s'
+  condition: '%events_state% == joining'
+
+- text: ' &fInscritos: &b%events_players%'
+  condition: '%events_state% == joining'
+
+- text: ' &fComeça em: &a%events_countdown%&7s'
+  condition: '%events_state% == starting'
+
+- text: ' &fTempo: &b%events_elapsed%'
+  condition: '%events_state% == running'
+
+- text: ' &fVivos: &a%events_alive%&8/&f%events_players%'
+  condition: '%events_state% == running'
+
+- text: ''
+  condition: '%events_state% != idle'
+
+- text: ' &fVitórias: &6✪%events_wins_current%'
+  condition: '%events_state% != idle'
+
+- text: ' &fVitórias: &6✪%events_wins%'
+  condition: '%events_state% == idle'
+
+- ''
+- '&eredegarnix.com'

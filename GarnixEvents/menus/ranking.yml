@@ -1,0 +1,51 @@
+title: TOP Eventos
+
+shape:
+- XXXXXXXXX
+- XXX...XXX
+- X.......X
+- XXXXXXXXX
+- XXXXXXXXX
+
+user-icon:
+  display: '&8#{position} {lp_suffix} {player}'
+  total-lore:
+  - '&fVitórias Totais: &a{score}'
+  event-lore:
+  - '&fVitórias em {event}&f: &a{score}'
+
+empty-position-icon:
+  material: BARRIER
+  display: '&8#{position} &7Ninguém'
+
+filters:
+  total-display: Vitórias Totais
+  line: ' &8► &7{display}'
+  line-selected: ' &a► &f{display}'
+
+info-icon:
+  slot: 40
+  material: PAPER
+  display: '&aAtualização Periódica'
+  lore:
+  - '&7O ranking é atualizado'
+  - '&7a cada &f{refresh} &7minutos.'
+  - ''
+  - '&8&oÚltima atualização &7&o{last_update}&8&o.'
+
+filter-icon:
+  slot: 42
+  material: HOPPER
+  display: '&aFiltrar'
+  lore:
+  - ''
+  - '{filters}'
+  - ''
+  - '&aClique para alternar.'
+
+back-icon:
+  slot: 38
+  material: ARROW
+  display: '&cVoltar'
+  lore:
+  - '&7Clique para voltar.'

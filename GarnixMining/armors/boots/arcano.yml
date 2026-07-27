@@ -1,0 +1,17 @@
+item:
+# Arcano Boots
+  display: "&bBota Arcano"
+  material: LEATHER_BOOTS
+  color: "#55FFFF"
+  lore:
+    - ""
+    - " &fBônus: "
+    - "{bonus}"
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  gemas:
+    value: 1.0
+    percent: true
+  xp:
+    value: 1.0
+    percent: true

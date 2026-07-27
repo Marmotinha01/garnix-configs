@@ -1,0 +1,48 @@
+display: "Cobra"
+
+mine-level-unlock: 35
+
+max-level: 100
+
+base-cost: 4000
+increase-cost: 12000
+
+base-chance: 2.5
+increase-chance: 0.05
+
+# Max cells the snake crawls (each cell carves a tunnel section). It seeks blocks
+# and turns as it goes, so a larger value makes it wind through the mine for
+# longer (it stops early only if it runs out of nearby blocks).
+effect-radius: 60
+
+# Thickness of the tunnel the snake carves each step, as a radius around its head
+# cell: 0 = a 1-wide groove, 1 = a 3x3 cross-section, 2 = 5x5, and so on. The
+# snake still navigates by its single head cell; only how much it eats grows.
+# Higher values break far more blocks per step, so raise it with care.
+area-radius: 1
+
+# How many snakes a single player can have crawling at the same time. The snake is
+# the ONLY stacking animation — blaze, wither, kraken and meteor are always limited
+# to one per player each. Extra procs past this cap are ignored. (Replaces the old
+# global config.yml:enchant-max-simultaneous-per-player.)
+max-simultaneous: 3
+
+messages:
+  - "&2&lCOBRA! &fUma serpente de slimes rastejou pela mina!"
+  - "&7Blocos quebrados: &f{blocks}"
+  - "&7Recompensas: {rewards}"
+
+title: "&2&lCOBRA!"
+subtitle: "&f{blocks} blocos destruídos"
+
+icon:
+  slot: 29
+  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  display: "&2{display}"
+  lore:
+    - "&7Tenha a chance de invocar uma cobra"
+    - "&7de slimes que devora um caminho!"
+    - ""
+    - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fChance: &c{chance}%"
+    - ""
