@@ -22,10 +22,10 @@ opens-upgrade-lore-status:
   - ''
   - ' &aPróximo nível:'
   - ' &8▶ &fAbre: &7{next-keys} p/click'
-  - ' &8▶ &fCusto: &a{next-cost} coins'
+  - ' &8▶ &fCusto: {symbol_color}{symbol}{primary_color}{next-cost} &7{currency}'
   - ''
   can-afford: '&aClique para evoluir.'
-  cannot-afford: '&cSem coins suficientes.'
+  cannot-afford: '&cVocê não tem saldo suficiente.'
 
 current-robot-empty-icon:
   slot: 40

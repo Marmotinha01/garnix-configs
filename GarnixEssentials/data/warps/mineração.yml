@@ -3,7 +3,7 @@ icon:
   material: GOLD_PICKAXE
   display: '&eMineração'
   lore:
-  - '&7Começe minerando e'
+  - '&7Comece minerando e'
   - '&7evolua no servidor.'
   - ''
   - ' &eAcesso rápido:'
@@ -15,7 +15,7 @@ locked-icon:
   material: BARRIER
   display: '&cMineração'
   lore:
-  - '&7Começe minerando e'
+  - '&7Comece minerando e'
   - '&7evolua no servidor.'
   - ''
   - ' &bAcesso rápido:'
@@ -25,7 +25,7 @@ locked-icon:
 permission: ''
 slot: 30
 messages:
-  success: '&aVocê foi teleportado para a warp &f{warp}&a.'
+  success: '&aTeleportado para a warp &f{warp}&a.'
   no-permission: '&cVocê não tem permissão para ir à warp &f{warp}&c.'
   title: ''
   subtitle: ''

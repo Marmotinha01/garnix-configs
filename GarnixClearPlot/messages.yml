@@ -15,14 +15,14 @@ usage:
 clear:
   confirmed: '&aLimpeza iniciada. Acompanhe o progresso na action bar.'
   cancelled: '&7Limpeza cancelada.'
-  complete: '&aLimpeza concluída. &f{cleared} &ablocos removidos em &f{duration}&a.'
+  complete: '&aLimpeza concluída em &f{duration}&a. &7Blocos removidos: &f{cleared}'
   interrupted: '&eA limpeza do seu terreno foi interrompida.'
 
 command:
   no-permission: '&cVocê não tem permissão.'
   player-not-found: '&cJogador &f{input} &cnão encontrado.'
   list-header: '&7Limpezas ativas: &f{count}'
-  list-entry: '&8• &f{plot} &7(dono: &f{owner}&7, &f{percent}%&7)'
+  list-entry: '  &8▪ &f{plot} &7(dono: &f{owner}&7, &f{percent}%&7)'
   list-empty: '&7Nenhuma limpeza ativa no momento.'
   stopall: '&aTodas as limpezas foram canceladas. &7({count})'
 

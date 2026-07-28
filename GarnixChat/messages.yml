@@ -182,8 +182,8 @@ color:
 
 # ── Mensagens privadas (/tell e /r) ── tokens: {sender}, {target}, {message}
 tell:
-  format-sender: '&7[&aVocê &7→ &a{target}&7] &f{message}'
-  format-receiver: '&7[&e{sender} &7→ &eVocê&7] &f{message}'
+  format-sender: '&7[&aVocê &8➟ &a{target}&7] &f{message}'
+  format-receiver: '&7[&e{sender} &8➟ &eVocê&7] &f{message}'
   not-found: '&cJogador não encontrado.'
   self: '&cVocê não pode enviar mensagem para si mesmo.'
 reply:
@@ -212,7 +212,7 @@ ignore:
   removed: '&aVocê deixou de ignorar &f{player}&a.'
   cannot: '&cVocê não pode ignorar esse jogador.'
   self: '&cVocê não pode ignorar a si mesmo.'
-  list: '&fJogador ignorados: &c{list}'
+  list: '&fJogadores ignorados: &c{list}'
 
 # ── Spy (/spy) ── tokens: {player}, {from}, {to}, {message}
 spy:

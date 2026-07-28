@@ -8,12 +8,12 @@ robot:
   already-applied: '&cVocê já possui um robô equipado.'
   use-in-crates: '&eEquipe seu robô abrindo &f/crates &ee clicando nele no inventário.'
   cannot-remove-while-active: '&cRemova o robô antes de retirar chaves.'
-  cannot-open-while-active: '&cRemova o robô para abrir crates manualmente.'
+  cannot-open-while-active: '&cRemova o robô para abrir caixas manualmente.'
 
 keys:
   no-keys-to-remove: '&cVocê não possui chaves para remover.'
   no-keys-to-open: '&cVocê não possui chaves para abrir.'
-  open-delay: '&cAguarde para abrir outra crate.'
+  open-delay: '&cAguarde para abrir outra caixa.'
   need-in-hand: '&cVocê precisa estar segurando uma chave.'
   wrong-crate: '&cEssa chave não pode abrir esta caixa.'
   stored-single: '&aVocê armazenou &f1x {key} &ano seu &f/crates&a.'
@@ -21,9 +21,9 @@ keys:
 
 opened:
   one:
-  - '&aVocê abriu &f1 crate&a. Recompensas no correio. &7(/correio)'
+  - '&aVocê abriu &f1 caixa&a. Recompensas no correio. &7(/correio)'
   many:
-  - '&aVocê abriu &fx{amount} crates&a. Recompensas no correio. &7(/correio)'
+  - '&aVocê abriu &fx{amount} caixas&a. Recompensas no correio. &7(/correio)'
   with-key:
   - '&aVocê abriu &fx{amount} {key}&a. Recompensas no correio. &7(/correio)'
 
@@ -43,24 +43,24 @@ conversations:
 
 error:
   only-players: '&cApenas jogadores podem usar este comando.'
-  crate-not-found: '&cTipo de crate &f{input} &cnão encontrado.'
+  crate-not-found: '&cTipo de caixa &f{input} &cnão encontrado.'
   robot-not-found: '&cTipo de robô &f{input} &cnão encontrado.'
   player-not-found: '&cJogador não encontrado.'
   user-not-found: '&cUsuário não encontrado.'
   no-block-in-sight: '&cVocê precisa estar olhando para um bloco físico.'
   invalid-amount: '&cInforme uma quantia válida.'
-  user-no-crate: '&cO jogador não possui essa crate.'
+  user-no-crate: '&cO jogador não possui essa caixa.'
 
 admin:
-  crate-location-set: '&aLocalização da crate &f{crate} &adefinida com sucesso.'
+  crate-location-set: '&aLocalização da caixa &f{crate} &adefinida com sucesso.'
   give-key-all: '&6Você deu &fx{amount} {crate} &6para &eTODOS ONLINE&6.'
   give-key-player: '&6Você deu &fx{amount} {crate} &6para &f{player}&6.'
   give-robot-all: '&6Você deu &fx{amount} {robot} &6para &eTODOS ONLINE&6.'
   give-robot-player: '&6Você deu &fx{amount} {robot} &6para &f{player}&6.'
   give-vkey-all: '&6Você deu &fx{amount} {crate} &6virtuais para &eTODOS ONLINE&6.'
   give-vkey-player: '&6Você deu &fx{amount} {crate} &6virtuais para &f{player}&6.'
-  reset-crates-all: '&cCrates de &f{player} &cresetadas.'
-  reset-crate: '&cCrate &f{crate} &cde &f{player} &cresetada.'
+  reset-crates-all: '&cCaixas de &f{player} &cresetadas.'
+  reset-crate: '&cCaixa &f{crate} &cde &f{player} &cresetada.'
   reset-level-all: '&4Nível de aberturas de TODOS resetado.'
   reset-level-player: '&cNível de aberturas de &f{player} &cresetado.'
 

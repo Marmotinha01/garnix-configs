@@ -5,9 +5,9 @@ actionbar:
 spawn:
   success: '&aBoss {boss} &ainvocado com sucesso.'
   stacked: '&aBoss {boss} &7empilhado. &8(&7x{stack}&8)'
-  not-in-plot: '&cVocê precisa estar em um plot para invocar um boss.'
-  no-permission: '&cVocê não tem permissão para invocar bosses neste plot.'
-  already-exists: '&cJá existe um boss desse tipo invocado no plot.'
+  not-in-plot: '&cVocê precisa estar em um terreno para invocar um boss.'
+  no-permission: '&cVocê não tem permissão para invocar bosses neste terreno.'
+  already-exists: '&cJá existe um boss desse tipo invocado no terreno.'
 
 boss-item:
   invalid-type: '&cTipo de boss inválido.'
@@ -34,7 +34,7 @@ admin:
   sword-given: '&6Matadora &e{variant} &6enviada para &f{player}&6.'
   kill-stack-given: '&6Kill-Stack &e+{level} &6enviado para &f{player}&6.'
   reloaded: '&aConfigurações recarregadas com sucesso.'
-  bosses-killed: '&e{count} &7bosses removidos do mundo.'
+  bosses-killed: '&7Bosses removidos do mundo: &f{count}&7.'
 # ── Entrega de itens ───────────────────────────────────────────────────
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.

@@ -9,7 +9,7 @@ friend-permissions:
     material: CHEST
   COLLECT_HEADS:
     default: true
-    display: Coletar Cabeças
+    display: Coletar Heads
     material: HOPPER
   BREAK:
     default: false

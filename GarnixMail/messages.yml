@@ -1,7 +1,7 @@
 reload-success: '&aConfigurações recarregadas com sucesso.'
 
-mail-notify: '&e✉ Você possui &f&l{count} &e{item_plural} para coletar. &7(/correio)'
-mail-notify-periodic: '&e⚠ Você possui &f&l{count} &e{item_plural} para coletar. &7(/correio)'
+mail-notify: '&e✉ Você possui &f&l{count} &e{item_plural} para resgatar. &7(/correio)'
+mail-notify-periodic: '&e⚠ Você possui &f&l{count} &e{item_plural} para resgatar. &7(/correio)'
 
 item-singular: entrega
 item-plural: entregas
@@ -24,8 +24,8 @@ send-package:
 
 admin-no-mail: '&cO jogador &f{player} &cnão possui correio.'
 
-reset-player: '&cCorreio de &f{player} &cfoi limpo com sucesso.'
-reset-all: '&4Correio de todos os jogadores foram limpos com sucesso.'
+reset-player: '&cCorreio de &f{player} &climpo.'
+reset-all: '&4Correio de todos os jogadores limpos.'
 reset-all-confirm: '&cIsso apaga TODOS os correios. Use o comando novamente para confirmar.'
 
 inventory-full: '&cSeu inventário está cheio.'

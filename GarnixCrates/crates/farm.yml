@@ -19,7 +19,7 @@ crate-item:
   display: '&a&lCHAVE FARM'
   lore:
   - '&7Consiga quebrando'
-  - '&7plantações em seu plot.'
+  - '&7plantações em seu terreno.'
 
 # Item físico da chave (segurar e clicar com botão direito na crate abre).
 key-item:
@@ -28,7 +28,7 @@ key-item:
   display: '&a&lCHAVE FARM'
   lore:
   - '&7Consiga quebrando'
-  - '&7plantações em seu plot.'
+  - '&7plantações em seu terreno.'
   - ''
   - '&aClique esquerdo para armazenar'
   - '&aou abrir a chave em uma caixa.'

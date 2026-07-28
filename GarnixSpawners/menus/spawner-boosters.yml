@@ -34,7 +34,7 @@ heads-empty-icon:
   slot: 15
   material: GLASS_BOTTLE
   amount: 0
-  display: '&cBooster de Cabeças'
+  display: '&cBooster de Heads'
   lore:
   - '&7Sem booster ativo aqui.'
 
@@ -44,13 +44,13 @@ heads-active-icon:
   data: 8230
   flags:
   - HIDE_POTION_EFFECTS
-  display: '&aBooster de Cabeças'
+  display: '&aBooster de Heads'
   lore:
   - '&7Use este booster para ter'
   - '&7seus ganhos aumentados.'
   - ''
   - ' &8Informações: '
-  - ' &8▪ &fTipo: &aCabeças '
+  - ' &8▪ &fTipo: &aHeads '
   - ' &8▪ &fBônus: &a{multiplier} '
   - ' &8▪ &fDuração: &7{time_remaining} '
   - ''

@@ -18,7 +18,7 @@ command:
   scan-actionbar: '&eScan &f{percent}% &8({done}/{total})'
   scan-success: '&aScan concluído: &f{count}&a plantações registradas (raio {radius}).'
   scan-empty: '&eNada encontrado — os dados anteriores foram mantidos.'
-  givebooster-usage: '&cUse: &f/fazenda givebooster <jogador> <tipo> <multiplicador> <duração> [quantidade]'
+  givebooster-usage: '&cUse: /fazenda givebooster <jogador> <tipo> <multiplicador> <duração> [quantidade]'
   givebooster-invalid-type: '&cTipo de booster inválido: &f{type}&c.'
   givebooster-invalid-multiplier: '&cMultiplicador inválido: &f{value}&c. Use por exemplo &f2x&c.'
   givebooster-bad-duration: '&cDuração inválida: &f{value}&c. Ex.: &f1d&c, &f12h&c, &f30m&c.'

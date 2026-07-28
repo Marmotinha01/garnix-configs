@@ -17,14 +17,12 @@ placeholder-status:
   watching: '&eEspectando'
 
 # Segundos restantes em que o anúncio de entrada é repetido no chat.
+# As paradas finais (5/3/1) foram removidas: colidem com o title de contagem
+# regressiva, que já mostra o número na tela do jogador.
 announce-at:
 - 60
 - 30
-- 15
 - 10
-- 5
-- 3
-- 1
 
 # Comandos liberados para quem está EM JOGO no evento.
 # Bypass: events.bypass.commands

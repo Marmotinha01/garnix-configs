@@ -44,6 +44,6 @@ world:
   
   # /world list
   list-header: '&6Mundos carregados &7({count})&6:'
-  list-entry: '&7- &f{world} &8[{type}&8] &7• &f{players}&7 jogador(es)'
+  list-entry: '  &8▪ &f{world} &8[{type}&8] &8▪ &f{players}&7 jogador(es)'
   list-type-void: '&avoid'
   list-type-normal: '&7normal'

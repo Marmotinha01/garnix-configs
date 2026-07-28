@@ -24,7 +24,7 @@ rival-icon:
   - ' &8 ▪ &fLíder: &7{leader}'
   - ' &8 ▪ &fMembros: &7{members} &8(&a{online} &8online)'
   - ''
-  - '&8Rivalidade iniciada pelo seu clan.'
+  - '&7Rivalidade iniciada pelo seu clan.'
   - '&cClique para desfazer.'
 
 # Clans que rivalizaram o seu; apenas quem iniciou pode desfazer.
@@ -38,8 +38,8 @@ rivaled-by-icon:
   - ' &8 ▪ &fLíder: &7{leader}'
   - ' &8 ▪ &fMembros: &7{members} &8(&a{online} &8online)'
   - ''
-  - '&8Este clan rivalizou o seu.'
-  - '&8Somente ele pode desfazer.'
+  - '&7Este clan rivalizou o seu.'
+  - '&7Somente ele pode desfazer.'
 
 declare-icon:
   slot: 40

@@ -1,7 +1,7 @@
 location: world:-3.538067481319857:61.0:-6.378093730251594:179.15541:1.1861324E-6
 icon:
   material: 422
-  display: '&cMaquinas'
+  display: '&cMáquinas'
   lore:
   - '&7Adquira suas maquinas'
   - '&7para lucrar.'
@@ -12,7 +12,7 @@ icon:
   - '&cClique para teleportar.'
 locked-icon:
   material: BARRIER
-  display: '&cMaquinas'
+  display: '&cMáquinas'
   lore:
   - '&7Adquira suas maquinas'
   - '&7para lucrar.'
@@ -24,7 +24,7 @@ locked-icon:
 permission: ''
 slot: 33
 messages:
-  success: '&aVocê foi teleportado para a warp &f{warp}&a.'
+  success: '&aTeleportado para a warp &f{warp}&a.'
   no-permission: '&cVocê não tem permissão para ir à warp &f{warp}&c.'
   title: ''
   subtitle: ''

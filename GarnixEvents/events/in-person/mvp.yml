@@ -290,9 +290,9 @@ messages:
   # ── Eliminações ─────────────────────────────────────────────────────
   # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
   # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
-  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
-  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
-  eliminated-self: '&cVocê foi eliminado do evento!'
+  eliminated: '&7{player} &ffoi eliminado. &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f. &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento.'
   
   # ── Fim sem vencedor ────────────────────────────────────────────────
   no-winner: |2
@@ -316,15 +316,15 @@ messages:
       &r
   # ── Actionbar ───────────────────────────────────────────────────────
   # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
-  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
-  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8▪ &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8▪ &a{count} &fparticipantes'
   
   # ── Chefe ───────────────────────────────────────────────────────────
-  boss-spawned: '{c}&lO ZUMBI GIGANTE APARECEU! &fAtaquem!'
+  boss-spawned: '{c}&lO ZUMBI GIGANTE APARECEU. &fAtaquem.'
   # Actionbar da luta. Não aceita clique.
   # {health} vida atual · {max} vida total · {minions} mini zumbis vivos
   boss-bar: '{c}Zumbi Gigante: &7{health}&f/&7{max}'
-  boss-survived: '&cO Zumbi Gigante sobreviveu! Ninguém venceu o evento.'
+  boss-survived: '&cO Zumbi Gigante sobreviveu. Ninguém venceu o evento.'
   boss-killed-unclaimed: '&fO Zumbi Gigante morreu, mas ninguém pôde reivindicar a vitória.'
 kit:
   unbreakable: false

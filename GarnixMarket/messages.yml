@@ -68,8 +68,8 @@ cancel:
   - '&cNão foi possível recuperar esse item. Avise a administração.'
   success:
   - '&aAnúncio cancelado. &f{item} &avoltou para você.'
-  mailed: '&aAnúncio cancelado. &f{item} &efoi para o correio. &7(/correio)'
-  leftover: '&aAnúncio cancelado. &f{item} &efoi para o correio. &7(/correio)'
+  mailed: '&aAnúncio de &f{item} &acancelado. &eEm evento — foi para o correio. &7(/correio)'
+  leftover: '&aAnúncio de &f{item} &acancelado. &eInventário cheio — foi para o correio. &7(/correio)'
 
 listing:
   expired:

@@ -9,9 +9,9 @@ cooldown: 24h
 slot: 33
 
 messages:
-  success: '&aVocê coletou o &f{kit}&a!'
+  success: '&aVocê coletou o &f{kit}&a.'
   no-permission: '&cVocê não tem permissão para coletar o &f{kit}&c.'
-  cooldown: '&cAguarde &e{time} &cpara coletar o &4{kit} &cnovamente.'
+  cooldown: '&cAguarde &f{time} &cpara coletar o &f{kit} &cnovamente.'
 
 icon:
   texture: 74f328f5044129b5d1f96affd1b8c05bcde6bd8e756aff5c5020585eef8a3daf

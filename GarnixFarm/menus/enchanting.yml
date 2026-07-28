@@ -85,7 +85,7 @@ cant-afford:
   - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
   - '&f Nível: &7{current} &8─ &a{target}'
   - ''
-  - '&cSementes insuficientes!'
+  - '&cVocê não tem saldo suficiente.'
 
 # ── Excede o máximo ───────────────────────────────────────────────
 option-exceeded:

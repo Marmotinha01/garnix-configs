@@ -32,13 +32,13 @@ commands:
   dupeip:
     error: '&cErro: {error}'
   checkid:
-    usage: '&cUse: &f/checkid <id>'
+    usage: '&cUse: /checkid <id>'
     not-found: '&cNenhuma punição encontrada com o ID &f{code}&c.'
     proof: '&7Prova de &f{code}&7: &f{proof}'
     error: '&cErro ao buscar punição: {error}'
   invalid-duration: '&cDuração inválida: {input}'
   punish-locked: '&c{staff} já está aplicando uma punição em {player}.'
-  warn-usage: '&cUse: &f/warn <jogador> <motivo> <prova>  &7(a prova deve começar com https://)'
+  warn-usage: '&cUse: /warn <jogador> <motivo> <prova>  &7(a prova deve começar com https://)'
   exempt-protected: '&c{player} é imune e não pode ser inspecionado.'
   menu-error: '&cNão foi possível abrir o menu. Tente novamente.'
   reload:
@@ -85,7 +85,7 @@ screens:
   - ''
   - '&7Motivo: &f{reason}'
   - '&7Prova: &f{proof}'
-  - '&7Recorra no Discord: &fdiscord.gg/garnix'
+  - '&7Recorra no Discord: &fdiscord.gg/redegarnix'
   - ''
   - '&8ID da punição: {code}'
   tempban:
@@ -94,7 +94,7 @@ screens:
   - '&7Motivo: &f{reason}'
   - '&7Prova: &f{proof}'
   - '&7Expira em: &f{expires}'
-  - '&7Recorra no Discord: &fdiscord.gg/garnix'
+  - '&7Recorra no Discord: &fdiscord.gg/redegarnix'
   - ''
   - '&8ID da punição: {code}'
   ipban:
@@ -103,7 +103,7 @@ screens:
   - '&7Motivo: &f{reason}'
   - '&7Prova: &f{proof}'
   - '&7Nenhuma conta neste IP pode entrar.'
-  - '&7Recorra no Discord: &fdiscord.gg/garnix'
+  - '&7Recorra no Discord: &fdiscord.gg/redegarnix'
   - ''
   - '&8ID da punição: {code}'
 

@@ -122,7 +122,7 @@ messages:
       &r
       &8▪ &fResponda clicando &a&l<click:suggest_command:/desembaralhe ><hover:show_text:&fClique para já digitar &7/desembaralhe &fno chat.>AQUI</hover></click>&f.
       &r
-  wrong: '&cNão é essa! Tente de novo.'
+  wrong: '&cNão é essa. Tente de novo.'
   
   # {player} acertou · {answer} a resposta certa
   winner: |2

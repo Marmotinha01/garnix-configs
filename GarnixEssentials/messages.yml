@@ -220,7 +220,7 @@ summon:
 
 # Stack
 stack:
-  success: '&e{amount} &atipo(s) de poção agrupados com sucesso.'
+  success: '&e{amount} &atipo(s) de poção agrupado(s).'
   no-potions: '&cNenhuma poção para agrupar encontrada.'
 
 # Bazinga
@@ -366,7 +366,7 @@ custom-commands:
 # General
 general:
   reload-success: '&aConfigurações recarregadas com sucesso.'
-  permission-denied: '&cVocê não tem permissão para usar esse comando.'
+  permission-denied: '&cVocê não tem permissão.'
   permission-denied-others: '&cSem permissão para fazer isso em outros jogadores.'
 
 # Worlds

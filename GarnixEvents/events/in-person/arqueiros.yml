@@ -231,9 +231,9 @@ messages:
   # ── Eliminações ─────────────────────────────────────────────────────
   # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
   # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
-  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
-  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
-  eliminated-self: '&cVocê foi eliminado do evento!'
+  eliminated: '&7{player} &ffoi eliminado. &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f. &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento.'
   
   # ── Fim sem vencedor ────────────────────────────────────────────────
   no-winner: |2
@@ -257,24 +257,27 @@ messages:
       &r
 # ── Actionbar ───────────────────────────────────────────────────────
 # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
-  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
-  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8▪ &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8▪ &a{count} &fparticipantes'
   
   # ── Times ───────────────────────────────────────────────────────────
   # {blue}/{red} quantos de cada lado · {team} o time · {player}/{kills} o destaque
-  team-assigned-blue: '&fVocê entrou para o time &9&lAZUL&f!'
-  team-assigned-red: '&fVocê entrou para o time &c&lVERMELHO&f!'
+  team-assigned-blue: '&fVocê entrou para o time &9&lAZUL&f.'
+  team-assigned-red: '&fVocê entrou para o time &c&lVERMELHO&f.'
   teams-formed: '&fTimes formados: &9{blue} azuis &fvs &c{red} vermelhos&f.'
-  battle-start: '&fA batalha começou! &9{blue} &fvs &c{red}'
+  battle-start: '&fA batalha começou. &9{blue} &fvs &c{red}'
   # Actionbar do placar durante a batalha. Não aceita clique.
   team-count: '&9Azul: &7{blue} &8| &cVermelho: &7{red}'
-  time-up-draw: '&eO tempo acabou empatado! Ninguém venceu.'
-  time-up-team: '&eO tempo acabou! O time {team} &etinha mais jogadores de pé.'
+  time-up-draw: '&eO tempo acabou empatado. Ninguém venceu.'
+  time-up-team: '&eO tempo acabou. O time {team} &etinha mais jogadores de pé.'
   
   # As recompensas vão para o time todo; a tag vai só para o destaque.
   team-won: |2
 
-      &8▎ {c}Evento {c}&lArqueiros&7, {c}temos um time vencedor!
-      &8▎ &7O time {team} &7venceu a batalha.
-      &8▎ &7Destaque: &f{player}&7 com &f{kills}&7 eliminação(ões).
-      &8▎ &7Prêmio: {c}5K de Cash &7para todo o time
+      &8▎ {c}Evento {c}&lArqueiros&f, {c}temos um time vencedor!
+      &8▎ &fO time {team} &fvenceu a batalha.
+      &r
+      &8▶ &7{player} &ffoi o destaque com &7{kills} &feliminações.
+      &r
+      &8▪ &fPrêmio: {c}5K de Cash &7para todo o time
+      &r

@@ -103,5 +103,5 @@ rewards:
       material: CHEST
       display: '&6&lTesouro do Mar'
       lore:
-      - '&7Uma chave de crate exclusiva!'
+      - '&7Uma chave de caixa exclusiva!'
       glow: true

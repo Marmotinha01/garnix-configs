@@ -21,7 +21,7 @@ locked-icon:
 permission: ''
 slot: 15
 messages:
-  success: '&aVocê foi teleportado para a warp &f{warp}&a.'
+  success: '&aTeleportado para a warp &f{warp}&a.'
   no-permission: '&cVocê não tem permissão para ir à warp &f{warp}&c.'
   title: ''
   subtitle: ''

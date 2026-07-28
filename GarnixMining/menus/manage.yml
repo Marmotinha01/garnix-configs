@@ -7,7 +7,7 @@ status-public-icon:
   data: 10
   display: '&aMina Pública'
   lore:
-  - '&7Altere a prividade de'
+  - '&7Altere a privacidade de'
   - '&7sua área de mineração.'
   - ''
   - ' &8▸ &fRestrição: &aPública'
@@ -20,7 +20,7 @@ status-private-icon:
   data: 8
   display: '&cMina Privada'
   lore:
-  - '&7Altere a prividade de'
+  - '&7Altere a privacidade de'
   - '&7sua área de mineração.'
   - ''
   - ' &8▸ &fRestrição: &cPrivada'
@@ -49,7 +49,7 @@ max-players-icon:
   - ''
   - '&f Total: &a{total}&8 ▸ &c{max}'
   - ''
-  - '&8 Opções de acesso:'
+  - '&8 Opções de uso:'
   - '&fEsquerdo: &a+1'
   - '&fDireito: &c-1'
 
@@ -63,14 +63,14 @@ tax-icon:
   - '&7Você recebe &c{tax}% &7dos'
   - '&7valores p/bloco minerado.'
   - ''
-  - '&8 Opções de acesso:'
+  - '&8 Opções de uso:'
   - '&fEsquerdo: &7Definir '
   - '&fDireito: &7Resetar '
 
 collect-tax-icon:
   slot: 14
   material: STORAGE_MINECART
-  display: '&aTaxad'
+  display: '&aTaxas'
   lore:
   - '&7Recolha as taxas acumuladas'
   - '&7da mineração dos visitantes.'
@@ -84,7 +84,7 @@ collect-tax-icon:
 collect-tax-empty-icon:
   slot: 14
   material: MINECART
-  display: '&cTaxad'
+  display: '&cTaxas'
   lore:
   - '&7Recolha as taxas acumuladas'
   - '&7da mineração dos visitantes.'
@@ -115,7 +115,7 @@ friend-slots:
     data: 5
     display: '&aSlot Livre'
     lore:
-    - '&7Nenhum amigo neste slot.'
+    - '&7Nenhum amigo nesta vaga.'
     - ''
     - '&7Clique para adicionar um amigo.'
   filled:

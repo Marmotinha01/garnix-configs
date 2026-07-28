@@ -4,7 +4,7 @@ shop:
   not-plot-owner: '&cVocê só pode criar lojas em terrenos seus.'
   no-chest: '&cNenhum baú encontrado adjacente à placa.'
   chest-in-use: '&cEste baú já está vinculado a uma loja.'
-  limit-reached: '&cVocê atingiu o limite de &e{max} &clojas.'
+  limit-reached: '&cVocê atingiu o limite de &f{max} &clojas.'
   created: '&aLoja criada com sucesso.'
   
   chest-protected: '&cEste baú pertence a uma loja.'
@@ -13,8 +13,8 @@ shop:
   buy-error: '&cErro ao processar a compra.'
   not-buying: '&cEsta loja não compra itens.'
   no-stock: '&cEsta loja está sem estoque.'
-  no-money: '&cVocê não tem dinheiro suficiente.'
-  no-space: '&cVocê não tem espaço no inventário.'
+  no-money: '&cVocê não tem saldo suficiente.'
+  no-space: '&cSeu inventário está cheio.'
   
   sell-success: '&aVendeu &fx{amount} {item} &apor {currency_prefix}{price}&a.'
   # Usada no lugar de 'sell-success' quando a economia cobra taxa. {price} é o valor cheio da
@@ -23,7 +23,7 @@ shop:
   sell-error: '&cErro ao processar a venda.'
   not-selling: '&cEsta loja não vende itens.'
   no-items: '&cVocê não tem itens suficientes.'
-  owner-no-money: '&cO dono da loja não tem dinheiro suficiente.'
+  owner-no-money: '&cO dono da loja não tem saldo suficiente.'
   chest-full: '&cO baú da loja está cheio.'
   
   notify-buy: '&f{player} &acomprou &fx{amount} {item} &apor {currency_prefix}{price}&a.'
@@ -44,9 +44,9 @@ shop:
 
 setup:
   cancelled: '&cCriação de loja cancelada.'
-  price-too-low: '&cO preço deve ser maior que &e0&c.'
+  price-too-low: '&cO preço deve ser maior que &f0&c.'
   price-invalid: '&cInforme uma quantia válida.'
-  amount-invalid: '&cA quantia deve ser entre &e1 &ce &e2304&c.'
+  amount-invalid: '&cA quantia deve ser entre &f1 &ce &f2304&c.'
   buy-price-prompt:
   - ''
   - '  &aInforme o preço de compra.'
@@ -70,8 +70,8 @@ setup:
 
 edit:
   type-changed: '&aTipo de loja alterado para {type}&a.'
-  buy-price-changed: '&aPreço de compra alterado para &e{price}&a.'
-  sell-price-changed: '&aPreço de venda alterado para &e{price}&a.'
+  buy-price-changed: '&aPreço de compra alterado para &f{price}&a.'
+  sell-price-changed: '&aPreço de venda alterado para &f{price}&a.'
   amount-changed: '&aQuantia alterada para &fx{amount}&a.'
   item-set: '&aItem da loja definido.'
   item-removed: '&cItem removido da loja.'
@@ -95,8 +95,8 @@ friends:
 store:
   created: '&aLoja registrada com sucesso.'
   vip-only: '&cApenas jogadores &eVIP &cpodem criar uma loja.'
-  opened: '&aSua loja agora está visível no &e/lojas&a.'
-  closed: '&cSua loja foi fechada e não aparece mais no &e/lojas&c.'
+  opened: '&aSua loja agora está visível no &f/lojas&a.'
+  closed: '&cSua loja foi fechada e não aparece mais no &f/lojas&c.'
   not-found: '&cLoja não encontrada.'
   not-open: '&cEsta loja está fechada.'
   not-exists: '&cEsta loja não existe mais.'
@@ -104,9 +104,9 @@ store:
   admin-deleted: '&aLoja de &f{player} &adeletada.'
   teleported: '&aTeleportado para a loja.'
   spawn-updated: '&aPonto de teleporte redefinido para a sua posição atual.'
-  not-plot-owner: '&cVocê só pode definir sua loja seus plots.'
+  not-plot-owner: '&cVocê só pode definir sua loja em terrenos seus.'
   
-  announce-cooldown: '&cAguarde &e{time} &cpara anunciar novamente.'
+  announce-cooldown: '&cAguarde &f{time} &cpara anunciar novamente.'
   announcement:
   - ''
   - '  &e&lLOJAS &8» &7A loja de &f{player} &7está vendendo itens.'
@@ -116,14 +116,14 @@ store:
   announce-click-hover: '&7Clique para visitar a loja.'
   
   rated: '&aAvaliou a loja de &f{player}&a.'
-  rate-cooldown: '&cVocê já avaliou recentemente. Aguarde &e24h&c.'
+  rate-cooldown: '&cVocê já avaliou recentemente. Aguarde &f24h&c.'
   
   description-prompt:
   - ''
   - '  &aInforme a descrição da sua loja.'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
-  description-too-long: '&cA descrição não pode ter mais de &e98 &ccaracteres.'
+  description-too-long: '&cA descrição não pode ter mais de &f98 &ccaracteres.'
   description-changed: '&aDescrição alterada para &f{description}&a.'
 
 admin:

@@ -23,7 +23,7 @@ chest-icon:
   - ' &8Informações:'
   - ' &fLinhas: &7{rows}'
   - ''
-  - '&8 Opções de acesso:'
+  - '&8 Opções de uso:'
   - '&fEsquerdo &7Abrir.'
   - '&fDireito &7Gerenciar.'
 
@@ -40,7 +40,7 @@ echest-icon:
   material: ENDER_CHEST
   display: '&eEnder Chest'
   lore:
-  - '&7Acesse o seu báu do fim'
+  - '&7Acesse o seu baú do fim'
   - '&7para armazenar itens.'
   - ''
   - '&eClique para acessar.'

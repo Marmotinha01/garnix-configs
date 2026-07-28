@@ -1,4 +1,4 @@
-title: Suas Cabeças
+title: Suas Heads
 
 shape:
 - XXXXXXXXX
@@ -16,7 +16,7 @@ empty-icon:
   - '&7Nenhuma cabeça encontrada.'
 
 head-template:
-  display: '&aCabeças de {display}'
+  display: '&aHeads de {display}'
   lore:
   - '&fQuantia: &e{amount}'
   - ''

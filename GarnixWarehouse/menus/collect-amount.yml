@@ -10,7 +10,7 @@ pack-icon:
   lore-no-stock:
   - '&cEstoque insuficiente.'
   lore-no-space:
-  - '&cSem espaço no inventário.'
+  - '&cSeu inventário está cheio.'
 
 hotbar-icon:
   slot: 13
@@ -21,7 +21,7 @@ hotbar-icon:
   lore-no-stock:
   - '&cEstoque insuficiente.'
   lore-no-space:
-  - '&cSem espaço no inventário.'
+  - '&cSeu inventário está cheio.'
 
 inventory-icon:
   slot: 16
@@ -32,7 +32,7 @@ inventory-icon:
   lore-no-stock:
   - '&cEstoque insuficiente.'
   lore-no-space:
-  - '&cSem espaço no inventário.'
+  - '&cSeu inventário está cheio.'
 
 back-icon:
   slot: 31

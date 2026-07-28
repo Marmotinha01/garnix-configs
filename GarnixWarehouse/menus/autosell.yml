@@ -42,7 +42,7 @@ upgrade-icon:
   - '&7entre cada venda de cactos.'
   - ''
   - ' &8Próxima Evolução:'
-  - ' &8▪ &e{current}s &7➡ &a{next}s &7({cost}&7)'
+  - ' &8▪ &e{current}s &8➟ &a{next}s &7({cost}&7)'
   - ''
   - ' &6▎ &fVenda em: &7{remaining}s'
   - ''
@@ -52,11 +52,11 @@ upgrade-icon:
   - '&7entre cada venda de cactos.'
   - ''
   - ' &8Próxima Evolução:'
-  - ' &8▪ &e{current}s &7➡ &a{next}s &7({cost}&7) '
+  - ' &8▪ &e{current}s &8➟ &a{next}s &7({cost}&7) '
   - ''
   - ' &6▎ &fPróxima venda: &7{remaining}s'
   - ''
-  - '&cCash insuficiente!'
+  - '&cVocê não tem saldo suficiente.'
 
 upgrade-max-icon:
   slot: 11

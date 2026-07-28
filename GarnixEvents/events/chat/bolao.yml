@@ -81,11 +81,11 @@ messages:
 # ── Entrada e saída do dinheiro ─────────────────────────────────────
 # Linha única e sem a barra lateral: são avisos soltos, não blocos.
 # {count} quantos já entraram
-  paid: '&aVocê entrou no bolão! Pote: {symbol_color}{symbol}{pot} {primary_color}{currency}&a. &f({count} participantes)'
+  paid: '&aVocê entrou no bolão. Pote: {symbol_color}{symbol}{pot} {primary_color}{currency}&a. &f({count} participantes)'
   no-money: '&cVocê não tem {symbol_color}{symbol}{fee} &cpara entrar.'
   refunded: '&fBolão cancelado — devolvemos {symbol_color}{symbol}{fee}&f.'
   # Actionbar enviada a TODOS quando alguém entra. Não aceita clique.
-  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8▪ &a{count} &fparticipantes'
   
   # {player} levou · {pot} o pote pago
   winner: |2

@@ -3,12 +3,12 @@ command:
   reload-success: '&aConfigurações recarregadas com sucesso.'
   
   # /loja additens <categoria> <preço> (coins-shop)
-  additens-usage: '&cUse: &f/loja additens <categoria> <preço>'
+  additens-usage: '&cUse: /loja additens <categoria> <preço>'
   additens-success: '&aAdicionado(s) &f{count} &aitem(ns) à categoria &f{category}&a.'
   additens-unknown-category: '&cCategoria &f{category} &cnão encontrada.'
   additens-invalid-price: '&cPreço inválido.'
   additens-no-items: '&cSeu inventário está vazio.'
-  additens-menu-full: '&cA categoria não possui slots livres.'
+  additens-menu-full: '&cA categoria não possui vagas livres.'
 
 category:
   no-permission: '&cVocê não tem permissão.'
@@ -23,7 +23,7 @@ purchase:
     insufficient-funds: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{value} {currency} &cpara concluir essa compra.'
     locked: '&cEste item ainda não foi liberado.'
     already-owned: '&cVocê já adquiriu esse produto.'
-    no-space: '&cSem espaço suficiente no inventário.'
+    no-space: '&cSeu inventário está cheio.'
     invalid-amount: '&cInforme uma quantia válida.'
     unknown-error: '&cErro ao processar a compra. Tente novamente.'
   
@@ -32,7 +32,7 @@ purchase:
     insufficient-funds: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{value} {currency} &cpara concluir essa compra.'
     locked: '&cEste item ainda não foi liberado.'
     already-owned: '&cVocê já adquiriu esse produto.'
-    no-space: '&cSem espaço suficiente no inventário.'
+    no-space: '&cSeu inventário está cheio.'
     invalid-amount: '&cInforme uma quantia válida.'
     unknown-error: '&cErro ao processar a compra. Tente novamente.'
     cancelled: '&cOperação cancelada.'

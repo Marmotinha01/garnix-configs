@@ -12,7 +12,7 @@ rename-icon:
   - ''
   - ' &7Atual: &r{display}'
   - ''
-  - '&eClique para renomear'
+  - '&eClique para renomear.'
 
 expand-icon:
   slot: 13
@@ -23,7 +23,7 @@ expand-icon:
   - '&7Próxima linha: &f{next}&7/&f{max}'
   - '&7Custo: &f{cost} {currency}'
   - ''
-  - '&aClique para expandir'
+  - '&aClique para expandir.'
   # Exibido quando o baú já está no tamanho máximo.
   max-lore:
   - '&7Linhas: &f{rows}&7/&f{max}'

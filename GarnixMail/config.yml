@@ -35,9 +35,9 @@ periodic-notify:
 # nenhum), caso você prefira montar o texto no próprio scoreboard/tab.
 placeholder:
   # Usado quando há pelo menos 1 item para resgatar.
-  has-rewards: '&a{amount} {reward_plural}!'
+  has-rewards: '&a{amount} {reward_plural}.'
   # Usado quando o correio não tem nada para resgatar.
-  no-rewards: '&cNada para coletar!'
+  no-rewards: '&cNada para resgatar.'
   # Palavra substituída em {reward_plural}, concordando com {amount}.
   reward-singular: 'entrega'
   reward-plural: 'entregas'

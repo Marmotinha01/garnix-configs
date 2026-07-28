@@ -111,7 +111,7 @@ messages:
       &r
       &8▪ &fResponda clicando &a&l<click:suggest_command:/matematica ><hover:show_text:&fClique para já digitar &7/matematica &fno chat.>AQUI</hover></click>&f.
       &r
-  wrong: '&cResultado errado! Tente de novo.'
+  wrong: '&cResultado errado. Tente de novo.'
   
   # {player} acertou · {answer} a resposta certa
   winner: |2

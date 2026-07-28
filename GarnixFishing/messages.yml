@@ -72,7 +72,7 @@ booster:
   too-little-time: '&cTempo restante insuficiente para remover este booster.'
 
 admin:
-  usage: '&cUse: &f{usage}'
+  usage: '&cUse: {usage}'
   usages:
     setlevel: /pesca setlevel <jogador> <nível>
     addxp: /pesca addxp <jogador> <quantidade>

@@ -28,7 +28,7 @@ heads:
   - '&7seus ganhos aumentados.'
   - ''
   - ' &8Informações: '
-  - ' &8▪ &fTipo: &aCabeças '
+  - ' &8▪ &fTipo: &aHeads '
   - ' &8▪ &fBônus: &a{multiplier} '
   - ' &8▪ &fDuração: &7{duration} '
   - ''

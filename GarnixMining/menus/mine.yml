@@ -82,7 +82,7 @@ friend-mines-icon:
   display: '&dMinas de Amigos'
   lore:
   - '&7Acesse a área de mineração'
-  - '&7do seus amigos.'
+  - '&7dos seus amigos.'
   - ''
   - '&dClique para acessar.'
 

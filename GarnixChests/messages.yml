@@ -19,7 +19,7 @@ help:
 no-permission-other: '&cVocê não tem permissão para acessar os baús de outros jogadores.'
 chest-not-found: '&cEsse baú não existe ou ainda não foi liberado.'
 chest-locked: '&cVocê ainda não possui este baú.'
-chest-usage: '&cUse: &f/bau [id] &7ou &f/bau <jogador>'
+chest-usage: '&cUse: /bau [id] ou /bau <jogador>'
 
 # Ender chest
 echest-opened-other: '&aAbrindo o ender chest de &f{player}&a.'
@@ -44,12 +44,12 @@ rename:
   prompt:
   - ''
   - '  &aInforme o novo nome do baú no chat.'
-  - ' &7Aceita cores &f(&)&7, até &f{max} &7caracteres.'
+  - '  &7Aceita cores &f(&)&7, até &f{max} &7caracteres.'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   empty: '&cO nome não pode ser vazio.'
   too-long: '&cO nome pode ter no máximo {max} caracteres (sem contar cores).'
-rename-success: '&aNome do baú atualizado com sucesso.'
+rename-success: '&aNome do baú atualizado.'
 rename-cancelled: '&7Renomeação cancelada.'
 
 # Expandir

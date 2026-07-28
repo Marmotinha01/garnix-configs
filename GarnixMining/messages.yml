@@ -64,8 +64,8 @@ labels:
   mine-private: '&cPrivada'
   wand-name: '&eSeletor de Mina'
   wand-lore:
-  - '&7Clique esquerdo → &aPos1'
-  - '&7Clique direito → &aPos2'
+  - '&fBotão Esquerdo &8➟ &7Pos1'
+  - '&fBotão Direito &8➟ &7Pos2'
 
 tax:
   set: '&aTaxa definida para &f{tax}%&a.'
@@ -107,7 +107,7 @@ visit:
   success: '&aVocê entrou na mina de &f{player}&a.'
   tax-info: '&eTaxa de mineração: &c{tax}%'
   friend-no-tax: '&aVocê é amigo de &f{player}&a, sem cobrança de taxa.'
-  usage: '&cUse: &f/mina visitar <jogador>'
+  usage: '&cUse: /mina visitar <jogador>'
   self: '&cVocê não pode visitar sua própria mina.'
 
 slot:
@@ -147,7 +147,7 @@ reset:
   success: '&aMina resetada com sucesso.'
 
 inspect:
-  usage: '&cUse: &f/mina inspect <jogador>'
+  usage: '&cUse: /mina inspect <jogador>'
   not-in-mine: '&cEste jogador não está em nenhuma mina.'
   already-inspecting: '&cVocê já está em uma mina. Use &f/spawn &cpara sair.'
   kicked: '&cTodos os jogadores saíram da mina. Inspeção encerrada.'
@@ -166,7 +166,7 @@ inspect:
   - ''
 
 admin:
-  usage: '&cUse: &f{usage}'
+  usage: '&cUse: {usage}'
   usages:
     setlevel: /mina setlevel <nível> <jogador>
     level: /mina level <add|rem|set> <jogador> <valor>

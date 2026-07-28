@@ -7,7 +7,7 @@ general:
   no-clan-permission: '&cSeu cargo não possui permissão para isso.'
   clan-full: '&cO clan já está com todas as vagas preenchidas.'
   player-offline: '&cO jogador &f{player} &cnão está online.'
-  clan-not-found: '&cNenhum clan encontrado com a tag &f{tag}&c.'
+  clan-not-found: '&cNenhum clan encontrado com a tag &r{tag}&c.'
   not-a-member: '&cO jogador &f{player} &cnão faz parte deste clan.'
   reloaded: '&aConfigurações recarregadas com sucesso.'
 
@@ -31,17 +31,17 @@ create:
   name-taken: '&cJá existe um clan com esse nome.'
   name-blacklisted: '&cEsse nome não pode ser usado.'
   already-in-clan: '&cVocê já está em um clan.'
-  success: '&aClan &f{tag} &a(&f{clan}&a) criado com sucesso.'
+  success: '&aClan &r{tag} &a(&f{clan}&a) criado.'
 
 invite:
   pending: '&eVocê possui &f{amount} &econvite(s) de clan pendente(s). Use &f/clan &epara ver.'
   already-in-clan: '&cO jogador &f{player} &cjá está em um clan.'
   already-invited: '&cO jogador &f{player} &cjá foi convidado.'
   sent: '&aConvite enviado para &f{player}&a.'
-  received: '&eO clan &f{tag} &e(&f{clan}&e) te convidou. Convidado por &f{player}&e.'
-  accepted: '&aVocê entrou no clan &f{tag} &a(&f{clan}&a).'
-  declined: '&cVocê recusou o convite do clan &f{tag}&c.'
-  not-found: '&cVocê não possui um convite pendente do clan &f{tag}&c.'
+  received: '&eO clan &r{tag} &e(&f{clan}&e) te convidou. Convidado por &f{player}&e.'
+  accepted: '&aVocê entrou no clan &r{tag} &a(&f{clan}&a).'
+  declined: '&cVocê recusou o convite do clan &r{tag}&c.'
+  not-found: '&cVocê não possui um convite pendente do clan &r{tag}&c.'
 
 leave:
   success: '&cVocê saiu do clan &f{clan}&c.'
@@ -54,13 +54,13 @@ chest:
   in-use: '&cO baú do clan está sendo usado por &f{player}&c. Aguarde ele fechar.'
 
 base:
-  set: '&aBase do clan definida na plot &f{plot}&a.'
+  set: '&aBase do clan definida no terreno &f{plot}&a.'
   deleted: '&cBase do clan removida.'
-  teleported: '&aVocê foi teleportado para a base do clan.'
+  teleported: '&aTeleportado para a base do clan.'
   not-set: '&cO clan ainda não possui uma base definida.'
   world-missing: '&cO mundo da base do clan não está carregado.'
-  not-in-plot: '&cVocê precisa estar dentro de uma plot para definir a base.'
-  not-plot-owner: '&cVocê só pode definir a base do clan em uma plot sua.'
+  not-in-plot: '&cVocê precisa estar dentro de um terreno para definir a base.'
+  not-plot-owner: '&cVocê só pode definir a base do clan em um terreno seu.'
 
 members:
   promoted: '&aVocê promoveu &f{player} &apara &r{role}&a.'
@@ -68,21 +68,21 @@ members:
   kicked: '&cVocê expulsou &f{player} &cdo clan.'
 
 ally:
-  request-sent: '&aSolicitação de aliança enviada para &f{tag}&a.'
-  request-received: '&eO clan &f{tag} &esolicitou uma aliança com o seu clan.'
-  started: '&aSua aliança com o clan &f{tag} &acomeçou.'
-  broken: '&cA aliança com o clan &f{tag} &cfoi desfeita.'
-  denied: '&cVocê recusou a aliança com o clan &f{tag}&c.'
+  request-sent: '&aSolicitação de aliança enviada para &r{tag}&a.'
+  request-received: '&eO clan &r{tag} &esolicitou uma aliança com o seu clan.'
+  started: '&aSua aliança com o clan &r{tag} &acomeçou.'
+  broken: '&cA aliança com o clan &r{tag} &cfoi desfeita.'
+  denied: '&cVocê recusou a aliança com o clan &r{tag}&c.'
   same-clan: '&cVocê não pode se aliar ao seu próprio clan.'
   already-ally: '&cVocês já são aliados.'
   already-requested: '&cJá existe uma solicitação de aliança pendente.'
   no-allies: '&cSeu clan não possui aliados.'
-  request-not-found: '&cNão há solicitação de aliança pendente do clan &f{tag}&c.'
+  request-not-found: '&cNão há solicitação de aliança pendente do clan &r{tag}&c.'
 
 rival:
-  started: '&cSeu clan iniciou uma rivalidade contra &f{tag}&c.'
-  declared-against: '&cO clan &f{tag} &cdeclarou rivalidade contra o seu clan.'
-  ended: '&aA rivalidade contra o clan &f{tag} &afoi desfeita.'
+  started: '&cSeu clan iniciou uma rivalidade contra &r{tag}&c.'
+  declared-against: '&cO clan &r{tag} &cdeclarou rivalidade contra o seu clan.'
+  ended: '&aA rivalidade contra o clan &r{tag} &afoi desfeita.'
   same-clan: '&cVocê não pode rivalizar com o seu próprio clan.'
   already-rival: '&cEste clan já é seu rival.'
 

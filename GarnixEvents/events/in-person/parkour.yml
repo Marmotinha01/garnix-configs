@@ -148,9 +148,9 @@ messages:
 # ── Eliminações ─────────────────────────────────────────────────────
 # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
 # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
-  eliminated: '&7{player} &ffoi eliminado! &8({remaining} restantes)'
-  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f! &8({remaining} restantes)'
-  eliminated-self: '&cVocê foi eliminado do evento!'
+  eliminated: '&7{player} &ffoi eliminado. &8({remaining} restantes)'
+  eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f. &8({remaining} restantes)'
+  eliminated-self: '&cVocê foi eliminado do evento.'
   
   # ── Fim sem vencedor ────────────────────────────────────────────────
   no-winner: |2
@@ -174,12 +174,12 @@ messages:
       &r
 # ── Actionbar ───────────────────────────────────────────────────────
 # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
-  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8• &a{count} &fparticipantes'
-  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8• &a{count} &fparticipantes'
+  player-joined-actionbar: '&7{player} &fentrou no &7{event} &8▪ &a{count} &fparticipantes'
+  player-left-actionbar: '&7{player} &fsaiu do &7{event} &8▪ &a{count} &fparticipantes'
   
   # ── Percurso ────────────────────────────────────────────────────────
   # {number} o checkpoint · {total} quantos existem
-  fell: '&cVocê caiu! Voltando para a largada...'
-  fell-to-checkpoint: '&cVocê caiu! Voltando para o checkpoint &7#{number}&c.'
-  checkpoint-reached: '&aCheckpoint &7{number}&f/&7{total} &aalcançado!'
-  time-up: '&eO tempo do evento &7{event} &eacabou!'
+  fell: '&cVocê caiu. Voltando para a largada...'
+  fell-to-checkpoint: '&cVocê caiu. Voltando para o checkpoint &7#{number}&c.'
+  checkpoint-reached: '&aCheckpoint &7{number}&f/&7{total} &aalcançado.'
+  time-up: '&eO tempo do evento &7{event} &eacabou.'

@@ -206,7 +206,7 @@ messages:
       &r
       &8▪ &fResponda clicando &a&l<click:suggest_command:/corrija-acento ><hover:show_text:&fClique para já digitar &7/corrija-acento &fno chat.>AQUI</hover></click>&f.
       &r
-  wrong: '&cO acento não está certo! Tente de novo.'
+  wrong: '&cO acento não está certo. Tente de novo.'
   
   # {player} acertou · {answer} a resposta certa
   winner: |2

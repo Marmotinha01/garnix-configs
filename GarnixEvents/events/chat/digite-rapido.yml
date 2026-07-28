@@ -175,7 +175,7 @@ messages:
       &r
       &8▪ &fResponda clicando &a&l<click:suggest_command:/digite-rapido ><hover:show_text:&fClique para já digitar &7/digite-rapido &fno chat.>AQUI</hover></click>&f.
       &r
-  wrong: '&cNão foi igualzinho! Copie a frase exatamente - acento e minúsculas contam.'
+  wrong: '&cNão foi igualzinho. Copie a frase exatamente - acento e minúsculas contam.'
   
   # {player} acertou · {answer} a resposta certa
   winner: |2

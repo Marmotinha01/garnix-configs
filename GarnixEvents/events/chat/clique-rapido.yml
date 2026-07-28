@@ -103,9 +103,9 @@ messages:
       &8▶ &fClique no &aX verde&f:
       &r
 # Dica ao passar o mouse sobre um X. Deixe vazio para não ter.
-  click-hover: '&fClique!'
+  click-hover: '&fClique.'
   
-  wrong: '&cErrou! Esse não era o X verde.'
+  wrong: '&cErrou. Esse não era o X verde.'
   
   # {player} achou o verde
   winner: |2

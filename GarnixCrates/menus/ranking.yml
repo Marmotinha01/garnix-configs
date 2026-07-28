@@ -1,4 +1,4 @@
-title: TOP Crates
+title: TOP Caixas
 
 # Cada '.' é uma posição do ranking, preenchida em ordem (rank #1 no primeiro '.').
 # A quantidade de '.' define o tamanho do ranking.
@@ -12,7 +12,7 @@ shape:
 user-icon:
   display: '&8#{position} {lp_suffix} {player}'
   lore:
-  - '&fCrates Abertas: &a{score}'
+  - '&fCaixas Abertas: &a{score}'
 
 empty-position-icon:
   material: BARRIER

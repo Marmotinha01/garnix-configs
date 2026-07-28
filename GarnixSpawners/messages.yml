@@ -55,13 +55,14 @@ hologram-no-permission: '&cVocê não pode gerenciar o holograma deste spawner.'
 
 drops:
   no-permission: '&cVocê não pode vender drops deste spawner.'
-  already-sold: '&cEsses drops já foram vendidos.'
+  already-sold: '&cEsses drops já foram vendidos por outra pessoa.'
   sell-error: '&cErro ao depositar os drops. Tente novamente.'
-  drop-entry: '  {symbol_color}{symbol} {primary_color}{amount} {secondary_color}{currency}'
+  drop-entry: '  {symbol_color}{symbol}{primary_color}{amount} {currency}'
   sold:
   - ''
-  - '  &aDrops vendidos com sucesso.'
+  - '  &a&lGG. &7Drops vendidos.'
   - ''
+  - '  &7Informações:'
   - '{drops}'
   - ''
 

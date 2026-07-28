@@ -87,14 +87,14 @@ menu:
 # com caches independentes — a config dos itens é compartilhada aqui.
 
 captcha:
-  title: Clique no(a) {item}
+  title: Clique em {item}
   rows: 3
   slots:
   - 10
   - 12
   - 14
   - 16
-  fail-message: '&cVocê errou o captcha! Tente novamente.'
+  fail-message: '&cVocê errou o captcha. Tente novamente.'
   items:
     apple:
       material: APPLE
