@@ -11,7 +11,7 @@ opponent-icon:
   - '&7Escolha quem você quer'
   - '&7enfrentar na arena.'
   - ''
-  - ' &8 ▾ &cNenhum oponente escolhido.'
+  - ' &8 ▾ &cNenhum oponente escolhido. '
   - ''
   - '&aClique para escolher.'
   selected-lore:
@@ -55,7 +55,7 @@ amount-icon:
   - '&7Quanto cada lado arrisca'
   - '&7neste duelo.'
   - ''
-  - ' &8 ▾ &cNenhuma quantia definida.'
+  - ' &8 ▾ &cNenhuma quantia definida. '
   - ''
   - '&aClique para definir.'
   selected-lore:

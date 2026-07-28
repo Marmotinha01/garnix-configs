@@ -97,7 +97,7 @@ fuel-empty-icon:
   - '&7Sem combustível a máquina'
   - '&7não produz nada.'
   - ''
-  - ' &8 ▾ &cNenhum combustível ativo. '
+  - '&8 ▾ &cNenhum combustível ativo. '
   - ''
 
 booster-icon:
@@ -130,7 +130,7 @@ booster-none-icon:
   - '&7Servem para aumentar'
   - '&7seus ganhos na máquina.'
   - ''
-  - ' &c▾ Nenhum booster ativo. '
+  - '&8 ▾ &cNenhum booster ativo. '
   - ''
 
 remove-stack-icon:

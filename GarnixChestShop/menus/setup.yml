@@ -82,6 +82,7 @@ buy-price-icon:
   tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
   tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8) '
   disabled-lore:
+  - ''
   - ' &8 ▾ &cDesativado neste tipo de loja. '
   - ''
 
@@ -105,6 +106,7 @@ sell-price-icon:
   tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
   tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8) '
   disabled-lore:
+  - ''
   - ' &8 ▾ &cDesativado neste tipo de loja. '
   - ''
 

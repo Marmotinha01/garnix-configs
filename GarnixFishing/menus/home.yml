@@ -61,7 +61,7 @@ booster-none-icon:
   - '&7Servem para aumentar'
   - '&7seus ganhos na pesca.'
   - ''
-  - ' &c▾ Nenhum booster ativo. '
+  - '&8 ▾ &cNenhum booster ativo. '
   - ''
 
 # Buy a fishing rod. The {amount}/{symbol} tokens are resolved from rod.price /
