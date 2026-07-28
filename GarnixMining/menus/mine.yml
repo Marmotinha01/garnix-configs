@@ -7,17 +7,20 @@ booster-icon:
   slot: 15
   amount: 1
   material: POTION
-  display: '&eBoosters'
+  data: 8201
+  flags:
+  - HIDE_POTION_EFFECTS
+  display: '&6Boosters'
   lore:
   - '&7Servem para aumentar'
   - '&7seus ganhos na mina.'
   - ''
-  - '&eClique para gerenciar.'
+  - '&6Clique para gerenciar.'
 
 booster-none-icon:
   slot: 15
-  amount: 0
   material: GLASS_BOTTLE
+  amount: 0
   display: '&cBoosters'
   lore:
   - '&7Servem para aumentar'

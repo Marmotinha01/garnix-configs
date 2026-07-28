@@ -1,6 +1,8 @@
 material: POTION
 data: 8260
 display: '&aBooster de Armazém'
+flags:
+  - HIDE_POTION_EFFECTS
 lore:
   - '&7Use este booster para ter'
   - '&7seus ganhos aumentados.'

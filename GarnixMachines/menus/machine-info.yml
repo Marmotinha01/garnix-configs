@@ -75,7 +75,7 @@ booster-icon:
   slot: 32
   material: POTION
   data: 8237
-  display: '&dBooster de Máquina'
+  display: '&aBooster de Máquina'
   flags:
   - HIDE_POTION_EFFECTS
   lore:
@@ -96,10 +96,10 @@ booster-none-icon:
   slot: 32
   material: GLASS_BOTTLE
   amount: 0
-  display: '&cBooster'
+  display: '&cBoosters'
   lore:
-  - '&7Serve para aumentar'
-  - '&7seus ganhos na pesca.'
+  - '&7Servem para aumentar'
+  - '&7seus ganhos na máquina.'
   - ''
   - ' &c▾ Nenhum booster ativo. '
   - ''

@@ -8,11 +8,11 @@ slots:
 - 15
 
 empty-slot-icon:
-  material: STAINED_GLASS_PANE
-  data: 14
-  display: '&cVazio'
+  material: GLASS_BOTTLE
+  amount: 0
+  display: '&cSlot Vazio'
   lore:
-  - '&7Nenhum booster aqui.'
+  - '&7Sem booster ativo aqui.'
 
 active-lore-suffix:
 - ''

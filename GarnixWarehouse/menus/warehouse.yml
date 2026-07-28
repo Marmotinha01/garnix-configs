@@ -17,6 +17,8 @@ booster-active-icon:
   slot: 32
   material: POTION
   data: 8260
+  flags:
+  - HIDE_POTION_EFFECTS
   display: '&aBooster de Armazém'
   lore:
     - '&7Use este booster para ter'

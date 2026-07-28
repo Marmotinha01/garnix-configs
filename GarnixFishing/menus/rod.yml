@@ -31,13 +31,15 @@ skin-equipped-icon:
 booster-icon:
   slot: 15
   material: POTION
-  glow: true
-  display: '&aBoosters'
+  data: 8203
+  flags:
+  - HIDE_POTION_EFFECTS
+  display: '&bBoosters'
   lore:
   - '&7Servem para aumentar'
   - '&7seus ganhos na pesca.'
   - ''
-  - '&aClique para gerenciar.'
+  - '&bClique para gerenciar.'
 
 # Shown when the player has no active boosters (static, opens nothing).
 booster-none-icon:

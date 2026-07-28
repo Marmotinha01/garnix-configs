@@ -84,13 +84,24 @@ remove-stack-icon:
 booster-icon:
   slot: 32
   material: POTION
+  data: 8230
+  flags:
+  - HIDE_POTION_EFFECTS
   display: '&aBoosters'
   lore:
-  - '&7Clique para gerenciar.'
+  - '&7Servem para aumentar'
+  - '&7seus ganhos no spawner.'
+  - ''
+  - '&aClique para gerenciar.'
 
 booster-none-icon:
   slot: 32
   material: GLASS_BOTTLE
-  display: '&7Boosters'
+  amount: 0
+  display: '&cBoosters'
   lore:
-  - '&7Nenhum booster ativo.'
+  - '&7Servem para aumentar'
+  - '&7seus ganhos no spawner.'
+  - ''
+  - ' &c▾ Nenhum booster ativo. '
+  - ''

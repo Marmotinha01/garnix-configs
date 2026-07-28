@@ -4,6 +4,7 @@ rows: 4
 drops-empty-icon:
   slot: 11
   material: GLASS_BOTTLE
+  amount: 0
   display: '&cBooster de Drops'
   lore:
   - '&7Nenhum booster ativo.'
@@ -11,8 +12,10 @@ drops-empty-icon:
 drops-active-icon:
   slot: 11
   material: POTION
-  data: 8227
-  display: '&dBooster de Drops'
+  data: 8230
+  flags:
+  - HIDE_POTION_EFFECTS
+  display: '&aBooster de Drops'
   lore:
   - '&fBônus: &a{multiplier}'
   - '&fDuração: &c{time_remaining}'
@@ -26,6 +29,7 @@ drops-active-icon:
 heads-empty-icon:
   slot: 15
   material: GLASS_BOTTLE
+  amount: 0
   display: '&cBooster de Cabeças'
   lore:
   - '&7Nenhum booster ativo.'
@@ -33,8 +37,10 @@ heads-empty-icon:
 heads-active-icon:
   slot: 15
   material: POTION
-  data: 8227
-  display: '&eBooster de Cabeças'
+  data: 8230
+  flags:
+  - HIDE_POTION_EFFECTS
+  display: '&aBooster de Cabeças'
   lore:
   - '&fBônus: &a{multiplier}'
   - '&fDuração: &c{time_remaining}'

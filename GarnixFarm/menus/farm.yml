@@ -28,12 +28,12 @@ booster-icon:
   data: 8227
   flags:
   - HIDE_POTION_EFFECTS
-  display: '&aBoosters'
+  display: '&eBoosters'
   lore:
   - '&7Servem para aumentar'
-  - '&7seus ganhos na pesca.'
+  - '&7seus ganhos na fazenda.'
   - ''
-  - '&aClique para gerenciar.'
+  - '&eClique para gerenciar.'
 
 # Shown when the player has no active boosters (static).
 booster-none-icon:
@@ -43,7 +43,7 @@ booster-none-icon:
   display: '&cBoosters'
   lore:
   - '&7Servem para aumentar'
-  - '&7seus ganhos na pesca.'
+  - '&7seus ganhos na fazenda.'
   - ''
   - ' &c▾ Nenhum booster ativo. '
   - ''
