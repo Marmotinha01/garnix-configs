@@ -29,7 +29,7 @@ friend-permissions:
     material: BEACON
   UPGRADE:
     default: true
-    display: Dar Upgrade
+    display: Dar Evolução
     material: NETHER_STAR
   ADD_BOOSTER:
     default: true

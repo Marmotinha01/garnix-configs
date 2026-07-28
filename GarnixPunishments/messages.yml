@@ -87,7 +87,7 @@ screens:
   - '&7Prova: &f{proof}'
   - '&7Recorra no Discord: &fdiscord.gg/redegarnix'
   - ''
-  - '&8ID da punição: {code}'
+  - '&7ID da punição: &e{code}'
   tempban:
   - '&c&lVOCE FOI BANIDO TEMPORARIAMENTE'
   - ''
@@ -96,7 +96,7 @@ screens:
   - '&7Expira em: &f{expires}'
   - '&7Recorra no Discord: &fdiscord.gg/redegarnix'
   - ''
-  - '&8ID da punição: {code}'
+  - '&7ID da punição: &e{code}'
   ipban:
   - '&c&lVOCE FOI BANIDO POR IP'
   - ''
@@ -105,18 +105,18 @@ screens:
   - '&7Nenhuma conta neste IP pode entrar.'
   - '&7Recorra no Discord: &fdiscord.gg/redegarnix'
   - ''
-  - '&8ID da punição: {code}'
+  - '&7ID da punição: &e{code}'
 
 # ── In-chat notices ────────────────────────────────────────────────────
 mute-notice:
   permanent:
   - '&e&lVocê está silenciado permanentemente e não pode falar.'
   - '&7Motivo: &f{reason}'
-  - '&8ID: {code}'
+  - '&7ID: &e{code}'
   temp:
   - '&e&lVocê está silenciado e não pode falar.'
   - '&7Motivo: &f{reason}  &7Expira: &f{expires}'
-  - '&8ID: {code}'
+  - '&7ID: &e{code}'
 
 # Personal warn notice (shown to the warned player when the current stage is NOT yet reached).
 # {warn_count} = active warns after this one, {warn_next} = warns required at the current stage,

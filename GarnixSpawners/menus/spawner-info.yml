@@ -70,7 +70,7 @@ collect-heads-empty-icon:
 upgrades-icon:
   slot: 30
   material: FURNACE
-  display: '&aUpgrades'
+  display: '&aEvoluções'
   lore:
   - '&7Clique para evoluir.'
 

@@ -25,7 +25,7 @@ option-10:
   lore:
   - ''
   - '&f Nível: &7{current} &8─ &c{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c(40%)'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&cClique para desencantar.'
 
@@ -38,7 +38,7 @@ option-25:
   lore:
   - ''
   - '&f Nível: &7{current} &8─ &c{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c(40%)'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&cClique para desencantar.'
 
@@ -51,7 +51,7 @@ option-50:
   lore:
   - ''
   - '&f Nível: &7{current} &8─ &c{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c(40%)'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&cClique para desencantar.'
 
@@ -63,7 +63,7 @@ option-all:
   lore:
   - ''
   - '&f Nível: &7{current} &8─ &4{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c(40%)'
+  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&4Clique para desencantar.'
 

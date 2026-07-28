@@ -1,6 +1,6 @@
 reload-success: '&aConfigurações recarregadas com sucesso.'
 
-upgrade-success: '&aMelhoria evoluída para &fLv.{level}&a. &8(Custo: &c{cost}&8)'
+upgrade-success: '&aMelhoria evoluída para o nível &f{level}&a. &8(Custo: &c{cost}&8)'
 
 robot:
   applied: '&aRobô aplicado.'

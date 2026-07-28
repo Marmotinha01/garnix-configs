@@ -67,7 +67,7 @@ drops:
   - ''
 
 heads:
-  stored: '&aVocê armazenou &fx{amount} &aheads de &f{display}&a. &8(/heads)'
+  stored: '&aVocê armazenou &fx{amount} &aheads de &f{display}&a. &7(/heads)'
   withdrawn: '&aVocê retirou &fx{amount} &aheads de &f{display}&a.'
   insufficient: '&cVocê não tem heads suficientes.'
   insufficient-spawner: '&cO spawner não possui essa quantidade de heads.'
@@ -185,7 +185,7 @@ sword:
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
   mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
   leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
-  required: '&cVocê precisa de uma &cLâmina &cpara matar mobs. &8(/lamina)'
+  required: '&cVocê precisa de uma &cLâmina &cpara matar mobs. &7(/lamina)'
   cooldown: '&cAguarde &f{time} &cpara pegar outra Lâmina.'
   ceifador-proc: '&dA Lâmina ceifou &fx{amount} &dheads extras.'
   # Encantamento por livro (arraste o livro sobre a lâmina).

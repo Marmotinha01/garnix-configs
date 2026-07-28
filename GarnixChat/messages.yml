@@ -216,7 +216,7 @@ ignore:
 
 # ── Spy (/spy) ── tokens: {player}, {from}, {to}, {message}
 spy:
-  format: '&8[&cSPY&8] &7{from} &8-> &7{to}&8: &f{message}'
+  format: '&8[&cSPY&8] &7{from} &8➟ &7{to}&8: &f{message}'
   enabled-global: '&aModo espião ativado com sucesso.'
   disabled: '&cModo espião desativado com sucesso.'
   target-on: '&aVocê agora está espionando &f{player}&a.'

@@ -72,6 +72,6 @@ buy-rod-icon:
   display: '&aVara de Pesca'
   lore:
   - ''
-  - ' &fCusto: {symbol_color}{symbol}{primary_color}{amount}'
+  - ' &fCusto: {symbol_color}{symbol}{primary_color}{amount} {currency}'
   - ''
   - '&aClique para comprar.'

@@ -28,7 +28,7 @@ machine-template:
   display: '&a{display} &7(x{stack})'
   lore:
   - '&fDono: &7{owner}'
-  - '&fPlot: &7{plot_id}'
+  - '&fTerreno: &7{plot_id}'
   - '&fLocal: &7{world} {x},{y},{z}'
   - '&fCombustível: &7{fuel_display}'
   - ''

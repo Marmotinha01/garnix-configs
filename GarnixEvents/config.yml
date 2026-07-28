@@ -48,6 +48,28 @@ participants-command-whitelist:
 - batata-quente
 - batataquente
 - batata
+# Eventos de chat: são respondidos por comando e correm numa trilha própria, em
+# paralelo com a arena. Sem eles aqui, quem está jogando um evento presencial não
+# consegue participar de um quiz/charada que aconteça ao mesmo tempo.
+- quiz
+- charada
+- desembaralhe
+- matematica
+- mat
+- conta
+- digite-rapido
+- digite
+- digiterapido
+- corrija-acento
+- acento
+- corrijaacento
+- acerte-palavra
+- acertepalavra
+- clique-rapido
+- clique
+- cliquerapido
+- bolao
+- bolão
 
 # Comandos liberados para quem já foi eliminado e está assistindo no camarote.
 # Costuma ser mais permissivo — quem está aqui não influencia mais o resultado.

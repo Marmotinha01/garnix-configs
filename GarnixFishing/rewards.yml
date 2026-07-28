@@ -64,12 +64,12 @@ rewards:
     type: CURRENCY
     currency-id: corais
     amount: 250
-    display: '&6Saco de Moedas'
+    display: '&3Saco de Corais'
     icon:
       material: GOLD_NUGGET
-      display: '&6Saco de Moedas'
+      display: '&3Saco de Corais'
       lore:
-      - '&7Vale &e250 &7moedas ao sacar.'
+      - '&7Vale &f250 &7corais ao sacar.'
   
   # ── COMMAND_ITEM — command that gives a physical item (Reinforced rod, weight 4) ─
   diamonds:

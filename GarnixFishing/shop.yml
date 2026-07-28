@@ -7,7 +7,7 @@ products:
   spawner-limit:
     slot: 10
     cost: 1500
-    command: spawner give {player} 1500
+    command: spawner givelimite {player} 1500
     icon:
       material: PAPER
       display: '&bLimite de Spawner'

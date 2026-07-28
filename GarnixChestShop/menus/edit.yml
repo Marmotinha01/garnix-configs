@@ -55,7 +55,7 @@ buy-price-icon:
   tax-charged-noprice: '&fTaxa: &c&l{tax}&c%'
   tax-charged: '&fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
   disabled-lore:
-  - '&8Desabilitado'
+  - '&cDesativado neste tipo de loja.'
 
 sell-price-icon:
   slot: 34
@@ -74,7 +74,7 @@ sell-price-icon:
   tax-charged-noprice: '&fTaxa: &c&l{tax}&c%'
   tax-charged: '&fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
   disabled-lore:
-  - '&8Desabilitado'
+  - '&cDesativado neste tipo de loja.'
 
 amount-icon:
   slot: 37

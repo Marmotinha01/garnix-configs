@@ -61,7 +61,7 @@ command:
 ranking:
   mode: 'MENU' # CHAT ou MENU
   chat:
-    format: '  &8#{position}º {lp_prefix}{player} &8▶ {symbol_color}{symbol}{primary_color}{balance}'
+    format: '  &8#{position} {lp_prefix}{player} &8▶ {symbol_color}{symbol}{primary_color}{balance}'
     empty: '  &7Nenhum jogador no ranking.'
     header:
       - ''
@@ -78,12 +78,12 @@ ranking:
       - 'XXXXXXXXX'
       - 'XXXXXXXXX'
     position-user:
-      display: '&8#{position}º {lp_prefix} {player}'
+      display: '&8#{position} {lp_prefix} {player}'
       lore:
         - '&fCoins: {symbol_color}{symbol}{primary_color}{balance}'
     empty-position-icon:
       material: 'BARRIER'
-      display: '&8#{position}º &7Ninguém'
+      display: '&8#{position} &7Ninguém'
     info-icon:
       slot: 40
       material: 'PAPER'

@@ -1,4 +1,4 @@
-title: Upgrades - {display}
+title: Evoluções - {display}
 rows: 4
 
 infinite-display: '&6∞'
@@ -10,7 +10,7 @@ mob-stack-icon:
   cost-line: ' &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
   next-lore:
   - '&7Aumenta o limite máximo'
-  - '&7de mobs stackados.'
+  - '&7de mobs empilhados.'
   - ''
   - ' &fNível: &7{current_level} &8➟ &a{next_level}'
   - ' &fStack: &7{current_stack} &8➟ &a{next_stack}'
@@ -21,7 +21,7 @@ mob-stack-icon:
   - '&aClique para evoluir.'
   max-lore:
   - '&7Aumenta o limite máximo'
-  - '&7de mobs stackados.'
+  - '&7de mobs empilhados.'
   - ''
   - ' &fNível: &7{current_level}'
   - ' &fStack: &7{current_stack}'
@@ -35,7 +35,7 @@ spawner-stack-icon:
   cost-line: ' &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
   next-lore:
   - '&7Aumenta o limite máximo'
-  - '&7de spawners stackados.'
+  - '&7de spawners empilhados.'
   - ''
   - ' &fNível: &7{current_level} &8➟ &a{next_level}'
   - ' &fStack: &7{current_stack} &8➟ &a{next_stack}'
@@ -46,7 +46,7 @@ spawner-stack-icon:
   - '&aClique para evoluir.'
   max-lore:
   - '&7Aumenta o limite máximo'
-  - '&7de spawners stackados.'
+  - '&7de spawners empilhados.'
   - ''
   - ' &fNível: &7{current_level}'
   - ' &fStack: &7{current_stack}'

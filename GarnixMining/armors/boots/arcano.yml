@@ -1,6 +1,6 @@
 item:
 # Arcano Boots
-  display: "&bBota Arcano"
+  display: "&bBota Arcana"
   material: LEATHER_BOOTS
   color: "#55FFFF"
   lore:
