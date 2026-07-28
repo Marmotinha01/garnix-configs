@@ -16,10 +16,10 @@ empty-slot-icon:
 
 active-lore-suffix:
 - ''
-- '&cClique para remover.'
+- ' &cAo remover &c&l50&c% do tempo '
+- ' &cdo booster será perdido. '
 - ''
-- '&7Você receberá apenas'
-- '&c50% &7do tempo restante.'
+- '&aClique para remover.'
 
 back-icon:
   slot: 31

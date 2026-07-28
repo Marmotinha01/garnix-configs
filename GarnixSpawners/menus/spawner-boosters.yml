@@ -7,7 +7,7 @@ drops-empty-icon:
   amount: 0
   display: '&cBooster de Drops'
   lore:
-  - '&7Nenhum booster ativo.'
+  - '&7Sem booster ativo aqui.'
 
 drops-active-icon:
   slot: 11
@@ -17,14 +17,18 @@ drops-active-icon:
   - HIDE_POTION_EFFECTS
   display: '&aBooster de Drops'
   lore:
-  - '&fBônus: &a{multiplier}'
-  - '&fDuração: &c{time_remaining}'
+  - '&7Use este booster para ter'
+  - '&7seus ganhos aumentados.'
   - ''
-  - '&fB. Esquerdo: &7Remover Booster'
+  - ' &8Informações: '
+  - ' &8▪ &fTipo: &aDrops '
+  - ' &8▪ &fBônus: &a{multiplier} '
+  - ' &8▪ &fDuração: &7{time_remaining} '
   - ''
-  - ' &cApenas &l50&c% do tempo do '
-  - ' &cbooster será devolvido. '
+  - ' &cAo remover &c&l50&c% do tempo '
+  - ' &cdo booster será perdido. '
   - ''
+  - '&aClique para remover.'
 
 heads-empty-icon:
   slot: 15
@@ -32,7 +36,7 @@ heads-empty-icon:
   amount: 0
   display: '&cBooster de Cabeças'
   lore:
-  - '&7Nenhum booster ativo.'
+  - '&7Sem booster ativo aqui.'
 
 heads-active-icon:
   slot: 15
@@ -42,14 +46,18 @@ heads-active-icon:
   - HIDE_POTION_EFFECTS
   display: '&aBooster de Cabeças'
   lore:
-  - '&fBônus: &a{multiplier}'
-  - '&fDuração: &c{time_remaining}'
+  - '&7Use este booster para ter'
+  - '&7seus ganhos aumentados.'
   - ''
-  - '&fB. Esquerdo: &7Remover Booster'
+  - ' &8Informações: '
+  - ' &8▪ &fTipo: &aCabeças '
+  - ' &8▪ &fBônus: &a{multiplier} '
+  - ' &8▪ &fDuração: &7{time_remaining} '
   - ''
-  - ' &cApenas &l50&c% do tempo do '
-  - ' &cbooster será devolvido. '
+  - ' &cAo remover &c&l50&c% do tempo '
+  - ' &cdo booster será perdido. '
   - ''
+  - '&aClique para remover.'
 
 back-icon:
   slot: 31

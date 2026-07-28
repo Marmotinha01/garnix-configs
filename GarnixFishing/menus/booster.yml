@@ -20,8 +20,8 @@ empty-slot-icon:
 # Appended below the booster-item lore for each active booster.
 active-lore-suffix:
 - ''
-- ' &cAo remover &c&l50&c% do tempo'
-- ' &cdo booster será perdido.'
+- ' &cAo remover &c&l50&c% do tempo '
+- ' &cdo booster será perdido. '
 - ''
 - '&aClique para remover.'
 
