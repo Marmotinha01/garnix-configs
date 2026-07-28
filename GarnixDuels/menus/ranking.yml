@@ -23,8 +23,8 @@ empty-position-icon:
 filters:
   wins-display: Vitórias
   total-display: Partidas
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8► &7{display} '
+  line-selected: ' &a► &f{display} '
 
 info-icon:
   slot: 40

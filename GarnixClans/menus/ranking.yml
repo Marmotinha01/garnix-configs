@@ -16,11 +16,11 @@ clan-icon:
   - HIDE_POTION_EFFECTS
   display: '&8#{position} &r{tag} &f{clan}'
   kills-lore:
-  - ' &8 ▪ &fAbates: &a{kills}'
+  - '&fAbates: &a{kills}'
   deaths-lore:
-  - ' &8 ▪ &fMortes: &c{deaths}'
+  - '&fMortes: &c{deaths}'
   kdr-lore:
-  - ' &8 ▪ &fKDR: &e{kdr}'
+  - '&fKDR: &e{kdr}'
 
 empty-position-icon:
   material: BARRIER
@@ -30,8 +30,8 @@ filters:
   kills-display: Abates
   deaths-display: Mortes
   kdr-display: KDR
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8► &7{display} '
+  line-selected: ' &a► &f{display} '
 
 info-icon:
   slot: 40

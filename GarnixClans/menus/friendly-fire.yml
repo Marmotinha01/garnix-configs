@@ -12,7 +12,7 @@ members-on-icon:
   - '&7Membros do clan podem'
   - '&7causar dano uns nos outros.'
   - ''
-  - ' &8 ▪ &fEstado: {members_state}'
+  - ' &8 ▪ &fEstado: {members_state} '
   - ''
   - '&cClique para desativar.'
 
@@ -26,7 +26,7 @@ members-off-icon:
   - '&7Membros do clan estão'
   - '&7protegidos entre si.'
   - ''
-  - ' &8 ▪ &fEstado: {members_state}'
+  - ' &8 ▪ &fEstado: {members_state} '
   - ''
   - '&aClique para ativar.'
 
@@ -44,7 +44,7 @@ allies-on-icon:
   - '&7Cada clan controla apenas a'
   - '&7proteção dos próprios membros.'
   - ''
-  - ' &8 ▪ &fEstado: {allies_state}'
+  - ' &8 ▪ &fEstado: {allies_state} '
   - ''
   - '&cClique para desativar.'
 
@@ -61,7 +61,7 @@ allies-off-icon:
   - '&7Cada clan controla apenas a'
   - '&7proteção dos próprios membros.'
   - ''
-  - ' &8 ▪ &fEstado: {allies_state}'
+  - ' &8 ▪ &fEstado: {allies_state} '
   - ''
   - '&aClique para ativar.'
 

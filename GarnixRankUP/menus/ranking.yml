@@ -12,7 +12,7 @@ shape:
 user-icon:
   display: '&8#{position} {lp_suffix} {player}'
   rank-lore:
-  - '&fRank: {rank_tag}'
+  - '&fRank: {rank_color}{rank_name}'
   prestige-lore:
   - '&fPrestígio: &b✰{prestige}'
 
@@ -23,8 +23,8 @@ empty-position-icon:
 filters:
   rank-display: Maior Rank
   prestige-display: Maior Prestígio
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8► &7{display} '
+  line-selected: ' &a► &f{display} '
 
 info-icon:
   slot: 40

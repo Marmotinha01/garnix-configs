@@ -20,34 +20,40 @@ empty-icon:
 join-entry:
   display: '&f{date}'
   lore:
-  - ' &8 ▪ &a{player} &7entrou no clan.'
+  - ' &8 ▪ &a{player} &7entrou no clan. '
+  - ''
 
 leave-entry:
   display: '&f{date}'
   lore:
-  - ' &8 ▪ &e{player} &7saiu do clan.'
+  - ' &8 ▪ &e{player} &7saiu do clan. '
+  - ''
 
 kick-entry:
   display: '&f{date}'
   lore:
-  - ' &8 ▪ &c{player} &7foi expulso do clan.'
-  - ' &8 ▪ &fPor: &7{actor}'
+  - ' &8 ▪ &c{player} &7foi expulso do clan. '
+  - ' &8 ▪ &fPor: &7{actor} '
+  - ''
 
 promote-entry:
   display: '&f{date}'
   lore:
-  - ' &8 ▪ &b{player} &7foi promovido.'
+  - ' &8 ▪ &b{player} &7foi promovido. '
+  - ''
 
 demote-entry:
   display: '&f{date}'
   lore:
-  - ' &8 ▪ &6{player} &7foi rebaixado.'
+  - ' &8 ▪ &6{player} &7foi rebaixado. '
+  - ''
 
 leader-entry:
   display: '&f{date}'
   lore:
-  - ' &8 ▪ &d{player} &7assumiu a liderança.'
-  - ' &8 ▪ &fAnterior: &7{actor}'
+  - ' &8 ▪ &d{player} &7assumiu a liderança. '
+  - ' &8 ▪ &fAnterior: &7{actor} '
+  - ''
 
 back-icon:
   slot: 40

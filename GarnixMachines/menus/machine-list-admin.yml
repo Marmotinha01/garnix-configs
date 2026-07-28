@@ -25,7 +25,8 @@ stats-icon:
   - '&7ativas no servidor.'
   - ''
   - ' &8 ▪ &fTotal de máquinas: &7{total_machines} '
-  - ' &8 ▪ &fDonos únicos: &7{unique_owners}'
+  - ' &8 ▪ &fDonos únicos: &7{unique_owners} '
+  - ''
 
 machine-template:
   display: '&a{display} &7(x{stack})'
@@ -33,9 +34,9 @@ machine-template:
   - '&7Máquina instalada por um'
   - '&7jogador do servidor.'
   - ''
-  - ' &8 ▪ &fDono: &7{owner}'
-  - ' &8 ▪ &fTerreno: &7{plot_id}'
-  - ' &8 ▪ &fLocal: &7{world} {x},{y},{z}'
-  - ' &8 ▪ &fCombustível: &7{fuel_display}'
+  - ' &8 ▪ &fDono: &7{owner} '
+  - ' &8 ▪ &fTerreno: &7{plot_id} '
+  - ' &8 ▪ &fLocal: &7{world} {x},{y},{z} '
+  - ' &8 ▪ &fCombustível: &7{fuel_display} '
   - ''
   - '&aClique para teleportar.'

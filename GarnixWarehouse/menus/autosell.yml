@@ -54,9 +54,9 @@ upgrade-icon:
   - '&7entre cada venda de cactos.'
   - ''
   - ' &8Próxima evolução:'
-  - ' &8 ▪ &e{current}s &8➟ &a{next}s &7({cost}&7)'
+  - ' &8 ▪ &e{current}s &8➟ &a{next}s &7({cost}&7) '
   - ''
-  - ' &8 ▪ &fVenda em: &7{remaining}s'
+  - ' &8 ▪ &fVenda em: &7{remaining}s '
   - ''
   - '&6Clique para evoluir.'
   lore-cant:
@@ -66,9 +66,10 @@ upgrade-icon:
   - ' &8Próxima evolução:'
   - ' &8 ▪ &e{current}s &8➟ &a{next}s &7({cost}&7) '
   - ''
-  - ' &8 ▪ &fPróxima venda: &7{remaining}s'
+  - ' &8 ▪ &fPróxima venda: &7{remaining}s '
   - ''
-  - ' &8 ▾ &cSaldo insuficiente.'
+  - ' &8 ▾ &cSaldo insuficiente. '
+  - ''
 
 upgrade-max-icon:
   slot: 11
@@ -81,7 +82,8 @@ upgrade-max-icon:
   - ' &8 ▪ &fPróxima venda: &e{remaining}s '
   - ' &8 ▪ &fTempo entre vendas: &a{interval}s '
   - ''
-  - ' &8 ▾ &cEvolução máxima atingida.'
+  - ' &8 ▾ &cEvolução máxima atingida. '
+  - ''
 
 back-icon:
   slot: 31

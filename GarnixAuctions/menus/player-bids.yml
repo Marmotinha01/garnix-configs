@@ -26,28 +26,30 @@ back-icon:
 
 bid-winning-lore:
 - ''
-- ' &8 ▪ &fStatus: &aVencendo'
+- ' &8 ▪ &fStatus: &aVencendo '
 - ' &8 ▪ &fSeu lance: {currency_prefix}{amount} '
 - ''
-- ' &8 ▪ &fTempo restante: &e{time_remaining}'
+- ' &8 ▪ &fTempo restante: &e{time_remaining} '
 - ''
 - '&aClique para acessar.'
 
 bid-losing-lore:
 - ''
-- ' &8 ▪ &fStatus: &cSuperado'
+- ' &8 ▪ &fStatus: &cSuperado '
 - ' &8 ▪ &fSeu lance: {currency_prefix}{amount} '
 - ''
-- ' &8 ▪ &fTempo restante: &e{time_remaining}'
+- ' &8 ▪ &fTempo restante: &e{time_remaining} '
 - ''
 - '&eClique para dar novo lance.'
 
 bid-won-lore:
 - ''
-- ' &8 ▪ &fStatus: &aVenceu'
+- ' &8 ▪ &fStatus: &aVenceu '
 - ' &8 ▪ &fSeu lance: {currency_prefix}{amount} '
+- ''
 
 bid-lost-lore:
 - ''
-- ' &8 ▪ &fStatus: &cPerdeu'
+- ' &8 ▪ &fStatus: &cPerdeu '
 - ' &8 ▪ &fSeu lance: {currency_prefix}{amount} '
+- ''

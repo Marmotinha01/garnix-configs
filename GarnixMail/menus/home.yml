@@ -24,7 +24,8 @@ broken-icon:
   - '&7Este item não pôde ser'
   - '&7carregado do correio.'
   - ''
-  - ' &8 ▾ &cContate um administrador.'
+  - ' &8 ▾ &cContate um administrador. '
+  - ''
 
 claim-all-icon:
   slot: 49
@@ -44,7 +45,8 @@ claim-all-empty-icon:
   - '&7Recolha de uma vez tudo'
   - '&7que está no seu correio.'
   - ''
-  - ' &8 ▾ &cNada para resgatar.'
+  - ' &8 ▾ &cNada para resgatar. '
+  - ''
 
 preferences-icon:
   slot: 51

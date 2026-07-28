@@ -35,7 +35,7 @@ spawner-item:
   - '&7Gera mobs sem parar'
   - '&7dentro do seu terreno.'
   - ''
-  - ' &8 ▪ &fQuantia: &7{amount}'
+  - ' &8 ▪ &fQuantia: &7{amount} '
   - ''
   - '&aColoque no seu terreno.'
 
@@ -45,7 +45,7 @@ head-item:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
-  - ' &8 ▪ &fQuantia: &e{amount}'
+  - ' &8 ▪ &fQuantia: &e{amount} '
   - ''
   - '&aClique para armazenar.'
 

@@ -9,14 +9,15 @@ player-icon:
   - '&7Suas estatísticas dentro'
   - '&7do clan {tag}&7.'
   - ''
-  - ' &8 ▪ &fCargo: &r{role}'
-  - ' &8 ▪ &fEntrou em: &7{joined}'
+  - ' &8 ▪ &fCargo: &r{role} '
+  - ' &8 ▪ &fEntrou em: &7{joined} '
   - ''
-  - ' &8 ▪ &fAbates civis: &7{kills_civil}'
-  - ' &8 ▪ &fAbates neutros: &7{kills_neutral}'
-  - ' &8 ▪ &fAbates rivais: &7{kills_rival}'
-  - ' &8 ▪ &fMortes: &c{deaths}'
-  - ' &8 ▪ &fKDR: &a{kdr}'
+  - ' &8 ▪ &fAbates civis: &7{kills_civil} '
+  - ' &8 ▪ &fAbates neutros: &7{kills_neutral} '
+  - ' &8 ▪ &fAbates rivais: &7{kills_rival} '
+  - ' &8 ▪ &fMortes: &c{deaths} '
+  - ' &8 ▪ &fKDR: &a{kdr} '
+  - ''
 
 clan-icon:
   slot: 13
@@ -29,12 +30,13 @@ clan-icon:
   - '&7Informações gerais do'
   - '&7seu clan.'
   - ''
-  - ' &8 ▪ &fLíder: &7{leader}'
-  - ' &8 ▪ &fMembros: &a{members}&8/&c{max_members}'
-  - ' &8 ▪ &fOnline agora: &a{online}'
-  - ' &8 ▪ &fVagas restantes: &7{slots}'
+  - ' &8 ▪ &fLíder: &7{leader} '
+  - ' &8 ▪ &fMembros: &a{members}&8/&c{max_members} '
+  - ' &8 ▪ &fOnline agora: &a{online} '
+  - ' &8 ▪ &fVagas restantes: &7{slots} '
   - ''
-  - ' &8 ▪ &fCriado em: &7{created}'
+  - ' &8 ▪ &fCriado em: &7{created} '
+  - ''
 
 bulletin-icon:
   slot: 16
@@ -75,7 +77,7 @@ members-icon:
   - '&7Gerencie quem faz parte do'
   - '&7seu clan e quem pode entrar.'
   - ''
-  - ' &8 ▪ &fMembros: &a{members}&8/&c{max_members}'
+  - ' &8 ▪ &fMembros: &a{members}&8/&c{max_members} '
   - ''
   - '&bClique para acessar.'
 
@@ -87,7 +89,7 @@ allies-icon:
   - '&7Clans aliados que lutam ao'
   - '&7lado do seu em combate.'
   - ''
-  - ' &8 ▪ &fAliados: &7{allies}'
+  - ' &8 ▪ &fAliados: &7{allies} '
   - ''
   - '&dClique para acessar.'
 
@@ -101,7 +103,7 @@ rivals-icon:
   - '&7Clans marcados como inimigos'
   - '&7de guerra pelo seu clan.'
   - ''
-  - ' &8 ▪ &fRivais: &7{rivals}'
+  - ' &8 ▪ &fRivais: &7{rivals} '
   - ''
   - '&cClique para acessar.'
 

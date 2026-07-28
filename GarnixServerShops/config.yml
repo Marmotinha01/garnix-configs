@@ -39,9 +39,10 @@ ui:
     locked-hidden-date: §k??/??/???? ??:??
     locked-lore:
     - ''
-    - ' &8 ▪ &fLibera em: &7{release-date}'
+    - ' &8 ▪ &fLibera em: &7{release-date} '
     - ''
-    - ' &8 ▾ &cItem ainda bloqueado.'
+    - ' &8 ▾ &cItem ainda bloqueado. '
+    - ''
 
     product-lore:
     - ''
@@ -70,9 +71,10 @@ ui:
     locked-hidden-date: §k??/??/???? ??:??
     locked-lore:
     - ''
-    - ' &8 ▪ &fLibera em: &7{release-date}'
+    - ' &8 ▪ &fLibera em: &7{release-date} '
     - ''
-    - ' &8 ▾ &cItem ainda bloqueado.'
+    - ' &8 ▾ &cItem ainda bloqueado. '
+    - ''
 
     product-lore:
     - ''

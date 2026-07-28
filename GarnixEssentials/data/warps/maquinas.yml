@@ -20,7 +20,8 @@ locked-icon:
   - '&cAcesso rápido:'
   - '&8 ▪ &f/maquinas'
   - ''
-  - ' &8 ▾ &cVocê não tem permissão.'
+  - ' &8 ▾ &cVocê não tem permissão. '
+  - ''
 permission: ''
 slot: 33
 messages:

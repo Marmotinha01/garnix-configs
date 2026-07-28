@@ -30,8 +30,8 @@ filters:
   spent-display: Total Investido
   bought-display: Comprados
   placed-display: Colocados
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8► &7{display} '
+  line-selected: ' &a► &f{display} '
 
 info-icon:
   slot: 40

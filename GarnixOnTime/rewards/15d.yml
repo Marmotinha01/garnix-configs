@@ -9,8 +9,11 @@ reward-icon:
     - '&7Fique online e resgate'
     - '&7a recompensa deste marco.'
     - ''
+    - ' &8 ▪ &fNecessário: &7{required_time} online '
+    - ''
     - ' &8Recompensas:'
-    - ' &8 ▪ &f&l1&fx &4Chave Bosses'
+    - ' &8 ▪ &f&l1&fx &4Chave Bosses '
+    - ''
 
 rewards:
   coins:

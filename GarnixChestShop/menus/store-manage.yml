@@ -31,7 +31,7 @@ description-icon:
   - '&7O texto que aparece na'
   - '&7listagem de lojas.'
   - ''
-  - ' &8 ▪ &fAtual: &7{description}'
+  - ' &8 ▪ &fAtual: &7{description} '
   - ''
   - '&aClique para alterar.'
 
@@ -56,6 +56,7 @@ info-icon:
   - ' &8 ▪ &fAvaliação: &6{rating}★ '
   - ' &8 ▪ &fVisitas: &7{visits} '
   - ' &8 ▪ &fCriada em: &7{created} '
+  - ''
 
 delete-icon:
   slot: 16

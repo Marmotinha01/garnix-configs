@@ -9,10 +9,11 @@ info-icon:
   - '&7Integrante do seu clan, com'
   - '&7cargo e desempenho próprios.'
   - ''
-  - ' &8 ▪ &fCargo: &r{role}'
-  - ' &8 ▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths}'
-  - ' &8 ▪ &fKDR: &a{kdr}'
-  - ' &8 ▪ &fEntrou em: &7{joined}'
+  - ' &8 ▪ &fCargo: &r{role} '
+  - ' &8 ▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths} '
+  - ' &8 ▪ &fKDR: &a{kdr} '
+  - ' &8 ▪ &fEntrou em: &7{joined} '
+  - ''
 
 promote-icon:
   slot: 11

@@ -10,7 +10,7 @@ shape:
 
 empty-icon:
   slot: 22
-  material: BOWL
+  material: BARRIER
   amount: 0
   display: '&cVazio'
   lore:
@@ -18,7 +18,7 @@ empty-icon:
 
 my-listings-icon:
   slot: 48
-  material: EMPTY_MAP
+  material: BOOK_AND_QUILL
   display: '&aSeus Anúncios'
   lore:
   - '&7Os itens que você colocou'
@@ -29,7 +29,7 @@ my-listings-icon:
 # Fecha o menu e explica no chat como anunciar (mensagem: sell.how-to).
 info-icon:
   slot: 50
-  material: BOOK
+  material: PAPER
   display: '&eComo Vender'
   lore:
   - '&7Anuncie o item que está'

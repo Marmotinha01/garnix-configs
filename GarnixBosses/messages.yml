@@ -15,7 +15,7 @@ boss-item:
   merge-nothing: '&cNão há outros bosses para juntar.'
 
 sword:
-  required: '&cVocê precisa de uma &4Matadora &cpara atacar bosses. &8(&c/matadora&8)'
+  required: '&cUse uma Matadora para atacar bosses. &7(/matadora)'
   received: '&aVocê recebeu uma &cMatadora&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
   mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'

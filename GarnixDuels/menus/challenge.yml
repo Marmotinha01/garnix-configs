@@ -18,7 +18,7 @@ opponent-icon:
   - '&7Escolha quem você quer'
   - '&7enfrentar na arena.'
   - ''
-  - ' &8 ▪ &fSelecionado: &7{opponent}'
+  - ' &8 ▪ &fSelecionado: &7{opponent} '
   - ''
   - '&aClique para trocar.'
 
@@ -30,14 +30,14 @@ bet-icon:
   - '&7Coloque uma quantia em'
   - '&7jogo para o vencedor.'
   - ''
-  - ' &8 ▪ &fStatus: &cDesativada'
+  - ' &8 ▪ &fStatus: &cDesativada '
   - ''
   - '&aClique para ativar.'
   enabled-lore:
   - '&7Coloque uma quantia em'
   - '&7jogo para o vencedor.'
   - ''
-  - ' &8 ▪ &fStatus: &aAtivada'
+  - ' &8 ▪ &fStatus: &aAtivada '
   - ''
   - '&aClique para desativar.'
 
@@ -62,7 +62,7 @@ amount-icon:
   - '&7Quanto cada lado arrisca'
   - '&7neste duelo.'
   - ''
-  - ' &8 ▪ &fValor: {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  - ' &8 ▪ &fValor: {symbol_color}{symbol}{primary_color}{amount} {currency} '
   - ''
   - '&aClique para alterar.'
 
@@ -74,7 +74,7 @@ mode-icon:
   - '&7O kit e as regras que'
   - '&7valem neste duelo.'
   - ''
-  - ' &8 ▪ &fModo: &7{mode}'
+  - ' &8 ▪ &fModo: &7{mode} '
   - ''
   - '&aClique para alternar.'
 

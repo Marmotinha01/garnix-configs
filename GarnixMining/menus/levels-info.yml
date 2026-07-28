@@ -27,6 +27,7 @@ level-icon:
   - ''
   - ' &8Composição da mina: '
   - '{block_list}'
+  - ''
 
 block-entry: ' &8 ▴ &f{block_name} &c{chance} '
 reward-separator: '&8▪'

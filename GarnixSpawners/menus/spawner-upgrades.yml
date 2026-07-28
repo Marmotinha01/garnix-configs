@@ -7,13 +7,13 @@ mob-stack-icon:
   slot: 11
   material: EGG
   display: '&aStack de Mobs'
-  cost-line: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  cost-line: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency} '
   next-lore:
   - '&7Aumenta o limite máximo'
   - '&7de mobs empilhados.'
   - ''
-  - ' &8 ▪ &fNível: &7{current_level} &8➟ &a{next_level}'
-  - ' &8 ▪ &fStack: &7{current_stack} &8➟ &a{next_stack}'
+  - ' &8 ▪ &fNível: &7{current_level} &8➟ &a{next_level} '
+  - ' &8 ▪ &fStack: &7{current_stack} &8➟ &a{next_stack} '
   - ''
   - ' &8Custos da evolução: '
   - '{costs}'
@@ -23,22 +23,23 @@ mob-stack-icon:
   - '&7Aumenta o limite máximo'
   - '&7de mobs empilhados.'
   - ''
-  - ' &8 ▪ &fNível: &7{current_level}'
-  - ' &8 ▪ &fStack: &7{current_stack}'
+  - ' &8 ▪ &fNível: &7{current_level} '
+  - ' &8 ▪ &fStack: &7{current_stack} '
   - ''
-  - ' &8 ▾ &cNível máximo atingido.'
+  - ' &8 ▾ &cNível máximo atingido. '
+  - ''
 
 spawner-stack-icon:
   slot: 13
   material: MOB_SPAWNER
   display: '&aStack de Spawners'
-  cost-line: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  cost-line: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency} '
   next-lore:
   - '&7Aumenta o limite máximo'
   - '&7de spawners empilhados.'
   - ''
-  - ' &8 ▪ &fNível: &7{current_level} &8➟ &a{next_level}'
-  - ' &8 ▪ &fStack: &7{current_stack} &8➟ &a{next_stack}'
+  - ' &8 ▪ &fNível: &7{current_level} &8➟ &a{next_level} '
+  - ' &8 ▪ &fStack: &7{current_stack} &8➟ &a{next_stack} '
   - ''
   - ' &8Custos da evolução: '
   - '{costs}'
@@ -48,22 +49,23 @@ spawner-stack-icon:
   - '&7Aumenta o limite máximo'
   - '&7de spawners empilhados.'
   - ''
-  - ' &8 ▪ &fNível: &7{current_level}'
-  - ' &8 ▪ &fStack: &7{current_stack}'
+  - ' &8 ▪ &fNível: &7{current_level} '
+  - ' &8 ▪ &fStack: &7{current_stack} '
   - ''
-  - ' &8 ▾ &cNível máximo atingido.'
+  - ' &8 ▾ &cNível máximo atingido. '
+  - ''
 
 speed-icon:
   slot: 15
   material: SUGAR
   display: '&aVelocidade de Spawn'
-  cost-line: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  cost-line: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency} '
   next-lore:
   - '&7Diminui o tempo entre'
   - '&7cada spawn de mobs.'
   - ''
-  - ' &8 ▪ &fNível: &7{current_level} &8➟ &a{next_level}'
-  - ' &8 ▪ &fVelocidade: &7{current_speed} &8➟ &a{next_speed}'
+  - ' &8 ▪ &fNível: &7{current_level} &8➟ &a{next_level} '
+  - ' &8 ▪ &fVelocidade: &7{current_speed} &8➟ &a{next_speed} '
   - ''
   - ' &8Custos da evolução: '
   - '{costs}'
@@ -73,10 +75,11 @@ speed-icon:
   - '&7Diminui o tempo entre'
   - '&7cada spawn de mobs.'
   - ''
-  - ' &8 ▪ &fNível: &7{current_level}'
-  - ' &8 ▪ &fVelocidade: &7{current_speed}'
+  - ' &8 ▪ &fNível: &7{current_level} '
+  - ' &8 ▪ &fVelocidade: &7{current_speed} '
   - ''
-  - ' &8 ▾ &cNível máximo atingido.'
+  - ' &8 ▾ &cNível máximo atingido. '
+  - ''
 
 back-icon:
   slot: 31

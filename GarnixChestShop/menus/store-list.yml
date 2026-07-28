@@ -21,7 +21,7 @@ ranking-icon:
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7As lojas mais movimentadas'
+  - '&7As lojas mais famosas'
   - '&7de todo o servidor.'
   - ''
   - '&6Clique para acessar.'
@@ -41,8 +41,8 @@ sort-icon:
 filters:
   most-visited-display: 'Mais Visitadas '
   best-rated-display: 'Melhor Avaliadas '
-  line: ' &8 ► &7{display}'
-  line-selected: ' &a ► &f{display}'
+  line: ' &8 ► &7{display} '
+  line-selected: ' &a ► &f{display} '
 
 # Ícone contextual da sua loja (slot 51). Só um dos três é exibido:
 # - my-store-icon: você já tem uma loja → abre o gerenciamento.
@@ -81,12 +81,14 @@ vip-store-icon:
 
 store-item-lore:
 - ''
+- ' &8Informações: '
 - ' &8 ▪ &fDono: &7{owner} '
 - ' &8 ▪ &fStatus: {status} '
 - ''
 - ' &8Descrição: '
 - ' &7{description} '
 - ''
+- ' &8Estatísticas: '
 - ' &8 ▪ &fVisitas: &7{visits} '
 - ' &8 ▪ &fReputação: &6{rating}★ '
 - ''
@@ -96,12 +98,14 @@ store-item-lore:
 
 store-item-owner-lore:
 - ''
+- ' &8Informações: '
 - ' &8 ▪ &fDono: &7{owner} '
 - ' &8 ▪ &fStatus: {status} '
 - ''
 - ' &8Descrição: '
 - ' &7{description} '
 - ''
+- ' &8Estatísticas: '
 - ' &8 ▪ &fVisitas: &7{visits} '
 - ' &8 ▪ &fReputação: &6{rating}★ '
 - ''

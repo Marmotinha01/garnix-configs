@@ -23,8 +23,8 @@ empty-position-icon:
 filters:
   total-display: Total Pescado
   time-display: Tempo Pescado
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8► &7{display} '
+  line-selected: ' &a► &f{display} '
 
 info-icon:
   slot: 40

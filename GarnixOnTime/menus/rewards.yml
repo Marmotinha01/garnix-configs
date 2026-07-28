@@ -8,17 +8,14 @@ shape:
 - XXXXXXXXX
 - XXXXXXXXX
 
+# Anexado ABAIXO da lore do reward-icon. A linha de requisito não vive aqui: ela
+# fica na lore de cada rewards/*.yml, acima do bloco de recompensas.
 status:
   delivered:
-  - ''
-  - ' &8 ▪ &fNecessário: &7{required_time} online'
-  - ''
-  - '&aRecompensa já resgatada.'
+  - '&eRecompensa já recebida.'
   locked:
+  - ' &8 ▾ &cRecompensa ainda bloqueada. '
   - ''
-  - ' &8 ▪ &fNecessário: &7{required_time} online'
-  - ''
-  - ' &8 ▾ &cRecompensa ainda bloqueada.'
 
 back-icon:
   slot: 49

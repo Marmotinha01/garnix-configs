@@ -8,8 +8,9 @@ player-head:
   - '&7Confira o seu desempenho'
   - '&7enfrentando os bosses.'
   - ''
-  - ' &8 ▪ &fBosses abatidos: &c{total_kills}'
-  - ' &8 ▪ &fDano total: &4❤{total_damage}'
+  - ' &8 ▪ &fBosses abatidos: &c{total_kills} '
+  - ' &8 ▪ &fDano total: &4❤{total_damage} '
+  - ''
 
 bosses-icon:
   slot: 20

@@ -9,10 +9,10 @@ shape:
 - XXXXXXXXX
 
 formats:
-  cost: ' &8 ▪ {symbol}{formatted_value} {currency_name}'
-  cost-discount: ' &8 ▪ &8{symbol_clean}&7&m{old_value}&r &f➟ {symbol}{formatted_value} {currency_name}'
-  drop: ' &8 ▪ {symbol}{formatted_value} {currency_name}'
-  drop-bonus: ' &8 ▪ &8{symbol_clean}&7&m{old_value}&r &f➟{symbol}{formatted_value} {currency_name}'
+  cost: ' &8 ▪ {symbol}{formatted_value} {currency_name} '
+  cost-discount: ' &8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
+  drop: ' &8 ▪ {symbol}{formatted_value} {currency_name} '
+  drop-bonus: ' &8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
 
 info-icon:
   slot: 3
@@ -26,6 +26,7 @@ info-icon:
   - ' &8 ▪ &fComprados: &7x{total_bought} '
   - ''
   - '{entity_lines}'
+  - ''
   entity-line: ' &8 ▪ &f{entity_display} &7(x{entity_bought}) '
   spent-line: '   &8 ▪ {symbol}{color}{value} {display} '
   entity-empty: ' &8 ▾ &cNenhuma máquina comprada. '
@@ -47,18 +48,20 @@ icons:
     - '&7Esta máquina ainda não'
     - '&7foi liberada na loja.'
     - ''
-    - ' &8 ▪ &fLibera: &7{date}'
+    - ' &8 ▪ &fLibera: &7{date} '
     - ''
-    - ' &8 ▾ &cMáquina ainda bloqueada.'
+    - ' &8 ▾ &cMáquina ainda bloqueada. '
+    - ''
   locked:
     display: '&cMáquina Bloqueada'
     lore:
     - '&7O seu rank ainda não'
     - '&7alcança esta máquina.'
     - ''
-    - ' &8 ▪ &fRank necessário: {rank}'
+    - ' &8 ▪ &fRank necessário: {rank} '
     - ''
-    - ' &8 ▾ &cMáquina ainda bloqueada.'
+    - ' &8 ▾ &cMáquina ainda bloqueada. '
+    - ''
   unlocked:
     lore:
     - ''
@@ -75,8 +78,9 @@ icons:
   unlocked-discount:
     lore:
     - ''
-    - ' &8 ▪ &fDesconto VIP: &c&l{discount_value}&c% {discount_tag}'
-    - ' &8 ▪ &fBônus VIP: &c&l{bonus_value}&c% {bonus_tag}'
+    - ' &8Benefícios VIP:'
+    - ' &8 ▪ &fDesconto VIP: &c&l{discount_value}&c% {discount_tag} '
+    - ' &8 ▪ &fBônus VIP: &c&l{bonus_value}&c% {bonus_tag} '
     - ''
     - ' &8Custos de compra:'
     - '{costs}'

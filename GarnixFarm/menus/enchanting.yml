@@ -14,8 +14,8 @@ option-1:
   - '&7Sobe o encantamento em'
   - '&71 nível de uma só vez.'
   - ''
-  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
-  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&aClique para evoluir.'
 
@@ -29,8 +29,8 @@ option-10:
   - '&7Sobe o encantamento em'
   - '&710 níveis de uma só vez.'
   - ''
-  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
-  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&aClique para evoluir.'
 
@@ -44,8 +44,8 @@ option-25:
   - '&7Sobe o encantamento em'
   - '&725 níveis de uma só vez.'
   - ''
-  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
-  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&aClique para evoluir.'
 
@@ -59,8 +59,8 @@ option-50:
   - '&7Sobe o encantamento em'
   - '&750 níveis de uma só vez.'
   - ''
-  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
-  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&aClique para evoluir.'
 
@@ -73,8 +73,8 @@ option-max:
   - '&7Sobe o encantamento até'
   - '&7o nível máximo possível.'
   - ''
-  - ' &8 ▪ &fNível: &7{current} &8─ &2{target}'
-  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &2{target} '
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&2Clique para evoluir.'
 
@@ -95,10 +95,11 @@ cant-afford:
   - '&7Faltam sementes no saldo'
   - '&7para evoluir este nível.'
   - ''
-  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
-  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
-  - ' &8 ▾ &cSaldo insuficiente.'
+  - ' &8 ▾ &cSaldo insuficiente. '
+  - ''
 
 # ── Excede o máximo ───────────────────────────────────────────────
 option-exceeded:
@@ -109,7 +110,8 @@ option-exceeded:
   - '&7Esta quantidade ultrapassa'
   - '&7o nível máximo permitido.'
   - ''
-  - ' &8 ▾ &7Use &2Evoluir ao Máximo&7.'
+  - ' &8 ▾ &7Use &2Evoluir ao Máximo&7. '
+  - ''
 
 titles-enabled:
   slot: 29

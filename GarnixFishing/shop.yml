@@ -12,4 +12,5 @@ products:
       material: PAPER
       display: '&bLimite de Spawner'
       lore:
-      - ' &8 ▪ &fQuantia: &71.5K'
+      - ' &8 ▪ &fQuantia: &71.5K '
+      - ''

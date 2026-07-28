@@ -19,14 +19,16 @@ empty-icon:
 deposit-entry:
   display: '&aDepositado &f+{amount}'
   lore:
-  - ' &8 ▪ &fPor: &7{player}'
-  - ' &8 ▪ &fQuando: &7{date}'
+  - ' &8 ▪ &fPor: &7{player} '
+  - ' &8 ▪ &fQuando: &7{date} '
+  - ''
 
 withdraw-entry:
   display: '&cRetirado &f-{amount}'
   lore:
-  - ' &8 ▪ &fPor: &7{player}'
-  - ' &8 ▪ &fQuando: &7{date}'
+  - ' &8 ▪ &fPor: &7{player} '
+  - ' &8 ▪ &fQuando: &7{date} '
+  - ''
 
 back-icon:
   slot: 40

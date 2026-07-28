@@ -10,8 +10,8 @@ rename-icon:
   - '&7Troque o nome que este'
   - '&7baú mostra na lista.'
   - ''
-  - ' &8 ▪ &fAtual: &r{display}'
-  - ' &8 ▪ &fLimite: &7{max} caracteres'
+  - ' &8 ▪ &fAtual: &r{display} '
+  - ' &8 ▪ &fLimite: &7{max} caracteres '
   - ''
   - '&eClique para renomear.'
 
@@ -23,9 +23,9 @@ expand-icon:
   - '&7Ganhe mais uma linha de'
   - '&7espaço dentro deste baú.'
   - ''
-  - ' &8 ▪ &fLinhas atuais: &7{rows}'
-  - ' &8 ▪ &fPróxima linha: &a{next}&8/&c{max}'
-  - ' &8 ▪ &fCusto: &7{cost} {currency}'
+  - ' &8 ▪ &fLinhas atuais: &7{rows} '
+  - ' &8 ▪ &fPróxima linha: &a{next}&8/&c{max} '
+  - ' &8 ▪ &fCusto: &7{cost} {currency} '
   - ''
   - '&aClique para expandir.'
   # Exibido quando o baú já está no tamanho máximo.
@@ -33,9 +33,10 @@ expand-icon:
   - '&7Ganhe mais uma linha de'
   - '&7espaço dentro deste baú.'
   - ''
-  - ' &8 ▪ &fLinhas: &a{rows}&8/&c{max}'
+  - ' &8 ▪ &fLinhas: &a{rows}&8/&c{max} '
   - ''
-  - ' &8 ▾ &cTamanho máximo atingido.'
+  - ' &8 ▾ &cTamanho máximo atingido. '
+  - ''
 
 change-icon:
   slot: 15

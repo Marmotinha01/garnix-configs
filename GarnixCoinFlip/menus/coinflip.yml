@@ -10,7 +10,7 @@ shape:
 
 empty-icon:
   slot: 22
-  material: BOWL
+  material: BARRIER
   amount: 0
   display: '&cVazio'
   lore:
@@ -18,7 +18,7 @@ empty-icon:
 
 create-icon:
   slot: 47
-  material: NETHER_STAR
+  material: EMERALD
   display: '&aCriar Desafio'
   lore:
   - '&7Aposte um valor e desafie'
@@ -28,7 +28,7 @@ create-icon:
 
 my-challenges-icon:
   slot: 49
-  material: EMPTY_MAP
+  material: BOOK_AND_QUILL
   display: '&aSeus Desafios'
   lore:
   - '&7Os desafios que você'

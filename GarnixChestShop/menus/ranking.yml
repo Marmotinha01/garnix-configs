@@ -23,8 +23,8 @@ empty-position-icon:
 filters:
   visits-display: Mais Visitadas
   rating-display: Melhor Avaliadas
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8► &7{display} '
+  line-selected: ' &a► &f{display} '
 
 info-icon:
   slot: 40

@@ -21,7 +21,8 @@ locked-icon:
   - '&cAcesso rápido:'
   - '&8 ▪ &f/mina'
   - ''
-  - ' &8 ▾ &cVocê não tem permissão.'
+  - ' &8 ▾ &cVocê não tem permissão. '
+  - ''
 permission: ''
 slot: 30
 messages:

@@ -12,10 +12,21 @@ stats-icon:
   - '{events}'
   - ''
   - ' &8 ▪ &fVitórias totais: &a{total} '
+  - ''
+  # Usada quando o jogador ainda não venceu nenhum evento: sem o total, que
+  # repetiria o que a linha de aviso já diz. Apague para usar sempre a de cima.
+  lore-empty:
+  - '&7Seu desempenho em cada um'
+  - '&7dos eventos do servidor.'
+  - ''
+  - ' &8 ▾ &cNenhuma vitória ainda. '
+  - ''
 
 stats:
   line: ' &8 ▪ &f{event}: &a{wins}x '
-  none: ' &8 ▪ &cNenhuma vitória ainda. '
+  # Só aparece se 'lore-empty' for apagada — aí o {events} volta a ser usado
+  # mesmo com o jogador zerado.
+  none: ' &8 ▾ &cNenhuma vitória ainda. '
 
 # Ícone só de leitura, no meio do menu: não tem clique nenhum e não sai do lugar.
 # O plugin não agenda evento nenhum — quem escreve o cronograma é você, aqui nas
@@ -25,8 +36,8 @@ schedule-icon:
   material: WATCH
   display: '&eCronograma'
   lore:
-  - '&7Os horários de cada evento'
-  - '&7ao longo de todo o dia.'
+  - '&7Os horários de cada'
+  - '&7evento de cada dia.'
   - ''
   - ' &8Durante a semana:'
   - ' &8 ▪ &f12:00 &8- &7Evento de arena '

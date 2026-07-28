@@ -23,8 +23,8 @@ empty-position-icon:
 filters:
   crops-display: Plantações Colhidas
   level-display: Nível da Fazenda
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8► &7{display} '
+  line-selected: ' &a► &f{display} '
 
 info-icon:
   slot: 40

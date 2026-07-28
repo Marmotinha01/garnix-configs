@@ -8,8 +8,9 @@ info-icon:
   - '&7A máquina instalada'
   - '&7neste terreno.'
   - ''
-  - ' &8 ▪ &fStack: &7x{stack}'
-  - ' &8 ▪ &fDono: &7{owner}'
+  - ' &8 ▪ &fStack: &7x{stack} '
+  - ' &8 ▪ &fDono: &7{owner} '
+  - ''
 
 friends-icon:
   slot: 11
@@ -19,7 +20,7 @@ friends-icon:
   - '&7Quem pode mexer nesta'
   - '&7máquina além de você.'
   - ''
-  - ' &8 ▪ &fTotal: &7{friends_count}'
+  - ' &8 ▪ &fTotal: &7{friends_count} '
   - ''
   - '&aClique para gerenciar.'
 
@@ -37,7 +38,7 @@ toggle-hologram-icon:
   - '&7O texto flutuante que'
   - '&7aparece sobre a máquina.'
   - ''
-  - ' &8 ▪ &fStatus: {hologram_status}'
+  - ' &8 ▪ &fStatus: {hologram_status} '
   - ''
   - '&eClique para alternar.'
 
@@ -77,14 +78,14 @@ fuel-icon:
   - '&7O combustível que mantém'
   - '&7esta máquina rodando.'
   - ''
-  - ' &8 ▪ &fRestante: &e{fuel_remaining}'
+  - ' &8 ▪ &fRestante: &e{fuel_remaining} '
   - ''
   - '&cClique para remover.'
   lore-infinite:
   - '&7O combustível que mantém'
   - '&7esta máquina rodando.'
   - ''
-  - ' &8 ▪ &fCombustível: &eInfinito'
+  - ' &8 ▪ &fCombustível: &eInfinito '
   - ''
   - '&cClique para remover.'
 
@@ -96,7 +97,8 @@ fuel-empty-icon:
   - '&7Sem combustível a máquina'
   - '&7não produz nada.'
   - ''
-  - ' &8 ▾ &cNenhum combustível ativo.'
+  - ' &8 ▾ &cNenhum combustível ativo. '
+  - ''
 
 booster-icon:
   slot: 32

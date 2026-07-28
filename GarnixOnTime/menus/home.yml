@@ -8,7 +8,8 @@ player-head:
   - '&7Quanto tempo você já'
   - '&7passou dentro do servidor.'
   - ''
-  - ' &8 ▪ &fOnline por: &7{time}'
+  - ' &8 ▪ &fOnline por: &7{time} '
+  - ''
 
 ranking-icon:
   slot: 13

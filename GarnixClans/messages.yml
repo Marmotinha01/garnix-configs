@@ -123,12 +123,14 @@ admin:
   cannot-kick-leader: '&cO líder não pode ser expulso — transfira a liderança ou desfaça o clan.'
   already-in-clan: '&cO jogador &f{player} &cjá está em um clan.'
 
+# Títulos dos menus de confirmação (usam o menu compartilhado do GarnixCore).
 confirm:
-  disband: '&cIsso desfaz o clan permanentemente.'
-  leave: '&cVocê vai sair do clan.'
-  kick: '&cO membro será expulso do clan.'
-  break-alliance: '&cA aliança será desfeita para os dois clans.'
-  end-rivalry: '&cA rivalidade será desfeita.'
+  disband: 'Desfazer Clan'
+  leave: 'Sair do Clan'
+  kick: 'Expulsar Membro'
+  break-alliance: 'Desfazer Aliança'
+  end-rivalry: 'Encerrar Rivalidade'
+  # Confirmação por comando, no chat — não é título de menu.
   admin-disband: '&cDigite o comando novamente para confirmar o desfazimento do clan.'
 
 info:

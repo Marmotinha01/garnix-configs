@@ -10,7 +10,8 @@ shape:
 
 reward-item-lore:
 - ''
-- ' &8 ▪ &fChance: &7{chance}'
+- ' &8 ▪ &fChance: &7{chance} '
+- ''
 
 reward-toggle-enabled: '&aClique para adicionar ao filtro.'
 reward-toggle-disabled: '&cClique para remover do filtro.'
@@ -23,7 +24,7 @@ sort-icon:
   - '&7Escolha se as recompensas'
   - '&7vêm da maior ou menor chance.'
   - ''
-  - ' &8 ▪ &fOrdenar: &7{sorts}'
+  - ' &8 ▪ &fOrdenar: &7{sorts} '
   - ''
   - '&aClique para alternar.'
 

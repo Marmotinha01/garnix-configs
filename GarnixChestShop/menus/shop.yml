@@ -13,6 +13,7 @@ item-preview-icon:
   - ''
   - ' &8 ▪ &fCompra: {buy_display} '
   - '{buy_tax}'
+  - ''
   lore-sell:
   - ''
   - ' &8 ▪ &fDono: &7{owner} '
@@ -20,6 +21,7 @@ item-preview-icon:
   - ''
   - ' &8 ▪ &fVenda: {sell_display} '
   - '{sell_tax}'
+  - ''
   lore-both:
   - ''
   - ' &8 ▪ &fDono: &7{owner} '
@@ -30,6 +32,7 @@ item-preview-icon:
   - ''
   - ' &8 ▪ &fVenda: {sell_display} '
   - '{sell_tax}'
+  - ''
 
 # {buy_tax}: quando alguém COMPRA, o dono recebe menos (a taxa incide sobre o dono).
 # {sell_tax}: quando você VENDE para a loja, você recebe menos (a taxa incide sobre você).
@@ -70,7 +73,8 @@ buy-icon:
   - '&7Leve o item da loja'
   - '&7pagando o preço pedido.'
   - ''
-  - ' &8 ▾ &cEsta loja não vende itens.'
+  - ' &8 ▾ &cEsta loja não vende itens. '
+  - ''
 
 sell-icon:
   slot: 15
@@ -87,4 +91,5 @@ sell-icon:
   - '&7Passe o seu item para a'
   - '&7loja e receba por ele.'
   - ''
-  - ' &8 ▾ &cEsta loja não compra itens.'
+  - ' &8 ▾ &cEsta loja não compra itens. '
+  - ''

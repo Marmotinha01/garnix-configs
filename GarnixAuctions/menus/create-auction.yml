@@ -29,7 +29,7 @@ select-duration-icon:
   - '&7Defina por quanto tempo'
   - '&7o leilão fica no ar.'
   - ''
-  - ' &8 ▪ &fAtual: &e{duration}'
+  - ' &8 ▪ &fAtual: &e{duration} '
   - ''
   - '&aClique para alterar.'
 
@@ -46,7 +46,7 @@ set-bid-icon:
   - '&7Defina o valor mínimo'
   - '&7para o primeiro lance.'
   - ''
-  - ' &8 ▪ &fAtual: {currency_prefix}{amount}'
+  - ' &8 ▪ &fAtual: {currency_prefix}{amount} '
   - ''
   - '&aClique para alterar.'
 

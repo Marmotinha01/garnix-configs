@@ -45,7 +45,7 @@ display-icon:
   - '&7Troque o nome que aparece'
   - '&7na placa da sua loja.'
   - ''
-  - ' &8 ▪ &fAtual: {display}'
+  - ' &8 ▪ &fAtual: {display} '
   - ''
   - '&aClique para definir.'
 
@@ -58,7 +58,7 @@ amount-icon:
   - '&7Quantos itens saem em'
   - '&7cada negociação da loja.'
   - ''
-  - ' &8 ▪ &fAtual: &ex{amount}'
+  - ' &8 ▪ &fAtual: &ex{amount} '
   - ''
   - '&aClique para alterar.'
 
@@ -71,18 +71,19 @@ buy-price-icon:
   - '&7Quanto o cliente paga'
   - '&7para levar o seu item.'
   - ''
-  - ' &8 ▪ &fAtual: {symbol_color}{symbol}{primary_color}{price}'
+  - ' &8 ▪ &fAtual: {symbol_color}{symbol}{primary_color}{price} '
   - '{tax_info}'
   - ''
   - '&aClique para alterar.'
   # {tax_info}: a taxa da economia (garnix-currencies) incide sobre quem RECEBE. Na compra
   # quem recebe é você (dono), então mostra o líquido após a taxa. Some se o item for grátis.
-  tax-free: ' &8 ▪ &fTaxa: &aIsento'
+  tax-free: ' &8 ▪ &fTaxa: &aIsento '
   # Mostrada enquanto o preço ainda é Grátis (sem valor definido): só a alíquota, sem líquido.
-  tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c%'
-  tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
+  tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
+  tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8) '
   disabled-lore:
-  - ' &8 ▾ &cDesativado neste tipo de loja.'
+  - ' &8 ▾ &cDesativado neste tipo de loja. '
+  - ''
 
 sell-price-icon:
   slot: 41
@@ -93,18 +94,19 @@ sell-price-icon:
   - '&7Quanto a loja paga por'
   - '&7cada item recebido.'
   - ''
-  - ' &8 ▪ &fAtual: {symbol_color}{symbol}{primary_color}{price}'
+  - ' &8 ▪ &fAtual: {symbol_color}{symbol}{primary_color}{price} '
   - '{tax_info}'
   - ''
   - '&cClique para alterar.'
   # {tax_info}: na venda quem recebe é o cliente que vende para a loja (você paga o valor
   # cheio), então mostra o líquido que ele recebe após a taxa. Some se o preço for grátis.
-  tax-free: ' &8 ▪ &fTaxa: &aIsento'
+  tax-free: ' &8 ▪ &fTaxa: &aIsento '
   # Mostrada enquanto o preço ainda é Grátis (sem valor definido): só a alíquota, sem líquido.
-  tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c%'
-  tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
+  tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
+  tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8) '
   disabled-lore:
-  - ' &8 ▾ &cDesativado neste tipo de loja.'
+  - ' &8 ▾ &cDesativado neste tipo de loja. '
+  - ''
 
 notify-on-icon:
   slot: 42
@@ -114,7 +116,7 @@ notify-on-icon:
   - '&7Avisa no chat sempre que'
   - '&7alguém usa a sua loja.'
   - ''
-  - ' &8 ▪ &fStatus: &aAtivadas'
+  - ' &8 ▪ &fStatus: &aAtivadas '
   - ''
   - '&aClique para desativar.'
 
@@ -126,6 +128,6 @@ notify-off-icon:
   - '&7Nenhum aviso no chat'
   - '&7sobre a sua loja.'
   - ''
-  - ' &8 ▪ &fStatus: &cDesativadas'
+  - ' &8 ▪ &fStatus: &cDesativadas '
   - ''
   - '&cClique para ativar.'

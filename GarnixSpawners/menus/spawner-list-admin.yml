@@ -25,7 +25,8 @@ stats-icon:
   - '&7ativos no servidor.'
   - ''
   - ' &8 ▪ &fTotal de spawners: &7{total_spawners} '
-  - ' &8 ▪ &fDonos únicos: &7{unique_owners}'
+  - ' &8 ▪ &fDonos únicos: &7{unique_owners} '
+  - ''
 
 spawner-template:
   display: '&a{display} &7(x{stack})'
@@ -33,9 +34,9 @@ spawner-template:
   - '&7Spawner instalado por um'
   - '&7jogador do servidor.'
   - ''
-  - ' &8 ▪ &fDono: &7{owner}'
-  - ' &8 ▪ &fTerreno: &7{plot_id}'
-  - ' &8 ▪ &fLocal: &7{world} {x},{y},{z}'
-  - ' &8 ▪ &fMob stack: &7{mob_stack}'
+  - ' &8 ▪ &fDono: &7{owner} '
+  - ' &8 ▪ &fTerreno: &7{plot_id} '
+  - ' &8 ▪ &fLocal: &7{world} {x},{y},{z} '
+  - ' &8 ▪ &fMob stack: &7{mob_stack} '
   - ''
   - '&aClique para teleportar.'

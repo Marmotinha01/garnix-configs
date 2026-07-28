@@ -22,8 +22,9 @@ info-icon:
   - '&7Seu saldo e o total de'
   - '&7blocos que você quebrou.'
   - ''
-  - ' &8 ▪ &fGemas: {symbol_color}{symbol}{primary_color}{gems}'
-  - ' &8 ▪ &fBlocos quebrados: &7{blocks}'
+  - ' &8 ▪ &fGemas: {symbol_color}{symbol}{primary_color}{gems} '
+  - ' &8 ▪ &fBlocos quebrados: &7{blocks} '
+  - ''
 
 locked-enchant-icon:
   material: BARRIER
@@ -32,7 +33,8 @@ locked-enchant-icon:
   - '&7Encantamento bloqueado'
   - '&7para o nível da sua mina.'
   - ''
-  - ' &8 ▪ &fRequer nível: &c{mine-level}'
+  - ' &8 ▪ &fRequer nível: &c{mine-level} '
+  - ''
 
 maxed-enchant-lore:
 - ' &8 ▾ &cNível máximo atingido.'

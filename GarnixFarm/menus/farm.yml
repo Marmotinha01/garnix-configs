@@ -9,7 +9,7 @@ go-icon:
   - '&7Entre na sua área e comece'
   - '&7a colher a plantação dela.'
   - ''
-  - ' &8 ▪ &fPlantação atual: {type}'
+  - ' &8 ▪ &fPlantação atual: {type} '
   - ''
   - '&6Clique para entrar.'
   flags:

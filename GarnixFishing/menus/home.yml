@@ -14,6 +14,7 @@ info-icon:
   - ''
   - ' &8 ▪ &fTotal pescado: &a{total} '
   - ' &8 ▪ &fTempo de pesca: &e{time} '
+  - ''
 
 shop-icon:
   slot: 21
@@ -74,6 +75,6 @@ buy-rod-icon:
   - '&7Compre a sua vara para'
   - '&7começar a pescar agora.'
   - ''
-  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{amount} {currency} '
   - ''
   - '&aClique para comprar.'

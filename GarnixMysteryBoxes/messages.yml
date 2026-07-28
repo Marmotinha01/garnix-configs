@@ -2,6 +2,9 @@ reload-success: '&aConfigurações recarregadas com sucesso.'
 
 opened-win: '&aVocê abriu &f{box} &ae ganhou {reward}&a.'
 
+# Título do menu de confirmação ao abrir uma caixa. Placeholder: {box}
+confirm-title: 'Abrir {box}'
+
 animation:
   win-title: '&fVocê ganhou:'
   win-subtitle: '{reward}'

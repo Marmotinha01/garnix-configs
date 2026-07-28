@@ -21,8 +21,8 @@ request-icon:
   - '&7Clan que solicitou aliança'
   - '&7e aguarda a sua resposta.'
   - ''
-  - ' &8 ▪ &fLíder: &7{leader}'
-  - ' &8 ▪ &fMembros: &7{members}'
+  - ' &8 ▪ &fLíder: &7{leader} '
+  - ' &8 ▪ &fMembros: &7{members} '
   - ''
   - '&eClique para responder.'
 

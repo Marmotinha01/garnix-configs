@@ -2,7 +2,7 @@
 # Placeholders: {amount} = fragmentos no item, {display} = nome.
 fragment-lore:
 - ''
-- ' &8 ▪ &fQuantia: &e{amount} &7fragmento(s)'
+- ' &8 ▪ &fQuantia: &e{amount} &7fragmento(s) '
 - ''
 - '&aOpções de uso:'
 - '&fBotão direito &8➟ &7Ativar todos'

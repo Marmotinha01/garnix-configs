@@ -7,8 +7,9 @@ info-icon:
   - '&7O que está guardado no'
   - '&7armazém deste terreno.'
   - ''
-  - ' &8 ▪ &fQuantia: &7{amount}'
-  - ' &8 ▪ &fValor: {value}'
+  - ' &8 ▪ &fQuantia: &7{amount} '
+  - ' &8 ▪ &fValor: {value} '
+  - ''
 
 sell-icon:
   slot: 11
@@ -18,14 +19,15 @@ sell-icon:
   - '&7Venda de uma vez tudo'
   - '&7que está no armazém.'
   - ''
-  - ' &8 ▪ &fVender por: {value}'
+  - ' &8 ▪ &fVender por: {value} '
   - ''
   - '&aClique para vender.'
   lore-empty:
   - '&7Venda de uma vez tudo'
   - '&7que está no armazém.'
   - ''
-  - ' &8 ▾ &cSem estoque para vender.'
+  - ' &8 ▾ &cSem estoque para vender. '
+  - ''
 
 sell-disabled-icon:
   slot: 11
@@ -35,7 +37,8 @@ sell-disabled-icon:
   - '&7Venda de uma vez tudo'
   - '&7que está no armazém.'
   - ''
-  - ' &8 ▾ &cVocê não tem permissão.'
+  - ' &8 ▾ &cVocê não tem permissão. '
+  - ''
 
 collect-icon:
   slot: 15
@@ -55,7 +58,8 @@ collect-disabled-icon:
   - '&7Tire os cactos do armazém'
   - '&7e leve no inventário.'
   - ''
-  - ' &8 ▾ &cVocê não tem permissão.'
+  - ' &8 ▾ &cVocê não tem permissão. '
+  - ''
 
 back-icon:
   slot: 31

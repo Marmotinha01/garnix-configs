@@ -35,7 +35,7 @@ status-next:
 #   crops     -> só se require.crops > 0.  {require-crops} = qtd; {require-crop} = cultura.
 #   permission-> só se houver permission-display (o node NUNCA aparece).  {permission-display}
 requirement-entries:
-  level: ' &8 ▪ &7Nível &f{require-level}&7 de fazenda'
-  currency: ' &8 ▪ {symbol_color}{symbol}{primary_color}{cost} &7{currency}'
-  crops: ' &8 ▪ &7x{require-crops} {require-crop} &7colhidos'
-  permission: ' &8 ▪ {permission-display}'
+  level: ' &8 ▪ &7Nível &f{require-level}&7 de fazenda '
+  currency: ' &8 ▪ {symbol_color}{symbol}{primary_color}{cost} &7{currency} '
+  crops: ' &8 ▪ &7x{require-crops} {require-crop} &7colhidos '
+  permission: ' &8 ▪ {permission-display} '

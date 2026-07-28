@@ -31,7 +31,7 @@ shop-icon:
 # Placeholders: {amount}, {display}.
 withdraw-lore:
 - ''
-- ' &8 ▪ &fArmazenados: &e{amount}'
+- ' &8 ▪ &fArmazenados: &e{amount} '
 - ''
 - '&aClique para retirar.'
 

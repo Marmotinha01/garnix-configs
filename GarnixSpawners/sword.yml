@@ -3,21 +3,20 @@ material: DIAMOND_SWORD
 display: '&cLâmina'
 
 lore:
-- '&7Use esta lâmina para'
-- '&7abater mobs de spawners.'
 - ''
-- ' &8Encantamentos:'
-- '{enchantments}'
-- ''
+- ' &8Informações: '
 - ' &8 ▪ &fMobs abatidos: &e{kills} '
 - ''
-- '&7Arraste um livro sobre a'
-- '&7lâmina para aplicá-lo.'
+- ' &c▎ &fEncantamentos: '
+- '{enchantments}'
+- ''
+- '&cOpções de uso:'
+- '&fArraste um livro &8➟ &7Encantar'
 
 glow: true
 
-enchant-line: ' &8 ▪ {display} {level} '
-no-enchants: ' &8 ▾ &cNenhum encantamento. '
+enchant-line: ' &8◗ &7{display} {level} '
+no-enchants: ' &8◗ &cNenhum encantamento '
 
 # Os encantamentos são elevados aplicando livros na lâmina (arraste o livro sobre
 # ela no inventário). Cada encantamento define seu próprio livro em "book"
@@ -34,7 +33,7 @@ enchantments:
       - '&7Aumenta o dano da sua'
       - '&7lâmina contra os mobs.'
       - ''
-      - ' &8 ▪ &fMassacre: &4{level}'
+      - ' &8 ▪ &fMassacre: &4{level} '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -58,7 +57,7 @@ enchantments:
       - '&7Aumenta os drops que os'
       - '&7mobs deixam ao morrer.'
       - ''
-      - ' &8 ▪ &fPilhagem: &a{level}'
+      - ' &8 ▪ &fPilhagem: &a{level} '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -78,7 +77,7 @@ enchantments:
       - '&7Chance de abater o mob'
       - '&7com um golpe só.'
       - ''
-      - ' &8 ▪ &fCeifador: &d{level}'
+      - ' &8 ▪ &fCeifador: &d{level} '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'

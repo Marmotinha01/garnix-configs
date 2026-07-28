@@ -10,7 +10,7 @@ status-public-icon:
   - '&7Altere a privacidade de'
   - '&7sua área de mineração.'
   - ''
-  - ' &8 ▪ &fRestrição: &aPública'
+  - ' &8 ▪ &fRestrição: &aPública '
   - ''
   - '&aClique para alterar.'
 
@@ -23,7 +23,7 @@ status-private-icon:
   - '&7Altere a privacidade de'
   - '&7sua área de mineração.'
   - ''
-  - ' &8 ▪ &fRestrição: &cPrivada'
+  - ' &8 ▪ &fRestrição: &cPrivada '
   - ''
   - '&cClique para alterar.'
 
@@ -47,7 +47,7 @@ max-players-icon:
   - '&7Defina quantos jogadores'
   - '&7podem entrar na sua mina.'
   - ''
-  - ' &8 ▪ &fTotal: &a{total}&8/&c{max}'
+  - ' &8 ▪ &fTotal: &a{total}&8/&c{max} '
   - ''
   - '&eOpções de uso:'
   - '&fBotão esquerdo &8➟ &aAumentar'
@@ -61,7 +61,7 @@ tax-icon:
   - '&7Cobre uma porcentagem de'
   - '&7quem minera na sua área.'
   - ''
-  - ' &8 ▪ &fTaxa atual: &e{tax}%'
+  - ' &8 ▪ &fTaxa atual: &e{tax}% '
   - ''
   - '&cOpções de uso:'
   - '&fBotão esquerdo &8➟ &7Definir '
@@ -79,7 +79,7 @@ collect-tax-icon:
   - '{currency_lines}'
   - ''
   - '&aClique para recolher.'
-  currency-format: ' &8 ▪ {symbol_color}{symbol}{primary_color}{value} {currency}'
+  currency-format: ' &8 ▪ {symbol_color}{symbol}{primary_color}{value} {currency} '
 
 collect-tax-empty-icon:
   slot: 14
@@ -89,7 +89,8 @@ collect-tax-empty-icon:
   - '&7Recolha as taxas acumuladas'
   - '&7da mineração dos visitantes.'
   - ''
-  - ' &8 ▾ &cSem taxas acumuladas.'
+  - ' &8 ▾ &cSem taxas acumuladas. '
+  - ''
 
 # Visitor slots / friends. One icon per slot; 'slots' lists the inventory
 # positions, one per slot (must have at least visitor-slots-max entries).
@@ -124,8 +125,8 @@ friend-slots:
     - '&7Amigo com acesso liberado'
     - '&7à sua área de mineração.'
     - ''
-    - ' &8 ▪ &fStatus: {status}'
-    - ' &8 ▪ &fTaxa: &c{tax}%'
+    - ' &8 ▪ &fStatus: {status} '
+    - ' &8 ▪ &fTaxa: &c{tax}% '
     - ''
     - '&eOpções de uso:'
     - '&fBotão esquerdo &8➟ &7Definir taxa'

@@ -66,6 +66,8 @@ redeem:
   unavailable: '&cVIP indisponível no momento. &7Sua chave foi preservada.'
 
 givepaper:
+  # Título do menu de confirmação ao usar o papel. Placeholder: {vip}
+  confirm-title: 'Ativar {vip}'
   success: '&ex{amount} &aPapel de {vip} &adado para &f{player} &apor &e{duration}&a.'
   vip-not-found: '&cO VIP &f{vip} &cnão existe mais.'
   invalid-data: '&cO papel está corrompido. Dados inválidos.'

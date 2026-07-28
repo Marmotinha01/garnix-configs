@@ -46,6 +46,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -66,6 +67,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -86,6 +88,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -106,6 +109,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -127,6 +131,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -148,6 +153,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -169,6 +175,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -190,6 +197,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -211,6 +219,7 @@ skins:
       - ''
       - ' &fBônus:'
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:

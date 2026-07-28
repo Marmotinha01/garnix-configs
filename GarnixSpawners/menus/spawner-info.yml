@@ -9,8 +9,9 @@ info-icon:
   - '&7O spawner instalado'
   - '&7neste terreno.'
   - ''
-  - ' &8 ▪ &fStack: &7x{stack}'
-  - ' &8 ▪ &fDono: &7{owner}'
+  - ' &8 ▪ &fStack: &7x{stack} '
+  - ' &8 ▪ &fDono: &7{owner} '
+  - ''
 
 friends-icon:
   slot: 11
@@ -20,7 +21,7 @@ friends-icon:
   - '&7Quem pode mexer neste'
   - '&7spawner além de você.'
   - ''
-  - ' &8 ▪ &fTotal: &e{friends_count}'
+  - ' &8 ▪ &fTotal: &e{friends_count} '
   - ''
   - '&aClique para gerenciar.'
 
@@ -38,7 +39,7 @@ toggle-hologram-icon:
   - '&7O texto flutuante que'
   - '&7aparece sobre o spawner.'
   - ''
-  - ' &8 ▪ &fStatus: {hologram_status}'
+  - ' &8 ▪ &fStatus: {hologram_status} '
   - ''
   - '&eClique para alternar.'
 
@@ -79,7 +80,7 @@ collect-heads-icon:
   - '&7Cabeças que caíram dos'
   - '&7mobs deste spawner.'
   - ''
-  - ' &8 ▪ &fQuantia: &ex{heads_count}'
+  - ' &8 ▪ &fQuantia: &ex{heads_count} '
   - ''
   - '&aClique para coletar.'
 
@@ -89,7 +90,8 @@ collect-heads-empty-icon:
   - '&7Cabeças que caíram dos'
   - '&7mobs deste spawner.'
   - ''
-  - ' &8 ▾ &cNenhuma cabeça disponível.'
+  - ' &8 ▾ &cNenhuma cabeça disponível. '
+  - ''
 
 upgrades-icon:
   slot: 30

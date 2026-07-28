@@ -10,7 +10,7 @@ shape:
 
 empty-icon:
   slot: 22
-  material: BOWL
+  material: BARRIER
   amount: 0
   display: '&cVazio'
   lore:
@@ -18,7 +18,7 @@ empty-icon:
 
 create-auction-icon:
   slot: 47
-  material: NETHER_STAR
+  material: EMERALD
   display: '&aLeiloar'
   lore:
   - '&7Anuncie um item seu para'
@@ -28,7 +28,7 @@ create-auction-icon:
 
 player-bids-icon:
   slot: 49
-  material: EMPTY_MAP
+  material: BOOK_AND_QUILL
   display: '&aSeus Lances'
   lore:
   - '&7Todos os leilões em que'

@@ -1,25 +1,27 @@
 # Currency cost line. Placeholders: {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
-cost-format: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+cost-format: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency} '
 # Head cost line. Placeholders: {amount} {display}
-cost-format-head: ' &8 ▪ &f{amount} &7{display}'
+cost-format-head: ' &8 ▪ &f{amount} &7{display} '
 
 rankup:
   info-icon:
-    slot: 4
+    slot: 13
     material: BOOK
-    display: '&aEvoluir para {rank_tag}'
+    display: '&aEvoluir para {rank_color}{rank_name}'
     lore:
     - ''
     - ' &8Custos:'
     - '{costs}'
+    - ''
 
 prestige:
   info-icon:
-    slot: 4
+    slot: 13
     material: NETHER_STAR
     display: '&b&lPRESTIGIAR'
     lore:
     - '&7Você recomeça do primeiro'
     - '&7rank e ganha uma estrela.'
     - ''
-    - ' &8 ▾ &cO seu rank será resetado.'
+    - ' &8 ▾ &cO seu rank será resetado. '
+    - ''

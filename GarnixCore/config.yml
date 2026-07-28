@@ -217,8 +217,8 @@ confirm:
     data: 5
     display: '&aConfirmar'
     lore:
-    - '&7A ação será executada'
-    - '&7logo após o clique.'
+    - '&7A ação não poderá ser'
+    - '&7desfeita após o clique.'
     - ''
     - '&aClique para confirmar.'
   cancel:
@@ -227,7 +227,6 @@ confirm:
     data: 14
     display: '&cCancelar'
     lore:
-    - '&7Nada será alterado e você'
-    - '&7volta para o menu anterior.'
+    - '&7Nada será alterado.'
     - ''
     - '&cClique para cancelar.'

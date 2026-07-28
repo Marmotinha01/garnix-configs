@@ -14,7 +14,8 @@ info-icon:
   - '&7Quantos cactos o seu'
   - '&7armazém ainda comporta.'
   - ''
-  - ' &8 ▪ &fAtual: &a{total}&8/&c{limit}'
+  - ' &8 ▪ &fAtual: &a{total}&8/&c{limit} '
+  - ''
 
 booster-active-icon:
   slot: 32
@@ -78,6 +79,6 @@ friends-icon:
   - '&7Quem pode mexer no seu'
   - '&7armazém além de você.'
   - ''
-  - ' &8 ▪ &fTotal: &7{count}'
+  - ' &8 ▪ &fTotal: &7{count} '
   - ''
   - '&aClique para gerenciar.'
