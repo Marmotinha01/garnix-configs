@@ -116,7 +116,7 @@ booster-icon:
   - ''
   - '&eOpções de uso:'
   - '&fBotão Direito &8➟ &7Ativar'
-  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Juntar'
 
 # Item de forja (clique-direito abre). Consumido ao forjar com sucesso.
 forge-icon:

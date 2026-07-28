@@ -1,25 +1,25 @@
 # ── Comandos ──────────────────────────────────────────────────────────
 commands:
-  no-permission: §cVocê não tem permissão.
-  player-only: §cApenas jogadores podem usar este comando.
-  console-only: §cApenas o console pode usar este comando.
-  cooldown: §cAguarde {time} para usar novamente.
-  unknown-subcommand: §cSubcomando desconhecido.
-  usage-prefix: '§cUso correto: /'
-  invalid-arg: §cO argumento §f{name} §c{error}.
-  range-error: §cO argumento §f{name} §cdeve ser entre §f{min} §ce §f{max}§c.
+  no-permission: '&cVocê não tem permissão.'
+  player-only: '&cApenas jogadores podem usar este comando.'
+  console-only: '&cApenas o console pode usar este comando.'
+  cooldown: '&cAguarde {time} para usar novamente.'
+  unknown-subcommand: '&cSubcomando desconhecido.'
+  usage-prefix: '&cUse: /'
+  invalid-arg: '&cO argumento &f{name} &c{error}.'
+  range-error: '&cO argumento &f{name} &cdeve ser entre &f{min} &ce &f{max}&c.'
   int-error: deve ser um número inteiro
   double-error: deve ser um número
   bool-error: deve ser true/false ou sim/não
-  not-found: §c{name} §f{input} §cnão encontrado.
-  player-not-found: §cJogador §f{input} §cnão encontrado.
-  suggest: §7Você quis dizer §f{match}§7?
-  internal-error: §cErro interno ao executar o comando.
+  not-found: '&c{name} &f{input} &cnão encontrado.'
+  player-not-found: '&cJogador &f{input} &cnão encontrado.'
+  suggest: '&7Você quis dizer &f{match}&7?'
+  internal-error: '&cErro interno ao executar o comando.'
 
 # ── Conversações ──────────────────────────────────────────────────────
 conversation:
-  timeout: §cTempo esgotado! A conversa foi cancelada.
-  one-of: '§cOpções válidas: {options}§c.'
+  timeout: '&cTempo esgotado. A conversa foi cancelada.'
+  one-of: '&cOpções válidas: {options}&c.'
   cancel-word: cancelar
 
 # ── Nomes dos tipos de argumento ──────────────────────────────────────

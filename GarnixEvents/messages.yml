@@ -8,12 +8,12 @@
 
 general:
   only-players: '&cApenas jogadores podem usar este comando.'
-  reloaded: '&aConfigurações recarregadas com sucesso!'
+  reloaded: '&aConfigurações recarregadas com sucesso.'
 
 # ── Entrada e saída (todos os eventos) ────────────────────────────────
 # {event} = nome do evento em que a mensagem aconteceu.
 event:
-  joined: '&aVocê entrou no evento &f{event}&a! &7({count} participantes)'
+  joined: '&aVocê entrou no evento &f{event}&a. &7({count} participantes)'
   left: '&eVocê saiu do evento.'
   left-world: '&eVocê saiu do mundo do evento e foi retirado dele.'
   kicked: '&cVocê foi retirado do evento por &f{staff}&c.'
@@ -72,7 +72,7 @@ setup:
   kit-given-team: '&aKit do time &f{team} &ado evento &f{event} &aequipado em você: &f{count} &aitem(ns). &7Some ao relogar.'
   kit-unset: '&cO evento &f{event} &cnão tem kit definido. Use &f/{command} setkit &cpara gravar um.'
   kit-unknown-team: '&cInforme o time do kit. Disponíveis: &f{teams}&c.'
-  kit-inventory-not-empty: '&cEsvazie seu inventário e sua armadura antes: o kit substitui tudo o que você está carregando.'
+  kit-inventory-not-empty: '&cEsvazie seu inventário e armadura: o kit substitui tudo.'
   
   checkpoint-added: '&aCheckpoint &f#{number} &ado &f{event} &acriado na placa em &f{x}, {y}, {z}&a.'
   checkpoint-not-a-plate: '&cFique em cima de uma placa de pressão: é nela que o checkpoint é criado.'
@@ -122,27 +122,30 @@ wand:
   primary: '&aPrimeiro ponto definido em &f{x}, {y}, {z}&a.'
   secondary: '&aPonto &f#{point} &adefinido em &f{x}, {y}, {z}&a. &7(faltam {missing})'
   other-world: '&cEsse ponto está em outro mundo. Recomece a seleção.'
-  looks-round: '&eSeus pontos parecem um círculo. &7Com o graveto de polígono a área vira um polígono e corta os cantos entre os pontos — use &f/eventos wand circulo &7para a área sair redonda.'
+  looks-round: '&eSeus pontos formam um círculo. &7Use &f/eventos wand circulo &7para a área sair redonda.'
 
 # ── Ajuda ─────────────────────────────────────────────────────────────
 # Mostrada por /{evento} sem argumentos. {event} = nome, {command} = comando.
+# A linha do camarote só aparece nos eventos que têm o cabin definido no data.yml
+# — nos demais ela é omitida automaticamente. Se renomear o subcomando, ajuste
+# também CABIN_SUBCOMMAND em GameEventCommand.java.
 event-help:
 - ''
-- '  &f{event}'
+- '  {event} &8▶ &7Comandos'
 - ''
-- '  &a/{command} entrar &8- &7Entra no evento.'
-- '  &a/{command} sair &8- &7Sai do evento ou do camarote.'
-- '  &a/{command} camarote &8- &7Assiste ao evento em andamento.'
+- '  &7/{command} entrar'
+- '  &7/{command} sair'
+- '  &7/{command} camarote'
 - ''
 
 admin-help:
 - ''
-- '  &a&lEventos &8- &fAjuda &7(Staff)'
+- '  &a&lEVENTOS &8▶ &7Comandos'
 - ''
-- '  &a/eventos &8- &7Abre o menu de estatísticas.'
-- '  &a/eventos ajuda &8- &7Mostra esta ajuda.'
-- '  &a/eventos reload &8- &7Recarrega as configurações.'
-- '  &a/eventos wand &7[cuboid/poly/circulo] &8- &7Recebe o graveto de seleção.'
+- '  &7/eventos'
+- '  &c/eventos ajuda'
+- '  &c/eventos reload'
+- '  &c/eventos wand [cuboid/poly/circulo]'
 - ''
 - '  &7Eventos: &fsumo&8, &ffight&8, &fparkour&8, &fcorrida&8, &fspleef&8, &fsplegg&8, &fkiller&8,'
 - '  &fdestemido&8, &fmvp&8, &ftnt-run&8, &fsniper&8, &fpaintball&8, &farqueiros&8, &fbatata-quente'

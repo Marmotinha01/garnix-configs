@@ -1,6 +1,6 @@
 general:
   only-players: '&cApenas jogadores podem usar este comando.'
-  reloaded: '&aConfigurações recarregadas. &7({count} scoreboards)'
+  reloaded: '&aConfigurações recarregadas com sucesso. &7({count} scoreboards)'
 
 toggle:
   shown: '&aScoreboard ativada.'

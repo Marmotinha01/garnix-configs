@@ -1,6 +1,6 @@
 general:
   only-players: '&cApenas jogadores podem usar este comando.'
-  reloaded: '&aConfigurações recarregadas com sucesso!'
+  reloaded: '&aConfigurações recarregadas com sucesso.'
 
 arena:
   pos1-set: '&aSpawn do desafiante definido em &f{x}, {y}, {z}&a.'
@@ -16,29 +16,29 @@ challenge:
   target-in-duel: '&f{target} &cjá está em um duelo.'
   already-in-duel: '&cVocê já está em um duelo.'
   pending-exists: '&cVocê já tem um convite para &f{target}&c.'
-  invalid-amount: '&cValor inválido. Tente novamente.'
+  invalid-amount: '&cInforme uma quantia válida.'
   amount-too-low: '&cA aposta mínima é &f{amount}&c.'
   amount-too-high: '&cA aposta máxima é &f{amount}&c.'
   # Placeholders de moeda: {amount} {symbol} {symbol_color} {primary_color} {secondary_color} {currency}
   insufficient-funds: '&cVocê não tem &f{amount} {symbol_color}{symbol} &7{primary_color}{currency} &cpara apostar.'
-  insufficient-funds-target: '&f{target} &cnão tem saldo para a aposta.'
+  insufficient-funds-target: '&f{target} &cnão tem saldo suficiente.'
   challenger-kit-not-empty: '&f{target} &cnão está com o inventário vazio.'
   bet-incomplete: '&cConfigure a moeda e a quantia primeiro.'
   sent: '&aConvite enviado para &f{target}&a.'
   amount-prompt:
   - ''
-  - '  &eDigite o valor da aposta.'
-  - '  &7Digite &ecancelar &7para voltar.'
+  - '  &aInforme o valor da aposta.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   opponent-prompt:
   - ''
-  - '  &eDigite o nome do oponente.'
-  - '  &7Digite &ecancelar &7para voltar.'
+  - '  &aInforme o nome do oponente.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   # {accept} e {reject} viram botões clicáveis.
   received:
   - ''
-  - '&f{challenger} &7te desafiou para um duelo!'
+  - '&f{challenger} &7te desafiou para um duelo.'
   - '  &7Modo: &f{mode} &8| &7Aposta: &f{bet}'
   - '  {accept} &7ou {reject}'
   - ''
@@ -58,7 +58,7 @@ challenge:
   mode-items: Itens Próprios
 
 duel:
-  # Títulos na tela. {seconds} na contagem, {time} (MM:SS) na actionbar.
+  # Títulos na tela. {seconds} na contagem, {time} na actionbar (formato do Core).
   title-prepare: '&e&lPREPARE-SE'
   subtitle-prepare: '&7O duelo vai começar...'
   title-countdown: '&c&l{seconds}'
@@ -66,24 +66,24 @@ duel:
   title-go: '&a&lLUTEM!'
   subtitle-go: '&7O duelo começou!'
   actionbar: '&fTempo de duelo: &e{time}'
-  win-self: '&aVocê venceu o duelo!'
+  win-self: '&aVocê venceu o duelo.'
   lose-self: '&cVocê perdeu o duelo.'
-  reward: '&aVocê recebeu &f{amount} {symbol_color}{symbol} &7{primary_color}{currency} &ade prêmio!'
+  reward: '&aVocê recebeu &f{amount} {symbol_color}{symbol} &7{primary_color}{currency} &ade prêmio.'
   refunded: '&eAposta de &f{amount} {symbol_color}{symbol} &7{primary_color}{currency} &edevolvida.'
-  loot-window: '&eVocê tem &f{seconds}s &epara recolher os itens!'
+  loot-window: '&eVocê tem &f{seconds}s &epara recolher os itens.'
   kit-needs-empty: '&cEsvazie seu inventário para duelar no Kit Setado.'
-  opponent-quit: '&f{loser} &asaiu do servidor. Você venceu!'
+  opponent-quit: '&f{loser} &asaiu do servidor. Você venceu.'
   aborted: '&cO duelo foi encerrado.'
-  draw: '&eTempo esgotado! O duelo terminou em empate.'
+  draw: '&eTempo esgotado. O duelo terminou em empate.'
   command-blocked: '&cVocê não pode usar comandos durante o duelo.'
   # Broadcast a todos online. {watch} vira botão clicável.
   broadcast-start:
   - ''
-  - '&f{p1} &7está duelando contra &f{p2}&7! {watch}'
+  - '&f{p1} &7está duelando contra &f{p2}&7. {watch}'
   - ''
   watch-text: '&a&l[ASSISTIR]'
   watch-hover: '&7Clique para assistir o duelo no camarote.'
-  broadcast-win: '&f{winner} &avenceu o duelo contra &f{loser}&a!'
+  broadcast-win: '&f{winner} &avenceu o duelo contra &f{loser}&a.'
   broadcast-draw: '&7O duelo entre &f{p1} &7e &f{p2} &7terminou em empate.'
 
 spectate:
@@ -98,7 +98,7 @@ myth:
   none-placeholder: Ninguém
   announce:
   - ''
-  - ' &c&lMITO &7O mito atual do servidor é &f&l{player}&7!'
+  - ' &c&lMITO &7O mito atual do servidor é &f&l{player}&7.'
   - ' &7Derrote-o para tomar o seu lugar.'
   - ''
   none:
@@ -109,17 +109,17 @@ myth:
   no-eligible: '&cNenhum jogador elegível para o sorteio.'
   broadcast-set:
   - ''
-  - ' &c&lMITO &f{player} &7foi definido como o novo mito!'
+  - ' &c&lMITO &f{player} &7foi definido como o novo mito.'
   - ''
   broadcast-drawn:
   - ''
   - ' &c&lMITO &7O novo mito foi sorteado...'
-  - ' &c&lMITO &f&l{player} &7é o novo mito do servidor!'
+  - ' &c&lMITO &f&l{player} &7é o novo mito do servidor.'
   - ''
   # {player} = novo mito (matador), {previous} = mito anterior.
   broadcast-killed:
   - ''
-  - ' &c&lMITO &f{player} &7derrotou o mito &f{previous} &7e tomou o seu lugar!'
+  - ' &c&lMITO &f{player} &7derrotou o mito &f{previous} &7e tomou o seu lugar.'
   - ''
   # Resorteio automático: tempo demais OFFLINE. {player} = mito antigo.
   expired-offline:
@@ -136,17 +136,18 @@ myth:
 
 admin-help:
 - ''
-- '  &c&lDuelos &8- &fAjuda &7(Staff)'
+- '  &c&lDUELOS &8▶ &7Comandos'
 - ''
-- '  &c/x1 &8- &7Abre o menu de duelos.'
-- '  &c/x1 ajuda &8- &7Mostra esta ajuda.'
-- '  &c/x1 reload &8- &7Recarrega as configurações.'
-- '  &c/x1 setpos1 &8- &7Define o spawn do desafiante.'
-- '  &c/x1 setpos2 &8- &7Define o spawn do desafiado.'
-- '  &c/x1 setexit &8- &7Define o local de saída.'
-- '  &c/x1 setcabin &8- &7Define o camarote.'
+- '  &7/x1'
+- '  &c/x1 ajuda'
+- '  &c/x1 reload'
+- '  &c/x1 setpos1'
+- '  &c/x1 setpos2'
+- '  &c/x1 setexit'
+- '  &c/x1 setcabin'
 - ''
-- '  &c/setmito &7<jogador> &8- &7Define o mito.'
-- '  &c/sortearmito &8- &7Sorteia um mito aleatório.'
-- '  &c/mito reload &8- &7Recarrega as configurações.'
+- '  &c/setmito <jogador>'
+- '  &c/sortearmito'
+- '  &c/mito reload'
+- ''
 - ''

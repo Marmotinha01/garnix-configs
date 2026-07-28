@@ -15,7 +15,7 @@ drops:
   - ''
   - '&aOpções de uso:'
   - '&fBotão Direito &8➟ &7Ativar'
-  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Juntar'
 
 heads:
   material: POTION
@@ -34,4 +34,4 @@ heads:
   - ''
   - '&aOpções de uso:'
   - '&fBotão Direito &8➟ &7Ativar'
-  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Juntar'

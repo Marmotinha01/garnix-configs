@@ -4,7 +4,7 @@ vanish:
   disabled: '&aVocê agora está visível para outros jogadores.'
   enabled-other: '&aO jogador &f{player} &aagora está invisível.'
   disabled-other: '&aO jogador &f{player} &aagora está visível.'
-  status: '&cVocê e mais &4{vanished} &cstaffs estão invisíveis!'
+  status: '&cVocê e mais &4{vanished} &cstaffs estão invisíveis.'
   chest-readonly: '&cInteração com baús está bloqueada.'
   interact-blocked: '&cInteração bloqueada.'
 
@@ -33,7 +33,7 @@ tempfly:
   already-has-permission: '&cVocê já possui permissão de voo.'
   activated:
   - ''
-  - '  &a&lFLY TEMPORARIO &aativado!'
+  - '  &a&lFLY TEMPORARIO &aativado.'
   - '  &7Duração: &f{remaining}'
   - '  &7Use &f/fly &7para alternar o voo.'
   - ''
@@ -111,8 +111,8 @@ give:
   #
   # mailed:   estava em um evento, então NADA entrou no inventário.
   # leftover: o inventário encheu; só o que sobrou foi para o correio.
-  mailed: '&eVocê está em um evento! &ex{amount} &f{item} &efoi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou de &ex{amount} &f{item} &efoi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
 
 # Give All
 giveall-success: '&aVocê deu &ex{amount} &f{item} &apara todos os jogadores online.'
@@ -290,7 +290,7 @@ kit:
   darkit-success: '&aVocê deu o kit &f{kit} &apara &f{player}&a.'
   editkit-saved: '&aConteúdo do kit &f{kit} &asalvo com sucesso.'
   no-space: '&cInventário sem espaço para o kit &f{kit}&c.'
-  player-not-found: '&cJogador &f{player} &cnão encontrado ou offline.'
+  player-not-found: '&cJogador &f{player} &cnão encontrado.'
   reset-delay-kit: '&aCooldown do kit &f{kit} &ade &f{player} &aresetado.'
   reset-delay-player: '&aTodos os cooldowns de kits de &f{player} &aresetados.'
   reset-delay-all: '&aTodos os cooldowns de kits de &ftodos &aos jogadores resetados.'
@@ -298,64 +298,64 @@ kit:
 
 # Combat Log
 combat:
-  tagged: '&cNão deslogue, você perderá seus itens!'
+  tagged: '&cNão deslogue, você perderá seus itens.'
   untagged: '&aVocê saiu de combate, agora pode deslogar.'
-  actionbar: '&cEm combate por mais &f{time}s&c!'
-  actionbar-out: '&aVocê saiu de combate!'
-  blocked-command: '&cComando bloqueado em combate!'
+  actionbar: '&cEm combate por mais &f{time}&c.'
+  actionbar-out: '&aVocê saiu de combate.'
+  blocked-command: '&cComando bloqueado em combate.'
 
 # Death Messages
 # {victim}/{player} = quem morreu   {killer} = quem matou / estava em combate.
 # Deixe vazio ("") para desativar.
 death:
   kill: '&f{victim} &7foi morto por &f{killer}&7.'
-  combat-log: '&f{player} &7peidou na farofa e deslogou em combate!'
+  combat-log: '&f{player} &7peidou na farofa e deslogou em combate.'
 
 # Clear Lag
 clearlag:
   warning:
   - ''
-  - '  &8♽ &eOs itens no chão serão limpos em &l{time}&e! &7(/lixeiro)'
+  - '  &8♽ &eOs itens no chão serão limpos em &l{time}&e. &7(/lixeiro)'
   - ''
   cleared:
   - ''
   - '  &8♽ &cForam limpos x&l{items} &citens do chão.'
   - ''
-  next-clean: "&8♽ &aA próxima limpeza será em &f&l{time}&a!"
+  next-clean: "&8♽ &aA próxima limpeza será em &f&l{time}&a."
   forced: '&aLimpeza forçada executada com sucesso.'
 
 # Chain Arena
 chain:
-  entered: '&f{player} &aentrou na arena!'
-  left: '&f{player} &csaiu da arena!'
-  died: '&f{player} &cfoi eliminado por &f{killer}&c!'
-  not-set: '&cA arena chain ainda não foi configurada!'
+  entered: '&f{player} &aentrou na arena.'
+  left: '&f{player} &csaiu da arena.'
+  died: '&f{player} &cfoi eliminado por &f{killer}&c.'
+  not-set: '&cA arena chain ainda não foi configurada.'
   setspawn: '&aSpawn da chain definido com sucesso.'
   setexit: '&aSaída da chain definida com sucesso.'
   setkit: '&aKit da arena salvo com sucesso.'
-  blocked-command: '&cComando bloqueado dentro da arena!'
-  already-in: '&cVocê já está na arena!'
-  not-in: '&cVocê não está na arena!'
-  inventory-not-empty: '&cSeu inventário precisa estar vazio para entrar!'
+  blocked-command: '&cComando bloqueado dentro da arena.'
+  already-in: '&cVocê já está na arena.'
+  not-in: '&cVocê não está na arena.'
+  inventory-not-empty: '&cSeu inventário precisa estar vazio para entrar.'
   help:
   - ''
-  - '  &c&lCHAIN ADMIN'
+  - '  &c&lCHAIN &8▶ &7Comandos'
   - ''
-  - '  &c/chain &8- &7Entrar na arena'
-  - '  &c/chain entrar &8- &7Entrar na arena'
-  - '  &c/chain sair &8- &7Sair da arena'
-  - '  &c/chain setspawn &8- &7Definir spawn da arena'
-  - '  &c/chain setexit &8- &7Definir saída da arena'
-  - '  &c/chain setkit &8- &7Salvar kit da arena'
+  - '  &7/chain'
+  - '  &7/chain entrar'
+  - '  &7/chain sair'
+  - '  &c/chain setspawn'
+  - '  &c/chain setexit'
+  - '  &c/chain setkit'
   - ''
 
 # Welcome
 welcome:
   chat:
   - ''
-  - '  &aBem-vindo ao servidor, &f{player}&a!'
+  - '  &aBem-vindo ao servidor, &f{player}&a.'
   - ''
-  actionbar: '&eBem-vindo, &f{player}&e!'
+  actionbar: '&eBem-vindo, &f{player}&e.'
   title: '&6Bem-vindo!'
   subtitle: '&eDivirta-se, &f{player}&e!'
 
@@ -365,7 +365,7 @@ custom-commands:
 
 # General
 general:
-  reload-success: '&aConfigurações recarregadas com sucesso!'
+  reload-success: '&aConfigurações recarregadas com sucesso.'
   permission-denied: '&cVocê não tem permissão para usar esse comando.'
   permission-denied-others: '&cSem permissão para fazer isso em outros jogadores.'
 
@@ -392,5 +392,5 @@ nick:
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.
 delivery:
-  mailed: '&eVocê está em um evento! &eSeu item foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

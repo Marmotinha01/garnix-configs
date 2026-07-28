@@ -1,33 +1,33 @@
 command:
   # Placeholders: {monitors}
   usage:
-  - '&8&m------------------------------------'
-  - '  &4&lANTI-NUKER &7- Comandos'
   - ''
-  - '  &e/antinuker reload'
-  - '  &e/antinuker info &6<sistema> <player>'
-  - '  &e/antinuker reset &6<sistema> <player>'
-  - '  &e/antinuker stats &6<sistema>'
-  - '  &e/antinuker debug &6<sistema> <player>'
-  - '  &e/antinuker menu'
+  - '  &4&lANTI-NUKER &8▶ &7Comandos'
+  - ''
+  - '  &c/antinuker reload'
+  - '  &c/antinuker info <sistema> <player>'
+  - '  &c/antinuker reset <sistema> <player>'
+  - '  &c/antinuker stats <sistema>'
+  - '  &c/antinuker debug <sistema> <player>'
+  - '  &c/antinuker menu'
   - ''
   - '  &7Monitores: &f{monitors}'
-  - '&8&m------------------------------------'
+  - ''
   
-  only-players: '&cApenas jogadores podem abrir o menu.'
+  only-players: '&cApenas jogadores podem usar este comando.'
   
-  debug-usage: '&cUso: /antinuker debug <sistema> <player>'
+  debug-usage: '&cUse: /antinuker debug <sistema> <player>'
   # Loga as métricas ao vivo do jogador no console (throttle ~1/s), mesmo sem flag —
   # para calibrar contra um cheat que evade. Rode o comando de novo para desligar.
   debug-on: '&aDebug LIGADO para &e{player} &aem &e{monitor}&a — veja as métricas no console.'
   debug-off: '&7Debug desligado para &e{player} &7em &e{monitor}&7.'
   
-  reload: '&aAnti-Nuker recarregado (perfis, mensagens e menus): &f{monitors}' # {monitors}
+  reload: '&aConfigurações recarregadas com sucesso. &7Monitores: &f{monitors}' # {monitors}
   monitor-not-found: '&cMonitor &e{monitor} &cnão encontrado. Carregados: &f{monitors}' # {monitor} {monitors}
   
-  info-usage: '&cUso: /antinuker info <sistema> <player>'
-  reset-usage: '&cUso: /antinuker reset <sistema> <player>'
-  stats-usage: '&cUso: /antinuker stats <sistema>'
+  info-usage: '&cUse: /antinuker info <sistema> <player>'
+  reset-usage: '&cUse: /antinuker reset <sistema> <player>'
+  stats-usage: '&cUse: /antinuker stats <sistema>'
   
   reset-ok: '&aStrikes de &e{player} &azerados em &e{monitor}&a.' # {player} {monitor}
   

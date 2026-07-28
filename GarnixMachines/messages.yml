@@ -1,8 +1,8 @@
-reload-success: '&aConfigurações das máquinas recarregadas com sucesso!'
+reload-success: '&aConfigurações recarregadas com sucesso.'
 
 place:
-  success: '&ax{amount} &7máquina(s) de &f{display} &7colocada(s)!'
-  stacked: '&ax{amount} &7máquina(s) de &f{display} &7empilhada(s)!'
+  success: '&ax{amount} &7máquina(s) de &f{display} &7colocada(s).'
+  stacked: '&ax{amount} &7máquina(s) de &f{display} &7empilhada(s).'
   invalid-type: '&cTipo de máquina inválido.'
   creative-blocked: '&cVocê não pode colocar máquinas no modo criativo.'
   no-plot: '&cVocê só pode colocar máquinas dentro de terrenos.'
@@ -11,11 +11,11 @@ place:
   duplicate-type: '&cJá existe uma máquina deste tipo neste terreno.'
 
 break:
-  success: '&ax{stack} &7máquina(s) de &f{display} &7removida(s)!'
+  success: '&ax{stack} &7máquina(s) de &f{display} &7removida(s).'
   no-permission: '&cVocê não pode quebrar esta máquina.'
   creative-blocked: '&cVocê não pode quebrar máquinas no modo criativo.'
   conversation-blocked: '&cFinalize a operação antes de remover a máquina.'
-  cooldown: '&cAguarde &e{time}s &cpara remover a máquina.'
+  cooldown: '&cAguarde &e{time} &cpara remover a máquina.'
 
 interact-no-permission: '&cVocê não pode interagir com esta máquina.'
 
@@ -25,20 +25,20 @@ remove-stack-conversation:
   invalid-amount: '&cInforme uma quantia válida.'
   must-be-positive: '&cA quantia deve ser maior que zero.'
   max-available: '&cEssa máquina tem apenas &ex{max} &cstack(s) disponíveis.'
-  success: '&ax{amount} &7stack(s) de &f{display} &7removidos!'
+  success: '&ax{amount} &7stack(s) de &f{display} &7removidos.'
   prompt:
   - ''
   - '  &aInforme quantas máquinas de {display} deseja remover.'
-  - '  &fDisponível: &ex{stack}'
+  - '  &7Disponível: &f{stack}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
 
 friends:
-  added: '&f{player} &7adicionado como amigo na máquina.'
-  removed: '&f{player} &7removido da máquina.'
+  added: '&f{player} &afoi adicionado como amigo.'
+  removed: '&f{player} &cfoi removido dos amigos.'
   no-permission: '&cVocê não pode gerenciar amigos desta máquina.'
   add-self: '&cVocê não pode se adicionar como amigo.'
-  already-friend: '&cEste jogador já é amigo desta máquina.'
+  already-friend: '&cEsse jogador já é seu amigo.'
   invalid-name: '&cInforme um nome válido.'
   add-prompt:
   - ''
@@ -52,32 +52,32 @@ drops:
   no-permission: '&cVocê não pode vender drops desta máquina.'
   already-sold: '&cEsses drops já foram vendidos por outra pessoa.'
   sell-error: '&cErro ao depositar drops. Tente novamente.'
-  inventory-full: '&cSeu inventário está cheio!'
+  inventory-full: '&cSeu inventário está cheio.'
   currency-drop-entry: '  {symbol_color}{symbol}{primary_color}{amount} {currency}'
   item-drop-entry: '  &fx&l{amount} {display}'
   sold:
   - ''
-  - '  &a&lGG! &aDrops coletados!'
+  - '  &a&lGG. &aDrops coletados.'
   - ''
   - '  &7Informações:'
   - '{drops}'
   - ''
 
 fuel:
-  applied: '&7Combustível &f{fuel} &aaplicado! &e{liters} &7litros'
-  applied-infinite: '&7Combustível &f{fuel} &aaplicado!'
+  applied: '&7Combustível &f{fuel} &aaplicado. &e{liters} &7litros'
+  applied-infinite: '&7Combustível &f{fuel} &aaplicado.'
   removed: '&7Combustível &f{fuel} &7removido da máquina.'
-  inventory-full: '&cSeu inventário está cheio!'
+  inventory-full: '&cSeu inventário está cheio.'
   incompatible: '&cEsta máquina não aceita este tipo de combustível.'
   already-fueled: '&cJá existe um combustível ativo nesta máquina.'
   no-permission: '&cVocê não pode gerenciar combustível desta máquina.'
-  no-fuel: '&cA máquina está sem combustível!'
+  no-fuel: '&cA máquina está sem combustível.'
   use-on-machine: '&7Use este combustível clicando em uma &fmáquina&7.'
-  merge-none: '&cNão há combustíveis iguais para empilhar.'
-  merged: '&bx{amount} &7combustíveis de &f{fuel} &7empilhados! &e{liters} &7litros totais.'
+  merge-none: '&cNão há outros combustíveis iguais para juntar.'
+  merged: '&aVocê juntou &fx{amount} &acombustíveis de &f{fuel} &aem um só. &7Total: &f{liters} &7litros.'
 
 shop:
-  purchase-success: '&ax{amount} &f{display} &7adquirido(s)!'
+  purchase-success: '&ax{amount} &f{display} &7adquirido(s).'
   exceeds-limit: '&cA quantidade excede seu limite disponível de &e{limit}&c.'
   purchase-failed: '&cErro ao processar compra. Tente novamente.'
   # Detalhamento enviado no chat quando falta saldo: uma linha por moeda do custo,
@@ -85,7 +85,7 @@ shop:
   cost-line: '  &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'
   costs-required:
   - ''
-  - '  &cVocê não tem os recursos necessários!'
+  - '  &cVocê não tem os recursos necessários.'
   - ''
   - '  &7Recursos necessários:'
   - '{costs}'
@@ -107,27 +107,27 @@ commands:
   machines:
     help:
     - ''
-    - '  &6&lMAQUINAS &7Comandos administrativos'
+    - '  &a&lMAQUINAS &8▶ &7Comandos'
     - ''
-    - '  &e/maquinas help &8- &7Mostrar esta ajuda'
-    - '  &e/maquinas reload &8- &7Recarregar configurações'
-    - '  &e/maquinas reset <jogador> &8- &7Resetar dados de compra'
+    - '  &c/maquinas help'
+    - '  &c/maquinas reload'
+    - '  &c/maquinas reset <jogador>'
     - ''
-    reset-success: '&7Dados de compra de &f{player} &aresetados com sucesso!'
+    reset-success: '&7Dados de compra de &f{player} &aresetados com sucesso.'
     reset-not-found: '&cJogador &f{player} &cnão encontrado.'
   machine:
     help:
     - ''
-    - '  &6&lMAQUINA &7Comandos administrativos'
+    - '  &a&lMAQUINA &8▶ &7Comandos'
     - ''
-    - '  &e/maquina help &8- &7Mostrar esta ajuda.'
-    - '  &e/maquina reload &8- &7Recarregar configurações.'
-    - '  &e/maquina list &8- &7Listar máquinas do servidor.'
-    - '  &e/maquina give <jogador> <tipo> [stack] [qtd] &8- &7Dar máquina.'
-    - '  &e/maquina givebooster <jogador> <mult> <duração> [qtd] &8- &7Dar booster.'
-    - '  &e/maquina givefuel <jogador> <fuel_id> <litros> [qtd] &8- &7Dar combustível.'
-    - '  &e/maquina giveinfinitefuel <jogador> [qtd] &8- &7Dar combustível infinito.'
-    - '  &e/maquina givelimite <jogador> <quantia> [qtd] &8- &7Dar item de limite.'
+    - '  &c/maquina help'
+    - '  &c/maquina reload'
+    - '  &c/maquina list'
+    - '  &c/maquina give <jogador> <tipo> [stack] [quantidade]'
+    - '  &c/maquina givebooster <jogador> <multiplicador> <duração> [quantidade]'
+    - '  &c/maquina givefuel <jogador> <fuel_id> <litros> [quantidade]'
+    - '  &c/maquina giveinfinitefuel <jogador> [quantidade]'
+    - '  &c/maquina givelimite <jogador> <limite> [quantidade]'
     - ''
     give-success: '&ax{amount} {display} &7enviado(s) para &f{player}&7.'
     givebooster-success: '&ex{amount} &7booster(s) de {bonus} {duration} enviado(s) para &f{player}&7.'
@@ -139,27 +139,27 @@ commands:
     givelimite-invalid-amount: '&cInforme uma quantia válida. Ex: &e100 &7ou &e10k'
 
 limit-item:
-  applied: '&a+{amount} &7de limite de máquinas! &8(&fTotal: &a{total}&8)'
-  merge-none: '&cNão há outros itens de limite para empilhar.'
-  merged: '&bx{amount} &7itens de limite empilhados em &a{total}&7!'
+  applied: '&a+{amount} &7de limite de máquinas. &8(&fTotal: &a{total}&8)'
+  merge-none: '&cNão há outros itens de limite para juntar.'
+  merged: '&aVocê juntou &fx{amount} &aitens de limite em &f{total}&a.'
   currency-unavailable: '&cO sistema de limite está indisponível no momento.'
 
 booster:
-  applied: '&7Booster de &fDrops &a{bonus} &e{duration} &aativado!'
-  stacked: '&7Booster de &fDrops &a{bonus} &e{duration} &7empilhado!'
-  removed: '&7Booster de &fDrops &7removido.'
+  applied: '&aBooster de &fDrops &a{bonus} &aativado. &7Total: &f{duration}'
+  stacked: '&aBooster de &fDrops &a{bonus} &aestendido. &7Total: &f{duration}'
+  removed: '&eBooster removido. &7Devolvido &f{refund_duration}&7.'
   mismatch: '&cJá existe um booster ativo nesta máquina.'
   no-permission: '&cVocê não pode aplicar boosters nesta máquina.'
   no-permission-remove: '&cVocê não pode remover boosters desta máquina.'
-  too-short-to-remove: '&cEste booster está prestes a acabar e não pode ser removido.'
+  too-short-to-remove: '&cTempo restante insuficiente para remover este booster.'
   use-on-machine: '&7Use este booster clicando em uma &fmáquina&7.'
-  merge-none: '&cNão há boosters iguais para empilhar.'
-  merged: '&bx{amount} &7boosters de &fDrops &a{bonus} &7empilhados!'
+  merge-none: '&cNão há outros boosters iguais para juntar.'
+  merged: '&aVocê juntou &fx{amount} &aboosters de &fDrops &a{bonus} &aem um só.'
 # ── Entrega de itens ───────────────────────────────────────────────────
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.
 # Deixe "" para não avisar nada.
 delivery:
-  mailed: '&eVocê está em um evento! &eSeu item das máquinas foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

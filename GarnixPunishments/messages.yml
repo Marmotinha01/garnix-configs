@@ -32,13 +32,13 @@ commands:
   dupeip:
     error: '&cErro: {error}'
   checkid:
-    usage: '&cUso: &f/checkid <id>'
+    usage: '&cUse: &f/checkid <id>'
     not-found: '&cNenhuma punição encontrada com o ID &f{code}&c.'
     proof: '&7Prova de &f{code}&7: &f{proof}'
     error: '&cErro ao buscar punição: {error}'
   invalid-duration: '&cDuração inválida: {input}'
   punish-locked: '&c{staff} já está aplicando uma punição em {player}.'
-  warn-usage: '&cUso: &f/warn <jogador> <motivo> <prova>  &7(a prova deve começar com https://)'
+  warn-usage: '&cUse: &f/warn <jogador> <motivo> <prova>  &7(a prova deve começar com https://)'
   exempt-protected: '&c{player} é imune e não pode ser inspecionado.'
   menu-error: '&cNão foi possível abrir o menu. Tente novamente.'
   reload:
@@ -50,22 +50,22 @@ conversation:
   proof:
     prompt:
     - ''
-    - ' &b&lPROVA'
-    - ' &7Cole a URL da prova &8(ou ''cancelar''):'
+    - '  &aInforme a URL da prova.'
+    - '  &7Para cancelar digite &8cancelar&7.'
     - ''
     invalid: '&cURL inválida. Ex.: https://imgur.com/...'
   revoke:
     prompt:
     - ''
-    - ' &e&lREVOGAR'
-    - ' &7Motivo da revogação &8(ou ''cancelar''):'
+    - '  &aInforme o motivo da revogação.'
+    - '  &7Para cancelar digite &8cancelar&7.'
     - ''
     invalid: '&cO motivo não pode ser vazio.'
   pardon:
     prompt:
     - ''
-    - ' &a&lPERDOAR'
-    - ' &7Motivo do perdão &8(ou ''cancelar''):'
+    - '  &aInforme o motivo do perdão.'
+    - '  &7Para cancelar digite &8cancelar&7.'
     - ''
     invalid: '&cO motivo não pode ser vazio.'
 

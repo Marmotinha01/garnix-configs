@@ -1,12 +1,12 @@
-reload-success: '&aConfigurações das crates recarregadas com sucesso!'
+reload-success: '&aConfigurações recarregadas com sucesso.'
 
-upgrade-success: '&aMelhoria evoluída para &fLv.{level}&a! &8(Custo: &c{cost}&8)'
+upgrade-success: '&aMelhoria evoluída para &fLv.{level}&a. &8(Custo: &c{cost}&8)'
 
 robot:
-  applied: '&aRobô aplicado!'
-  removed: '&aRobô removido!'
+  applied: '&aRobô aplicado.'
+  removed: '&aRobô removido.'
   already-applied: '&cVocê já possui um robô equipado.'
-  use-in-crates: '&eEquipe seu robô abrindo &f/crates &ee clicando nele no inventário!'
+  use-in-crates: '&eEquipe seu robô abrindo &f/crates &ee clicando nele no inventário.'
   cannot-remove-while-active: '&cRemova o robô antes de retirar chaves.'
   cannot-open-while-active: '&cRemova o robô para abrir crates manualmente.'
 
@@ -14,30 +14,30 @@ keys:
   no-keys-to-remove: '&cVocê não possui chaves para remover.'
   no-keys-to-open: '&cVocê não possui chaves para abrir.'
   open-delay: '&cAguarde para abrir outra crate.'
-  need-in-hand: '&cVocê precisa estar segurando uma chave!'
-  wrong-crate: '&cEssa chave não pode abrir esta caixa!'
-  stored-single: '&aVocê armazenou &f1x {key} &ano seu &f/crates&a!'
-  stored-multiple: '&aVocê armazenou &fx{amount} {key} &ano seu &f/crates&a!'
+  need-in-hand: '&cVocê precisa estar segurando uma chave.'
+  wrong-crate: '&cEssa chave não pode abrir esta caixa.'
+  stored-single: '&aVocê armazenou &f1x {key} &ano seu &f/crates&a.'
+  stored-multiple: '&aVocê armazenou &fx{amount} {key} &ano seu &f/crates&a.'
 
 opened:
   one:
-  - '&aVocê abriu &f1 crate&a! Recompensas no &f/correio&a.'
+  - '&aVocê abriu &f1 crate&a. Recompensas no correio. &7(/correio)'
   many:
-  - '&aVocê abriu &fx{amount} crates&a! Recompensas no &f/correio&a.'
+  - '&aVocê abriu &fx{amount} crates&a. Recompensas no correio. &7(/correio)'
   with-key:
-  - '&aVocê abriu &fx{amount} {key}&a! Recompensas no &f/correio&a.'
+  - '&aVocê abriu &fx{amount} {key}&a. Recompensas no correio. &7(/correio)'
 
 conversations:
-  cancelled: '&cAção cancelada.'
+  cancelled: '&cOperação cancelada.'
   remove-keys:
     question:
     - ''
-    - '  &aDigite no chat quantas chaves deseja remover.'
+    - '  &aInforme no chat quantas chaves deseja remover.'
     - '  &7Para cancelar digite &8cancelar&7.'
     - ''
-    invalid-number: '&cPor favor, digite um número válido.'
-    not-enough: '&cVocê não possui chaves suficientes.'
-    inventory-full: '&cSeu inventário está cheio!'
+    invalid-number: '&cInforme uma quantia válida.'
+    not-enough: '&cVocê não tem chaves suficientes.'
+    inventory-full: '&cSeu inventário está cheio.'
     not-enough-space: '&cVocê só pode remover &f{amount} &cchave(s).'
     success: '&aVocê removeu &fx{amount} {key} &ado seu &f/crates&a.'
 
@@ -48,11 +48,11 @@ error:
   player-not-found: '&cJogador não encontrado.'
   user-not-found: '&cUsuário não encontrado.'
   no-block-in-sight: '&cVocê precisa estar olhando para um bloco físico.'
-  invalid-amount: '&cQuantidade inválida.'
+  invalid-amount: '&cInforme uma quantia válida.'
   user-no-crate: '&cO jogador não possui essa crate.'
 
 admin:
-  crate-location-set: '&aLocalização da crate &f{crate} &adefinida com sucesso!'
+  crate-location-set: '&aLocalização da crate &f{crate} &adefinida com sucesso.'
   give-key-all: '&6Você deu &fx{amount} {crate} &6para &eTODOS ONLINE&6.'
   give-key-player: '&6Você deu &fx{amount} {crate} &6para &f{player}&6.'
   give-robot-all: '&6Você deu &fx{amount} {robot} &6para &eTODOS ONLINE&6.'
@@ -66,15 +66,15 @@ admin:
 
 help:
 - ''
-- '  &e&lCOMANDOS — CRATES'
+- '  &e&lCRATES &8▶ &7Comandos'
 - ''
-- '  &e/crates &8— &7Abre o menu de crates.'
-- '  &c/crates ajuda &8— &7Lista comandos administrativos.'
-- '  &c/crates set <crate> &8— &7Define localização da crate.'
-- '  &c/crates ver <jogador> &8— &7Mostra crates virtuais.'
-- '  &c/crates givekey <crate> <jogador/*> <quantia>'
-- '  &c/crates giverobot <robot> <jogador/*> <quantia>'
-- '  &c/crates givevirtualkey <crate> <jogador/*> <quantia>'
+- '  &7/crates'
+- '  &c/crates ajuda'
+- '  &c/crates set <crate>'
+- '  &c/crates ver <jogador>'
+- '  &c/crates givekey <crate> <jogador/*> <quantidade>'
+- '  &c/crates giverobot <robot> <jogador/*> <quantidade>'
+- '  &c/crates givevirtualkey <crate> <jogador/*> <quantidade>'
 - '  &c/crates resetar <jogador> <crate/*>'
 - '  &c/crates resetarlevel <jogador/*>'
 - ''
@@ -91,5 +91,5 @@ user-crates:
 # leftover: inventário cheio — só a sobra foi ao correio.
 # Deixe "" para não avisar nada.
 delivery:
-  mailed: '&eVocê está em um evento! &eSeu item das caixas foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

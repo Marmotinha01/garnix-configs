@@ -1,22 +1,22 @@
-reload-success: '&aConfigurações dos spawners recarregadas com sucesso!'
+reload-success: '&aConfigurações recarregadas com sucesso.'
 
 place:
-  success: '&aVocê colocou &fx{amount} &aspawner(s) de &f{display}&a!'
-  stacked: '&aVocê empilhou &fx{amount} &aspawner(s) de &f{display}&a!'
+  success: '&aVocê colocou &fx{amount} &aspawner(s) de &f{display}&a.'
+  stacked: '&aVocê empilhou &fx{amount} &aspawner(s) de &f{display}&a.'
   invalid-type: '&cTipo de mob inválido.'
   creative-blocked: '&cVocê não pode colocar spawners no modo criativo.'
   no-plot: '&cVocê só pode colocar spawners dentro de terrenos.'
   no-plot-permission: '&cVocê não tem permissão neste terreno.'
   no-stack-permission: '&cVocê não pode empilhar neste spawner.'
   duplicate-type: '&cJá existe um spawner deste tipo neste terreno.'
-  stack-cap: '&cStack máximo atingido neste spawner. &eEvolua seu spawner!'
+  stack-cap: '&cStack máximo atingido neste spawner. &eEvolua seu spawner.'
 
 break:
-  success: '&aVocê removeu &fx{stack} &aspawner(s) de &f{display}&a!'
+  success: '&aVocê removeu &fx{stack} &aspawner(s) de &f{display}&a.'
   no-permission: '&cVocê não pode quebrar este spawner.'
   creative-blocked: '&cVocê não pode quebrar spawners no modo criativo.'
   conversation-blocked: '&cFinalize a operação antes de remover o spawner.'
-  cooldown: '&cAguarde &f{time}s &cpara remover o spawner.'
+  cooldown: '&cAguarde &f{time} &cpara remover o spawner.'
 
 interact-no-permission: '&cVocê não pode interagir com este spawner.'
 
@@ -30,7 +30,7 @@ remove-stack-conversation:
   invalid-amount: '&cInforme uma quantia válida.'
   must-be-positive: '&cA quantia deve ser maior que zero.'
   max-available: '&cEsse spawner tem apenas &fx{max} &cstack(s) disponíveis.'
-  success: '&aVocê removeu &fx{amount} &aspawner(s) de &f{display}&a!'
+  success: '&aVocê removeu &fx{amount} &aspawner(s) de &f{display}&a.'
   prompt:
   - ''
   - '  &aInforme quantos spawners de &f{display} &adeseja remover.'
@@ -39,12 +39,12 @@ remove-stack-conversation:
   - ''
 
 friends:
-  added: '&f{player} &afoi adicionado como amigo do spawner!'
-  removed: '&f{player} &cfoi removido do spawner.'
+  added: '&f{player} &afoi adicionado como amigo.'
+  removed: '&f{player} &cfoi removido dos amigos.'
   no-permission: '&cVocê não pode gerenciar amigos deste spawner.'
   add-self: '&cVocê não pode se adicionar como amigo.'
-  already-friend: '&cEste jogador já é amigo deste spawner.'
-  invalid-name: '&cInforme um nome de jogador válido.'
+  already-friend: '&cEsse jogador já é seu amigo.'
+  invalid-name: '&cInforme um nome válido.'
   add-prompt:
   - ''
   - '  &aInforme o nome do jogador para adicionar.'
@@ -60,14 +60,14 @@ drops:
   drop-entry: '  {symbol_color}{symbol} {primary_color}{amount} {secondary_color}{currency}'
   sold:
   - ''
-  - '  &aDrops vendidos com sucesso!'
+  - '  &aDrops vendidos com sucesso.'
   - ''
   - '{drops}'
   - ''
 
 heads:
-  stored: '&aVocê armazenou &fx{amount} &aheads de &f{display}&a! &8(/heads)'
-  withdrawn: '&aVocê retirou &fx{amount} &aheads de &f{display}&a!'
+  stored: '&aVocê armazenou &fx{amount} &aheads de &f{display}&a. &8(/heads)'
+  withdrawn: '&aVocê retirou &fx{amount} &aheads de &f{display}&a.'
   insufficient: '&cVocê não tem heads suficientes.'
   insufficient-spawner: '&cO spawner não possui essa quantidade de heads.'
   spawner-not-found: '&cSpawner não encontrado.'
@@ -93,13 +93,13 @@ heads-conversation:
   - ''
 
 shop:
-  purchase-success: '&aVocê comprou &fx{amount} &aspawner(s) de &f{display}&a!'
+  purchase-success: '&aVocê comprou &fx{amount} &aspawner(s) de &f{display}&a.'
   no-limit: '&cVocê atingiu o limite de spawners.'
   exceeds-limit: '&cA quantidade excede seu limite disponível de &f{limit}&c.'
   cost-line: '  &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'
   costs-required:
   - ''
-  - '  &cVocê não tem os recursos necessários!'
+  - '  &cVocê não tem os recursos necessários.'
   - ''
   - '  &7Recursos necessários:'
   - '{costs}'
@@ -123,25 +123,25 @@ commands:
   spawners:
     help:
     - ''
-    - '  &e&lCOMANDOS — SPAWNERS'
+    - '  &a&lSPAWNERS &8▶ &7Comandos'
     - ''
-    - '  &c/spawners help &8— &7Mostra esta ajuda.'
-    - '  &c/spawners reload &8— &7Recarrega as configurações.'
-    - '  &c/spawners reset <jogador> &8— &7Reseta os dados de compra.'
+    - '  &c/spawners help'
+    - '  &c/spawners reload'
+    - '  &c/spawners reset <jogador>'
     - ''
     reset-success: '&aDados de compra de &f{player} &aresetados com sucesso.'
     reset-not-found: '&cJogador &f{player} &cnão encontrado.'
   spawner:
     help:
     - ''
-    - '  &e&lCOMANDOS — SPAWNER ADMIN'
+    - '  &a&lSPAWNER &8▶ &7Comandos'
     - ''
-    - '  &c/spawner help &8— &7Mostra esta ajuda.'
-    - '  &c/spawner reload &8— &7Recarrega as configurações.'
-    - '  &c/spawner list &8— &7Lista os spawners do servidor.'
-    - '  &c/spawner give <jogador> <tipo> [stack] [qtd] &8— &7Dá um spawner.'
-    - '  &c/spawner givebooster <jogador> <drops|heads> <mult> <duração> [qtd] &8— &7Dá um booster.'
-    - '  &c/spawner givelimite <jogador> <quantia> [qtd] &8— &7Dá um item de limite.'
+    - '  &c/spawner help'
+    - '  &c/spawner reload'
+    - '  &c/spawner list'
+    - '  &c/spawner give <jogador> <tipo> [stack] [quantidade]'
+    - '  &c/spawner givebooster <jogador> <drops|heads> <multiplicador> <duração> [quantidade]'
+    - '  &c/spawner givelimite <jogador> <limite> [quantidade]'
     - ''
     give-success: '&6x{amount} &6spawner(s) de &e{display} &6enviado(s) para &f{player}&6.'
     givebooster-success: '&6x{amount} &6booster(s) de {type} {bonus} {duration} &6enviado(s) para &f{player}&6.'
@@ -153,26 +153,26 @@ commands:
   heads:
     help:
     - ''
-    - '  &e&lCOMANDOS — HEADS ADMIN'
+    - '  &a&lHEADS &8▶ &7Comandos'
     - ''
-    - '  &c/heads help &8— &7Mostra esta ajuda.'
-    - '  &c/heads set <jogador> <tipo> <qtd> &8— &7Define a quantidade de heads.'
-    - '  &c/heads add <jogador> <tipo> <qtd> &8— &7Adiciona heads.'
-    - '  &c/heads remove <jogador> <tipo> <qtd> &8— &7Remove heads.'
+    - '  &c/heads help'
+    - '  &c/heads set <jogador> <tipo> <heads>'
+    - '  &c/heads add <jogador> <tipo> <heads>'
+    - '  &c/heads remove <jogador> <tipo> <heads>'
     - ''
     set: '&6Heads de &e{type} &6de &f{player} &6definidas para &e{amount}&6.'
     add: '&6x{amount} &6heads de &e{type} &6adicionadas a &f{player}&6.'
     remove: '&6x{amount} &6heads de &e{type} &6removidas de &f{player}&6.'
-    insufficient: '&cO jogador &f{player} &cnão possui heads suficientes.'
+    insufficient: '&cO jogador &f{player} &cnão tem heads suficientes.'
 
 plot-transfer-returned: '&eSeus spawners foram devolvidos pois o terreno mudou de dono.'
 
 upgrades:
-  success: '&a{type} &aevoluído para o nível &f{level}&a!'
+  success: '&a{type} &aevoluído para o nível &f{level}&a.'
   no-permission: '&cVocê não pode evoluir este spawner.'
   costs-required:
   - ''
-  - '  &cVocê não tem os recursos necessários!'
+  - '  &cVocê não tem os recursos necessários.'
   - ''
   - '  &7Recursos necessários:'
   - '{costs}'
@@ -180,39 +180,39 @@ upgrades:
   cost-line: '  &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'
 
 sword:
-  received: '&aVocê recebeu uma &cLâmina&a!'
+  received: '&aVocê recebeu uma &cLâmina&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
-  mailed: '&eVocê está em um evento! Sua &cLâmina &efoi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário está cheio! Sua &cLâmina &efoi para o seu &6/correio&e.'
-  required: '&cVocê precisa de uma &cLâmina &cpara matar mobs! &8(/lamina)'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
+  required: '&cVocê precisa de uma &cLâmina &cpara matar mobs. &8(/lamina)'
   cooldown: '&cAguarde &f{time} &cpara pegar outra Lâmina.'
-  ceifador-proc: '&dA Lâmina ceifou &fx{amount} &dheads extras!'
+  ceifador-proc: '&dA Lâmina ceifou &fx{amount} &dheads extras.'
   # Encantamento por livro (arraste o livro sobre a lâmina).
-  book-applied: '&aEncantamento &f{enchant} &aaplicado! Nível atual: &f{level}&a.'
+  book-applied: '&aEncantamento &f{enchant} &aaplicado. Nível atual: &f{level}&a.'
   book-partial: '&aEncantamento &f{enchant} &aelevado ao nível &f{level}&a. Livro restante: &f{remaining}&a.'
   book-already-max: '&cA lâmina já está no nível máximo de &f{enchant}&c.'
   book-given: '&aEntregue livro de &f{enchant} &f{level} &a(x{amount}) para &f{player}&a.'
   enchant-not-found: '&cEncantamento &f{enchant} &cnão encontrado.'
 
 limit-item:
-  applied: '&a+{amount} &7de limite de spawners! &8(&fTotal: &a{total}&8)'
-  merge-none: '&cNão há outros itens de limite para empilhar.'
-  merged: '&aVocê empilhou &fx{amount} &aitens de limite em &f{total}&a!'
+  applied: '&a+{amount} &7de limite de spawners. &8(&fTotal: &a{total}&8)'
+  merge-none: '&cNão há outros itens de limite para juntar.'
+  merged: '&aVocê juntou &fx{amount} &aitens de limite em &f{total}&a.'
   currency-unavailable: '&cO sistema de limite está indisponível no momento.'
 
 booster:
   type-drops: Drops
   type-heads: Heads
-  applied: '&aBooster de &f{type} &a{bonus} &eativado por {duration}&a!'
-  stacked: '&aBooster de &f{type} &a{bonus} &eempilhado! &8(&7{duration}&8)'
-  removed: '&eBooster de &f{type} &eremovido. &8(&7reembolso: {refund_duration}&8)'
-  mismatch: '&cJá existe um booster ativo deste tipo neste spawner.'
+  applied: '&aBooster de &f{type} &a{bonus} &aativado. &7Total: &f{duration}'
+  stacked: '&aBooster de &f{type} &a{bonus} &aestendido. &7Total: &f{duration}'
+  removed: '&eBooster removido. &7Devolvido &f{refund_duration}&7.'
+  mismatch: '&cJá existe um booster ativo neste spawner.'
   no-permission: '&cVocê não pode aplicar boosters neste spawner.'
   no-permission-remove: '&cVocê não pode remover boosters deste spawner.'
-  too-little-time: '&cO booster está prestes a acabar e não pode ser removido.'
+  too-little-time: '&cTempo restante insuficiente para remover este booster.'
   use-on-spawner: '&cUse este booster clicando em um &fspawner&c.'
-  merge-none: '&cNão há boosters iguais para empilhar.'
-  merged: '&aVocê empilhou &fx{amount} &aboosters de &f{type} &a{bonus}&a!'
+  merge-none: '&cNão há outros boosters iguais para juntar.'
+  merged: '&aVocê juntou &fx{amount} &aboosters de &f{type} &a{bonus} &aem um só.'
 
 # ── Entrega de itens ───────────────────────────────────────────────────
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
@@ -220,5 +220,5 @@ booster:
 # leftover: inventário cheio — só a sobra foi ao correio.
 # Deixe "" para não avisar nada.
 delivery:
-  mailed: '&eVocê está em um evento! &eSeu item dos spawners foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

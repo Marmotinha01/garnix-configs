@@ -9,7 +9,7 @@ activation:
   
   # Enviada ao comprador, se ele estiver online no momento da entrega.
   received:
-  - '&6[Ativação] &fParabéns! Você ativou o produto &a{product}&f!'
+  - '&6[Ativação] &fParabéns. Você ativou o produto &a{product}&f.'
 
 # ── Anúncios ──────────────────────────────────────────────────────────
 # Só são exibidos se a opção 'Anunciar ativação no jogo' estiver marcada
@@ -24,8 +24,8 @@ announcements:
     sound: NOTE_PLING
     message:
     - ""
-    - "    &a&lGG! &7{player} &fadquiriu &a{product}&f!"
-    - "    &7Adquira você também em &a&nhttps://redegarnix.com&7!"
+    - "    &a&lGG. &7{player} &fadquiriu &a{product}&f."
+    - "    &7Adquira você também em &a&nhttps://redegarnix.com&7."
     - ""
   
   # Anúncios sob medida, escolhidos pelo nome do produto.
@@ -47,14 +47,14 @@ announcements:
       sound: LEVEL_UP
       message:
       - ""
-      - "    &6&lGG! &7{player} &fadquiriu &6{product}&f!"
-      - "    &7Adquira você também em &6&nhttps://redegarnix.com&7!"
+      - "    &6&lGG. &7{player} &fadquiriu &6{product}&f."
+      - "    &7Adquira você também em &6&nhttps://redegarnix.com&7."
       - ""
 
 # ── Comando /ativacoes ────────────────────────────────────────────────
 command:
   usage: '&cUse: /ativacoes <status|check|bloqueadas|liberar|reload>'
-  reload: '&aConfigurações recarregadas com sucesso!'
+  reload: '&aConfigurações recarregadas com sucesso.'
   reload-failed: '&cConfigurações recarregadas, mas a consulta continua parada.'
   check: '&aConsulta manual enviada à loja.'
   not-running: '&cA consulta está parada.'

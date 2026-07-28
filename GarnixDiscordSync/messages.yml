@@ -3,8 +3,8 @@ link:
   not-found: '&cCódigo inválido ou expirado. Gere um novo no Discord.'
   already-linked-player: '&cVocê já está vinculado. Use &f/desvincular&c antes.'
   already-linked-discord: '&cEssa conta do Discord já está vinculada a &f{name}&c.'
-  success: '&aConta vinculada com sucesso!'
-  success-reward: '&aVocê recebeu sua recompensa de primeira vinculação!'
+  success: '&aConta vinculada com sucesso.'
+  success-reward: '&aVocê recebeu sua recompensa de primeira vinculação.'
   error: '&cErro ao vincular sua conta. Avise a staff.'
 
 sync:

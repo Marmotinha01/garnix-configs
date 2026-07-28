@@ -165,7 +165,7 @@ muted:
   local: '&cO chat local está mutado no momento.'
 
 # ── Delay ── token: {time}
-delay: '&cAguarde &e{time}s &cpara enviar outra mensagem.'
+delay: '&cAguarde &e{time} &cpara enviar outra mensagem.'
 
 # ── [item] ── tokens: {player}
 item:
@@ -244,7 +244,7 @@ admin:
   unmuted: '&aCanal &f{channel} &adesmutado.'
   invalid-channel: '&cCanal inválido. Use &flocal&c, &fglobal &cou &ftodos&c.'
   clear-broadcast: '&eO chat foi limpo por um staff.'
-  reload: '&aConfigurações do chat recarregadas com sucesso!'
+  reload: '&aConfigurações recarregadas com sucesso.'
   stats:
   - ''
   - '  &c&lAnti-Divulgação &8- &7capturas desde o último reinício'
@@ -259,10 +259,12 @@ admin:
   - '  &8▎ &fFiltro: {replacer_active} &8▪ &f{replacer_rules} &7regras'
   - ''
   help:
-  - '&8&m----------------------------------------'
-  - '&e/chat mute <local|global|todos> &7- muta um canal'
-  - '&e/chat unmute <local|global|todos> &7- desmuta um canal'
-  - '&e/chat clear &7- limpa o chat de todos'
-  - '&e/chat stats &7- estatísticas de moderação do chat'
-  - '&e/chat reload &7- recarrega as configurações'
-  - '&8&m----------------------------------------'
+  - ''
+  - '  &b&lCHAT &8▶ &7Comandos'
+  - ''
+  - '  &c/chat mute <local|global|todos>'
+  - '  &c/chat unmute <local|global|todos>'
+  - '  &c/chat clear'
+  - '  &c/chat stats'
+  - '  &c/chat reload'
+  - ''

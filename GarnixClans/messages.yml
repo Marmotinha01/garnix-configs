@@ -9,7 +9,7 @@ general:
   player-offline: '&cO jogador &f{player} &cnão está online.'
   clan-not-found: '&cNenhum clan encontrado com a tag &f{tag}&c.'
   not-a-member: '&cO jogador &f{player} &cnão faz parte deste clan.'
-  reloaded: '&aConfigurações recarregadas.'
+  reloaded: '&aConfigurações recarregadas com sucesso.'
 
 status:
   online: '&aOnline'
@@ -24,14 +24,14 @@ permission:
   denied: '&cNegado'
 
 create:
-  invalid-tag: '&cA tag deve ter exatamente 3 caracteres alfanuméricos e aceita apenas códigos de cor (&a&&a&c, &b&&b&c...).'
+  invalid-tag: '&cA tag deve ter 3 caracteres alfanuméricos. &7Cores são aceitas.'
   tag-taken: '&cJá existe um clan com essa tag.'
   tag-blacklisted: '&cEssa tag não pode ser usada.'
   invalid-name: '&cO nome deve ter entre 3 e 16 caracteres alfanuméricos.'
   name-taken: '&cJá existe um clan com esse nome.'
   name-blacklisted: '&cEsse nome não pode ser usado.'
   already-in-clan: '&cVocê já está em um clan.'
-  success: '&aClan &f{tag} &a(&f{clan}&a) criado com sucesso!'
+  success: '&aClan &f{tag} &a(&f{clan}&a) criado com sucesso.'
 
 invite:
   pending: '&eVocê possui &f{amount} &econvite(s) de clan pendente(s). Use &f/clan &epara ver.'
@@ -39,7 +39,7 @@ invite:
   already-invited: '&cO jogador &f{player} &cjá foi convidado.'
   sent: '&aConvite enviado para &f{player}&a.'
   received: '&eO clan &f{tag} &e(&f{clan}&e) te convidou. Convidado por &f{player}&e.'
-  accepted: '&aVocê entrou no clan &f{tag} &a(&f{clan}&a)!'
+  accepted: '&aVocê entrou no clan &f{tag} &a(&f{clan}&a).'
   declined: '&cVocê recusou o convite do clan &f{tag}&c.'
   not-found: '&cVocê não possui um convite pendente do clan &f{tag}&c.'
 
@@ -48,7 +48,7 @@ leave:
 
 disband:
   success: '&cO clan &f{clan} &cfoi desfeito.'
-  chest-mailed: '&eOs itens do baú do clan foram enviados para o seu correio.'
+  chest-mailed: '&eOs itens do baú do clan foram para o correio. &7(/correio)'
 
 chest:
   in-use: '&cO baú do clan está sendo usado por &f{player}&c. Aguarde ele fechar.'
@@ -70,7 +70,7 @@ members:
 ally:
   request-sent: '&aSolicitação de aliança enviada para &f{tag}&a.'
   request-received: '&eO clan &f{tag} &esolicitou uma aliança com o seu clan.'
-  started: '&aSua aliança com o clan &f{tag} &acomeçou!'
+  started: '&aSua aliança com o clan &f{tag} &acomeçou.'
   broken: '&cA aliança com o clan &f{tag} &cfoi desfeita.'
   denied: '&cVocê recusou a aliança com o clan &f{tag}&c.'
   same-clan: '&cVocê não pode se aliar ao seu próprio clan.'
@@ -150,46 +150,46 @@ info:
   - ''
 
 conversation:
-  timeout: '&cTempo esgotado! Operação cancelada.'
+  timeout: '&cTempo esgotado. A conversa foi cancelada.'
   create-tag:
   - ''
-  - ' &aInforme a tag do clan.'
-  - ' &7Para cancelar digite &8cancelar&7.'
+  - '  &aInforme a tag do clan.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   create-name:
   - ''
-  - ' &aInforme o nome do clan.'
-  - ' &7Para cancelar digite &8cancelar&7.'
+  - '  &aInforme o nome do clan.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   invite:
   - ''
-  - ' &aInforme o nome do jogador que deseja convidar.'
-  - ' &7Para cancelar digite &8cancelar&7.'
+  - '  &aInforme o nome do jogador que deseja convidar.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   ally:
   - ''
-  - ' &aInforme a tag do clan para solicitar aliança.'
-  - ' &7Para cancelar digite &8cancelar&7.'
+  - '  &aInforme a tag do clan para solicitar aliança.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   rival:
   - ''
-  - ' &aInforme a tag do clan para declarar rivalidade.'
-  - ' &7Para cancelar digite &8cancelar&7.'
+  - '  &aInforme a tag do clan para declarar rivalidade.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   rename:
   - ''
-  - ' &aInforme o novo nome do clan.'
-  - ' &7Para cancelar digite &8cancelar&7.'
+  - '  &aInforme o novo nome do clan.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   tag-colour:
   - ''
-  - ' &aInforme a tag do clan com as novas cores.'
-  - ' &7Para cancelar digite &8cancelar&7.'
+  - '  &aInforme a tag do clan com as novas cores.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   transfer:
   - ''
-  - ' &aInforme o nome do novo líder do clan.'
-  - ' &7Para cancelar digite &8cancelar&7.'
+  - '  &aInforme o nome do novo líder do clan.'
+  - '  &7Para cancelar digite &8cancelar&7.'
   - ''
 # ── Entrega de itens ───────────────────────────────────────────────────
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
@@ -197,5 +197,5 @@ conversation:
 # leftover: inventário cheio — só a sobra foi ao correio.
 # Deixe "" para não avisar nada.
 delivery:
-  mailed: '&eVocê está em um evento! &eSeu item do clã foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

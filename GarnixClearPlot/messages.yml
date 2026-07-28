@@ -2,8 +2,8 @@ give:
   success: '&aVocê entregou &fx{amount} &aLimpador de Terreno para &f{player}&a.'
   received: '&aVocê recebeu &fx{amount} &aLimpador de Terreno&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
-  mailed: '&eVocê está em um evento! &fx{amount} &eLimpador de Terreno foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! Os Limpadores que sobraram foram para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
 
 usage:
   not-on-plot: '&cVocê precisa estar dentro de um terreno para usar isto.'
@@ -13,13 +13,13 @@ usage:
   no-allowed-blocks: '&cNenhum bloco está configurado para ser removido.'
 
 clear:
-  confirmed: '&aLimpeza iniciada! Acompanhe o progresso na action bar.'
+  confirmed: '&aLimpeza iniciada. Acompanhe o progresso na action bar.'
   cancelled: '&7Limpeza cancelada.'
-  complete: '&aLimpeza concluída! &f{cleared} &ablocos removidos em &f{duration}&a.'
+  complete: '&aLimpeza concluída. &f{cleared} &ablocos removidos em &f{duration}&a.'
   interrupted: '&eA limpeza do seu terreno foi interrompida.'
 
 command:
-  no-permission: '&cVocê não tem permissão para usar este comando.'
+  no-permission: '&cVocê não tem permissão.'
   player-not-found: '&cJogador &f{input} &cnão encontrado.'
   list-header: '&7Limpezas ativas: &f{count}'
   list-entry: '&8• &f{plot} &7(dono: &f{owner}&7, &f{percent}%&7)'

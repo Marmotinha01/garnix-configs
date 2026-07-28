@@ -1,10 +1,10 @@
 reward:
-  success: '&aVocê coletou &f{reward}&a!'
+  success: '&aVocê coletou &f{reward}&a.'
   no-permission: '&cVocê não tem permissão para coletar &f{reward}&c.'
   cooldown: '&cAguarde &f{time} &cpara coletar &f{reward} &cnovamente.'
 
 admin:
-  reload: '&aConfigurações recarregadas com sucesso!'
+  reload: '&aConfigurações recarregadas com sucesso.'
   reward-not-found: '&cA recompensa &f{reward} &cnão existe.'
   reset-player: '&aTodos os cooldowns de &f{player} &aforam resetados.'
   reset-player-reward: '&aCooldown de &f{reward} &ade &f{player} &aresetado.'

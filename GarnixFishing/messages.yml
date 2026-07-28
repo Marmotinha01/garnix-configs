@@ -2,10 +2,10 @@
 
 general:
   only-players: '&cApenas jogadores podem usar este comando.'
-  reloaded: '&aConfigurações recarregadas.'
+  reloaded: '&aConfigurações recarregadas com sucesso.'
 
 fishing:
-  started: '&aVocê arremessou a linha!'
+  started: '&aVocê arremessou a linha.'
   stopped: '&cVocê recolheu a linha.'
 
 actionbar:
@@ -20,69 +20,69 @@ catch:
   bad-luck: '&8Que azar... nada dessa vez.'
 
 level:
-  up: '&b&lLEVEL UP! &fSua vara alcançou o nível &b&l{level}&f!'
-  reward-unlocked-header: '&3&lNOVAS RECOMPENSAS DESBLOQUEADAS!'
+  up: '&b&lLEVEL UP. &fSua vara alcançou o nível &b&l{level}&f.'
+  reward-unlocked-header: '&3&lNOVAS RECOMPENSAS DESBLOQUEADAS.'
   reward-unlocked-entry: ' &8▶ &f{reward}'
 
 enchant:
   # Applied with books dragged onto the rod. {enchant} carries its own color.
-  applied: '&aEncantamento &f{enchant} &aaplicado! Nível atual: &f{level}&a.'
+  applied: '&aEncantamento &f{enchant} &aaplicado. Nível atual: &f{level}&a.'
   partial: '&aEncantamento &f{enchant} &aelevado ao nível &f{level}&a. Livro restante: &f{remaining}&a.'
   already-max: '&cA vara já está no nível máximo de &f{enchant}&c.'
 
 # Rod purchase (home menu).
 rod:
   # {item} placeholder is not used; a fixed confirmation is enough.
-  purchased: '&aVocê comprou uma Vara de Pesca!'
+  purchased: '&aVocê comprou uma Vara de Pesca.'
   # Currency placeholders resolved by the hook: {symbol_color}{symbol}{primary_color}{amount} {currency}.
-  insufficient: '&cSaldo insuficiente! Você precisa de {symbol_color}{symbol}{primary_color}{amount} {currency}&c.'
+  insufficient: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{amount} {currency}&c para comprar a vara.'
   inventory-full: '&cSeu inventário está cheio.'
 
 skin:
   invalid: '&cEssa skin não existe mais.'
   need-rod: '&cVocê precisa de uma Vara de Pesca no inventário.'
   # Applied by dragging a skin item onto the rod (swaps out the previous one).
-  applied: '&aSkin {skin} &aaplicada na sua vara!'
+  applied: '&aSkin {skin} &aaplicada na sua vara.'
   already-equipped: '&cEssa vara já está com a skin {skin}&c.'
   removed: '&eSkin {skin} &eremovida e devolvida como item.'
   inventory-full: '&cSeu inventário está cheio.'
 
 shop:
   # {item} = the bought product's icon display (carries its own colors).
-  purchased: '&aVocê comprou {item}&a!'
+  purchased: '&aVocê comprou {item}&a.'
   # Currency placeholders resolved by the hook: {symbol_color}{symbol}{primary_color}{amount} {currency}.
-  insufficient: '&cVocê não tem corais suficientes! Você precisa de {symbol_color}{symbol}{primary_color}{amount} {currency}&c.'
+  insufficient: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{amount} {currency}&c para concluir essa compra.'
 
 forge:
   no-item: '&cVocê não possui mais o item de forja.'
   inventory-full: '&cSeu inventário está cheio.'
-  success: '&aVocê forjou a skin {skin}&a!'
+  success: '&aVocê forjou a skin {skin}&a.'
 
 booster:
   # {type} já vem colorido (booster-types); {bonus} = ex. 2x.
-  activated: '&aBooster de {type} &f{bonus} &aativado!'
-  stacked: '&aBooster de {type} &f{bonus} &aempilhado!'
-  # Empilhar no inventário (shift + botão direito). Tokens: {type} {bonus} {amount} {duration}
-  merged: '&aVocê juntou &f{amount}&a boosters de {type} &f{bonus}&a em um só! &7Duração total: &f{duration}&a.'
+  activated: '&aBooster de {type} &f{bonus} &aativado.'
+  stacked: '&aBooster de {type} &f{bonus} &aestendido.'
+  # Juntar no inventário (shift + botão direito). Tokens: {type} {bonus} {amount} {duration}
+  merged: '&aVocê juntou &fx{amount} &aboosters de {type} &f{bonus}&a em um só. &7Total: &f{duration}'
   merge-none: '&eVocê não tem outros boosters de {type} &f{bonus}&e no inventário para juntar.'
-  expired: '&cSeu booster de {type} &f{bonus} &cexpirou!'
-  removed: '&eBooster de {type} &f{bonus} &eremovido. &7Devolvido &f{remaining}&7.'
-  blocked: '&cVocê já tem um booster de {type}&c ativo!'
-  conflict: '&cVocê não pode combinar um booster &fAmbos&c com boosters de tipo específico. &7Aguarde o atual expirar ou desative-o.'
+  expired: '&cSeu booster de {type} &f{bonus} &cexpirou.'
+  removed: '&eBooster removido. &7Devolvido &f{remaining}&7.'
+  blocked: '&cVocê já tem um booster ativo.'
+  conflict: '&cVocê já tem um booster ativo. &7Aguarde expirar ou desative-o.'
   too-little-time: '&cTempo restante insuficiente para remover este booster.'
 
 admin:
-  usage: '&cUso: &f{usage}'
+  usage: '&cUse: &f{usage}'
   usages:
     setlevel: /pesca setlevel <jogador> <nível>
-    addxp: /pesca addxp <jogador> <quantia>
+    addxp: /pesca addxp <jogador> <quantidade>
     setenchant: /pesca setenchant <jogador> <speed|luck|double> <nível>
-    givebook: /pesca givebook <jogador> <speed|luck|double> <nível> [quantia]
+    givebook: /pesca givebook <jogador> <speed|luck|double> <nível> [quantidade]
     giverod: /pesca giverod <jogador>
-    giveskin: /pesca giveskin <jogador> <skin> [quantia]
-    giveforge: /pesca giveforge <jogador> [quantia]
-    givearmor: /pesca givearmor <jogador> <armadura|coleção> [quantia]
-    givebooster: /pesca givebooster <jogador> <tipo> <multiplicador> <duração> [quantia]
+    giveskin: /pesca giveskin <jogador> <skin> [quantidade]
+    giveforge: /pesca giveforge <jogador> [quantidade]
+    givearmor: /pesca givearmor <jogador> <armadura|coleção> [quantidade]
+    givebooster: /pesca givebooster <jogador> <tipo> <multiplicador> <duração> [quantidade]
   player-not-found: '&cJogador &f{player} &cnão encontrado.'
   player-no-rod: '&f{player} &cprecisa estar segurando uma Vara de Pesca.'
   invalid-number: '&cNúmero inválido: &f{value}&c.'
@@ -110,5 +110,5 @@ admin:
 # leftover: inventário cheio — só a sobra foi ao correio.
 # Deixe "" para não avisar nada.
 delivery:
-  mailed: '&eVocê está em um evento! &eSeu item da pesca foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

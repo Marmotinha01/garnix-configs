@@ -1,8 +1,8 @@
 # Item físico (ativar / empilhar)
 fragment:
   activated: '&aVocê ativou &e{amount} &7{fragments} de &f{display}&7.'
-  merged: '&aVocê empilhou &ex{count} &7itens em um só de &e{amount} &7{fragments} de &f{display}&7.'
-  merge-none: '&cNão há outros fragmentos iguais para empilhar.'
+  merged: '&aVocê juntou &fx{count} &aitens em um só de &f{amount} &a{fragments} de &f{display}&a.'
+  merge-none: '&cNão há outros fragmentos iguais para juntar.'
   unknown-type: '&cEste tipo de fragmento não existe mais.'
 
 # Retirada (conversation)
@@ -26,7 +26,7 @@ shop:
 
 # Comandos administrativos
 admin:
-  reload-success: '&aConfigurações recarregadas com sucesso!'
+  reload-success: '&aConfigurações recarregadas com sucesso.'
   reset: '&aArmazenamento de &f{player} &afoi resetado.'
   player-offline: '&cO jogador &f{player} &7não está online.'
   unknown-type: '&cO tipo de fragmento &f{type} &7não existe.'
@@ -40,5 +40,5 @@ admin:
 # leftover: inventário cheio — só a sobra foi ao correio.
 # Deixe "" para não avisar nada.
 delivery:
-  mailed: '&eVocê está em um evento! &eSeus fragmentos foram para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

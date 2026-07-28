@@ -1,21 +1,21 @@
-reload-success: '&aConfigurações do correio recarregadas com sucesso!'
+reload-success: '&aConfigurações recarregadas com sucesso.'
 
-mail-notify: '&e✉ Você possui &f&l{count} &e{item_plural} para coletar! &7(/correio)'
-mail-notify-periodic: '&e⚠ Você possui &f&l{count} &e{item_plural} para coletar! &7(/correio)'
+mail-notify: '&e✉ Você possui &f&l{count} &e{item_plural} para coletar. &7(/correio)'
+mail-notify-periodic: '&e⚠ Você possui &f&l{count} &e{item_plural} para coletar. &7(/correio)'
 
 item-singular: entrega
 item-plural: entregas
 
-claimed: '&aVocê resgatou &f{item} &ado seu correio!'
-claimed-all: '&aVocê resgatou &fx{count} &aentregas do seu correio!'
+claimed: '&aVocê resgatou &f{item} &ado seu correio.'
+claimed-all: '&aVocê resgatou &fx{count} &aentregas do seu correio.'
 
 send-package:
-  no-item: '&cVocê precisa estar segurando um item!'
-  self: '&cVocê não pode enviar itens para si mesmo!'
-  success: '&aItem enviado para o correio de &f{player}&a!'
-  received: '&f{player} &aenviou um item para o seu correio! &7(/correio)'
+  no-item: '&cVocê precisa estar segurando um item.'
+  self: '&cVocê não pode enviar itens para si mesmo.'
+  success: '&aItem enviado para o correio de &f{player}&a.'
+  received: '&f{player} &aenviou um item para o seu correio. &7(/correio)'
   failed: '&cFalha ao enviar o item. Tente novamente.'
-  player-not-found: '&cO jogador informado não existe!'
+  player-not-found: '&cJogador não encontrado.'
   prompt:
   - ''
   - '  &aInforme o nome do destinatário.'
@@ -24,9 +24,9 @@ send-package:
 
 admin-no-mail: '&cO jogador &f{player} &cnão possui correio.'
 
-reset-player: '&cCorreio de &f{player} &cfoi limpo com sucesso!'
-reset-all: '&4Correio de todos os jogadores foram limpos com sucesso!'
-reset-all-confirm: '&cVocê está prestes a apagar TODOS os correios. Use o comando novamente para confirmar.'
+reset-player: '&cCorreio de &f{player} &cfoi limpo com sucesso.'
+reset-all: '&4Correio de todos os jogadores foram limpos com sucesso.'
+reset-all-confirm: '&cIsso apaga TODOS os correios. Use o comando novamente para confirmar.'
 
-inventory-full: '&cSeu inventário está cheio!'
+inventory-full: '&cSeu inventário está cheio.'
 currency-unavailable: '&cSistema de moedas indisponível. Tente novamente mais tarde.'

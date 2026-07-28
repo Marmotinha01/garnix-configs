@@ -1,7 +1,7 @@
 # Mensagens do GarnixMaintenance. Cores legacy com &. Placeholders: {server}, {player}, {lp_prefix}, {lp_suffix}.
 messages:
   usage: '&cUse: /manu <on/off/add/rem/status> ...'
-  no-permission: '&cVocê não pode executar este comando.'
+  no-permission: '&cVocê não tem permissão.'
   server-not-found: '&cEsse servidor não existe.'
   already-enabled: '&cA manutenção desse servidor já está ativada.'
   already-disabled: '&cA manutenção desse servidor já está desativada.'
@@ -25,7 +25,7 @@ messages:
   kick:
   - '&c&lREDE GARNIX'
   - ''
-  - '&cO servidor está passando por uma breve manutenção!'
+  - '&cO servidor está passando por uma breve manutenção.'
   - ''
   - '&cAcesse nosso discord para saber mais:'
   - '&ediscord.gg/redegarnix'
@@ -34,5 +34,5 @@ messages:
   - ''
   - '&c&l  REDE GARNIX'
   - ''
-  - '&c  Este servidor está em manutenção no momento!'
+  - '&c  Este servidor está em manutenção no momento.'
   - ''

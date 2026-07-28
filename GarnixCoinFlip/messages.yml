@@ -2,27 +2,27 @@
 # Deixe a lista vazia ([]) para silenciar uma mensagem.
 
 reload-success:
-- '&aConfigurações do coinflip recarregadas!'
+- '&aConfigurações recarregadas com sucesso.'
 
 create:
   cooldown:
-  - '&cAguarde &f{time} &cpara criar um novo desafio!'
+  - '&cAguarde &f{time} &cpara criar um novo desafio.'
   limit-reached:
-  - '&cVocê já tem um desafio aberto nessa economia!'
+  - '&cVocê já tem um desafio aberto nessa economia.'
   no-funds:
-  - '&cVocê não tem {currency_prefix}{amount} &cpara criar esse desafio!'
+  - '&cVocê não tem {currency_prefix}{amount} &cpara criar esse desafio.'
   invalid-amount:
-  - '&cInforme um valor válido!'
+  - '&cInforme uma quantia válida.'
   no-currency:
-  - '&cSelecione uma economia!'
+  - '&cSelecione uma economia.'
   no-amount:
-  - '&cDefina o valor da aposta!'
+  - '&cDefina o valor da aposta.'
   blacklisted:
-  - '&cEssa economia não pode ser usada em desafios!'
+  - '&cEssa economia não pode ser usada em desafios.'
   failed:
   - '&cNão foi possível criar o desafio. Seu valor foi devolvido.'
   success:
-  - '&aDesafio de {currency_prefix}{amount} &acriado com sucesso!'
+  - '&aDesafio de {currency_prefix}{amount} &acriado com sucesso.'
 
 conversations:
   amount:
@@ -33,30 +33,30 @@ conversations:
 
 challenge:
   unavailable:
-  - '&cEsse desafio não está mais disponível!'
+  - '&cEsse desafio não está mais disponível.'
   own:
-  - '&cVocê não pode aceitar o seu próprio desafio!'
+  - '&cVocê não pode aceitar o seu próprio desafio.'
   no-funds:
-  - '&cVocê não tem {currency_prefix}{amount} &cpara aceitar esse desafio!'
+  - '&cVocê não tem {currency_prefix}{amount} &cpara aceitar esse desafio.'
   accept-failed:
   - '&cNão foi possível aceitar esse desafio. Tente novamente.'
   cancelled:
   - '&aDesafio cancelado. {currency_prefix}{amount} &adevolvido.'
   cancel-too-late:
-  - '&cAlguém acabou de aceitar esse desafio!'
+  - '&cAlguém acabou de aceitar esse desafio.'
   expired:
   - '&eSeu desafio de {currency_prefix}{amount} &eexpirou. O valor foi devolvido.'
   starting:
   - ''
-  - '  &6&lCOINFLIP &8▶ &f{opponent} &7aceitou o seu desafio!'
+  - '  &6&lCOINFLIP &8▶ &f{opponent} &7aceitou o seu desafio.'
   - '  &7O sorteio começa em &f{seconds}s&7. {watch}'
   - ''
   watch-text: '&a&l[ASSISTIR]'
   watch-hover: '&7Clique para acompanhar a animação.'
   spectate-unavailable:
-  - '&cEsse desafio não está mais em andamento!'
+  - '&cEsse desafio não está mais em andamento.'
   won:
-  - '&aVocê venceu &f{opponent} &ae ganhou {currency_prefix}{amount}&a!'
+  - '&aVocê venceu &f{opponent} &ae ganhou {currency_prefix}{amount}&a.'
   won-tax:
   - '&aVocê venceu &f{opponent} &ae ganhou {currency_prefix}{amount} &a(taxa de &f{tax}%&a).'
   lost:
@@ -86,7 +86,7 @@ broadcasts:
     hover: '&7Clique para abrir o menu do coinflip.'
     message:
     - ''
-    - '  &6&lCOINFLIP &8▶ &e{player} &7criou um desafio!'
+    - '  &6&lCOINFLIP &8▶ &e{player} &7criou um desafio.'
     - '  &7Aposta de {currency_prefix}{amount}'
     - ''
   challenge-finished:
@@ -94,5 +94,5 @@ broadcasts:
     message:
     - ''
     - '  &6&lCOINFLIP &8▶ &7(/coinflip)'
-    - '  &e{winner} &7venceu &e{loser} &7e levou {currency_prefix}{amount}&7!'
+    - '  &e{winner} &7venceu &e{loser} &7e levou {currency_prefix}{amount}&7.'
     - ''

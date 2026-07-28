@@ -172,7 +172,7 @@ booster-icon:
   - ''
   - '&6Opções de uso:'
   - '&fBotão Direito &8➟ &7Ativar'
-  - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'
+  - '&fBotão Dir. + SHIFT &8➟ &7Juntar'
 
 # Action bar shown while mining. Placeholders: {providers} {separator}
 # {mine_level} {max_level} {mine_exp} {mine_need_exp}.

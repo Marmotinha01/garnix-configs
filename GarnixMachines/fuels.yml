@@ -9,7 +9,7 @@ default:
     - ''
     - '&eOpções de uso:'
     - '&fBotão Direito &8➟ &7Aplicar'
-    - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'
+    - '&fBotão Dir. + SHIFT &8➟ &7Juntar'
 
 infinite:
   display: '&b&lCombustível Infinito'

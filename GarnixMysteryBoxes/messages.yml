@@ -1,6 +1,6 @@
-reload-success: '&aConfigurações das caixas recarregadas com sucesso!'
+reload-success: '&aConfigurações recarregadas com sucesso.'
 
-opened-win: '&aVocê abriu &f{box} &ae ganhou {reward}&a!'
+opened-win: '&aVocê abriu &f{box} &ae ganhou {reward}&a.'
 
 animation:
   win-title: '&fVocê ganhou:'
@@ -10,16 +10,16 @@ box-not-found: '&cCaixa &f{input} &cnão encontrada.'
 player-not-found: '&cJogador não encontrado.'
 
 admin:
-  give-all: '&6Você deu &ex{amount} &f{box} &6para &eTODOS ONLINE&6!'
-  give-player: '&6Você deu &ex{amount} &f{box} &6para &f{player}&6!'
+  give-all: '&6Você deu &ex{amount} &f{box} &6para &eTODOS ONLINE&6.'
+  give-player: '&6Você deu &ex{amount} &f{box} &6para &f{player}&6.'
 
 help:
 - ''
-- '  &6&lCAIXAS &8▶ &7Comandos Administrativos'
+- '  &6&lCAIXAS &8▶ &7Comandos'
 - ''
-- '  &e/caixas &7- Abre o menu de caixas.'
-- '  &e/caixas give <caixa> <jogador/*> <quantia> &7- Dá caixas físicas.'
-- '  &e/caixas reload &7- Recarrega as configurações.'
+- '  &7/caixas'
+- '  &c/caixas give <caixa> <jogador/*> <quantidade>'
+- '  &c/caixas reload'
 - ''
 
 # ── Entrega de itens ───────────────────────────────────────────────────
@@ -27,5 +27,5 @@ help:
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.
 delivery:
-  mailed: '&eVocê está em um evento! &eSeu item das caixas misteriosas foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! O que sobrou foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

@@ -10,70 +10,70 @@
 # inteira. É a mesma regra do /give do essentials.
 
 reload-success:
-- '&aConfigurações do mercado recarregadas!'
+- '&aConfigurações recarregadas com sucesso.'
 
 sell:
   # Mostrada pelo ícone informativo do menu principal, que fecha o menu antes.
   how-to:
   - '&ePara vender itens no mercado use &f/mercado vender <valor> &ecom o item na mão.'
   no-item:
-  - '&cSegure na mão o item que deseja vender!'
+  - '&cSegure na mão o item que deseja vender.'
   invalid-price-input:
-  - '&cInforme um valor válido! &7(ex: 1000, 10k, 1.5M)'
+  - '&cInforme uma quantia válida. &7(ex: 1000, 10k, 1.5M)'
   invalid-price:
-  - '&cO valor mínimo de um anúncio é {currency_prefix}{price}&c!'
+  - '&cO valor mínimo de um anúncio é {currency_prefix}{price}&c.'
   invalid-currency:
-  - '&cEssa economia não pode ser usada no mercado!'
+  - '&cEssa economia não pode ser usada no mercado.'
   cooldown:
-  - '&cAguarde &f{time} &cpara anunciar outro item!'
+  - '&cAguarde &f{time} &cpara anunciar outro item.'
   limit-reached:
-  - '&cVocê já tem &f{limit} &citens à venda!'
+  - '&cVocê já tem &f{limit} &citens à venda.'
   - '&7Cancele um anúncio ou adquira mais espaços para vender.'
   item-changed:
-  - '&cO item não está mais na sua mão!'
+  - '&cO item não está mais na sua mão.'
   failed:
   - '&cNão foi possível anunciar o item. Ele continua com você.'
-  failed-mailed: '&cNão foi possível anunciar &f{item}&c. Você está em um evento, então ele foi para o seu &6/correio&c.'
-  failed-leftover: '&cNão foi possível anunciar &f{item}&c. Seu inventário está cheio, então ele foi para o seu &6/correio&c.'
+  failed-mailed: '&cNão foi possível anunciar &f{item}&c. &eEm evento — foi para o correio. &7(/correio)'
+  failed-leftover: '&cNão foi possível anunciar &f{item}&c. &eInventário cheio — foi para o correio. &7(/correio)'
   success:
-  - '&aVocê anunciou &f{item} &apor {currency_prefix}{price}&a!'
+  - '&aVocê anunciou &f{item} &apor {currency_prefix}{price}&a.'
   sold:
-  - '&aSeu &f{item} &afoi comprado por &f{buyer} &apor {currency_prefix}{price}&a!'
+  - '&aSeu &f{item} &afoi comprado por &f{buyer} &apor {currency_prefix}{price}&a.'
   # Usada no lugar de 'sold' quando a economia cobra taxa. {price} é o que o
   # comprador pagou e {net} é o que entrou na sua conta.
   sold-tax:
-  - '&aSeu &f{item} &afoi comprado por &f{buyer} &apor {currency_prefix}{price}&a!'
+  - '&aSeu &f{item} &afoi comprado por &f{buyer} &apor {currency_prefix}{price}&a.'
   - '&aVocê recebeu {currency_prefix}{net} &7(taxa de &f{tax}%&7).'
 
 buy:
   unavailable:
-  - '&cEsse item não está mais à venda!'
+  - '&cEsse item não está mais à venda.'
   own:
-  - '&cVocê não pode comprar o seu próprio item!'
+  - '&cVocê não pode comprar o seu próprio item.'
   no-funds:
-  - '&cVocê não tem {currency_prefix}{price} &cpara comprar esse item!'
+  - '&cVocê não tem {currency_prefix}{price} &cpara comprar esse item.'
   failed:
   - '&cNão foi possível concluir a compra. Nada foi cobrado de você.'
   success:
-  - '&aVocê comprou &f{item} &ade &f{seller} &apor {currency_prefix}{price}&a!'
-  received-mailed: '&aVocê comprou &f{item} &ade &f{seller} &apor {currency_prefix}{price}&a! &eVocê está em um evento, então o item foi para o seu &6/correio&e.'
-  received-leftover: '&aVocê comprou &f{item} &ade &f{seller} &apor {currency_prefix}{price}&a! &eSeu inventário encheu, então o resto foi para o seu &6/correio&e.'
+  - '&aVocê comprou &f{item} &ade &f{seller} &apor {currency_prefix}{price}&a.'
+  received-mailed: '&aVocê comprou &f{item} &apor {currency_prefix}{price}&a. &eEm evento — foi para o correio. &7(/correio)'
+  received-leftover: '&aVocê comprou &f{item} &apor {currency_prefix}{price}&a. &eInventário cheio — foi para o correio. &7(/correio)'
 
 cancel:
   unavailable:
-  - '&cEsse anúncio não é seu ou não existe mais!'
+  - '&cEsse anúncio não é seu ou não existe mais.'
   too-late:
-  - '&cNão foi possível cancelar — &f{item} &cjá foi vendido!'
+  - '&cNão foi possível cancelar — &f{item} &cjá foi vendido.'
   failed:
   - '&cNão foi possível recuperar esse item. Avise a administração.'
   success:
   - '&aAnúncio cancelado. &f{item} &avoltou para você.'
-  mailed: '&aAnúncio cancelado! &eVocê está em um evento, então &f{item} &efoi para o seu &6/correio&e.'
-  leftover: '&aAnúncio cancelado! &eSeu inventário encheu, então &f{item} &efoi para o seu &6/correio&e.'
+  mailed: '&aAnúncio cancelado. &f{item} &efoi para o correio. &7(/correio)'
+  leftover: '&aAnúncio cancelado. &f{item} &efoi para o correio. &7(/correio)'
 
 listing:
   expired:
-  - '&eSeu anúncio de &f{item} &eexpirou. O item foi para o seu &6/correio&e.'
+  - '&eSeu anúncio de &f{item} &eexpirou. &eFoi para o correio. &7(/correio)'
 
 # O ÚNICO broadcast do plugin: um item novo entrou no mercado.
 #
@@ -87,6 +87,6 @@ broadcasts:
     hover: '&7Clique para abrir o &f/mercado&7.'
     message:
     - ''
-    - '  &6&lMERCADO &8▶ &e{player} &7colocou um item à venda!'
+    - '  &6&lMERCADO &8▶ &e{player} &7colocou um item à venda.'
     - '  &f{item} &7por {currency_prefix}{price}'
     - ''
