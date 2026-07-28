@@ -23,7 +23,7 @@ farm-item:
   locked: '&cPlantação ainda bloqueada.'
 
 limit:
-  applied: '&aVocê adicionou &f{amount} &ade limite ao armazém! &8(&7{used}x&8)'
+  applied: '&aVocê adicionou &f{amount} &ade limite ao armazém! &8(&7x{used}&8)'
   no-permission: '&cVocê não pode usar isso neste terreno.'
   merge-none: '&cNão há outros itens de limite para empilhar.'
   merged: '&aVocê empilhou &fx{amount} &aitens de limite em &f{total}&a!'
@@ -75,7 +75,7 @@ collect:
 commands:
   admin-help:
   - ''
-  - '  &6&lARMAZÉM ADMIN &7— Comandos'
+  - '  &6&lARMAZEM ADMIN &7— Comandos'
   - ''
   - '  &c/armazem reload &8- &7Recarrega configurações.'
   - '  &c/armazem givelimititem <jogador> <quantia> [qtd] &8- &7Envia item de limite.'

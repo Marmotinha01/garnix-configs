@@ -45,5 +45,6 @@ user-icon:
   - '&fStatus: {status}'
   - '&fTaxa: &c{tax}%'
   - ''
-  - '&fB. Esquerdo: &7Definir Taxa'
-  - '&fB. Direito: &cRemover Amigo'
+  - '&eOpções de uso:'
+  - '&fBotão Esquerdo &8➟ &7Definir Taxa'
+  - '&fBotão Direito &8➟ &cRemover Amigo'

@@ -1,7 +1,7 @@
 # Item físico (ativar / empilhar)
 fragment:
   activated: '&aVocê ativou &e{amount} &7{fragments} de &f{display}&7.'
-  merged: '&aVocê empilhou &e{count}x &7itens em um só de &e{amount} &7{fragments} de &f{display}&7.'
+  merged: '&aVocê empilhou &ex{count} &7itens em um só de &e{amount} &7{fragments} de &f{display}&7.'
   merge-none: '&cNão há outros fragmentos iguais para empilhar.'
   unknown-type: '&cEste tipo de fragmento não existe mais.'
 
@@ -31,7 +31,7 @@ admin:
   player-offline: '&cO jogador &f{player} &7não está online.'
   unknown-type: '&cO tipo de fragmento &f{type} &7não existe.'
   invalid-amount: '&cInforme uma quantia válida (ex: 100, 1.5K).'
-  give: '&aEntregue &e{quantity}x &7item(ns) de &f{display} &7(&e{amount} &7cada) a &f{player}&7.'
+  give: '&aEntregue &ex{quantity} &7item(ns) de &f{display} &7(&e{amount} &7cada) a &f{player}&7.'
   give-virtual: '&aAdicionado &e{amount} &7{fragments} de &f{display} &7ao armazenamento de &f{player}&7.'
 
 # ── Entrega de itens ───────────────────────────────────────────────────

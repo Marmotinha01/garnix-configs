@@ -28,7 +28,7 @@ echest-opened-other: '&aAbrindo o ender chest de &f{player}&a.'
 # Admin: liberar baú / item ativador
 give-success: '&aBaú &f#{id} &aliberado para &f{player}&a.'
 give-max: '&c{player} já possui o número máximo de baús.'
-giveitem-success: '&aVocê deu &f{amount}x &aativador(es) de baú para &f{player}&a.'
+giveitem-success: '&aVocê deu &fx{amount} &aativador(es) de baú para &f{player}&a.'
 giveitem-received: '&aVocê recebeu um &fativador de baú&a! Use-o com o botão direito.'
 # Mostradas NO LUGAR de 'giveitem-received', nunca junto — uma mensagem por jogador.
 giveitem-mailed: '&eVocê está em um evento! Seu &fativador de baú &efoi para o seu &6/correio&e.'

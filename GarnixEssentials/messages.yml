@@ -33,7 +33,7 @@ tempfly:
   already-has-permission: '&cVocê já possui permissão de voo.'
   activated:
   - ''
-  - '  &a&lFLY TEMPORÁRIO &aativado!'
+  - '  &a&lFLY TEMPORARIO &aativado!'
   - '  &7Duração: &f{remaining}'
   - '  &7Use &f/fly &7para alternar o voo.'
   - ''

@@ -14,7 +14,7 @@
 #   {symbol} {symbol_color} {primary_color} {secondary_color}
 #   {currency} = nome da moeda (singular/plural automático)
 
-display: '&6&lBOLÃO'
+display: '&6&lBOLAO'
 
 # A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
 # o evento inteiro é editar esta linha e mais nada.

@@ -65,7 +65,7 @@ redeem:
   unavailable: '&cEste VIP está temporariamente indisponível. Sua chave foi preservada — tente novamente mais tarde.'
 
 givepaper:
-  success: '&e{amount}x &aPapel de {vip} &adado para &f{player} &apor &e{duration}&a.'
+  success: '&ex{amount} &aPapel de {vip} &adado para &f{player} &apor &e{duration}&a.'
   vip-not-found: '&cO VIP &f{vip} &cnão existe mais.'
   invalid-data: '&cO papel está corrompido. Dados inválidos.'
   paper-not-found: '&cO papel VIP não está mais na sua mão.'

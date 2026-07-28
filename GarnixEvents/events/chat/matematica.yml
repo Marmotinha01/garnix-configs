@@ -11,7 +11,7 @@
 #   /matematica cancelar    » encerra sem vencedor (staff)
 #   /matematica <resultado> » palpite de um jogador
 
-display: '&a&lMATEMÁTICA'
+display: '&a&lMATEMATICA'
 
 # A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
 # o evento inteiro é editar esta linha e mais nada.

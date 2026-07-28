@@ -16,7 +16,7 @@ messages:
   player-removed-all: "&eO jogador &f{player}&e foi removido da manutenção de todos os servidores."
   player-not-added: "&cO jogador &f{player}&c não está adicionado à manutenção."
   status:
-    header: '&e&lMANUTENÇÃO - STATUS'
+    header: '&e&lMANUTENÇAO - STATUS'
     server-active: '&b{server} &cManutenção ativa'
     server-inactive: '&b{server} &8Manutenção inativa'
     player: '&8  - {lp_suffix} {player}'

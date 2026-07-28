@@ -112,8 +112,8 @@ spy:
 
 reset-kdr:
   success: '&aO KDR de todos os membros do clan &f{clan} &afoi zerado.'
-  received: '&aVocê recebeu &f{amount}x &aReset de KDR.'
-  given: '&aVocê entregou &f{amount}x &aReset de KDR para &f{player}&a.'
+  received: '&aVocê recebeu &fx{amount} &aReset de KDR.'
+  given: '&aVocê entregou &fx{amount} &aReset de KDR para &f{player}&a.'
 
 admin:
   disbanded: '&cO clan &r{tag} &cfoi desfeito.'

@@ -81,7 +81,7 @@ type-names:
 # ── Kick screens (shown to the punished player on ban) ──────────────────
 screens:
   ban:
-  - '&c&lVOCÊ FOI BANIDO'
+  - '&c&lVOCE FOI BANIDO'
   - ''
   - '&7Motivo: &f{reason}'
   - '&7Prova: &f{proof}'
@@ -89,7 +89,7 @@ screens:
   - ''
   - '&8ID da punição: {code}'
   tempban:
-  - '&c&lVOCÊ FOI BANIDO TEMPORARIAMENTE'
+  - '&c&lVOCE FOI BANIDO TEMPORARIAMENTE'
   - ''
   - '&7Motivo: &f{reason}'
   - '&7Prova: &f{proof}'
@@ -98,7 +98,7 @@ screens:
   - ''
   - '&8ID da punição: {code}'
   ipban:
-  - '&c&lVOCÊ FOI BANIDO POR IP'
+  - '&c&lVOCE FOI BANIDO POR IP'
   - ''
   - '&7Motivo: &f{reason}'
   - '&7Prova: &f{proof}'
@@ -123,7 +123,7 @@ mute-notice:
 # {next_punishment}/{next_duration} = the punishment that will be applied at this stage.
 warn-notice:
 - '&8&m----------------------------------------'
-- '&6&l⚠ VOCÊ RECEBEU UM AVISO'
+- '&6&l⚠ VOCE RECEBEU UM AVISO'
 - ''
 - '&7Motivo: &f{reason}'
 - '&7Aplicado por: &f{staff}'
@@ -192,7 +192,7 @@ revoke-messages:
   - '&a&lREVOGADO &7» &f{player} teve o banimento de IP {code} removido por {staff}.'
   # Full pardon (all punishments at once — no single id)
   pardon:
-  - '&a&lPERDÃO &7» &f{player} foi perdoado de todas as punições por {staff}.'
+  - '&a&lPERDAO &7» &f{player} foi perdoado de todas as punições por {staff}.'
 
 # ── /dupeip <jogador/ip> — contas no mesmo IP com marcadores de status ──
 # Nome verde = online, cinza = offline. Marcadores '*' empilham ANTES do nick, na ordem fixa

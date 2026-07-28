@@ -11,7 +11,7 @@ spawn:
 
 boss-item:
   invalid-type: '&cTipo de boss inválido!'
-  merge-success: '&eVocê empilhou todos os bosses em um só! &8(&7{stacks}x&8)'
+  merge-success: '&eVocê empilhou todos os bosses em um só! &8(&7x{stacks}&8)'
   merge-nothing: '&cVocê não possui outros bosses para empilhar!'
 
 sword:

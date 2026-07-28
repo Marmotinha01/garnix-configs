@@ -66,7 +66,7 @@ lines:
 - text: ' &fBatatas: &c%events_stat_batatas%'
   condition: '%events_state% == running'
 
-- text: ' &c&lVOCÊ ESTÁ COM ELA!'
+- text: ' &c&lVOCE ESTA COM ELA!'
   condition: '%events_stat_batata% == sim'
 
 - text: ''

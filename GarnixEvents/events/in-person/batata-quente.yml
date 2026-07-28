@@ -250,9 +250,9 @@ messages:
   potato-lost: '&7{player} &fsaiu do evento com a última batata! Sorteando de novo...'
   # {player} o outro lado do passe
   pass-sent: '&aVocê passou a batata para &7{player}&a!'
-  pass-received: '&c&lVOCÊ ESTÁ COM A BATATA! &f(de &7{player}&f)'
+  pass-received: '&c&lVOCE ESTA COM A BATATA! &f(de &7{player}&f)'
   pass-occupied: '&c{player} já está com uma batata!'
   pass-cooldown: '&cSegure a batata mais &7{seconds}s &cantes de passar.'
   # Actionbar do relógio. Não aceita clique.
   timer-actionbar: '&c&l{seconds}s &faté explodir &8• &7{potatoes} &fbatata(s) em jogo'
-  timer-actionbar-holder: '&4&lVOCÊ ESTÁ COM A BATATA! &c&l{seconds}s &f» passe!'
+  timer-actionbar-holder: '&4&lVOCE ESTA COM A BATATA! &c&l{seconds}s &f» passe!'

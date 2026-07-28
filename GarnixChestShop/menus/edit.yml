@@ -5,7 +5,8 @@ selected-item-icon:
   slot: 13
   lore:
   - ''
-  - '&fB. Direito &8➟ &7Remover Item'
+  - '&aOpções de uso:'
+  - '&fBotão Direito &8➟ &cRemover Item'
 
 no-item-selected-icon:
   slot: 13

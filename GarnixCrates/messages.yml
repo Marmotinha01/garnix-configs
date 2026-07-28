@@ -17,15 +17,15 @@ keys:
   need-in-hand: '&cVocê precisa estar segurando uma chave!'
   wrong-crate: '&cEssa chave não pode abrir esta caixa!'
   stored-single: '&aVocê armazenou &f1x {key} &ano seu &f/crates&a!'
-  stored-multiple: '&aVocê armazenou &f{amount}x {key} &ano seu &f/crates&a!'
+  stored-multiple: '&aVocê armazenou &fx{amount} {key} &ano seu &f/crates&a!'
 
 opened:
   one:
   - '&aVocê abriu &f1 crate&a! Recompensas no &f/correio&a.'
   many:
-  - '&aVocê abriu &f{amount}x crates&a! Recompensas no &f/correio&a.'
+  - '&aVocê abriu &fx{amount} crates&a! Recompensas no &f/correio&a.'
   with-key:
-  - '&aVocê abriu &f{amount}x {key}&a! Recompensas no &f/correio&a.'
+  - '&aVocê abriu &fx{amount} {key}&a! Recompensas no &f/correio&a.'
 
 conversations:
   cancelled: '&cAção cancelada.'
@@ -39,7 +39,7 @@ conversations:
     not-enough: '&cVocê não possui chaves suficientes.'
     inventory-full: '&cSeu inventário está cheio!'
     not-enough-space: '&cVocê só pode remover &f{amount} &cchave(s).'
-    success: '&aVocê removeu &f{amount}x {key} &ado seu &f/crates&a.'
+    success: '&aVocê removeu &fx{amount} {key} &ado seu &f/crates&a.'
 
 error:
   only-players: '&cApenas jogadores podem usar este comando.'
@@ -53,12 +53,12 @@ error:
 
 admin:
   crate-location-set: '&aLocalização da crate &f{crate} &adefinida com sucesso!'
-  give-key-all: '&6Você deu &f{amount}x {crate} &6para &eTODOS ONLINE&6.'
-  give-key-player: '&6Você deu &f{amount}x {crate} &6para &f{player}&6.'
-  give-robot-all: '&6Você deu &f{amount}x {robot} &6para &eTODOS ONLINE&6.'
-  give-robot-player: '&6Você deu &f{amount}x {robot} &6para &f{player}&6.'
-  give-vkey-all: '&6Você deu &f{amount}x {crate} &6virtuais para &eTODOS ONLINE&6.'
-  give-vkey-player: '&6Você deu &f{amount}x {crate} &6virtuais para &f{player}&6.'
+  give-key-all: '&6Você deu &fx{amount} {crate} &6para &eTODOS ONLINE&6.'
+  give-key-player: '&6Você deu &fx{amount} {crate} &6para &f{player}&6.'
+  give-robot-all: '&6Você deu &fx{amount} {robot} &6para &eTODOS ONLINE&6.'
+  give-robot-player: '&6Você deu &fx{amount} {robot} &6para &f{player}&6.'
+  give-vkey-all: '&6Você deu &fx{amount} {crate} &6virtuais para &eTODOS ONLINE&6.'
+  give-vkey-player: '&6Você deu &fx{amount} {crate} &6virtuais para &f{player}&6.'
   reset-crates-all: '&cCrates de &f{player} &cresetadas.'
   reset-crate: '&cCrate &f{crate} &cde &f{player} &cresetada.'
   reset-level-all: '&4Nível de aberturas de TODOS resetado.'
@@ -79,7 +79,7 @@ help:
 - '  &c/crates resetarlevel <jogador/*>'
 - ''
 
-crate-entry: '  &8- &f{crate} &8(&e{amount}x&8)'
+crate-entry: '  &8- &f{crate} &8(&ex{amount}&8)'
 
 user-crates:
 - ''

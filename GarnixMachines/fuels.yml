@@ -7,8 +7,9 @@ default:
     lore:
     - '&fLitros: &c{liters}'
     - ''
-    - '&fB. Direito: &7Aplicar'
-    - '&fB. Direito + SHIFT: &7Empilhar'
+    - '&eOpções de uso:'
+    - '&fBotão Direito &8➟ &7Aplicar'
+    - '&fBotão Dir. + SHIFT &8➟ &7Empilhar'
 
 infinite:
   display: '&b&lCombustível Infinito'
@@ -18,4 +19,5 @@ infinite:
     glow: true
     display: '&b&lCombustível Infinito &7(Máquinas)'
     lore:
-    - '&fB. Direito: &7Aplicar em máquina'
+    - '&bOpções de uso:'
+    - '&fBotão Direito &8➟ &7Aplicar'

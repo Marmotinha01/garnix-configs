@@ -13,7 +13,7 @@ base-chance: 0.30
 increase-chance: 0.09
 
 stacked-messages:
-  - "&a&lBENÇÃO! &fVocê encontrou &7x{count} &fchaves!"
+  - "&a&lBENÇAO! &fVocê encontrou &7x{count} &fchaves!"
   - "&7Chaves mineradas nos últimos 30s"
 
 title: "&a&lABENÇOADO!"

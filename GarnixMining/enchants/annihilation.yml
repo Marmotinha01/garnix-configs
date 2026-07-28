@@ -11,11 +11,11 @@ base-chance: 60
 increase-chance: 0.05
 
 messages:
-  - "&a&lANIQUILAÇÃO! &fVocê destruiu uma camada inteira!"
+  - "&a&lANIQUILAÇAO! &fVocê destruiu uma camada inteira!"
   - "&7Blocos quebrados: &f{blocks}"
   - "&7Recompensas: {rewards}"
 
-title: "&a&lANIQUILAÇÃO!"
+title: "&a&lANIQUILAÇAO!"
 subtitle: "&f{blocks} blocos destruídos"
 
 icon:

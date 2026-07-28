@@ -107,7 +107,7 @@ commands:
   machines:
     help:
     - ''
-    - '  &6&lMÁQUINAS &7Comandos administrativos'
+    - '  &6&lMAQUINAS &7Comandos administrativos'
     - ''
     - '  &e/maquinas help &8- &7Mostrar esta ajuda'
     - '  &e/maquinas reload &8- &7Recarregar configurações'
@@ -118,7 +118,7 @@ commands:
   machine:
     help:
     - ''
-    - '  &6&lMÁQUINA &7Comandos administrativos'
+    - '  &6&lMAQUINA &7Comandos administrativos'
     - ''
     - '  &e/maquina help &8- &7Mostrar esta ajuda.'
     - '  &e/maquina reload &8- &7Recarregar configurações.'

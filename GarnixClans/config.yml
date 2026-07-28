@@ -91,5 +91,5 @@ reset-kdr-item:
   glow: true
   display: '&bReset de KDR'
   lore:
-  - '&aOpções de uso:'
+  - '&bOpções de uso:'
   - '&fBotão Direito &8➟ &7Ativar'

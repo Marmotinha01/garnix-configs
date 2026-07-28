@@ -1,8 +1,8 @@
 give:
-  success: '&aVocê entregou &f{amount}x &aTorre de Cacto de &f{floors} &aandares para &f{player}&a.'
-  received: '&aVocê recebeu &f{amount}x &aTorre de Cacto de &f{floors} &aandares&a.'
+  success: '&aVocê entregou &fx{amount} &aTorre de Cacto de &f{floors} &aandares para &f{player}&a.'
+  received: '&aVocê recebeu &fx{amount} &aTorre de Cacto de &f{floors} &aandares&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
-  mailed: '&eVocê está em um evento! &f{amount}x &eTorre de Cacto de &f{floors} &eandares foi para o seu &6/correio&e.'
+  mailed: '&eVocê está em um evento! &fx{amount} &eTorre de Cacto de &f{floors} &eandares foi para o seu &6/correio&e.'
   leftover: '&eSeu inventário encheu! As Torres de Cacto que sobraram foram para o seu &6/correio&e.'
 
 place:

@@ -8,7 +8,7 @@
 #   /digite-rapido cancelar » encerra sem vencedor (staff)
 #   /digite-rapido <frase>  » palpite de um jogador
 
-display: '&9&lDIGITE RÁPIDO'
+display: '&9&lDIGITE RAPIDO'
 
 # A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
 # o evento inteiro é editar esta linha e mais nada.

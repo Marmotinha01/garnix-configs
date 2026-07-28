@@ -10,7 +10,7 @@
 #   /clique-rapido iniciar  » abre o evento (staff)  (também /clique)
 #   /clique-rapido cancelar » encerra sem vencedor (staff)
 
-display: '&2&lCLIQUE RÁPIDO'
+display: '&2&lCLIQUE RAPIDO'
 
 # A cor deste evento. Todo '{c}' nas mensagens vira esta cor, então retematizar
 # o evento inteiro é editar esta linha e mais nada.

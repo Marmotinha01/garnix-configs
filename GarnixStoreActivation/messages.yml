@@ -85,7 +85,7 @@ command:
   release-failed: '&cA loja recusou a confirmação de &f{id}&c: {error}'
   status:
   - ''
-  - '  &6&lATIVAÇÕES DA LOJA'
+  - '  &6&lATIVAÇOES DA LOJA'
   - ''
   - '  &fConsulta: {state} &7(a cada &a{interval}s&7)'
   - '  &fServidor: &6{server}'
