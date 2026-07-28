@@ -3,24 +3,24 @@ icon:
   material: CHEST
   display: '&aCaixas'
   lore:
-  - '&7Abra suas caixas e'
+  - '&7Abra as suas caixas e'
   - '&7receba itens especiais.'
   - ''
-  - ' &aAcesso rápido:'
-  - ' &8▸ &f/crates'
+  - '&aAcesso rápido:'
+  - '&8 ▪ &f/crates'
   - ''
   - '&aClique para teleportar.'
 locked-icon:
   material: BARRIER
   display: '&cCaixas'
   lore:
-  - '&7Abra suas caixas e'
+  - '&7Abra as suas caixas e'
   - '&7receba itens especiais.'
   - ''
-  - ' &8Acesso rápido:'
-  - ' &8▸ &f/crates'
+  - '&cAcesso rápido:'
+  - '&8 ▪ &f/crates'
   - ''
-  - '&cVocê não tem permissão.'
+  - ' &8 ▾ &cVocê não tem permissão.'
 permission: ''
 slot: 13
 messages:

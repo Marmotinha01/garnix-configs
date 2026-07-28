@@ -21,50 +21,59 @@ create-auction-icon:
   material: NETHER_STAR
   display: '&aLeiloar'
   lore:
-  - '&7Clique para leiloar.'
+  - '&7Anuncie um item seu para'
+  - '&7os jogadores darem lances.'
+  - ''
+  - '&aClique para leiloar.'
 
 player-bids-icon:
   slot: 49
   material: EMPTY_MAP
   display: '&aSeus Lances'
   lore:
-  - '&7Clique para ver.'
+  - '&7Todos os leilões em que'
+  - '&7você deu algum lance.'
+  - ''
+  - '&aClique para acessar.'
 
 history-icon:
   slot: 51
   material: BOOK
   display: '&aHistórico de Leilões'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os leilões que já foram'
+  - '&7vendidos ou expiraram.'
+  - ''
+  - '&aClique para acessar.'
 
 auction-item-no-bids-lore:
 - ''
-- ' &fLeiloeiro: &7{seller} '
+- ' &8 ▪ &fLeiloeiro: &7{seller} '
 - ''
-- ' &fLance Inicial: {currency_prefix}{starting_bid} '
-- ' &fLance Atual: &cNenhum '
+- ' &8 ▪ &fLance inicial: {currency_prefix}{starting_bid} '
+- ' &8 ▪ &fLance atual: &cNenhum '
 - ''
-- ' &fTempo Restante: &e{time_remaining} '
+- ' &8 ▪ &fTempo restante: &e{time_remaining} '
 - ''
-- ' &cNenhum lance até o momento. '
+- ' &8 ▾ &cNenhum lance até o momento. '
 - ''
 - '{action}'
 
-bid-line-format: '  &8▶ &7{bidder}: {currency_prefix}{amount} '
+bid-line-format: '  &8 ▴ &f{bidder}: {currency_prefix}{amount} '
 
 action-bid: '&aClique para dar um lance. '
 action-own: '&cEste leilão é seu. '
 
 auction-item-lore:
 - ''
-- ' &fLeiloeiro: &7{seller} '
+- ' &8 ▪ &fLeiloeiro: &7{seller} '
 - ''
-- ' &fLance Inicial: {currency_prefix}{starting_bid} '
-- ' &fLance Atual: {currency_prefix}{current_bid} '
+- ' &8 ▪ &fLance inicial: {currency_prefix}{starting_bid} '
+- ' &8 ▪ &fLance atual: {currency_prefix}{current_bid} '
 - ''
-- ' &fTempo Restante: &e{time_remaining} '
+- ' &8 ▪ &fTempo restante: &e{time_remaining} '
 - ''
-- ' &fÚltimos 5 lances: '
+- ' &8Últimos 5 lances: '
 - '{bids}'
 - ''
 - '{action}'

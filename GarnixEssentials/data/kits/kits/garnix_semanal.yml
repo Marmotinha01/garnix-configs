@@ -18,12 +18,18 @@ icon:
   data: 1
   display: '&6&lKit Garnix Semanal'
   lore:
-  - '&7Clique para ver.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - '&6Clique para acessar.'
 
 locked-icon:
   material: BARRIER
   display: '&cKit Garnix Semanal'
   lore:
-  - '&7Necessário ser &6&lGARNIX&7.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - ' &8 ▾ &7Necessário ser &6&lGARNIX&7.'
 
 content: H4sIAAAAAAAA/83UzUrDQBAH8H/SpLbRQ8Bv8RB68wU8eBMFKUIP4sFbWbNjsrgfoVmrPlHfo0/WaBqDpkKVYj3+YWb2NwxsAHThC0sqDwBsduAKjn0lNMUj9mDPuGDKaD7Mn82IO/AvzJO2ToCWZUkXHuk4fWv0XLTkWKLtvg8IMc9+mXtVdsu8/SXvIMAGF3km2WsH3oApQjidnE4n8rp/G12d3wz6dyia2pdMsYSKF0vpXi1NjOSkhyzLJFXQrbrDmXccNnfLRPzIXuj77dzP20WN7X6p321a1uI4WHDv1IxJ/gtKSlKRXZqCVVGOm5Q4pdwWg+zyR1oZ56jJkZQkQif532MW/BD3xtg1SMJakhkrjK4I7Y/a6OQHtT1gBn28EBQVBQAA

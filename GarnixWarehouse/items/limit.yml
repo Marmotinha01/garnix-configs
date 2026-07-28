@@ -3,8 +3,11 @@ data: 0
 glow: true
 display: '&2Limite de Armazém'
 lore:
-- '&8▎ &fQuantia: &a{amount}'
+- '&7Aumenta quantos cactos o'
+- '&7seu armazém comporta.'
+- ''
+- ' &8 ▪ &fQuantia: &a{amount}'
 - ''
 - '&2Opções de uso:'
-- '&fBotão Direito &8➟ &7Ativar'
-- '&fBotão Dir. + SHIFT &8➟ &7Juntar'
+- '&fBotão direito &8➟ &7Ativar'
+- '&fBotão dir. + SHIFT &8➟ &7Juntar'

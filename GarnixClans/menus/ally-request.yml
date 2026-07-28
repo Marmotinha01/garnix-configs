@@ -3,23 +3,23 @@ rows: 3
 
 accept-icon:
   slot: 11
-  material: INK_SACK
-  data: 10
+  material: STAINED_GLASS_PANE
+  data: 5
   display: '&aAceitar Aliança'
   lore:
-  - '&7Firma a aliança com o'
-  - '&7clan &r{tag}&7.'
+  - '&7Firma a aliança do seu'
+  - '&7clan com o &r{tag}&7.'
   - ''
   - '&aClique para aceitar.'
 
 deny-icon:
   slot: 15
-  material: INK_SACK
-  data: 1
+  material: STAINED_GLASS_PANE
+  data: 14
   display: '&cRecusar Aliança'
   lore:
-  - '&7Descarta a solicitação do'
-  - '&7clan &r{tag}&7.'
+  - '&7Descarta a solicitação de'
+  - '&7aliança do &r{tag}&7.'
   - ''
   - '&cClique para recusar.'
 

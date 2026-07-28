@@ -17,12 +17,18 @@ icon:
   texture: 5c09328ea0abdd88440b765f630ce192c7f23a3d1867d8f8807388f067c8081e
   display: '&6Kit PigZombie'
   lore:
-  - '&7Clique para ver.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - '&6Clique para acessar.'
 
 locked-icon:
   material: BARRIER
   display: '&cKit PigZombie'
   lore:
-  - '&7Ainda não desbloqueado.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - ' &8 ▾ &cAinda não desbloqueado.'
 
 content: H4sIAAAAAAAA/82UzW7TQBSFr500dQKLCMo/i6E7Nl2hIrGoBKGoEgiQIrFgE93Yl/FV58fMTNLCC+U98mRM6piouEgFVZSN5aN7ztV3ZqQZAPRhiwNpPwCAmxmkXMA9zYZyh1/Ci4JRW1NM/Il1RQJbIzszIRlAJ6DsQ5dMXq6C3RQ6aq5gOz1bMIS1Tmu90+herXd/md+GAWwX7CuF3zLovkdNMFwu9t9yEB9ZfrZ6ygQx1HuNGmX8hZr07oZUWlWQmWBVKWpAh5tEsk48aHerOD/GU/p9u/R8O9Fq85f0d9os18Jx/4L7Lu2c1H+BUpLSFC6NAleF8riNkpfkQ1wULn9JV4bzsI2jSEo20v97mAteiKm14RpIhhuSyga2pkHIfnrF0z/w7rYbBsfVCTualNYeN5EbrYbJulFSNzqADvSPuKA3CqVfzTPI4sJAkzjtTa335Del46J31lG2ekzh0XLxfGSNZ4kCpzFiCivqxF40PFkuno0Uf52RIB+/Lk4rdNHrNH4ng+7MYmcx7NgJFHmJ82jWYqajQD7FveaUb0XncqFGRy8/HYpXH8bjw/H5c4YfEeFpxyUGAAA=

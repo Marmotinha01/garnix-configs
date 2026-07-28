@@ -22,17 +22,21 @@ shop-icon:
   material: EMERALD
   display: '&aLoja de Fragmentos'
   lore:
-  - '&7Clique para abrir.'
+  - '&7Troque os fragmentos que'
+  - '&7você juntou por itens.'
+  - ''
+  - '&aClique para acessar.'
 
 # Lore dos fragmentos que o jogador possui (clicável).
 # Placeholders: {amount}, {display}.
 withdraw-lore:
 - ''
-- '&fArmazenados: &e{amount}'
+- ' &8 ▪ &fArmazenados: &e{amount}'
 - ''
 - '&aClique para retirar.'
 
 # Lore dos fragmentos que o jogador ainda não possui.
 locked-lore:
 - ''
-- '&7Você ainda não possui este fragmento.'
+- '&7Você ainda não encontrou'
+- '&7nenhum deste fragmento.'

@@ -5,18 +5,27 @@ player-head:
   slot: 11
   display: '&aTempo Online'
   lore:
-  - '&fOnline por: &7{time}'
+  - '&7Quanto tempo você já'
+  - '&7passou dentro do servidor.'
+  - ''
+  - ' &8 ▪ &fOnline por: &7{time}'
 
 ranking-icon:
   slot: 13
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Quem mais passa tempo'
+  - '&7online no servidor.'
+  - ''
+  - '&6Clique para acessar.'
 
 rewards-icon:
   slot: 15
   material: CHEST
   display: '&aRecompensas'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os prêmios que o seu'
+  - '&7tempo online libera.'
+  - ''
+  - '&aClique para acessar.'

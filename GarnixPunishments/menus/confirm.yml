@@ -25,7 +25,8 @@ revoke:
     material: PAPER
     display: '&eRevogar {code}'
     lore:
-    - '&7Esta punição será revogada.'
+    - '&7Esta punição deixa de'
+    - '&7valer para o jogador.'
     - ''
     - ' &8 ▪ &fJogador: &7{player}'
     - ' &8 ▪ &fTipo: &7{type}'
@@ -37,7 +38,8 @@ pardon-single:
     material: PAPER
     display: '&ePerdoar {code}'
     lore:
-    - '&7Esta punição será perdoada.'
+    - '&7Esta punição será apagada'
+    - '&7do histórico do jogador.'
     - ''
     - ' &8 ▪ &fJogador: &7{player}'
     - ' &8 ▪ &fTipo: &7{type}'

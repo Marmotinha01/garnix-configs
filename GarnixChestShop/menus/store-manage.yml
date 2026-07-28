@@ -7,7 +7,10 @@ open-icon:
   data: 10
   display: '&aLoja Aberta'
   lore:
-  - '&7Clique para fechar.'
+  - '&7Qualquer jogador pode'
+  - '&7entrar e negociar nela.'
+  - ''
+  - '&aClique para fechar.'
 
 closed-icon:
   slot: 11
@@ -15,39 +18,54 @@ closed-icon:
   data: 8
   display: '&cLoja Fechada'
   lore:
-  - '&7Clique para abrir.'
+  - '&7Ninguém consegue entrar'
+  - '&7na loja neste momento.'
+  - ''
+  - '&cClique para abrir.'
 
 description-icon:
   slot: 12
   material: NAME_TAG
   display: '&aDescrição'
   lore:
-  - '&fAtual: &7{description}'
+  - '&7O texto que aparece na'
+  - '&7listagem de lojas.'
   - ''
-  - '&7Clique para alterar.'
+  - ' &8 ▪ &fAtual: &7{description}'
+  - ''
+  - '&aClique para alterar.'
 
 spawn-icon:
   slot: 15
   material: ENDER_PEARL
   display: '&eRedefinir Local'
   lore:
-  - '&7Clique para redefinir.'
+  - '&7Marque aqui o ponto onde'
+  - '&7os clientes vão chegar.'
+  - ''
+  - '&eClique para redefinir.'
 
 info-icon:
   slot: 10
   material: BOOK
   display: '&aInformações'
   lore:
-  - '&fAvaliação: &6{rating}★ '
-  - '&fVisitas: &7{visits} '
-  - '&fCriada em: &7{created} '
+  - '&7Como a sua loja vem'
+  - '&7indo desde que abriu.'
+  - ''
+  - ' &8 ▪ &fAvaliação: &6{rating}★ '
+  - ' &8 ▪ &fVisitas: &7{visits} '
+  - ' &8 ▪ &fCriada em: &7{created} '
 
 delete-icon:
   slot: 16
   material: BARRIER
   display: '&cDeletar Loja'
   lore:
-  - '&7Clique para deletar.'
+  - '&7A loja deixa de existir'
+  - '&7e some da listagem.'
+  - ''
+  - '&cClique para deletar.'
 
 back-icon:
   slot: 31

@@ -25,7 +25,10 @@ icon:
   data: 1
   display: '&aVidros'
   lore:
-  - '&7Clique para ver.'
+  - '&7Vidros comuns e coloridos'
+  - '&7para janelas e detalhes.'
+  - ''
+  - '&aClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'lojagod'

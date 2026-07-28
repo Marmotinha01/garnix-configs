@@ -5,15 +5,21 @@ info-icon:
   slot: 10
   display: '&a{display}'
   lore:
-  - '&fStack: &7x{stack}'
-  - '&fDono: &7{owner}'
+  - '&7A máquina instalada'
+  - '&7neste terreno.'
+  - ''
+  - ' &8 ▪ &fStack: &7x{stack}'
+  - ' &8 ▪ &fDono: &7{owner}'
 
 friends-icon:
   slot: 11
   texture: 76cbae7246cc2c6e888587198c7959979666b4f5a4088f24e26e075f140ae6c3
   display: '&aAmigos'
   lore:
-  - '&fTotal: &7{friends_count}'
+  - '&7Quem pode mexer nesta'
+  - '&7máquina além de você.'
+  - ''
+  - ' &8 ▪ &fTotal: &7{friends_count}'
   - ''
   - '&aClique para gerenciar.'
 
@@ -28,48 +34,69 @@ toggle-hologram-icon:
   material: BEACON
   display: '{color}Holograma'
   lore:
-  - '&fStatus: {hologram_status}'
+  - '&7O texto flutuante que'
+  - '&7aparece sobre a máquina.'
   - ''
-  - '&7Clique para alternar.'
+  - ' &8 ▪ &fStatus: {hologram_status}'
+  - ''
+  - '&eClique para alternar.'
 
 shop-icon:
   slot: 15
   material: SIGN
   display: '&aLoja'
   lore:
-  - '&7Clique para ver.'
+  - '&7Compre novas máquinas'
+  - '&7para o seu terreno.'
+  - ''
+  - '&aClique para acessar.'
 
 ranking-icon:
   slot: 16
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Quem mais tem máquinas'
+  - '&7em todo o servidor.'
+  - ''
+  - '&6Clique para acessar.'
 
 sell-drops-icon:
   slot: 28
   material: CHEST
   display: '&aGerenciar Drops'
   lore:
-  - '&7Clique para ver.'
+  - '&7Tudo o que a máquina'
+  - '&7já produziu para você.'
+  - ''
+  - '&aClique para acessar.'
 
 fuel-icon:
   slot: 30
   lore:
-    - '&fRestante: &e{fuel_remaining}'
-    - ''
-    - '&7Clique para remover.'
+  - '&7O combustível que mantém'
+  - '&7esta máquina rodando.'
+  - ''
+  - ' &8 ▪ &fRestante: &e{fuel_remaining}'
+  - ''
+  - '&cClique para remover.'
   lore-infinite:
-    - '&fCombustível: &eInfinito'
-    - ''
-    - '&7Clique para remover.'
+  - '&7O combustível que mantém'
+  - '&7esta máquina rodando.'
+  - ''
+  - ' &8 ▪ &fCombustível: &eInfinito'
+  - ''
+  - '&cClique para remover.'
 
 fuel-empty-icon:
   slot: 30
   material: HOPPER_MINECART
   display: '&cCombustível'
   lore:
-  - '&7Nenhum combustível ativo.'
+  - '&7Sem combustível a máquina'
+  - '&7não produz nada.'
+  - ''
+  - ' &8 ▾ &cNenhum combustível ativo.'
 
 booster-icon:
   slot: 32
@@ -109,4 +136,7 @@ remove-stack-icon:
   material: SHEARS
   display: '&cRemover Stack'
   lore:
-  - '&7Clique para remover.'
+  - '&7Recolhe as máquinas deste'
+  - '&7terreno de volta para você.'
+  - ''
+  - '&cClique para remover.'

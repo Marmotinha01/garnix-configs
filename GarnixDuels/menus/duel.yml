@@ -8,7 +8,10 @@ challenge-icon:
   material: DIAMOND_SWORD
   display: '&aDesafiar'
   lore:
-  - '&7Clique para desafiar.'
+  - '&7Chame outro jogador para'
+  - '&7um duelo na arena.'
+  - ''
+  - '&aClique para desafiar.'
   flags:
   - HIDE_ATTRIBUTES
 
@@ -17,11 +20,17 @@ active-icon:
   material: BOOK
   display: '&aDuelos Ativos'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os duelos acontecendo'
+  - '&7agora no servidor.'
+  - ''
+  - '&aClique para acessar.'
 
 ranking-icon:
   slot: 15
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os duelistas mais fortes'
+  - '&7de todo o servidor.'
+  - ''
+  - '&6Clique para acessar.'

@@ -26,7 +26,7 @@ back-icon:
 
 equipped-lore-suffix:
 - ''
-- '&aEquipada'
+- '&aSkin equipada no momento.'
 
 unlocked-lore-suffix:
 - ''
@@ -34,9 +34,9 @@ unlocked-lore-suffix:
 
 locked-lore-suffix:
 - ''
-- '&cBloqueada'
+- '&cSkin ainda bloqueada.'
 
 remove-lore-suffix:
 - ''
 - '&6Opções de uso:'
-- '&fBotão Direito &8➟ &cRecuperar'
+- '&fBotão direito &8➟ &cRecuperar skin'

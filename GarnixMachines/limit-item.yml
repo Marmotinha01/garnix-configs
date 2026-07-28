@@ -3,8 +3,11 @@ data: 4
 glow: true
 display: '&9Limite de Máquinas'
 lore:
-- '&8▎ &fQuantia: &9{amount}'
+- '&7Aumenta quantas máquinas'
+- '&7você pode ter no terreno.'
+- ''
+- ' &8 ▪ &fQuantia: &9{amount}'
 - ''
 - '&9Opções de uso:'
-- '&fBotão Direito &8➟ &7Ativar'
-- '&fBotão Dir. + SHIFT &8➟ &7Juntar'
+- '&fBotão direito &8➟ &7Ativar'
+- '&fBotão dir. + SHIFT &8➟ &7Juntar'

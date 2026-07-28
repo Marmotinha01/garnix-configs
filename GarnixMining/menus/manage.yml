@@ -10,7 +10,7 @@ status-public-icon:
   - '&7Altere a privacidade de'
   - '&7sua área de mineração.'
   - ''
-  - ' &8▸ &fRestrição: &aPública'
+  - ' &8 ▪ &fRestrição: &aPública'
   - ''
   - '&aClique para alterar.'
 
@@ -23,7 +23,7 @@ status-private-icon:
   - '&7Altere a privacidade de'
   - '&7sua área de mineração.'
   - ''
-  - ' &8▸ &fRestrição: &cPrivada'
+  - ' &8 ▪ &fRestrição: &cPrivada'
   - ''
   - '&cClique para alterar.'
 
@@ -33,10 +33,10 @@ status-locked-icon:
   data: 14
   display: '&8Mina Pública'
   lore:
-  - '&7Recurso exclusivo para'
-  - '&7jogadores VIPs.'
+  - '&7Deixar a mina pública é'
+  - '&7um recurso exclusivo VIP.'
   - ''
-  - '&fAdquira já seu vip em'
+  - '&7Adquira o seu VIP em'
   - '&c&nhttps://redegarnix.com'
 
 max-players-icon:
@@ -44,28 +44,28 @@ max-players-icon:
   texture: 4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb
   display: '&eMáximo de Jogadores'
   lore:
-  - '&7Defina o máximo de'
-  - '&7jogadores na mina.'
+  - '&7Defina quantos jogadores'
+  - '&7podem entrar na sua mina.'
   - ''
-  - '&fTotal: &a{total}&8/&c{max}'
+  - ' &8 ▪ &fTotal: &a{total}&8/&c{max}'
   - ''
-  - '&8 Opções de uso:'
-  - '&fEsquerdo: &a+1'
-  - '&fDireito: &c-1'
+  - '&eOpções de uso:'
+  - '&fBotão esquerdo &8➟ &aAumentar'
+  - '&fBotão direito &8➟ &cDiminuir'
 
 tax-icon:
   slot: 13
   material: REDSTONE_TORCH_ON
   display: '&cTaxa da Mina'
   lore:
-  - '&8 ▪ &fAtual: &e{tax}%'
+  - '&7Cobre uma porcentagem de'
+  - '&7quem minera na sua área.'
   - ''
-  - '&7Você recebe &c{tax}% &7dos'
-  - '&7valores p/bloco minerado.'
+  - ' &8 ▪ &fTaxa atual: &e{tax}%'
   - ''
-  - '&8 Opções de uso:'
-  - '&fEsquerdo: &7Definir '
-  - '&fDireito: &7Resetar '
+  - '&cOpções de uso:'
+  - '&fBotão esquerdo &8➟ &7Definir '
+  - '&fBotão direito &8➟ &cResetar '
 
 collect-tax-icon:
   slot: 14
@@ -79,7 +79,7 @@ collect-tax-icon:
   - '{currency_lines}'
   - ''
   - '&aClique para recolher.'
-  currency-format: ' &8▪ {symbol_color}{symbol}{primary_color}{value} {currency}'
+  currency-format: ' &8 ▪ {symbol_color}{symbol}{primary_color}{value} {currency}'
 
 collect-tax-empty-icon:
   slot: 14
@@ -89,8 +89,7 @@ collect-tax-empty-icon:
   - '&7Recolha as taxas acumuladas'
   - '&7da mineração dos visitantes.'
   - ''
-  - ' &c▴ Sem taxas acumuladas.'
-  - ''
+  - ' &8 ▾ &cSem taxas acumuladas.'
 
 # Visitor slots / friends. One icon per slot; 'slots' lists the inventory
 # positions, one per slot (must have at least visitor-slots-max entries).
@@ -105,28 +104,32 @@ friend-slots:
     data: 14
     display: '&cSlot Bloqueado'
     lore:
-    - '&7Esta vaga ainda não foi'
-    - '&7desbloqueada.'
+    - '&7Esta vaga de visitante'
+    - '&7ainda não foi liberada.'
     - ''
     - '&7Ative uma &fVaga de Visitante'
-    - '&7para desbloquear.'
+    - '&7para liberar este slot.'
   free-icon:
     material: STAINED_GLASS_PANE
     data: 5
     display: '&aSlot Livre'
     lore:
-    - '&7Nenhum amigo nesta vaga.'
+    - '&7Vaga livre para receber'
+    - '&7um amigo na sua mina.'
     - ''
-    - '&7Clique para adicionar um amigo.'
+    - '&aClique para adicionar.'
   filled:
     display: '&e{player}'
     lore:
-    - '&fStatus: {status}'
-    - '&fTaxa: &c{tax}%'
+    - '&7Amigo com acesso liberado'
+    - '&7à sua área de mineração.'
+    - ''
+    - ' &8 ▪ &fStatus: {status}'
+    - ' &8 ▪ &fTaxa: &c{tax}%'
     - ''
     - '&eOpções de uso:'
-    - '&fBotão Esquerdo &8➟ &7Definir Taxa'
-    - '&fBotão Direito &8➟ &cRemover Amigo'
+    - '&fBotão esquerdo &8➟ &7Definir taxa'
+    - '&fBotão direito &8➟ &cRemover amigo'
 
 back-icon:
   slot: 49

@@ -21,27 +21,36 @@ create-icon:
   material: NETHER_STAR
   display: '&aCriar Desafio'
   lore:
-  - '&7Clique para criar.'
+  - '&7Aposte um valor e desafie'
+  - '&7outro jogador na moeda.'
+  - ''
+  - '&aClique para criar.'
 
 my-challenges-icon:
   slot: 49
   material: EMPTY_MAP
   display: '&aSeus Desafios'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os desafios que você'
+  - '&7criou e ainda esperam.'
+  - ''
+  - '&aClique para acessar.'
 
 ranking-icon:
   slot: 51
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Quem mais venceu desafios'
+  - '&7em todo o servidor.'
+  - ''
+  - '&6Clique para acessar.'
 
 # Lore de cada desafio. O item é a cabeça do criador.
 challenge-lore:
 - ''
-- ' &fAposta: {currency_prefix}{amount} '
-- ' &fExpira em: &c{time_remaining} '
+- ' &8 ▪ &fAposta: {currency_prefix}{amount} '
+- ' &8 ▪ &fExpira em: &c{time_remaining} '
 - '{tax_info}'
 - ''
 - '{action}'
@@ -53,5 +62,5 @@ action-own: '&cEste desafio é seu.'
 # só sobre o lucro — a sua aposta volta inteira de qualquer jeito. {net} é o
 # lucro líquido e {tax} é a alíquota. Nos desafios dos outros mostra o que VOCÊ
 # pagaria ao aceitar; no seu, a alíquota travada quando você criou.
-tax-free: ' &fTaxa: &aIsento '
-tax-charged: ' &fTaxa: &c&l{tax}&c% '
+tax-free: ' &8 ▪ &fTaxa: &aIsento '
+tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% '

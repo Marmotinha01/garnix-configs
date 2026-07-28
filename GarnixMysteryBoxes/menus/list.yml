@@ -2,6 +2,7 @@ title: Caixas Misteriosas
 rows: 5
 
 box-lore:
-- '&fRecompensas: &a{rewards}'
 - ''
-- '&aClique para ver as recompensas.'
+- ' &8 ▪ &fRecompensas: &a{rewards}'
+- ''
+- '&aClique para acessar.'

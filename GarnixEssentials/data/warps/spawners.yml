@@ -3,24 +3,24 @@ icon:
   material: MOB_SPAWNER
   display: '&2Spawners'
   lore:
-  - '&7Adquira seus spawners'
+  - '&7Adquira os seus spawners'
   - '&7para evoluir de rank.'
   - ''
-  - ' &2Acesso rápido:'
-  - ' &8▸ &f/spawners'
+  - '&2Acesso rápido:'
+  - '&8 ▪ &f/spawners'
   - ''
   - '&2Clique para teleportar.'
 locked-icon:
   material: BARRIER
   display: '&cSpawners'
   lore:
-  - '&7Adquira seus spawners'
+  - '&7Adquira os seus spawners'
   - '&7para evoluir de rank.'
   - ''
-  - ' &2Acesso rápido:'
-  - ' &8▸ &f/spawners'
+  - '&cAcesso rápido:'
+  - '&8 ▪ &f/spawners'
   - ''
-  - '&cVocê não tem permissão.'
+  - ' &8 ▾ &cVocê não tem permissão.'
 permission: ''
 slot: 32
 messages:

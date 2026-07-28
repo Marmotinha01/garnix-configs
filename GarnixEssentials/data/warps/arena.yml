@@ -3,12 +3,11 @@ icon:
   material: WOOD_SWORD
   display: '&4Arena'
   lore:
-  - '&7Batalhe contra seus'
-  - '&7inimigos para disputar,'
-  - '&7quem é o melhor.'
+  - '&7Enfrente outros jogadores'
+  - '&7e prove quem é o melhor.'
   - ''
-  - ' &4Acesso rápido:'
-  - ' &8▸ &f/arena'
+  - '&4Acesso rápido:'
+  - '&8 ▪ &f/arena'
   - ''
   - '&4Clique para teleportar.'
   flags:
@@ -17,14 +16,13 @@ locked-icon:
   material: BARRIER
   display: '&4Arena'
   lore:
-  - '&7Batalhe contra seus'
-  - '&7inimigos para disputar,'
-  - '&7quem é o melhor.'
+  - '&7Enfrente outros jogadores'
+  - '&7e prove quem é o melhor.'
   - ''
-  - ' &4Acesso rápido:'
-  - ' &8▸ &f/arena'
+  - '&4Acesso rápido:'
+  - '&8 ▪ &f/arena'
   - ''
-  - '&cVocê não tem permissão.'
+  - ' &8 ▾ &cVocê não tem permissão.'
 permission: ''
 slot: 11
 messages:

@@ -3,21 +3,21 @@ material: DIAMOND_SWORD
 display: '&cLâmina'
 
 lore:
-- '&7Utilize esta lâmina para'
+- '&7Use esta lâmina para'
 - '&7abater mobs de spawners.'
 - ''
-- ' &fEncantamentos:'
+- ' &8Encantamentos:'
 - '{enchantments}'
 - ''
-- ' &fMobs Abatidos: &e{kills} '
+- ' &8 ▪ &fMobs abatidos: &e{kills} '
 - ''
-- '&7Arraste um livro de encantamento'
-- '&7sobre esta lâmina para aplicá-lo.'
+- '&7Arraste um livro sobre a'
+- '&7lâmina para aplicá-lo.'
 
 glow: true
 
-enchant-line: ' {display} {level} '
-no-enchants: ' &cNenhum encantamento. '
+enchant-line: ' &8 ▪ {display} {level} '
+no-enchants: ' &8 ▾ &cNenhum encantamento. '
 
 # Os encantamentos são elevados aplicando livros na lâmina (arraste o livro sobre
 # ela no inventário). Cada encantamento define seu próprio livro em "book"
@@ -31,10 +31,13 @@ enchantments:
       material: ENCHANTED_BOOK
       display: '&4Livro de Massacre &7{level}'
       lore:
-      - '&fMassacre: &4{level}'
+      - '&7Aumenta o dano da sua'
+      - '&7lâmina contra os mobs.'
       - ''
-      - '&7Arraste sobre a sua Lâmina'
-      - '&7para aplicar.'
+      - ' &8 ▪ &fMassacre: &4{level}'
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
     levels:
       '1':
         value: 2
@@ -52,10 +55,13 @@ enchantments:
       material: ENCHANTED_BOOK
       display: '&aLivro de Pilhagem &7{level}'
       lore:
-      - '&fPilhagem: &a{level}'
+      - '&7Aumenta os drops que os'
+      - '&7mobs deixam ao morrer.'
       - ''
-      - '&7Arraste sobre a sua Lâmina'
-      - '&7para aplicar.'
+      - ' &8 ▪ &fPilhagem: &a{level}'
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
     levels:
       '1':
         value: 1.25
@@ -69,10 +75,13 @@ enchantments:
       material: ENCHANTED_BOOK
       display: '&dLivro de Ceifador &7{level}'
       lore:
-      - '&fCeifador: &d{level}'
+      - '&7Chance de abater o mob'
+      - '&7com um golpe só.'
       - ''
-      - '&7Arraste sobre a sua Lâmina'
-      - '&7para aplicar.'
+      - ' &8 ▪ &fCeifador: &d{level}'
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
     levels:
       '1':
         chance: 25

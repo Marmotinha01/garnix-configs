@@ -10,9 +10,11 @@ option-1:
   data: 1
   display: '&cDesencantar 1 Nível'
   lore:
+  - '&7Reduz o encantamento em'
+  - '&71 nível de uma só vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &c{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ' &8 ▪ &fNível: &7{current} &8─ &c{target}'
+  - ' &8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&cClique para desencantar.'
 
@@ -23,9 +25,11 @@ option-10:
   data: 1
   display: '&cDesencantar 10 Níveis'
   lore:
+  - '&7Reduz o encantamento em'
+  - '&710 níveis de uma só vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &c{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ' &8 ▪ &fNível: &7{current} &8─ &c{target}'
+  - ' &8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&cClique para desencantar.'
 
@@ -36,9 +40,11 @@ option-25:
   data: 1
   display: '&cDesencantar 25 Níveis'
   lore:
+  - '&7Reduz o encantamento em'
+  - '&725 níveis de uma só vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &c{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ' &8 ▪ &fNível: &7{current} &8─ &c{target}'
+  - ' &8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&cClique para desencantar.'
 
@@ -49,9 +55,11 @@ option-50:
   data: 1
   display: '&cDesencantar 50 Níveis'
   lore:
+  - '&7Reduz o encantamento em'
+  - '&750 níveis de uma só vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &c{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ' &8 ▪ &fNível: &7{current} &8─ &c{target}'
+  - ' &8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&cClique para desencantar.'
 
@@ -61,9 +69,11 @@ option-all:
   material: EXPLOSIVE_MINECART
   display: '&4Desencantar Tudo'
   lore:
+  - '&7Remove todos os níveis do'
+  - '&7encantamento de uma vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &4{target}'
-  - '&f Reembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
+  - ' &8 ▪ &fNível: &7{current} &8─ &4{target}'
+  - ' &8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%)'
   - ''
   - '&4Clique para desencantar.'
 
@@ -73,7 +83,8 @@ empty:
   data: 14
   display: '&c{label}'
   lore:
-  - '&7Nada para desencantar.'
+  - '&7Este encantamento não tem'
+  - '&7níveis para desencantar.'
 
 # ── Ícone: excede os níveis ───────────────────────────────────────
 option-exceeded:
@@ -81,7 +92,8 @@ option-exceeded:
   data: 14
   display: '&cDesencantar &l{label} &cNível(eis)'
   lore:
-  - '&7Sem níveis suficientes.'
+  - '&7Você não tem tantos níveis'
+  - '&7para desencantar de uma vez.'
 
 back-icon:
   slot: 31

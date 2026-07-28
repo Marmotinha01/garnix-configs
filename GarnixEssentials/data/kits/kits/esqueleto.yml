@@ -17,12 +17,18 @@ icon:
   texture: fca445749251bdd898fb83f667844e38a1dff79a1529f79a42447a0599310ea4
   display: '&7Kit Esqueleto'
   lore:
-  - '&7Clique para ver.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - '&7Clique para acessar.'
 
 locked-icon:
   material: BARRIER
   display: '&cKit Esqueleto'
   lore:
-  - '&7Ainda não desbloqueado.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - ' &8 ▾ &cAinda não desbloqueado.'
 
 content: H4sIAAAAAAAA/82UTWvbQBCGR/JHZZODaZN+H7a59ZJToZBDIHFcAi3twZCrGUtTacnujrq7dpL+If8P/7KsI6smVQppCU2Ow7zv7PPOwPYBetCRnrTrA8BWArHM4IWWhlKL3/1+JlGzySbunG0WQWfIM+OjPrQ85j1ok0mLlbEdQ0vNFXTj6wEDWNdxVW/Xdaeqd3/rP4M+PMmkKxVeJtD+ippgsFx8/Cy9GLkfM1LkGYKpe4wacwovVqTPN6Q5q4zMBMtSUQ26tXFEa8erZrZSpmd4QX9OF99MJxpp/pF+p8nyIBwvb7l3wXNSjwKlIKXJ3xkF7gvlbRMlLcj5MMjf/Uj3hvO6iaMoz6XJ3f+HueWHmDL7ByAZbEhK9pJNjdD+pRXv/0K720zorSzPpaVJwXxWW3qNhNE6UVQlOoAW9E5kRp8U5m7VTyAJAz1NQrc7ZefIbUKHQV/YUrL6TOFNSD5k42SOAqfBYjIWlWMvCN4tFx+GSoatCFrtxoZuiTZorcafZNBeS3gWzFZagSItcB7EWsx0KFBe4F695adBuVyo4cnh6UgcfRuPR+Obe4YrGMS+MiUGAAA=

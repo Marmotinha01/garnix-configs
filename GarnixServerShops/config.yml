@@ -38,25 +38,25 @@ ui:
     locked-display: '&c{name}'
     locked-hidden-date: §k??/??/???? ??:??
     locked-lore:
-    - '&fLibera em: &7{release-date}'
     - ''
-    - '&cItem ainda bloqueado.'
-    
+    - ' &8 ▪ &fLibera em: &7{release-date}'
+    - ''
+    - ' &8 ▾ &cItem ainda bloqueado.'
+
     product-lore:
     - ''
-    - ' &8Informações de compra:'
-    - ' &8▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
-    - ' &8▪ &fQuantia: &f{amount} '
+    - ' &8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
+    - ' &8 ▪ &fQuantia: &f{amount} '
     - ''
-    - '&6Opções disponíveis:'
+    - '&6Opções de uso:'
     - '{purchase-hint}'
     - '{right-click-hint}'
-    
+
     no-discount-tag: '&cNenhum'
-    purchase-hint: '&fBotão Esquerdo &8➟ &7Comprar'
-    ask-quantity-hint: '&fBotão Esquerdo &8➟ &7Comprar'
+    purchase-hint: '&fBotão esquerdo &8➟ &7Comprar'
+    ask-quantity-hint: '&fBotão esquerdo &8➟ &7Comprar'
     already-owned-hint: '&cProduto já adquirido.'
-    right-click-hint: '&fBotão Direito &8➟ &7Preview'
+    right-click-hint: '&fBotão direito &8➟ &7Preview'
   
   coins-shop:
     back-icon:
@@ -69,25 +69,25 @@ ui:
     locked-display: '&c{name}'
     locked-hidden-date: §k??/??/???? ??:??
     locked-lore:
-    - '&fLibera em: &7{release-date}'
     - ''
-    - '&cItem ainda bloqueado.'
-    
+    - ' &8 ▪ &fLibera em: &7{release-date}'
+    - ''
+    - ' &8 ▾ &cItem ainda bloqueado.'
+
     product-lore:
     - ''
-    - ' &8Informações de compra:'
-    - ' &8▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
-    - ' &8▪ &fSeu Desconto: {discount} '
+    - ' &8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
+    - ' &8 ▪ &fSeu desconto: {discount} '
     - ''
-    - '&aOpções disponíveis:'
+    - '&aOpções de uso:'
     - '{purchase-hint}'
     - '{right-click-hint}'
-    
+
     no-discount-tag: '&cNenhum'
-    purchase-hint: '&fBotão Esquerdo &8➟ &7Comprar'
-    ask-quantity-hint: '&fBotão Esquerdo &8➟ &7Comprar'
+    purchase-hint: '&fBotão esquerdo &8➟ &7Comprar'
+    ask-quantity-hint: '&fBotão esquerdo &8➟ &7Comprar'
     already-owned-hint: '&cProduto já adquirido.'
-    right-click-hint: '&fBotão Direito &8➟ &7Preview'
+    right-click-hint: '&fBotão direito &8➟ &7Preview'
     
     # Cor do {item} quando o produto não tem display name.
     fallback-item-name-color: '&a'

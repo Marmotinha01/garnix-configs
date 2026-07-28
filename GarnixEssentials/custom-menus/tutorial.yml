@@ -15,6 +15,9 @@ items:
     material: STONE
     display: "&bWarps"
     lore:
-      - "&8Warps"
+      - "&7Todos os lugares do"
+      - "&7servidor em um menu."
+      - ""
+      - "&bClique para acessar."
     player-commands:
       - "warps"

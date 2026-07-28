@@ -18,6 +18,9 @@ empty-icon:
 head-template:
   display: '&aHeads de {display}'
   lore:
-  - '&fQuantia: &e{amount}'
+  - '&7Cabeças guardadas que'
+  - '&7caíram dos seus mobs.'
   - ''
-  - '&7Clique para retirar.'
+  - ' &8 ▪ &fQuantia: &e{amount}'
+  - ''
+  - '&aClique para retirar.'

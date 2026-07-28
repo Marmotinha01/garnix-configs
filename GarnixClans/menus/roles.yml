@@ -9,7 +9,7 @@ subleader-icon:
   display: '&r{role}'
   lore:
   - '&7Permissões concedidas ao'
-  - '&7cargo de sub-líder.'
+  - '&7cargo de sub-líder do clan.'
   - ''
   - ' &8 ▪ &fLiberadas: &a{granted}&8/&c{total}'
   - ''
@@ -23,7 +23,7 @@ member-icon:
   display: '&r{role}'
   lore:
   - '&7Permissões concedidas ao'
-  - '&7cargo de membro.'
+  - '&7cargo de membro do clan.'
   - ''
   - ' &8 ▪ &fLiberadas: &a{granted}&8/&c{total}'
   - ''

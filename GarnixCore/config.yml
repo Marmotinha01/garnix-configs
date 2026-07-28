@@ -212,16 +212,22 @@ captcha:
 confirm:
   rows: 3
   confirm:
-    slot: 11
-    material: WOOL
+    slot: 15
+    material: STAINED_GLASS_PANE
     data: 5
     display: '&aConfirmar'
     lore:
-    - '&7Clique para confirmar.'
+    - '&7A ação será executada'
+    - '&7logo após o clique.'
+    - ''
+    - '&aClique para confirmar.'
   cancel:
-    slot: 15
-    material: WOOL
+    slot: 11
+    material: STAINED_GLASS_PANE
     data: 14
     display: '&cCancelar'
     lore:
-    - '&7Clique para cancelar.'
+    - '&7Nada será alterado e você'
+    - '&7volta para o menu anterior.'
+    - ''
+    - '&cClique para cancelar.'

@@ -11,9 +11,8 @@ kill-stack-item:
   material: written_book
   display: '&4Kill-Stack +{level}'
   lore:
-  - '&7Aplique este livro'
-  - '&7em sua matadora.'
+  - '&7Aplique este livro na'
+  - '&7sua matadora e suba nível.'
   - ''
-  - ' &8▸ &f/matadora'
-  - ''
+  - ' &8 ▪ &fComando: &f/matadora'
   glow: true

@@ -3,26 +3,24 @@ icon:
   material: DIRT
   display: '&dTerrenos'
   lore:
-  - '&7Aqui você poderá considerar'
-  - '&7como seu próprio lar, além'
-  - '&7de farmar e lucrar muito.'
-  - '' 
-  - ' &dAcesso rápido:'
-  - ' &8▸ &f/plot home'
+  - '&7O seu lar no servidor,'
+  - '&7onde você farma e lucra.'
+  - ''
+  - '&dAcesso rápido:'
+  - '&8 ▪ &f/plot home'
   - ''
   - '&dClique para teleportar.'
 locked-icon:
   material: BARRIER
   display: '&cTerrenos'
   lore:
-  - '&7Aqui você poderá considerar'
-  - '&7como seu próprio lar, além'
-  - '&7de farmar e lucrar muito.'
-  - '' 
-  - ' &dAcesso rápido:'
-  - ' &8▸ &f/plot home'
+  - '&7O seu lar no servidor,'
+  - '&7onde você farma e lucra.'
   - ''
-  - '&cVocê não tem permissão.'
+  - '&cAcesso rápido:'
+  - '&8 ▪ &f/plot home'
+  - ''
+  - ' &8 ▾ &cVocê não tem permissão.'
 permission: ''
 slot: 29
 messages:

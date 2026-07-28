@@ -16,7 +16,7 @@ slot: 10
 crate-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&e&lCHAVE MINERAÇAO'
+  display: '&eChave Mineração'
   lore:
   - '&7Consiga na mineração upando'
   - '&7o encantamento abençoado.'
@@ -25,7 +25,7 @@ crate-item:
 key-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&e&lCHAVE MINERAÇAO'
+  display: '&eChave Mineração'
   lore:
   - '&7Consiga na mineração upando'
   - '&7o encantamento abençoado.'
@@ -68,7 +68,7 @@ rewards:
   stone:
     type: COMMAND_ITEM
     chance: 15.0
-    display: '&7Pedra'
+    display: '&9Pedra'
     command: give {player} minecraft:stone {amount}
     amount: 100
     item:
@@ -89,7 +89,7 @@ rewards:
   leather-armor:
     type: ITEM
     chance: 1.5
-    display: '&cArmadura'
+    display: '&cArmadura Vermelha'
     item:
       material: LEATHER_CHESTPLATE
       color: '#FF5555'

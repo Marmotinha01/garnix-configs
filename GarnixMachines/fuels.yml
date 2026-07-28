@@ -5,11 +5,14 @@ default:
   item:
     display: '&eCombustível &7(Máquinas)'
     lore:
-    - '&fLitros: &c{liters}'
+    - '&7Mantém a sua máquina'
+    - '&7produzindo sem parar.'
+    - ''
+    - ' &8 ▪ &fLitros: &c{liters}'
     - ''
     - '&eOpções de uso:'
-    - '&fBotão Direito &8➟ &7Aplicar'
-    - '&fBotão Dir. + SHIFT &8➟ &7Juntar'
+    - '&fBotão direito &8➟ &7Aplicar'
+    - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 infinite:
   display: '&b&lCombustível Infinito'
@@ -19,5 +22,8 @@ infinite:
     glow: true
     display: '&b&lCombustível Infinito &7(Máquinas)'
     lore:
+    - '&7A máquina nunca mais'
+    - '&7fica sem combustível.'
+    - ''
     - '&bOpções de uso:'
-    - '&fBotão Direito &8➟ &7Aplicar'
+    - '&fBotão direito &8➟ &7Aplicar'

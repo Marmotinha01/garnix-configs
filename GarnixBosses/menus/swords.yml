@@ -9,10 +9,12 @@ shape:
 - XXXXXXXXX
 
 sword-item-lore:
-- '&fDano: &c❤{damage}'
+- ''
+- ' &8 ▪ &fDano: &c❤{damage}'
 
 sword-item-lore-hitkill:
-- '&fDano: &4Hit-Kill'
+- ''
+- ' &8 ▪ &fDano: &4Hit-Kill'
 
 back-icon:
   slot: 49

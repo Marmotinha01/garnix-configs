@@ -2,9 +2,9 @@ title: Confirmação
 rows: 3
 
 confirm-icon:
-  slot: 11
-  material: INK_SACK
-  data: 10
+  slot: 15
+  material: STAINED_GLASS_PANE
+  data: 5
   display: '&aConfirmar'
   lore:
   - '{question}'
@@ -12,11 +12,12 @@ confirm-icon:
   - '&aClique para confirmar.'
 
 cancel-icon:
-  slot: 15
-  material: INK_SACK
-  data: 1
+  slot: 11
+  material: STAINED_GLASS_PANE
+  data: 14
   display: '&cCancelar'
   lore:
-  - '&7Nada será alterado.'
+  - '&7Nada será alterado e você'
+  - '&7volta para o menu anterior.'
   - ''
   - '&cClique para voltar.'

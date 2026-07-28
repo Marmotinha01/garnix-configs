@@ -6,17 +6,23 @@ info-icon:
   material: MOB_SPAWNER
   display: '&a{display}'
   lore:
-  - '&fStack: &7x{stack}'
-  - '&fDono: &7{owner}'
+  - '&7O spawner instalado'
+  - '&7neste terreno.'
+  - ''
+  - ' &8 ▪ &fStack: &7x{stack}'
+  - ' &8 ▪ &fDono: &7{owner}'
 
 friends-icon:
   slot: 11
   texture: 4ede35ef87e539b3d198dc17a8c241b7795644a730519375ddf7584f7c28754b
   display: '&aAmigos'
   lore:
-  - '&fTotal: &e{friends_count}'
+  - '&7Quem pode mexer neste'
+  - '&7spawner além de você.'
   - ''
-  - '&7Clique para gerenciar.'
+  - ' &8 ▪ &fTotal: &e{friends_count}'
+  - ''
+  - '&aClique para gerenciar.'
 
 hologram-status:
   color-on: '&a'
@@ -29,57 +35,81 @@ toggle-hologram-icon:
   material: BEACON
   display: '{color}Holograma'
   lore:
-  - '&fStatus: {hologram_status}'
+  - '&7O texto flutuante que'
+  - '&7aparece sobre o spawner.'
   - ''
-  - '&7Clique para alternar.'
+  - ' &8 ▪ &fStatus: {hologram_status}'
+  - ''
+  - '&eClique para alternar.'
 
 shop-icon:
   slot: 15
   material: SIGN
   display: '&aLoja'
   lore:
-  - '&7Clique para ver.'
+  - '&7Compre novos spawners'
+  - '&7para o seu terreno.'
+  - ''
+  - '&aClique para acessar.'
 
 ranking-icon:
   slot: 16
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Quem mais tem spawners'
+  - '&7em todo o servidor.'
+  - ''
+  - '&6Clique para acessar.'
 
 sell-drops-icon:
   slot: 28
   material: CHEST
   display: '&aGerenciar Drops'
   lore:
-  - '&7Clique para gerenciar.'
+  - '&7Tudo o que os mobs deste'
+  - '&7spawner já dropparam.'
+  - ''
+  - '&aClique para acessar.'
 
 collect-heads-icon:
   slot: 29
   display: '&aHeads de {mob}'
   lore:
-  - '&fQuantia: &ex{heads_count}'
+  - '&7Cabeças que caíram dos'
+  - '&7mobs deste spawner.'
   - ''
-  - '&7Clique para coletar.'
+  - ' &8 ▪ &fQuantia: &ex{heads_count}'
+  - ''
+  - '&aClique para coletar.'
 
 collect-heads-empty-icon:
   display: '&cHeads de {mob}'
   lore:
-  - '&7Nenhuma cabeça disponível.'
+  - '&7Cabeças que caíram dos'
+  - '&7mobs deste spawner.'
+  - ''
+  - ' &8 ▾ &cNenhuma cabeça disponível.'
 
 upgrades-icon:
   slot: 30
   material: FURNACE
   display: '&aEvoluções'
   lore:
-  - '&7Clique para evoluir.'
+  - '&7Melhore o stack e a'
+  - '&7velocidade do spawner.'
+  - ''
+  - '&aClique para acessar.'
 
 remove-stack-icon:
   slot: 34
   material: SHEARS
   display: '&cRemover Stack'
   lore:
-  - '&7Clique para remover.'
+  - '&7Recolhe os spawners deste'
+  - '&7terreno de volta para você.'
+  - ''
+  - '&cClique para remover.'
 
 booster-icon:
   slot: 32

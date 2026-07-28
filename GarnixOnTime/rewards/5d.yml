@@ -6,10 +6,11 @@ reward-icon:
   material: WATCH
   display: '&a&l5 Dias Online'
   lore:
+    - '&7Fique online e resgate'
+    - '&7a recompensa deste marco.'
     - ''
-    - ' &7Recompensas:'
-    - ' &8▶ &f&l1&fx &4&lCHAVE BOSSES'
-    - ''
+    - ' &8Recompensas:'
+    - ' &8 ▪ &f&l1&fx &4Chave Bosses'
 
 rewards:
   coins:
@@ -35,4 +36,4 @@ rewards:
     amount: 1
     icon:
       material: TRIPWIRE_HOOK
-      display: '&4&lCHAVE BOSSES'
+      display: '&4Chave Bosses'

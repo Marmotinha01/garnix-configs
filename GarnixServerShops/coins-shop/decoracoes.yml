@@ -25,7 +25,10 @@ icon:
   data: 0
   display: '&aDecorações'
   lore:
-  - '&7Clique para ver.'
+  - '&7Itens decorativos para'
+  - '&7dar vida ao seu terreno.'
+  - ''
+  - '&aClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'lojagod'

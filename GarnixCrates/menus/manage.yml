@@ -11,8 +11,7 @@ shape:
 
 chance-lore:
 - ''
-- '&fChance: &c{chance}%'
-- ''
+- ' &8 ▪ &fChance: &c{chance}%'
 
 filter-status:
   is-filtered:
@@ -35,7 +34,10 @@ remove-icon:
   texture: "a3852bf616f31ed67c37de4b0baa2c5f8d8fca82e72dbcafcba66956a81c4"
   display: '&cRemover Chaves'
   lore:
-  - '&fDisponível: &7x&l{keys}'
+  - '&7Retire as chaves guardadas'
+  - '&7e receba o item de volta.'
+  - ''
+  - ' &8 ▪ &fDisponível: &7x&l{keys}'
   - ''
   - '&cClique para escolher.'
 
@@ -44,6 +46,9 @@ open-icon:
   texture: "b221da4418bd3bfb42eb64d2ab429c61decb8f4bf7d4cfb77a162be3dcb0b927"
   display: '&aAbrir Chaves'
   lore:
-  - '&fDisponível: &7x&l{keys}'
+  - '&7Abra as chaves guardadas'
+  - '&7e receba as recompensas.'
+  - ''
+  - ' &8 ▪ &fDisponível: &7x&l{keys}'
   - ''
   - '&aClique para abrir &ax&l{max}&a.'

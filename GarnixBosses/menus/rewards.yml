@@ -10,28 +10,28 @@ shape:
 
 reward-item-lore:
 - ''
-- ' &8▸ &fChance: &7{chance}'
+- ' &8 ▪ &fChance: &7{chance}'
 
-reward-toggle-enabled: '&fClique para &7adicionar &ffiltro.'
-reward-toggle-disabled: '&fClique para &7remover &ffiltro.'
+reward-toggle-enabled: '&aClique para adicionar ao filtro.'
+reward-toggle-disabled: '&cClique para remover do filtro.'
 
 sort-icon:
   slot: 50
   material: HOPPER
   display: '&aOrdenar'
   lore:
-  - '&7Altere a visualização das'
-  - '&7ordem com base as chances.'
+  - '&7Escolha se as recompensas'
+  - '&7vêm da maior ou menor chance.'
   - ''
-  - ' &8▸ &fOrdenar: &7{sorts}'
+  - ' &8 ▪ &fOrdenar: &7{sorts}'
   - ''
-  - '&fClique para &7alterar &fordem.'
+  - '&aClique para alternar.'
 
 sorts:
   highest-display: Maior Chance
   lowest-display: Menor Chance
-  line: ' &8► &7{display} '
-  line-selected: ' &a► &f{display} '
+  line: ' &8 ► &7{display} '
+  line-selected: ' &a ► &f{display} '
 
 back-icon:
   slot: 48

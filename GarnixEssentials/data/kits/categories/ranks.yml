@@ -4,7 +4,10 @@ icon:
   material: LEATHER_CHESTPLATE
   display: "&eKits Ranks"
   lore:
-    - "&7Clique para ver."
+    - "&7Todos os kits desta"
+    - "&7categoria em um lugar."
+    - ""
+    - "&eClique para acessar."
 
 slot: 11
 

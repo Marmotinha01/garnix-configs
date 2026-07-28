@@ -11,7 +11,10 @@ duration-icon:
   material: WATCH
   display: '&a{duration}'
   lore:
-  - '&7Clique para selecionar.'
+  - '&7O leilão fica no ar por'
+  - '&7este tempo até encerrar.'
+  - ''
+  - '&aClique para selecionar.'
 
 back-icon:
   slot: 31

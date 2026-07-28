@@ -25,7 +25,10 @@ icon:
   data: 1
   display: '&aArgilas'
   lore:
-  - '&7Clique para ver.'
+  - '&7Argilas coloridas para'
+  - '&7construir e decorar.'
+  - ''
+  - '&aClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'lojagod'

@@ -11,9 +11,11 @@ option-1:
   data: 0
   display: '&aEvoluir &l1 &aNível'
   lore:
+  - '&7Sobe o encantamento em'
+  - '&71 nível de uma só vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &a{target}'
-  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
   - ''
   - '&aClique para evoluir.'
 
@@ -24,9 +26,11 @@ option-10:
   data: 0
   display: '&aEvoluir &l10 &aNíveis'
   lore:
+  - '&7Sobe o encantamento em'
+  - '&710 níveis de uma só vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &a{target}'
-  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
   - ''
   - '&aClique para evoluir.'
 
@@ -37,9 +41,11 @@ option-25:
   data: 0
   display: '&aEvoluir &l25 &aNíveis'
   lore:
+  - '&7Sobe o encantamento em'
+  - '&725 níveis de uma só vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &a{target}'
-  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
   - ''
   - '&aClique para evoluir.'
 
@@ -50,9 +56,11 @@ option-50:
   data: 0
   display: '&aEvoluir &l50 &aNíveis'
   lore:
+  - '&7Sobe o encantamento em'
+  - '&750 níveis de uma só vez.'
   - ''
-  - '&f Nível: &7{current} &8─ &a{target}'
-  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
   - ''
   - '&aClique para evoluir.'
 
@@ -62,9 +70,11 @@ option-max:
   material: ENCHANTMENT_TABLE
   display: '&2Evoluir ao Máximo'
   lore:
+  - '&7Sobe o encantamento até'
+  - '&7o nível máximo possível.'
   - ''
-  - '&f Nível: &7{current} &8─ &2{target}'
-  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &2{target}'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
   - ''
   - '&2Clique para evoluir.'
 
@@ -73,7 +83,8 @@ maxed-icon:
   material: BLAZE_POWDER
   display: '&8Nível Máximo'
   lore:
-  - '&7Nível máximo atingido.'
+  - '&7Este encantamento já está'
+  - '&7no nível máximo possível.'
 
 # ── Sementes insuficientes ────────────────────────────────────────
 cant-afford:
@@ -81,11 +92,13 @@ cant-afford:
   data: 14
   display: '&c{label}'
   lore:
+  - '&7Faltam sementes no saldo'
+  - '&7para evoluir este nível.'
   - ''
-  - '&f Custo: {symbol_color}{symbol}{primary_color}{cost} {currency}'
-  - '&f Nível: &7{current} &8─ &a{target}'
+  - ' &8 ▪ &fNível: &7{current} &8─ &a{target}'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency}'
   - ''
-  - '&cVocê não tem saldo suficiente.'
+  - ' &8 ▾ &cSaldo insuficiente.'
 
 # ── Excede o máximo ───────────────────────────────────────────────
 option-exceeded:
@@ -93,8 +106,10 @@ option-exceeded:
   data: 14
   display: '&cEvoluir &l{label} &cNível(eis)'
   lore:
-  - '&7Excede o nível máximo.'
-  - '&7Use &2Evoluir ao Máximo&7.'
+  - '&7Esta quantidade ultrapassa'
+  - '&7o nível máximo permitido.'
+  - ''
+  - ' &8 ▾ &7Use &2Evoluir ao Máximo&7.'
 
 titles-enabled:
   slot: 29
@@ -102,7 +117,10 @@ titles-enabled:
   data: 10
   display: '&aTítulos Ativados'
   lore:
-  - '&7Clique para desativar.'
+  - '&7Mostra um título na tela'
+  - '&7quando o encanto ativa.'
+  - ''
+  - '&aClique para desativar.'
 
 titles-disabled:
   slot: 29
@@ -110,7 +128,10 @@ titles-disabled:
   data: 8
   display: '&cTítulos Desativados'
   lore:
-  - '&7Clique para ativar.'
+  - '&7Nenhum título aparece'
+  - '&7quando o encanto ativa.'
+  - ''
+  - '&cClique para ativar.'
 
 messages-enabled:
   slot: 31
@@ -118,7 +139,10 @@ messages-enabled:
   data: 10
   display: '&aMensagens Ativadas'
   lore:
-  - '&7Clique para desativar.'
+  - '&7Avisa no chat toda vez'
+  - '&7que o encanto é ativado.'
+  - ''
+  - '&aClique para desativar.'
 
 messages-disabled:
   slot: 31
@@ -126,7 +150,10 @@ messages-disabled:
   data: 8
   display: '&cMensagens Desativadas'
   lore:
-  - '&7Clique para ativar.'
+  - '&7Nenhum aviso no chat'
+  - '&7quando o encanto ativa.'
+  - ''
+  - '&cClique para ativar.'
 
 activation-enabled:
   slot: 33
@@ -134,7 +161,10 @@ activation-enabled:
   data: 10
   display: '&aEncantamento Ativo'
   lore:
-  - '&7Clique para desativar.'
+  - '&7O encantamento funciona'
+  - '&7normalmente ao colher.'
+  - ''
+  - '&aClique para desativar.'
 
 activation-disabled:
   slot: 33
@@ -142,7 +172,10 @@ activation-disabled:
   data: 8
   display: '&cEncantamento Desativado'
   lore:
-  - '&7Clique para ativar.'
+  - '&7O encantamento não age'
+  - '&7enquanto você colhe.'
+  - ''
+  - '&cClique para ativar.'
 
 disenchant-icon:
   slot: 32
@@ -162,7 +195,8 @@ no-level-to-disenchant-icon:
   data: 14
   display: '&cDesencantar'
   lore:
-  - '&7Sem níveis para desencantar.'
+  - '&7Este encantamento não tem'
+  - '&7níveis para desencantar.'
 
 back-icon:
   slot: 30

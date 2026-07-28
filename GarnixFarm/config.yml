@@ -126,13 +126,13 @@ forge-icon:
   - '&7Combine skins para'
   - '&7forjar uma melhor.'
   - ''
-  - ' &e▎ &fTipo: &eEnxada '
+  - ' &8 ▪ &fTipo: &eEnxada '
   - ''
   - ' &8Requisitos:'
-  - ' &8▪ &c7 Skins Iguais'
+  - ' &8 ▪ &c7 skins iguais'
   - ''
   - '&eOpções de uso:'
-  - '&fBotão Dir. + SHIFT &8➟ &7Abrir'
+  - '&fBotão dir. + SHIFT &8➟ &7Abrir'
 
 # Comandos permitidos dentro da fazenda (sem farm.bypass.commands).
 allowed-commands:

@@ -19,20 +19,25 @@ slots:
 chest-icon:
   display: '&aBaú #{id}'
   lore:
+  - '&7Um baú só seu, guardado'
+  - '&7fora do inventário.'
   - ''
-  - ' &8Informações:'
-  - ' &fLinhas: &7{rows}'
+  - ' &8 ▪ &fLinhas: &7{rows}'
   - ''
-  - '&8 Opções de uso:'
-  - '&fEsquerdo &7Abrir.'
-  - '&fDireito &7Gerenciar.'
+  - '&aOpções de uso:'
+  - '&fBotão esquerdo &8➟ &7Abrir'
+  - '&fBotão direito &8➟ &7Gerenciar'
 
 # Posição ainda não desbloqueada.
 locked-icon:
   material: BARRIER
   display: '&cBaú Bloqueado'
   lore:
-  - '&7Você ainda não possui este baú.'
+  - '&7Este baú ainda não foi'
+  - '&7liberado para você.'
+  - ''
+  - '&7Use um &fAtivador de Baú'
+  - '&7para desbloquear.'
 
 # Atalho para o ender chest. {player} = dono da lista.
 echest-icon:

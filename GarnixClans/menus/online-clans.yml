@@ -22,6 +22,9 @@ clan-icon:
   - HIDE_POTION_EFFECTS
   display: '&r{tag} &f{clan}'
   lore:
+  - '&7Clan com membros ativos no'
+  - '&7servidor neste momento.'
+  - ''
   - ' &8 ▪ &fLíder: &7{leader}'
   - ' &8 ▪ &fOnline agora: &a{online}&8/&c{members}'
   - ' &8 ▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths}'

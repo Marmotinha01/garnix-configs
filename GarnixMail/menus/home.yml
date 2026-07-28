@@ -21,41 +21,55 @@ broken-icon:
   material: BARRIER
   display: '&cItem corrompido'
   lore:
-  - '&7Não foi possível carregar este item.'
-  - '&7Contate um administrador.'
+  - '&7Este item não pôde ser'
+  - '&7carregado do correio.'
+  - ''
+  - ' &8 ▾ &cContate um administrador.'
 
 claim-all-icon:
   slot: 49
   material: STORAGE_MINECART
   display: '&aResgatar Tudo'
   lore:
-  - '&7Clique para resgatar.'
+  - '&7Recolha de uma vez tudo'
+  - '&7que está no seu correio.'
+  - ''
+  - '&aClique para resgatar.'
 
 claim-all-empty-icon:
   slot: 49
   material: MINECART
   display: '&cResgatar Tudo'
   lore:
-  - '&7Nada para resgatar.'
+  - '&7Recolha de uma vez tudo'
+  - '&7que está no seu correio.'
+  - ''
+  - ' &8 ▾ &cNada para resgatar.'
 
 preferences-icon:
   slot: 51
   material: REDSTONE_COMPARATOR
   display: '&ePreferências'
   lore:
-    - '&7Clique para gerenciar.'
+  - '&7Escolha quais avisos do'
+  - '&7correio você quer receber.'
+  - ''
+  - '&eClique para gerenciar.'
 
 send-package-icon:
   slot: 47
   material: ENDER_PEARL
   display: '&bEnviar Pacote'
   lore:
-  - '&7Clique para enviar.'
+  - '&7Mande um item pelo correio'
+  - '&7para outro jogador.'
+  - ''
+  - '&bClique para enviar.'
 
 mail-lore:
 - ''
-- ' &fTotal: &ax{total} '
-- ' &fRemetente: &7{sender} '
-- ' &fData: &7{date} '
+- ' &8 ▪ &fTotal: &ax{total} '
+- ' &8 ▪ &fRemetente: &7{sender} '
+- ' &8 ▪ &fData: &7{date} '
 - ''
 - '&aClique para resgatar.'

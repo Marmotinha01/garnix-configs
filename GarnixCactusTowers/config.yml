@@ -26,8 +26,11 @@ item:
   material: CACTUS
   display: '&aTorre de Cacto &8[{floors} Andares]'
   lore:
+  - '&7Levanta uma torre de cacto'
+  - '&7pronta no seu terreno.'
+  - ''
   - '&aOpções de uso:'
-  - '&fBotão Direito &8➟ &7Construir'
+  - '&fBotão direito &8➟ &7Construir'
 
 # Partículas geradas em cada bloco. BLOCK_CRACK/BLOCK_DUST usam a textura do bloco.
 particles:

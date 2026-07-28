@@ -7,7 +7,10 @@ positive-icon:
   data: 5
   display: '&aPonto Positivo'
   lore:
-  - '&7Clique para avaliar.'
+  - '&7Recomende esta loja e'
+  - '&7suba a reputação dela.'
+  - ''
+  - '&aClique para avaliar.'
 
 negative-icon:
   slot: 15
@@ -15,7 +18,10 @@ negative-icon:
   data: 14
   display: '&cPonto Negativo'
   lore:
-  - '&7Clique para avaliar.'
+  - '&7Registre uma experiência'
+  - '&7ruim com esta loja.'
+  - ''
+  - '&cClique para avaliar.'
 
 back-icon:
   slot: 22

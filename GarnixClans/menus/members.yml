@@ -20,6 +20,9 @@ empty-icon:
 member-icon:
   display: '&r{role} &f{player}'
   lore:
+  - '&7Integrante do seu clan, com'
+  - '&7cargo e desempenho próprios.'
+  - ''
   - ' &8 ▪ &fStatus: {status}'
   - ' &8 ▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths}'
   - ' &8 ▪ &fKDR: &a{kdr}'
@@ -33,7 +36,7 @@ invite-icon:
   display: '&aConvidar Jogador'
   lore:
   - '&7Envie um convite para um'
-  - '&7jogador sem clan.'
+  - '&7jogador que não tem clan.'
   - ''
   - ' &8 ▪ &fVagas: &7{slots}'
   - ''

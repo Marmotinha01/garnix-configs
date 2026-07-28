@@ -21,15 +21,21 @@ stats-icon:
   material: BOOK
   display: '&aEstatísticas'
   lore:
-  - '&fTotal de spawners: &7{total_spawners} '
-  - '&fDonos únicos: &7{unique_owners}'
+  - '&7Um resumo dos spawners'
+  - '&7ativos no servidor.'
+  - ''
+  - ' &8 ▪ &fTotal de spawners: &7{total_spawners} '
+  - ' &8 ▪ &fDonos únicos: &7{unique_owners}'
 
 spawner-template:
   display: '&a{display} &7(x{stack})'
   lore:
-  - '&fDono: &7{owner}'
-  - '&fTerreno: &7{plot_id}'
-  - '&fLocal: &7{world} {x},{y},{z}'
-  - '&fMob Stack: &7{mob_stack}'
+  - '&7Spawner instalado por um'
+  - '&7jogador do servidor.'
+  - ''
+  - ' &8 ▪ &fDono: &7{owner}'
+  - ' &8 ▪ &fTerreno: &7{plot_id}'
+  - ' &8 ▪ &fLocal: &7{world} {x},{y},{z}'
+  - ' &8 ▪ &fMob stack: &7{mob_stack}'
   - ''
   - '&aClique para teleportar.'

@@ -30,21 +30,30 @@ add-icon:
   material: SIGN
   display: '&aAdicionar Amigo'
   lore:
-  - '&7Clique para adicionar.'
+  - '&7Libere a sua mina para'
+  - '&7um amigo minerar nela.'
+  - ''
+  - '&aClique para adicionar.'
 
 remove-all-icon:
   slot: 51
   material: BARRIER
   display: '&cRemover Todos'
   lore:
-  - '&7Clique para remover.'
+  - '&7Remove todos os amigos'
+  - '&7com acesso à sua mina.'
+  - ''
+  - '&cClique para remover.'
 
 user-icon:
   display: '&e{player}'
   lore:
-  - '&fStatus: {status}'
-  - '&fTaxa: &c{tax}%'
+  - '&7Amigo com acesso liberado'
+  - '&7à sua área de mineração.'
+  - ''
+  - ' &8 ▪ &fStatus: {status}'
+  - ' &8 ▪ &fTaxa: &c{tax}%'
   - ''
   - '&eOpções de uso:'
-  - '&fBotão Esquerdo &8➟ &7Definir Taxa'
-  - '&fBotão Direito &8➟ &cRemover Amigo'
+  - '&fBotão esquerdo &8➟ &7Definir taxa'
+  - '&fBotão direito &8➟ &cRemover amigo'

@@ -24,10 +24,10 @@ bombs:
     lore:
     - '&7Explode uma área da mina.'
     - ''
-    - ' &4▎ &fÁrea: &42x2 '
+    - ' &8 ▪ &fÁrea: &42x2 '
     - ''
     - '&4Opções de uso:'
-    - '&fBotão Direito &8➟ &7Usar'
+    - '&fBotão direito &8➟ &7Usar'
   4x4:
     radius: 4
     material: "FIREBALL"
@@ -35,10 +35,10 @@ bombs:
     lore:
     - '&7Explode uma área da mina.'
     - ''
-    - ' &4▎ &fÁrea: &44x4 '
+    - ' &8 ▪ &fÁrea: &44x4 '
     - ''
     - '&4Opções de uso:'
-    - '&fBotão Direito &8➟ &7Usar'
+    - '&fBotão direito &8➟ &7Usar'
   6x6:
     radius: 6
     material: "FIREBALL"
@@ -46,10 +46,10 @@ bombs:
     lore:
     - '&7Explode uma área da mina.'
     - ''
-    - ' &4▎ &fÁrea: &46x6 '
+    - ' &8 ▪ &fÁrea: &46x6 '
     - ''
     - '&4Opções de uso:'
-    - '&fBotão Direito &8➟ &7Usar'
+    - '&fBotão direito &8➟ &7Usar'
   8x8:
     radius: 8
     material: "FIREBALL"
@@ -57,7 +57,7 @@ bombs:
     lore:
     - '&7Explode uma área da mina.'
     - ''
-    - ' &4▎ &fÁrea: &48x8 '
+    - ' &8 ▪ &fÁrea: &48x8 '
     - ''
     - '&4Opções de uso:'
-    - '&fBotão Direito &8➟ &7Usar'
+    - '&fBotão direito &8➟ &7Usar'

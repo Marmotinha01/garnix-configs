@@ -2,7 +2,8 @@
 # Placeholders: {amount} = fragmentos no item, {display} = nome.
 fragment-lore:
 - ''
-- '&fQuantia: &e{amount} &7fragmento(s)'
+- ' &8 ▪ &fQuantia: &e{amount} &7fragmento(s)'
 - ''
-- '&aBotão direito &7para ativar todos da mão.'
-- '&aShift + Botão direito &7para juntar tudo em um só.'
+- '&aOpções de uso:'
+- '&fBotão direito &8➟ &7Ativar todos'
+- '&fBotão dir. + SHIFT &8➟ &7Juntar'

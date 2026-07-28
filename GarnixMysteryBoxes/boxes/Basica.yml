@@ -9,9 +9,12 @@ box-item:
   glow: true
   display: '&b&lCaixa Misteriosa'
   lore:
-    - ''
-    - '&7Clique com o &fbotão direito'
-    - '&7para abrir e ganhar prêmios!'
+  - '&7Uma caixa com prêmios que'
+  - '&7são sorteados na hora.'
+  - ''
+  - '&bOpções de uso:'
+  - '&fBotão direito &8➟ &7Abrir'
+  - '&fBotão esquerdo &8➟ &7Preview'
 
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).

@@ -25,7 +25,10 @@ icon:
   data: 14
   display: '&aCorantes'
   lore:
-  - '&7Clique para ver.'
+  - '&7Corantes para tingir'
+  - '&7lãs, argilas e vidros.'
+  - ''
+  - '&aClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'lojagod'

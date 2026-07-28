@@ -19,17 +19,26 @@ ally-icon:
   material: DIAMOND
   display: '&r{tag} &f{clan}'
   lore:
+  - '&7Clan que firmou aliança com'
+  - '&7o seu e luta lado a lado.'
+  - ''
   - ' &8 ▪ &fLíder: &7{leader}'
   - ' &8 ▪ &fMembros: &7{members} &8(&a{online} &8online)'
   - ''
-  - '&cClique para desfazer a aliança.'
+  - '&cClique para desfazer.'
 
 ally-locked-icon:
   material: DIAMOND
   display: '&r{tag} &f{clan}'
   lore:
+  - '&7Clan que firmou aliança com'
+  - '&7o seu e luta lado a lado.'
+  - ''
   - ' &8 ▪ &fLíder: &7{leader}'
   - ' &8 ▪ &fMembros: &7{members} &8(&a{online} &8online)'
+  - ''
+  - '&7Somente cargos autorizados'
+  - '&7podem desfazer a aliança.'
 
 request-icon:
   slot: 38

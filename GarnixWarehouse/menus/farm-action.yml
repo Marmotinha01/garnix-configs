@@ -4,40 +4,58 @@ rows: 4
 info-icon:
   slot: 13
   lore:
-  - '&fQuantia: &7{amount}'
-  - '&fValor: {value}'
+  - '&7O que está guardado no'
+  - '&7armazém deste terreno.'
+  - ''
+  - ' &8 ▪ &fQuantia: &7{amount}'
+  - ' &8 ▪ &fValor: {value}'
 
 sell-icon:
   slot: 11
   material: GOLD_INGOT
   display: '&aVender Tudo'
   lore-active:
-  - '&fVender por: {value}'
+  - '&7Venda de uma vez tudo'
+  - '&7que está no armazém.'
+  - ''
+  - ' &8 ▪ &fVender por: {value}'
   - ''
   - '&aClique para vender.'
   lore-empty:
-  - '&cSem estoque para vender.'
+  - '&7Venda de uma vez tudo'
+  - '&7que está no armazém.'
+  - ''
+  - ' &8 ▾ &cSem estoque para vender.'
 
 sell-disabled-icon:
   slot: 11
   material: BARRIER
   display: '&cVender Tudo'
   lore:
-  - '&7Você não tem permissão para vender.'
+  - '&7Venda de uma vez tudo'
+  - '&7que está no armazém.'
+  - ''
+  - ' &8 ▾ &cVocê não tem permissão.'
 
 collect-icon:
   slot: 15
   material: CHEST
   display: '&eRecolher'
   lore:
-  - '&7Clique para escolher a quantia.'
+  - '&7Tire os cactos do armazém'
+  - '&7e leve no inventário.'
+  - ''
+  - '&eClique para escolher.'
 
 collect-disabled-icon:
   slot: 15
   material: BARRIER
   display: '&cRecolher'
   lore:
-  - '&7Você não tem permissão para recolher.'
+  - '&7Tire os cactos do armazém'
+  - '&7e leve no inventário.'
+  - ''
+  - ' &8 ▾ &cVocê não tem permissão.'
 
 back-icon:
   slot: 31

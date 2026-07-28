@@ -6,11 +6,13 @@ info-icon:
   material: PAPER
   display: '&b{player}'
   lore:
+  - '&7Integrante do seu clan, com'
+  - '&7cargo e desempenho próprios.'
+  - ''
   - ' &8 ▪ &fCargo: &r{role}'
   - ' &8 ▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths}'
   - ' &8 ▪ &fKDR: &a{kdr}'
   - ' &8 ▪ &fEntrou em: &7{joined}'
-  - ''
 
 promote-icon:
   slot: 11
@@ -18,8 +20,8 @@ promote-icon:
   data: 10
   display: '&aPromover'
   lore:
-  - '&7Sobe {player} para o'
-  - '&7cargo seguinte.'
+  - '&7Sobe {player} para o cargo'
+  - '&7seguinte da hierarquia.'
   - ''
   - '&aClique para promover.'
 
@@ -29,8 +31,8 @@ demote-icon:
   data: 11
   display: '&eRebaixar'
   lore:
-  - '&7Desce {player} para o'
-  - '&7cargo anterior.'
+  - '&7Desce {player} para o cargo'
+  - '&7anterior da hierarquia.'
   - ''
   - '&eClique para rebaixar.'
 
@@ -39,7 +41,8 @@ kick-icon:
   material: BARRIER
   display: '&cExpulsar'
   lore:
-  - '&7Remove {player} do clan.'
+  - '&7Remove {player} do clan e'
+  - '&7libera uma vaga no quadro.'
   - ''
   - '&cClique para expulsar.'
 

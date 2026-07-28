@@ -30,24 +30,28 @@ filter-icon:
   material: HOPPER
   display: '&aOrdenar'
   lore:
+  - '&7Escolha como as minas'
+  - '&7aparecem na listagem.'
   - ''
   - '{filters}'
   - ''
-  - '&7Clique para alternar.'
+  - '&aClique para alternar.'
 
 filters:
   tax-display: Menores Taxas
   level-display: Nível da Mina
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8 ► &7{display}'
+  line-selected: ' &a ► &f{display}'
 
 user-icon:
   display: '&aMina de {player}'
   lore:
-  - '&fNível: &e{mine_level}'
-  - '&fTaxa: &c{tax}%'
+  - '&7Mina aberta ao público'
+  - '&7para qualquer minerador.'
   - ''
-  - '&fVagas: &a{players}&8/&c{slots}'
+  - ' &8 ▪ &fNível: &e{mine_level}'
+  - ' &8 ▪ &fTaxa: &c{tax}%'
+  - ' &8 ▪ &fVagas: &a{players}&8/&c{slots}'
   - ''
-  - '&7Clique para visitar.'
-  own-lore-suffix: '&cEssa é sua mina.'
+  - '&aClique para visitar.'
+  own-lore-suffix: '&cEsta é a sua própria mina.'

@@ -17,12 +17,18 @@ icon:
   texture: 5657cd5c2989ff97570fec4ddcdc6926a68a3393250c1be1f0b114a1db1
   display: '&6Kit Jaguatirica'
   lore:
-  - '&7Clique para ver.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - '&6Clique para acessar.'
 
 locked-icon:
   material: BARRIER
   display: '&cKit Jaguatirica'
   lore:
-  - '&7Ainda não desbloqueado.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - ' &8 ▾ &cAinda não desbloqueado.'
 
 content: H4sIAAAAAAAA/82Uy2obQRBFa/TKaFYhkMSOvejkA7QSCWQRSGQbYwdnIchWlGYqPYX7MenukR8/pP/Ql6XtkZHDGOKFQNk0FHXvrUMVdAYwhD4H0j4DgCyFDhfwVrOh3OGv8Llg1NYUM39lXZFAf2JrE5IMugHlEHpk8vLO2OlAVy0U9Dv3AS9hXXeb+gNk8KJgXym8SaF3gZrg1Wr58ZyDOENZY2DHOcYcGByhRkkxs2F5s2GRVhVkZlhVih5Q0o0jWTv22/QV55d4Tc/mF9vjf92m2RHJ3hNXLe2C1H8CU5LSFP4N02uGw/ZgDtsweUk+xKjwjFNtH+hdG0iRlGyk3wXOE//B3Nqwa5bguLpiR7PS2ssHlkGLJVnPTprZX6ALw1Mu6ESh9Hf9FNIYGGgWu4O59Z78Bi8GfbeO0ijswcFq+WlijWeJAufRYgorGscoCt6vluOJ4t81CfLxdbFboYtap/GWDLp7ia2j2bETKPISF1GsRa1jgXyNo0f7GK+WanL69eex+PZjOj2e/r0P+AMtnC2HvQUAAA==

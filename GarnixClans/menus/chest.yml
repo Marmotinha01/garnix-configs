@@ -23,15 +23,14 @@ open-busy-icon:
   - '&7por um membro de cada vez.'
   - ''
   - ' &8 ▪ &fEm uso por: &7{occupant}'
-  - ''
 
 history-icon:
   slot: 15
   material: BOOK_AND_QUILL
   display: '&eHistórico do Baú'
   lore:
-  - '&7Tudo que entrou e saiu'
-  - '&7do baú do clan.'
+  - '&7Tudo que entrou e saiu do'
+  - '&7baú do clan, com autores.'
   - ''
   - ' &8 ▪ &fMovimentações: &7{movements}'
   - ''

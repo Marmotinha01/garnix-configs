@@ -23,13 +23,13 @@ back-icon:
 
 challenge-lore:
 - ''
-- ' &fAposta: {currency_prefix}{amount} '
-- ' &fExpira em: &c{time_remaining} '
+- ' &8 ▪ &fAposta: {currency_prefix}{amount} '
+- ' &8 ▪ &fExpira em: &c{time_remaining} '
 - '{tax_info}'
 - ''
 - '&eClique para cancelar.'
 
 # A linha {tax_info}. A alíquota é a travada quando você criou o desafio, não a
 # que valeria hoje. A taxa incide só sobre o lucro.
-tax-free: ' &fTaxa: &aIsento '
-tax-charged: ' &fTaxa: &c{tax}% &7(lucra {currency_prefix}{net}&7) '
+tax-free: ' &8 ▪ &fTaxa: &aIsento '
+tax-charged: ' &8 ▪ &fTaxa: &c{tax}% &7(lucra {currency_prefix}{net}&7) '

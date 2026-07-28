@@ -9,13 +9,19 @@ login-notify:
     data: 10
     display: '&aNotificação de Entrada'
     lore:
-    - '&7Clique para desativar.'
+    - '&7Avisa o que está no seu'
+    - '&7correio ao entrar no jogo.'
+    - ''
+    - '&aClique para desativar.'
   disabled:
     material: INK_SACK
     data: 8
     display: '&cNotificação de Entrada'
     lore:
-    - '&7Clique para ativar.'
+    - '&7Nenhum aviso do correio'
+    - '&7ao entrar no jogo.'
+    - ''
+    - '&cClique para ativar.'
 
 # Notificação periódica — lembrete de tempos em tempos enquanto online.
 periodic-notify:
@@ -25,13 +31,19 @@ periodic-notify:
     data: 10
     display: '&aLembrete Periódico'
     lore:
-    - '&7Clique para desativar.'
+    - '&7Lembra de tempos em tempos'
+    - '&7do que está no correio.'
+    - ''
+    - '&aClique para desativar.'
   disabled:
     material: INK_SACK
     data: 8
     display: '&cLembrete Periódico'
     lore:
-    - '&7Clique para ativar.'
+    - '&7Nenhum lembrete enquanto'
+    - '&7você estiver online.'
+    - ''
+    - '&cClique para ativar.'
 
 # Correio de jogadores — alerta quando outro jogador te envia um item.
 player-mail-notify:
@@ -41,13 +53,19 @@ player-mail-notify:
     data: 10
     display: '&aCorreio de Jogadores'
     lore:
-    - '&7Clique para desativar.'
+    - '&7Avisa quando outro jogador'
+    - '&7te manda algum item.'
+    - ''
+    - '&aClique para desativar.'
   disabled:
     material: INK_SACK
     data: 8
     display: '&cCorreio de Jogadores'
     lore:
-    - '&7Clique para ativar.'
+    - '&7Nenhum aviso quando alguém'
+    - '&7te manda algum item.'
+    - ''
+    - '&cClique para ativar.'
 
 # Retorna ao menu do correio.
 back-icon:

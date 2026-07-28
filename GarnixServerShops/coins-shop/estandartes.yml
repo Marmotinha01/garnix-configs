@@ -25,7 +25,10 @@ icon:
   base-color: ORANGE
   display: '&aEstandartes'
   lore:
-  - '&7Clique para ver.'
+  - '&7Estandartes para marcar'
+  - '&7o território do seu clan.'
+  - ''
+  - '&aClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'lojagod'

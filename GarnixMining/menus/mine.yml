@@ -35,27 +35,30 @@ skins-icon:
   slot: 32
   display: '&eSkins de Picareta'
   lore:
-  - '&7Ganhe bônus ao alterar'
-  - '&7a skin da sua picareta.'
+  - '&7Ganhe bônus especiais ao'
+  - '&7trocar a skin da picareta.'
   - ''
   - '&eClique para gerenciar.'
   flags: ["HIDE_ATTRIBUTES"]
+
 mine-icon:
   slot: 10
   material: WOOD_PICKAXE
   display: '&6Entrar na área'
   lore:
+  - '&7Entre na sua área e comece'
+  - '&7a minerar os blocos dela.'
   - ''
-  - ' &8Evolução da Área:'
-  - ' &8▪ &fNível: &7{level}'
+  - ' &8Evolução da área:'
+  - ' &8 ▪ &fNível: &7{level}'
   - ''
-  - ' &8Composição da Mina:'
+  - ' &8Composição da mina:'
   - ' {block_list}'
   - ''
-  - '&6Clique para ir minerar!'
+  - '&6Clique para entrar.'
   flags:
   - HIDE_ATTRIBUTES
-  block-entry: ' &8▴ &f{block_name} &c{chance} '
+  block-entry: ' &8 ▴ &f{block_name} &c{chance} '
   reward-separator: '&8▪'
   reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '
 
@@ -64,7 +67,10 @@ leave-mine-icon:
   material: BARRIER
   display: '&cSair da Mina'
   lore:
-  - '&7Clique para sair.'
+  - '&7Deixe a área de mineração'
+  - '&7e volte para o spawn.'
+  - ''
+  - '&cClique para sair.'
 
 manage-icon:
   slot: 16
@@ -82,7 +88,7 @@ friend-mines-icon:
   display: '&dMinas de Amigos'
   lore:
   - '&7Acesse a área de mineração'
-  - '&7dos seus amigos.'
+  - '&7dos amigos que te liberaram.'
   - ''
   - '&dClique para acessar.'
 
@@ -91,8 +97,8 @@ public-mines-icon:
   material: WOOD_DOOR
   display: '&aMinas Públicas'
   lore:
-  - '&7Acesse áreas de mineração'
-  - '&7de outros jogadores.'
+  - '&7Acesse as áreas abertas'
+  - '&7de outros mineradores.'
   - ''
   - '&aClique para acessar.'
 
@@ -101,4 +107,7 @@ ranking-icon:
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os maiores mineradores de'
+  - '&7todo o servidor, em disputa.'
+  - ''
+  - '&6Clique para acessar.'

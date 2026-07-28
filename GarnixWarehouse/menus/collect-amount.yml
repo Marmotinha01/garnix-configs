@@ -6,33 +6,60 @@ pack-icon:
   material: CHEST
   display: '&aPack &7(x{amount})'
   lore-available:
-  - '&7Clique para recolher.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - '&aClique para recolher.'
   lore-no-stock:
-  - '&cEstoque insuficiente.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - ' &8 ▾ &cEstoque insuficiente.'
   lore-no-space:
-  - '&cSeu inventário está cheio.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - ' &8 ▾ &cSeu inventário está cheio.'
 
 hotbar-icon:
   slot: 13
   material: CHEST
   display: '&aHotbar &7(x{amount})'
   lore-available:
-  - '&7Clique para recolher.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - '&aClique para recolher.'
   lore-no-stock:
-  - '&cEstoque insuficiente.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - ' &8 ▾ &cEstoque insuficiente.'
   lore-no-space:
-  - '&cSeu inventário está cheio.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - ' &8 ▾ &cSeu inventário está cheio.'
 
 inventory-icon:
   slot: 16
   material: ENDER_CHEST
   display: '&aInventário &7(x{amount})'
   lore-available:
-  - '&7Clique para recolher.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - '&aClique para recolher.'
   lore-no-stock:
-  - '&cEstoque insuficiente.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - ' &8 ▾ &cEstoque insuficiente.'
   lore-no-space:
-  - '&cSeu inventário está cheio.'
+  - '&7Retire os cactos que estão'
+  - '&7guardados no seu armazém.'
+  - ''
+  - ' &8 ▾ &cSeu inventário está cheio.'
 
 back-icon:
   slot: 31

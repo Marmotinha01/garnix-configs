@@ -10,13 +10,15 @@ shape:
 
 status:
   delivered:
-  - '&fNecessário: &7{required_time} online'
   - ''
-  - '&aJá desbloqueada!'
+  - ' &8 ▪ &fNecessário: &7{required_time} online'
+  - ''
+  - '&aRecompensa já resgatada.'
   locked:
-  - '&fNecessário: &7{required_time} online'
   - ''
-  - '&cAinda bloqueada!'
+  - ' &8 ▪ &fNecessário: &7{required_time} online'
+  - ''
+  - ' &8 ▾ &cRecompensa ainda bloqueada.'
 
 back-icon:
   slot: 49

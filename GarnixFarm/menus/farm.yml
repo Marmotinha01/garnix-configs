@@ -6,11 +6,12 @@ go-icon:
   material: WOOD_HOE
   display: '&6Entrar na Área'
   lore:
+  - '&7Entre na sua área e comece'
+  - '&7a colher a plantação dela.'
   - ''
-  - ' &8Plantação atual: '
-  - ' &8▪ {type}'
+  - ' &8 ▪ &fPlantação atual: {type}'
   - ''
-  - '&6Clique para ir colher!'
+  - '&6Clique para entrar.'
   flags:
   - HIDE_ATTRIBUTES
 
@@ -19,7 +20,10 @@ leave-icon:
   material: BARRIER
   display: '&cSair da Fazenda'
   lore:
-  - '&7Clique para sair.'
+  - '&7Deixe a área de plantio'
+  - '&7e volte para o spawn.'
+  - ''
+  - '&cClique para sair.'
 
 # Shown when the player has at least one active booster (clickable → booster menu).
 booster-icon:
@@ -63,7 +67,10 @@ ranking-icon:
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os maiores fazendeiros de'
+  - '&7todo o servidor, em disputa.'
+  - ''
+  - '&6Clique para acessar.'
 
 skins-icon:
   slot: 32
@@ -76,8 +83,8 @@ skins-icon:
   interval: 20
   display: '&eSkins de Enxada'
   lore:
-  - '&7Ganhe bônus ao alterar'
-  - '&7a skin da sua enxada.'
+  - '&7Ganhe bônus especiais ao'
+  - '&7trocar a skin da enxada.'
   - ''
   - '&eClique para gerenciar.'
   flags:

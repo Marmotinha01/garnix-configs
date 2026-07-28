@@ -17,12 +17,18 @@ icon:
   texture: 2f18fa43d4d9378948b56b85b531979074119c125232e715ce4bd52780ac4d76
   display: '&5&lKit Streamer'
   lore:
-  - '&7Clique para ver.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - '&5Clique para acessar.'
 
 locked-icon:
   material: BARRIER
   display: '&cKit Streamer'
   lore:
-  - '&7Necessário ser &5&lSTREAMER&7.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - ' &8 ▾ &7Necessário ser &5&lSTREAMER&7.'
 
 content: H4sIAAAAAAAA/82UTU8bMRCGZzcJbFYcUPlue3C59cIJVKkHJAhBVEArEcQ1muxOdy38sdhO+PhD+R/5ZTiENISlEq2QwsXSaN53/LxjyTFAHWrckbQxACxEEPIU1iRXlBj87b6nHKVWadtea5MGUGvornJBDBWHWR2qpJJ8aKyGUBE9AbXwYcAiTNeb4zoc1UvP6mWIYT7lthB4G0H1J0qCD4P+zqAvjn+cs9b5WXPvtHkG3jZ3gBIz8neOWFcnrJkWKak2FoWgMWo8cQSPjo1yuoInl3hDf88XTudhpXz/zb9SppkRyfoLr57rHol3ApOTkOReDQNvB/O5DJPkZJ0f5V7/VG8I9LEMJCjLuMrsLHBe+C86WruZsCxOWArtuFZjiIU/Wvb1H7Sb5YzO8OKaG2rnWl+OLVEpY/CYKRhl2oUK1I94SocCMzvsRxD5gY7avjvX0daSncT2g060oWj4ucKnQf9bQyvLM2TY8RaVajZybHnBl0F/uyH4VZcYWX8a3y3QeK2ReEcKzYNEd73ZcMOQJTn2vFiyrvQF8hvcerLnbb/nxtHeRZPt/2q1mq3pPcM9ZujeOzUGAAA=

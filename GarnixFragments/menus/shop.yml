@@ -25,12 +25,12 @@ back-icon:
   - '&7Clique para voltar.'
 
 # Formato de cada linha de custo. Placeholders: {amount}, {display}.
-cost-line: ' &8▪ &e{amount} &7de &f{display}'
+cost-line: ' &8 ▪ &e{amount} &7de &f{display}'
 
 # Lore de cada item. {cost} vira uma linha por fragmento exigido.
 purchase-lore:
 - ''
-- ' &fCustos:'
+- ' &8Custos:'
 - '{cost}'
 - ''
 - '&aClique para comprar.'

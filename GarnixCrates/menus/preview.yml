@@ -10,7 +10,7 @@ shape:
 - XXXXXXXXX
 
 chance-lore:
-- '&fChance: &e{chance}%'
+- ' &8 ▪ &fChance: &e{chance}%'
 
 filter-status:
   is-filtered:

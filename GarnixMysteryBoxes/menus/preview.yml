@@ -17,4 +17,4 @@ back-icon:
 
 reward-lore:
 - ''
-- '&fChance: &a{chance}%'
+- ' &8 ▪ &fChance: &a{chance}%'

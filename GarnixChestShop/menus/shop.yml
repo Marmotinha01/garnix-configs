@@ -8,43 +8,40 @@ item-preview-icon:
   # {buy_tax}/{sell_tax} = linha de taxa.
   lore-buy:
   - ''
-  - ' &fDono: &7{owner} '
-  - ' &fQuantia: &7x{amount} '
+  - ' &8 ▪ &fDono: &7{owner} '
+  - ' &8 ▪ &fQuantia: &7x{amount} '
   - ''
-  - ' &fCompra: {buy_display} '
+  - ' &8 ▪ &fCompra: {buy_display} '
   - '{buy_tax}'
-  - ''
   lore-sell:
   - ''
-  - ' &fDono: &7{owner} '
-  - ' &fQuantia: &7x{amount} '
+  - ' &8 ▪ &fDono: &7{owner} '
+  - ' &8 ▪ &fQuantia: &7x{amount} '
   - ''
-  - ' &fVenda: {sell_display} '
+  - ' &8 ▪ &fVenda: {sell_display} '
   - '{sell_tax}'
-  - ''
   lore-both:
   - ''
-  - ' &fDono: &7{owner} '
-  - ' &fQuantia: &7x{amount} '
+  - ' &8 ▪ &fDono: &7{owner} '
+  - ' &8 ▪ &fQuantia: &7x{amount} '
   - ''
-  - ' &fCompra: {buy_display} '
+  - ' &8 ▪ &fCompra: {buy_display} '
   - '{buy_tax}'
   - ''
-  - ' &fVenda: {sell_display} '
+  - ' &8 ▪ &fVenda: {sell_display} '
   - '{sell_tax}'
-  - ''
 
 # {buy_tax}: quando alguém COMPRA, o dono recebe menos (a taxa incide sobre o dono).
 # {sell_tax}: quando você VENDE para a loja, você recebe menos (a taxa incide sobre você).
 # -free: moeda sem taxa. -noprice: tem taxa mas o preço ainda é Grátis (só a alíquota).
 # -charged: tem taxa e preço, mostra o líquido. {tax} = alíquota, {net} = líquido.
 # Deixe qualquer um em branco ('') para OCULTAR a linha (ela some, sem deixar espaço).
-buy-tax-free: ' &fTaxa: &aIsento '
-buy-tax-noprice: ' &fTaxa: &c&l{tax}&c% '
-buy-tax-charged: ' &fTaxa: &c&l{tax}&c% &8(&7dono recebe {currency_prefix}{net}&8) '
-sell-tax-free: ' &fTaxa: &aIsento '
-sell-tax-noprice: ' &fTaxa: &c&l{tax}&c% '
-sell-tax-charged: ' &fTaxa: &c&l{tax}&c% &8(&7você recebe {currency_prefix}{net}&8) '
+buy-tax-free: ' &8 ▪ &fTaxa: &aIsento '
+buy-tax-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
+buy-tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7dono recebe {currency_prefix}{net}&8) '
+sell-tax-free: ' &8 ▪ &fTaxa: &aIsento '
+sell-tax-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
+sell-tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7você recebe {currency_prefix}{net}&8) '
 
 # Texto no lugar do valor+moeda quando o preço é 0 (loja Grátis).
 buy-free-display: '&aGrátis'
@@ -63,19 +60,31 @@ buy-icon:
   material: EMERALD
   display: '&aComprar'
   lore:
-  - '&7Clique para comprar.'
+  - '&7Leve o item da loja'
+  - '&7pagando o preço pedido.'
+  - ''
+  - '&aClique para comprar.'
   # Mostrada quando a loja não vende (sem preço de compra). Ao clicar, o cliente recebe a
   # mensagem shop.not-selling.
   disabled-lore:
-  - '&7Esta loja não vende itens.'
+  - '&7Leve o item da loja'
+  - '&7pagando o preço pedido.'
+  - ''
+  - ' &8 ▾ &cEsta loja não vende itens.'
 
 sell-icon:
   slot: 15
   material: REDSTONE
   display: '&cVender'
   lore:
-  - '&7Clique para vender.'
+  - '&7Passe o seu item para a'
+  - '&7loja e receba por ele.'
+  - ''
+  - '&cClique para vender.'
   # Mostrada quando a loja não compra (sem preço de venda). Ao clicar, o cliente recebe a
   # mensagem shop.not-buying.
   disabled-lore:
-  - '&7Esta loja não compra itens.'
+  - '&7Passe o seu item para a'
+  - '&7loja e receba por ele.'
+  - ''
+  - ' &8 ▾ &cEsta loja não compra itens.'

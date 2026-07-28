@@ -3,12 +3,11 @@ data: 0
 glow: true
 display: '&6Venda Automática'
 lore:
-- '&7Venda seus cactos acumulados '
-- '&7no armazém automaticamente.'
+- '&7Venda os cactos guardados'
+- '&7no armazém sozinho.'
 - ''
-- ' &8Informações: '
-- ' &8▪ &cA venda ocorre apenas em '
-- ' &8▪ &cterrenos que você é &lDONO&c! '
+- ' &8 ▾ &cSó funciona em terrenos '
+- ' &8 ▾ &cque você é o dono. '
 - ''
 - '&6Opções de uso:'
-- '&fBotão Direito &8➟ &7Ativar'
+- '&fBotão direito &8➟ &7Ativar'

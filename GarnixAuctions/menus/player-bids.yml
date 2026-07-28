@@ -26,30 +26,28 @@ back-icon:
 
 bid-winning-lore:
 - ''
-- ' &fStatus: &aVencendo'
-- ' &fSeu Lance: {currency_prefix}{amount} '
+- ' &8 ▪ &fStatus: &aVencendo'
+- ' &8 ▪ &fSeu lance: {currency_prefix}{amount} '
 - ''
-- ' &fTempo Restante: &e{time_remaining}'
+- ' &8 ▪ &fTempo restante: &e{time_remaining}'
 - ''
-- '&aClique para ver o leilão.'
+- '&aClique para acessar.'
 
 bid-losing-lore:
 - ''
-- ' &fStatus: &cSuperado'
-- ' &fSeu Lance: {currency_prefix}{amount} '
+- ' &8 ▪ &fStatus: &cSuperado'
+- ' &8 ▪ &fSeu lance: {currency_prefix}{amount} '
 - ''
-- ' &fTempo Restante: &e{time_remaining}'
+- ' &8 ▪ &fTempo restante: &e{time_remaining}'
 - ''
 - '&eClique para dar novo lance.'
 
 bid-won-lore:
 - ''
-- ' &fStatus: &aVenceu'
-- ' &fSeu Lance: {currency_prefix}{amount} '
-- ''
+- ' &8 ▪ &fStatus: &aVenceu'
+- ' &8 ▪ &fSeu lance: {currency_prefix}{amount} '
 
 bid-lost-lore:
 - ''
-- ' &fStatus: &cPerdeu'
-- ' &fSeu Lance: {currency_prefix}{amount} '
-- ''
+- ' &8 ▪ &fStatus: &cPerdeu'
+- ' &8 ▪ &fSeu lance: {currency_prefix}{amount} '

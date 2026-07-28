@@ -20,7 +20,7 @@ empty-icon:
 # Acrescentado ao ícone atualmente selecionado.
 selected-lore:
 - ''
-- '&aÍcone selecionado.'
+- '&aÍcone usado neste baú.'
 
 back-icon:
   slot: 40

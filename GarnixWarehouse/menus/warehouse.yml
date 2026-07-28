@@ -11,7 +11,10 @@ info-icon:
   material: PAPER
   display: '&aLimite do Armazém'
   lore:
-  - '&fAtual: &a{total}&8/&c{limit}'
+  - '&7Quantos cactos o seu'
+  - '&7armazém ainda comporta.'
+  - ''
+  - ' &8 ▪ &fAtual: &a{total}&8/&c{limit}'
 
 booster-active-icon:
   slot: 32
@@ -51,17 +54,20 @@ autosell-icon:
   material: DIODE
   display: '&6Venda Automática'
   lore:
-  - '&7Clique para gerenciar.'
+  - '&7Venda os cactos do armazém'
+  - '&7sozinho, de tempos em tempos.'
+  - ''
+  - '&6Clique para gerenciar.'
 
 autosell-locked-icon:
   slot: 34
   material: BARRIER
   display: '&cVenda Automática'
   lore:
-  - '&7Venda suas plantações de'
-  - '&7maneira totalmente automática!'
+  - '&7Venda as suas plantações'
+  - '&7de forma automática.'
   - ''
-  - '&fAdquira em nosso site:'
+  - '&7Adquira em nosso site:'
   - '&c&nhttps://redegarnix.com/'
 
 friends-icon:
@@ -69,6 +75,9 @@ friends-icon:
   texture: '76cbae7246cc2c6e888587198c7959979666b4f5a4088f24e26e075f140ae6c3'
   display: '&aAmigos'
   lore:
-  - '&fTotal: &7{count}'
+  - '&7Quem pode mexer no seu'
+  - '&7armazém além de você.'
+  - ''
+  - ' &8 ▪ &fTotal: &7{count}'
   - ''
   - '&aClique para gerenciar.'

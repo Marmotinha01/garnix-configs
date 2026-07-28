@@ -3,7 +3,7 @@ rows: 5
 
 crate-lore:
 - ''
-- ' &8▶ &fArmazenadas: &a{amount}'
+- ' &8 ▪ &fArmazenadas: &a{amount}'
 - ''
 - '&aClique para gerenciar.'
 
@@ -12,36 +12,42 @@ opens-upgrade-icon:
   material: FIREWORK
   display: '&aEvoluir Abertura'
   lore:
-  - '&fAgora: &7{keys} p/click'
+  - '&7Aumente quantas chaves'
+  - '&7você abre por clique.'
+  - ''
+  - ' &8 ▪ &fAgora: &7{keys} por clique'
 
 opens-upgrade-lore-status:
   max-level-reached:
   - ''
-  - '&cNível máximo já alcançado!'
+  - ' &8 ▾ &cNível máximo já alcançado.'
   upgrade-available:
   - ''
-  - ' &aPróximo nível:'
-  - ' &8▶ &fAbre: &7{next-keys} p/click'
-  - ' &8▶ &fCusto: {symbol_color}{symbol}{primary_color}{next-cost} &7{currency}'
+  - ' &8Próximo nível:'
+  - ' &8 ▪ &fAbre: &7{next-keys} por clique'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{next-cost} &7{currency}'
   - ''
   can-afford: '&aClique para evoluir.'
-  cannot-afford: '&cVocê não tem saldo suficiente.'
+  cannot-afford: ' &8 ▾ &cSaldo insuficiente.'
 
 current-robot-empty-icon:
   slot: 40
   material: BARRIER
   display: '&cNenhum Robô Equipado'
   lore:
-  - '&7Clique no robô em seu'
+  - '&7Clique em um robô no seu'
   - '&finventário &7para equipá-lo.'
 
 current-robot-remove-lore:
 - ''
-- '&cClique para remover o robô.'
+- '&cClique para remover.'
 
 ranking-icon:
   slot: 42
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Quem mais abriu caixas em'
+  - '&7todo o servidor, em disputa.'
+  - ''
+  - '&6Clique para acessar.'

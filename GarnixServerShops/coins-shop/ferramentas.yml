@@ -18,7 +18,10 @@ icon:
   material: DIAMOND_SPADE
   display: '&aFerramentas'
   lore:
-  - '&7Clique para ver.'
+  - '&7Picaretas, pás e enxadas'
+  - '&7para o trabalho pesado.'
+  - ''
+  - '&aClique para acessar.'
   flags:
   - HIDE_ATTRIBUTES
 

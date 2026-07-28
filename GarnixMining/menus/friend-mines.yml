@@ -28,8 +28,11 @@ back-icon:
 user-icon:
   display: '&d{player}'
   lore:
-  - '&fStatus do Jogador: {status}'
-  - '&fStatus da Mina: {mine_status}'
-  - '&fVagas: &a{players}&8/&c{slots}'
+  - '&7Amigo que liberou a mina'
+  - '&7dele para você minerar.'
   - ''
-  - '&7Clique para visitar.'
+  - ' &8 ▪ &fStatus do jogador: {status}'
+  - ' &8 ▪ &fStatus da mina: {mine_status}'
+  - ' &8 ▪ &fVagas: &a{players}&8/&c{slots}'
+  - ''
+  - '&dClique para visitar.'

@@ -17,12 +17,18 @@ icon:
   texture: 7a8b714d32d7f6cf8b37e221b758b9c599ff76667c7cd45bbc49c5ef19858646
   display: '&f&lKit Ghast'
   lore:
-  - '&7Clique para ver.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - '&fClique para acessar.'
 
 locked-icon:
   material: BARRIER
   display: '&cKit Ghast'
   lore:
-  - '&7Ainda não desbloqueado.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - ' &8 ▾ &cAinda não desbloqueado.'
 
 content: H4sIAAAAAAAA/82Uy0orQRCGayZRJ/GA4v1yFn3cuXElCC5EjTdQdBFwGyoz5UxjX8buTry8UN4jT2bHGEMcBRXxuBko6v9rvr+a7ipABca4I2mrAPAngpAnsCi5otjgldtOOEqtkoa91SYJYKymW8oFVSg5TCtQJhVnPWM5hJJoC5gMnwZMw2i9NqjDfj37qp6DKkwk3OYC7yMon6MkmOp2rrodccodO87QOvCe8QOUmJL/YR90YQiaapGQamCeCxpw7g4dwbNjuRgt5/E13tH74cLRMKwQ7mvw80WU/4Gx9MZhZ7pN4jeQZCQkuQ+TwDeR/C2SxBlZ5+e4j5/Qd9GsFGkEpSlXqf1xljeehqbW7udBpocguXZcq+KlZ+uf0K4VAzrD81tuqJFpff1iKQQMngMF/UA7UILKCU/oSGBqe/0IIj/QUcN3x5vaWrLDzH7QmTYU9R5RWO12tmpaWZ4iw6a3qESzvmPDC/51O5s1wW9axMj6r/HdHI3XGokPpNA8SXTLmw03DFmcYduLJWtJXyC/w43Bkme80i+5drJ3ecj2L+r1w/ronuERrEiuLB0GAAA=

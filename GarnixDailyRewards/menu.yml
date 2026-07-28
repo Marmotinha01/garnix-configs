@@ -5,11 +5,14 @@ cooldown-icon:
   material: WATCH
   display: '&c{reward}'
   lore:
-  - '&7Aguarde &e{time}'
-  - '&7para coletar novamente!'
+  - '&7Esta recompensa já foi'
+  - '&7coletada recentemente.'
+  - ''
+  - ' &8 ▪ &fDisponível em: &e{time}'
 
 no-permission-icon:
   material: BARRIER
   display: '&c{reward}'
   lore:
-  - '&7Você não pode coletar.'
+  - '&7Esta recompensa é de um'
+  - '&7cargo que você não tem.'

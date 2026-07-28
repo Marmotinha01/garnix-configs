@@ -11,8 +11,11 @@ shape:
 player-head:
   display: '&e{player}'
   lore-header:
-  - '&7VIPs ativos:'
-  lore-line: '{vip} &8- &e{remaining}'
+  - '&7Jogador com VIP ativo'
+  - '&7no servidor agora.'
+  - ''
+  - ' &8VIPs ativos:'
+  lore-line: ' &8 ▪ {vip} &8- &e{remaining}'
 
 empty-icon:
   slot: 22

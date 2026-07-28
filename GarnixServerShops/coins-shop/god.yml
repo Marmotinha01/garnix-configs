@@ -18,7 +18,10 @@ icon:
   material: DIAMOND_CHESTPLATE
   display: '&cLoja GOD'
   lore:
-  - '&7Clique para ver.'
+  - '&7Equipamentos lendários'
+  - '&7para os mais fortes.'
+  - ''
+  - '&cClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 command: 'lojagod'

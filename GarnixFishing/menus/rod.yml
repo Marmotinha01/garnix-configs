@@ -11,8 +11,8 @@ skin-empty-icon:
   material: BARRIER
   display: '&cNenhuma Skin'
   lore:
-  - '&7Arraste uma skin na'
-  - '&7vara para aplicá-la.'
+  - '&7Arraste uma skin sobre a'
+  - '&7vara para aplicá-la nela.'
 
 # Shown when the rod HAS a skin — the icon is the equipped skin's own item, with
 # this display/lore over it. Placeholders: {skin}, {bonus}, {max_weight}.
@@ -20,12 +20,13 @@ skin-equipped-icon:
   slot: 11
   display: '{skin}'
   lore:
+  - '&7Skin equipada na sua vara'
+  - '&7de pesca neste momento.'
   - ''
-  - ' &8Especificações:'
-  - ' &8▪ &fBônus: &a+&l{bonus}&a%'
-  - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+  - ' &8 ▪ &fBônus: &a+&l{bonus}&a%'
+  - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg'
   - ''
-  - '&aClique para recuperar a skin.'
+  - '&aClique para recuperar.'
 
 # Shown when the player has at least one active booster (clickable → booster menu).
 booster-icon:
@@ -59,7 +60,7 @@ rewards-icon:
   material: CHEST
   display: '&6Recompensas'
   lore:
-  - '&7Todas as recompensas'
-  - '&7possíveis da pesca.'
+  - '&7Todas as recompensas que'
+  - '&7você pode fisgar pescando.'
   - ''
-  - '&6Clique para ver.'
+  - '&6Clique para acessar.'

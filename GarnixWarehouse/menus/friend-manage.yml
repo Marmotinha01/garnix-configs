@@ -11,7 +11,10 @@ remove-friend-icon:
   texture: 6f05afec2a6ec675cd5505a8f44bb6a4d556935689528321ead4edef685f2d10
   display: '&cRemover Amigo'
   lore:
-  - '&7Clique para remover.'
+  - '&7Tira o acesso deste amigo'
+  - '&7ao seu armazém.'
+  - ''
+  - '&cClique para remover.'
 
 back-icon:
   slot: 30
@@ -27,6 +30,7 @@ toggle-status:
   off: '&cNão'
 
 permission-lore:
-- '&fPermitido: {status}'
 - ''
-- '&7Clique para alternar.'
+- ' &8 ▪ &fPermitido: {status}'
+- ''
+- '&eClique para alternar.'

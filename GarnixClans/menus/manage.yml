@@ -19,8 +19,8 @@ rename-icon:
   material: NAME_TAG
   display: '&eNome do Clan'
   lore:
-  - '&7Altere o nome exibido'
-  - '&7do seu clan.'
+  - '&7Altere o nome exibido do'
+  - '&7seu clan para todos.'
   - ''
   - ' &8 ▪ &fAtual: &f{clan}'
   - ''
@@ -53,8 +53,8 @@ transfer-icon:
   material: GOLDEN_APPLE
   display: '&6Transferir Liderança'
   lore:
-  - '&7Passe o clan para outro'
-  - '&7membro. Você vira membro comum.'
+  - '&7Passe a liderança para outro'
+  - '&7membro e vire membro comum.'
   - ''
   - '&6Clique para transferir.'
 

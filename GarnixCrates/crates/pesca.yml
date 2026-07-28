@@ -16,17 +16,19 @@ slot: 12
 crate-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&b&lCHAVE PESCA'
+  display: '&bChave Pesca'
   lore:
-  - '&7Consiga pescando.'
+  - '&7Consiga pescando peixes'
+  - '&7nas águas do servidor.'
 
 # Item físico da chave (segurar e clicar com botão direito na crate abre).
 key-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&b&lCHAVE PESCA'
+  display: '&bChave Pesca'
   lore:
-  - '&7Consiga pescando.'
+  - '&7Consiga pescando peixes'
+  - '&7nas águas do servidor.'
   - ''
   - '&bClique esquerdo para armazenar'
   - '&bou abrir a chave em uma caixa.'
@@ -66,7 +68,7 @@ rewards:
   stone:
     type: COMMAND_ITEM
     chance: 15.0
-    display: '&7Pedra'
+    display: '&9Pedra'
     command: give {player} minecraft:stone {amount}
     amount: 100
     item:
@@ -87,7 +89,7 @@ rewards:
   leather-armor:
     type: ITEM
     chance: 1.5
-    display: '&cArmadura'
+    display: '&cArmadura Vermelha'
     item:
       material: LEATHER_CHESTPLATE
       color: '#FF5555'

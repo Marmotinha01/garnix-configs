@@ -6,11 +6,17 @@ mining-suspects-icon:
   material: DIAMOND_PICKAXE
   display: '&aSuspeitos de Mina'
   lore:
-  - '&7Clique para visualizar.'
+  - '&7Jogadores com ritmo de'
+  - '&7mineração fora do normal.'
+  - ''
+  - '&aClique para acessar.'
 
 farming-suspects-icon:
   slot: 15
   material: DIAMOND_HOE
   display: '&aSuspeitos da Fazenda'
   lore:
-  - '&7Clique para visualizar.'
+  - '&7Jogadores com ritmo de'
+  - '&7colheita fora do normal.'
+  - ''
+  - '&aClique para acessar.'

@@ -13,6 +13,9 @@ collect-icon:
   texture: '2090d09e173ee34138c3b01b48ee0be534bbb1ace0ddf5ff98e66f7b02113995'
   display: '&6&lGARNIX'
   lore:
-    - '&fRecompensa: &6❂250 Cash'
-    - ''
-    - '&aClique para coletar!'
+  - '&7Recompensa que o cargo'
+  - '&7Garnix libera por dia.'
+  - ''
+  - ' &8 ▪ &fRecompensa: &6❂250 Cash'
+  - ''
+  - '&aClique para coletar.'

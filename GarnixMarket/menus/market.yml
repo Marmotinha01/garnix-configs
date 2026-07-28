@@ -21,7 +21,10 @@ my-listings-icon:
   material: EMPTY_MAP
   display: '&aSeus Anúncios'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os itens que você colocou'
+  - '&7à venda no mercado.'
+  - ''
+  - '&aClique para acessar.'
 
 # Fecha o menu e explica no chat como anunciar (mensagem: sell.how-to).
 info-icon:
@@ -29,17 +32,19 @@ info-icon:
   material: BOOK
   display: '&eComo Vender'
   lore:
+  - '&7Anuncie o item que está'
+  - '&7na sua mão neste momento.'
   - ''
-  - ' &b/mercado vender <valor> '
-  - ' &7Anuncia o item da sua mão. '
+  - ' &8 ▪ &b/mercado vender <valor> '
   - ''
+  - '&eClique para saber mais.'
 
 # Linhas adicionadas ABAIXO da lore original do item à venda.
 listing-lore:
 - ''
-- ' &fVendedor: &7{seller} '
-- ' &fPreço: {currency_prefix}{price} '
-- ' &fExpira em: &c{time_remaining} '
+- ' &8 ▪ &fVendedor: &7{seller} '
+- ' &8 ▪ &fPreço: {currency_prefix}{price} '
+- ' &8 ▪ &fExpira em: &c{time_remaining} '
 - ''
 - '{action}'
 

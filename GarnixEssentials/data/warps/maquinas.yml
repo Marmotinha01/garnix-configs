@@ -3,24 +3,24 @@ icon:
   material: 422
   display: '&cMáquinas'
   lore:
-  - '&7Adquira suas maquinas'
-  - '&7para lucrar.'
+  - '&7Compre máquinas e deixe'
+  - '&7elas lucrando por você.'
   - ''
-  - ' &cAcesso rápido:'
-  - ' &8▸ &f/maquinas'
+  - '&cAcesso rápido:'
+  - '&8 ▪ &f/maquinas'
   - ''
   - '&cClique para teleportar.'
 locked-icon:
   material: BARRIER
   display: '&cMáquinas'
   lore:
-  - '&7Adquira suas maquinas'
-  - '&7para lucrar.'
+  - '&7Compre máquinas e deixe'
+  - '&7elas lucrando por você.'
   - ''
-  - ' &cAcesso rápido:'
-  - ' &8▸ &f/maquinas'
+  - '&cAcesso rápido:'
+  - '&8 ▪ &f/maquinas'
   - ''
-  - '&cVocê não tem permissão.'
+  - ' &8 ▾ &cVocê não tem permissão.'
 permission: ''
 slot: 33
 messages:

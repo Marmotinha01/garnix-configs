@@ -6,7 +6,7 @@ selected-item-icon:
   lore:
   - ''
   - '&aOpções de uso:'
-  - '&fBotão Direito &8➟ &cRemover Item'
+  - '&fBotão direito &8➟ &cRemover item'
 
 no-item-selected-icon:
   slot: 13
@@ -21,6 +21,8 @@ shop-type-icon:
   material: HOPPER
   display: '&aTipo de Loja'
   lore:
+  - '&7Defina se a loja compra,'
+  - '&7vende ou faz as duas coisas.'
   - ''
   - '{filters}'
   - ''
@@ -30,13 +32,13 @@ shop-type-filters:
   buy-display: 'Compra '
   sell-display: 'Venda '
   both-display: 'Ambas '
-  line: ' &8► &7{display}'
-  line-selected: ' &a► &f{display}'
+  line: ' &8 ► &7{display}'
+  line-selected: ' &a ► &f{display}'
 
 currency-icon:
   slot: 30
   lore:
-  - '&7Clique para trocar.'
+  - '&eClique para alterar.'
 
 buy-price-icon:
   slot: 32
@@ -44,18 +46,21 @@ buy-price-icon:
   display: '&aPreço de Compra'
   free-display: '&aGrátis'
   lore:
-  - '&fPreço: {symbol_color}{symbol}{primary_color}{price}'
+  - '&7Quanto o cliente paga'
+  - '&7para levar o seu item.'
+  - ''
+  - ' &8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{price}'
   - '{tax_info}'
   - ''
-  - '&7Clique para alterar.'
+  - '&aClique para alterar.'
   # {tax_info}: a taxa da economia (garnix-currencies) incide sobre quem RECEBE. Na compra
   # quem recebe é você (dono), então mostra o líquido após a taxa. Some se o item for grátis.
-  tax-free: '&fTaxa: &aIsento'
+  tax-free: ' &8 ▪ &fTaxa: &aIsento'
   # Mostrada enquanto o preço ainda é Grátis (sem valor definido): só a alíquota, sem líquido.
-  tax-charged-noprice: '&fTaxa: &c&l{tax}&c%'
-  tax-charged: '&fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
+  tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c%'
+  tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
   disabled-lore:
-  - '&cDesativado neste tipo de loja.'
+  - ' &8 ▾ &cDesativado neste tipo de loja.'
 
 sell-price-icon:
   slot: 34
@@ -63,45 +68,57 @@ sell-price-icon:
   display: '&cPreço de Venda'
   free-display: '&cGrátis'
   lore:
-  - '&fPreço: {symbol_color}{symbol}{primary_color}{price}'
+  - '&7Quanto a loja paga por'
+  - '&7cada item recebido.'
+  - ''
+  - ' &8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{price}'
   - '{tax_info}'
   - ''
-  - '&7Clique para alterar.'
+  - '&cClique para alterar.'
   # {tax_info}: na venda quem recebe é o cliente que vende para a loja (você paga o valor
   # cheio), então mostra o líquido que ele recebe após a taxa. Some se o preço for grátis.
-  tax-free: '&fTaxa: &aIsento'
+  tax-free: ' &8 ▪ &fTaxa: &aIsento'
   # Mostrada enquanto o preço ainda é Grátis (sem valor definido): só a alíquota, sem líquido.
-  tax-charged-noprice: '&fTaxa: &c&l{tax}&c%'
-  tax-charged: '&fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
+  tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c%'
+  tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8)'
   disabled-lore:
-  - '&cDesativado neste tipo de loja.'
+  - ' &8 ▾ &cDesativado neste tipo de loja.'
 
 amount-icon:
   slot: 37
   material: ANVIL
   display: '&aQuantia'
   lore:
-  - '&fValor: &ex{amount}'
+  - '&7Quantos itens saem em'
+  - '&7cada negociação da loja.'
   - ''
-  - '&7Clique para alterar.'
+  - ' &8 ▪ &fValor: &ex{amount}'
+  - ''
+  - '&aClique para alterar.'
 
 notify-on-icon:
   slot: 39
   material: BOOK_AND_QUILL
   display: '&aNotificações'
   lore:
-  - '&fStatus: &aLigadas'
+  - '&7Avisa no chat sempre que'
+  - '&7alguém usa a sua loja.'
   - ''
-  - '&7Clique para desligar.'
+  - ' &8 ▪ &fStatus: &aLigadas'
+  - ''
+  - '&aClique para desligar.'
 
 notify-off-icon:
   slot: 39
   material: BOOK
   display: '&cNotificações'
   lore:
-  - '&fStatus: &cDesligadas'
+  - '&7Nenhum aviso no chat'
+  - '&7sobre a sua loja.'
   - ''
-  - '&7Clique para ligar.'
+  - ' &8 ▪ &fStatus: &cDesligadas'
+  - ''
+  - '&cClique para ligar.'
 
 display-icon:
   slot: 41
@@ -109,15 +126,21 @@ display-icon:
   display: '&aDisplay Customizado'
   none-display: '&7Nenhum'
   lore:
-  - '&fAtual: {display}'
+  - '&7Troque o nome que aparece'
+  - '&7na placa da sua loja.'
   - ''
-  - '&7Clique para alterar.'
+  - ' &8 ▪ &fAtual: {display}'
+  - ''
+  - '&aClique para alterar.'
 
 friend-icon:
   slot: 43
   texture: 76cbae7246cc2c6e888587198c7959979666b4f5a4088f24e26e075f140ae6c3
   display: '&aAmigos'
   lore:
-  - '&fTotal: &7{count}'
+  - '&7Quem pode mexer na sua'
+  - '&7loja além de você.'
   - ''
-  - '&7Clique para gerenciar.'
+  - ' &8 ▪ &fTotal: &7{count}'
+  - ''
+  - '&aClique para gerenciar.'

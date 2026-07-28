@@ -5,18 +5,15 @@ info-icon:
   slot: 4
   display: '&bInformações'
   lore:
-  - '&7Confira seu desempenho'
+  - '&7Confira o seu desempenho'
   - '&7com a sua vara de pesca.'
   - ''
-  - ' &8Estatísticas:'
-  - '&8 ▪ &fNível da Vara: &a{level} '
-  - '&8 ▪ &fXP: &a{xp}&8/&c{xp_needed} '
-  - '&8 ▪ &fProgresso: {level_bar} '
+  - ' &8 ▪ &fNível da vara: &a{level} '
+  - ' &8 ▪ &fXP: &a{xp}&8/&c{xp_needed} '
+  - ' &8 ▪ &fProgresso: {level_bar} '
   - ''
-  - ' &8Outras informações:'
-  - '&8 ▪ &fTotal Pescado: &a{total} '
-  - '&8 ▪ &fTempo de Pesca: &e{time} '
-  - ''
+  - ' &8 ▪ &fTotal pescado: &a{total} '
+  - ' &8 ▪ &fTempo de pesca: &e{time} '
 
 shop-icon:
   slot: 21
@@ -24,8 +21,8 @@ shop-icon:
   data: 1
   display: '&eLoja de Corais'
   lore:
-  - '&7Adquira itens especiais'
-  - '&7trocando com seus corais.'
+  - '&7Troque os seus corais por'
+  - '&7itens raros e exclusivos.'
   - ''
   - '&eClique para acessar.'
 
@@ -34,7 +31,10 @@ ranking-icon:
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os maiores pescadores de'
+  - '&7todo o servidor, em disputa.'
+  - ''
+  - '&6Clique para acessar.'
 
 # Shown when the player has at least one active booster (clickable → booster menu).
 booster-icon:
@@ -71,7 +71,9 @@ buy-rod-icon:
   glow: true
   display: '&aVara de Pesca'
   lore:
+  - '&7Compre a sua vara para'
+  - '&7começar a pescar agora.'
   - ''
-  - ' &fCusto: {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{amount} {currency}'
   - ''
   - '&aClique para comprar.'

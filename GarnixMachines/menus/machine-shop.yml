@@ -9,72 +9,82 @@ shape:
 - XXXXXXXXX
 
 formats:
-  cost: ' &8► {symbol}{formatted_value} {currency_name}'
-  cost-discount: ' &8► &8{symbol_clean}&7&m{old_value}&r &f➟ {symbol}{formatted_value} {currency_name}'
-  drop: ' &8► {symbol}{formatted_value} {currency_name}'
-  drop-bonus: ' &8► &8{symbol_clean}&7&m{old_value}&r &f➟{symbol}{formatted_value} {currency_name}'
+  cost: ' &8 ▪ {symbol}{formatted_value} {currency_name}'
+  cost-discount: ' &8 ▪ &8{symbol_clean}&7&m{old_value}&r &f➟ {symbol}{formatted_value} {currency_name}'
+  drop: ' &8 ▪ {symbol}{formatted_value} {currency_name}'
+  drop-bonus: ' &8 ▪ &8{symbol_clean}&7&m{old_value}&r &f➟{symbol}{formatted_value} {currency_name}'
 
 info-icon:
   slot: 3
   material: BOOK
   display: '&aInformações'
   lore:
+  - '&7Quantas máquinas você'
+  - '&7já comprou até agora.'
   - ''
-  - ' &fSeu Limite: &b∞{limit} '
-  - ' &fComprados: &7x{total_bought} '
+  - ' &8 ▪ &fSeu limite: &b∞{limit} '
+  - ' &8 ▪ &fComprados: &7x{total_bought} '
   - ''
   - '{entity_lines}'
-  - ''
-  entity-line: ' &f{entity_display} &7(x{entity_bought}) '
-  spent-line: ' &8► {symbol}{color}{value} {display} '
-  entity-empty: ' &cNenhuma máquina comprada. '
+  entity-line: ' &8 ▪ &f{entity_display} &7(x{entity_bought}) '
+  spent-line: '   &8 ▪ {symbol}{color}{value} {display} '
+  entity-empty: ' &8 ▾ &cNenhuma máquina comprada. '
 
 ranking-icon:
   slot: 5
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Quem mais tem máquinas'
+  - '&7em todo o servidor.'
+  - ''
+  - '&6Clique para acessar.'
 
 icons:
   unreleased:
     display: '&cMáquina Bloqueada'
     lore:
-    - '&fLibera: &7{date}'
+    - '&7Esta máquina ainda não'
+    - '&7foi liberada na loja.'
     - ''
-    - '&cMáquina ainda bloqueada!'
+    - ' &8 ▪ &fLibera: &7{date}'
+    - ''
+    - ' &8 ▾ &cMáquina ainda bloqueada.'
   locked:
     display: '&cMáquina Bloqueada'
     lore:
-    - '&fRank necessário: {rank}'
+    - '&7O seu rank ainda não'
+    - '&7alcança esta máquina.'
     - ''
-    - '&cMáquina ainda bloqueada!'
+    - ' &8 ▪ &fRank necessário: {rank}'
+    - ''
+    - ' &8 ▾ &cMáquina ainda bloqueada.'
   unlocked:
     lore:
     - ''
-    - ' &fCustos de compra:'
+    - ' &8Custos de compra:'
     - '{costs}'
     - ''
-    - ' &fValor de venda p/drop:'
+    - ' &8Valor de venda por drop:'
     - '{drops}'
     - ''
     - '&aOpções de uso:'
-    - '&fBotão Esquerdo &8➟ &7Escolher Quantia'
-    - '&fBotão Direito &8➟ &7Comprar x&l1'
-    - '&fTecla Q &8➟ &7Comprar Limite'
+    - '&fBotão esquerdo &8➟ &7Escolher quantia'
+    - '&fBotão direito &8➟ &7Comprar x&l1'
+    - '&fTecla Q &8➟ &7Comprar limite'
   unlocked-discount:
     lore:
     - ''
-    - ' &fDesconto VIP: &c&l{discount_value}&c% {discount_tag}'
-    - ' &fBônus VIP: &c&l{bonus_value}&c% {bonus_tag}'
+    - ' &8 ▪ &fDesconto VIP: &c&l{discount_value}&c% {discount_tag}'
+    - ' &8 ▪ &fBônus VIP: &c&l{bonus_value}&c% {bonus_tag}'
     - ''
-    - ' &fCustos de compra:'
+    - ' &8Custos de compra:'
     - '{costs}'
     - ''
-    - ' &fValor de venda p/drop:'
+    - ' &8Valor de venda por drop:'
     - '{drops}'
     - ''
     - '&aOpções de uso:'
-    - '&fBotão Esquerdo &8➟ &7Escolher Quantia'
-    - '&fBotão Direito &8➟ &7Comprar x&l1'
-    - '&fTecla Q &8➟ &7Comprar Limite'
+    - '&fBotão esquerdo &8➟ &7Escolher quantia'
+    - '&fBotão direito &8➟ &7Comprar x&l1'
+    - '&fTecla Q &8➟ &7Comprar limite'

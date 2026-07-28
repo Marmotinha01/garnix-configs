@@ -24,7 +24,10 @@ icon:
   material: LOG
   display: '&aBlocos'
   lore:
-  - '&7Clique para ver.'
+  - '&7Blocos de construção'
+  - '&7para erguer a sua base.'
+  - ''
+  - '&aClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'lojagod'

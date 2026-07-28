@@ -25,7 +25,10 @@ icon:
   data: 0
   display: '&aUtilitários'
   lore:
-  - '&7Clique para ver.'
+  - '&7Baús, funis e tudo que'
+  - '&7facilita o dia a dia.'
+  - ''
+  - '&aClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'lojagod'

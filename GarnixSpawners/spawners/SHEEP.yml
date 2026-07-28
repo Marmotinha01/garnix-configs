@@ -32,16 +32,22 @@ spawner-item:
   material: MOB_SPAWNER
   display: "&aSpawner de {translated}"
   lore:
-    - "&fQuantia: &7{amount}"
-    - ""
-    - "&eColoque em seu terreno!"
+  - '&7Gera mobs sem parar'
+  - '&7dentro do seu terreno.'
+  - ''
+  - ' &8 ▪ &fQuantia: &7{amount}'
+  - ''
+  - '&aColoque no seu terreno.'
 
 head-item:
   display: "&aCabeça de {translated}"
   lore:
-    - "&fQuantia: &e{amount}"
-    - ""
-    - "&7Clique para armazenar!"
+  - '&7Cabeça que caiu de um'
+  - '&7mob do seu spawner.'
+  - ''
+  - ' &8 ▪ &fQuantia: &e{amount}'
+  - ''
+  - '&aClique para armazenar.'
 
 upgrades:
   mob-stack:

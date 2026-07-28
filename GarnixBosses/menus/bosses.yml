@@ -9,15 +9,14 @@ shape:
 - XXXXXXXXX
 
 boss-item-lore:
-- '&7Utilize este boss dentro'
-- '&7do seu terreno.'
+- '&7Invoque este boss dentro'
+- '&7do seu próprio terreno.'
 - ''
-- ' &8Informações:'
-- ' &8▸ &fVida: &c❤{health}'
-- ' &8▸ &fRecompensas: &7{rewards}'
+- ' &8 ▪ &fVida: &c❤{health}'
+- ' &8 ▪ &fRecompensas: &7{rewards}'
 - ''
-- ' &8Opções de uso:'
-- '&fEsquerdo: &7Conteúdo.'
+- '&eOpções de uso:'
+- '&fBotão esquerdo &8➟ &7Recompensas'
 
 back-icon:
   slot: 49

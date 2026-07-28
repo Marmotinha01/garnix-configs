@@ -25,9 +25,12 @@ machine-item:
   texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
   display: '&aMáquina de {translated}'
   lore:
-  - '&fQuantia: &7{amount}'
+  - '&7Produz sozinha dentro'
+  - '&7do seu terreno.'
   - ''
-  - '&eColoque em seu terreno!'
+  - ' &8 ▪ &fQuantia: &7{amount}'
+  - ''
+  - '&aColoque no seu terreno.'
 
 costs:
   coins: 1000

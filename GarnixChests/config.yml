@@ -53,8 +53,11 @@ chest:
     display: '&6Ativador de Baú'
     glow: true
     lore:
+    - '&7Libera mais um baú na'
+    - '&7sua lista de baús.'
+    - ''
     - '&6Opções de uso:'
-    - '&fBotão Direito &8➟ &7Ativar'
+    - '&fBotão direito &8➟ &7Ativar'
   
   # Ícones selecionáveis no menu de troca. {display} = nome traduzido do material.
   icons:
@@ -63,4 +66,4 @@ chest:
   - EMERALD_BLOCK
   icons-display: '&a{display}'
   icons-lore:
-  - '&7Clique para usar o ícone.'
+  - '&aClique para usar.'

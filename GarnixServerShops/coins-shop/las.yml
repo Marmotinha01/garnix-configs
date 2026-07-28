@@ -25,7 +25,10 @@ icon:
   data: 1
   display: '&aLãs'
   lore:
-  - '&7Clique para ver.'
+  - '&7Lãs de todas as cores'
+  - '&7para as suas obras.'
+  - ''
+  - '&aClique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'lojagod'

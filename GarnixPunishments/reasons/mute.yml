@@ -12,7 +12,8 @@ no-permission-icon:
   material: BARRIER
   display: '&cSem permissão'
   lore:
-  - '&7Você não pode usar este motivo.'
+  - '&7O seu cargo não libera'
+  - '&7este motivo de punição.'
 
 back-icon:
   slot: 49

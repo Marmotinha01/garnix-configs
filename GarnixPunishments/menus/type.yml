@@ -35,7 +35,7 @@ mute:
   display: '&eMute'
   lore:
   - '&7Silencia o jogador no chat'
-  - '&7permanentemente.'
+  - '&7sem prazo para acabar.'
   - ''
   - '&eClique para escolher.'
 tempmute:
@@ -52,8 +52,8 @@ warn:
   material: SIGN
   display: '&6Aviso'
   lore:
-  - '&7Adverte o jogador. Avisos'
-  - '&7acumulam e escalam a punição.'
+  - '&7Adverte o jogador; avisos'
+  - '&7acumulam e escalam a pena.'
   - ''
   - '&6Clique para escolher.'
 

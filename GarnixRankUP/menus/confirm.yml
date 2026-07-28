@@ -1,7 +1,7 @@
 # Currency cost line. Placeholders: {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
-cost-format: ' &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'
+cost-format: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency}'
 # Head cost line. Placeholders: {amount} {display}
-cost-format-head: ' &8► &f{amount} &7{display}'
+cost-format-head: ' &8 ▪ &f{amount} &7{display}'
 
 rankup:
   info-icon:
@@ -10,9 +10,8 @@ rankup:
     display: '&aEvoluir para {rank_tag}'
     lore:
     - ''
-    - ' &fCustos:'
+    - ' &8Custos:'
     - '{costs}'
-    - ''
 
 prestige:
   info-icon:
@@ -20,5 +19,7 @@ prestige:
     material: NETHER_STAR
     display: '&b&lPRESTIGIAR'
     lore:
-    - '&cSeu rank será resetado'
-    - '&cpara o inicial!'
+    - '&7Você recomeça do primeiro'
+    - '&7rank e ganha uma estrela.'
+    - ''
+    - ' &8 ▾ &cO seu rank será resetado.'

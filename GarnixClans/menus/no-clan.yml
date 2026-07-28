@@ -8,7 +8,7 @@ create-icon:
   display: '&bCriar Clan'
   lore:
   - '&7Monte o seu clan escolhendo'
-  - '&7uma tag e um nome.'
+  - '&7uma tag e um nome para ele.'
   - ''
   - '&bClique para criar.'
 
@@ -30,7 +30,7 @@ invites-icon:
   display: '&eConvites Recebidos'
   lore:
   - '&7Convites que outros clans'
-  - '&7enviaram para você.'
+  - '&7enviaram para você entrar.'
   - ''
   - ' &8 ▪ &fPendentes: &7{invites}'
   - ''
@@ -41,4 +41,7 @@ ranking-icon:
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os clans mais fortes e temidos'
+  - '&7de todo o servidor, em disputa.'
+  - ''
+  - '&6Clique para acessar.'

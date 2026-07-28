@@ -14,65 +14,79 @@ unselected-item-icon:
 currency-icon:
   slot: 29
   lore:
-  - '&7Clique para alterar.'
+  - '&eClique para alterar.'
 
 select-duration-icon:
   slot: 33
   material: WATCH
   display: '&aDuração do Leilão'
   unselected-lore:
-  - '&7Clique para definir.'
-  selected-lore:
-  - '&fAtual: &e{duration}'
+  - '&7Defina por quanto tempo'
+  - '&7o leilão fica no ar.'
   - ''
-  - '&7Clique para alterar.'
+  - '&aClique para definir.'
+  selected-lore:
+  - '&7Defina por quanto tempo'
+  - '&7o leilão fica no ar.'
+  - ''
+  - ' &8 ▪ &fAtual: &e{duration}'
+  - ''
+  - '&aClique para alterar.'
 
 set-bid-icon:
   slot: 31
   material: GOLD_INGOT
   display: '&aLance Inicial'
   unselected-lore:
-  - '&7Clique para definir.'
-  selected-lore:
-  - '&fAtual: {currency_prefix}{amount}'
+  - '&7Defina o valor mínimo'
+  - '&7para o primeiro lance.'
   - ''
-  - '&7Clique para alterar.'
+  - '&aClique para definir.'
+  selected-lore:
+  - '&7Defina o valor mínimo'
+  - '&7para o primeiro lance.'
+  - ''
+  - ' &8 ▪ &fAtual: {currency_prefix}{amount}'
+  - ''
+  - '&aClique para alterar.'
 
 confirm-icon:
   slot: 50
-  material: INK_SACK
-  data: 10
+  material: STAINED_GLASS_PANE
+  data: 5
   display: '&aConfirmar'
   lore:
-    - ''
-    - '{tax_info}'
-    - ''
-    - '&aClique para confirmar.'
+  - '&7Publica o leilão com as'
+  - '&7opções que você escolheu.'
+  - ''
+  - '{tax_info}'
+  - ''
+  - '&aClique para confirmar.'
 
 # A linha {tax_info}, que sempre diz se a economia escolhida cobra taxa sobre a
 # venda — a alíquota é travada neste clique. O vencedor sempre paga o lance
 # cheio; a taxa sai da parte do leiloeiro. {net} é o líquido sobre o lance
 # inicial (o lance final ainda não existe) e {tax} é a alíquota.
-tax-free: ' &fTaxa: &aIsento '
-tax-charged: ' &fTaxa: &c{tax}% '
+tax-free: ' &8 ▪ &fTaxa: &aIsento '
+tax-charged: ' &8 ▪ &fTaxa: &c{tax}% '
 
 no-bid-icon:
   slot: 50
-  material: INK_SACK
-  data: 8
+  material: STAINED_GLASS_PANE
+  data: 14
   display: '&cCriar Leilão'
   lore:
-    - '&7Defina o lance inicial'
-    - '&7para poder confirmar.'
+  - '&7Defina o lance inicial'
+  - '&7para poder confirmar.'
 
 no-duration-icon:
   slot: 50
-  material: INK_SACK
-  data: 8
+  material: STAINED_GLASS_PANE
+  data: 14
   display: '&cCriar Leilão'
   lore:
-    - '&7Defina uma duração'
-    - '&7para poder confirmar.'
+  - '&7Defina uma duração'
+  - '&7para poder confirmar.'
 
 back-icon:
   slot: 48

@@ -72,8 +72,8 @@ mode-silent:
 
 confirm-ready:
   slot: 31
-  material: INK_SACK
-  data: 10
+  material: STAINED_GLASS_PANE
+  data: 5
   glow: true
   display: '&aConfirmar punição'
   lore:
@@ -83,14 +83,14 @@ confirm-ready:
   - '&aClique para confirmar.'
 confirm-not-ready:
   slot: 31
-  material: INK_SACK
-  data: 8
+  material: STAINED_GLASS_PANE
+  data: 14
   display: '&cConfirmar punição'
   lore:
-  - '&7Preencha os campos obrigatórios'
-  - '&7antes de aplicar:'
+  - '&7Preencha os campos abaixo'
+  - '&7antes de aplicar a punição.'
   - ''
   - ' &8 ▪ &fPunição &7(tipo e motivo)'
   - ' &8 ▪ &fProva'
   - ''
-  - '&cCampos incompletos.'
+  - ' &8 ▾ &cCampos incompletos.'

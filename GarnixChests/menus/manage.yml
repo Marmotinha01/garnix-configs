@@ -7,10 +7,11 @@ rename-icon:
   material: NAME_TAG
   display: '&eRenomear Baú'
   lore:
-  - '&7Define o nome exibido na lista.'
-  - '&7Aceita cores, até &f{max} &7caracteres.'
+  - '&7Troque o nome que este'
+  - '&7baú mostra na lista.'
   - ''
-  - ' &7Atual: &r{display}'
+  - ' &8 ▪ &fAtual: &r{display}'
+  - ' &8 ▪ &fLimite: &7{max} caracteres'
   - ''
   - '&eClique para renomear.'
 
@@ -19,23 +20,30 @@ expand-icon:
   material: ANVIL
   display: '&aExpandir Baú'
   lore:
-  - '&fLinhas atuais: &7{rows}'
-  - '&fPróxima linha: &a{next}&8/&c{max}'
-  - '&fCusto: &7{cost} {currency}'
+  - '&7Ganhe mais uma linha de'
+  - '&7espaço dentro deste baú.'
+  - ''
+  - ' &8 ▪ &fLinhas atuais: &7{rows}'
+  - ' &8 ▪ &fPróxima linha: &a{next}&8/&c{max}'
+  - ' &8 ▪ &fCusto: &7{cost} {currency}'
   - ''
   - '&aClique para expandir.'
   # Exibido quando o baú já está no tamanho máximo.
   max-lore:
-  - '&fLinhas: &a{rows}&8/&c{max}'
+  - '&7Ganhe mais uma linha de'
+  - '&7espaço dentro deste baú.'
   - ''
-  - '&cTamanho máximo atingido.'
+  - ' &8 ▪ &fLinhas: &a{rows}&8/&c{max}'
+  - ''
+  - ' &8 ▾ &cTamanho máximo atingido.'
 
 change-icon:
   slot: 15
   material: ITEM_FRAME
   display: '&bTrocar Ícone'
   lore:
-  - '&7Escolhe o ícone do baú na lista.'
+  - '&7Escolha o item que aparece'
+  - '&7no lugar deste baú.'
   - ''
   - '&bClique para acessar.'
 

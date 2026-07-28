@@ -5,18 +5,17 @@ stats-icon:
   slot: 11
   display: '&bSuas Estatísticas'
   lore:
-  - '&7Veja todas as suas'
-  - '&7estatísticas em eventos.'
+  - '&7Seu desempenho em cada um'
+  - '&7dos eventos do servidor.'
   - ''
   - ' &8Eventos vencidos:'
   - '{events}'
   - ''
-  - ' &b▎ &fVitórias Totais: &a{total} '
-  - ''
+  - ' &8 ▪ &fVitórias totais: &a{total} '
 
 stats:
-  line: ' &8▪ &7{event} &a{wins}x '
-  none: ' &8▪ &cNenhuma vitória. '
+  line: ' &8 ▪ &f{event}: &a{wins}x '
+  none: ' &8 ▪ &cNenhuma vitória ainda. '
 
 # Ícone só de leitura, no meio do menu: não tem clique nenhum e não sai do lugar.
 # O plugin não agenda evento nenhum — quem escreve o cronograma é você, aqui nas
@@ -26,18 +25,18 @@ schedule-icon:
   material: WATCH
   display: '&eCronograma'
   lore:
-  - '&7Os horários dos eventos'
-  - '&7ao longo do dia.'
+  - '&7Os horários de cada evento'
+  - '&7ao longo de todo o dia.'
   - ''
   - ' &8Durante a semana:'
-  - ' &e▪ &f12:00 &8- &7Evento de arena '
-  - ' &e▪ &f16:00 &8- &7Evento de chat '
-  - ' &e▪ &f20:00 &8- &7Evento de arena '
+  - ' &8 ▪ &f12:00 &8- &7Evento de arena '
+  - ' &8 ▪ &f16:00 &8- &7Evento de chat '
+  - ' &8 ▪ &f20:00 &8- &7Evento de arena '
   - ''
   - ' &8Fim de semana:'
-  - ' &e▪ &f15:00 &8- &7Evento de arena '
-  - ' &e▪ &f19:00 &8- &7Evento de chat '
-  - ' &e▪ &f21:00 &8- &7Evento de arena '
+  - ' &8 ▪ &f15:00 &8- &7Evento de arena '
+  - ' &8 ▪ &f19:00 &8- &7Evento de chat '
+  - ' &8 ▪ &f21:00 &8- &7Evento de arena '
   - ''
   - '&8&oOs horários podem variar.'
 
@@ -46,4 +45,7 @@ ranking-icon:
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os melhores competidores'
+  - '&7de eventos do servidor.'
+  - ''
+  - '&6Clique para acessar.'

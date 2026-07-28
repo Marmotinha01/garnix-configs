@@ -71,13 +71,13 @@ forge-item:
   - '&7Combine skins para'
   - '&7forjar uma melhor.'
   - ''
-  - ' &b▎ &fTipo: &bVara de Pesca '
+  - ' &8 ▪ &fTipo: &bVara de Pesca '
   - ''
   - ' &8Requisitos:'
-  - ' &8▪ &c7 Skins Iguais'
+  - ' &8 ▪ &c7 skins iguais'
   - ''
   - '&bOpções de uso:'
-  - '&fBotão Dir. + SHIFT &8➟ &7Abrir'
+  - '&fBotão dir. + SHIFT &8➟ &7Abrir'
 
 # Boosters: per-catch multipliers given as items. Two types — "xp" (fishing XP)
 # and the currency id above ("corais"). Activated by right-clicking the item.

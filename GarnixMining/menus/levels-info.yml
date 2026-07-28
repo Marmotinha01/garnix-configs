@@ -20,12 +20,14 @@ level-icon:
   data: 4
   display: '&eNível &l{level}'
   lore:
-  - '&fXP Necessário: &7{xp} '
+  - '&7O que a sua mina gera ao'
+  - '&7alcançar este nível.'
   - ''
-  - ' &8Composição da Mina: '
+  - ' &8 ▪ &fXP necessário: &7{xp} '
+  - ''
+  - ' &8Composição da mina: '
   - '{block_list}'
-  - ''
 
-block-entry: ' &8▴ &f{block_name} &c{chance} '
+block-entry: ' &8 ▴ &f{block_name} &c{chance} '
 reward-separator: '&8▪'
 reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '

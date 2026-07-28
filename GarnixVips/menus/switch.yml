@@ -8,14 +8,16 @@ shape:
 glow-active: true
 
 lore-active:
-- '&fTempo restante: &7{remaining}'
+- ''
+- ' &8 ▪ &fTempo restante: &7{remaining}'
 - ''
 - '&eVIP ativo no momento.'
 
 lore-inactive:
-- '&fTempo restante: &e{remaining}'
 - ''
-- '&aClique para trocar para o VIP.'
+- ' &8 ▪ &fTempo restante: &e{remaining}'
+- ''
+- '&aClique para trocar.'
 
 empty-icon:
   slot: 22

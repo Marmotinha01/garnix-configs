@@ -18,7 +18,10 @@ icon:
   material: OBSIDIAN
   display: '&6Especiais'
   lore:
-    - '&7Clique para visualizar.'
+  - '&7Itens exclusivos que só'
+  - '&7a loja de cash oferece.'
+  - ''
+  - '&6Clique para acessar.'
 
 # Comando direto opcional que abre a categoria:
 # command: 'especiais'

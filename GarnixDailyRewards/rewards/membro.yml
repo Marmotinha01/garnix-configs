@@ -13,6 +13,9 @@ collect-icon:
   texture: '1c8e0ddf2432f4332b87691b5952c7679763ef4f275b874e9bceb888ed5b5b9'
   display: '&7&lMEMBRO'
   lore:
-    - '&fRecompensa: &6❂50 Cash'
-    - ''
-    - '&aClique para coletar!'
+  - '&7Recompensa diária aberta'
+  - '&7a todos os jogadores.'
+  - ''
+  - ' &8 ▪ &fRecompensa: &6❂50 Cash'
+  - ''
+  - '&aClique para coletar.'

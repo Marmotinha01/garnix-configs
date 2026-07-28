@@ -24,13 +24,13 @@ back-icon:
 # Linhas adicionadas ABAIXO da lore original do item anunciado.
 listing-lore:
 - ''
-- ' &fPreço: {currency_prefix}{price} '
+- ' &8 ▪ &fPreço: {currency_prefix}{price} '
 - '{tax_info}'
-- ' &fExpira em: &c{time_remaining} '
+- ' &8 ▪ &fExpira em: &c{time_remaining} '
 - ''
 - '&eClique para cancelar.'
 
 # A linha {tax_info}, que sempre diz se este anúncio paga taxa. A alíquota é a
 # travada quando o item foi anunciado, não a que valeria hoje.
-tax-free: ' &fTaxa: &aIsento '
-tax-charged: ' &fTaxa: &c&l{tax}&c% '
+tax-free: ' &8 ▪ &fTaxa: &aIsento '
+tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% '

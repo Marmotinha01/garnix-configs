@@ -7,7 +7,10 @@ status-on-icon:
   data: 10
   display: '&aVenda Automática'
   lore:
-  - '&7Clique para desativar.'
+  - '&7Os cactos do armazém são'
+  - '&7vendidos automaticamente.'
+  - ''
+  - '&aClique para desativar.'
 
 status-off-icon:
   slot: 13
@@ -15,7 +18,10 @@ status-off-icon:
   data: 8
   display: '&cVenda Automática'
   lore:
-  - '&7Clique para ativar.'
+  - '&7Os cactos ficam parados'
+  - '&7no armazém esperando você.'
+  - ''
+  - '&cClique para ativar.'
 
 summary-on-icon:
   slot: 15
@@ -23,7 +29,10 @@ summary-on-icon:
   data: 10
   display: '&aRelatório'
   lore:
-  - '&7Clique para desativar.'
+  - '&7Avisa no chat o quanto'
+  - '&7cada venda rendeu.'
+  - ''
+  - '&aClique para desativar.'
 
 summary-off-icon:
   slot: 15
@@ -31,7 +40,10 @@ summary-off-icon:
   data: 8
   display: '&cRelatório'
   lore:
-  - '&7Clique para ativar.'
+  - '&7Nenhum aviso no chat'
+  - '&7sobre as suas vendas.'
+  - ''
+  - '&cClique para ativar.'
 
 upgrade-icon:
   slot: 11
@@ -41,34 +53,35 @@ upgrade-icon:
   - '&7Diminua ainda mais o tempo'
   - '&7entre cada venda de cactos.'
   - ''
-  - ' &8Próxima Evolução:'
-  - ' &8▪ &e{current}s &8➟ &a{next}s &7({cost}&7)'
+  - ' &8Próxima evolução:'
+  - ' &8 ▪ &e{current}s &8➟ &a{next}s &7({cost}&7)'
   - ''
-  - ' &6▎ &fVenda em: &7{remaining}s'
+  - ' &8 ▪ &fVenda em: &7{remaining}s'
   - ''
-  - '&eClique para evoluir!'
+  - '&6Clique para evoluir.'
   lore-cant:
   - '&7Diminua ainda mais o tempo'
   - '&7entre cada venda de cactos.'
   - ''
-  - ' &8Próxima Evolução:'
-  - ' &8▪ &e{current}s &8➟ &a{next}s &7({cost}&7) '
+  - ' &8Próxima evolução:'
+  - ' &8 ▪ &e{current}s &8➟ &a{next}s &7({cost}&7) '
   - ''
-  - ' &6▎ &fPróxima venda: &7{remaining}s'
+  - ' &8 ▪ &fPróxima venda: &7{remaining}s'
   - ''
-  - '&cVocê não tem saldo suficiente.'
+  - ' &8 ▾ &cSaldo insuficiente.'
 
 upgrade-max-icon:
   slot: 11
   material: BARRIER
   display: '&cEvolução'
   lore:
+  - '&7A venda automática já está'
+  - '&7no ritmo mais rápido.'
   - ''
-  - ' &8Informações:'
-  - ' &8▎ &fPróxima venda: &e{remaining}s '
-  - ' &8▎ &fTempo entre vendas: &a{interval}s '
+  - ' &8 ▪ &fPróxima venda: &e{remaining}s '
+  - ' &8 ▪ &fTempo entre vendas: &a{interval}s '
   - ''
-  - '&cEvolução máxima já atingida!'
+  - ' &8 ▾ &cEvolução máxima atingida.'
 
 back-icon:
   slot: 31

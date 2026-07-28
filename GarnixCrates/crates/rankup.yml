@@ -16,17 +16,19 @@ slot: 15
 crate-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&6&lCHAVE RANKUP'
+  display: '&6Chave Rankup'
   lore:
-  - '&7Consiga upando de rank.'
+  - '&7Consiga subindo de rank'
+  - '&7ao longo da sua jornada.'
 
 # Item físico da chave (segurar e clicar com botão direito na crate abre).
 key-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&6&lCHAVE RANKUP'
+  display: '&6Chave Rankup'
   lore:
-  - '&7Consiga upando de rank.'
+  - '&7Consiga subindo de rank'
+  - '&7ao longo da sua jornada.'
   - ''
   - '&6Clique esquerdo para armazenar'
   - '&6ou abrir a chave em uma caixa.'
@@ -66,7 +68,7 @@ rewards:
   stone:
     type: COMMAND_ITEM
     chance: 15.0
-    display: '&7Pedra'
+    display: '&9Pedra'
     command: give {player} minecraft:stone {amount}
     amount: 100
     item:
@@ -87,7 +89,7 @@ rewards:
   leather-armor:
     type: ITEM
     chance: 1.5
-    display: '&cArmadura'
+    display: '&cArmadura Vermelha'
     item:
       material: LEATHER_CHESTPLATE
       color: '#FF5555'

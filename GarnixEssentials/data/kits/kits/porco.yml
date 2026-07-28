@@ -17,12 +17,18 @@ icon:
   texture: 9b1760e3778f8087046b86bec6a0a83a567625f30f0d6bce866d4bed95dba6c1
   display: '&dKit Porco'
   lore:
-  - '&7Clique para ver.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - '&dClique para acessar.'
 
 locked-icon:
   material: BARRIER
   display: '&cKit Porco'
   lore:
-  - '&7Ainda não desbloqueado.'
+  - '&7Confira os itens que'
+  - '&7vêm dentro deste kit.'
+  - ''
+  - ' &8 ▾ &cAinda não desbloqueado.'
 
 content: H4sIAAAAAAAA/8WTTUoDQRCFayZRJ4MLEfx30XoAV4LgQtCoBBQVAm5DZbqcaeyfsbuTqBfKPXIyOyYhyLjIIuimoaj3Xn1U0SlAA1aEJ+VSAEgTiAWHHSU0ZRZf/DkXqIzmHTcwlkew0jQ97aMUah7zBtRJZ8XYGMdQk30Jtfg7YAOmdTypjyGFNS5cKfEjgfoDKoL10ZDfCc+ejM1MSIDVa1SYU0ibUGzPKXIjOekOlqWkGUR97oimjr0qdymyV3ynhcnZMsi3qhx/zrD7yw0L0yf57xgFSUV+YQxYBsZhFSMryPkQ4hc/zFJQ9qsokvJc6Nz9Lcgvv7xrjP8/Cm9FORCWOoUxrzOKuEIRTadGk6kXUINGS3C6lZi7cT+BJAR66oTuatc4R24OFoLujaUkCOtwMBqeNY12IkeG3WDR3LCJ4yQIjkbD06YUbz1i5MJrQ7dEG7RW4SdptN8S0wtmKyxDlhXYD2LFeioUKN7xZLaJzaAcDWWzdfl8w64e2+2b9s99wBcNRbJ4jQUAAA==

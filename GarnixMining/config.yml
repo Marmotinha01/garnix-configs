@@ -221,13 +221,13 @@ forge-icon:
   - '&7Combine skins para'
   - '&7forjar uma melhor.'
   - ''
-  - ' &e▎ &fTipo: &6Picareta '
+  - ' &8 ▪ &fTipo: &6Picareta '
   - ''
   - ' &8Requisitos:'
-  - ' &8▪ &c7 Skins Iguais'
+  - ' &8 ▪ &c7 skins iguais'
   - ''
   - '&6Opções de uso:'
-  - '&fBotão Dir. + SHIFT &8➟ &7Abrir'
+  - '&fBotão dir. + SHIFT &8➟ &7Abrir'
 
 # Drill ("britadeira", the pt-BR display name). A single, unique consumable item:
 # right-click a standing mine block to plant it. A trapdoor/iron/hopper body then
@@ -240,13 +240,13 @@ drill:
   display: "&cBritadeira"
   glow: true
   lore:
-  - '&7Perfura a camada'
-  - '&7até o fim da mina.'
+  - '&7Perfura a coluna inteira'
+  - '&7até o fundo da mina.'
   - ''
-  - ' &c▎ &fÁrea: &c3x3 '
+  - ' &8 ▪ &fÁrea: &c3x3 '
   - ''
   - '&cOpções de uso:'
-  - '&fBotão Direito &8➟ &7Usar'
+  - '&fBotão direito &8➟ &7Usar'
   # Half-width of the square carved at each level: 1 = 3x3, 2 = 5x5, 0 = column only.
   dig-radius: 1
   # Ticks between each downward step (lower = faster). 2 = 10 levels per second.

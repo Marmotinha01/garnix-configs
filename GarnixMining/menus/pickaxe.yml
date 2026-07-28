@@ -9,8 +9,8 @@ skins-icon:
   interval: 20
   display: '&eSkins de Picareta'
   lore:
-  - '&7Ganhe bônus ao alterar'
-  - '&7a skin da sua picareta.'
+  - '&7Ganhe bônus especiais ao'
+  - '&7trocar a skin da picareta.'
   - ''
   - '&eClique para gerenciar.'
   flags: ["HIDE_ATTRIBUTES"]
@@ -19,17 +19,23 @@ info-icon:
   slot: 50
   display: '&aSuas Informações'
   lore:
-  - '&fGemas: {symbol_color}{symbol}{primary_color}{gems}'
-  - '&fB. Quebrados: &7{blocks}'
+  - '&7Seu saldo e o total de'
+  - '&7blocos que você quebrou.'
+  - ''
+  - ' &8 ▪ &fGemas: {symbol_color}{symbol}{primary_color}{gems}'
+  - ' &8 ▪ &fBlocos quebrados: &7{blocks}'
 
 locked-enchant-icon:
   material: BARRIER
   display: '&c{display}'
   lore:
-  - '&7Requer mina nível &c&l{mine-level}&7.'
+  - '&7Encantamento bloqueado'
+  - '&7para o nível da sua mina.'
+  - ''
+  - ' &8 ▪ &fRequer nível: &c{mine-level}'
 
 maxed-enchant-lore:
-- '&cNível máximo atingido.'
+- ' &8 ▾ &cNível máximo atingido.'
 - ''
 - '&aClique para gerenciar.'
 

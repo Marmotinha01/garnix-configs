@@ -27,6 +27,6 @@ back-icon:
 # O ícone já é o da própria moeda. {currency}
 currency-icon:
   lore:
-  - '&7Clique para usar.'
+  - '&aClique para usar.'
   selected-lore:
-  - '&cJá selecionada.'
+  - '&cEconomia já selecionada.'

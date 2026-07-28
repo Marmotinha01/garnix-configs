@@ -5,13 +5,11 @@ player-head:
   slot: 4
   display: '&eInformações'
   lore:
-  - '&7Confira seu desempenho'
+  - '&7Confira o seu desempenho'
   - '&7enfrentando os bosses.'
-  - ' '
-  - ' &8Estatísticas:'
-  - '&8 ▪ &fBosses Abatidos: &c{total_kills}'
-  - '&8 ▪ &fDano Total: &4❤{total_damage}'
   - ''
+  - ' &8 ▪ &fBosses abatidos: &c{total_kills}'
+  - ' &8 ▪ &fDano total: &4❤{total_damage}'
 
 bosses-icon:
   slot: 20
@@ -41,4 +39,7 @@ ranking-icon:
   material: GOLD_NUGGET
   display: '&6TOP'
   lore:
-  - '&7Clique para ver.'
+  - '&7Os maiores caçadores de'
+  - '&7bosses do servidor.'
+  - ''
+  - '&6Clique para acessar.'

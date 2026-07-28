@@ -5,25 +5,33 @@ rows: 4
 currency-icon:
   slot: 11
   lore:
-  - '&7Clique para trocar.'
+  - '&eClique para alterar.'
 
 amount-icon:
   slot: 15
   material: GOLD_INGOT
   display: '&aValor da Aposta'
   unselected-lore:
-  - '&7Clique para definir.'
-  selected-lore:
-  - '&fAtual: {currency_prefix}{amount}'
+  - '&7Defina quanto cada lado'
+  - '&7arrisca neste desafio.'
   - ''
-  - '&7Clique para alterar.'
+  - '&aClique para definir.'
+  selected-lore:
+  - '&7Defina quanto cada lado'
+  - '&7arrisca neste desafio.'
+  - ''
+  - ' &8 ▪ &fAtual: {currency_prefix}{amount}'
+  - ''
+  - '&aClique para alterar.'
 
 confirm-icon:
   slot: 32
-  material: INK_SACK
-  data: 10
+  material: STAINED_GLASS_PANE
+  data: 5
   display: '&aCriar Desafio'
   lore:
+  - '&7Publica o desafio para'
+  - '&7qualquer um aceitar.'
   - ''
   - '{tax_info}'
   - ''
@@ -32,13 +40,13 @@ confirm-icon:
 # A linha {tax_info}, que sempre diz se uma vitória sua paga taxa — a alíquota é
 # travada neste clique. A taxa incide só sobre o lucro: a sua aposta volta
 # inteira de qualquer jeito. {net} é o lucro líquido e {tax} é a alíquota.
-tax-free: ' &fTaxa: &aIsento '
-tax-charged: ' &fTaxa: &c&l{tax}&c% '
+tax-free: ' &8 ▪ &fTaxa: &aIsento '
+tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
 
 no-amount-icon:
   slot: 32
-  material: BARRIER
-  data: 8
+  material: STAINED_GLASS_PANE
+  data: 14
   display: '&cCriar Desafio'
   lore:
   - '&7Defina o valor da aposta'

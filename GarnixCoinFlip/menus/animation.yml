@@ -16,8 +16,8 @@ countdown:
   display: '&a&lINICIANDO EM {seconds}'
   lore:
   - ''
-  - ' &fDesafio: &a{creator} &8vs &c{opponent} '
-  - ' &fAposta: {currency_prefix}{amount} '
+  - ' &8 ▪ &fDesafio: &a{creator} &8vs &c{opponent} '
+  - ' &8 ▪ &fAposta: {currency_prefix}{amount} '
   - ''
   tick-sound: CLICK
   tick-volume: 0.7
@@ -43,8 +43,8 @@ countdown:
 spinning-display: '&e&l{player}'
 lore:
 - ''
-- ' &fDesafio: &a{creator} &8vs &c{opponent} '
-- ' &fAposta: {currency_prefix}{amount} '
+- ' &8 ▪ &fDesafio: &a{creator} &8vs &c{opponent} '
+- ' &8 ▪ &fAposta: {currency_prefix}{amount} '
 - ''
 winner-lore:
 - ''
