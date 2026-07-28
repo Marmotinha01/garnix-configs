@@ -65,7 +65,7 @@ tip-texture: "4ba74e76b3a99f146db628ede6be2f3c3720daa8f6829ccc1251d9db42bc2d63"
 
 messages:
   - "&3&lKRAKEN! &fUm kraken emergiu e dilacerou a mina com seus tentáculos!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&3&lKRAKEN!"

@@ -13,4 +13,4 @@ icon:
     - "&7Colha mais rápido com"
     - "&7efeito de velocidade permanente."
     - ""
-    - "&7Nível: &f{level}&7/&f{max-level}"
+    - "&fNível: &a{level}&8/&c{max-level}"

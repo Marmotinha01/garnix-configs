@@ -118,6 +118,6 @@ friend-icon:
   texture: 76cbae7246cc2c6e888587198c7959979666b4f5a4088f24e26e075f140ae6c3
   display: '&aAmigos'
   lore:
-  - '&fTotal: &e{count}'
+  - '&fTotal: &7{count}'
   - ''
   - '&7Clique para gerenciar.'

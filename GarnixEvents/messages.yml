@@ -147,6 +147,6 @@ admin-help:
 - '  &c/eventos reload'
 - '  &c/eventos wand [cuboid/poly/circulo]'
 - ''
-- '  &7Eventos: &fsumo&8, &ffight&8, &fparkour&8, &fcorrida&8, &fspleef&8, &fsplegg&8, &fkiller&8,'
+- '  &fEventos: &7sumo&8, &ffight&8, &fparkour&8, &fcorrida&8, &fspleef&8, &fsplegg&8, &fkiller&8,'
 - '  &fdestemido&8, &fmvp&8, &ftnt-run&8, &fsniper&8, &fpaintball&8, &farqueiros&8, &fbatata-quente'
 - ''

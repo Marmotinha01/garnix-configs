@@ -323,7 +323,7 @@ messages:
   boss-spawned: '{c}&lO ZUMBI GIGANTE APARECEU. &fAtaquem.'
   # Actionbar da luta. Não aceita clique.
   # {health} vida atual · {max} vida total · {minions} mini zumbis vivos
-  boss-bar: '{c}Zumbi Gigante: &7{health}&f/&7{max}'
+  boss-bar: '{c}Zumbi Gigante: &a{health}&8/&c{max}'
   boss-survived: '&cO Zumbi Gigante sobreviveu. Ninguém venceu o evento.'
   boss-killed-unclaimed: '&fO Zumbi Gigante morreu, mas ninguém pôde reivindicar a vitória.'
 kit:

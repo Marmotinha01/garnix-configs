@@ -30,5 +30,5 @@ icon:
     - "&7Chance de invocar um espantalho que"
     - "&7colhe sozinho numa esfera ao seu redor."
     - ""
-    - "&7Nível: &f{level}&7/&f{max-level}"
-    - "&7Chance: &f{chance}%"
+    - "&fNível: &a{level}&8/&c{max-level}"
+    - "&fChance: &7{chance}%"

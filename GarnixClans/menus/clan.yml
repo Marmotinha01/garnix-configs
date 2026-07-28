@@ -34,7 +34,7 @@ clan-icon:
   - '&7seu clan.'
   - ''
   - ' &8 ▪ &fLíder: &7{leader}'
-  - ' &8 ▪ &fMembros: &7{members}&8/&7{max_members}'
+  - ' &8 ▪ &fMembros: &a{members}&8/&c{max_members}'
   - ' &8 ▪ &fOnline agora: &a{online}'
   - ' &8 ▪ &fVagas restantes: &7{slots}'
   - ''
@@ -80,7 +80,7 @@ members-icon:
   - '&7Gerencie quem faz parte'
   - '&7do seu clan.'
   - ''
-  - ' &8 ▪ &fMembros: &7{members}&8/&7{max_members}'
+  - ' &8 ▪ &fMembros: &a{members}&8/&c{max_members}'
   - ''
   - '&bClique para acessar.'
 

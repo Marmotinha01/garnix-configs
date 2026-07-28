@@ -137,7 +137,7 @@ info:
   - ''
   - ' &r{tag} &f{clan}'
   - ' &8▪ &fLíder: &7{leader}'
-  - ' &8▪ &fMembros: &7{members}&8/&7{max_members}'
+  - ' &8▪ &fMembros: &a{members}&8/&c{max_members}'
   - ' &8▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths}'
   - ' &8▪ &fAliados: &7{allies} &8| &fRivais: &7{rivals}'
   - ''

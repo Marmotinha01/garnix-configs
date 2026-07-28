@@ -12,7 +12,7 @@ increase-chance: 0.009
 
 messages:
   - "&a&lDEMOLIÇAO! &fVocê quebrou em 8 direções na mina!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&a&lDEMOLIÇAO!"

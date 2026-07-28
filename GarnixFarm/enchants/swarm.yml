@@ -29,5 +29,5 @@ icon:
     - "&7Chance de invocar um enxame que"
     - "&7dá bônus de ganhos enquanto ativo."
     - ""
-    - "&7Nível: &f{level}&7/&f{max-level}"
-    - "&7Chance: &f{chance}%"
+    - "&fNível: &a{level}&8/&c{max-level}"
+    - "&fChance: &7{chance}%"

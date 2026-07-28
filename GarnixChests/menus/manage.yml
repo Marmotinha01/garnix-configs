@@ -19,14 +19,14 @@ expand-icon:
   material: ANVIL
   display: '&aExpandir Baú'
   lore:
-  - '&7Linhas atuais: &f{rows}'
-  - '&7Próxima linha: &f{next}&7/&f{max}'
-  - '&7Custo: &f{cost} {currency}'
+  - '&fLinhas atuais: &7{rows}'
+  - '&fPróxima linha: &a{next}&8/&c{max}'
+  - '&fCusto: &7{cost} {currency}'
   - ''
   - '&aClique para expandir.'
   # Exibido quando o baú já está no tamanho máximo.
   max-lore:
-  - '&7Linhas: &f{rows}&7/&f{max}'
+  - '&fLinhas: &a{rows}&8/&c{max}'
   - ''
   - '&cTamanho máximo atingido.'
 

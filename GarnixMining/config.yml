@@ -181,7 +181,7 @@ actionbar:
   separator: ' &8■ '
   tax-display: '&fTaxa &c&l{tax}&c%'
   provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value} {currency}'
-  message: '{providers}{separator}&7Nível &a{mine_level}&7/&a{max_level}{separator}&7XP &e{mine_exp}&7/&e{mine_need_exp}'
+  message: '{providers}{separator}&7Nível &a{mine_level}&7/&a{max_level}{separator}&7XP &a{mine_exp}&8/&c{mine_need_exp}'
 
 # Per-currency entry for the {rewards} placeholder of enchant messages/titles.
 # Currency placeholders + {value}.

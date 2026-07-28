@@ -29,7 +29,7 @@ remove-stack-conversation:
   prompt:
   - ''
   - '  &aInforme quantas máquinas de &f{display} &adeseja remover.'
-  - '  &7Disponível: &f{stack}'
+  - '  &fDisponível: &7{stack}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
 
@@ -64,7 +64,7 @@ drops:
   - ''
 
 fuel:
-  applied: '&aCombustível &f{fuel} &aaplicado. &7Total: &f{liters} &7litros.'
+  applied: '&aCombustível &f{fuel} {liters} litros &aaplicado.'
   applied-infinite: '&aCombustível &f{fuel} &aaplicado.'
   removed: '&eCombustível &f{fuel} &eremovido da máquina.'
   inventory-full: '&cSeu inventário está cheio.'
@@ -74,7 +74,7 @@ fuel:
   no-fuel: '&cA máquina está sem combustível.'
   use-on-machine: '&cUse este combustível clicando em uma &fmáquina&c.'
   merge-none: '&cNão há outros combustíveis iguais para juntar.'
-  merged: '&aVocê juntou &fx{amount} &acombustíveis de &f{fuel} &aem um só. &7Total: &f{liters} &7litros.'
+  merged: '&aCombustível &f{fuel} {liters} litros &aunificado. &7(eram x{amount})'
 
 shop:
   purchase-success: '&aVocê comprou &fx{amount} &amáquina(s) de &f{display}&a.'
@@ -145,8 +145,8 @@ limit-item:
   currency-unavailable: '&cO sistema de limite está indisponível no momento.'
 
 booster:
-  applied: '&aBooster de &fDrops &a{bonus} &aativado. &7Total: &f{duration}'
-  stacked: '&aBooster de &fDrops &a{bonus} &aestendido. &7Total: &f{duration}'
+  applied: '&aBooster &fDrops {bonus} {duration} &aativado.'
+  stacked: '&aBooster &fDrops {bonus} {duration} &aestendido.'
   removed: '&eBooster removido. &7Devolvido &f{refund_duration}&7.'
   mismatch: '&cJá existe um booster ativo nesta máquina.'
   no-permission: '&cVocê não pode aplicar boosters nesta máquina.'

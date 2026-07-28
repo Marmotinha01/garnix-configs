@@ -74,7 +74,7 @@ command:
   blocked-entry:
   - ''
   - '  &f{product} &8➟ &f{player}'
-  - '  &7ID: &f{id}'
+  - '  &fID: &7{id}'
   - '  &7Bloqueada há &f{since} &7— &c{error}'
   blocked-footer:
   - ''

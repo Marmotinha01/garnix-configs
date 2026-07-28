@@ -10,7 +10,7 @@ info-icon:
   - ''
   - ' &8Estatísticas:'
   - '&8 ▪ &fNível da Vara: &a{level} '
-  - '&8 ▪ &fXP: &7{xp}&8/&c{xp_needed} '
+  - '&8 ▪ &fXP: &a{xp}&8/&c{xp_needed} '
   - '&8 ▪ &fProgresso: {level_bar} '
   - ''
   - ' &8Outras informações:'

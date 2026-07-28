@@ -26,7 +26,7 @@ skull-interval-ticks: 4
 
 messages:
   - "&8&lWITHER! &fUm Wither girou e destruiu a mina!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&8&lWITHER!"

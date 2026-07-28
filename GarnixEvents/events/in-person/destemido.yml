@@ -318,7 +318,7 @@ messages:
   boss-spawned: '{c}&lO WITHER APARECEU. &fEle chamou os servos — e há PvP liberado.'
   # Actionbar da luta. Não aceita clique.
   # {health} vida atual · {max} vida total · {minions} servos vivos
-  boss-bar: '{c}Wither: &7{health}&f/&7{max}'
+  boss-bar: '{c}Wither: &a{health}&8/&c{max}'
   boss-survived: '&cO Wither sobreviveu. Ninguém venceu o evento.'
   boss-killed-unclaimed: '&fO Wither morreu, mas ninguém pôde reivindicar a vitória.'
 kit:

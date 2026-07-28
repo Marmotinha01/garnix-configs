@@ -36,7 +36,7 @@ meteor-spawn-height: 10
 
 messages:
   - "&c&lCHUVA DE METEORO! &fO céu desabou sobre a mina!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&c&lCHUVA DE METEORO!"

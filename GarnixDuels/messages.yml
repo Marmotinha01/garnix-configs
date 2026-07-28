@@ -39,7 +39,7 @@ challenge:
   received:
   - ''
   - '&f{challenger} &7te desafiou para um duelo.'
-  - '  &7Modo: &f{mode} &8| &7Aposta: &f{bet}'
+  - '  &fModo: &7{mode} &8| &fAposta: &7{bet}'
   - '  {accept} &7ou {reject}'
   - ''
   accept-text: '&a&l[ACEITAR]'

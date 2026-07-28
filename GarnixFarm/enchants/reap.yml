@@ -21,5 +21,5 @@ icon:
     - "&7Chance de ceifar todas as"
     - "&7plantações num raio ao redor."
     - ""
-    - "&7Nível: &f{level}&7/&f{max-level}"
-    - "&7Chance: &f{chance}%"
+    - "&fNível: &a{level}&8/&c{max-level}"
+    - "&fChance: &7{chance}%"

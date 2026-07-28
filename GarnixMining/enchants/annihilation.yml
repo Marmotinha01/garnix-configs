@@ -12,7 +12,7 @@ increase-chance: 0.05
 
 messages:
   - "&a&lANIQUILAÇAO! &fVocê destruiu uma camada inteira!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&a&lANIQUILAÇAO!"

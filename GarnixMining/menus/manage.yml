@@ -47,7 +47,7 @@ max-players-icon:
   - '&7Defina o máximo de'
   - '&7jogadores na mina.'
   - ''
-  - '&f Total: &a{total}&8 ▸ &c{max}'
+  - '&fTotal: &a{total}&8/&c{max}'
   - ''
   - '&8 Opções de uso:'
   - '&fEsquerdo: &a+1'

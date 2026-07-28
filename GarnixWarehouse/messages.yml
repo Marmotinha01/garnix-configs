@@ -48,11 +48,11 @@ autosell:
   - ''
 
 booster:
-  applied: '&aBooster &f{bonus} &aativado. &7Total: &f{duration}'
-  stacked: '&aBooster &f{bonus} &aestendido. &7Total: &f{duration}'
+  applied: '&aBooster &f{bonus} {duration} &aativado.'
+  stacked: '&aBooster &f{bonus} {duration} &aestendido.'
   mismatch: '&cJá existe um booster &f{current}&c ativo. &7O &f{new} &7só pode ser aplicado depois.'
   merge-none: '&cNão há outros boosters iguais para juntar.'
-  merged: '&aVocê juntou &fx{amount} &aboosters &f{bonus} &aem um só. &7Total: &f{duration}'
+  merged: '&aBooster &f{bonus} {duration} &aunificado. &7(eram x{amount})'
   use-on-air: '&cUse este booster com o botão direito.'
   removed: '&eBooster removido. &7Devolvido &f{remaining}&7.'
   too-little-time: '&cTempo restante insuficiente para remover este booster.'

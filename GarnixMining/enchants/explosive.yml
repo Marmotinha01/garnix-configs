@@ -14,7 +14,7 @@ effect-radius: 1
 
 messages:
   - "&a&lEXPLOSIVO! &fVocê criou uma explosão na mina!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&a&lEXPLOSIVO!"

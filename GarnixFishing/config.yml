@@ -52,7 +52,7 @@ rod:
   - ''
   - ' &8Informações: '
   - ' &8▪ &fNível: &e{level}'
-  - ' &8▪ &fXP: &7{xp}&8/&c{xp_needed} {level_bar} '
+  - ' &8▪ &fXP: &a{xp}&8/&c{xp_needed} {level_bar} '
   - ' &8▪ &fSkin: {skin-display} &a+&l{skin-bonus}&a% '
   - ''
   - ' &b▎ &fEncantamentos: '

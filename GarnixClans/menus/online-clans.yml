@@ -23,7 +23,7 @@ clan-icon:
   display: '&r{tag} &f{clan}'
   lore:
   - ' &8 ▪ &fLíder: &7{leader}'
-  - ' &8 ▪ &fOnline agora: &a{online}&8/&7{members}'
+  - ' &8 ▪ &fOnline agora: &a{online}&8/&c{members}'
   - ' &8 ▪ &fAbates: &a{kills} &8| &fMortes: &c{deaths}'
   - ' &8 ▪ &fKDR: &a{kdr}'
 

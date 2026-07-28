@@ -29,7 +29,7 @@ max-simultaneous: 3
 
 messages:
   - "&2&lCOBRA! &fUma serpente de slimes rastejou pela mina!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&2&lCOBRA!"

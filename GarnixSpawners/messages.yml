@@ -34,7 +34,7 @@ remove-stack-conversation:
   prompt:
   - ''
   - '  &aInforme quantos spawners de &f{display} &adeseja remover.'
-  - '  &7Disponível: &f{stack}'
+  - '  &fDisponível: &7{stack}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
 
@@ -83,13 +83,13 @@ heads-conversation:
   collect-prompt:
   - ''
   - '  &aInforme quantas heads de &f{display} &adeseja coletar.'
-  - '  &7Disponível: &f{available}'
+  - '  &fDisponível: &7{available}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   withdraw-prompt:
   - ''
   - '  &aInforme quantas heads de &f{display} &adeseja retirar.'
-  - '  &7Disponível: &f{available}'
+  - '  &fDisponível: &7{available}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
 
@@ -204,8 +204,8 @@ limit-item:
 booster:
   type-drops: Drops
   type-heads: Heads
-  applied: '&aBooster de &f{type} &a{bonus} &aativado. &7Total: &f{duration}'
-  stacked: '&aBooster de &f{type} &a{bonus} &aestendido. &7Total: &f{duration}'
+  applied: '&aBooster &f{type} {bonus} {duration} &aativado.'
+  stacked: '&aBooster &f{type} {bonus} {duration} &aestendido.'
   removed: '&eBooster removido. &7Devolvido &f{refund_duration}&7.'
   mismatch: '&cJá existe um booster ativo neste spawner.'
   no-permission: '&cVocê não pode aplicar boosters neste spawner.'

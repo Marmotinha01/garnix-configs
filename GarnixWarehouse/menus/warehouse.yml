@@ -11,7 +11,7 @@ info-icon:
   material: PAPER
   display: '&aLimite do Armazém'
   lore:
-  - '&fAtual: &7{total}&8/&c{limit}'
+  - '&fAtual: &a{total}&8/&c{limit}'
 
 booster-active-icon:
   slot: 32

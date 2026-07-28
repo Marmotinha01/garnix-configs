@@ -14,7 +14,7 @@ effect-radius: 3
 
 messages:
   - "&a&lCOLAPSO! &fVocê colapsou uma esfera na mina!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&a&lCOLAPSO!"

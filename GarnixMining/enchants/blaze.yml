@@ -25,7 +25,7 @@ fireball-interval-ticks: 6
 
 messages:
   - "&6&lBLAZE! &fUma onda de blazes incendiou a mina!"
-  - "&7Blocos quebrados: &f{blocks}"
+  - "&fBlocos quebrados: &7{blocks}"
   - "&7Recompensas: {rewards}"
 
 title: "&6&lBLAZE!"

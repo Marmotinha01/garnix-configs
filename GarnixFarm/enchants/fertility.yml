@@ -16,4 +16,4 @@ icon:
     - "&7Aumenta o &fmultiplicador de sementes"
     - "&7ganho a cada colheita."
     - ""
-    - "&7Nível: &f{level}&7/&f{max-level}"
+    - "&fNível: &a{level}&8/&c{max-level}"
