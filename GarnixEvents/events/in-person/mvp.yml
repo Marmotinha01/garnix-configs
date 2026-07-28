@@ -206,7 +206,7 @@ allow-inventory-move: true
 cleanup-radius: 60.0
 
 rewards:
-- eco give {player} 10000
+- cash add {player} 10000
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:

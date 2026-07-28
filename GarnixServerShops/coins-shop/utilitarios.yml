@@ -69,7 +69,7 @@ products:
       material: SIGN
       data: 0
       amount: 16
-  lava-bucket:
+  water-bucket:
     amount: 16
     price: 5000
     item:
@@ -89,7 +89,7 @@ products:
     item:
       material: BEACON
       data: 0
-      amount: 16
+      amount: 1
   iron-block:
     amount: 1
     price: 500000

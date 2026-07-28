@@ -95,7 +95,7 @@ rewards:
     rare: true
     xp: 50
     type: COMMAND
-    command: crate givekey {player} fishing {amount}
+    command: crates givekey pesca {player} {amount}
     amount: 1
     currency: '100'
     display: '&6&lTesouro do Mar'

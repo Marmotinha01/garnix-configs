@@ -49,7 +49,7 @@ rewards:
     type: CURRENCY
     chance: 25.0
     display: '&bGemas'
-    currency-id: gems
+    currency-id: gemas
     amount: 10
     icon:
       material: EMERALD
@@ -68,12 +68,12 @@ rewards:
   key-reward:
     type: COMMAND_ITEM
     chance: 10.0
-    display: '&dChave Lendária'
-    command: 'crate givekey {player} lendaria {amount}'
+    display: '&4Chave Bosses'
+    command: 'crates givekey bosses {player} {amount}'
     amount: 1
     icon:
       material: TRIPWIRE_HOOK
-      display: '&d&lChave Lendária'
+      display: '&4&lChave Bosses'
       glow: true
 
   diamond-reward:

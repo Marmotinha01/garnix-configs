@@ -53,7 +53,7 @@ under-material: TNT
 vanish-delay-ticks: 5
 
 rewards:
-- eco give {player} 5000
+- cash add {player} 5000
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:

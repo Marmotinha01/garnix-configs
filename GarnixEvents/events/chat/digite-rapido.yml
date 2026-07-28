@@ -105,7 +105,7 @@ frases:
   - a vaca malhada foi molhada por outra vaca molhada
 
 rewards:
-- eco give {player} 5000
+- cash add {player} 5000
 
 # ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
 #

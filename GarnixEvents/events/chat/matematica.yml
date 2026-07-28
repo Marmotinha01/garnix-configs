@@ -42,7 +42,7 @@ math:
   - x
 
 rewards:
-- eco give {player} 5000
+- cash add {player} 5000
 
 # ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
 #

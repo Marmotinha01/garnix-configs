@@ -129,7 +129,7 @@ palavras:
   - vitória|vitoria>2
 
 rewards:
-- eco give {player} 5000
+- cash add {player} 5000
 
 # ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
 #

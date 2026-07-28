@@ -135,7 +135,7 @@ cleanup-radius: 80.0
 
 # Executados no console para CADA jogador do time vencedor.
 rewards:
-- eco give {player} 5000
+- cash add {player} 5000
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:
@@ -274,7 +274,7 @@ messages:
   # As recompensas vão para o time todo; a tag vai só para o destaque.
   team-won: |2
 
-    {c}Evento {c}&lArqueiros&7, {c}temos um time vencedor!
-    &7O time {team} &7venceu a batalha.
-    &7Destaque: &f{player}&7 com &f{kills}&7 eliminação(ões).
-    &7Prêmio: {c}5K de Cash &7para todo o time
+      &8▎ {c}Evento {c}&lArqueiros&7, {c}temos um time vencedor!
+      &8▎ &7O time {team} &7venceu a batalha.
+      &8▎ &7Destaque: &f{player}&7 com &f{kills}&7 eliminação(ões).
+      &8▎ &7Prêmio: {c}5K de Cash &7para todo o time

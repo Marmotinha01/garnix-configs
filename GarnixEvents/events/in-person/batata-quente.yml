@@ -112,7 +112,7 @@ kit:
 
 # Comandos executados no console para o vencedor. {player} = nome do vencedor.
 rewards:
-- eco give {player} 5000
+- cash add {player} 5000
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:

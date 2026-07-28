@@ -1,6 +1,6 @@
 required-time: '30d'
 
-display: '&a30 Mês Online'
+display: '&a1 Mês Online'
 
 reward-icon:
   material: WATCH
@@ -28,3 +28,11 @@ rewards:
       display: '&b&lDiamantes'
       lore:
         - '&7Recompensa por tempo online.'
+
+  key:
+    type: COMMAND
+    command: 'crates givekey bosses {player} {amount}'
+    amount: 1
+    icon:
+      material: TRIPWIRE_HOOK
+      display: '&4&lCHAVE BOSSES'
