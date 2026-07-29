@@ -6,11 +6,11 @@
 #
 # Locais necessários: lobby, join, exit. O cabin (camarote) é opcional.
 # Áreas necessárias: UMA por camada (por isso o nome é obrigatório aqui)
-#   /eventos wand              » pega o graveto (use 'circulo' se a arena for redonda)
+#   /eventos wand              - pega o graveto (use 'circulo' se a arena for redonda)
 #   (selecione a camada de cima)
 #   /tnt-run setarea camada1
 #   (selecione a próxima camada, mais abaixo)
-#   /tnt-run setarea camada2    » e assim por diante
+#   /tnt-run setarea camada2    - e assim por diante
 #
 # Selecione só a SUPERFÍCIE de cada camada: a TNT de baixo é gerada pelo plugin.
 #
@@ -35,9 +35,9 @@ max-players: 0
 
 # Cada camada é montada com DOIS blocos de altura:
 #
-#   floor-material  » a superfície, que é a área que você selecionou. É nela que o jogador
+#   floor-material  - a superfície, que é a área que você selecionou. É nela que o jogador
 #                     pisa e é ela que ele vê sumir.
-#   under-material  » a carga, gerada automaticamente UM BLOCO ABAIXO de cada bloco da
+#   under-material  - a carga, gerada automaticamente UM BLOCO ABAIXO de cada bloco da
 #                     área. Deixe vazio ('') para camada de um bloco só.
 #
 # Os dois somem juntos: o passo leva a superfície e a carga que a segura, então o buraco

@@ -98,7 +98,7 @@ cant-afford:
   - '&8 ▪ &fNível: &7{current} &8─ &a{target} '
   - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
-  - ' &8 ▾ &cSaldo insuficiente. '
+  - '&8 ▾ &cSaldo insuficiente. '
   - ''
 
 # ── Excede o máximo ───────────────────────────────────────────────
@@ -110,7 +110,7 @@ option-exceeded:
   - '&7Esta quantidade ultrapassa'
   - '&7o nível máximo permitido.'
   - ''
-  - ' &8 ▾ &7Use &2Evoluir ao Máximo&7. '
+  - '&8 ▾ &cUse &2Evoluir ao Máximo&c. '
   - ''
 
 titles-enabled:

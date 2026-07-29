@@ -42,6 +42,6 @@ enchant-lore:
 # Anexado ao ícone de um encantamento já no nível máximo.
 maxed-enchant-lore:
 - ''
-- ' &8 ▾ &cNível máximo atingido.'
+- '&8 ▾ &cNível máximo atingido.'
 - ''
 - '&aClique para gerenciar.'

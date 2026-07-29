@@ -32,7 +32,7 @@ skins:
       display: '&eSkin de Madeira'
       lore:
       - ''
-      - ' &8 ▾ &cSem bônus. '
+      - '&8 ▾ &cSem bônus. '
       flags:
       - HIDE_ATTRIBUTES
 

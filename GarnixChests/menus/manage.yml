@@ -35,7 +35,7 @@ expand-icon:
   - ''
   - '&8 ▪ &fLinhas: &a{rows}&8/&c{max} '
   - ''
-  - ' &8 ▾ &cTamanho máximo atingido. '
+  - '&8 ▾ &cTamanho máximo atingido. '
   - ''
 
 change-icon:

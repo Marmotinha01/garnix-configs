@@ -7,9 +7,9 @@
 # É um evento de CHAT: não tem arena, não precisa de setup de local. Roda em
 # paralelo a um evento de arena e não conta no ranking (só na estatística do jogador).
 #
-#   /quiz iniciar   » abre o evento (staff)
-#   /quiz cancelar  » encerra sem vencedor (staff)
-#   /quiz <resposta> » palpite de um jogador
+#   /quiz iniciar   - abre o evento (staff)
+#   /quiz cancelar  - encerra sem vencedor (staff)
+#   /quiz <resposta> - palpite de um jogador
 
 display: '&b&lQUIZ'
 

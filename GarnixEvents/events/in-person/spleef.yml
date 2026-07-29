@@ -5,9 +5,9 @@
 #
 # Locais necessários: lobby, join, exit. O cabin (camarote) é opcional.
 # Área necessária: a camada do piso
-#   /eventos wand           » pega o graveto
+#   /eventos wand           - pega o graveto
 #   (clique esquerdo/direito nos dois cantos do piso, na MESMA altura)
-#   /spleef setarea         » salva a seleção
+#   /spleef setarea         - salva a seleção
 
 display: '&bSpleef'
 

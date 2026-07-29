@@ -4,9 +4,9 @@
 # O primeiro que digitar a palavra inteira com /acerte-palavra <palavra> vence.
 # Se ninguém acertar dentro da duração, termina sem vencedor e revela a palavra.
 #
-#   /acerte-palavra iniciar  » abre o evento (staff)
-#   /acerte-palavra cancelar » encerra sem vencedor (staff)
-#   /acerte-palavra <palavra> » palpite de um jogador
+#   /acerte-palavra iniciar  - abre o evento (staff)
+#   /acerte-palavra cancelar - encerra sem vencedor (staff)
+#   /acerte-palavra <palavra> - palpite de um jogador
 
 display: '&3&lACERTE A PALAVRA'
 

@@ -38,10 +38,10 @@ filter-icon:
   - '&aClique para alternar.'
 
 filters:
-  tax-display: Menores Taxas
-  level-display: Nível da Mina
-  line: ' &8 ► &7{display} '
-  line-selected: ' &a ► &f{display} '
+  tax-display: 'Menores Taxas '
+  level-display: 'Nível da Mina '
+  line: '&8 ▪ &7{display} '
+  line-selected: '&a ▪ &f{display} '
 
 user-icon:
   display: '&aMina de {player}'

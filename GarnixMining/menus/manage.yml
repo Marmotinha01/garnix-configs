@@ -79,7 +79,7 @@ collect-tax-icon:
   - '{currency_lines}'
   - ''
   - '&aClique para recolher.'
-  currency-format: ' &8 ▪ {symbol_color}{symbol}{primary_color}{value} {currency} '
+  currency-format: '&8 ▪ {symbol_color}{symbol}{primary_color}{value} {currency} '
 
 collect-tax-empty-icon:
   slot: 14
@@ -89,7 +89,7 @@ collect-tax-empty-icon:
   - '&7Recolha as taxas acumuladas'
   - '&7da mineração dos visitantes.'
   - ''
-  - ' &8 ▾ &cSem taxas acumuladas. '
+  - '&8 ▾ &cSem taxas acumuladas. '
   - ''
 
 # Visitor slots / friends. One icon per slot; 'slots' lists the inventory

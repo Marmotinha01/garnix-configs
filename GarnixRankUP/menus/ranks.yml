@@ -9,9 +9,9 @@ shape:
 - XXXXXXXXX
 
 # Currency cost line. Placeholders: {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
-cost-format: ' &8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency} '
+cost-format: '&8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency} '
 # Head cost line. Placeholders: {amount} {display}
-cost-format-head: ' &8 ▪ &f{amount} &7{display} '
+cost-format-head: '&8 ▪ &f{amount} &7{display} '
 
 empty-icon:
   slot: 22
@@ -78,7 +78,7 @@ locked-icon:
   - '&7Este rank ainda está'
   - '&7fora do seu alcance.'
   - ''
-  - ' &8 ▾ &cLibere o rank anterior. '
+  - '&8 ▾ &cLibere o rank anterior. '
   - ''
 
 unreleased-icon:
@@ -90,5 +90,5 @@ unreleased-icon:
   - ''
   - '&8 ▪ &fLibera em: &7{date} '
   - ''
-  - ' &8 ▾ &cAinda não foi liberado. '
+  - '&8 ▾ &cAinda não foi liberado. '
   - ''

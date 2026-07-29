@@ -62,5 +62,5 @@ action-own: '&cEste desafio é seu.'
 # só sobre o lucro — a sua aposta volta inteira de qualquer jeito. {net} é o
 # lucro líquido e {tax} é a alíquota. Nos desafios dos outros mostra o que VOCÊ
 # pagaria ao aceitar; no seu, a alíquota travada quando você criou.
-tax-free: ' &8 ▪ &fTaxa: &aIsento '
-tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
+tax-free: '&8 ▪ &fTaxa: &aIsento '
+tax-charged: '&8 ▪ &fTaxa: &c&l{tax}&c% '

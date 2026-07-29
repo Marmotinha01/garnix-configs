@@ -109,7 +109,7 @@ store:
   announce-cooldown: '&cAguarde &f{time} &cpara anunciar novamente.'
   announcement:
   - ''
-  - '  &e&lLOJAS &8» &7A loja de &f{player} &7está vendendo itens.'
+  - '  &e&lLOJAS &8▶ &7A loja de &f{player} &7está vendendo itens.'
   - '  &7Clique {click} &7para visitar a loja.'
   - ''
   announce-click-text: '&a&lAQUI'

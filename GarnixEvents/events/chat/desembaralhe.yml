@@ -4,9 +4,9 @@
 # correta com /desembaralhe <palavra> vence. Sem acerto na duração, termina sem
 # vencedor e revela a resposta.
 #
-#   /desembaralhe iniciar   » abre o evento (staff)
-#   /desembaralhe cancelar  » encerra sem vencedor (staff)
-#   /desembaralhe <palavra> » palpite de um jogador
+#   /desembaralhe iniciar   - abre o evento (staff)
+#   /desembaralhe cancelar  - encerra sem vencedor (staff)
+#   /desembaralhe <palavra> - palpite de um jogador
 
 display: '&e&lDESEMBARALHE'
 

@@ -96,13 +96,13 @@ setup:
 wand:
   given-cuboid:
   - ''
-  - '  &a&lGRAVETO &7» &fModo Cuboide'
+  - '  &a&lGRAVETO &7▶ &fModo Cuboide'
   - '  &7Clique &fesquerdo &7para o primeiro ponto.'
   - '  &7Clique &fdireito &7para o segundo ponto.'
   - ''
   given-poly:
   - ''
-  - '  &a&lGRAVETO &7» &fModo Polígono'
+  - '  &a&lGRAVETO &7▶ &fModo Polígono'
   - '  &7Clique &fesquerdo &7para o primeiro ponto.'
   - '  &7Cada clique &fdireito &7adiciona mais um ponto.'
   - '  &8&oO topo e a base seguem o ponto mais alto e mais baixo clicados.'
@@ -112,7 +112,7 @@ wand:
   # O que manda são os extremos: clique no bloco MAIS DE FORA de cada lado.
   given-circle:
   - ''
-  - '  &a&lGRAVETO &7» &fModo Círculo'
+  - '  &a&lGRAVETO &7▶ &fModo Círculo'
   - '  &7Clique &fesquerdo &7para o primeiro ponto da borda.'
   - '  &7Cada clique &fdireito &7adiciona mais um ponto da borda.'
   - '  &7Clique os &f4 extremos &7(N, S, L, O) — as &f4 diagonais &7podem entrar junto.'

@@ -4,8 +4,8 @@
 # zerado pelo plugin), e quem cair na água perde a luta.
 #
 # Locais necessários: lobby, join, exit, left, right. O cabin (camarote) é opcional.
-#   /sumo setloc lobby|join|exit|cabin  » espera, bancada, saída e camarote (opcional)
-#   /sumo setloc left|right       » os dois cantos do ringue
+#   /sumo setloc lobby|join|exit|cabin  - espera, bancada, saída e camarote (opcional)
+#   /sumo setloc left|right       - os dois cantos do ringue
 # Os lutadores esperam a vez no 'join'; só a dupla sorteada vai para o ringue.
 
 display: '&bSumô'

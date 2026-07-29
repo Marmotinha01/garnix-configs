@@ -9,8 +9,8 @@
 #
 # Locais necessários: lobby, exit, blue, red — este evento não tem 'join'. O cabin
 # (camarote) é opcional.
-#   /arqueiros setloc lobby|exit|cabin » sala de espera, saída e camarote (opcional)
-#   /arqueiros setloc blue|red         » onde cada time nasce ao começar
+#   /arqueiros setloc lobby|exit|cabin - sala de espera, saída e camarote (opcional)
+#   /arqueiros setloc blue|red         - onde cada time nasce ao começar
 #
 # Este evento NÃO tem /arqueiros setkit: cada time tem o seu kit, configurado abaixo. Por isso o kit
 # é sempre emprestado — entra-se com inventário e armadura vazios, o golpe letal vira eliminação e

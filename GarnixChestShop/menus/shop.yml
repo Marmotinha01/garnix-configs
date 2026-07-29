@@ -39,12 +39,12 @@ item-preview-icon:
 # -free: moeda sem taxa. -noprice: tem taxa mas o preço ainda é Grátis (só a alíquota).
 # -charged: tem taxa e preço, mostra o líquido. {tax} = alíquota, {net} = líquido.
 # Deixe qualquer um em branco ('') para OCULTAR a linha (ela some, sem deixar espaço).
-buy-tax-free: ' &8 ▪ &fTaxa: &aIsento '
-buy-tax-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
-buy-tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7dono recebe {currency_prefix}{net}&8) '
-sell-tax-free: ' &8 ▪ &fTaxa: &aIsento '
-sell-tax-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
-sell-tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7você recebe {currency_prefix}{net}&8) '
+buy-tax-free: '&8 ▪ &fTaxa: &aIsento '
+buy-tax-noprice: '&8 ▪ &fTaxa: &c&l{tax}&c% '
+buy-tax-charged: '&8 ▪ &fTaxa: &c&l{tax}&c% &8(&7dono recebe {currency_prefix}{net}&8) '
+sell-tax-free: '&8 ▪ &fTaxa: &aIsento '
+sell-tax-noprice: '&8 ▪ &fTaxa: &c&l{tax}&c% '
+sell-tax-charged: '&8 ▪ &fTaxa: &c&l{tax}&c% &8(&7você recebe {currency_prefix}{net}&8) '
 
 # Texto no lugar do valor+moeda quando o preço é 0 (loja Grátis).
 buy-free-display: '&aGrátis'
@@ -73,7 +73,7 @@ buy-icon:
   - '&7Leve o item da loja'
   - '&7pagando o preço pedido.'
   - ''
-  - ' &8 ▾ &cEsta loja não vende itens. '
+  - '&8 ▾ &cEsta loja não vende itens. '
   - ''
 
 sell-icon:
@@ -91,5 +91,5 @@ sell-icon:
   - '&7Passe o seu item para a'
   - '&7loja e receba por ele.'
   - ''
-  - ' &8 ▾ &cEsta loja não compra itens. '
+  - '&8 ▾ &cEsta loja não compra itens. '
   - ''

@@ -11,7 +11,7 @@ command:
   - '  &c/antinuker debug <sistema> <player>'
   - '  &c/antinuker menu'
   - ''
-  - '  &fMonitores: &7{monitors}'
+  - '  &8▎ &fMonitores: &7{monitors}'
   - ''
   
   only-players: '&cApenas jogadores podem usar este comando.'
@@ -34,31 +34,39 @@ command:
   info:
     # Placeholders: {player} {monitor} {strikes} {peak_bps}
     header:
-    - '&8&m----------------------------------'
-    - '  &4&lANTI-NUKER &7- &e{player} &7@ &e{monitor}'
-    - '  &7Strikes: &c{strikes} &8| &7Maior BPS: &4{peak_bps}'
-    no-evidence: '  &8(sem evidências recentes)'
-    evidence-title: '  &7Evidências (mais recentes por último):'
+    - ''
+    - '  &4&lANTI-NUKER &8▶ &fRelatório de &c{player}'
+    - ''
+    - '  &8▎ &fMonitor: &7{monitor}'
+    - '  &8▎ &fStrikes: &c{strikes} &8▪ &fPico BPS: &c{peak_bps}'
+    - ''
+    no-evidence: '  &8▎ &7Nenhuma evidência recente.'
+    # Legenda das colunas da evidence-line. Os rótulos vivem aqui, uma vez só: os campos
+    # são sempre os mesmos, na mesma ordem, e repeti-los em cada linha estourava a
+    # largura do chat. A ordem cronológica se lê pelo horário de cada linha.
+    evidence-title: '  &fEvidências &7bps&8/&7sust &8▪ &7cv &8▪ &7área &8▪ &7local'
     # Placeholders: {time} {bps} {sustained} {cv} {span} {location} {reasons}
-    evidence-line: '  &8{time} &7bps &c{bps} &7sust &c{sustained} &7cv &c{cv} &7span &c{span} &7loc &c{location} &8» &e{reasons}'
-    footer: '&8&m----------------------------------'
+    evidence-line: '  &8▎ &7{time} &8▶ &c{bps}&8/&c{sustained} &8▪ &c{cv} &8▪ &c{span} &8▪ &7{location} &8▶ &e{reasons}'
+    # Fecha o bloco com a linha em branco do padrão (era a barra de traços).
+    footer: ''
     # SimpleDateFormat usado no horário de cada evidência (não leva cores).
     time-format: HH:mm:ss
-  
+
   stats:
     # Placeholders: {monitor} {state} {mode} {total} {hour} {last}
+    # {state} e {last} já chegam colorizados pelas chaves abaixo — não prefixe com &7.
     lines:
-    - '&8&m----------------------------------'
-    - '  &4&lANTI-NUKER &7- stats &e{monitor}'
-    - '  &7Estado: {state} &8| &7Modo: &e{mode}'
-    - '  &7Strikes (total): &c{total}'
-    - '  &7Strikes (última hora): &c{hour}'
-    - '  &7Último strike: {last}'
-    - '&8&m----------------------------------'
+    - ''
+    - '  &4&lANTI-NUKER &8▶ &fMonitor &c{monitor}'
+    - ''
+    - '  &8▎ &fEstado: {state} &8▪ &fModo: &7{mode}'
+    - '  &8▎ &fStrikes: &c{total} &8▪ &fna última hora: &c{hour}'
+    - '  &8▎ &fÚltimo strike: {last}'
+    - ''
     state-enabled: '&aativo'
     state-disabled: '&cdesativado'
     last-never: '&8nunca'
-    last-ago: '&f{seconds}s atrás' # {seconds}
+    last-ago: '&7{seconds}s atrás' # {seconds}
   
   # Menu de suspeitos (/antinuker menu). Placeholders: {monitor}
   # (o clique roda o inspect-command do perfil; o próprio mining/farm dá o feedback)

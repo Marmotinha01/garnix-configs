@@ -15,7 +15,7 @@ player-head:
   - '&7no servidor agora.'
   - ''
   - ' &8VIPs ativos:'
-  lore-line: ' &8 ▪ {vip} &8- &e{remaining} '
+  lore-line: '&8 ▪ {vip} &8- &e{remaining} '
 
 empty-icon:
   slot: 22

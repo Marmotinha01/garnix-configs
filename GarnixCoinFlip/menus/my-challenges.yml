@@ -31,5 +31,5 @@ challenge-lore:
 
 # A linha {tax_info}. A alíquota é a travada quando você criou o desafio, não a
 # que valeria hoje. A taxa incide só sobre o lucro.
-tax-free: ' &8 ▪ &fTaxa: &aIsento '
-tax-charged: ' &8 ▪ &fTaxa: &c{tax}% &7(lucra {currency_prefix}{net}&7) '
+tax-free: '&8 ▪ &fTaxa: &aIsento '
+tax-charged: '&8 ▪ &fTaxa: &c{tax}% &7(lucra {currency_prefix}{net}&7) '

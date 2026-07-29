@@ -7,9 +7,9 @@
 # ATENÇÃO: aqui 'accent-sensitive' é TRUE — o acento é justamente o que se avalia,
 # então "familia" NÃO conta como "família".
 #
-#   /corrija-acento iniciar  » abre o evento (staff)  (também /acento)
-#   /corrija-acento cancelar » encerra sem vencedor (staff)
-#   /corrija-acento <palavra> » palpite de um jogador
+#   /corrija-acento iniciar  - abre o evento (staff)  (também /acento)
+#   /corrija-acento cancelar - encerra sem vencedor (staff)
+#   /corrija-acento <palavra> - palpite de um jogador
 
 display: '&6&lCORRIJA O ACENTO'
 

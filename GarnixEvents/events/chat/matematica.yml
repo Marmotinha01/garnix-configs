@@ -7,9 +7,9 @@
 # Toda conta tem resultado INTEIRO: a subtração nunca fica negativa e a divisão é
 # gerada a partir de um quociente inteiro (nunca divide por zero).
 #
-#   /matematica iniciar     » abre o evento (staff)  (também /mat, /conta)
-#   /matematica cancelar    » encerra sem vencedor (staff)
-#   /matematica <resultado> » palpite de um jogador
+#   /matematica iniciar     - abre o evento (staff)  (também /mat, /conta)
+#   /matematica cancelar    - encerra sem vencedor (staff)
+#   /matematica <resultado> - palpite de um jogador
 
 display: '&a&lMATEMATICA'
 

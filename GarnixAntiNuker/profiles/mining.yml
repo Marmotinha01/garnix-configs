@@ -184,25 +184,26 @@ actions:
 # e clicar executa o `inspect-command` lá de cima.
 # Deixe vazio ('') para desligar o alerta em jogo — o log no console, o webhook
 # e as punições continuam funcionando normalmente.
-alert-line: '&4[AntiNuker] &e{player} &7detectado em &eMineração &8» &7vl&8: &c{strikes} &8| &7bps&8: &c{bps} &8| &7ping&8: &c{ping}ms'
+alert-line: '&4[AntiNuker] &e{player} &7detectado em &eMineração &8| &7vl&8: &c{strikes} &8| &7bps&8: &c{bps} &8| &7ping&8: &c{ping}ms'
 
 # Detalhes mostrados ao passar o mouse na linha acima.
 alert-hover:
-- '&8» &7Suspeito &8- &e{player}'
-- '&8» &7Cliente &8- &f{brand} &7({version})'
-- '&8» &7Detecção &8- &f{reasons}'
-- '&8» &7Ocorrência &8- &f{strikes}ª'
-- '&8» &7BPS &8- &f{bps} &8(&7pico &f{peak_bps}&8)'
-- '&8» &7Sustentado &8- &f{sustained}'
-- '&8» &7Ritmo (cv) &8- &f{cv}'
-- '&8» &7Área (span) &8- &f{span}'
-- '&8» &7Local &8- &f{location}'
-- '&8» &7Latência &8- &f{ping}ms'
-- '&8» &7Servidor &8- &fTPS {tps}'
 - ''
-- '&c[!] Pode ser um falso positivo.'
+- '&8▪ &fSuspeito: &c{player} '
+- '&8▪ &fCliente: &7{brand} &e({version}) '
+- '&8▪ &fDetecção: &b{reasons} '
+- '&8▪ &fOcorrência: &c{strikes}ª '
+- '&8▪ &fBPS: &f{bps} &8(&7pico &c{peak_bps}&8) '
+- '&8▪ &fSustentado: &c{sustained} '
+- '&8▪ &fRitmo (cv): &c{cv} '
+- '&8▪ &fÁrea (span): &c{span} '
+- '&8▪ &fLocal: &e{location} '
+- '&8▪ &fLatência: &7{ping}ms '
+- '&8▪ &fTPS: &7{tps} '
 - ''
-- '&8» &eClique para inspecionar &b{player}&e.'
+- ' &c[!] Pode ser um falso positivo. '
+- ''
+- '&eClique para inspecionar &b{player}&e.'
 
 # Webhook do Discord para os alertas de anti-nuker.
 # Qualquer propriedade abaixo pode ser removida para omitir aquele campo.

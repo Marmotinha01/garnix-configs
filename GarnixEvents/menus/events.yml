@@ -23,10 +23,10 @@ stats-icon:
   - ''
 
 stats:
-  line: ' &8 ▪ &f{event}: &a{wins}x '
+  line: '&8 ▪ &f{event}: &a{wins}x '
   # Só aparece se 'lore-empty' for apagada — aí o {events} volta a ser usado
   # mesmo com o jogador zerado.
-  none: ' &8 ▾ &cNenhuma vitória ainda. '
+  none: '&8 ▾ &cNenhuma vitória ainda. '
 
 # Ícone só de leitura, no meio do menu: não tem clique nenhum e não sai do lugar.
 # O plugin não agenda evento nenhum — quem escreve o cronograma é você, aqui nas

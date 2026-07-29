@@ -6,11 +6,11 @@
 # passo que sairia do bloco é recusado até o VALENDO.
 #
 # Locais necessários: lobby, join, exit e ao menos uma chegada. O cabin é opcional.
-#   /parkour setloc lobby|join|exit|cabin  » espera, largada, saída e camarote (opcional)
-#   /parkour addsign                 » arma o modo; clique na placa para adicioná-la
-#   /parkour delsign <numero>        » remove uma das placas
-#   /parkour addplate                » a placa de pressão em que você está vira chegada
-#   /parkour delplate <numero>       » remove uma das placas de pressão de chegada
+#   /parkour setloc lobby|join|exit|cabin  - espera, largada, saída e camarote (opcional)
+#   /parkour addsign                 - arma o modo; clique na placa para adicioná-la
+#   /parkour delsign <numero>        - remove uma das placas
+#   /parkour addplate                - a placa de pressão em que você está vira chegada
+#   /parkour delplate <numero>       - remove uma das placas de pressão de chegada
 #
 # A chegada pode ser PLACA (clicar nela) ou PLACA DE PRESSÃO (pisar nela), e a arena
 # pode ter as duas: vale a que o corredor alcançar primeiro. Pode haver várias de cada
@@ -25,8 +25,8 @@
 # Cada checkpoint é uma PLACA DE PRESSÃO do percurso, pega ao pisar nela.
 #   1. coloque a placa de pressão onde quiser o checkpoint
 #   2. pise nela
-#   3. /parkour addcheckpoint        » registra a placa em que você está
-#   /parkour delcheckpoint <n>       » remove o checkpoint número n
+#   3. /parkour addcheckpoint        - registra a placa em que você está
+#   /parkour delcheckpoint <n>       - remove o checkpoint número n
 # Adicione-os na ORDEM do percurso: o jogador só avança de checkpoint, nunca volta,
 # então o percurso pode dobrar sobre si mesmo sem ninguém perder terreno.
 

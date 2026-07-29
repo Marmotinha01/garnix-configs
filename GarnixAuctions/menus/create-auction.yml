@@ -67,8 +67,8 @@ confirm-icon:
 # venda — a alíquota é travada neste clique. O vencedor sempre paga o lance
 # cheio; a taxa sai da parte do leiloeiro. {net} é o líquido sobre o lance
 # inicial (o lance final ainda não existe) e {tax} é a alíquota.
-tax-free: ' &8 ▪ &fTaxa: &aIsento '
-tax-charged: ' &8 ▪ &fTaxa: &c{tax}% '
+tax-free: '&8 ▪ &fTaxa: &aIsento '
+tax-charged: '&8 ▪ &fTaxa: &c{tax}% '
 
 no-bid-icon:
   slot: 50

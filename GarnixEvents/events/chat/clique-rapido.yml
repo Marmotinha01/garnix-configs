@@ -7,8 +7,8 @@
 # O X verde carrega um token secreto sorteado a cada rodada, então não dá para
 # "adivinhar" o comando: só clicando.
 #
-#   /clique-rapido iniciar  » abre o evento (staff)  (também /clique)
-#   /clique-rapido cancelar » encerra sem vencedor (staff)
+#   /clique-rapido iniciar  - abre o evento (staff)  (também /clique)
+#   /clique-rapido cancelar - encerra sem vencedor (staff)
 
 display: '&2&lCLIQUE RAPIDO'
 

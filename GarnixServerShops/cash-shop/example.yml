@@ -32,7 +32,7 @@ icon:
 # Placeholders: {player} {item} {amount} + placeholders de moeda.
 broadcast-message:
   - ''
-  - ' &6&lCASH SHOP &8» &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
+  - ' &6&lCASH SHOP &8- &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
   - ''
 
 # Em categorias fixas, todo produto declara um 'slot'.

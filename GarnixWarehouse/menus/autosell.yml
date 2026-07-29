@@ -68,7 +68,7 @@ upgrade-icon:
   - ''
   - '&8 ▪ &fPróxima venda: &7{remaining}s '
   - ''
-  - ' &8 ▾ &cSaldo insuficiente. '
+  - '&8 ▾ &cSaldo insuficiente. '
   - ''
 
 upgrade-max-icon:
@@ -82,7 +82,7 @@ upgrade-max-icon:
   - '&8 ▪ &fPróxima venda: &e{remaining}s '
   - '&8 ▪ &fTempo entre vendas: &a{interval}s '
   - ''
-  - ' &8 ▾ &cEvolução máxima atingida. '
+  - '&8 ▾ &cEvolução máxima atingida. '
   - ''
 
 back-icon:

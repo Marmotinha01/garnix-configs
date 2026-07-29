@@ -26,7 +26,7 @@ sell-icon:
   - '&7Venda de uma vez tudo'
   - '&7que está no armazém.'
   - ''
-  - ' &8 ▾ &cSem estoque para vender. '
+  - '&8 ▾ &cSem estoque para vender. '
   - ''
 
 sell-disabled-icon:
@@ -37,7 +37,7 @@ sell-disabled-icon:
   - '&7Venda de uma vez tudo'
   - '&7que está no armazém.'
   - ''
-  - ' &8 ▾ &cVocê não tem permissão. '
+  - '&8 ▾ &cVocê não tem permissão. '
   - ''
 
 collect-icon:
@@ -58,7 +58,7 @@ collect-disabled-icon:
   - '&7Tire os cactos do armazém'
   - '&7e leve no inventário.'
   - ''
-  - ' &8 ▾ &cVocê não tem permissão. '
+  - '&8 ▾ &cVocê não tem permissão. '
   - ''
 
 back-icon:

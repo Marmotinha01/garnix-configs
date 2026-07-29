@@ -9,10 +9,10 @@ shape:
 - XXXXXXXXX
 
 formats:
-  cost: ' &8 ▪ {symbol}{formatted_value} {currency_name} '
-  cost-discount: ' &8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
-  drop: ' &8 ▪ {symbol}{formatted_value} {currency_name} '
-  drop-bonus: ' &8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
+  cost: '&8 ▪ {symbol}{formatted_value} {currency_name} '
+  cost-discount: '&8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
+  drop: '&8 ▪ {symbol}{formatted_value} {currency_name} '
+  drop-bonus: '&8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
 
 info-icon:
   slot: 3
@@ -27,9 +27,9 @@ info-icon:
   - ''
   - '{entity_lines}'
   - ''
-  entity-line: ' &8 ▪ &f{entity_display} &7(x{entity_bought}) '
-  spent-line: '   &8 ▪ {symbol}{color}{value} {display} '
-  entity-empty: ' &8 ▾ &cNenhuma máquina comprada. '
+  entity-line: '&8 ▪ &f{entity_display} &7(x{entity_bought}) '
+  spent-line: '&8 ▪ {symbol}{color}{value} {display} '
+  entity-empty: '&8 ▾ &cNenhuma máquina comprada. '
 
 ranking-icon:
   slot: 5
@@ -50,7 +50,7 @@ icons:
     - ''
     - '&8 ▪ &fLibera: &7{date} '
     - ''
-    - ' &8 ▾ &cMáquina ainda bloqueada. '
+    - '&8 ▾ &cMáquina ainda bloqueada. '
     - ''
   locked:
     display: '&cMáquina Bloqueada'
@@ -60,7 +60,7 @@ icons:
     - ''
     - '&8 ▪ &fRank necessário: {rank} '
     - ''
-    - ' &8 ▾ &cMáquina ainda bloqueada. '
+    - '&8 ▾ &cMáquina ainda bloqueada. '
     - ''
   unlocked:
     # {translated} = nome da máquina; {display} = nome colorido do machines/*.yml.

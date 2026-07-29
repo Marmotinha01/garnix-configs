@@ -4,8 +4,8 @@
 # perde a luta está fora do evento.
 #
 # Locais necessários: lobby, join, exit, left, right. O cabin (camarote) é opcional.
-#   /fight setloc lobby|join|exit|cabin  » espera, bancada, saída e camarote (opcional)
-#   /fight setloc left|right       » os dois spawns da arena de luta
+#   /fight setloc lobby|join|exit|cabin  - espera, bancada, saída e camarote (opcional)
+#   /fight setloc left|right       - os dois spawns da arena de luta
 # Os lutadores esperam a vez no 'join'; só a dupla sorteada vai para a arena.
 
 display: '&cFight'

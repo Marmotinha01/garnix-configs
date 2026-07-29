@@ -25,11 +25,11 @@ shop-type-icon:
   - '&aClique para alternar.'
 
 shop-type-filters:
-  buy-display: Compra
-  sell-display: Venda
-  both-display: Ambas
-  line: ' &8 ► &7{display} '
-  line-selected: ' &a ► &f{display} '
+  buy-display: 'Compra '
+  sell-display: 'Venda '
+  both-display: 'Ambas '
+  line: '&8 ▪ &7{display} '
+  line-selected: '&a ▪ &f{display} '
 
 currency-icon:
   slot: 38
@@ -77,13 +77,13 @@ buy-price-icon:
   - '&aClique para alterar.'
   # {tax_info}: a taxa da economia (garnix-currencies) incide sobre quem RECEBE. Na compra
   # quem recebe é você (dono), então mostra o líquido após a taxa. Some se o item for grátis.
-  tax-free: ' &8 ▪ &fTaxa: &aIsento '
+  tax-free: '&8 ▪ &fTaxa: &aIsento '
   # Mostrada enquanto o preço ainda é Grátis (sem valor definido): só a alíquota, sem líquido.
-  tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
-  tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8) '
+  tax-charged-noprice: '&8 ▪ &fTaxa: &c&l{tax}&c% '
+  tax-charged: '&8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8) '
   disabled-lore:
   - ''
-  - ' &8 ▾ &cDesativado neste tipo de loja. '
+  - '&8 ▾ &cDesativado neste tipo de loja. '
   - ''
 
 sell-price-icon:
@@ -101,13 +101,13 @@ sell-price-icon:
   - '&cClique para alterar.'
   # {tax_info}: na venda quem recebe é o cliente que vende para a loja (você paga o valor
   # cheio), então mostra o líquido que ele recebe após a taxa. Some se o preço for grátis.
-  tax-free: ' &8 ▪ &fTaxa: &aIsento '
+  tax-free: '&8 ▪ &fTaxa: &aIsento '
   # Mostrada enquanto o preço ainda é Grátis (sem valor definido): só a alíquota, sem líquido.
-  tax-charged-noprice: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
-  tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8) '
+  tax-charged-noprice: '&8 ▪ &fTaxa: &c&l{tax}&c% '
+  tax-charged: '&8 ▪ &fTaxa: &c&l{tax}&c% &8(&7recebe {net}&8) '
   disabled-lore:
   - ''
-  - ' &8 ▾ &cDesativado neste tipo de loja. '
+  - '&8 ▾ &cDesativado neste tipo de loja. '
   - ''
 
 notify-on-icon:

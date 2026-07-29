@@ -21,7 +21,7 @@ opens-upgrade-icon:
 opens-upgrade-lore-status:
   max-level-reached:
   - ''
-  - ' &8 ▾ &cNível máximo já alcançado. '
+  - '&8 ▾ &cNível máximo já alcançado. '
   - ''
   upgrade-available:
   - ''
@@ -30,7 +30,7 @@ opens-upgrade-lore-status:
   - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{next-cost} &7{currency} '
   - ''
   can-afford: '&aClique para evoluir.'
-  cannot-afford: ' &8 ▾ &cSaldo insuficiente.'
+  cannot-afford: '&8 ▾ &cSaldo insuficiente.'
 
 current-robot-empty-icon:
   slot: 40

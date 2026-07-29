@@ -14,8 +14,8 @@ item-icon:
 
 # A linha {tax_info}, que sempre diz se a economia escolhida cobra taxa — trocar
 # de economia troca a linha. {net} é o que sobra para você e {tax} é a alíquota.
-tax-free: ' &8 ▪ &fTaxa: &aIsento '
-tax-charged: ' &8 ▪ &fTaxa: &c&l{tax}&c% '
+tax-free: '&8 ▪ &fTaxa: &aIsento '
+tax-charged: '&8 ▪ &fTaxa: &c&l{tax}&c% '
 
 # O ícone da economia vem do próprio GarnixCurrencies — só a lore é definida aqui.
 currency-icon:

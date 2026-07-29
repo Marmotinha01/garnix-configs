@@ -7,7 +7,7 @@
 # Ninguém toma dano neste evento: o clique só serve para passar a batata.
 #
 # Locais necessários: lobby, join, exit. O cabin (camarote) é opcional.
-#   /batata-quente setloc lobby|join|exit|cabin  » espera, arena, saída e camarote (opcional)
+#   /batata-quente setloc lobby|join|exit|cabin  - espera, arena, saída e camarote (opcional)
 #
 # O comando também atende por /batataquente e /batata.
 
@@ -255,4 +255,4 @@ messages:
   pass-cooldown: '&cSegure a batata mais &7{seconds}s &cantes de passar.'
   # Actionbar do relógio. Não aceita clique.
   timer-actionbar: '&c&l{seconds}s &faté explodir &8▪ &7{potatoes} &fbatata(s) em jogo'
-  timer-actionbar-holder: '&4&lVOCE ESTA COM A BATATA! &c&l{seconds}s &f» passe!'
+  timer-actionbar-holder: '&4&lVOCE ESTA COM A BATATA! &c&l{seconds}s &f- passe!'

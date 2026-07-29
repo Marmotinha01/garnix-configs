@@ -4,9 +4,9 @@
 # /digite-rapido <frase> vence — acentos inclusive. Como o texto está à mostra,
 # é uma corrida de digitação. Sem acerto na duração, termina sem vencedor.
 #
-#   /digite-rapido iniciar » abre o evento (staff)  (também /digite)
-#   /digite-rapido cancelar » encerra sem vencedor (staff)
-#   /digite-rapido <frase>  » palpite de um jogador
+#   /digite-rapido iniciar - abre o evento (staff)  (também /digite)
+#   /digite-rapido cancelar - encerra sem vencedor (staff)
+#   /digite-rapido <frase>  - palpite de um jogador
 
 display: '&9&lDIGITE RAPIDO'
 

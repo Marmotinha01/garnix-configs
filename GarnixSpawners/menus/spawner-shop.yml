@@ -9,10 +9,10 @@ shape:
 - XXXXXXXXX
 
 formats:
-  cost: ' &8 ▪ {symbol}{formatted_value} {currency_name} '
-  cost-discount: ' &8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
-  drop: ' &8 ▪ {symbol}{formatted_value} {currency_name} '
-  drop-bonus: ' &8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
+  cost: '&8 ▪ {symbol}{formatted_value} {currency_name} '
+  cost-discount: '&8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
+  drop: '&8 ▪ {symbol}{formatted_value} {currency_name} '
+  drop-bonus: '&8 ▪ &4{symbol_clean}&c&m{old_value}&r &7➟ {symbol}{formatted_value} {currency_name} '
 
 info-icon:
   slot: 3
@@ -27,9 +27,9 @@ info-icon:
   - ''
   - '{entity_lines}'
   - ''
-  entity-line: ' &8 ▪ &f{entity_display} &7(x{entity_bought}) '
-  spent-line: '   &8 ▪ {symbol}{color}{value} {display} '
-  entity-empty: ' &8 ▾ &cNenhum spawner comprado. '
+  entity-line: '&8 ▪ &f{entity_display} &7(x{entity_bought}) '
+  spent-line: '&8 ▪ {symbol}{color}{value} {display} '
+  entity-empty: '&8 ▾ &cNenhum spawner comprado. '
 
 ranking-icon:
   slot: 5
@@ -50,7 +50,7 @@ icons:
     - ''
     - '&8 ▪ &fLibera: &7{date} '
     - ''
-    - ' &8 ▾ &cSpawner ainda bloqueado. '
+    - '&8 ▾ &cSpawner ainda bloqueado. '
     - ''
   locked:
     display: '&cSpawner Bloqueado'
@@ -60,7 +60,7 @@ icons:
     - ''
     - '&8 ▪ &fRank necessário: {rank} '
     - ''
-    - ' &8 ▾ &cSpawner ainda bloqueado. '
+    - '&8 ▾ &cSpawner ainda bloqueado. '
     - ''
   unlocked:
     # {translated} = nome do mob; {display} = nome colorido do spawners/*.yml.

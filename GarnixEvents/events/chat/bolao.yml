@@ -5,9 +5,9 @@
 # cancelar), todas as entradas são devolvidas.
 #
 # A moeda e o valor da taxa são escolhidos ao INICIAR (usa o GarnixCurrencies):
-#   /bolao iniciar <moeda> <valor>  » abre o bolão (staff)  (também /bolão)
-#   /bolao cancelar                 » cancela e devolve tudo (staff)
-#   /bolao entrar                   » paga a taxa e entra
+#   /bolao iniciar <moeda> <valor>  - abre o bolão (staff)  (também /bolão)
+#   /bolao cancelar                 - cancela e devolve tudo (staff)
+#   /bolao entrar                   - paga a taxa e entra
 #
 # Placeholders de moeda disponíveis nas mensagens (resolvidos pela API):
 #   {fee} = taxa   {pot} = pote acumulado

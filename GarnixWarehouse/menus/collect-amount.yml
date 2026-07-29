@@ -14,13 +14,13 @@ pack-icon:
   - '&7Retire os cactos que estão'
   - '&7guardados no seu armazém.'
   - ''
-  - ' &8 ▾ &cEstoque insuficiente. '
+  - '&8 ▾ &cEstoque insuficiente. '
   - ''
   lore-no-space:
   - '&7Retire os cactos que estão'
   - '&7guardados no seu armazém.'
   - ''
-  - ' &8 ▾ &cSeu inventário está cheio. '
+  - '&8 ▾ &cSeu inventário está cheio. '
   - ''
 
 hotbar-icon:
@@ -36,13 +36,13 @@ hotbar-icon:
   - '&7Retire os cactos que estão'
   - '&7guardados no seu armazém.'
   - ''
-  - ' &8 ▾ &cEstoque insuficiente. '
+  - '&8 ▾ &cEstoque insuficiente. '
   - ''
   lore-no-space:
   - '&7Retire os cactos que estão'
   - '&7guardados no seu armazém.'
   - ''
-  - ' &8 ▾ &cSeu inventário está cheio. '
+  - '&8 ▾ &cSeu inventário está cheio. '
   - ''
 
 inventory-icon:
@@ -58,13 +58,13 @@ inventory-icon:
   - '&7Retire os cactos que estão'
   - '&7guardados no seu armazém.'
   - ''
-  - ' &8 ▾ &cEstoque insuficiente. '
+  - '&8 ▾ &cEstoque insuficiente. '
   - ''
   lore-no-space:
   - '&7Retire os cactos que estão'
   - '&7guardados no seu armazém.'
   - ''
-  - ' &8 ▾ &cSeu inventário está cheio. '
+  - '&8 ▾ &cSeu inventário está cheio. '
   - ''
 
 back-icon:

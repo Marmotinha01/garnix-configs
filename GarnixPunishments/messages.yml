@@ -236,22 +236,73 @@ broadcast-messages:
   - ''
 
 # ── Revoke broadcast (per punishment type, plus the full pardon) ────────
+# Mesma moldura do broadcast-messages: cabeçalho, o que aconteceu, detalhes em '&8▪'.
+# O cabeçalho é verde porque a punição saiu; o tipo vai na linha 'Punição', com os
+# mesmos nomes do bloco type-names. Aqui {staff} é quem REVOGOU, não quem aplicou.
 revoke-messages:
   ban:
-  - '&a&lREVOGADO &8» &f{player} teve o banimento {code} removido por {staff}.'
+  - ''
+  - '  &a&lREVOGADO'
+  - '  &f{player} &7não está mais banido.'
+  - ''
+  - '  &8▪ &fPunição: &7Banimento'
+  - '  &8▪ &fID: &7#{code}'
+  - '  &8▪ &fStaff: &7{staff}'
+  - ''
   tempban:
-  - '&a&lREVOGADO &8» &f{player} teve o banimento temporário {code} removido por {staff}.'
+  - ''
+  - '  &a&lREVOGADO'
+  - '  &f{player} &7não está mais banido.'
+  - ''
+  - '  &8▪ &fPunição: &7Banimento Temporário'
+  - '  &8▪ &fID: &7#{code}'
+  - '  &8▪ &fStaff: &7{staff}'
+  - ''
   mute:
-  - '&a&lREVOGADO &8» &f{player} teve o mute {code} removido por {staff}.'
+  - ''
+  - '  &a&lREVOGADO'
+  - '  &f{player} &7não está mais silenciado.'
+  - ''
+  - '  &8▪ &fPunição: &7Mute'
+  - '  &8▪ &fID: &7#{code}'
+  - '  &8▪ &fStaff: &7{staff}'
+  - ''
   tempmute:
-  - '&a&lREVOGADO &8» &f{player} teve o mute temporário {code} removido por {staff}.'
+  - ''
+  - '  &a&lREVOGADO'
+  - '  &f{player} &7não está mais silenciado.'
+  - ''
+  - '  &8▪ &fPunição: &7Mute Temporário'
+  - '  &8▪ &fID: &7#{code}'
+  - '  &8▪ &fStaff: &7{staff}'
+  - ''
   warn:
-  - '&a&lREVOGADO &8» &f{player} teve o aviso {code} removido por {staff}.'
+  - ''
+  - '  &a&lREVOGADO'
+  - '  &f{player} &7teve um aviso removido.'
+  - ''
+  - '  &8▪ &fPunição: &7Aviso'
+  - '  &8▪ &fID: &7#{code}'
+  - '  &8▪ &fStaff: &7{staff}'
+  - ''
   ipban:
-  - '&a&lREVOGADO &8» &f{player} teve o banimento de IP {code} removido por {staff}.'
+  - ''
+  - '  &a&lREVOGADO'
+  - '  &f{player} &7não está mais banido por IP.'
+  - ''
+  - '  &8▪ &fPunição: &7Banimento de IP'
+  - '  &8▪ &fID: &7#{code}'
+  - '  &8▪ &fStaff: &7{staff}'
+  - ''
   # Full pardon (all punishments at once — no single id)
+  # Só {player} e {staff} são resolvidos aqui: sem {code}, sem tipo, sem contagem.
   pardon:
-  - '&a&lPERDAO &7» &f{player} foi perdoado de todas as punições por {staff}.'
+  - ''
+  - '  &a&lPERDAO'
+  - '  &f{player} &7foi perdoado de todas as punições.'
+  - ''
+  - '  &8▪ &fStaff: &7{staff}'
+  - ''
 
 # ── /dupeip <jogador/ip> — contas no mesmo IP com marcadores de status ──
 # Nome verde = online, cinza = offline. Marcadores '*' empilham ANTES do nick, na ordem fixa
@@ -263,7 +314,7 @@ dupeip:
   - '  &c&lCONTAS NO MESMO IP'
   - '  &f{player} &8(&7{ip}&8) &8▪ &f{count} &7conta(s)'
   - ''
-  line: '  &8▪ {markers}{name} &8» &fvisto: &7{seen}'
+  line: '  &8▪ {markers}{name} &8▶ &fvisto: &7{seen}'
   footer:
   - ''
   not-found: '&cNenhum jogador encontrado para &f{input}&c.'

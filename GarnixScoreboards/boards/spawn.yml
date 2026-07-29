@@ -26,8 +26,8 @@ update-ticks: 20
 title:
   interval: 4
   frames:
-  - '&b&l» &f&lSPAWN &b&l«'
-  - '&f&l» &b&lSPAWN &f&l«'
+  - '&b&l- &f&lSPAWN &b&l«'
+  - '&f&l- &b&lSPAWN &f&l«'
 
 
 # ── Linhas ────────────────────────────────────────────────────────────────

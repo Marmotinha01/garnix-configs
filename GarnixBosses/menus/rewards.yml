@@ -29,10 +29,10 @@ sort-icon:
   - '&aClique para alternar.'
 
 sorts:
-  highest-display: Maior Chance
-  lowest-display: Menor Chance
-  line: ' &8 ► &7{display} '
-  line-selected: ' &a ► &f{display} '
+  highest-display: 'Maior Chance '
+  lowest-display: 'Menor Chance '
+  line: '&8 ▪ &7{display} '
+  line-selected: '&a ▪ &f{display} '
 
 back-icon:
   slot: 48

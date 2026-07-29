@@ -6,9 +6,9 @@
 #
 # Mesmo motor do Quiz — só muda o conteúdo (o banco 'charadas') e as mensagens.
 #
-#   /charada iniciar   » abre o evento (staff)
-#   /charada cancelar  » encerra sem vencedor (staff)
-#   /charada <resposta> » palpite de um jogador
+#   /charada iniciar   - abre o evento (staff)
+#   /charada cancelar  - encerra sem vencedor (staff)
+#   /charada <resposta> - palpite de um jogador
 
 display: '&d&lCHARADA'
 

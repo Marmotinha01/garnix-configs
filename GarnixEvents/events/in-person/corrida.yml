@@ -7,11 +7,11 @@
 # bloco, mas o passo que sairia do bloco é recusado até o VALENDO.
 #
 # Locais necessários: lobby, join, exit e ao menos uma chegada. O cabin é opcional.
-#   /corrida setloc lobby|join|exit|cabin  » espera, largada, saída e camarote (opcional)
-#   /corrida addsign                 » arma o modo; clique na placa para adicioná-la
-#   /corrida delsign <numero>        » remove uma das placas
-#   /corrida addplate                » a placa de pressão em que você está vira chegada
-#   /corrida delplate <numero>       » remove uma das placas de pressão de chegada
+#   /corrida setloc lobby|join|exit|cabin  - espera, largada, saída e camarote (opcional)
+#   /corrida addsign                 - arma o modo; clique na placa para adicioná-la
+#   /corrida delsign <numero>        - remove uma das placas
+#   /corrida addplate                - a placa de pressão em que você está vira chegada
+#   /corrida delplate <numero>       - remove uma das placas de pressão de chegada
 #
 # A chegada pode ser PLACA (clicar nela) ou PLACA DE PRESSÃO (pisar nela), e a arena
 # pode ter as duas: vale a que o corredor alcançar primeiro. Pode haver várias de cada

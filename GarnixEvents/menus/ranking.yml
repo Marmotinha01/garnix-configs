@@ -21,9 +21,9 @@ empty-position-icon:
   display: '&8#{position} &7Ninguém'
 
 filters:
-  total-display: Vitórias Totais
-  line: ' &8► &7{display} '
-  line-selected: ' &a► &f{display} '
+  total-display: 'Vitórias Totais '
+  line: '&8 ▪ &7{display} '
+  line-selected: '&a ▪ &f{display} '
 
 info-icon:
   slot: 40
@@ -38,8 +38,10 @@ info-icon:
 filter-icon:
   slot: 42
   material: HOPPER
-  display: '&aFiltrar'
+  display: '&aOrdenar'
   lore:
+  - '&7Escolha por qual estatística'
+  - '&7o ranking vai ser ordenado.'
   - ''
   - '{filters}'
   - ''
