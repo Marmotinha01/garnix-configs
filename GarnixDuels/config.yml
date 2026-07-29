@@ -5,8 +5,8 @@ ranking-refresh-minutes: 5
 
 # Apostas
 bet:
-  min-amount: 1.0
-  max-amount: 1.0E9
+  min-amount: 15000.0
+  max-amount: 1.0E63
 
 # Moedas que NÃO podem ser apostadas (ids do GarnixCurrencies).
 currency-blacklist: []
@@ -15,11 +15,11 @@ duel:
   # Contagem regressiva (segundos) antes de liberar o PvP.
   countdown-seconds: 5
   # Tempo (segundos) que um convite fica válido.
-  request-timeout-seconds: 30
+  request-timeout-seconds: 45
   # Duração máxima de um duelo (segundos); ao estourar, empate e apostas devolvidas.
-  time-limit-seconds: 600
+  time-limit-seconds: 900
   # Modo "Itens Próprios": segundos para o vencedor recolher os itens do perdedor.
-  item-pickup-seconds: 15
+  item-pickup-seconds: 30
   # Raio (blocos) do isolamento de sons entre duelos na mesma arena.
   sound-radius: 3.0
   # Comandos liberados durante o duelo/camarote (bypass: duels.bypass.commands).
@@ -36,36 +36,222 @@ kit:
   armor:
     helmet:
       material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
     chestplate:
       material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
     leggings:
       material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
     boots:
       material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §8Evento §lDESTEMIDO
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
   items:
-    sword:
-      slot: 0
+    slot-0:
       material: DIAMOND_SWORD
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
       enchants:
-      - DAMAGE_ALL:2
-    bow:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      - KNOCKBACK:2
+      flags:
+      - HIDE_UNBREAKABLE
+      slot: 0
+    slot-1:
+      material: DIAMOND_AXE
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - DAMAGE_ALL:5
+      - FIRE_ASPECT:2
+      flags:
+      - HIDE_UNBREAKABLE
       slot: 1
-      material: BOW
-      enchants:
-      - ARROW_DAMAGE:2
-    golden-apples:
-      slot: 2
+    slot-2:
       material: GOLDEN_APPLE
       data: 1
-      amount: 8
-    food:
-      slot: 3
-      material: COOKED_BEEF
-      amount: 16
-    arrows:
-      slot: 9
-      material: ARROW
       amount: 64
+      display: §6§lREDE GARNIX
+      slot: 2
+    slot-3:
+      material: POTION
+      data: 8233
+      amount: 64
+      display: §6§lREDE GARNIX
+      slot: 3
+    slot-4:
+      material: POTION
+      data: 8226
+      amount: 64
+      display: §6§lREDE GARNIX
+      slot: 4
+    slot-5:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 5
+    slot-6:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 6
+    slot-7:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 7
+    slot-8:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 8
+    slot-14:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 14
+    slot-15:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 15
+    slot-16:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 16
+    slot-17:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 17
+    slot-23:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 23
+    slot-24:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 24
+    slot-25:
+      material: DIAMOND_HELMET
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 25
+    slot-26:
+      material: DIAMOND_CHESTPLATE
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 26
+    slot-32:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 32
+    slot-33:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 33
+    slot-34:
+      material: DIAMOND_BOOTS
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 34
+    slot-35:
+      material: DIAMOND_LEGGINGS
+      data: 0
+      amount: 1
+      display: §6§lREDE GARNIX
+      enchants:
+      - PROTECTION_ENVIRONMENTAL:4
+      - DURABILITY:3
+      slot: 35
 
 myth:
   # Dias máximos sem ENTRAR no servidor antes do resorteio automático.
