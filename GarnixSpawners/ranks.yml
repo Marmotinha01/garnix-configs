@@ -1,11 +1,35 @@
-vip:
-  discount: 5 # porcentagem de desconto na compra
-  bonus: 5 # porcentagem de bônus nos drops
-  tag: '&a[VIP]'
-  permission: spawner.rank.vip
+influencer:
+  discount: 10 # porcentagem de desconto na compra
+  bonus: 10 # porcentagem de bônus nos drops
+  tag: '&c&lINFLUENCER'
+  permission: vip.influencer
 
-mvp:
+investidor:
+  discount: 5
+  bonus: 5
+  tag: '&a&lINVESTIDOR'
+  permission: vip.investidor
+
+garnix:
   discount: 10
   bonus: 10
-  tag: '&b[MVP]'
-  permission: spawner.rank.mvp
+  tag: '&6&lGARNIX'
+  permission: vip.garnix
+
+supremo:
+  discount: 15
+  bonus: 15
+  tag: '&4&lSUPREMO'
+  permission: vip.supremo
+
+imortal:
+  discount: 20
+  bonus: 20
+  tag: '&b&lIMORTAL'
+  permission: vip.imortal
+
+celestial:
+  discount: 25
+  bonus: 25
+  tag: '&e&lCELESTIAL'
+  permission: vip.celestial
