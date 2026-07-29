@@ -24,7 +24,7 @@ bonus-format: " &8 ▪ &f{Display}: &a+&l{value}&a{unit} "
 
 skins:
   default:
-    display: '&eSkin de Madeira'
+    display: '&eMadeira'
     material: WOOD_HOE
     forgeable: false
     icon:
@@ -33,12 +33,11 @@ skins:
       lore:
       - ''
       - ' &8 ▾ &cSem bônus. '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   pedra:
-    display: '&8Skin de Pedra'
+    display: '&8Pedra'
     material: STONE_HOE
     forgeable: true
     icon:
@@ -48,7 +47,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -60,7 +58,7 @@ skins:
         percent: true
 
   ferro:
-    display: '&7Skin de Ferro'
+    display: '&7Ferro'
     material: IRON_HOE
     forgeable: true
     icon:
@@ -70,7 +68,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -82,7 +79,7 @@ skins:
         percent: true
 
   ouro:
-    display: '&6Skin de Ouro'
+    display: '&6Ouro'
     material: GOLD_HOE
     forgeable: true
     icon:
@@ -92,7 +89,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -104,7 +100,7 @@ skins:
         percent: true
 
   diamante:
-    display: '&bSkin de Diamante'
+    display: '&bDiamante'
     material: DIAMOND_HOE
     forgeable: true
     icon:
@@ -114,7 +110,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -126,7 +121,7 @@ skins:
         percent: true
 
   ambar:
-    display: '&5Skin de Âmbar'
+    display: '&5Âmbar'
     material: DIAMOND_HOE
     forgeable: true
     icon:
@@ -136,7 +131,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -148,7 +142,7 @@ skins:
         percent: true
 
   esmeralda:
-    display: '&aSkin de Esmeralda'
+    display: '&aEsmeralda'
     material: DIAMOND_HOE
     forgeable: false
     icon:
@@ -158,7 +152,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -170,7 +163,7 @@ skins:
         percent: true
 
   cristal:
-    display: '&9Skin de Cristal'
+    display: '&9Cristal'
     material: DIAMOND_HOE
     forgeable: false
     icon:
@@ -181,7 +174,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -193,7 +185,7 @@ skins:
         percent: true
 
   marfim:
-    display: '&fSkin de Marfim'
+    display: '&fMarfim'
     material: DIAMOND_HOE
     forgeable: false
     icon:
@@ -204,7 +196,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:

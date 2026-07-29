@@ -36,7 +36,7 @@ bonus-format: " &8 ▪ &f{Display}: &a+&l{value}&a{unit} "
 
 skins:
   default:
-    display: '&eSkin de Madeira'
+    display: '&eMadeira'
     material: WOOD_PICKAXE
     forgeable: false
     icon:
@@ -45,12 +45,11 @@ skins:
       lore:
       - ''
       - ' &8 ▾ &cSem bônus. '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   pedra:
-    display: '&8Skin de Pedra'
+    display: '&8Pedra'
     material: STONE_PICKAXE
     forgeable: true
     icon:
@@ -60,7 +59,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -72,7 +70,7 @@ skins:
         percent: true
 
   ferro:
-    display: '&7Skin de Ferro'
+    display: '&7Ferro'
     material: IRON_PICKAXE
     forgeable: true
     icon:
@@ -82,7 +80,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -94,7 +91,7 @@ skins:
         percent: true
 
   ouro:
-    display: '&6Skin de Ouro'
+    display: '&6Ouro'
     material: GOLD_PICKAXE
     forgeable: true
     icon:
@@ -104,7 +101,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -116,7 +112,7 @@ skins:
         percent: true
 
   diamante:
-    display: '&bSkin de Diamante'
+    display: '&bDiamante'
     material: DIAMOND_PICKAXE
     forgeable: true
     icon:
@@ -126,7 +122,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -138,7 +133,7 @@ skins:
         percent: true
 
   rubi:
-    display: '&cSkin de Rubi'
+    display: '&cRubi'
     material: DIAMOND_PICKAXE
     forgeable: true
     icon:
@@ -148,7 +143,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -160,7 +154,7 @@ skins:
         percent: true
 
   quartzo:
-    display: '&fSkin de Quartzo'
+    display: '&fQuartzo'
     material: DIAMOND_PICKAXE
     forgeable: false
     icon:
@@ -170,7 +164,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -182,7 +175,7 @@ skins:
         percent: true
 
   jade:
-    display: '&aSkin de Jade'
+    display: '&aJade'
     material: DIAMOND_PICKAXE
     forgeable: false
     icon:
@@ -193,7 +186,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -205,7 +197,7 @@ skins:
         percent: true
 
   safira:
-    display: '&9Skin de Safira'
+    display: '&9Safira'
     material: DIAMOND_PICKAXE
     forgeable: false
     icon:
@@ -216,7 +208,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -228,7 +219,7 @@ skins:
         percent: true
 
   mithril:
-    display: '&4Skin de Mithril'
+    display: '&4Mithril'
     material: DIAMOND_PICKAXE
     forgeable: false
     icon:
@@ -239,7 +230,6 @@ skins:
       - ''
       - ' &8Especificações:'
       - '{bonus}'
-      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:

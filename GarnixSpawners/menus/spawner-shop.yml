@@ -63,6 +63,8 @@ icons:
     - ' &8 ▾ &cSpawner ainda bloqueado. '
     - ''
   unlocked:
+    # {translated} = nome do mob; {display} = nome colorido do spawners/*.yml.
+    display: '&aSpawner de {translated}'
     lore:
     - ''
     - ' &8Custos de compra:'
@@ -76,6 +78,7 @@ icons:
     - '&fBotão direito &8➟ &7Comprar x&l1'
     - '&fTecla Q &8➟ &7Comprar limite'
   unlocked-discount:
+    display: '&aSpawner de {translated}'
     lore:
     - ''
     - ' &8Benefícios VIP:'

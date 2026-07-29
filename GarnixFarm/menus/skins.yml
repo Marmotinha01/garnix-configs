@@ -27,10 +27,10 @@ back-icon:
 # Sufixos de lore anexados ao ícone de cada skin.
 equipped-lore-suffix:
 - ''
-- '&aSkin equipada no momento.'
+- '&eSkin equipada no momento.'
 unlocked-lore-suffix:
 - ''
-- '&eClique para equipar.'
+- '&aClique para equipar.'
 locked-lore-suffix:
 - ''
 - '&cSkin ainda bloqueada.'

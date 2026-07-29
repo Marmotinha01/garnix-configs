@@ -16,9 +16,10 @@ skin-empty-icon:
 
 # Shown when the rod HAS a skin — the icon is the equipped skin's own item, with
 # this display/lore over it. Placeholders: {skin}, {bonus}, {max_weight}.
+# No display: {skin-color} = cor da skin, {skin-name} = nome sem a cor.
 skin-equipped-icon:
   slot: 11
-  display: '{skin}'
+  display: '{skin-color}Skin de {skin-name}'
   lore:
   - '&7Skin equipada na sua vara'
   - '&7de pesca neste momento.'
