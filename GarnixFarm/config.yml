@@ -48,7 +48,7 @@ progress-bar:
   incomplete-color: '&c'
 
 # Expansão do token {bonus} nas lores de skin/armadura.
-bonus-lore-format: ' &8► {color}+{value}{unit} {display}'
+bonus-lore-format: ' &8 ▪ &f{Display}: &a+&l{value}&a{unit} '
 
 # ── Encantamentos ──
 enchant-currency: sementes # currency usada pra comprar/desencantar níveis

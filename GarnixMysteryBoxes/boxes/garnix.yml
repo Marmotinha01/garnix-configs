@@ -1,0 +1,37 @@
+# O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
+# segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
+
+# Slot que esta caixa ocupa no menu /caixas (omita para não aparecer na lista).
+slot: 31
+
+box-item:
+  material: ENDER_CHEST
+  glow: true
+  display: '&6&lCaixa Garnix'
+  lore:
+  - '&7Abra e descubra o que a sorte'
+  - '&7guardou para você lá dentro.'
+  - ''
+  - '&6Opções de uso:'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
+
+# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# 'chance' é o peso do sorteio (não precisa somar 100).
+#
+# ATENÇÃO: o BoxManager PULA qualquer caixa sem nenhuma recompensa válida,
+# então a entrada abaixo é só um marcador para a caixa carregar. Apague o
+# bloco 'placeholder' assim que as recompensas reais forem definidas.
+rewards:
+
+  placeholder:
+    type: NONE
+    chance: 100.0
+    display: '&cRecompensa Pendente'
+    icon:
+      material: BARRIER
+      display: '&cRecompensa Pendente'
+      lore:
+      - '&7As recompensas desta caixa'
+      - '&7ainda não foram definidas.'

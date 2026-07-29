@@ -1,0 +1,21 @@
+# Capacete Mineração — Tier V.
+item:
+  display: "&6Capacete Mineração &6[T&lV&6]"
+  material: LEATHER_HELMET
+  color: "#FFD54A"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 12.0
+    percent: true
+  gemas:
+    value: 8.0
+    percent: true
+  xp:
+    value: 8.0
+    percent: true

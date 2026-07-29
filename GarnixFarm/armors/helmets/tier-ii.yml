@@ -1,0 +1,21 @@
+# Capacete Farm — Tier II.
+item:
+  display: "&aCapacete Farm &a[T&lII&a]"
+  material: LEATHER_HELMET
+  color: "#5E8C3A"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 3.0
+    percent: true
+  sementes:
+    value: 2.0
+    percent: true
+  xp:
+    value: 2.0
+    percent: true

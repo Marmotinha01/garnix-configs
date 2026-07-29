@@ -86,7 +86,7 @@ enchant-animation-budget: 0
 # bonus (empty otherwise); {color} and {display} (plus every currency placeholder
 # above) come from GarnixCurrencies — xp uses xp-display. A skins.yml or armor
 # file may override this layout with its own 'bonus-format'.
-bonus-lore-format: " &8► {color}+{value}{unit} {display}"
+bonus-lore-format: " &8 ▪ &f{Display}: &a+&l{value}&a{unit} "
 
 # Commands allowed inside the mine for players without mining.bypass.commands.
 mine-command-whitelist:

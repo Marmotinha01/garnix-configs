@@ -1,0 +1,21 @@
+# Capacete Mineração — Tier II.
+item:
+  display: "&aCapacete Mineração &a[T&lII&a]"
+  material: LEATHER_HELMET
+  color: "#8C6A2F"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 3.0
+    percent: true
+  gemas:
+    value: 2.0
+    percent: true
+  xp:
+    value: 2.0
+    percent: true

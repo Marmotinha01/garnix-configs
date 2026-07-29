@@ -1,0 +1,21 @@
+# Peitoral Farm — Tier I.
+item:
+  display: "&7Peitoral Farm &7[T&lI&7]"
+  material: LEATHER_CHESTPLATE
+  color: "#4C6B34"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 1.5
+    percent: true
+  sementes:
+    value: 1.0
+    percent: true
+  xp:
+    value: 1.0
+    percent: true

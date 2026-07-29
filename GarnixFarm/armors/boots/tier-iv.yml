@@ -1,0 +1,21 @@
+# Bota Farm — Tier IV.
+item:
+  display: "&dBota Farm &d[T&lIV&d]"
+  material: LEATHER_BOOTS
+  color: "#8FD44E"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 8.0
+    percent: true
+  sementes:
+    value: 5.5
+    percent: true
+  xp:
+    value: 5.5
+    percent: true

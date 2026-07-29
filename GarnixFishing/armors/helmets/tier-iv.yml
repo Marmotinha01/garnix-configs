@@ -1,0 +1,18 @@
+# Capacete Pesca — Tier IV.
+item:
+  display: "&dCapacete Pesca &d[T&lIV&d]"
+  material: LEATHER_HELMET
+  color: "#3FB8D4"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  corais:
+    value: 8.0
+    percent: true
+  xp:
+    value: 5.5
+    percent: true

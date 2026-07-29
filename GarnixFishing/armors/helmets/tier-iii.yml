@@ -1,0 +1,18 @@
+# Capacete Pesca — Tier III.
+item:
+  display: "&bCapacete Pesca &b[T&lIII&b]"
+  material: LEATHER_HELMET
+  color: "#3494B0"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  corais:
+    value: 5.0
+    percent: true
+  xp:
+    value: 3.5
+    percent: true

@@ -1,0 +1,21 @@
+# Calça Farm — Tier I.
+item:
+  display: "&7Calça Farm &7[T&lI&7]"
+  material: LEATHER_LEGGINGS
+  color: "#4C6B34"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 1.5
+    percent: true
+  sementes:
+    value: 1.0
+    percent: true
+  xp:
+    value: 1.0
+    percent: true

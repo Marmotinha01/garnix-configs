@@ -1,0 +1,21 @@
+# Calça Mineração — Tier IV.
+item:
+  display: "&dCalça Mineração &d[T&lIV&d]"
+  material: LEATHER_LEGGINGS
+  color: "#F0B429"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 8.0
+    percent: true
+  gemas:
+    value: 5.5
+    percent: true
+  xp:
+    value: 5.5
+    percent: true

@@ -1,0 +1,18 @@
+# Calça Pesca — Tier I.
+item:
+  display: "&7Calça Pesca &7[T&lI&7]"
+  material: LEATHER_LEGGINGS
+  color: "#24506B"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  corais:
+    value: 1.5
+    percent: true
+  xp:
+    value: 1.0
+    percent: true

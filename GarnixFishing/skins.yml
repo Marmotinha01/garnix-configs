@@ -1,3 +1,22 @@
+# GarnixFishing — Skins da vara. A skin define o bônus de corais e o PESO máximo
+# que a vara consegue fisgar (rewards.yml → weight <= max-weight).
+#
+# Cada skin declara:
+#   display        — nome colorido
+#   material       — material visual da vara
+#   forgeable      — true = 7 desta skin forjam a PRÓXIMA declarada abaixo
+#   currency-bonus — % somado aos corais por fisgada
+#   max-weight     — maior peso de recompensa que esta vara alcança
+#
+# ── LADDER DA TEMPORADA ──────────────────────────────────────────────
+# Ordem de raridade (a ordem DESTE arquivo é a ordem da forja):
+#   Madeira · Coral · Escama · Prata · Turquesa · Abissita · Serenita ·
+#   Oceanita · Pérola · Tempestita
+#
+# A forja (7 skins iguais) sobe de Coral até Serenita. Oceanita, Pérola e
+# Tempestita têm forgeable: false e só saem de caixa (glow no menu).
+# ─────────────────────────────────────────────────────────────────────
+
 unlock-lore:
 - ''
 - '&aArraste sobre uma vara para aplicar.'
@@ -6,7 +25,7 @@ rod-skins:
   default:
     display: '&eSkin de Madeira'
     material: FISHING_ROD
-    forgeable: true
+    forgeable: false
     currency-bonus: 0
     max-weight: 3
     icon:
@@ -15,55 +34,153 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fBônus: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
       - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
       - ''
-  
-  reinforced:
-    display: '&aSkin Reforçada'
+
+  coral:
+    display: '&3Skin de Coral'
+    material: FISHING_ROD
+    forgeable: true
+    currency-bonus: 2
+    max-weight: 6
+    icon:
+      material: FISHING_ROD
+      display: '&3Skin de Coral'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - ''
+
+  escama:
+    display: '&6Skin de Escama'
     material: FISHING_ROD
     forgeable: true
     currency-bonus: 5
-    max-weight: 5
-    icon:
-      material: FISHING_ROD
-      display: '&aSkin Reforçada'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      - ' &8 ▪ &fBônus: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
-      - ''
-  
-  golden:
-    display: '&6Skin Dourada'
-    material: FISHING_ROD
-    forgeable: true
-    currency-bonus: 12
     max-weight: 10
     icon:
       material: FISHING_ROD
-      display: '&6Skin Dourada'
+      display: '&6Skin de Escama'
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fBônus: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
       - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
       - ''
-  
-  emerald:
-    display: '&2Skin de Esmeralda'
+
+  prata:
+    display: '&7Skin de Prata'
     material: FISHING_ROD
-    forgeable: false
-    currency-bonus: 25
-    max-weight: 20
+    forgeable: true
+    currency-bonus: 9
+    max-weight: 15
     icon:
       material: FISHING_ROD
-      display: '&2Skin de Esmeralda'
+      display: '&7Skin de Prata'
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fBônus: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
       - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
       - ''
+
+  turquesa:
+    display: '&bSkin de Turquesa'
+    material: FISHING_ROD
+    forgeable: true
+    currency-bonus: 14
+    max-weight: 22
+    icon:
+      material: FISHING_ROD
+      display: '&bSkin de Turquesa'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - ''
+
+  abissita:
+    display: '&aSkin de Abissita'
+    material: FISHING_ROD
+    forgeable: true
+    currency-bonus: 20
+    max-weight: 32
+    icon:
+      material: FISHING_ROD
+      display: '&aSkin de Abissita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - ''
+
+  serenita:
+    display: '&5Skin de Serenita'
+    material: FISHING_ROD
+    forgeable: false
+    currency-bonus: 28
+    max-weight: 45
+    icon:
+      material: FISHING_ROD
+      display: '&5Skin de Serenita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - ''
+
+  oceanita:
+    display: '&1Skin de Oceanita'
+    material: FISHING_ROD
+    forgeable: false
+    currency-bonus: 38
+    max-weight: 65
+    icon:
+      material: FISHING_ROD
+      display: '&1Skin de Oceanita'
       glow: true
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - ''
+
+  perola:
+    display: '&9Skin de Pérola'
+    material: FISHING_ROD
+    forgeable: false
+    currency-bonus: 50
+    max-weight: 90
+    icon:
+      material: FISHING_ROD
+      display: '&9Skin de Pérola'
+      glow: true
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - ''
+
+  tempestita:
+    display: '&dSkin de Tempestita'
+    material: FISHING_ROD
+    forgeable: false
+    currency-bonus: 65
+    max-weight: 130
+    icon:
+      material: FISHING_ROD
+      display: '&dSkin de Tempestita'
+      glow: true
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - ''

@@ -1,69 +1,216 @@
 # GarnixFarm — Skins da enxada. A skin muda o material da enxada e pode dar bônus.
+#
+# Cada skin declara:
+#   display   — nome colorido
+#   material  — material visual da enxada dentro da fazenda
+#   forgeable — true = 7 desta skin forjam a PRÓXIMA declarada abaixo
+#   icon      — ícone do menu
+#   bonuses   — bônus por provider (value + percent)
+#
+# ── LADDER DA TEMPORADA ──────────────────────────────────────────────
+# Ordem de raridade (a ordem DESTE arquivo é a ordem da forja):
+#   Madeira · Pedra · Ferro · Ouro · Diamante · Âmbar · Esmeralda ·
+#   Cristal · Marfim
+#
+# A forja (7 skins iguais) sobe de Pedra até Esmeralda. Cristal e Marfim
+# têm forgeable: false e só saem de caixa (marcadas com glow no menu).
+# ─────────────────────────────────────────────────────────────────────
 
 unlock-lore:
-  - ""
-  - "&aClique para desbloquear."
+- ''
+- '&aClique para desbloquear.'
 
-bonus-format: "  &8► {color}+{value}{unit} {display}"
+bonus-format: " &8 ▪ &f{Display}: &a+&l{value}&a{unit} "
 
 skins:
   default:
-    display: "&fSkin de Madeira"
+    display: '&eSkin de Madeira'
     material: WOOD_HOE
+    forgeable: false
     icon:
       material: WOOD_HOE
-      display: "&fSkin de Madeira"
+      display: '&eSkin de Madeira'
       lore:
-        - ""
-        - " &8 ▾ &cSem bônus. "
-        - ""
+      - ''
+      - ' &8 ▾ &cSem bônus. '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  pedra:
+    display: '&8Skin de Pedra'
+    material: STONE_HOE
+    forgeable: true
+    icon:
+      material: STONE_HOE
+      display: '&8Skin de Pedra'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 2.0
+        percent: true
+      sementes:
+        value: 1.0
+        percent: true
 
   ferro:
-    display: "&7Skin de Ferro"
+    display: '&7Skin de Ferro'
     material: IRON_HOE
     forgeable: true
     icon:
       material: IRON_HOE
-      display: "&7Skin de Ferro"
+      display: '&7Skin de Ferro'
       lore:
-        - ""
-        - " &fBônus: "
-        - "{bonus}"
-        - ""
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
     bonuses:
       coins:
-        value: 5
+        value: 5.0
+        percent: true
+      sementes:
+        value: 3.0
         percent: true
 
   ouro:
-    display: "&6Skin de Ouro"
+    display: '&6Skin de Ouro'
     material: GOLD_HOE
     forgeable: true
     icon:
       material: GOLD_HOE
-      display: "&6Skin de Ouro"
+      display: '&6Skin de Ouro'
       lore:
-        - ""
-        - " &fBônus: "
-        - "{bonus}"
-        - ""
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
     bonuses:
       coins:
-        value: 10
+        value: 9.0
+        percent: true
+      sementes:
+        value: 5.0
         percent: true
 
   diamante:
-    display: "&bSkin de Diamante"
+    display: '&bSkin de Diamante'
     material: DIAMOND_HOE
+    forgeable: true
     icon:
       material: DIAMOND_HOE
-      display: "&bSkin de Diamante"
+      display: '&bSkin de Diamante'
       lore:
-        - ""
-        - " &fBônus: "
-        - "{bonus}"
-        - ""
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
     bonuses:
       coins:
-        value: 15
+        value: 14.0
+        percent: true
+      sementes:
+        value: 8.0
+        percent: true
+
+  ambar:
+    display: '&5Skin de Âmbar'
+    material: DIAMOND_HOE
+    forgeable: true
+    icon:
+      material: DIAMOND_HOE
+      display: '&5Skin de Âmbar'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 20.0
+        percent: true
+      sementes:
+        value: 12.0
+        percent: true
+
+  esmeralda:
+    display: '&aSkin de Esmeralda'
+    material: DIAMOND_HOE
+    forgeable: false
+    icon:
+      material: DIAMOND_HOE
+      display: '&aSkin de Esmeralda'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 30.0
+        percent: true
+      sementes:
+        value: 19.0
+        percent: true
+
+  cristal:
+    display: '&9Skin de Cristal'
+    material: DIAMOND_HOE
+    forgeable: false
+    icon:
+      material: DIAMOND_HOE
+      display: '&9Skin de Cristal'
+      glow: true
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 45.0
+        percent: true
+      sementes:
+        value: 30.0
+        percent: true
+
+  marfim:
+    display: '&fSkin de Marfim'
+    material: DIAMOND_HOE
+    forgeable: false
+    icon:
+      material: DIAMOND_HOE
+      display: '&fSkin de Marfim'
+      glow: true
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 65.0
+        percent: true
+      sementes:
+        value: 45.0
         percent: true

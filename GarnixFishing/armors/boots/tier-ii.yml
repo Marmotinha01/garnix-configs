@@ -1,0 +1,18 @@
+# Bota Pesca — Tier II.
+item:
+  display: "&aBota Pesca &a[T&lII&a]"
+  material: LEATHER_BOOTS
+  color: "#2C6E8C"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  corais:
+    value: 3.0
+    percent: true
+  xp:
+    value: 2.0
+    percent: true

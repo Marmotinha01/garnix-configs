@@ -1,0 +1,21 @@
+# Bota Farm — Tier III.
+item:
+  display: "&bBota Farm &b[T&lIII&b]"
+  material: LEATHER_BOOTS
+  color: "#74B043"
+  lore:
+    - ""
+    - " &8Especificações:"
+    - "{bonus}"
+    - ""
+  flags: ["HIDE_ATTRIBUTES"]
+bonuses:
+  coins:
+    value: 5.0
+    percent: true
+  sementes:
+    value: 3.5
+    percent: true
+  xp:
+    value: 3.5
+    percent: true
