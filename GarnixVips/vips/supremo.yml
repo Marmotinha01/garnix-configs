@@ -41,6 +41,7 @@ advantages-icon:
     - " &8 ▪ &fNão é afetado pelo delay do {color}/g &fe {color}/l&f. "
     - " &8 ▪ &fRecebe {color}&l1{color} slot &fde jogador na mina. "
     - " &8 ▪ &fPode coletar {color}Recompensa Diária &fexclusiva. "
+    - ""
 
 add-broadcast:
   title:

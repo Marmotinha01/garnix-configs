@@ -42,6 +42,7 @@ advantages-icon:
     - " &8 ▪ &fNão paga &ctaxas &fde transferências. "
     - " &8 ▪ &fRecebe {color}&l2{color} slots &fde jogador na mina. "
     - " &8 ▪ &fPode coletar {color}Recompensa Diária &fexclusiva. "
+    - ""
 
 add-broadcast:
   title:
