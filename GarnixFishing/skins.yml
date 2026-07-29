@@ -19,7 +19,8 @@
 
 unlock-lore:
 - ''
-- '&aArraste sobre uma vara para aplicar.'
+- '&aArraste sobre uma'
+- '&avara para aplicar.'
 
 rod-skins:
   default:
