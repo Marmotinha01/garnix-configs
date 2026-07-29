@@ -6,8 +6,8 @@ hologram:
   - '&6&lCAIXA RANKUP'
   - ''
   - '&6Opções de uso:'
-  - '&fBotão Esquerdo &8➟ &7Preview'
-  - '&fBotão Direito &8➟ &7Abrir'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
 
 # Slot que esta crate ocupa no menu /crates.
 slot: 15

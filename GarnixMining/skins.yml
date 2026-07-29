@@ -32,7 +32,9 @@ skins:
       material: WOOD_PICKAXE
       display: '&eSkin de Madeira'
       lore:
-      - '&cSem bônus.'
+      - ''
+      - ' &8 ▾ &cSem bônus. '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
   
@@ -44,7 +46,7 @@ skins:
       display: '&7Skin de Pedra'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:
@@ -65,7 +67,7 @@ skins:
       display: '&fSkin de Ferro'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:
@@ -86,7 +88,7 @@ skins:
       display: '&6Skin de Ouro'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:
@@ -107,7 +109,7 @@ skins:
       display: '&bSkin de Diamante'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:
@@ -129,7 +131,7 @@ skins:
       display: '&2Skin de Esmeralda'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:
@@ -151,7 +153,7 @@ skins:
       display: '&aSkin de Jade'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:
@@ -173,7 +175,7 @@ skins:
       display: '&cSkin de Rubi'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:
@@ -195,7 +197,7 @@ skins:
       display: '&8Skin de Obsidiana'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:
@@ -217,7 +219,7 @@ skins:
       display: '&4Skin de Netherita'
       lore:
       - ''
-      - ' &fBônus:'
+      - ' &fBônus: '
       - '{bonus}'
       - ''
       flags:

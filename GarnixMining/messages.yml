@@ -64,8 +64,12 @@ labels:
   mine-private: '&cPrivada'
   wand-name: '&eSeletor de Mina'
   wand-lore:
-  - '&fBotão Esquerdo &8➟ &7Pos1'
-  - '&fBotão Direito &8➟ &7Pos2'
+  - '&7Use para marcar os cantos'
+  - '&7da área que vira sua mina.'
+  - ''
+  - '&eOpções de uso:'
+  - '&fBotão esquerdo &8➟ &7Primeiro ponto'
+  - '&fBotão direito &8➟ &7Segundo ponto'
 
 tax:
   set: '&aTaxa definida para &f{tax}%&a.'

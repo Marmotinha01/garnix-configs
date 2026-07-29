@@ -19,8 +19,8 @@ messages:
     header: '&e&lMANUTENÇAO - STATUS'
     server-active: '&b{server} &cManutenção ativa'
     server-inactive: '&b{server} &8Manutenção inativa'
-    player: '&8  - {lp_suffix} {player}'
-    no-players: '&8  ▶ &cNenhum jogador adicionado'
+    player: '  &8▪ {lp_suffix} {player}'
+    no-players: '  &cNenhum jogador adicionado'
   # Kick/disconnect (manutenção total ou conexão inicial).
   kick:
   - '&c&lREDE GARNIX'

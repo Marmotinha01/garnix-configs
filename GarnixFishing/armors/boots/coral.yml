@@ -1,13 +1,11 @@
 # Coral — boots. Bônus equilibrado de XP e corais.
 item:
-  display: "&cBotas de Coral"
+  display: "&cBota de Coral"
   material: LEATHER_BOOTS
   color: "#FF6F61"
   lore:
     - ""
-    - " &7Feitas dos recifes de coral mais raros."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

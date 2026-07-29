@@ -1,13 +1,11 @@
 # Abissal — boots. Foco em corais.
 item:
-  display: "&5Botas Abissais"
+  display: "&5Bota Abissal"
   material: LEATHER_BOOTS
   color: "#8E24AA"
   lore:
     - ""
-    - " &7Forjadas nas profundezas abissais."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

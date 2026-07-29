@@ -64,8 +64,8 @@ tax-icon:
   - ' &8 ▪ &fTaxa atual: &e{tax}% '
   - ''
   - '&cOpções de uso:'
-  - '&fBotão esquerdo &8➟ &7Definir '
-  - '&fBotão direito &8➟ &cResetar '
+  - '&fBotão esquerdo &8➟ &7Definir'
+  - '&fBotão direito &8➟ &cResetar'
 
 collect-tax-icon:
   slot: 14

@@ -5,9 +5,7 @@ item:
   color: "#FF6F61"
   lore:
     - ""
-    - " &7Feito dos recifes de coral mais raros."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

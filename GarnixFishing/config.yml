@@ -23,7 +23,7 @@ xp-display:
 # {color} and {display} come from the provider — "xp" uses xp-display above, the
 # corais currency comes from GarnixCurrencies. An armor file may override this
 # layout with its own 'bonus-format'.
-bonus-lore-format: ' &8◗ {color}+&l{value}{color}{unit} {display} '
+bonus-lore-format: '  &8► {color}+{value}{unit} {display}'
 
 # Minutes between leaderboard rebuilds (the ranking keeps the top 10).
 ranking-refresh-minutes: 5
@@ -51,15 +51,15 @@ rod:
   lore:
   - ''
   - ' &8Informações: '
-  - ' &8▪ &fNível: &e{level}'
-  - ' &8▪ &fXP: &a{xp}&8/&c{xp_needed} {level_bar} '
-  - ' &8▪ &fSkin: {skin-display} &a+&l{skin-bonus}&a% '
+  - ' &8 ▪ &fNível: &e{level} '
+  - ' &8 ▪ &fXP: &a{xp}&8/&c{xp_needed} {level_bar} '
+  - ' &8 ▪ &fSkin: {skin-display} &a+&l{skin-bonus}&a% '
   - ''
   - ' &b▎ &fEncantamentos: '
   - '{enchants}'
   - '' 
   - '&bOpções de uso:'
-  - '&fBotão Dir. + SHIFT &8➟ &7Gerenciar'
+  - '&fBotão dir. + SHIFT &8➟ &7Gerenciar'
   enchant-entry: ' &8◗ &7{enchant} {level} '
   no-enchants: ' &8◗ &cNenhum encantamento '
 
@@ -118,5 +118,5 @@ booster-item:
   activation-lore:
   - ''
   - '&bOpções de uso:'
-  - '&fBotão Direito &8➟ &7Ativar'
-  - '&fBotão Dir. + SHIFT &8➟ &7Juntar'
+  - '&fBotão direito &8➟ &7Ativar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'

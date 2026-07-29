@@ -111,8 +111,10 @@ setup:
     material: STICK
     display: '&aGraveto de Seleção'
     lore:
-    - '&7Use para marcar as áreas dos eventos.'
+    - '&7Use para marcar as áreas'
+    - '&7em que os eventos rodam.'
     - ''
-    - '&aClique esquerdo &7» &fprimeiro ponto'
-    - '&aClique direito &7» &fdemais pontos'
+    - '&aOpções de uso:'
+    - '&fBotão esquerdo &8➟ &7Primeiro ponto'
+    - '&fBotão direito &8➟ &7Demais pontos'
     glow: true

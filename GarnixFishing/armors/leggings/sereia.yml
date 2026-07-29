@@ -1,13 +1,11 @@
 # Sereia — leggings. Foco em XP.
 item:
-  display: "&bCalças da Sereia"
+  display: "&bCalça da Sereia"
   material: LEATHER_LEGGINGS
   color: "#1DE9B6"
   lore:
     - ""
-    - " &7Abençoadas pelo canto das sereias."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

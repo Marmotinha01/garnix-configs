@@ -1,6 +1,6 @@
 unlock-lore:
-- '&aArraste a skin para cima'
-- '&ade uma vara para aplicar.'
+- ''
+- '&aArraste sobre uma vara para aplicar.'
 
 rod-skins:
   default:
@@ -15,8 +15,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8▪ &fBônus: &a+&l{bonus}&a%'
-      - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+      - ' &8 ▪ &fBônus: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
       - ''
   
   reinforced:
@@ -31,8 +31,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8▪ &fBônus: &a+&l{bonus}&a%'
-      - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+      - ' &8 ▪ &fBônus: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
       - ''
   
   golden:
@@ -43,12 +43,12 @@ rod-skins:
     max-weight: 10
     icon:
       material: FISHING_ROD
-      display: '&6Vara Dourada'
+      display: '&6Skin Dourada'
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8▪ &fBônus: &a+&l{bonus}&a%'
-      - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+      - ' &8 ▪ &fBônus: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
       - ''
   
   emerald:
@@ -63,7 +63,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8▪ &fBônus: &a+&l{bonus}&a%'
-      - ' &8▪ &fPeso Máximo: &c&l{max_weight}&ckg'
+      - ' &8 ▪ &fBônus: &a+&l{bonus}&a% '
+      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
       - ''
       glow: true

@@ -7,28 +7,28 @@ members-on-icon:
   glow: true
   flags:
   - HIDE_ATTRIBUTES
-  display: '&cFogo Amigo: Membros'
+  display: '&aFogo Amigo: Membros'
   lore:
   - '&7Membros do clan podem'
   - '&7causar dano uns nos outros.'
   - ''
   - ' &8 ▪ &fEstado: {members_state} '
   - ''
-  - '&cClique para desativar.'
+  - '&aClique para desativar.'
 
 members-off-icon:
   slot: 11
   material: IRON_SWORD
   flags:
   - HIDE_ATTRIBUTES
-  display: '&aFogo Amigo: Membros'
+  display: '&cFogo Amigo: Membros'
   lore:
   - '&7Membros do clan estão'
   - '&7protegidos entre si.'
   - ''
   - ' &8 ▪ &fEstado: {members_state} '
   - ''
-  - '&aClique para ativar.'
+  - '&cClique para ativar.'
 
 allies-on-icon:
   slot: 15
@@ -36,7 +36,7 @@ allies-on-icon:
   glow: true
   flags:
   - HIDE_ATTRIBUTES
-  display: '&cFogo Amigo: Aliados'
+  display: '&aFogo Amigo: Aliados'
   lore:
   - '&7Aliados podem causar dano'
   - '&7nos membros do seu clan.'
@@ -46,14 +46,14 @@ allies-on-icon:
   - ''
   - ' &8 ▪ &fEstado: {allies_state} '
   - ''
-  - '&cClique para desativar.'
+  - '&aClique para desativar.'
 
 allies-off-icon:
   slot: 15
   material: DIAMOND_SWORD
   flags:
   - HIDE_ATTRIBUTES
-  display: '&aFogo Amigo: Aliados'
+  display: '&cFogo Amigo: Aliados'
   lore:
   - '&7Seus membros estão protegidos'
   - '&7contra os clans aliados.'
@@ -63,7 +63,7 @@ allies-off-icon:
   - ''
   - ' &8 ▪ &fEstado: {allies_state} '
   - ''
-  - '&aClique para ativar.'
+  - '&cClique para ativar.'
 
 back-icon:
   slot: 22

@@ -145,7 +145,7 @@ slot-item:
     - ""
     - "&c[!] Item consumível após o uso."
     - ""
-    - "&7Use com &fBotão Direito &7para ativar."
+    - "&7Use com &fBotão direito &7para ativar."
 
 booster:
   # Minimum remaining time (seconds) required to recover an active booster.
@@ -171,8 +171,8 @@ booster-icon:
   activation-lore:
   - ''
   - '&6Opções de uso:'
-  - '&fBotão Direito &8➟ &7Ativar'
-  - '&fBotão Dir. + SHIFT &8➟ &7Juntar'
+  - '&fBotão direito &8➟ &7Ativar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 # Action bar shown while mining. Placeholders: {providers} {separator}
 # {mine_level} {max_level} {mine_exp} {mine_need_exp}.
@@ -199,9 +199,9 @@ pickaxe-icon:
   - ' &6▎ &fSkin: {skin-display} &a+&l{skin-bonus}&a% '
   - '' 
   - '&6Opções de uso:'
-  - '&fBotão Dir. + SHIFT &8➟ &7Gerenciar'
+  - '&fBotão dir. + SHIFT &8➟ &7Gerenciar'
   enchant-entry: ' &8◗ &7{enchant} {level} '
-  no-enchants: ' &8◗ Quebra Rápida ∞ '
+  no-enchants: ' &8◗ &7Quebra Rápida ∞ '
 
 # Per-mine reset cooldown, in seconds.
 reset-cooldown: 30

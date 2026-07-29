@@ -13,8 +13,8 @@ box-item:
   - '&7são sorteados na hora.'
   - ''
   - '&bOpções de uso:'
-  - '&fBotão direito &8➟ &7Abrir'
   - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
 
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).

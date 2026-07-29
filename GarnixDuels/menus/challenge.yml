@@ -25,14 +25,15 @@ opponent-icon:
 bet-icon:
   slot: 12
   material: GOLD_NUGGET
-  display: '&aAposta'
+  display: '&cAposta'
+  enabled-display: '&aAposta'
   lore:
   - '&7Coloque uma quantia em'
   - '&7jogo para o vencedor.'
   - ''
   - ' &8 ▪ &fStatus: &cDesativada '
   - ''
-  - '&aClique para ativar.'
+  - '&cClique para ativar.'
   enabled-lore:
   - '&7Coloque uma quantia em'
   - '&7jogo para o vencedor.'

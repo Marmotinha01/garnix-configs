@@ -249,7 +249,7 @@ admin:
   - ''
   - '  &c&lAnti-Divulgação &8- &7capturas desde o último reinício'
   - '  &8▎ &fTotal: &7{total}'
-  - '  &8▎ &fGlobal: &7{global} &8▪  &fLocal: &7{local}'
+  - '  &8▎ &fGlobal: &7{global} &8▪ &fLocal: &7{local}'
   - ''
   - '  &e&lAnti-Capslock &8- &7capturas desde o último reinício'
   - '  &8▎ &fDes-gritadas: &7{caps} &8▪ &fBloqueadas: &7{caps_blocked}'

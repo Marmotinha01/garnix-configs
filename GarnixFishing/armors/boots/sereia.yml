@@ -1,13 +1,11 @@
 # Sereia — boots. Foco em XP.
 item:
-  display: "&bBotas da Sereia"
+  display: "&bBota da Sereia"
   material: LEATHER_BOOTS
   color: "#1DE9B6"
   lore:
     - ""
-    - " &7Abençoadas pelo canto das sereias."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

@@ -6,8 +6,8 @@ hologram:
   - '&4&lCAIXA BOSSES'
   - ''
   - '&4Opções de uso:'
-  - '&fBotão Esquerdo &8➟ &7Preview'
-  - '&fBotão Direito &8➟ &7Abrir'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
 
 # Slot que esta crate ocupa no menu /crates.
 slot: 14

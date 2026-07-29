@@ -1,13 +1,11 @@
 # Netuno — leggings. Premium: XP e corais fortes.
 item:
-  display: "&9&lCalças de Netuno"
+  display: "&9Calça de Netuno"
   material: LEATHER_LEGGINGS
   color: "#1565C0"
   lore:
     - ""
-    - " &7O poder do rei dos mares."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

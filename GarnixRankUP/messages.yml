@@ -8,8 +8,8 @@ rank-not-released: '&cEste rank ainda não foi liberado. Liberação: &f{date}'
 insufficient:
 - ''
 - '  &cVocê não tem recursos suficientes para evoluir.'
-- '  &7Custos necessários:'
-- '  {costs}'
+- '  &7Recursos necessários:'
+- '{costs}'
 - ''
 # Currency cost line. Placeholders: {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
 cost-line: '  &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'

@@ -53,7 +53,7 @@ mine-icon:
   - ' &8 ▪ &fNível: &7{level} '
   - ''
   - ' &8Composição da mina:'
-  - ' {block_list}'
+  - '{block_list}'
   - ''
   - '&6Clique para entrar.'
   flags:

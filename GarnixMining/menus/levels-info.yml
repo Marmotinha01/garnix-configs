@@ -25,7 +25,7 @@ level-icon:
   - ''
   - ' &8 ▪ &fXP necessário: &7{xp} '
   - ''
-  - ' &8Composição da mina: '
+  - ' &8Composição da mina:'
   - '{block_list}'
   - ''
 

@@ -5,9 +5,7 @@ item:
   color: "#1DE9B6"
   lore:
     - ""
-    - " &7Abençoado pelo canto das sereias."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

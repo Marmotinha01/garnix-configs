@@ -5,9 +5,7 @@ item:
   color: "#8E24AA"
   lore:
     - ""
-    - " &7Forjado nas profundezas abissais."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

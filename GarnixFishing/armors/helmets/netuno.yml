@@ -1,13 +1,11 @@
 # Netuno — helmet. Premium: XP e corais fortes.
 item:
-  display: "&9&lCapacete de Netuno"
+  display: "&9Capacete de Netuno"
   material: LEATHER_HELMET
   color: "#1565C0"
   lore:
     - ""
-    - " &7O poder do rei dos mares."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

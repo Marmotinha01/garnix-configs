@@ -1,13 +1,11 @@
 # Netuno — chestplate. Premium: XP e corais fortes.
 item:
-  display: "&9&lPeitoral de Netuno"
+  display: "&9Peitoral de Netuno"
   material: LEATHER_CHESTPLATE
   color: "#1565C0"
   lore:
     - ""
-    - " &7O poder do rei dos mares."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:

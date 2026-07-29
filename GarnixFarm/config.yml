@@ -70,7 +70,7 @@ hoe-item:
   - ' &e▎ &fSkin: {skin-display} &a+&l{skin-bonus}&a% '
   - '' 
   - '&eOpções de uso:'
-  - '&fBotão Dir. + SHIFT &8➟ &7Gerenciar'
+  - '&fBotão dir. + SHIFT &8➟ &7Gerenciar'
   enchant-entry: ' &8◗ &7{enchant} {level} '
   no-enchants: ' &8◗ &cNenhum encantamento '
 
@@ -115,8 +115,8 @@ booster-icon:
   activation-lore:
   - ''
   - '&eOpções de uso:'
-  - '&fBotão Direito &8➟ &7Ativar'
-  - '&fBotão Dir. + SHIFT &8➟ &7Juntar'
+  - '&fBotão direito &8➟ &7Ativar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 # Item de forja (clique-direito abre). Consumido ao forjar com sucesso.
 forge-icon:

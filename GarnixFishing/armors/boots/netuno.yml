@@ -1,13 +1,11 @@
 # Netuno — boots. Premium: XP e corais fortes.
 item:
-  display: "&9&lBotas de Netuno"
+  display: "&9Bota de Netuno"
   material: LEATHER_BOOTS
   color: "#1565C0"
   lore:
     - ""
-    - " &7O poder do rei dos mares."
-    - ""
-    - " &fBônus:"
+    - " &fBônus: "
     - "{bonus}"
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:
