@@ -16,7 +16,7 @@ messages:
 icon:
   material: INK_SACK
   data: 12
-  display: '&b&lKit Imortal Diário'
+  display: '&b&lKIT IMORTAL DIARIO'
   lore:
   - '&7Confira os itens que'
   - '&7vêm dentro deste kit.'
@@ -25,7 +25,7 @@ icon:
 
 locked-icon:
   material: BARRIER
-  display: '&cKit Imortal Diário'
+  display: '&c&lKIT IMORTAL DIARIO'
   lore:
   - '&7Confira os itens que'
   - '&7vêm dentro deste kit.'

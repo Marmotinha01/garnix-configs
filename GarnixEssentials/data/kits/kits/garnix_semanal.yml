@@ -16,7 +16,7 @@ messages:
 icon:
   material: STAINED_GLASS_PANE
   data: 1
-  display: '&6&lKit Garnix Semanal'
+  display: '&6&lKIT GARNIX SEMANAL'
   lore:
   - '&7Confira os itens que'
   - '&7vêm dentro deste kit.'
@@ -25,7 +25,7 @@ icon:
 
 locked-icon:
   material: BARRIER
-  display: '&cKit Garnix Semanal'
+  display: '&c&lKIT GARNIX SEMANAL'
   lore:
   - '&7Confira os itens que'
   - '&7vêm dentro deste kit.'

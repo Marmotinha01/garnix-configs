@@ -10,7 +10,7 @@ shape:
 
 empty-icon:
   slot: 22
-  material: BARRIER
+  material: BOWL
   amount: 0
   display: '&cVazio'
   lore:

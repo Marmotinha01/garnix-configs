@@ -16,7 +16,7 @@ messages:
 icon:
   material: INK_SACK
   data: 1
-  display: '&4&lKit Supremo Diário'
+  display: '&4&lKIT SUPREMO DIARIO'
   lore:
   - '&7Confira os itens que'
   - '&7vêm dentro deste kit.'
@@ -25,7 +25,7 @@ icon:
 
 locked-icon:
   material: BARRIER
-  display: '&cKit Supremo Diário'
+  display: '&c&lKIT SUPREMO DIARIO'
   lore:
   - '&7Confira os itens que'
   - '&7vêm dentro deste kit.'

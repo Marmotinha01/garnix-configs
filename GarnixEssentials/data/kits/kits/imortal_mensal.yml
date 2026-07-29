@@ -16,7 +16,7 @@ messages:
 icon:
   material: STAINED_GLASS
   data: 3
-  display: '&b&lKit Imortal Mensal'
+  display: '&b&lKIT IMORTAL MENSAL'
   lore:
   - '&7Confira os itens que'
   - '&7vêm dentro deste kit.'
@@ -25,7 +25,7 @@ icon:
 
 locked-icon:
   material: BARRIER
-  display: '&cKit Imortal Mensal'
+  display: '&c&lKIT IMORTAL MENSAL'
   lore:
   - '&7Confira os itens que'
   - '&7vêm dentro deste kit.'
