@@ -9,13 +9,13 @@ glow-active: true
 
 lore-active:
 - ''
-- ' &8 ▪ &fTempo restante: &7{remaining} '
+- '&8 ▪ &fTempo restante: &7{remaining} '
 - ''
 - '&eVIP ativo no momento.'
 
 lore-inactive:
 - ''
-- ' &8 ▪ &fTempo restante: &e{remaining} '
+- '&8 ▪ &fTempo restante: &e{remaining} '
 - ''
 - '&aClique para trocar.'
 

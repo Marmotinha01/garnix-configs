@@ -23,8 +23,8 @@ back-icon:
 
 challenge-lore:
 - ''
-- ' &8 ▪ &fAposta: {currency_prefix}{amount} '
-- ' &8 ▪ &fExpira em: &c{time_remaining} '
+- '&8 ▪ &fAposta: {currency_prefix}{amount} '
+- '&8 ▪ &fExpira em: &c{time_remaining} '
 - '{tax_info}'
 - ''
 - '&eClique para cancelar.'

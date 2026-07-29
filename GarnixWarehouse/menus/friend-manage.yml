@@ -31,6 +31,6 @@ toggle-status:
 
 permission-lore:
 - ''
-- ' &8 ▪ &fPermitido: {status} '
+- '&8 ▪ &fPermitido: {status} '
 - ''
 - '&eClique para alternar.'

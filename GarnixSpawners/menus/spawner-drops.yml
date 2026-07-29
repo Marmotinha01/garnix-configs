@@ -8,7 +8,7 @@ shape:
 
 drop-lore:
 - ''
-- ' &8 ▪ &fValor: {symbol_color}{symbol}{primary_color}{amount} {currency} '
+- '&8 ▪ &fValor: {symbol_color}{symbol}{primary_color}{amount} {currency} '
 - ''
 - '&aClique para coletar.'
 
@@ -38,7 +38,7 @@ sell-all-empty-icon:
   - '&7Recolha de uma vez tudo'
   - '&7que os mobs dropparam.'
   - ''
-  - ' &8 ▾ &cNenhum drop para coletar. '
+  - '&8 ▾ &cNenhum drop para coletar. '
   - ''
 
 back-icon:

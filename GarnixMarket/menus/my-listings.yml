@@ -24,9 +24,9 @@ back-icon:
 # Linhas adicionadas ABAIXO da lore original do item anunciado.
 listing-lore:
 - ''
-- ' &8 ▪ &fPreço: {currency_prefix}{price} '
+- '&8 ▪ &fPreço: {currency_prefix}{price} '
 - '{tax_info}'
-- ' &8 ▪ &fExpira em: &c{time_remaining} '
+- '&8 ▪ &fExpira em: &c{time_remaining} '
 - ''
 - '&eClique para cancelar.'
 

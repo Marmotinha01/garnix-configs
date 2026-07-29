@@ -16,9 +16,9 @@ shape:
 
 info-lore:
 - ''
-- ' &8 ▪ &fNível: &6&l{level} '
-- ' &8 ▪ &fPeso: &c&l{weight}&ckg '
-- ' &8 ▪ &fChance: &e&l{chance}&e% '
+- '&8 ▪ &fNível: &6&l{level} '
+- '&8 ▪ &fPeso: &c&l{weight}&ckg '
+- '&8 ▪ &fChance: &e&l{chance}&e% '
 - ''
 
 back-icon:

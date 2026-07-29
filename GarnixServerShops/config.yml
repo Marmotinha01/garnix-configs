@@ -39,15 +39,15 @@ ui:
     locked-hidden-date: §k??/??/???? ??:??
     locked-lore:
     - ''
-    - ' &8 ▪ &fLibera em: &7{release-date} '
+    - '&8 ▪ &fLibera em: &7{release-date} '
     - ''
     - ' &8 ▾ &cItem ainda bloqueado. '
     - ''
 
     product-lore:
     - ''
-    - ' &8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
-    - ' &8 ▪ &fQuantia: &f{amount} '
+    - '&8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
+    - '&8 ▪ &fQuantia: &f{amount} '
     - ''
     - '&6Opções de uso:'
     - '{purchase-hint}'
@@ -71,15 +71,15 @@ ui:
     locked-hidden-date: §k??/??/???? ??:??
     locked-lore:
     - ''
-    - ' &8 ▪ &fLibera em: &7{release-date} '
+    - '&8 ▪ &fLibera em: &7{release-date} '
     - ''
     - ' &8 ▾ &cItem ainda bloqueado. '
     - ''
 
     product-lore:
     - ''
-    - ' &8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
-    - ' &8 ▪ &fSeu desconto: {discount} '
+    - '&8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
+    - '&8 ▪ &fSeu desconto: {discount} '
     - ''
     - '&aOpções de uso:'
     - '{purchase-hint}'

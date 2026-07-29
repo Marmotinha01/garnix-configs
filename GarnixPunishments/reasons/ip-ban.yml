@@ -6,8 +6,8 @@ title: Motivos - Ban de IP
 rows: 6
 
 item-lore:
-- ' &8 ▪ &fDuração: &7{duration} '
-- ' &8 ▪ &fAlcance: &7Todas as contas do IP '
+- '&8 ▪ &fDuração: &7{duration} '
+- '&8 ▪ &fAlcance: &7Todas as contas do IP '
 - ''
 - '&aClique para selecionar.'
 

@@ -8,7 +8,7 @@ default:
     - '&7Mantém a sua máquina'
     - '&7produzindo sem parar.'
     - ''
-    - ' &8 ▪ &fLitros: &c{liters} '
+    - '&8 ▪ &fLitros: &c{liters} '
     - ''
     - '&eOpções de uso:'
     - '&fBotão direito &8➟ &7Aplicar'

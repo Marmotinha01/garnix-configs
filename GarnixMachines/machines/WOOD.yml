@@ -33,7 +33,7 @@ machine-item:
   - '&7Produz sozinha dentro'
   - '&7do seu terreno.'
   - ''
-  - ' &8 ▪ &fQuantia: &7{amount} '
+  - '&8 ▪ &fQuantia: &7{amount} '
   - ''
   - '&aColoque no seu terreno.'
 

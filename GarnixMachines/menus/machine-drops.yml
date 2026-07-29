@@ -8,13 +8,13 @@ shape:
 
 drop-currency-lore:
 - ''
-- ' &8 ▪ &fValor: {symbol_color}{symbol}{primary_color}{amount} {currency} '
+- '&8 ▪ &fValor: {symbol_color}{symbol}{primary_color}{amount} {currency} '
 - ''
 - '&aClique para coletar.'
 
 drop-item-lore:
 - ''
-- ' &8 ▪ &fQuantia: &7{amount} '
+- '&8 ▪ &fQuantia: &7{amount} '
 - ''
 - '&aClique para coletar.'
 

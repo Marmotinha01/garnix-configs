@@ -21,8 +21,8 @@ duel-bet-icon:
   - '&7Duelo com aposta em'
   - '&7andamento neste momento.'
   - ''
-  - ' &8 ▪ &fModo: &7{mode} '
-  - ' &8 ▪ &fAposta: {symbol_color}{symbol} {primary_color}{amount} {currency} '
+  - '&8 ▪ &fModo: &7{mode} '
+  - '&8 ▪ &fAposta: {symbol_color}{symbol} {primary_color}{amount} {currency} '
   - ''
   - '&aClique para assistir.'
   flags:
@@ -35,7 +35,7 @@ duel-no-bet-icon:
   - '&7Duelo amistoso em'
   - '&7andamento neste momento.'
   - ''
-  - ' &8 ▪ &fModo: &7{mode} '
+  - '&8 ▪ &fModo: &7{mode} '
   - ''
   - '&aClique para assistir.'
   flags:

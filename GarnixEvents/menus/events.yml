@@ -11,7 +11,7 @@ stats-icon:
   - ' &8Eventos vencidos:'
   - '{events}'
   - ''
-  - ' &8 ▪ &fVitórias totais: &a{total} '
+  - '&8 ▪ &fVitórias totais: &a{total} '
   - ''
   # Usada quando o jogador ainda não venceu nenhum evento: sem o total, que
   # repetiria o que a linha de aviso já diz. Apague para usar sempre a de cima.
@@ -19,7 +19,7 @@ stats-icon:
   - '&7Seu desempenho em cada um'
   - '&7dos eventos do servidor.'
   - ''
-  - ' &8 ▾ &cNenhuma vitória ainda. '
+  - '&8 ▾ &cNenhuma vitória ainda. '
   - ''
 
 stats:
@@ -40,14 +40,14 @@ schedule-icon:
   - '&7evento de cada dia.'
   - ''
   - ' &8Durante a semana:'
-  - ' &8 ▪ &f12:00 &8- &7Evento de arena '
-  - ' &8 ▪ &f16:00 &8- &7Evento de chat '
-  - ' &8 ▪ &f20:00 &8- &7Evento de arena '
+  - '&8 ▪ &f12:00 &8- &7Evento de arena '
+  - '&8 ▪ &f16:00 &8- &7Evento de chat '
+  - '&8 ▪ &f20:00 &8- &7Evento de arena '
   - ''
   - ' &8Fim de semana:'
-  - ' &8 ▪ &f15:00 &8- &7Evento de arena '
-  - ' &8 ▪ &f19:00 &8- &7Evento de chat '
-  - ' &8 ▪ &f21:00 &8- &7Evento de arena '
+  - '&8 ▪ &f15:00 &8- &7Evento de arena '
+  - '&8 ▪ &f19:00 &8- &7Evento de chat '
+  - '&8 ▪ &f21:00 &8- &7Evento de arena '
   - ''
   - '&8&oOs horários podem variar.'
 

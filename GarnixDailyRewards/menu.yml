@@ -8,7 +8,7 @@ cooldown-icon:
   - '&7Esta recompensa já foi'
   - '&7coletada recentemente.'
   - ''
-  - ' &8 ▪ &fDisponível em: &e{time} '
+  - '&8 ▪ &fDisponível em: &e{time} '
   - ''
 
 no-permission-icon:

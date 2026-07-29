@@ -29,8 +29,8 @@ info-icon:
   - '&7Onde você está na'
   - '&7jornada de ranks.'
   - ''
-  - ' &8 ▪ &fRank: {rank_color}{rank_name} '
-  - ' &8 ▪ &fPrestígio: &b★{prestige} '
+  - '&8 ▪ &fRank: {rank_color}{rank_name} '
+  - '&8 ▪ &fPrestígio: &b★{prestige} '
   - ''
 
 ranking-icon:
@@ -88,7 +88,7 @@ unreleased-icon:
   - '&7Este rank ainda não foi'
   - '&7liberado no servidor.'
   - ''
-  - ' &8 ▪ &fLibera em: &7{date} '
+  - '&8 ▪ &fLibera em: &7{date} '
   - ''
   - ' &8 ▾ &cAinda não foi liberado. '
   - ''

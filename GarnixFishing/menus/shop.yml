@@ -8,7 +8,7 @@ rows: 6
 # hook: {symbol_color}{symbol}{primary_color}{amount} {currency} (singular/plural).
 buy-lore:
 - ''
-- ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{amount} {currency} '
+- '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{amount} {currency} '
 - ''
 - '&aClique para comprar.'
 

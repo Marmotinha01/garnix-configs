@@ -35,8 +35,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   coral:
     display: '&3Coral'
@@ -50,8 +50,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   escama:
     display: '&6Escama'
@@ -65,8 +65,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   prata:
     display: '&7Prata'
@@ -80,8 +80,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   turquesa:
     display: '&bTurquesa'
@@ -95,8 +95,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   abissita:
     display: '&aAbissita'
@@ -110,8 +110,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   serenita:
     display: '&5Serenita'
@@ -125,8 +125,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   oceanita:
     display: '&1Oceanita'
@@ -141,8 +141,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   perola:
     display: '&9Pérola'
@@ -157,8 +157,8 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   tempestita:
     display: '&dTempestita'
@@ -173,5 +173,5 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - ' &8 ▪ &fCorais: &a+&l{bonus}&a% '
-      - ' &8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '

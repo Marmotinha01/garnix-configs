@@ -11,7 +11,7 @@ shape:
 
 chance-lore:
 - ''
-- ' &8 ▪ &fChance: &c{chance}% '
+- '&8 ▪ &fChance: &c{chance}% '
 
 filter-status:
   is-filtered:
@@ -39,7 +39,7 @@ remove-icon:
   - '&7Retire as chaves guardadas'
   - '&7e receba o item de volta.'
   - ''
-  - ' &8 ▪ &fDisponível: &7x&l{keys} '
+  - '&8 ▪ &fDisponível: &7x&l{keys} '
   - ''
   - '&cClique para escolher.'
 
@@ -51,6 +51,6 @@ open-icon:
   - '&7Abra as chaves guardadas'
   - '&7e receba as recompensas.'
   - ''
-  - ' &8 ▪ &fDisponível: &7x&l{keys} '
+  - '&8 ▪ &fDisponível: &7x&l{keys} '
   - ''
   - '&aClique para abrir &ax&l{max}&a.'

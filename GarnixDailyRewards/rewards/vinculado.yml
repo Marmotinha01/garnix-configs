@@ -16,7 +16,7 @@ collect-icon:
   - '&7Recompensa diária para'
   - '&7quem vinculou o discord.'
   - ''
-  - ' &8 ▪ &fRecompensa: &6❂50 Cash '
+  - '&8 ▪ &fRecompensa: &6❂50 Cash '
   - ''
   - '&aClique para coletar.'
 
@@ -27,5 +27,5 @@ no-permission-icon:
   - '&7Destinada a jogadores'
   - '&7que vincularam o discord.'
   - ''
-  - ' &8 ▪ &fUse &e/comovincular&f. '
+  - '&8 ▪ &fUse &e/comovincular&f. '
   - ''

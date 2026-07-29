@@ -7,8 +7,8 @@ info-icon:
   - '&7O que está guardado no'
   - '&7armazém deste terreno.'
   - ''
-  - ' &8 ▪ &fQuantia: &7{amount} '
-  - ' &8 ▪ &fValor: {value} '
+  - '&8 ▪ &fQuantia: &7{amount} '
+  - '&8 ▪ &fValor: {value} '
   - ''
 
 sell-icon:
@@ -19,7 +19,7 @@ sell-icon:
   - '&7Venda de uma vez tudo'
   - '&7que está no armazém.'
   - ''
-  - ' &8 ▪ &fVender por: {value} '
+  - '&8 ▪ &fVender por: {value} '
   - ''
   - '&aClique para vender.'
   lore-empty:

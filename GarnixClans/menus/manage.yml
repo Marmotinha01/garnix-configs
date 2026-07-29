@@ -10,7 +10,7 @@ tag-colour-icon:
   - '&7Troque as cores da tag'
   - '&7mantendo as mesmas letras.'
   - ''
-  - ' &8 ▪ &fAtual: &r{tag} '
+  - '&8 ▪ &fAtual: &r{tag} '
   - ''
   - '&bClique para alterar.'
 
@@ -22,7 +22,7 @@ rename-icon:
   - '&7Altere o nome exibido do'
   - '&7seu clan para todos.'
   - ''
-  - ' &8 ▪ &fAtual: &f{clan} '
+  - '&8 ▪ &fAtual: &f{clan} '
   - ''
   - '&eClique para alterar.'
 

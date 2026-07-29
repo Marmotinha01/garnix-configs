@@ -30,8 +30,8 @@ info-icon:
   - '&7Seu saldo e o total de'
   - '&7culturas que você colheu.'
   - ''
-  - ' &8 ▪ &fSementes: {symbol_color}{symbol}{primary_color}{sementes} '
-  - ' &8 ▪ &fColhidas: &7{crops} '
+  - '&8 ▪ &fSementes: {symbol_color}{symbol}{primary_color}{sementes} '
+  - '&8 ▪ &fColhidas: &7{crops} '
   - ''
 
 # Anexado ao ícone de cada encantamento (abaixo do máximo).

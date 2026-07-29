@@ -70,8 +70,8 @@ send-package-icon:
 
 mail-lore:
 - ''
-- ' &8 ▪ &fTotal: &ax{total} '
-- ' &8 ▪ &fRemetente: &7{sender} '
-- ' &8 ▪ &fData: &7{date} '
+- '&8 ▪ &fTotal: &ax{total} '
+- '&8 ▪ &fRemetente: &7{sender} '
+- '&8 ▪ &fData: &7{date} '
 - ''
 - '&aClique para resgatar.'

@@ -5,7 +5,7 @@ title: Motivos - Aviso
 rows: 6
 
 item-lore:
-- ' &8 ▪ &fExpira em: &7{duration} '
+- '&8 ▪ &fExpira em: &7{duration} '
 - ''
 - '&aClique para selecionar.'
 

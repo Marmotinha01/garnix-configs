@@ -24,7 +24,7 @@ bombs:
     lore:
     - '&7Explode uma área da mina.'
     - ''
-    - ' &8 ▪ &fÁrea: &42x2 '
+    - '&8 ▪ &fÁrea: &42x2 '
     - ''
     - '&4Opções de uso:'
     - '&fBotão direito &8➟ &7Usar'
@@ -35,7 +35,7 @@ bombs:
     lore:
     - '&7Explode uma área da mina.'
     - ''
-    - ' &8 ▪ &fÁrea: &44x4 '
+    - '&8 ▪ &fÁrea: &44x4 '
     - ''
     - '&4Opções de uso:'
     - '&fBotão direito &8➟ &7Usar'
@@ -46,7 +46,7 @@ bombs:
     lore:
     - '&7Explode uma área da mina.'
     - ''
-    - ' &8 ▪ &fÁrea: &46x6 '
+    - '&8 ▪ &fÁrea: &46x6 '
     - ''
     - '&4Opções de uso:'
     - '&fBotão direito &8➟ &7Usar'
@@ -57,7 +57,7 @@ bombs:
     lore:
     - '&7Explode uma área da mina.'
     - ''
-    - ' &8 ▪ &fÁrea: &48x8 '
+    - '&8 ▪ &fÁrea: &48x8 '
     - ''
     - '&4Opções de uso:'
     - '&fBotão direito &8➟ &7Usar'

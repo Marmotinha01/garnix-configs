@@ -50,7 +50,7 @@ mine-icon:
   - '&7a minerar os blocos dela.'
   - ''
   - ' &8Evolução da área:'
-  - ' &8 ▪ &fNível: &7{level} '
+  - '&8 ▪ &fNível: &7{level} '
   - ''
   - ' &8Composição da mina:'
   - '{block_list}'

@@ -3,7 +3,7 @@ rows: 5
 
 crate-lore:
 - ''
-- ' &8 ▪ &fArmazenadas: &a{amount} '
+- '&8 ▪ &fArmazenadas: &a{amount} '
 - ''
 - '&aClique para gerenciar.'
 
@@ -15,7 +15,7 @@ opens-upgrade-icon:
   - '&7Aumente quantas chaves'
   - '&7você abre p/clique.'
   - ''
-  - ' &8 ▪ &fAgora: &7{keys} p/clique '
+  - '&8 ▪ &fAgora: &7{keys} p/clique '
   - ''
 
 opens-upgrade-lore-status:
@@ -26,8 +26,8 @@ opens-upgrade-lore-status:
   upgrade-available:
   - ''
   - ' &8Próximo nível:'
-  - ' &8 ▪ &fAbre: &7{next-keys} p/clique '
-  - ' &8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{next-cost} &7{currency} '
+  - '&8 ▪ &fAbre: &7{next-keys} p/clique '
+  - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{next-cost} &7{currency} '
   - ''
   can-afford: '&aClique para evoluir.'
   cannot-afford: ' &8 ▾ &cSaldo insuficiente.'

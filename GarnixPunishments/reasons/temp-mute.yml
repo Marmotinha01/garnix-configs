@@ -5,7 +5,7 @@ title: Motivos - Mute Temporário
 rows: 6
 
 item-lore:
-- ' &8 ▪ &fDuração: &7{duration} '
+- '&8 ▪ &fDuração: &7{duration} '
 - ''
 - '&aClique para selecionar.'
 

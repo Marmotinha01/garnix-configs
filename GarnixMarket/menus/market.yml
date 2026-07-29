@@ -35,16 +35,16 @@ info-icon:
   - '&7Anuncie o item que está'
   - '&7na sua mão neste momento.'
   - ''
-  - ' &8 ▪ &b/mercado vender <valor> '
+  - '&8 ▪ &b/mercado vender <valor> '
   - ''
   - '&eClique para saber mais.'
 
 # Linhas adicionadas ABAIXO da lore original do item à venda.
 listing-lore:
 - ''
-- ' &8 ▪ &fVendedor: &7{seller} '
-- ' &8 ▪ &fPreço: {currency_prefix}{price} '
-- ' &8 ▪ &fExpira em: &c{time_remaining} '
+- '&8 ▪ &fVendedor: &7{seller} '
+- '&8 ▪ &fPreço: {currency_prefix}{price} '
+- '&8 ▪ &fExpira em: &c{time_remaining} '
 - ''
 - '{action}'
 

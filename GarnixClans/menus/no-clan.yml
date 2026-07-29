@@ -20,7 +20,7 @@ online-clans-icon:
   - '&7Veja quais clans possuem'
   - '&7membros jogando agora.'
   - ''
-  - ' &8 ▪ &fClans existentes: &7{clans} '
+  - '&8 ▪ &fClans existentes: &7{clans} '
   - ''
   - '&aClique para acessar.'
 
@@ -32,7 +32,7 @@ invites-icon:
   - '&7Convites que outros clans'
   - '&7enviaram para você entrar.'
   - ''
-  - ' &8 ▪ &fPendentes: &7{invites} '
+  - '&8 ▪ &fPendentes: &7{invites} '
   - ''
   - '&eClique para acessar.'
 

@@ -21,6 +21,6 @@ head-template:
   - '&7Cabeças guardadas que'
   - '&7caíram dos seus mobs.'
   - ''
-  - ' &8 ▪ &fQuantia: &e{amount} '
+  - '&8 ▪ &fQuantia: &e{amount} '
   - ''
   - '&aClique para retirar.'

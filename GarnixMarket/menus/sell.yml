@@ -7,7 +7,7 @@ item-icon:
   slot: 11
   lore:
   - ''
-  - ' &8 ▪ &fPreço: {currency_prefix}{price} '
+  - '&8 ▪ &fPreço: {currency_prefix}{price} '
   - '{tax_info}'
   - ''
   - '&7Este item será anunciado.'

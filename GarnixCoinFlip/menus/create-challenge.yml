@@ -20,7 +20,7 @@ amount-icon:
   - '&7Defina quanto cada lado'
   - '&7arrisca neste desafio.'
   - ''
-  - ' &8 ▪ &fAtual: {currency_prefix}{amount} '
+  - '&8 ▪ &fAtual: {currency_prefix}{amount} '
   - ''
   - '&aClique para alterar.'
 

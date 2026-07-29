@@ -22,7 +22,7 @@ open-busy-icon:
   - '&7O baú só pode ser acessado'
   - '&7por um membro de cada vez.'
   - ''
-  - ' &8 ▪ &fEm uso por: &7{occupant} '
+  - '&8 ▪ &fEm uso por: &7{occupant} '
   - ''
 
 history-icon:
@@ -33,7 +33,7 @@ history-icon:
   - '&7Tudo que entrou e saiu do'
   - '&7baú do clan, com autores.'
   - ''
-  - ' &8 ▪ &fMovimentações: &7{movements} '
+  - '&8 ▪ &fMovimentações: &7{movements} '
   - ''
   - '&eClique para acessar.'
 
