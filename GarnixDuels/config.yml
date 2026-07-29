@@ -31,6 +31,7 @@ duel:
   - duels
 
 # Kit do modo "Kit Setado" (removido no fim do duelo; nada cai no chão).
+# Pode ser montado em jogo: equipe o loadout e rode /x1 setkit (reescreve armor e items).
 kit:
   armor:
     helmet:

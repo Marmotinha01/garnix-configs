@@ -9,6 +9,11 @@ arena:
   cabin-set: '&aCamarote definido em &f{x}, {y}, {z}&a.'
   not-configured: '&cA arena ainda não foi configurada.'
 
+# Kit do modo "Kit Setado", salvo pelo /x1 setkit.
+kit:
+  set: '&aKit dos duelos salvo com &f{count} &aitem(ns) do seu inventário.'
+  empty: '&cSeu inventário está vazio. Equipe o kit desejado antes de usar o setkit.'
+
 challenge:
   self: '&cVocê não pode desafiar a si mesmo.'
   no-opponent: '&cSelecione um oponente primeiro.'
@@ -145,6 +150,7 @@ admin-help:
 - '  &c/x1 setpos2'
 - '  &c/x1 setexit'
 - '  &c/x1 setcabin'
+- '  &c/x1 setkit'
 - ''
 - '  &c/setmito <jogador>'
 - '  &c/sortearmito'

@@ -225,6 +225,8 @@ command-protect:
     - '/znpcs'
 
 # Chain Arena
+# Ao entrar, o jogador é forçado para o modo survival e continua nele ao sair.
+# Comandos liberados dentro da arena. Quem tem essentials.chain.bypass ignora a lista.
 chain-allowed-commands:
 - /chain
 - /tell

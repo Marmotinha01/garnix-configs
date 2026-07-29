@@ -325,15 +325,28 @@ clearlag:
   forced: '&aLimpeza forçada executada com sucesso.'
 
 # Chain Arena
+# {player} = quem entrou / saiu / morreu   {killer} = quem eliminou
+# entered / left / died vão na action bar de todos que estão na arena;
+# enter-self / leave-self vão no chat de quem entrou ou saiu.
 chain:
-  entered: '&f{player} &aentrou na arena.'
-  left: '&f{player} &csaiu da arena.'
+  enter-self: '&aVocê entrou na arena chain.'
+  entered: '&f{player} &aentrou na arena chain. &7(/chain)'
+  leave-self: '&cVocê saiu da arena chain.'
+  left: '&f{player} &csaiu da arena chain.'
   died: '&f{player} &cfoi eliminado por &f{killer}&c.'
   not-set: '&cA arena chain ainda não foi configurada.'
-  setspawn: '&aSpawn da chain definido com sucesso.'
-  setexit: '&aSaída da chain definida com sucesso.'
-  setkit: '&aKit da arena salvo com sucesso.'
-  blocked-command: '&cComando bloqueado dentro da arena.'
+  # Mostrada no lugar da not-set para quem tem essentials.admin.
+  not-set-admin: '&cA arena chain está incompleta, falta definir: &7{missing}&c.'
+  missing:
+    spawn: 'spawn'
+    exit: 'exit'
+    kit: 'kit'
+    separator: '&8, &7'
+  setspawn: '&aSpawn da chain definido no local onde você está.'
+  setexit: '&aSaída da chain definida no local onde você está.'
+  setkit: '&aKit da chain salvo com &f{count} &aitem(ns) do seu inventário.'
+  setkit-empty: '&cSeu inventário está vazio. Equipe o kit desejado antes de usar o setkit.'
+  blocked-command: '&cComando bloqueado dentro da arena, saia com /chain sair.'
   already-in: '&cVocê já está na arena.'
   not-in: '&cVocê não está na arena.'
   inventory-not-empty: '&cSeu inventário precisa estar vazio para entrar.'
