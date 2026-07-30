@@ -42,12 +42,18 @@ rewards:
     display: '&6Moedas'
     currency-id: coins
     amount: '10800'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &710.8K '
   secundaria:
     type: CURRENCY
     chance: 45.0
     display: '&bgemas'
     currency-id: gemas
     amount: '200'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &7200 '
   chave-boss:
     type: COMMAND
     chance: 30.0
@@ -57,7 +63,10 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      display: '&c&lChave de Boss'
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga abatendo os bosses'
+      - '&7que aparecem no servidor.'
 
   fragmento:
     type: COMMAND
@@ -67,7 +76,10 @@ rewards:
     amount: 8
     icon:
       material: BONE
+      glow: true
       display: '&4Presa Colossal'
+      lore:
+      - '&8Fragmento'
 
   livro:
     type: COMMAND
@@ -77,5 +89,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&4Livro de Massacre 2'
+      display: '&4Livro de Massacre &7{level}'
+      lore:
+      - '&7Quantos mobs a sua lâmina'
+      - '&7abate em um único golpe.'
+      - ''
+      - '&8 ▪ &fMassacre: &4{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'

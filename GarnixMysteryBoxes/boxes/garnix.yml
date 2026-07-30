@@ -98,8 +98,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&a&lLivro de Pilhagem 3'
+      display: '&aLivro de Pilhagem &7{level}'
+      lore:
+      - '&7Aumenta os drops que os'
+      - '&7mobs deixam ao morrer.'
+      - ''
+      - '&8 ▪ &fPilhagem: &a{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   massacre-5:
     type: COMMAND
@@ -109,8 +116,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&4&lLivro de Massacre 5'
+      display: '&4Livro de Massacre &7{level}'
+      lore:
+      - '&7Quantos mobs a sua lâmina'
+      - '&7abate em um único golpe.'
+      - ''
+      - '&8 ▪ &fMassacre: &4{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   ceifador-3:
     type: COMMAND
@@ -120,8 +134,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&5&lLivro de Ceifador 3'
+      display: '&dLivro de Ceifador &7{level}'
+      lore:
+      - '&7Chance de dobrar as'
+      - '&7cabeças que o mob solta.'
+      - ''
+      - '&8 ▪ &fCeifador: &d{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   speed-5:
     type: COMMAND
@@ -131,8 +152,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&b&lLivro de Correnteza 5'
+      display: '&bLivro de Correnteza &7{level}'
+      lore:
+      - '&7Puxa o peixe mais rápido'
+      - '&7para a sua vara.'
+      - ''
+      - '&8 ▪ &fCorrenteza: &b{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   double-5:
     type: COMMAND
@@ -142,8 +170,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&d&lLivro de Fartura 5'
+      display: '&dLivro de Fartura &7{level}'
+      lore:
+      - '&7Chance de fisgar mais de'
+      - '&7uma recompensa por vez.'
+      - ''
+      - '&8 ▪ &fFartura: &d{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   luck-5:
     type: COMMAND
@@ -153,8 +188,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&a&lLivro de Faro Aguçado 5'
+      display: '&aLivro de Faro Aguçado &7{level}'
+      lore:
+      - '&7Aumenta a chance de vir'
+      - '&7recompensa melhor.'
+      - ''
+      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   vaga:
     type: COMMAND
@@ -186,9 +228,13 @@ rewards:
     amount: 1
     icon:
       material: STICK
+      glow: true
       display: '&4Matadora Hit-Kill'
-      flags:
-      - HIDE_ATTRIBUTES
+      lore:
+      - ''
+      - ' &8Informações: '
+      - '&8 ▪ &fKill-Stack: &e{kill_stack} '
+      - '&8 ▪ &fBosses abatidos: &e{kills} '
 
   combustivel-inf:
     type: COMMAND

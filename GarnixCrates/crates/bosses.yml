@@ -45,16 +45,22 @@ rewards:
 
   coins:
     type: CURRENCY
-    chance: 51.9459
+    chance: 51.9659
     display: '&6Moedas'
     currency-id: coins
     amount: '250'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &7250 '
   secundaria:
     type: CURRENCY
     chance: 28.8617
     display: '&bdracmas'
     currency-id: dracmas
     amount: '25'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &725 '
   combustivel:
     type: COMMAND
     chance: 5.2524
@@ -73,7 +79,10 @@ rewards:
     amount: 5
     icon:
       material: PAPER
+      glow: true
       display: '&eSelo Lacrado'
+      lore:
+      - '&8Fragmento'
 
   secundaria-lote:
     type: CURRENCY
@@ -81,6 +90,9 @@ rewards:
     display: '&bdracmas (lote)'
     currency-id: dracmas
     amount: '500'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &7500 '
   chave-boss:
     type: COMMAND
     chance: 1.2
@@ -90,7 +102,10 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      display: '&c&lChave de Boss'
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga abatendo os bosses'
+      - '&7que aparecem no servidor.'
 
   armadura-baixa:
     type: COMMAND
@@ -113,8 +128,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&4Livro de Massacre 3'
+      display: '&4Livro de Massacre &7{level}'
+      lore:
+      - '&7Quantos mobs a sua lâmina'
+      - '&7abate em um único golpe.'
+      - ''
+      - '&8 ▪ &fMassacre: &4{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   armadura-alta:
     type: COMMAND
@@ -160,11 +182,16 @@ rewards:
     command: lamina givebook {player} pilhagem 3
     amount: 1
     icon:
-      material: BEACON
-      glow: true
-      display: '&a&lLivro de Pilhagem 3'
+      material: ENCHANTED_BOOK
+      display: '&aLivro de Pilhagem &7{level}'
       lore:
-      - '&7O prêmio mais raro desta caixa.'
+      - '&7Aumenta os drops que os'
+      - '&7mobs deixam ao morrer.'
+      - ''
+      - '&8 ▪ &fPilhagem: &a{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   boss-colosso:
     type: COMMAND
@@ -173,8 +200,17 @@ rewards:
     command: boss give boss {player} COLOSSO 1 1
     amount: 1
     icon:
-      material: MAGMA_CREAM
-      display: '&cBoss Colosso'
+      texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
+      display: '{display}'
+      lore:
+      - '&7Invoque este boss dentro'
+      - '&7do seu próprio terreno.'
+      - ''
+      - '&8 ▪ &fVida: &c❤{health} '
+      - '&8 ▪ &fStacks: &7x{stacks} '
+      - ''
+      - '&7Coloque-o em um terreno'
+      - '&7para começar a atacar.'
 
   boss-inferno:
     type: COMMAND
@@ -183,8 +219,17 @@ rewards:
     command: boss give boss {player} INFERNO 1 1
     amount: 1
     icon:
-      material: BLAZE_POWDER
-      display: '&cBoss Inferno'
+      texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
+      display: '{display}'
+      lore:
+      - '&7Invoque este boss dentro'
+      - '&7do seu próprio terreno.'
+      - ''
+      - '&8 ▪ &fVida: &c❤{health} '
+      - '&8 ▪ &fStacks: &7x{stacks} '
+      - ''
+      - '&7Coloque-o em um terreno'
+      - '&7para começar a atacar.'
 
   boss-arauto:
     type: COMMAND
@@ -193,8 +238,17 @@ rewards:
     command: boss give boss {player} ARAUTO 1 1
     amount: 1
     icon:
-      material: ENDER_PEARL
-      display: '&cBoss Arauto'
+      texture: 38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677
+      display: '{display}'
+      lore:
+      - '&7Invoque este boss dentro'
+      - '&7do seu próprio terreno.'
+      - ''
+      - '&8 ▪ &fVida: &c❤{health} '
+      - '&8 ▪ &fStacks: &7x{stacks} '
+      - ''
+      - '&7Coloque-o em um terreno'
+      - '&7para começar a atacar.'
 
   boss-tita:
     type: COMMAND
@@ -203,9 +257,17 @@ rewards:
     command: boss give boss {player} TITA 1 1
     amount: 1
     icon:
-      material: IRON_INGOT
-      glow: true
-      display: '&4&lBoss Titã'
+      texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
+      display: '{display}'
+      lore:
+      - '&7Invoque este boss dentro'
+      - '&7do seu próprio terreno.'
+      - ''
+      - '&8 ▪ &fVida: &c❤{health} '
+      - '&8 ▪ &fStacks: &7x{stacks} '
+      - ''
+      - '&7Coloque-o em um terreno'
+      - '&7para começar a atacar.'
 
   boss-devorador:
     type: COMMAND
@@ -214,9 +276,17 @@ rewards:
     command: boss give boss {player} DEVORADOR 1 1
     amount: 1
     icon:
-      material: NETHER_STAR
-      glow: true
-      display: '&4&lBoss Devorador'
+      texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
+      display: '{display}'
+      lore:
+      - '&7Invoque este boss dentro'
+      - '&7do seu próprio terreno.'
+      - ''
+      - '&8 ▪ &fVida: &c❤{health} '
+      - '&8 ▪ &fStacks: &7x{stacks} '
+      - ''
+      - '&7Coloque-o em um terreno'
+      - '&7para começar a atacar.'
 
   matadora-sombria:
     type: COMMAND
@@ -226,9 +296,14 @@ rewards:
     amount: 1
     icon:
       material: IRON_SWORD
+      glow: true
       display: '&5Matadora Sombria'
-      flags:
-      - HIDE_ATTRIBUTES
+      lore:
+      - ''
+      - ' &8Informações: '
+      - '&8 ▪ &fDano: &e{damage} '
+      - '&8 ▪ &fKill-Stack: &e{kill_stack} '
+      - '&8 ▪ &fBosses abatidos: &e{kills} '
 
   matadora-ancestral:
     type: COMMAND
@@ -238,18 +313,11 @@ rewards:
     amount: 1
     icon:
       material: DIAMOND_SWORD
-      display: '&bMatadora Ancestral'
-      flags:
-      - HIDE_ATTRIBUTES
-
-  autosell:
-    type: COMMAND
-    chance: 0.02
-    display: '&e&lVenda Automática'
-    command: armazem giveautosell {player} 1
-    amount: 1
-    icon:
-      material: HOPPER
       glow: true
-      display: '&e&lVenda Automática'
-
+      display: '&bMatadora Ancestral'
+      lore:
+      - ''
+      - ' &8Informações: '
+      - '&8 ▪ &fDano: &e{damage} '
+      - '&8 ▪ &fKill-Stack: &e{kill_stack} '
+      - '&8 ▪ &fBosses abatidos: &e{kills} '

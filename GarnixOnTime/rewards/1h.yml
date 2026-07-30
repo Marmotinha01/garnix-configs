@@ -31,4 +31,8 @@ rewards:
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
-      display: '&6x3 Chaves RankUP'
+      glow: true
+      display: '&6Chave RankUP'
+      lore:
+      - '&7Consiga subindo de rank'
+      - '&7ao longo da sua jornada.'

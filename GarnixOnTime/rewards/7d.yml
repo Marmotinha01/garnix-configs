@@ -30,5 +30,9 @@ rewards:
     command: 'caixas give farm-ii {player} {amount}'
     amount: 1
     icon:
-      material: ENDER_CHEST
-      display: '&a&lCaixa Fazenda II'
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&a&lCaixa Farm &a[T&lII&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

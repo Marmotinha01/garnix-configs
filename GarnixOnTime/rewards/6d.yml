@@ -30,5 +30,12 @@ rewards:
     command: 'spawner givelimite {player} 1 1'
     amount: 1
     icon:
-      material: MOB_SPAWNER
-      display: '&cLimite de Spawners &7(+1)'
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&7Aumenta quantos spawners'
+      - '&7você pode ter no terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &b{amount} '

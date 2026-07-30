@@ -30,5 +30,12 @@ rewards:
     command: 'maquina givelimite {player} 1 1'
     amount: 1
     icon:
-      material: PISTON_BASE
-      display: '&9Limite de Maquinas &7(+1)'
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&7Aumenta quantas máquinas'
+      - '&7você pode ter no terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &9{amount} '

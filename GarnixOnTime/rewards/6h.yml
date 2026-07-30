@@ -31,4 +31,8 @@ rewards:
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
-      display: '&4x5 Chaves de Boss'
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga abatendo os bosses'
+      - '&7que aparecem no servidor.'

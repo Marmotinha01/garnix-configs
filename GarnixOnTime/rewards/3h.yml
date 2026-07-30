@@ -31,4 +31,7 @@ rewards:
     amount: 15
     icon:
       material: PAPER
-      display: '&ex15 Selo Lacrado'
+      glow: true
+      display: '&eSelo Lacrado'
+      lore:
+      - '&8Fragmento'

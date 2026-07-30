@@ -45,16 +45,22 @@ rewards:
 
   coins:
     type: CURRENCY
-    chance: 54.318
+    chance: 54.338
     display: '&6Moedas'
     currency-id: coins
     amount: '250'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &7250 '
   secundaria:
     type: CURRENCY
     chance: 30.1797
     display: '&bsementes'
     currency-id: sementes
     amount: '25'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &725 '
   combustivel:
     type: COMMAND
     chance: 5.4922
@@ -73,7 +79,10 @@ rewards:
     amount: 5
     icon:
       material: PAPER
+      glow: true
       display: '&eSelo Lacrado'
+      lore:
+      - '&8Fragmento'
 
   secundaria-lote:
     type: CURRENCY
@@ -81,6 +90,9 @@ rewards:
     display: '&bsementes (lote)'
     currency-id: sementes
     amount: '500'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &7500 '
   chave-boss:
     type: COMMAND
     chance: 1.2
@@ -90,7 +102,10 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      display: '&c&lChave de Boss'
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga abatendo os bosses'
+      - '&7que aparecem no servidor.'
 
   armadura-baixa:
     type: COMMAND
@@ -172,8 +187,15 @@ rewards:
     command: armazem givelimititem {player} 500 1
     amount: 1
     icon:
-      material: CHEST
-      display: '&6Limite de Armazém'
+      material: CACTUS
+      data: 0
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&7Aumenta quantos cactos o'
+      - '&7seu armazém comporta.'
+      - ''
+      - '&8 ▪ &fQuantia: &a{amount} '
 
   lim-spawner:
     type: COMMAND
@@ -182,8 +204,15 @@ rewards:
     command: spawner givelimite {player} 1 1
     amount: 1
     icon:
-      material: MOB_SPAWNER
-      display: '&cLimite de Spawners'
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&7Aumenta quantos spawners'
+      - '&7você pode ter no terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &b{amount} '
 
   lim-maquina:
     type: COMMAND
@@ -192,17 +221,12 @@ rewards:
     command: maquina givelimite {player} 1 1
     amount: 1
     icon:
-      material: PISTON_BASE
-      display: '&9Limite de Máquinas'
-
-  autosell:
-    type: COMMAND
-    chance: 0.02
-    display: '&e&lVenda Automática'
-    command: armazem giveautosell {player} 1
-    amount: 1
-    icon:
-      material: HOPPER
+      material: INK_SACK
+      data: 4
       glow: true
-      display: '&e&lVenda Automática'
-
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&7Aumenta quantas máquinas'
+      - '&7você pode ter no terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &9{amount} '

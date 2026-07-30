@@ -30,5 +30,12 @@ rewards:
     command: 'armazem givelimititem {player} 500 1'
     amount: 1
     icon:
-      material: CHEST
-      display: '&6Limite de Armazem &7(+500)'
+      material: CACTUS
+      data: 0
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&7Aumenta quantos cactos o'
+      - '&7seu armazém comporta.'
+      - ''
+      - '&8 ▪ &fQuantia: &a{amount} '

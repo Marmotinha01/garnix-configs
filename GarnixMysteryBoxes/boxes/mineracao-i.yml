@@ -104,6 +104,9 @@ rewards:
     display: '&e1.000 gemas'
     currency-id: gemas
     amount: '1000'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &71K '
   booster:
     type: COMMAND
     chance: 2

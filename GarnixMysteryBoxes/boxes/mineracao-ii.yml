@@ -109,8 +109,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&aLivro de Pilhagem 2'
+      display: '&aLivro de Pilhagem &7{level}'
+      lore:
+      - '&7Aumenta os drops que os'
+      - '&7mobs deixam ao morrer.'
+      - ''
+      - '&8 ▪ &fPilhagem: &a{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   booster:
     type: COMMAND

@@ -104,6 +104,9 @@ rewards:
     display: '&a1.000 sementes'
     currency-id: sementes
     amount: '1000'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &71K '
   booster:
     type: COMMAND
     chance: 2

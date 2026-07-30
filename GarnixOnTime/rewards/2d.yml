@@ -31,4 +31,8 @@ rewards:
     amount: 1
     icon:
       material: CHEST
-      display: '&bCaixa Pesca I'
+      glow: true
+      display: '&b&lCaixa Pesca &b[T&lI&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

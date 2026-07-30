@@ -105,8 +105,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&bLivro de Duplicata 4'
+      display: '&dLivro de Fartura &7{level}'
+      lore:
+      - '&7Chance de fisgar mais de'
+      - '&7uma recompensa por vez.'
+      - ''
+      - '&8 ▪ &fFartura: &d{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   booster:
     type: COMMAND
@@ -127,7 +134,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado 4'
+      display: '&aLivro de Faro Aguçado &7{level}'
+      lore:
+      - '&7Aumenta a chance de vir'
+      - '&7recompensa melhor.'
+      - ''
+      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   livro-speed:
     type: COMMAND
@@ -137,6 +152,14 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&bLivro de Correnteza 4'
+      display: '&bLivro de Correnteza &7{level}'
+      lore:
+      - '&7Puxa o peixe mais rápido'
+      - '&7para a sua vara.'
+      - ''
+      - '&8 ▪ &fCorrenteza: &b{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
 

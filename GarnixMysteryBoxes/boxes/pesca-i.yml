@@ -102,6 +102,9 @@ rewards:
     display: '&b1.000 corais'
     currency-id: corais
     amount: '1000'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &71K '
   booster:
     type: COMMAND
     chance: 2
@@ -120,5 +123,13 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado 3'
+      display: '&aLivro de Faro Aguçado &7{level}'
+      lore:
+      - '&7Aumenta a chance de vir'
+      - '&7recompensa melhor.'
+      - ''
+      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 

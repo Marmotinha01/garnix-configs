@@ -31,4 +31,8 @@ rewards:
     amount: 1
     icon:
       material: CHEST
-      display: '&aCaixa Fazenda I'
+      glow: true
+      display: '&a&lCaixa Farm &a[T&lI&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

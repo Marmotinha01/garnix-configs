@@ -55,12 +55,18 @@ rewards:
     display: '&6Moedas'
     currency-id: coins
     amount: '904000000'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &7904M '
   secundaria:
     type: CURRENCY
     chance: 45.0
     display: '&5sementes'
     currency-id: sementes
     amount: '500'
+    icon:
+      lore:
+      - '&8 ▪ &fQuantia: &7500 '
   chave-boss:
     type: COMMAND
     chance: 30.0
@@ -70,7 +76,10 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      display: '&c&lChave de Boss'
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga abatendo os bosses'
+      - '&7que aparecem no servidor.'
 
   fragmento:
     type: COMMAND
@@ -80,7 +89,10 @@ rewards:
     amount: 48
     icon:
       material: BONE
+      glow: true
       display: '&4Presa Colossal'
+      lore:
+      - '&8Fragmento'
 
   # O livro é o freio da temporada: sem gate de banda, o multiplicador chega
   # cedo e a curva de tiers desanda. Pilhagem 2 segue exclusivo da T13+.
@@ -92,7 +104,15 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&5Livro de Ceifador 2'
+      display: '&dLivro de Ceifador &7{level}'
+      lore:
+      - '&7Chance de dobrar as'
+      - '&7cabeças que o mob solta.'
+      - ''
+      - '&8 ▪ &fCeifador: &d{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   matadora:
     type: COMMAND
@@ -102,6 +122,11 @@ rewards:
     amount: 1
     icon:
       material: IRON_SWORD
+      glow: true
       display: '&5Matadora Sombria'
-      flags:
-      - HIDE_ATTRIBUTES
+      lore:
+      - ''
+      - ' &8Informações: '
+      - '&8 ▪ &fDano: &e{damage} '
+      - '&8 ▪ &fKill-Stack: &e{kill_stack} '
+      - '&8 ▪ &fBosses abatidos: &e{kills} '

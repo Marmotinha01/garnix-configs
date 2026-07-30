@@ -31,4 +31,8 @@ rewards:
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
-      display: '&bx5 Chaves de Mineracao'
+      glow: true
+      display: '&eChave Mineração'
+      lore:
+      - '&7Consiga na mineração upando'
+      - '&7o encantamento abençoado.'

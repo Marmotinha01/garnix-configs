@@ -31,4 +31,7 @@ rewards:
     amount: 60
     icon:
       material: BONE
-      display: '&cx60 Presa Colossal'
+      glow: true
+      display: '&4Presa Colossal'
+      lore:
+      - '&8Fragmento'
