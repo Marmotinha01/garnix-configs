@@ -92,7 +92,7 @@ messages:
       &8▎ {c}Evento {c}&lClique Rápido {c}iniciando!
       &8▎ &fPrepare o mouse e clique no &aX verde&f.
       &r
-      &8▶ &fPrêmios: &6❂10 &6cash &8+ &6x&l5 &6Chaves RankUP
+      &8▶ &fPrêmios: &6❂10 cash &8+ &6x&l5 &6Chaves RankUP
       &r
       &8▪ &fRevela em: &7{seconds}s
       &r
@@ -121,7 +121,7 @@ messages:
       &r
       &8▶ &7{player} &fachou o &aX verde &fprimeiro.
       &r
-      &8▪ &fPrêmios: &6❂10 &6cash &8+ &6x&l5 &6Chaves RankUP
+      &8▪ &fPrêmios: &6❂10 cash &8+ &6x&l5 &6Chaves RankUP
       &r
   no-winner: |2
 
