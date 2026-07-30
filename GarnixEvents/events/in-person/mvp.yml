@@ -264,7 +264,7 @@ messages:
       &8▎ {c}Evento {c}&lMVP {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/mvp entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &2[General] &8+ &6❂&l40 &6cash &8+ &6x&l25 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração II
+      &8▶ &fPrêmios: &2[General] &8+ &6❂40 &6cash &8+ &6x&l25 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração II
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -293,7 +293,7 @@ messages:
       &r
       &8▶ &7{player} &fdeu o golpe final no Zumbi Gigante.
       &r
-      &8▪ &fPrêmios: &2[General] &8+ &6❂&l40 &6cash &8+ &6x&l25 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração II
+      &8▪ &fPrêmios: &2[General] &8+ &6❂40 &6cash &8+ &6x&l25 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração II
       &r
   # ── Eliminações ─────────────────────────────────────────────────────
   # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.

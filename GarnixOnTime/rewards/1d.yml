@@ -12,24 +12,18 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l56.300&fx &6Moedas '
-    - '&8 ▪ &f&l2&fx &4Chave Bosses '
-    - '&8 ▪ &f&l1&fx &6Limite de Armazém '
+    - '&8 ▪ &6❂12 &6cash '
+    - '&8 ▪ &fx&l1 &6Limite de Armazem &7(+500) '
     - ''
 
 rewards:
-  coins:
-    type: CURRENCY
-    currency-id: coins
-    amount: '56300'
-
-  chaves:
+  cash:
     type: COMMAND
-    command: 'crates givekey bosses {player} {amount}'
-    amount: 2
+    command: 'cash add {player} 12'
+    amount: 1
     icon:
-      material: TRIPWIRE_HOOK
-      display: '&4&l2x Chave Bosses'
+      material: GOLD_INGOT
+      display: '&6❂12 Cash'
 
   extra:
     type: COMMAND
@@ -37,4 +31,4 @@ rewards:
     amount: 1
     icon:
       material: CHEST
-      display: '&6Limite de Armazém'
+      display: '&6Limite de Armazem &7(+500)'

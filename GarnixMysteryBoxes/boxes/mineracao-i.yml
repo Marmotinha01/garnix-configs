@@ -45,7 +45,10 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_HELMET
-      display: '&7Peça de Armadura &7[T&lI&7]'
+      color: '#6E5B3A'
+      display: '&7Capacete Mineração &7[T&lI&7]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   armadura-ii:
     type: COMMAND
@@ -54,8 +57,11 @@ rewards:
     command: mina givearmor {player} tier-ii_chestplate
     amount: 1
     icon:
-      material: CHAINMAIL_CHESTPLATE
-      display: '&7Peça de Armadura &7[T&lII&7]'
+      material: LEATHER_CHESTPLATE
+      color: '#8C6A2F'
+      display: '&aPeitoral Mineração &a[T&lII&a]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   armadura-iii:
     type: COMMAND
@@ -64,8 +70,11 @@ rewards:
     command: mina givearmor {player} tier-iii_leggings
     amount: 1
     icon:
-      material: IRON_LEGGINGS
-      display: '&fPeça de Armadura &f[T&lIII&f]'
+      material: LEATHER_LEGGINGS
+      color: '#C8922C'
+      display: '&bCalça Mineração &b[T&lIII&b]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin-forjavel:
     type: COMMAND
@@ -74,8 +83,10 @@ rewards:
     command: mina giveskin {player} ouro
     amount: 1
     icon:
-      material: NAME_TAG
-      display: '&aSkin ouro'
+      material: GOLD_PICKAXE
+      display: '&6Ouro'
+      flags:
+      - HIDE_ATTRIBUTES
 
   forja:
     type: COMMAND

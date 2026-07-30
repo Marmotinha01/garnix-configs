@@ -102,4 +102,6 @@ rewards:
     amount: 1
     icon:
       material: DIAMOND_SWORD
-      display: '&6Matadora Ancestral'
+      display: '&bMatadora Ancestral'
+      flags:
+      - HIDE_ATTRIBUTES

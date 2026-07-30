@@ -142,7 +142,7 @@ messages:
       &8▎ {c}Evento {c}&lCharada {c}iniciando!
       &8▎ &fResponda clicando &a&l<click:suggest_command:/charada ><hover:show_text:&fClique para já digitar &7/charada &fno chat.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &6❂&l10 &6cash &8+ &6x&l5 &6Chaves RankUP
+      &8▶ &fPrêmios: &6❂10 &6cash &8+ &6x&l5 &6Chaves RankUP
       &r
       &8▪ &fRevela em: &7{seconds}s
       &r
@@ -175,7 +175,7 @@ messages:
       &8▶ &7{player} &fdecifrou a charada primeiro.
       &r
       &8▪ &fResposta: &7{answer}
-      &8▪ &fPrêmios: &6❂&l10 &6cash &8+ &6x&l5 &6Chaves RankUP
+      &8▪ &fPrêmios: &6❂10 &6cash &8+ &6x&l5 &6Chaves RankUP
       &r
 # {answer} a resposta que ninguém acertou
   no-winner: |2

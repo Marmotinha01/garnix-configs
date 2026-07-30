@@ -12,24 +12,18 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l17.100.000.000.000.000&fx &6Moedas '
-    - '&8 ▪ &f&l23&fx &4Chave Bosses '
-    - '&8 ▪ &f&l1&fx &6&lCaixa Garnix '
+    - '&8 ▪ &6❂50 &6cash '
+    - '&8 ▪ &fx&l1 &6&lCaixa Garnix '
     - ''
 
 rewards:
-  coins:
-    type: CURRENCY
-    currency-id: coins
-    amount: '17100000000000000'
-
-  chaves:
+  cash:
     type: COMMAND
-    command: 'crates givekey bosses {player} {amount}'
-    amount: 23
+    command: 'cash add {player} 50'
+    amount: 1
     icon:
-      material: TRIPWIRE_HOOK
-      display: '&4&l23x Chave Bosses'
+      material: GOLD_INGOT
+      display: '&6❂50 Cash'
 
   extra:
     type: COMMAND

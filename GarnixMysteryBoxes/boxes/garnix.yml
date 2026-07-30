@@ -34,9 +34,11 @@ rewards:
     command: mina givearmor {player} tier-v_helmet
     amount: 1
     icon:
-      material: DIAMOND_HELMET
-      glow: true
-      display: '&5Peça de Armadura &5[T&lV&5] &7Mineração'
+      material: LEATHER_HELMET
+      color: '#FFD54A'
+      display: '&6Capacete Mineração &6[T&lV&6]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   armadura-v-farm:
     type: COMMAND
@@ -45,9 +47,11 @@ rewards:
     command: fazenda givearmor {player} tier-v_boots
     amount: 1
     icon:
-      material: DIAMOND_BOOTS
-      glow: true
-      display: '&5Peça de Armadura &5[T&lV&5] &7Fazenda'
+      material: LEATHER_BOOTS
+      color: '#B6F25C'
+      display: '&6Bota Farm &6[T&lV&6]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin-mithril:
     type: COMMAND
@@ -56,9 +60,11 @@ rewards:
     command: mina giveskin {player} mithril
     amount: 1
     icon:
-      material: NETHER_STAR
+      material: DIAMOND_PICKAXE
       glow: true
-      display: '&b&lSkin de Mithril'
+      display: '&4Mithril'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin-marfim:
     type: COMMAND
@@ -67,9 +73,11 @@ rewards:
     command: fazenda giveskin {player} marfim
     amount: 1
     icon:
-      material: NETHER_STAR
+      material: DIAMOND_HOE
       glow: true
-      display: '&f&lSkin de Marfim'
+      display: '&fMarfim'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin-tempestita:
     type: COMMAND
@@ -78,9 +86,9 @@ rewards:
     command: pesca giveskin {player} tempestita
     amount: 1
     icon:
-      material: NETHER_STAR
+      material: FISHING_ROD
       glow: true
-      display: '&3&lSkin de Tempestita'
+      display: '&dTempestita'
 
   pilhagem-3:
     type: COMMAND
@@ -177,9 +185,10 @@ rewards:
     command: boss give sword {player} hk
     amount: 1
     icon:
-      material: DIAMOND_SWORD
-      glow: true
-      display: '&4&lMatadora Hit-Kill'
+      material: STICK
+      display: '&4Matadora Hit-Kill'
+      flags:
+      - HIDE_ATTRIBUTES
 
   combustivel-inf:
     type: COMMAND

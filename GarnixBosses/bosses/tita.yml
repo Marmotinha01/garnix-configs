@@ -88,8 +88,9 @@ rewards:
     amount: 1
     icon:
       material: DIAMOND_SWORD
-      glow: true
-      display: '&5Matadora Ancestral'
+      display: '&bMatadora Ancestral'
+      flags:
+      - HIDE_ATTRIBUTES
 
   caixa:
     type: COMMAND

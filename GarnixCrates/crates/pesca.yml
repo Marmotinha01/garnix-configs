@@ -99,8 +99,11 @@ rewards:
     command: pesca givearmor {player} tier-ii_leggings
     amount: 1
     icon:
-      material: IRON_CHESTPLATE
-      display: '&7Peça de Armadura &7[T&lII&7]'
+      material: LEATHER_LEGGINGS
+      color: '#2C6E8C'
+      display: '&aCalça Pesca &a[T&lII&a]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   livro:
     type: COMMAND
@@ -120,9 +123,11 @@ rewards:
     command: pesca givearmor {player} tier-iv_boots
     amount: 1
     icon:
-      material: DIAMOND_CHESTPLATE
-      glow: true
-      display: '&6Peça de Armadura &6[T&lIV&6]'
+      material: LEATHER_BOOTS
+      color: '#3FB8D4'
+      display: '&dBota Pesca &d[T&lIV&d]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin:
     type: COMMAND
@@ -131,9 +136,8 @@ rewards:
     command: pesca giveskin {player} serenita
     amount: 1
     icon:
-      material: NETHER_STAR
-      glow: true
-      display: '&5Skin serenita'
+      material: FISHING_ROD
+      display: '&5Serenita'
 
   booster-3x:
     type: COMMAND
@@ -153,11 +157,9 @@ rewards:
     command: pesca giveskin {player} tempestita
     amount: 1
     icon:
-      material: BEACON
+      material: FISHING_ROD
       glow: true
-      display: '&3&lSkin de Tempestita'
-      lore:
-      - '&7O prêmio mais raro desta caixa.'
+      display: '&dTempestita'
 
   livro-luck:
     type: COMMAND

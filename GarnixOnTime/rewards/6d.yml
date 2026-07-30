@@ -12,24 +12,18 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l473.000.000&fx &6Moedas '
-    - '&8 ▪ &f&l9&fx &4Chave Bosses '
-    - '&8 ▪ &f&l1&fx &cLimite de Spawners '
+    - '&8 ▪ &6❂25 &6cash '
+    - '&8 ▪ &fx&l1 &cLimite de Spawners &7(+1) '
     - ''
 
 rewards:
-  coins:
-    type: CURRENCY
-    currency-id: coins
-    amount: '473000000'
-
-  chaves:
+  cash:
     type: COMMAND
-    command: 'crates givekey bosses {player} {amount}'
-    amount: 9
+    command: 'cash add {player} 25'
+    amount: 1
     icon:
-      material: TRIPWIRE_HOOK
-      display: '&4&l9x Chave Bosses'
+      material: GOLD_INGOT
+      display: '&6❂25 Cash'
 
   extra:
     type: COMMAND
@@ -37,4 +31,4 @@ rewards:
     amount: 1
     icon:
       material: MOB_SPAWNER
-      display: '&cLimite de Spawners'
+      display: '&cLimite de Spawners &7(+1)'

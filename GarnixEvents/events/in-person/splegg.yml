@@ -105,7 +105,7 @@ messages:
       &8▎ {c}Evento {c}&lSplegg {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/splegg entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &e[Splegg] &8+ &6❂&l20 &6cash &8+ &6x&l10 &6Chaves RankUP
+      &8▶ &fPrêmios: &e[Splegg] &8+ &6❂20 &6cash &8+ &6x&l10 &6Chaves RankUP
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -134,7 +134,7 @@ messages:
       &r
       &8▶ &7{player} &ffoi o último de pé no Splegg.
       &r
-      &8▪ &fPrêmios: &e[Splegg] &8+ &6❂&l20 &6cash &8+ &6x&l10 &6Chaves RankUP
+      &8▪ &fPrêmios: &e[Splegg] &8+ &6❂20 &6cash &8+ &6x&l10 &6Chaves RankUP
       &r
 
   # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros

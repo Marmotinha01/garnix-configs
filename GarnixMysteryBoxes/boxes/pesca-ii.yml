@@ -44,8 +44,11 @@ rewards:
     command: pesca givearmor {player} tier-iii_boots
     amount: 1
     icon:
-      material: IRON_BOOTS
-      display: '&fPeça de Armadura &f[T&lIII&f]'
+      material: LEATHER_BOOTS
+      color: '#3494B0'
+      display: '&bBota Pesca &b[T&lIII&b]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   armadura-iv:
     type: COMMAND
@@ -54,8 +57,11 @@ rewards:
     command: pesca givearmor {player} tier-iv_chestplate
     amount: 1
     icon:
-      material: GOLD_CHESTPLATE
-      display: '&6Peça de Armadura &6[T&lIV&6]'
+      material: LEATHER_CHESTPLATE
+      color: '#3FB8D4'
+      display: '&dPeitoral Pesca &d[T&lIV&d]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   armadura-v:
     type: COMMAND
@@ -64,9 +70,11 @@ rewards:
     command: pesca givearmor {player} tier-v_leggings
     amount: 1
     icon:
-      material: DIAMOND_LEGGINGS
-      glow: true
-      display: '&5Peça de Armadura &5[T&lV&5]'
+      material: LEATHER_LEGGINGS
+      color: '#57DCF2'
+      display: '&6Calça Pesca &6[T&lV&6]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin-7:
     type: COMMAND
@@ -75,9 +83,8 @@ rewards:
     command: pesca giveskin {player} serenita
     amount: 1
     icon:
-      material: NAME_TAG
-      glow: true
-      display: '&5Skin serenita'
+      material: FISHING_ROD
+      display: '&5Serenita'
 
   skin-8:
     type: COMMAND
@@ -86,9 +93,9 @@ rewards:
     command: pesca giveskin {player} oceanita
     amount: 1
     icon:
-      material: NETHER_STAR
+      material: FISHING_ROD
       glow: true
-      display: '&5Skin oceanita'
+      display: '&1Oceanita'
 
   livro:
     type: COMMAND

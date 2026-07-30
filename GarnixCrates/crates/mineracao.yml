@@ -99,8 +99,11 @@ rewards:
     command: mina givearmor {player} tier-ii_helmet
     amount: 1
     icon:
-      material: IRON_CHESTPLATE
-      display: '&7Peça de Armadura &7[T&lII&7]'
+      material: LEATHER_HELMET
+      color: '#8C6A2F'
+      display: '&aCapacete Mineração &a[T&lII&a]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   bomba:
     type: COMMAND
@@ -120,9 +123,11 @@ rewards:
     command: mina givearmor {player} tier-iv_chestplate
     amount: 1
     icon:
-      material: DIAMOND_CHESTPLATE
-      glow: true
-      display: '&6Peça de Armadura &6[T&lIV&6]'
+      material: LEATHER_CHESTPLATE
+      color: '#F0B429'
+      display: '&dPeitoral Mineração &d[T&lIV&d]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin:
     type: COMMAND
@@ -131,9 +136,10 @@ rewards:
     command: mina giveskin {player} quartzo
     amount: 1
     icon:
-      material: NETHER_STAR
-      glow: true
-      display: '&5Skin quartzo'
+      material: DIAMOND_PICKAXE
+      display: '&fQuartzo'
+      flags:
+      - HIDE_ATTRIBUTES
 
   booster-3x:
     type: COMMAND

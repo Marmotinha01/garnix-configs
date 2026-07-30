@@ -99,8 +99,11 @@ rewards:
     command: mina givearmor {player} tier-ii_boots
     amount: 1
     icon:
-      material: IRON_CHESTPLATE
-      display: '&7Peça de Armadura &7[T&lII&7]'
+      material: LEATHER_BOOTS
+      color: '#8C6A2F'
+      display: '&aBota Mineração &a[T&lII&a]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   livro:
     type: COMMAND
@@ -120,9 +123,11 @@ rewards:
     command: mina givearmor {player} tier-iv_helmet
     amount: 1
     icon:
-      material: DIAMOND_CHESTPLATE
-      glow: true
-      display: '&6Peça de Armadura &6[T&lIV&6]'
+      material: LEATHER_HELMET
+      color: '#F0B429'
+      display: '&dCapacete Mineração &d[T&lIV&d]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin:
     type: COMMAND
@@ -131,9 +136,11 @@ rewards:
     command: mina giveskin {player} jade
     amount: 1
     icon:
-      material: NETHER_STAR
+      material: DIAMOND_PICKAXE
       glow: true
-      display: '&5Skin jade'
+      display: '&aJade'
+      flags:
+      - HIDE_ATTRIBUTES
 
   booster-3x:
     type: COMMAND
@@ -220,6 +227,8 @@ rewards:
     icon:
       material: IRON_SWORD
       display: '&5Matadora Sombria'
+      flags:
+      - HIDE_ATTRIBUTES
 
   matadora-ancestral:
     type: COMMAND
@@ -228,9 +237,10 @@ rewards:
     command: boss give sword {player} ancestral
     amount: 1
     icon:
-      material: GOLD_SWORD
-      glow: true
-      display: '&6&lMatadora Ancestral'
+      material: DIAMOND_SWORD
+      display: '&bMatadora Ancestral'
+      flags:
+      - HIDE_ATTRIBUTES
 
   autosell:
     type: COMMAND

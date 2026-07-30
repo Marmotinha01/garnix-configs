@@ -12,29 +12,23 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l71.600.000&fx &6Moedas '
-    - '&8 ▪ &f&l8&fx &4Chave Bosses '
-    - '&8 ▪ &f&l1&fx &e&lCaixa Mineração II '
+    - '&8 ▪ &6❂22 &6cash '
+    - '&8 ▪ &fx&l60 &cx60 Presa Colossal '
     - ''
 
 rewards:
-  coins:
-    type: CURRENCY
-    currency-id: coins
-    amount: '71600000'
-
-  chaves:
+  cash:
     type: COMMAND
-    command: 'crates givekey bosses {player} {amount}'
-    amount: 8
+    command: 'cash add {player} 22'
+    amount: 1
     icon:
-      material: TRIPWIRE_HOOK
-      display: '&4&l8x Chave Bosses'
+      material: GOLD_INGOT
+      display: '&6❂22 Cash'
 
   extra:
     type: COMMAND
-    command: 'caixas give mineracao-ii {player} {amount}'
-    amount: 1
+    command: 'fragmentos givevirtual {player} presa {amount}'
+    amount: 60
     icon:
-      material: ENDER_CHEST
-      display: '&e&lCaixa Mineração II'
+      material: BONE
+      display: '&cx60 Presa Colossal'

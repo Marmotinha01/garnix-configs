@@ -42,7 +42,7 @@ items:
       - '&7Uma hora de renda triplicada'
       - '&7na via que você escolher.'
       - ''
-      - '&8 ▪ &fNo site: &6❂&l200 '
+      - '&8 ▪ &fNo site: &6❂200 '
       - '&8 ▪ &fAqui: &fsó fragmento '
     cost:
       selo: 120
@@ -58,7 +58,7 @@ items:
       - '&7Vinte e cinco chaves da'
       - '&7crate de RankUP.'
       - ''
-      - '&8 ▪ &fNo site: &6❂&l150 '
+      - '&8 ▪ &fNo site: &6❂150 '
     cost:
       selo: 90
     commands:
@@ -75,7 +75,7 @@ items:
       - '&7O canal premium de armadura,'
       - '&7skin e livro.'
       - ''
-      - '&8 ▪ &fNo site: &6❂&l900 '
+      - '&8 ▪ &fNo site: &6❂900 '
       - '&8 ▪ &fFontes: &fcaixa &8+ &fboss '
     cost:
       selo: 400
@@ -91,7 +91,7 @@ items:
       - '&7Mais 500 de espaço no'
       - '&7seu armazém de cacto.'
       - ''
-      - '&8 ▪ &fNo site: &6❂&l800 '
+      - '&8 ▪ &fNo site: &6❂800 '
     cost:
       presa: 350
       estilhaco: 150
@@ -110,7 +110,7 @@ items:
       - '&7terreno. O item mais forte'
       - '&7que o site vende.'
       - ''
-      - '&8 ▪ &fNo site: &6❂&l4.000 '
+      - '&8 ▪ &fNo site: &6❂4.000 '
       - '&8 ▪ &fFontes: &f3 diferentes '
     cost:
       presa: 1200
@@ -128,7 +128,7 @@ items:
       - '&7O VIP de entrada, por sete'
       - '&7dias. Ganho e desconto.'
       - ''
-      - '&8 ▪ &fNo site: &6❂&l20.000 &7(30 dias) '
+      - '&8 ▪ &fNo site: &6❂20.000 &7(30 dias) '
       - '&8 ▪ &fFontes: &fas 4 '
     cost:
       presa: 1000

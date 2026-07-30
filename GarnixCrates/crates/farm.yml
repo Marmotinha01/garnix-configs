@@ -99,8 +99,11 @@ rewards:
     command: fazenda givearmor {player} tier-ii_chestplate
     amount: 1
     icon:
-      material: IRON_CHESTPLATE
-      display: '&7Peça de Armadura &7[T&lII&7]'
+      material: LEATHER_CHESTPLATE
+      color: '#5E8C3A'
+      display: '&aPeitoral Farm &a[T&lII&a]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   forja:
     type: COMMAND
@@ -120,9 +123,11 @@ rewards:
     command: fazenda givearmor {player} tier-iv_leggings
     amount: 1
     icon:
-      material: DIAMOND_CHESTPLATE
-      glow: true
-      display: '&6Peça de Armadura &6[T&lIV&6]'
+      material: LEATHER_LEGGINGS
+      color: '#8FD44E'
+      display: '&dCalça Farm &d[T&lIV&d]'
+      flags:
+      - HIDE_ATTRIBUTES
 
   skin:
     type: COMMAND
@@ -131,9 +136,10 @@ rewards:
     command: fazenda giveskin {player} esmeralda
     amount: 1
     icon:
-      material: NETHER_STAR
-      glow: true
-      display: '&5Skin esmeralda'
+      material: DIAMOND_HOE
+      display: '&aEsmeralda'
+      flags:
+      - HIDE_ATTRIBUTES
 
   booster-3x:
     type: COMMAND
@@ -153,11 +159,11 @@ rewards:
     command: fazenda giveskin {player} marfim
     amount: 1
     icon:
-      material: BEACON
+      material: DIAMOND_HOE
       glow: true
-      display: '&f&lSkin de Marfim'
-      lore:
-      - '&7O prêmio mais raro desta caixa.'
+      display: '&fMarfim'
+      flags:
+      - HIDE_ATTRIBUTES
 
   lim-armazem:
     type: COMMAND

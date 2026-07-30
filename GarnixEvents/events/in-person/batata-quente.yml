@@ -175,7 +175,7 @@ messages:
       &8▎ {c}Evento {c}&lBatata Quente {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/batata-quente entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &6[Batatudo] &8+ &6❂&l20 &6cash &8+ &6x&l10 &6Chaves RankUP
+      &8▶ &fPrêmios: &6[Batatudo] &8+ &6❂20 &6cash &8+ &6x&l10 &6Chaves RankUP
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -204,7 +204,7 @@ messages:
       &r
       &8▶ &7{player} &fficou com a última batata sem explodir.
       &r
-      &8▪ &fPrêmios: &6[Batatudo] &8+ &6❂&l20 &6cash &8+ &6x&l10 &6Chaves RankUP
+      &8▪ &fPrêmios: &6[Batatudo] &8+ &6❂20 &6cash &8+ &6x&l10 &6Chaves RankUP
       &r
       
 

@@ -12,29 +12,23 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l1.640.000&fx &6Moedas '
-    - '&8 ▪ &f&l5&fx &4Chave Bosses '
-    - '&8 ▪ &f&l1&fx &bCaixa Pesca I '
+    - '&8 ▪ &6❂18 &6cash '
+    - '&8 ▪ &fx&l1 &9Limite de Maquinas &7(+1) '
     - ''
 
 rewards:
-  coins:
-    type: CURRENCY
-    currency-id: coins
-    amount: '1640000'
-
-  chaves:
+  cash:
     type: COMMAND
-    command: 'crates givekey bosses {player} {amount}'
-    amount: 5
+    command: 'cash add {player} 18'
+    amount: 1
     icon:
-      material: TRIPWIRE_HOOK
-      display: '&4&l5x Chave Bosses'
+      material: GOLD_INGOT
+      display: '&6❂18 Cash'
 
   extra:
     type: COMMAND
-    command: 'caixas give pesca-i {player} {amount}'
+    command: 'maquina givelimite {player} 1 1'
     amount: 1
     icon:
-      material: CHEST
-      display: '&bCaixa Pesca I'
+      material: PISTON_BASE
+      display: '&9Limite de Maquinas &7(+1)'

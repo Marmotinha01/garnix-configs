@@ -12,24 +12,18 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l3.750.000.000&fx &6Moedas '
-    - '&8 ▪ &f&l11&fx &4Chave Bosses '
-    - '&8 ▪ &f&l1&fx &a&lCaixa Fazenda II '
+    - '&8 ▪ &6❂28 &6cash '
+    - '&8 ▪ &fx&l1 &a&lCaixa Fazenda II '
     - ''
 
 rewards:
-  coins:
-    type: CURRENCY
-    currency-id: coins
-    amount: '3750000000'
-
-  chaves:
+  cash:
     type: COMMAND
-    command: 'crates givekey bosses {player} {amount}'
-    amount: 11
+    command: 'cash add {player} 28'
+    amount: 1
     icon:
-      material: TRIPWIRE_HOOK
-      display: '&4&l11x Chave Bosses'
+      material: GOLD_INGOT
+      display: '&6❂28 Cash'
 
   extra:
     type: COMMAND

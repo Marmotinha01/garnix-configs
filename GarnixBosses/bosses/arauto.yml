@@ -87,6 +87,7 @@ rewards:
     command: boss give sword {player} sombria
     amount: 1
     icon:
-      material: DIAMOND_SWORD
-      glow: true
-      display: '&8Matadora Sombria'
+      material: IRON_SWORD
+      display: '&5Matadora Sombria'
+      flags:
+      - HIDE_ATTRIBUTES

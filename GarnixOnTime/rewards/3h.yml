@@ -12,29 +12,23 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l15.000&fx &6Moedas '
-    - '&8 ▪ &f&l2&fx &4Chave Bosses '
-    - '&8 ▪ &f&l5&fx &65x Chave RankUP '
+    - '&8 ▪ &6❂5 &6cash '
+    - '&8 ▪ &fx&l15 &ex15 Selo Lacrado '
     - ''
 
 rewards:
-  coins:
-    type: CURRENCY
-    currency-id: coins
-    amount: '15000'
-
-  chaves:
+  cash:
     type: COMMAND
-    command: 'crates givekey bosses {player} {amount}'
-    amount: 2
+    command: 'cash add {player} 5'
+    amount: 1
     icon:
-      material: TRIPWIRE_HOOK
-      display: '&4&l2x Chave Bosses'
+      material: GOLD_INGOT
+      display: '&6❂5 Cash'
 
   extra:
     type: COMMAND
-    command: 'crates givekey rankup {player} {amount}'
-    amount: 5
+    command: 'fragmentos givevirtual {player} selo {amount}'
+    amount: 15
     icon:
-      material: TRIPWIRE_HOOK
-      display: '&65x Chave RankUP'
+      material: PAPER
+      display: '&ex15 Selo Lacrado'
