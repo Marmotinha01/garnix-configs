@@ -1,14 +1,14 @@
 display: "Ruptura"
 
-mine-level-unlock: 20
+mine-level-unlock: 15
 
-max-level: 100
+max-level: 500
 
-base-cost: 500
-increase-cost: 1200
+base-cost: 2400
+increase-cost: 38.4
 
-base-chance: 0.35
-increase-chance: 0.033
+base-chance: 1.36
+increase-chance: 0.01087
 
 messages:
   - "&a&lRUPTURA! &fVocê quebrou uma linha inteira na mina!"

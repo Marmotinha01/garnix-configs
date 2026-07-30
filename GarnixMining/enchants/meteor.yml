@@ -1,14 +1,14 @@
 display: "Chuva de Meteoro"
 
-mine-level-unlock: 55
+mine-level-unlock: 195
 
-max-level: 100
+max-level: 500
 
-base-cost: 12000
-increase-cost: 30000
+base-cost: 59900
+increase-cost: 960
 
-base-chance: 2.5
-increase-chance: 0.05
+base-chance: 0.134
+increase-chance: 0.001077
 
 # --- Meteor storm --------------------------------------------------------------
 # Fireballs rain down over the WHOLE mine, spawning above the region top at random

@@ -1,14 +1,14 @@
 display: "Raio"
 
-mine-level-unlock: 10
+mine-level-unlock: 5
 
-max-level: 100
+max-level: 500
 
-base-cost: 200
-increase-cost: 500
+base-cost: 998
+increase-cost: 16
 
-base-chance: 0.30
-increase-chance: 0.035
+base-chance: 2.11
+increase-chance: 0.01688
 
 messages:
   - "&a&lRAIO! &fVocê lançou um raio na mina!"

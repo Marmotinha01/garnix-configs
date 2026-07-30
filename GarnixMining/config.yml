@@ -77,7 +77,7 @@ enchant-refund-percentage: 40.0
 # kraken.yml de 20 para 12 leva o kraken de 185 para 137, e cabe um quarto a mais
 # de krakens no mesmo orçamento. É trocar aparência por quantidade.
 # ─────────────────────────────────────────────────────────────────────────────
-enchant-animation-budget: 0
+enchant-animation-budget: 10000
 
 # Auto-generated bonus lines for pickaxe skins (skins.yml) and armor pieces
 # (armors/*.yml): put {bonus} on a lore line and it expands to one line per entry
@@ -285,7 +285,7 @@ frenzy:
   mode: volume
   # (volume) Manually mined blocks needed to trigger the frenzy. Enchants, drill and
   # bombs do NOT count — only blocks broken by hand.
-  blocks-required: 1000
+  blocks-required: 3500
   # (streak) Only used when mode: streak.
   streak:
     blocks-required: 5000

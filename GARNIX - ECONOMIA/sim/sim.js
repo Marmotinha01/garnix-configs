@@ -57,9 +57,15 @@ function fmt(v) {
 // ============================================================ nucleo do modelo
 
 // renda diaria da casa no tier N = rendaT1 x crescimento^(N-1)
+// O crescimento e fracionario (6,61), entao acumulo em escala inteira para
+// manter BigInt sem perder precisao nos tiers altos.
 function rendaTier(n) {
   const { rendaT1, crescimentoPorDia } = P.temporada;
-  return BigInt(rendaT1) * (BigInt(crescimentoPorDia) ** BigInt(n - 1));
+  const escala = 1_000_000n;
+  const g = BigInt(Math.round(crescimentoPorDia * 1_000_000));
+  let v = BigInt(rendaT1) * escala;
+  for (let i = 1; i < n; i++) v = (v * g) / escala;
+  return v / escala;
 }
 
 // Unidades da casa: 2 contas AFK x 24h x 1 + 1 conta ativa x Hh x 20

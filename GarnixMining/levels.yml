@@ -10,15 +10,35 @@ levels:
         - coins 1
         - gemas 0.2
   '1':
-    exp: 1500
+    exp: 20
   '2':
-    exp: 3500
+    exp: 123
   '3':
-    exp: 6000
+    exp: 415
   '4':
-    exp: 10000
+    exp: 984
   '5':
-    exp: 15000
+    exp: 1920
+  '6':
+    exp: 3320
+  '7':
+    exp: 5270
+  '8':
+    exp: 7870
+  '9':
+    exp: 11200
+  '10':
+    exp: 15400
+  '11':
+    exp: 20500
+  '12':
+    exp: 26600
+  '13':
+    exp: 33800
+  '14':
+    exp: 42200
+  '15':
+    exp: 51900
     blocks:
       carvao:
         material: COAL_ORE
@@ -26,18 +46,38 @@ levels:
         percentage: 100
         exp: 5
         currencies:
-        - coins 1.3
+        - coins 4.07
         - gemas 0.3
-  '6':
-    exp: 21000
-  '7':
-    exp: 28000
-  '8':
-    exp: 37000
-  '9':
-    exp: 48000
-  '10':
-    exp: 60000
+  '16':
+    exp: 63000
+  '17':
+    exp: 75500
+  '18':
+    exp: 89700
+  '19':
+    exp: 105000
+  '20':
+    exp: 123000
+  '21':
+    exp: 126000
+  '22':
+    exp: 130000
+  '23':
+    exp: 134000
+  '24':
+    exp: 138000
+  '25':
+    exp: 142000
+  '26':
+    exp: 146000
+  '27':
+    exp: 150000
+  '28':
+    exp: 154000
+  '29':
+    exp: 159000
+  '30':
+    exp: 164000
     blocks:
       pedra:
         material: STONE
@@ -45,18 +85,38 @@ levels:
         percentage: 100
         exp: 7
         currencies:
-        - coins 1.6
+        - coins 16.56
         - gemas 0.4
-  '11':
-    exp: 75000
-  '12':
-    exp: 93000
-  '13':
-    exp: 115000
-  '14':
-    exp: 140000
-  '15':
-    exp: 175000
+  '31':
+    exp: 168000
+  '32':
+    exp: 173000
+  '33':
+    exp: 178000
+  '34':
+    exp: 184000
+  '35':
+    exp: 189000
+  '36':
+    exp: 195000
+  '37':
+    exp: 200000
+  '38':
+    exp: 206000
+  '39':
+    exp: 212000
+  '40':
+    exp: 218000
+  '41':
+    exp: 225000
+  '42':
+    exp: 231000
+  '43':
+    exp: 238000
+  '44':
+    exp: 245000
+  '45':
+    exp: 252000
     blocks:
       ferro:
         material: IRON_ORE
@@ -64,18 +124,38 @@ levels:
         percentage: 100
         exp: 10
         currencies:
-        - coins 1.9
+        - coins 67.37
         - gemas 0.5
-  '16':
-    exp: 215000
-  '17':
-    exp: 265000
-  '18':
-    exp: 325000
-  '19':
-    exp: 400000
-  '20':
-    exp: 490000
+  '46':
+    exp: 260000
+  '47':
+    exp: 267000
+  '48':
+    exp: 275000
+  '49':
+    exp: 283000
+  '50':
+    exp: 292000
+  '51':
+    exp: 300000
+  '52':
+    exp: 309000
+  '53':
+    exp: 318000
+  '54':
+    exp: 327000
+  '55':
+    exp: 337000
+  '56':
+    exp: 347000
+  '57':
+    exp: 357000
+  '58':
+    exp: 367000
+  '59':
+    exp: 378000
+  '60':
+    exp: 389000
     blocks:
       ouro:
         material: GOLD_ORE
@@ -83,7 +163,7 @@ levels:
         percentage: 55
         exp: 12
         currencies:
-        - coins 2.1
+        - coins 258
         - gemas 0.6
       argila:
         material: STAINED_CLAY
@@ -91,18 +171,38 @@ levels:
         percentage: 45
         exp: 16
         currencies:
-        - coins 2.4
+        - coins 294
         - gemas 0.7
-  '21':
+  '61':
+    exp: 401000
+  '62':
+    exp: 412000
+  '63':
+    exp: 424000
+  '64':
+    exp: 437000
+  '65':
+    exp: 450000
+  '66':
+    exp: 463000
+  '67':
+    exp: 476000
+  '68':
+    exp: 490000
+  '69':
+    exp: 505000
+  '70':
+    exp: 519000
+  '71':
+    exp: 535000
+  '72':
+    exp: 550000
+  '73':
+    exp: 566000
+  '74':
+    exp: 583000
+  '75':
     exp: 600000
-  '22':
-    exp: 740000
-  '23':
-    exp: 910000
-  '24':
-    exp: 1100000
-  '25':
-    exp: 1350000
     blocks:
       lapis:
         material: LAPIS_ORE
@@ -110,7 +210,7 @@ levels:
         percentage: 50
         exp: 20
         currencies:
-        - coins 2.7
+        - coins 1057
         - gemas 0.8
       argila_azul:
         material: STAINED_CLAY
@@ -118,18 +218,38 @@ levels:
         percentage: 50
         exp: 16
         currencies:
-        - coins 3.0
+        - coins 1174
         - gemas 0.9
-  '26':
-    exp: 1600000
-  '27':
-    exp: 1900000
-  '28':
-    exp: 2200000
-  '29':
-    exp: 2600000
-  '30':
-    exp: 3000000
+  '76':
+    exp: 618000
+  '77':
+    exp: 636000
+  '78':
+    exp: 654000
+  '79':
+    exp: 674000
+  '80':
+    exp: 693000
+  '81':
+    exp: 714000
+  '82':
+    exp: 735000
+  '83':
+    exp: 756000
+  '84':
+    exp: 778000
+  '85':
+    exp: 801000
+  '86':
+    exp: 824000
+  '87':
+    exp: 849000
+  '88':
+    exp: 873000
+  '89':
+    exp: 899000
+  '90':
+    exp: 925000
     blocks:
       redstone:
         material: REDSTONE_ORE
@@ -137,26 +257,46 @@ levels:
         percentage: 55
         exp: 21
         currencies:
-        - coins 3.3
-        - gemas 1.0
+        - coins 4361
+        - gemas 1
       quartzo:
         material: QUARTZ_ORE
         data: 0
         percentage: 45
         exp: 26
         currencies:
-        - coins 3.6
+        - coins 4757
         - gemas 1.1
-  '31':
-    exp: 3500000
-  '32':
-    exp: 4000000
-  '33':
-    exp: 4600000
-  '34':
-    exp: 5300000
-  '35':
-    exp: 6100000
+  '91':
+    exp: 953000
+  '92':
+    exp: 980000
+  '93':
+    exp: 1010000
+  '94':
+    exp: 1040000
+  '95':
+    exp: 1070000
+  '96':
+    exp: 1100000
+  '97':
+    exp: 1130000
+  '98':
+    exp: 1170000
+  '99':
+    exp: 1200000
+  '100':
+    exp: 1240000
+  '101':
+    exp: 1270000
+  '102':
+    exp: 1310000
+  '103':
+    exp: 1350000
+  '104':
+    exp: 1390000
+  '105':
+    exp: 1430000
     blocks:
       diamante:
         material: DIAMOND_ORE
@@ -164,7 +304,7 @@ levels:
         percentage: 50
         exp: 30
         currencies:
-        - coins 3.9
+        - coins 17790
         - gemas 1.2
       quartzo2:
         material: QUARTZ_ORE
@@ -172,18 +312,38 @@ levels:
         percentage: 50
         exp: 26
         currencies:
-        - coins 4.2
+        - coins 19150
         - gemas 1.3
-  '36':
-    exp: 7000000
-  '37':
-    exp: 8000000
-  '38':
-    exp: 9200000
-  '39':
-    exp: 10500000
-  '40':
-    exp: 12000000
+  '106':
+    exp: 1470000
+  '107':
+    exp: 1510000
+  '108':
+    exp: 1560000
+  '109':
+    exp: 1600000
+  '110':
+    exp: 1650000
+  '111':
+    exp: 1700000
+  '112':
+    exp: 1750000
+  '113':
+    exp: 1800000
+  '114':
+    exp: 1850000
+  '115':
+    exp: 1900000
+  '116':
+    exp: 1960000
+  '117':
+    exp: 2020000
+  '118':
+    exp: 2080000
+  '119':
+    exp: 2140000
+  '120':
+    exp: 2200000
     blocks:
       esmeralda:
         material: EMERALD_ORE
@@ -191,7 +351,7 @@ levels:
         percentage: 45
         exp: 37
         currencies:
-        - coins 4.5
+        - coins 72490
         - gemas 1.4
       prismarinho:
         material: PRISMARINE
@@ -199,18 +359,38 @@ levels:
         percentage: 55
         exp: 31
         currencies:
-        - coins 4.8
+        - coins 77330
         - gemas 1.5
-  '41':
-    exp: 13800000
-  '42':
-    exp: 15800000
-  '43':
-    exp: 18200000
-  '44':
-    exp: 21000000
-  '45':
-    exp: 24000000
+  '121':
+    exp: 2270000
+  '122':
+    exp: 2330000
+  '123':
+    exp: 2400000
+  '124':
+    exp: 2470000
+  '125':
+    exp: 2540000
+  '126':
+    exp: 2620000
+  '127':
+    exp: 2690000
+  '128':
+    exp: 2770000
+  '129':
+    exp: 2850000
+  '130':
+    exp: 2940000
+  '131':
+    exp: 3020000
+  '132':
+    exp: 3110000
+  '133':
+    exp: 3200000
+  '134':
+    exp: 3300000
+  '135':
+    exp: 3390000
     blocks:
       diamante2:
         material: DIAMOND_ORE
@@ -218,7 +398,7 @@ levels:
         percentage: 40
         exp: 44
         currencies:
-        - coins 5.1
+        - coins 295400
         - gemas 1.6
       prismarinho_tijolo:
         material: PRISMARINE
@@ -226,18 +406,38 @@ levels:
         percentage: 60
         exp: 37
         currencies:
-        - coins 5.4
+        - coins 312700
         - gemas 1.7
-  '46':
-    exp: 27500000
-  '47':
-    exp: 31500000
-  '48':
-    exp: 36000000
-  '49':
-    exp: 41000000
-  '50':
-    exp: 47000000
+  '136':
+    exp: 3490000
+  '137':
+    exp: 3600000
+  '138':
+    exp: 3700000
+  '139':
+    exp: 3810000
+  '140':
+    exp: 3920000
+  '141':
+    exp: 4040000
+  '142':
+    exp: 4150000
+  '143':
+    exp: 4280000
+  '144':
+    exp: 4400000
+  '145':
+    exp: 4530000
+  '146':
+    exp: 4660000
+  '147':
+    exp: 4800000
+  '148':
+    exp: 4940000
+  '149':
+    exp: 5090000
+  '150':
+    exp: 5230000
     blocks:
       esmeralda2:
         material: EMERALD_ORE
@@ -245,7 +445,7 @@ levels:
         percentage: 35
         exp: 52
         currencies:
-        - coins 5.7
+        - coins 1182000
         - gemas 1.8
       obsidiana:
         material: OBSIDIAN
@@ -253,7 +453,7 @@ levels:
         percentage: 30
         exp: 55
         currencies:
-        - coins 6.0
+        - coins 1244000
         - gemas 1.9
       prismarinho_escuro:
         material: PRISMARINE
@@ -261,18 +461,38 @@ levels:
         percentage: 35
         exp: 42
         currencies:
-        - coins 6.3
-        - gemas 2.0
-  '51':
-    exp: 58000000
-  '52':
-    exp: 65000000
-  '53':
-    exp: 73000000
-  '54':
-    exp: 82000000
-  '55':
-    exp: 92000000
+        - coins 1307000
+        - gemas 2
+  '151':
+    exp: 5390000
+  '152':
+    exp: 5550000
+  '153':
+    exp: 5710000
+  '154':
+    exp: 5880000
+  '155':
+    exp: 6050000
+  '156':
+    exp: 6220000
+  '157':
+    exp: 6410000
+  '158':
+    exp: 6590000
+  '159':
+    exp: 6790000
+  '160':
+    exp: 6990000
+  '161':
+    exp: 7190000
+  '162':
+    exp: 7400000
+  '163':
+    exp: 7620000
+  '164':
+    exp: 7840000
+  '165':
+    exp: 8070000
     blocks:
       diamante3:
         material: DIAMOND_ORE
@@ -280,7 +500,7 @@ levels:
         percentage: 35
         exp: 58
         currencies:
-        - coins 6.6
+        - coins 4854000
         - gemas 2.1
       obsidiana2:
         material: OBSIDIAN
@@ -288,7 +508,7 @@ levels:
         percentage: 35
         exp: 54
         currencies:
-        - coins 6.9
+        - coins 5074000
         - gemas 2.2
       prismarinho3:
         material: PRISMARINE
@@ -296,18 +516,38 @@ levels:
         percentage: 30
         exp: 50
         currencies:
-        - coins 7.2
+        - coins 5295000
         - gemas 2.3
-  '56':
-    exp: 103000000
-  '57':
-    exp: 115000000
-  '58':
-    exp: 128000000
-  '59':
-    exp: 143000000
-  '60':
-    exp: 160000000
+  '166':
+    exp: 8310000
+  '167':
+    exp: 8550000
+  '168':
+    exp: 8800000
+  '169':
+    exp: 9060000
+  '170':
+    exp: 9330000
+  '171':
+    exp: 9600000
+  '172':
+    exp: 9880000
+  '173':
+    exp: 10200000
+  '174':
+    exp: 10500000
+  '175':
+    exp: 10800000
+  '176':
+    exp: 11100000
+  '177':
+    exp: 11400000
+  '178':
+    exp: 11700000
+  '179':
+    exp: 12100000
+  '180':
+    exp: 12400000
     blocks:
       esmeralda3:
         material: EMERALD_ORE
@@ -315,7 +555,7 @@ levels:
         percentage: 40
         exp: 58
         currencies:
-        - coins 7.5
+        - coins 19890000
         - gemas 2.4
       prismarinho_tijolo2:
         material: PRISMARINE
@@ -323,7 +563,7 @@ levels:
         percentage: 30
         exp: 68
         currencies:
-        - coins 7.8
+        - coins 20680000
         - gemas 2.5
       obsidiana3:
         material: OBSIDIAN
@@ -331,18 +571,38 @@ levels:
         percentage: 30
         exp: 65
         currencies:
-        - coins 8.1
+        - coins 21480000
         - gemas 2.6
-  '61':
-    exp: 178000000
-  '62':
-    exp: 200000000
-  '63':
-    exp: 223000000
-  '64':
-    exp: 249000000
-  '65':
-    exp: 278000000
+  '181':
+    exp: 12800000
+  '182':
+    exp: 13200000
+  '183':
+    exp: 13600000
+  '184':
+    exp: 14000000
+  '185':
+    exp: 14400000
+  '186':
+    exp: 14800000
+  '187':
+    exp: 15200000
+  '188':
+    exp: 15700000
+  '189':
+    exp: 16100000
+  '190':
+    exp: 16600000
+  '191':
+    exp: 17100000
+  '192':
+    exp: 17600000
+  '193':
+    exp: 18100000
+  '194':
+    exp: 18700000
+  '195':
+    exp: 19200000
     blocks:
       diamante4:
         material: DIAMOND_ORE
@@ -350,7 +610,7 @@ levels:
         percentage: 35
         exp: 74
         currencies:
-        - coins 8.4
+        - coins 80940000
         - gemas 2.7
       esmeralda4:
         material: EMERALD_ORE
@@ -358,7 +618,7 @@ levels:
         percentage: 30
         exp: 78
         currencies:
-        - coins 8.7
+        - coins 83830000
         - gemas 2.8
       quartzo3:
         material: QUARTZ_ORE
@@ -366,18 +626,38 @@ levels:
         percentage: 35
         exp: 64
         currencies:
-        - coins 9.0
+        - coins 86720000
         - gemas 2.9
-  '66':
-    exp: 310000000
-  '67':
-    exp: 347000000
-  '68':
-    exp: 388000000
-  '69':
-    exp: 433000000
-  '70':
-    exp: 484000000
+  '196':
+    exp: 19800000
+  '197':
+    exp: 20300000
+  '198':
+    exp: 20900000
+  '199':
+    exp: 21500000
+  '200':
+    exp: 22200000
+  '201':
+    exp: 22800000
+  '202':
+    exp: 23500000
+  '203':
+    exp: 24200000
+  '204':
+    exp: 24900000
+  '205':
+    exp: 25600000
+  '206':
+    exp: 26400000
+  '207':
+    exp: 27100000
+  '208':
+    exp: 27900000
+  '209':
+    exp: 28800000
+  '210':
+    exp: 29600000
     blocks:
       bloco_carvao:
         material: COAL_BLOCK
@@ -385,18 +665,38 @@ levels:
         percentage: 100
         exp: 80
         currencies:
-        - coins 9.3
-        - gemas 3.0
-  '71':
-    exp: 490000000
-  '72':
-    exp: 496000000
-  '73':
-    exp: 502000000
-  '74':
-    exp: 508000000
-  '75':
-    exp: 515000000
+        - coins 341100000
+        - gemas 3
+  '211':
+    exp: 30500000
+  '212':
+    exp: 31400000
+  '213':
+    exp: 32300000
+  '214':
+    exp: 33200000
+  '215':
+    exp: 34200000
+  '216':
+    exp: 35200000
+  '217':
+    exp: 36200000
+  '218':
+    exp: 37300000
+  '219':
+    exp: 38400000
+  '220':
+    exp: 39500000
+  '221':
+    exp: 40700000
+  '222':
+    exp: 41900000
+  '223':
+    exp: 43100000
+  '224':
+    exp: 44400000
+  '225':
+    exp: 45700000
     blocks:
       bloco_redstone:
         material: REDSTONE_BLOCK
@@ -404,18 +704,38 @@ levels:
         percentage: 100
         exp: 90
         currencies:
-        - coins 9.6
+        - coins 1388000000
         - gemas 3.1
-  '76':
-    exp: 520000000
-  '77':
-    exp: 580000000
-  '78':
-    exp: 650000000
-  '79':
-    exp: 730000000
-  '80':
-    exp: 820000000
+  '226':
+    exp: 47000000
+  '227':
+    exp: 48400000
+  '228':
+    exp: 49800000
+  '229':
+    exp: 51200000
+  '230':
+    exp: 52700000
+  '231':
+    exp: 54300000
+  '232':
+    exp: 55900000
+  '233':
+    exp: 57500000
+  '234':
+    exp: 59200000
+  '235':
+    exp: 60900000
+  '236':
+    exp: 62700000
+  '237':
+    exp: 64600000
+  '238':
+    exp: 66500000
+  '239':
+    exp: 68400000
+  '240':
+    exp: 70400000
     blocks:
       bloco_ferro:
         material: IRON_BLOCK
@@ -423,18 +743,38 @@ levels:
         percentage: 100
         exp: 100
         currencies:
-        - coins 9.9
+        - coins 5648000000
         - gemas 3.2
-  '81':
-    exp: 920000000
-  '82':
-    exp: 1030000000
-  '83':
-    exp: 1150000000
-  '84':
-    exp: 1300000000
-  '85':
-    exp: 1450000000
+  '241':
+    exp: 72500000
+  '242':
+    exp: 74600000
+  '243':
+    exp: 76800000
+  '244':
+    exp: 79000000
+  '245':
+    exp: 81300000
+  '246':
+    exp: 83700000
+  '247':
+    exp: 86200000
+  '248':
+    exp: 88700000
+  '249':
+    exp: 91300000
+  '250':
+    exp: 94000000
+  '251':
+    exp: 96700000
+  '252':
+    exp: 99600000
+  '253':
+    exp: 102000000
+  '254':
+    exp: 105000000
+  '255':
+    exp: 109000000
     blocks:
       bloco_ouro:
         material: GOLD_BLOCK
@@ -442,18 +782,38 @@ levels:
         percentage: 100
         exp: 115
         currencies:
-        - coins 10.2
+        - coins 22980000000
         - gemas 3.3
-  '86':
-    exp: 1630000000
-  '87':
-    exp: 1830000000
-  '88':
-    exp: 2050000000
-  '89':
-    exp: 2300000000
-  '90':
-    exp: 2580000000
+  '256':
+    exp: 112000000
+  '257':
+    exp: 115000000
+  '258':
+    exp: 118000000
+  '259':
+    exp: 122000000
+  '260':
+    exp: 125000000
+  '261':
+    exp: 129000000
+  '262':
+    exp: 133000000
+  '263':
+    exp: 137000000
+  '264':
+    exp: 141000000
+  '265':
+    exp: 145000000
+  '266':
+    exp: 149000000
+  '267':
+    exp: 154000000
+  '268':
+    exp: 158000000
+  '269':
+    exp: 163000000
+  '270':
+    exp: 167000000
     blocks:
       bloco_diamante:
         material: DIAMOND_BLOCK
@@ -461,18 +821,38 @@ levels:
         percentage: 100
         exp: 130
         currencies:
-        - coins 10.5
+        - coins 93510000000
         - gemas 3.4
-  '91':
-    exp: 2900000000
-  '92':
-    exp: 3250000000
-  '93':
-    exp: 3640000000
-  '94':
-    exp: 4080000000
-  '95':
-    exp: 4570000000
+  '271':
+    exp: 172000000
+  '272':
+    exp: 177000000
+  '273':
+    exp: 183000000
+  '274':
+    exp: 188000000
+  '275':
+    exp: 193000000
+  '276':
+    exp: 199000000
+  '277':
+    exp: 205000000
+  '278':
+    exp: 211000000
+  '279':
+    exp: 217000000
+  '280':
+    exp: 224000000
+  '281':
+    exp: 230000000
+  '282':
+    exp: 237000000
+  '283':
+    exp: 244000000
+  '284':
+    exp: 251000000
+  '285':
+    exp: 258000000
     blocks:
       bloco_esmeralda:
         material: EMERALD_BLOCK
@@ -480,18 +860,38 @@ levels:
         percentage: 100
         exp: 150
         currencies:
-        - coins 10.8
+        - coins 380500000000
         - gemas 3.5
-  '96':
-    exp: 5120000000
-  '97':
-    exp: 5740000000
-  '98':
-    exp: 6430000000
-  '99':
-    exp: 7200000000
-  '100':
-    exp: 8070000000
+  '286':
+    exp: 266000000
+  '287':
+    exp: 274000000
+  '288':
+    exp: 282000000
+  '289':
+    exp: 290000000
+  '290':
+    exp: 298000000
+  '291':
+    exp: 307000000
+  '292':
+    exp: 316000000
+  '293':
+    exp: 325000000
+  '294':
+    exp: 335000000
+  '295':
+    exp: 345000000
+  '296':
+    exp: 355000000
+  '297':
+    exp: 365000000
+  '298':
+    exp: 376000000
+  '299':
+    exp: 387000000
+  '300':
+    exp: 398000000
     blocks:
       bloco_diamante_final:
         material: DIAMOND_BLOCK
@@ -499,7 +899,7 @@ levels:
         percentage: 35
         exp: 190
         currencies:
-        - coins 11.1
+        - coins 412200000000
         - gemas 3.6
       bloco_esmeralda_final:
         material: EMERALD_BLOCK
@@ -507,7 +907,7 @@ levels:
         percentage: 35
         exp: 180
         currencies:
-        - coins 11.4
+        - coins 423400000000
         - gemas 3.7
       bloco_ouro_final:
         material: GOLD_BLOCK
@@ -515,5 +915,5 @@ levels:
         percentage: 30
         exp: 165
         currencies:
-        - coins 12.0
+        - coins 445700000000
         - gemas 3.8

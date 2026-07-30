@@ -1,14 +1,14 @@
 display: "Colapso"
 
-mine-level-unlock: 30
+mine-level-unlock: 45
 
-max-level: 100
+max-level: 500
 
-base-cost: 1000
-increase-cost: 3000
+base-cost: 5980
+increase-cost: 95.9
 
-base-chance: 0.20
-increase-chance: 0.02
+base-chance: 1.59
+increase-chance: 0.01278
 
 effect-radius: 3
 

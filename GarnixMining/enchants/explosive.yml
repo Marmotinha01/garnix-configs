@@ -1,14 +1,14 @@
 display: "Explosivo"
 
-mine-level-unlock: 15
+mine-level-unlock: 10
 
-max-level: 100
+max-level: 500
 
-base-cost: 300
-increase-cost: 800
+base-cost: 1600
+increase-cost: 25.6
 
-base-chance: 0.25
-increase-chance: 0.04
+base-chance: 2.96
+increase-chance: 0.02381
 
 effect-radius: 1
 

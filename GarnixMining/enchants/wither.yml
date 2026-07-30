@@ -1,14 +1,14 @@
 display: "Wither"
 
-mine-level-unlock: 45
+mine-level-unlock: 135
 
-max-level: 100
+max-level: 500
 
-base-cost: 8000
-increase-cost: 20000
+base-cost: 39900
+increase-cost: 640
 
-base-chance: 2.5
-increase-chance: 0.05
+base-chance: 0.106
+increase-chance: 8.511e-4
 
 # --- Skull bombardment ---------------------------------------------------------
 # The Wither spins and lobs its own skulls at the mine; each skull that lands

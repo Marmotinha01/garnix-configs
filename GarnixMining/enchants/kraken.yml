@@ -1,14 +1,14 @@
 display: "Kraken"
 
-mine-level-unlock: 50
+mine-level-unlock: 165
 
-max-level: 100
+max-level: 500
 
-base-cost: 10000
-increase-cost: 25000
+base-cost: 49900
+increase-cost: 800
 
-base-chance: 2.5
-increase-chance: 0.05
+base-chance: 0.333
+increase-chance: 0.002678
 
 # --- Kraken shape --------------------------------------------------------------
 # A body hovers over the dig site and lashes out with tentacles that writhe

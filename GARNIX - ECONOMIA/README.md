@@ -79,23 +79,24 @@ Os 8 testes respondidos. Só os testes de carga (L1, L2) ficam para antes do lan
 
 12 documentos + simulador rodando. `MODELO CONSISTENTE`.
 
-### ⏳ Fase 2 — mineração, a via de referência · **pronta para começar**
+### ✅ Fase 2 — mineração, a via de referência · **APLICADA**
 
-Commit atômico — o valor-base, o teto de multiplicadores e a curva de XP são um sistema só.
+`16 arquivos alterados, 716 inserções, 316 deleções.` Simulador: **MODELO CONSISTENTE**.
 
-| # | Arquivo | O que fazer |
+| # | Arquivo | O que foi feito |
 |---|---|---|
-1 | `GarnixMining/levels.yml` | trocar a coluna `coins` de linear (1→12) pela escada de **21 grupos** de [02-TIERS.md](02-TIERS.md) (**1 → 3,81×10¹¹**, razão 4,07×/tier). **Manter a coluna `gemas` linear.** Corrigir o platô de XP dos níveis 70–76 |
-2 | `enchants/fortunate.yml` | `increase-multiplier: 1.0 → 0.14` (14,91×) |
-3 | `enchants/gemmed.yml` | `1.0 → 0.02` (3,03×, mantém gemas linear) |
-4 | **`enchants/blessed.yml`** | **`base-chance` de 9,21% para ~0,095% no nível 100** — com a chance de hoje seriam 1,93 milhão de chaves/dia |
-5 | `enchants/annihilation.yml` | `base-chance: 60 → ~0.12` no nível 100 (classe E) |
-6 | `enchants/*.yml` (15) | reclassificar nas classes **A–E** e calibrar a árvore para somar **~100× de throughput** (hoje ~2.600×). Ver [06-ENCANTES.md](06-ENCANTES.md) |
-7 | **`config.yml` → frenzy** | **`blocks-required: 1000 → ~3.500`** — a 19,4 blocos/s medidos os 1.000 enchem em 51s contra janela de 180s, ou seja o frenzy fica **sempre ativo** |
-8 | `config.yml` | `enchant-animation-budget: 0 → 10.000` |
-9 | `armors/*/tier-*.yml` (20) + `skins.yml` | reescrever com as escadas projetadas (+2%→+12% por peça · 0→+65% nas skins) |
+1 | `GarnixMining/levels.yml` | ✅ **300 níveis** (era 100), 21 grupos de bloco a cada 15 níveis, escada de coins **1 → 4,12×10¹¹** com erro de **0,023%** vs o alvo. Coluna `gemas` mantida linear. Curva de XP com **tempo por nível plano** (variação de 1,2×) e o platô 71–76 eliminado |
+2 | `enchants/fortunate.yml` | ✅ `increase-multiplier → 0.02778` (teto **14,91×** preservado com 500 níveis) |
+3 | `enchants/gemmed.yml` | ✅ `→ 0.003968` (3,03×, mantém gemas linear) |
+4 | `enchants/blessed.yml` | ✅ **0,095%** no nível 500 (era 9,21%) — com a chance antiga seriam **1,93 milhão** de chaves/dia |
+5 | `enchants/annihilation.yml` | ✅ `base-chance: 60 → 0.138`, teto **0,69%** |
+6 | `enchants/*.yml` (15) | ✅ escada de desbloqueio redesenhada (**classe A por padrão, classe B nos primeiros 10 min**), chances calibradas para a árvore somar **100×** (somava 2.602×), custos monotônicos com o unlock |
+7 | `config.yml` → frenzy | ✅ `blocks-required: 1000 → 3500` — devolve o uptime a **50%**, o 1,5× do orçamento |
+8 | `config.yml` | ✅ `enchant-animation-budget: 0 → 10.000` |
+9 | `armors/*` + `skins.yml` | ✅ **verificados, sem mudança** — as escadas já terminavam exatamente no orçamento (armadura T-V 12%/peça = conjunto 48%; skin topo 65%) |
+10 | `enchants/*.yml` | ✅ **`max-level: 100 → 500`** — 7.003 níveis de encante em vez de 1.403, com **teto de poder e custo total idênticos**. Só granularidade |
 
-**Nada mais depende de teste.** Todos os 9 itens podem começar.
+**Fase 2 completa.** O último item pendente — `max-simultaneous` nas classes D e E — **não era necessário**: o `AnimationRegistry` já capa cada animação em 1 por jogador (o `snake` em 3) e o orçamento global de 10.000 que ativei é a terceira camada. Custo por jogador com tudo rodando: **245**, dos quais o `kraken` é 185.
 
 ### ⏳ Fase 3 — a escada: ranks, spawners, cabeças
 

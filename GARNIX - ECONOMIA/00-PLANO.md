@@ -66,13 +66,13 @@ renda diária da casa no tier N  =  10.000 × 8^(N-1)
 
 **Um tier por dia, tier N = dia N.** Em 20 dias isso dá T1 = 10⁴ no dia 1 e T20 = 1,44×10²¹ no dia 20. Qualquer número em qualquer YAML deriva de um único inteiro N, e o dia em que ele importa é esse mesmo N.
 
-**O crescimento de 8×/dia não foi escolhido, foi derivado das duas pontas físicas.** Um jogador novo minera ~3.000 blocos/hora à mão a 1 coin/bloco, ou seja ~9.000 coins numa sessão de 3h: **a casa faz ~10⁴ no dia 1 e isso não é negociável** — é o que a mão do jogador produz. O teto pedido é 10²¹. Então `log(10²¹/10⁴) = 17 ordens` em **19 saltos** = 0,895 ordem/dia = **7,94×**, arredondado para 8×.
+**O crescimento de 6,61×/dia não foi escolhido, foi derivado das duas pontas — e as duas são medidas.** Um jogador **novo** minera **70.000 blocos/hora** (medido no V5-A) a 1 coin/bloco: **210.000 coins** numa sessão de 3h. A conta ativa é 56% da casa, então **a casa faz 3,75×10⁵ no dia 1**. Com o teto em 1,44×10²¹: `(1,44e21 / 3,75e5)^(1/19) =` **6,61×/dia**.
 
 > ⚠️ Uma versão anterior deste plano usava 10×/dia, o que colocava o T1 em **100 coins/dia para a casa inteira** — duas ordens abaixo do que um jogador novo produz só minerando. O erro ia na direção perigosa: teria feito o valor-base do bloco cair para fração de coin no começo, arredondando para zero.
 
 Tabela completa e todos os valores derivados em [02-TIERS.md](02-TIERS.md).
 
-Consequência que garante a segurança do modelo: **com crescimento de 8×/dia, o saldo final ≈ a renda do último dia, e a fortuna de ontem vale 12,5% da renda de hoje.** Ninguém consegue entesourar, ninguém trava de vez, e sinks agressivos (75%/dia) não movem o número da manchete.
+Consequência que garante a segurança do modelo: **com crescimento de 6,61×/dia, o saldo final ≈ a renda do último dia, e a fortuna de ontem vale ~15% da renda de hoje.** Ninguém consegue entesourar, ninguém trava de vez, e sinks agressivos (75%/dia) não movem o número da manchete.
 
 ### Modelo de 3 contas por IP
 
@@ -103,33 +103,17 @@ Consequência do captcha ser só na compra: ele **não é uma alavanca econômic
 
 > **Esta tabela é a versão resumida. A autoritativa, com todos os valores derivados, é [02-TIERS.md](02-TIERS.md).**
 
-Valor-base do bloco/colheita cresce **×3,9 por tier** (1 → 1,67×10¹¹), que é o que sobra depois de descontar o teto de throughput da mina (1,6×10⁷ blocos/h) e o teto de multiplicadores (100×).
+Valor-base do bloco/colheita cresce **×4,07 por tier** (1 → 3,81×10¹¹), que é o que sobra depois de descontar o teto de throughput da mina (**7×10⁶ blocos/h** — AoE máximo de 100× sobre os 70.000 manuais medidos) e o teto de multiplicadores (100×). Tabela autoritativa em [02-TIERS.md](02-TIERS.md).
 
 Coluna "custo rank" abaixo é apenas a **parte simbólica em coins** (2% da renda diária). O gate real do rank são **cabeças**, no eixo separado — ver "Dois eixos independentes".
 
-| T | Dia | Rank / Spawner | coins/dia (casa) | ativo/h | AFK/h | valor-base unit. | rank (coins, simbólico) | custo spawner |
-|---|---|---|---|---|---|---|---|---|
-| T1 | 1 | Coelho / RABBIT | 1,00×10⁴ | 1,85×10³ | 92,6 | 1,00 | grátis | — |
-| T2 | 2 | Porco / PIG | 8,00×10⁴ | 1,48×10⁴ | 741 | 3,90 | 1,60×10³ | 4,00×10⁴ |
-| T3 | 3 | Ovelha / SHEEP | 6,40×10⁵ | 1,19×10⁵ | 5,93×10³ | 15,2 | 1,28×10⁴ | 3,20×10⁵ |
-| T4 | 4 | Vaca / COW | 5,12×10⁶ | 9,48×10⁵ | 4,74×10⁴ | 59,3 | 1,02×10⁵ | 2,56×10⁶ |
-| T5 | 5 | Morcego / BAT | 4,10×10⁷ | 7,58×10⁶ | 3,79×10⁵ | 231 | 8,20×10⁵ | 2,05×10⁷ |
-| T6 | 6 | Jaguatirica / OCELOT | 3,28×10⁸ | 6,07×10⁷ | 3,03×10⁶ | 907 | 6,56×10⁶ | 1,64×10⁸ |
-| T7 | 7 | Lobo / WOLF | 2,62×10⁹ | 4,85×10⁸ | 2,43×10⁷ | 3,54×10³ | 5,25×10⁷ | 1,31×10⁹ |
-| T8 | 8 | Zumbi / ZOMBIE | 2,10×10¹⁰ | 3,88×10⁹ | 1,94×10⁸ | 1,38×10⁴ | 4,20×10⁸ | 1,05×10¹⁰ |
-| T9 | 9 | Esqueleto / SKELETON | 1,68×10¹¹ | 3,11×10¹⁰ | 1,55×10⁹ | 5,38×10⁴ | 3,36×10⁹ | 8,40×10¹⁰ |
-| T10 | 10 | Aranha / SPIDER | 1,34×10¹² | 2,49×10¹¹ | 1,24×10¹⁰ | 2,10×10⁵ | 2,69×10¹⁰ | 6,72×10¹¹ |
-| T11 | 11 | PigZombie | 1,07×10¹³ | 1,99×10¹² | 9,94×10¹⁰ | 8,22×10⁵ | 2,15×10¹¹ | 5,37×10¹² |
-| T12 | 12 | Slime | 8,59×10¹³ | 1,59×10¹³ | 7,95×10¹¹ | 3,21×10⁶ | 1,72×10¹² | 4,30×10¹³ |
-| T13 | 13 | Guardian | 6,87×10¹⁴ | 1,27×10¹⁴ | 6,36×10¹² | 1,25×10⁷ | 1,37×10¹³ | 3,44×10¹⁴ |
-| T14 | 14 | MagmaCube | 5,50×10¹⁵ | 1,02×10¹⁵ | 5,09×10¹³ | 4,88×10⁷ | 1,10×10¹⁴ | 2,75×10¹⁵ |
-| T15 | 15 | Endermite | 4,40×10¹⁶ | 8,14×10¹⁵ | 4,07×10¹⁴ | 1,90×10⁸ | 8,80×10¹⁴ | 2,20×10¹⁶ |
-| T16 | 16 | Bruxa / WITCH | 3,52×10¹⁷ | 6,51×10¹⁶ | 3,26×10¹⁵ | 7,45×10⁸ | 7,04×10¹⁵ | 1,76×10¹⁷ |
-| T17 | 17 | Blaze | 2,81×10¹⁸ | 5,21×10¹⁷ | 2,61×10¹⁶ | 2,91×10⁹ | 5,63×10¹⁶ | 1,41×10¹⁸ |
-| T18 | 18 | Golem / IRON_GOLEM | 2,25×10¹⁹ | 4,17×10¹⁸ | 2,08×10¹⁷ | 1,13×10¹⁰ | 4,50×10¹⁷ | ⚠️ 1,13×10¹⁹ |
-| T19 | 19 | Ghast | 1,80×10²⁰ | 3,33×10¹⁹ | 1,67×10¹⁸ | 4,42×10¹⁰ | 1,00×10¹⁸ (teto) | ⚠️ 9,00×10¹⁹ |
-| T20 | **20** | Wither | **1,44×10²¹** | 2,67×10²⁰ | 1,33×10¹⁹ | 1,67×10¹¹ | 1,00×10¹⁸ (teto) | ⚠️ 7,20×10²⁰ |
+> **Esta tabela vivia duplicada aqui e divergiu.** A autoritativa, com todos os 20 tiers e todos os valores derivados, é **[02-TIERS.md](02-TIERS.md)**. Abaixo só as três pontas, para leitura rápida:
 
+| T | Dia | Rank / Spawner | Casa/dia | Ativo/h | Valor-base | Spawner |
+|---|---|---|---|---|---|---|
+| T1 | 1 | Coelho / RABBIT | 3,75×10⁵ | 6,94×10⁴ | 1,00 | — |
+| T10 | 10 | Aranha / SPIDER | 9,03×10¹² | 1,67×10¹² | 3,06×10⁵ | 4,51×10¹² |
+| **T20** | **20** | Wither | **1,44×10²¹** | 2,66×10²⁰ | **3,81×10¹¹** | ⚠️ 7,19×10²⁰ |
 ⚠️ = ultrapassa `Long.MAX` (9,22×10¹⁸). Coberto pelo **C1**, aprovado. A parte em coins do rank é travada em **1×10¹⁸** a partir do rank 19 justamente para o rank nunca depender de C1 — o eixo de cabeças é que carrega a dificuldade lá em cima.
 
 ### Arquitetura de moedas — exatamente uma carrega o exponencial
@@ -154,7 +138,7 @@ O servidor tem **duas escadas que não se misturam**, e é isso que faz "sextilh
 
 | | **Eixo COINS** | **Eixo CABEÇAS** |
 |---|---|---|
-Natureza | exponencial, 8×/dia | linear no tempo de kill |
+Natureza | exponencial, 6,61×/dia | linear no tempo de kill |
 Amplitude | 19 ordens, até 10²¹ | contagem, cresce com throughput |
 Escada | 20 tiers | 20 ranks → prestígio → 20 ranks → ... |
 Onde é gasto | spawners, máquinas, loja, consumíveis, combustível, limites | **rank e prestígio, nada mais** |
@@ -179,7 +163,7 @@ Como isso se realiza em cada sistema:
 
 | Sistema | Como entrega a sensação |
 |---|---|
-Coins | 8×/dia significa que o número na tela **muda de casa quase todo dia**. O jogador vê milhão virar bilhão virar trilhão |
+Coins | 6,61×/dia significa que o número na tela **muda de casa quase todo dia**. O jogador vê milhão virar bilhão virar trilhão |
 Chaves | ~5.000/dia no endgame, com recheio em 92% das aberturas — algo acontece sempre |
 **Bosses** | **volume alto e empilhado** — ver ajuste abaixo |
 Ranks | +1% por rank, 20 vezes, mais o prestígio infinito — sempre tem o próximo degrau perto |
@@ -467,7 +451,7 @@ Nível de desbloqueio | 0 → **60+** |
 - **`GarnixMining/config.yml` `enchant-animation-budget: 0`** — hoje **ilimitado**. O próprio comentário do arquivo mede 500 mineradores no nível máximo em 77.000 pacotes/tick e recomenda 10.000. Definir 10.000 e validar com carga real. Detalhe importante e correto do design existente: quando o orçamento estoura, o jogador **perde a animação mas recebe o pagamento** — degradação justa, não punitiva.
 - **`GarnixFarm/config.yml` `enchant-max-simultaneous-global: 80`** — mesma lógica no farm; proc bloqueado ainda paga a colheita.
 - **`max-simultaneous` por encante** nas classes D e E, não só no `snake`.
-- **Teto de throughput da mina** — `reset-cooldown: 30` limita a 1,6×10⁷ blocos/h. Hoje a árvore de AoE soma ~2.600× de throughput, **mais do que a mina consegue entregar**. Acima do teto, subir chance de AoE não gera nada e só queima CPU. As chances das classes C/D/E têm que ser calibradas **contra esse teto**, não contra a sensação.
+- **Teto de throughput da mina** — ⚠️ **não é o `reset-cooldown`**, que é contornável saindo e voltando da mina. O teto é decisão de projeto: AoE máximo de 100× sobre os 70.000 manuais = **7×10⁶ blocos/h**. A árvore de AoE somava ~2.600× de throughput, **mais do que a mina consegue entregar**. Acima do teto, subir chance de AoE não gera nada e só queima CPU. As chances das classes C/D/E têm que ser calibradas **contra esse teto**, não contra a sensação.
 
 Isso vira também um item do Ranking de Apelões: um encante de classe E no nível alto é score 3 (nunca no site), mas o **custo de infra** dele é o que decide o teto de jogadores simultâneos que o servidor suporta — ou seja, é a única entrada do ranking que tem custo de hospedagem, e por isso entra no orçamento de verdade e não só no de diversão.
 
@@ -513,7 +497,7 @@ Tetos que já calculei dos configs, para você conferir contra o cronômetro:
 
 | Via | Teto teórico | Governado por |
 |---|---|---|
-Mineração | 1,6×10⁷ blocos/h | região da mina (135.700 blocos) ÷ `reset-cooldown: 30` |
+Mineração | **7×10⁶ blocos/h** | decisão de projeto: AoE 100× sobre os 70.000 manuais medidos |
 Farm | 4,1×10⁶ colheitas/h | 22.735 posições ÷ `regrow-delay-seconds: 20` |
 Pesca | ~504 fisgadas/h | `fishing-base-interval-seconds: 15` − speed 5, × `double` 40% |
 Passivo | **sem teto** | `s.limite` × `mob-stack` ÷ `delay` |
@@ -628,7 +612,7 @@ Mineração é calibrada primeiro e as outras três são ajustadas **contra ela*
 - **`enchants/gemmed.yml`**: `1.0 → 0,02` (mantém gemas linear; é a razão de o sink de gemas evaporar hoje).
 - **Reclassificar os 15 encantes nas classes A–E de custo de infra** e reescrever `base-chance`/`increase-chance`, `max-level`, `mine-level-unlock`, `max-simultaneous` e custo em gemas conforme a classe. Inclui `annihilation.yml` `base-chance: 60 → ~0,12` no nível 100 (classe E) e **baixar as chances de `snake`/`blaze`/`kraken`/`meteor`/`wither`**, que hoje são as maiores do arquivo sendo as mais caras (classe D).
 - Recustar a árvore inteira para somar ~11h de renda linear de gemas, **com as classes D/E sendo o último gasto da temporada** (hoje a árvore custa 6,4×10⁸ gemas e é comprável em minutos se gemas subir junto com o tier).
-- Definir **`enchant-animation-budget: 0 → 10.000`** (valor recomendado pelo próprio comentário do arquivo) e calibrar as chances de C/D/E contra o teto de 1,6×10⁷ blocos/h da mina.
+- ✅ **APLICADO:** `enchant-animation-budget: 0 → 10.000` (valor recomendado pelo próprio comentário do arquivo), e as chances de B/C/D/E calibradas para a árvore somar **100×** (somava 2.602×). Ver [06-ENCANTES.md](06-ENCANTES.md).
 - **`armors/*/tier-*.yml`** (20 arquivos) e **`skins.yml`**: reescrever com as escadas projetadas (armadura +2%→+12% por peça; skins 0→+65% com corte de forja no 7º). Os valores de hoje são fictícios. Fazer os 3 plugins com a mesma escada para que as 4 vias fiquem equivalentes, variando só a moeda secundária.
 - **Teto de multiplicadores: 100× total (≤50× em regime).** A restrição vem de baixo, não de cima: se a pilha vale 1.000×, o bloco do T1 tem que valer 0,001 coin, arredonda pra zero e a primeira hora de jogo não paga nada. Com teto 100×, T1 = 1 coin exato.
 
@@ -800,7 +784,7 @@ Torre automática | `GarnixCactusTowers` — item **raro** que ergue uma torre 3
 3. **Espaço do plot** — teto físico absoluto da via.
 4. **Raridade da torre e do item cacto** — decide se o crescimento é linear (plantar à mão) ou salta.
 
-**Alvo de paridade:** a farm de cacto de um jogador dedicado deve **dobrar de tamanho a cada 8h** por reinvestimento — 3 dobras por dia = 2³ = **8×/dia**, exatamente a curva de tiers, sem precisar tocar no `sell-price`. O `sell-price: 10` de hoje é fictício e será derivado dessa conta, não escolhido.
+**Alvo de paridade:** a farm de cacto de um jogador dedicado deve **dobrar de tamanho a cada 8,7h** por reinvestimento — `2^(24/8,7) = 6,61×/dia`, exatamente a curva de tiers, sem precisar tocar no `sell-price`. O `sell-price: 10` de hoje é fictício e será derivado dessa conta, não escolhido.
 
 ⚠️ **Item cacto e torre entram na lista de itens sem rota** (abaixo) — hoje a Torre de Cacto só sai de `/cactustower give` e o Limite de Armazém só de `/armazem givelimititem`.
 
@@ -977,7 +961,7 @@ Farm manual (`clover`) | ~1.000 | `GarnixFarm/enchants/clover.yml` → chave `fa
 Pesca, eventos, ontime, bosses | ~300 | `rewards.yml`, `GarnixEvents`, `GarnixOnTime` |
 | **total endgame** | **~4.000–5.000/dia** | |
 
-**A trava que faz esse volume ser controlável:** o proc de chave tem que contar **blocos manuais**, não blocos quebrados por AoE. `blessed` a 9,21% no nível 100 sobre 1,6×10⁷ blocos/h de AoE daria 1,4 milhão de chaves/hora — absurdo. Sobre ~10.000 blocos manuais/h dá ~900/h, que é massivo e saudável. O plugin já tem esse conceito: o frenzy conta `blocks-required: 1000` **só de blocos manuais, excluindo encantes/drill/bombas**. A mesma regra vale para chave.
+**A trava que faz esse volume ser controlável é a CHANCE, não o código.** O teste V7 mostrou que `blessed` **rola em todo bloco de área** (`EnchantHandler.java:180`: *"Each block broken by area enchants gets its own Blessed roll"*). Com a chance antiga de 9,21% sobre 2,1×10⁷ blocos/dia seriam **1,93 milhão de chaves/dia** — inviável. A correção é `blessed` no nível 500 = **0,095%**, dando ~20.000 chaves/dia só da mineração. Isso **matou o C7**: chance é uma alavanca melhor que mudança de código, e preserva a sensação de "o AoE choveu chave".
 
 **Tabela de crate calibrada para ~5.000 aberturas/dia** (não para 12 — esse é o erro que arruinaria tudo):
 
@@ -1143,7 +1127,7 @@ Fontes em `Desktop/garnix/sources` (sincronizar `resources/` junto). **C1, C2, C
 **C2** | GarnixFarm | Tabela opcional de moeda por nível em `levels.yml`, espelhando o schema que **já existe** em `GarnixMining/levels.yml` | Sem ela farm não tem onde guardar 16,5 ordens e as "4 vias equivalentes" não existem | paridade do Farm |
 **C3** | GarnixCore / GarnixCurrencies | Tabela de sufixos do formatter `SUFFIX` configurável, até sextilhão+ | Hoje é hardcoded, sem tabela em YAML nenhum. **Confirmar com V1 antes** — pode já funcionar | exibição de 10²¹ |
 **C6** | GarnixRankUP | **Prestígio:** lista de comandos global (roda em qualquer prestígio, para remover permissões via LuckPerms) + listas **por nível** de prestígio, com níveis vazios permitidos. Hoje só existe `prestige.commands: []`, chapado | É o que faz o prestígio deixar de ser um número. Sem isso não há como dar recompensa por nível nem limpar as permissões de rank | todo o sistema de prestígio |
-**C7** | GarnixMining / GarnixFarm | Garantir que o proc de **chave** conte **blocos/colheitas manuais**, não os quebrados por AoE | `blessed` a 9,21% sobre 1,6×10⁷ blocos/h de AoE = 1,4 milhão de chaves/hora. O conceito já existe no frenzy (`blocks-required` conta só manual) — só precisa valer para chave | toda a economia de chaves |
+**C7** | ~~GarnixMining / GarnixFarm~~ | ❌ **DESNECESSÁRIO** — o V7 mostrou que a chance resolve melhor que código. ~~Garantir que o proc de chave conte blocos manuais~~ | `blessed` a 9,21% sobre 1,6×10⁷ blocos/h de AoE = 1,4 milhão de chaves/hora. O conceito já existe no frenzy (`blocks-required` conta só manual) — só precisa valer para chave | toda a economia de chaves |
 **C4** *(opcional)* | Mining / Farm / Fishing | Campo de **bônus de conjunto** de armadura | Hoje 4 peças só somam. Se conjunto tem que importar, precisa de campo | nada — nice to have |
 **C5** *(opcional)* | Spawners / Machines | Retorno decrescente ou teto diário por conta em drop AFK | Protege a razão ativo:AFK de 20× contra empilhamento de contas | nada — só se o simulador mostrar quebra |
 **C8** | GarnixBosses | `max-simultaneous` global de bosses | **~30.000 spawns/dia com 100 jogadores, em lotes de 20–30** (`boss-stack-radius: 5`). É o pico de carga do servidor | estabilidade com 100+ jogadores |

@@ -9,8 +9,19 @@ const PARAMS = {
   temporada: {
     dias: 20,
     tiers: 20,
-    crescimentoPorDia: 8,     // derivado das duas pontas fisicas - ver 02-TIERS.md
-    rendaT1: 10000,           // teto fisico de um jogador novo no dia 1
+
+    // ✅ ANCORADO NA MEDICAO. Um jogador NOVO, no dia 1, minera cobblestone a
+    //    1 coin/bloco segurando o botao: 70.000 blocos/h x 3h = 210.000 coins.
+    //    A conta ativa e 56% da casa, entao a casa faz 210.000 / 0,56 = 375.000.
+    //
+    //    Historico das duas correcoes (ambas vieram de medir, nao de supor):
+    //      1a versao: 10x/dia, T1 = 1e2   -> impossivel, 100 coins/dia
+    //      2a versao:  8x/dia, T1 = 1e4   -> supondo 3.000 blocos/h manuais
+    //      AGORA:    6,6x/dia, T1 = 3,75e5 -> com os 70.000 blocos/h medidos
+    //
+    //    (1,44e21 / 3,75e5) ^ (1/19) = 6,61x
+    rendaT1: 375_000,
+    crescimentoPorDia: 6.61,
   },
 
   // ------------------------------------------------- modelo de 3 contas por IP

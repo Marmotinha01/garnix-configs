@@ -1,14 +1,14 @@
 display: "Afortunado"
 
-mine-level-unlock: 5
+mine-level-unlock: 0
 
-max-level: 100
+max-level: 500
 
-base-cost: 50
-increase-cost: 100
+base-cost: 200
+increase-cost: 3
 
 base-multiplier: 1.05
-increase-multiplier: 1.0
+increase-multiplier: 0.02778
 multiplier-provider: "coins"
 
 icon:

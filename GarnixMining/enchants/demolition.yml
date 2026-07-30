@@ -1,14 +1,14 @@
 display: "Demolição"
 
-mine-level-unlock: 40
+mine-level-unlock: 25
 
-max-level: 100
+max-level: 500
 
-base-cost: 2500
-increase-cost: 6000
+base-cost: 3990
+increase-cost: 64
 
-base-chance: 0.15
-increase-chance: 0.009
+base-chance: 0.776
+increase-chance: 0.00621
 
 messages:
   - "&a&lDEMOLIÇAO! &fVocê quebrou em 8 direções na mina!"

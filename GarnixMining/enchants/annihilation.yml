@@ -1,14 +1,14 @@
 display: "Aniquilação"
 
-mine-level-unlock: 60
+mine-level-unlock: 240
 
-max-level: 100
+max-level: 500
 
-base-cost: 5000
-increase-cost: 15000
+base-cost: 99800
+increase-cost: 1600
 
-base-chance: 60
-increase-chance: 0.05
+base-chance: 0.138
+increase-chance: 0.001105
 
 messages:
   - "&a&lANIQUILAÇAO! &fVocê destruiu uma camada inteira!"

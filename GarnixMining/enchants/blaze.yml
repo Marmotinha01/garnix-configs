@@ -1,14 +1,14 @@
 display: "Blaze"
 
-mine-level-unlock: 40
+mine-level-unlock: 105
 
-max-level: 100
+max-level: 500
 
-base-cost: 5000
-increase-cost: 15000
+base-cost: 29900
+increase-cost: 479
 
-base-chance: 2.5
-increase-chance: 0.05
+base-chance: 0.556
+increase-chance: 0.004444
 
 # --- Fireball barrage ----------------------------------------------------------
 # Blazes hover over the dig site and lob fireballs at the mine; each fireball that

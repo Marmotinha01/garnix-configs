@@ -1,14 +1,14 @@
 display: "Cobra"
 
-mine-level-unlock: 35
+mine-level-unlock: 75
 
-max-level: 100
+max-level: 500
 
-base-cost: 4000
-increase-cost: 12000
+base-cost: 23900
+increase-cost: 383
 
-base-chance: 2.5
-increase-chance: 0.05
+base-chance: 0.333
+increase-chance: 0.002678
 
 # Max cells the snake crawls (each cell carves a tunnel section). It seeks blocks
 # and turns as it goes, so a larger value makes it wind through the mine for

@@ -2,7 +2,7 @@
 
 Fonte da verdade da economia da temporada. **Todo número de todo `.yml` de plugin deriva daqui.** Se um valor num plugin não puder ser explicado por uma linha deste arquivo, ele está errado.
 
-Última atualização: **29/07/2026**
+Última atualização: **30/07/2026**
 
 ---
 
@@ -12,9 +12,9 @@ Fonte da verdade da economia da temporada. **Todo número de todo `.yml` de plug
 |---|---|
 Duração | **20 dias**, reset total ao fim |
 Tiers | **20**, um por dia — **tier N = dia N** |
-Crescimento | **8× por dia** (17 ordens em 19 saltos) |
+Crescimento | **6,61× por dia** (15,6 ordens em 19 saltos) |
 Teto de coins | **1,44×10²¹ (sextilhões)** no dia 20, para o jogador dedicado |
-T1 (dia 1) | **10⁴** — o teto físico de um jogador novo |
+T1 (dia 1) | **3,75×10⁵** — o que um jogador novo produz só minerando (70.000 blocos/h medidos) |
 Banda casual (1h/dia) | 10¹²–10¹⁵ |
 Banda hardcore (8h/dia) | até ~10²³ |
 Cash de um free na temporada | **400**, 560 se vinculado, ~860 com eventos, ~960 com a máquina de cash |
@@ -26,12 +26,12 @@ Razão ativo : AFK | **20 : 1** por hora |
 **Fórmula mestre:**
 
 ```
-renda diária da casa no tier N  =  10.000 × 8^(N-1)
+renda diária da casa no tier N  =  375.000 × 6,61^(N-1)
 ```
 
 Onde "casa" = as 3 contas de um jogador somadas.
 
-**O crescimento não foi escolhido, foi derivado das duas pontas — e as duas são físicas.** Um jogador novo minera ~3.000 blocos/hora à mão a 1 coin/bloco, ou seja ~9.000 coins numa sessão de 3h: **a casa faz ~10⁴ no dia 1 e isso não é negociável.** O teto pedido é 10²¹. Então `log(10²¹/10⁴) = 17 ordens` em **19 saltos** = 0,895 ordem/dia = **7,94×**, arredondado para **8×**.
+**O crescimento não foi escolhido, foi derivado das duas pontas — e as duas são medidas.** Um jogador **novo** minera **70.000 blocos/hora** (medido no V5-A) a 1 coin/bloco: 210.000 coins numa sessão de 3h. A conta ativa é 56% da casa, então **a casa faz 3,75×10⁵ no dia 1**. Com o teto em 1,44×10²¹: `(1,44e21 / 3,75e5)^(1/19) =` **6,61×/dia**. Sanidade: o simulador dá 69.440 coins/h de renda ativa no T1 contra os 70.000/h medidos.
 
 Tabela completa e todos os valores derivados em [02-TIERS.md](02-TIERS.md).
 
@@ -43,8 +43,8 @@ A decisão estrutural do plano. Duas escadas que não se misturam — é isso qu
 
 | | **Eixo COINS** | **Eixo CABEÇAS** |
 |---|---|---|
-Natureza | exponencial, 8×/dia | linear no tempo de kill |
-Amplitude | 17 ordens, até 1,44×10²¹ | contagem, cresce com throughput |
+Natureza | exponencial, 6,61×/dia | linear no tempo de kill |
+Amplitude | 15,6 ordens, até 1,44×10²¹ | contagem, cresce com throughput |
 Escada | 20 tiers | 20 ranks → prestígio → 20 ranks → ∞ |
 Onde é gasto | spawners, máquinas, loja, combustível, limites, consumíveis | **rank e prestígio, nada mais** |
 Teto | sextilhões no dia 20 | centenas de prestígios |
@@ -67,7 +67,7 @@ Exatamente **uma** moeda carrega o exponencial. É isso que torna o resto tratá
 
 | Moeda | Classe | Amplitude | Papel |
 |---|---|---|---|
-`coins` | **Exponencial** | 17 ordens | spawners, máquinas, loja, combustível, limites |
+`coins` | **Exponencial** | 15,6 ordens | spawners, máquinas, loja, combustível, limites |
 `gemas` | Linear | 3–4 ordens | encantes de **mineração** |
 `sementes` | Linear | 3–4 ordens | encantes de **farm** |
 `corais` | Linear | 3–4 ordens | progressão de **pesca**: vara, skins, livros, limites |
@@ -120,24 +120,24 @@ AFK 2 (farm + cabeças) | 24h | 1× | 24u | 22% |
 | | | | **108u** | 100% |
 
 ```
-renda(N)                = 10.000 × 8^(N-1)
+renda(N)                = 375.000 × 6,61^(N-1)
 1u                      = renda(N) / 108
 AFK por hora, por conta = renda(N) / 108
 Ativo por hora          = renda(N) / 5,4
 Passivo por hora        = renda(N) / 24    (roda 24h, só a partir do T7)
 ```
 
-Sanidade nas duas pontas: no dia 1 (T1) o ativo rende ~1.850 coins/h (≈0,5 bloco/s a 1 coin/bloco) e o AFK ~93/h. No dia 20 (T20) o ativo rende 2,67×10²⁰/h e o AFK 1,33×10¹⁹/h.
+Sanidade nas duas pontas: no dia 1 (T1) o ativo rende **69.440 coins/h** — contra os **70.000/h medidos in-game**, ou seja a âncora fecha. No dia 20 (T20) o ativo rende 2,66×10²⁰/h e o AFK 1,33×10¹⁹/h.
 
 ---
 
 ## 5. As vias e seus tetos de throughput
 
-Seis vias, todas pareadas. Os tetos abaixo foram calculados dos configs e **precisam ser confirmados no teste V5** — nenhum deles é para mexer antes de medir.
+Seis vias, todas pareadas.
 
-| Via | Teto teórico | Governado por | Moeda secundária |
+| Via | Teto | Governado por | Moeda secundária |
 |---|---|---|---|
-**Mineração** | 1,6×10⁷ blocos/h | região da mina (135.700 blocos) ÷ `reset-cooldown: 30` | gemas |
+**Mineração** | **7×10⁶ blocos/h** | ⚠️ **decisão de projeto, não limite físico.** O `reset-cooldown: 30` é contornável saindo e voltando da mina, então o teto é o AoE máximo (100×) sobre os **70.000 blocos/h manuais medidos** | gemas |
 **Farm** | 4,1×10⁶ colheitas/h | 22.735 posições ÷ `regrow-delay-seconds: 20` | sementes |
 **Pesca** | ~504 fisgadas/h | `fishing-base-interval-seconds: 15` − speed 5, × `double` 40% | corais |
 **Spawners** | **sem teto físico** | `s.limite` × `mob-stack` ÷ `delay` | dracmas |
@@ -285,8 +285,8 @@ Sobra carregada pro dia seguinte | 25% |
 
 Duas propriedades que tornam isso robusto:
 
-1. **Não dá para travar ninguém.** Mesmo a 75% de absorção, a renda de amanhã é 8× a de hoje. Quem gastou demais recupera numa sessão. Não existe espiral.
-2. **Não dá para entesourar.** Carregar 25% do tier N é **3% da renda do tier N+1** — quase invisível. É o argumento mais forte a favor dos 8×/dia uniformes: a 3×/dia, a poupança de ontem valeria 33% de hoje e entesourar seria a jogada ótima.
+1. **Não dá para travar ninguém.** Mesmo a 75% de absorção, a renda de amanhã é 6,6× a de hoje. Quem gastou demais recupera numa sessão. Não existe espiral.
+2. **Não dá para entesourar.** Carregar 25% do tier N é **~4% da renda do tier N+1** — quase invisível. É o argumento mais forte a favor de manter o crescimento uniforme: a 3×/dia, a poupança de ontem valeria 33% de hoje e entesourar seria a jogada ótima.
 
 **O corolário importa mais que o preço: sink tem que ser GATEADO, não só caro.** Um sink precificado no tier N é 10% de um dia no N+1 e 1% no N+2 — de graça. Todo sink precisa de trava junto do preço: permissão de rank, `mine-level-unlock`, `require: {level, crops}`, `release:` do spawner, `required-level` da recompensa de pesca.
 
@@ -346,9 +346,9 @@ O modo mais comum de uma economia de RankUP morrer: o jogador descobre que compr
 | | Multiplicador máximo |
 |---|---|
 Empilhamento total de um spawner (`mob-stack 3` × `spawner-stack 512`) | **1.536×** |
-Ganho de valor por tier | **8× por tier** |
+Ganho de valor por tier | **6,61× por tier** |
 
-Como `8³ = 512 < 1.536 < 4.096 = 8⁴`:
+Como `6,61³ = 289 < 1.536 < 1.909 = 6,61⁴`:
 
 > **Empilhar um spawner ao máximo vale ~3,53 tiers. Estar 4 tiers atrás não é compensável por upgrade nenhum.**
 
@@ -377,7 +377,7 @@ O jogador quer ver **quantias elevadas e evolução contínua**, mesmo quando o 
 
 | Sistema | Como entrega |
 |---|---|
-Coins | 8×/dia = o número **muda de casa quase todo dia** |
+Coins | 6,61×/dia = o número **muda de casa quase todo dia** |
 Chaves | ~5.000/dia no endgame, recheio em 88% das aberturas |
 Bosses | **~250–300/dia**, empilhados em lotes de 20–30 |
 Ranks | +1% × 20, mais prestígio infinito |
