@@ -74,17 +74,42 @@ O passivo só começa no **T7** — antes disso o jogador não tem capital para 
 
 ## Valor-base por unidade
 
-O que **um** bloco / colheita / fisgada paga, **sem multiplicador nenhum**. Cresce **3,9× por tier** (`8^(1/19)` ajustado ao teto de throughput).
+O que **um** bloco / colheita / fisgada paga, **sem multiplicador nenhum**. Cresce **4,07× por tier**.
 
-Ancoragem: T1 = **1 coin** exato (é o que o `levels.yml` já diz para cobblestone). T20 = `ativo/h ÷ (teto de blocos/h × teto de multiplicador)` = `2,67×10²⁰ ÷ (1,6×10⁷ × 100)` = **1,67×10¹¹**.
+Ancoragem nas duas pontas:
+
+| Ponta | Valor | De onde vem |
+|---|---|---|
+T1 | **1 coin** exato | é o que o `levels.yml` já diz para cobblestone |
+T20 | **3,81×10¹¹** | `ativo/h ÷ (blocos/h × teto de multiplicador)` = `2,67×10²⁰ ÷ (7×10⁶ × 100)` |
+
+### ⚠️ O teto da mina não existe na prática
+
+Eu havia calculado o teto como `135.759 blocos × 120 resets/h = 1,63×10⁷/h`, a partir do `reset-cooldown: 30`. **A medição in-game mostrou que isso é falso:**
+
+> *"volta 100% resetadinha, mina completinha de blocos novos, e sim o cooldown é aplicado — **porém se o jogador sai da mina e volta, reseta**, porque a mina não guarda estado."*
+
+Sair e voltar contorna o cooldown. Isso não será mudado no código, então **o throughput de mineração não tem teto físico** — ele passa a ser uma **decisão de projeto**, definida pelo multiplicador da árvore de AoE.
+
+**Alvo escolhido: AoE máximo de ~100× sobre o manual.**
+
+| | |
+|---|---|
+Manual medido | **70.000 blocos/h** (3.500 em 3 min = 19,4/s) |
+AoE máximo | **100×** |
+Endgame | **7×10⁶ blocos/h** |
+
+Por que 100× e não mais: 7×10⁶/h equivale a limpar **~51 minas por hora** (uma a cada 70s), ou seja usa **43% da capacidade de reset**. Sobra folga e **não exige o truque de sair e voltar**. Com 233× (o número do teto antigo) se usaria 100% do cooldown, sem nenhuma margem — e qualquer jogador que quisesse mais teria que abusar do reset.
+
+**Sobre o manual de 70.000/h:** não é taxa de clique. Com `Efficiency 1000` (`PickaxeItem.java:114`) a quebra é instantânea, então o jogador **segura e arrasta** e o servidor entrega ~1 bloco por tick. Um jogador rápido chega a 80.000/h.
 
 | T | Valor-base | T | Valor-base | T | Valor-base | T | Valor-base |
 |---|---|---|---|---|---|---|---|
-T1 | 1,00 | T6 | 907 | T11 | 8,22×10⁵ | T16 | 7,45×10⁸ |
-T2 | 3,90 | T7 | 3,54×10³ | T12 | 3,21×10⁶ | T17 | 2,91×10⁹ |
-T3 | 15,2 | T8 | 1,38×10⁴ | T13 | 1,25×10⁷ | T18 | 1,13×10¹⁰ |
-T4 | 59,3 | T9 | 5,38×10⁴ | T14 | 4,88×10⁷ | T19 | 4,42×10¹⁰ |
-T5 | 231 | T10 | 2,10×10⁵ | T15 | 1,90×10⁸ | T20 | **1,67×10¹¹** |
+T1 | 1,00 | T6 | 1,12×10³ | T11 | 1,25×10⁶ | T16 | 1,39×10⁹ |
+T2 | 4,07 | T7 | 4,54×10³ | T12 | 5,07×10⁶ | T17 | 5,66×10⁹ |
+T3 | 16,6 | T8 | 1,85×10⁴ | T13 | 2,06×10⁷ | T18 | 2,30×10¹⁰ |
+T4 | 67,4 | T9 | 7,52×10⁴ | T14 | 8,39×10⁷ | T19 | 9,37×10¹⁰ |
+T5 | 274 | T10 | 3,06×10⁵ | T15 | 3,42×10⁸ | T20 | **3,81×10¹¹** |
 
 Estes são os números que vão para as colunas `currencies:` de `GarnixMining/levels.yml` e (via **C2**) de `GarnixFarm/levels.yml`, nos 21 grupos de nível (0, 5, 10, … 100). O grupo de nível de mina `5×(N−1)` recebe o valor do tier N.
 
@@ -167,6 +192,6 @@ Os três testes que podem mover a tabela inteira:
 |---|---|
 **V1** — o `SUFFIX` renderiza 10²¹? | o teto desce para quintilhão e a tabela recua ~1 tier |
 **V3** — `percent: true` soma ou multiplica? | o teto de 100× muda e o valor-base é recalculado |
-**V5** — os 4 tetos de throughput reais | o valor-base do T20 é derivado do teto de blocos/h; se a mina entregar diferente de 1,6×10⁷, a coluna inteira muda |
+**V5-A** — a taxa de clique manual | governa o volume de chaves (~4.800/dia) e o uptime do frenzy. O teto da mina já está confirmado por aritmética |
 
 Protocolo em [09-VERIFICACAO.md](09-VERIFICACAO.md), metas de cronometragem em [metrics.csv](metrics.csv).

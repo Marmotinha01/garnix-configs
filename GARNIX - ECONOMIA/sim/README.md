@@ -54,7 +54,17 @@ Registro do que ele pegou e que não estava óbvio no papel:
 
 **1. O crescimento de 10×/dia era impossível.** Com `tier N = dia N`, o T1 dava 100 coins/dia para a casa inteira — duas ordens abaixo do que um jogador novo produz só minerando à mão (~3.000 blocos/h × 1 coin = 9.000 numa sessão de 3h). O crescimento correto é **8×/dia**, derivado das duas pontas físicas.
 
-**2. O prestígio estourava o teto de multiplicadores.** O +25% do prestígio 500 levava a pilha a 110× contra o teto de 100×. Correção: `fortunate`/`prosperity` com `increase-multiplier: 0.07` (7,98× no nível 100) em vez de 0.08. Total fecha em **98,0×**.
+**2. O prestígio estourava o teto de multiplicadores.** O +25% do prestígio 500 levava a pilha acima do teto de 100×. Pegou com o modelo antigo, e voltou a pegar depois que a fórmula real foi descoberta — nas duas vezes o ajuste saiu do `fortunate`.
+
+**2b. A fórmula que eu supunha estava errada, e o código provou.** Eu assumia `... × frenzy × booster`, com o booster **multiplicando**. O código (`EffectRewardHelper.java:90-100`) faz:
+
+```
+valor = base × fortunate × (1 + booster% + skin% + armadura% + permBonus%) × frenzy
+```
+
+O **booster soma** (`multiplicador − 1,0`), então um 3× contribui **+200% aditivo**, não ×3. Isso liberou orçamento e o `fortunate` pôde ir de `increase-multiplier: 0.07` para **`0.14`** (14,91×) — o dobro. Total fecha em **100,2×**.
+
+E o `permissionBonus()` revelou que **rank e VIP competem pelo mesmo nó `mining.bonus.<N>`: o maior vence, não somam.** O simulador agora modela isso explicitamente e reporta quais nós ficam ignorados por perder para o maior.
 
 **3. A armadilha do vale de substituição.** Trocar um spawner **maxado** do tier N por um **nu** do tier N+1 no mesmo slot deixa aquele slot **192× pior** até ser re-empilhado (`empilhamento 1536 ÷ ganho por tier 8`).
 

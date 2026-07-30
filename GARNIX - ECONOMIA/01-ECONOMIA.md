@@ -157,33 +157,44 @@ São **4,5 ordens de magnitude** de diferença entre mineração e pesca. A equi
 O número que trava tudo. Percentuais **somam entre si**; multiplicadores nomeados **multiplicam**.
 
 ```
-valor = base × enchant × (1 + Σpercent/100) × frenzy × booster × (1 + vip/100)
+valor = base × fortunate × (1 + booster% + skin% + armadura% + permBonus%) × frenzy
 ```
 
-⚠️ Isso é inferência da forma dos configs + um comentário em `GarnixFishing/skins.yml` ("% **somado** aos corais"). **O teste V3 confirma.** Se for multiplicativo, este orçamento inteiro é recalculado.
+✅ **Confirmado no código** — `garnix-mining/.../enchant/EffectRewardHelper.java:90-100` e o javadoc de `BonusCalculator`. Não é inferência.
+
+| O que | Como entra |
+|---|---|
+`fortunate` (enchantMultiplier) | **multiplica** |
+Frenzy | **multiplica** |
+**Booster** | **soma**, como `(multiplicador − 1,0)` — um 3× contribui **+200%**, não ×3 |
+Skin | soma, como `(multiplicador − 1,0)` |
+Armadura (4 peças) | soma, `percent ? value/100 : value − 1,0` |
+`permBonus` (rank / VIP) | soma **um único valor: o maior nó vence** |
+
+🚩 **`permissionBonus()` não empilha:** *"The nodes do not stack: the largest one the player holds wins."* Rank e VIP **competem pelo mesmo nó** `mining.bonus.<percent>`, não se somam. Ver a escada corrigida abaixo.
 
 ### Via de mineração (referência)
 
 | Fonte | Máximo | Tipo |
 |---|---|---|
-Armadura T-V (4 peças × 12%) | +48% | somado |
+**Booster 3×** | **+200%** | **somado** (`multiplicador − 1,0`) |
 Skin de topo | +65% | somado |
-Bônus de rank 20 | +20% | somado |
-Bônus VIP garnix | +15% | somado |
-| **subtotal percentual** | **+148% → 2,48×** | |
-`fortunate` nível 100 | **7,98×** | multiplicativo |
+Armadura T-V (4 peças × 12%) | +48% | somado |
+`permBonus` — **o maior nó vence** | +35% | somado (um valor só) |
+| **bloco aditivo** | **(1 + 348/100) = 4,48×** | |
+`fortunate` nível 100 | **14,91×** | multiplicativo |
 Frenzy (uptime real, não 2,0 nominal) | 1,5× | multiplicativo |
-**Booster 3×** | **3,0×** | multiplicativo |
-| **TOTAL** | **≈100×** | ✅ exatamente no teto |
+| **TOTAL** | **100,2×** | ✅ no teto |
 
 ### Via passiva
 
 | Fonte | Máximo | Tipo |
 |---|---|---|
-Rank 20 + VIP garnix | +35% → 1,35× | somado |
+Booster de drops 3× | +200% | somado |
+`permBonus` (rank ou VIP, o maior) | +35% | somado |
+| **bloco aditivo** | **3,35×** | |
 `pilhagem` 3 (livro) | 2,0× | multiplicativo |
-Booster de drops 3× | 3,0× | multiplicativo |
-| **TOTAL de valor** | **≈8,1×** | ✅ |
+| **TOTAL de valor** | **6,7×** | ✅ |
 
 `massacre` e `ceifador` são **throughput**, não valor — entram no cálculo de cabeças/h.
 
@@ -195,24 +206,29 @@ A restrição vem **de baixo**, não de cima. Se a pilha valesse 1.000×, o bloc
 
 | Arquivo | Hoje | Alvo | Resultado |
 |---|---|---|---|
-`GarnixMining/enchants/fortunate.yml` `increase-multiplier` | **1.0** (→100×) | **0.07** | 7,98× |
-`GarnixFarm/enchants/prosperity.yml` `increase-multiplier` | **0.02** (→3,03×) | **0.07** | 7,98× |
+`GarnixMining/enchants/fortunate.yml` `increase-multiplier` | **1.0** (→100×) | **0.14** | 14,91× |
+`GarnixFarm/enchants/prosperity.yml` `increase-multiplier` | **0.02** (→3,03×) | **0.14** | 14,91× |
 `GarnixMining/enchants/gemmed.yml` `increase-multiplier` | **1.0** (→100×) | **0.02** | 3,03× (mantém gemas linear) |
 `GarnixFarm/enchants/fertility.yml` | 0.02 | manter | 3,03× |
 
-O `0.07` — e não `0.13` — é o que abre espaço para o booster de 3× **e** para o +25% do prestígio 500. Com `0.08` o total ia a 110×: foi o simulador que pegou.
+O `fortunate` pode ser **duas vezes mais forte** do que eu havia orçado, porque descobrir que o booster **soma** em vez de multiplicar liberou muito orçamento. E isso é bom: o `fortunate` só se compra com **gemas**, ou seja é a recompensa do jogador dedicado, não do pagante.
 
-### Escalas de bônus
+### Escalas de bônus — corrigidas para o nó único
 
-**VIP** (celestial é o **mais básico**; hierarquia real: celestial < imortal < supremo < garnix). Não acumulam — vale o maior.
+🚩 **O bônus de rank e o de VIP competem pelo mesmo nó `mining.bonus.<percent>` e o maior vence.** Não se somam. Então o VIP não *acrescenta* ao rank — ele **substitui por um valor maior**. A proposta de valor do VIP passa a ser *"seu bônus é maior"*, e todo nó de VIP tem que ficar acima do teto do rank (20%) para o VIP valer algo.
 
-| VIP | ganho | desconto | vagas de mina |
-|---|---|---|---|
-celestial (entrada) | +4% | −3% | 0 |
-imortal | +7% | −6% | 0 |
-supremo | +11% | −10% | +1 |
-garnix (topo) | +15% | −15% | +2 |
-investidor (parceria) | +15% | — | +3 |
+| Quem | Nó LuckPerms | Ganho efetivo | Desconto | Vagas de mina |
+|---|---|---|---|---|
+Sem VIP, rank 20 | `mining.bonus.20` | +20% | — | 0 |
+celestial (entrada) | `mining.bonus.24` | +24% | −3% | 0 |
+imortal | `mining.bonus.27` | +27% | −6% | 0 |
+supremo | `mining.bonus.31` | +31% | −10% | +1 |
+**garnix (topo)** | `mining.bonus.35` | **+35%** | −15% | +2 |
+investidor (parceria) | `mining.bonus.35` | +35% | — | +3 |
+
+O **desconto** segue exclusivo do VIP e **não** passa por esse nó — é outro sistema (`ranks.yml` de spawners/máquinas e `discounts.yml`), então ali sim VIP e rank não competem.
+
+⚠️ **Dois detalhes operacionais do LuckPerms:** o nó tem que ser **materializado exato** no jogador — `mining.bonus.*` como wildcard **não concede nada**. E o `permBonus` **não se aplica ao provider `xp`**, só às moedas.
 
 **Rank** — só ganho, **nunca desconto**. Desconto é a proposta de valor exclusiva do VIP.
 

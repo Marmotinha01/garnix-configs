@@ -6,33 +6,34 @@ T1;1;valor_base_unidade;coins;1;1;1;;;ancora fixa - cobblestone nivel 0
 T5;5;renda_casa_dia;coins;41000000;30750000;51250000;;;
 T5;5;ativo_hora;coins/h;7580000;5685000;9475000;;;
 T5;5;afk_hora;coins/h;379000;284250;473750;;;
-T5;5;valor_base_unidade;coins;231;173;289;;;nivel de mina 20
+T5;5;valor_base_unidade;coins;274;205;343;;;nivel de mina 20
 T10;10;renda_casa_dia;coins;1340000000000;1005000000000;1675000000000;;;
 T10;10;ativo_hora;coins/h;249000000000;186750000000;311250000000;;;
 T10;10;afk_hora;coins/h;12400000000;9300000000;15500000000;;;
 T10;10;passivo_hora;coins/h;55900000000;41925000000;69875000000;;;via de spawners roda 24h
-T10;10;valor_base_unidade;coins;210000;157500;262500;;;nivel de mina 45
+T10;10;valor_base_unidade;coins;306000;229500;382500;;;nivel de mina 45
 T15;15;renda_casa_dia;coins;44000000000000000;33000000000000000;55000000000000000;;;
 T15;15;ativo_hora;coins/h;8140000000000000;6105000000000000;10175000000000000;;;
 T15;15;afk_hora;coins/h;407000000000000;305250000000000;508750000000000;;;
 T15;15;passivo_hora;coins/h;1830000000000000;1372500000000000;2287500000000000;;;
-T15;15;valor_base_unidade;coins;190000000;142500000;237500000;;;nivel de mina 70
+T15;15;valor_base_unidade;coins;342000000;256500000;427500000;;;nivel de mina 70
 T20;20;renda_casa_dia;coins;1440000000000000000000;1080000000000000000000;1800000000000000000000;;;sextilhoes - alvo final
 T20;20;ativo_hora;coins/h;267000000000000000000;200250000000000000000;333750000000000000000;;;
 T20;20;afk_hora;coins/h;13300000000000000000;9975000000000000000;16625000000000000000;;;
 T20;20;passivo_hora;coins/h;60000000000000000000;45000000000000000000;75000000000000000000;;;
-T20;20;valor_base_unidade;coins;167000000000;125250000000;208750000000;;;nivel de mina 100
--;-;blocos_manuais_hora;blocos/h;10000;7500;12500;;;V5 - governa volume de chaves e uptime do frenzy
--;-;blocos_hora_com_aoe;blocos/h;16000000;12000000;20000000;;;V5 - teto da mina - reset-cooldown 30s
--;-;resets_mina_hora;resets/h;120;90;150;;;V5 - 135700 blocos por reset
+T20;20;valor_base_unidade;coins;381000000000;285750000000;476250000000;;;nivel de mina 100 - recalculado com manual 70000/h e AoE 100x = 7e6 blocos/h
+-;-;blocos_manuais_hora;blocos/h;70000;60000;80000;70000;OK;MEDIDO - 3500 blocos em 3 min = 19,4/s. Nao e taxa de clique: Efficiency 1000 da quebra instantanea e o jogador segura e arrasta (~1 bloco/tick). Jogador rapido chega a 80000
+-;-;blocos_por_mina_cheia;blocos;135759;135759;135759;135759;OK;RESOLVIDO - data.yml region mina:-29:26:10:29:64:68 = 59x39x59. reset() regenera todos os blocos
+-;-;teto_mina_hora;blocos/h;7000000;7000000;7000000;7000000;DECISAO;O TETO NAO EXISTE - sair e voltar reseta a mina. Virou decisao de projeto: AoE maximo 100x sobre o manual = 7e6 blocos/h (43% da capacidade de reset). ANCORA O VALOR-BASE DOS 20 TIERS
+-;-;resets_mina_hora;resets/h;120;120;120;120;OK;MEDIDO - reset volta 100% cheio e o cooldown de 30s e aplicado. MAS sair e voltar da mina reseta, contornando o cooldown
 -;-;colheitas_hora;colheitas/h;4100000;3075000;5125000;;;V5 - 22735 posicoes / regrow 20s
 -;-;posicoes_plot_farm;posicoes;22735;20000;25000;;;V5 - conferir o numero real do plot
 -;-;fisgadas_hora;fisgadas/h;504;378;630;;;V5 - intervalo 15s menos speed 5 x double 40%
--;-;kills_hora_1_spawner;kills/h;2700;2025;3375;;;V5 - stack cheio - governa a taxa de cabecas
+-;-;kills_hora_1_spawner;kills/h;2700;2025;3375;;;SAIU DO V5 - delay/mob-stack/spawner-stack sao ficticios. Virou teste de carga L2: o servidor sustenta a taxa teorica?
 -;-;cabecas_hora_afk;cabecas/h;;;;;;V5 - derivar de kills_hora x chance de cabeca
--;-;chaves_dia_endgame;chaves/dia;5000;3750;6250;;;soma de kits + blessed + clover + pesca + eventos
--;-;bosses_dia_endgame;bosses/dia;275;206;344;;;chave de boss ~5% das aberturas
--;-;uptime_frenzy;percent;50;40;60;;;1000 blocos a 5/s = 200s contra janela de 180s
+-;-;chaves_dia_endgame;chaves/dia;20700;16000;26000;;;RECALIBRADO com manual de 70000/h. blessed rola em TODO bloco (manual+area) - com a chance de hoje (9,21%) seriam 1,93 MILHAO/dia. Chance alvo: 0,095%
+-;-;bosses_dia_endgame;bosses/dia;228;200;300;;;chave de boss 1,1% das aberturas (era 5% sobre um volume 4x menor)
+-;-;uptime_frenzy;percent;50;40;60;;;ATENCAO - a 19,4 blocos/s medidos os 1000 blocos enchem em 51s contra janela de 180s = uptime ~100%. Subir blocks-required para ~3500 na Fase 2
 -;-;multiplicador_total_maximo;x;100;80;120;;;V3 - armadura + skin + rank + vip + fortunate + frenzy + booster 3x
 -;-;pacotes_tick_250_contas;pacotes/tick;10000;;10000;;;L1 - enchant-animation-budget - teto duro
 -;-;tps_250_contas;tps;20;19;20;;;L1 - com arvore de encantes no maximo

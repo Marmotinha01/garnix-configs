@@ -21,13 +21,18 @@ function bigMul(a, fator) {
   return (a * BigInt(Math.round(fator * 1_000_000))) / escala;
 }
 
-// Sufixos em escala longa (portugues). Se o formatter do plugin nao chegar ate
-// sextilhao, o teste V1 acusa - e este e o mesmo problema, do lado do simulador.
+// Sufixos IDENTICOS aos do servidor, copiados de
+// garnix-core/shared/.../formatter/NumberFormatter.java (SUFFIXES).
+// Assim o numero no documento e o numero na tela do jogador sao o mesmo texto.
+// Atencao a convencao do plugin: Q = 10^15 (quadrilhao), QQ = 10^18 (quintilhao),
+// S = 10^21 (sextilhao) - nosso teto.
 const SUFIXOS = [
-  [10n ** 33n, 'De'], [10n ** 30n, 'No'], [10n ** 27n, 'Oc'],
-  [10n ** 24n, 'Se'], [10n ** 21n, 'Sx'], [10n ** 18n, 'Qi'],
-  [10n ** 15n, 'Qa'], [10n ** 12n, 'T'],  [10n ** 9n,  'B'],
-  [10n ** 6n,  'M'],  [10n ** 3n,  'K'],
+  [10n ** 63n, 'V'],  [10n ** 60n, 'ND'], [10n ** 57n, 'OD'], [10n ** 54n, 'ST'],
+  [10n ** 51n, 'SD'], [10n ** 48n, 'QN'], [10n ** 45n, 'QD'], [10n ** 42n, 'TD'],
+  [10n ** 39n, 'DD'], [10n ** 36n, 'UD'], [10n ** 33n, 'D'],  [10n ** 30n, 'N'],
+  [10n ** 27n, 'O'],  [10n ** 24n, 'SS'], [10n ** 21n, 'S'],  [10n ** 18n, 'QQ'],
+  [10n ** 15n, 'Q'],  [10n ** 12n, 'T'],  [10n ** 9n,  'B'],  [10n ** 6n,  'M'],
+  [10n ** 3n,  'K'],
 ];
 
 function fmt(v) {
@@ -93,21 +98,34 @@ function valorBaseUnidade(n) {
 
 // ============================================================ multiplicadores
 
+// Formula real, confirmada no codigo (EffectRewardHelper.java:90-100):
+//   valor = base x fortunate x (1 + Saditivos + permBonusMaior) x frenzy
 function orcamentoMultiplicadores() {
   const m = P.multiplicadores;
-  const somaPercent = Object.values(m.percent).reduce((a, b) => a + b, 0);
-  const blocoPercent = 1 + somaPercent / 100;
+
+  const somaAditivos = Object.values(m.aditivos).reduce((a, b) => a + b, 0);
+
+  // permissionBonus(): "The nodes do not stack: the largest one the player holds wins."
+  const permEntradas = Object.entries(m.permBonusMaiorVence);
+  const permMaior = Math.max(...permEntradas.map(([, v]) => v));
+  const permVencedor = permEntradas.find(([, v]) => v === permMaior)[0];
+  const permIgnorados = permEntradas.filter(([, v]) => v < permMaior);
+
+  const somaPercent = somaAditivos + permMaior;
+  const blocoAditivo = 1 + somaPercent / 100;
   const blocoMult = Object.values(m.mult).reduce((a, b) => a * b, 1);
-  const total = blocoPercent * blocoMult;
+  const total = blocoAditivo * blocoMult;
+
   return {
-    somaPercent,
-    blocoPercent,
-    blocoMult,
-    total,
+    somaAditivos, permMaior, permVencedor, permIgnorados,
+    somaPercent, blocoAditivo, blocoMult, total,
     teto: m.teto,
     dentroDoTeto: total <= m.teto * 1.05,
-    // Se o V3 revelar que percentuais MULTIPLICAM em vez de somar:
-    totalSeMultiplicativo: Object.values(m.percent).reduce((a, b) => a * (1 + b / 100), 1) * blocoMult,
+    // Quanto o fortunate poderia valer para o total bater exatamente no teto
+    fortunateIdeal: m.teto / (blocoAditivo * m.mult.frenzyUptimeReal),
+    // Quanto seria se o booster multiplicasse em vez de somar (nao e o caso)
+    totalSeBoosterMultiplicasse:
+      (1 + (somaPercent - m.aditivos.boosterMaximo) / 100) * blocoMult * 3.0,
   };
 }
 
@@ -214,25 +232,34 @@ function testeChaves() {
   const t = P.tetos;
   const horasAtivas = P.perfis.dedicado.horasAtivas;
 
+  // blessed rola em TODO bloco quebrado - manual E de area (EnchantHandler:180).
+  const blocosTotaisDia = t.minaBlocosHora * horasAtivas;
+  const blocosManuaisDia = t.minaBlocosManuaisHora * horasAtivas;
+
   const deKits = c.kitsResgatesPorDia;
-  const deMineracao = t.minaBlocosManuaisHora * horasAtivas * c.blessedChancePorBlocoManual;
-  const deFarm = t.minaBlocosManuaisHora * horasAtivas * c.cloverChancePorColheitaManual;
+  const deMineracao = blocosTotaisDia * c.blessedChanceNivel100;
+  const deFarm = t.farmColheitasHora * horasAtivas * c.cloverChanceNivel50 * 0.02; // farm manual e menor
   const outras = 300;
   const total = deKits + deMineracao + deFarm + outras;
 
-  // Se o proc de chave contasse blocos de AoE em vez de manuais (teste V7):
-  const seContasseAoE = t.minaBlocosHora * horasAtivas * c.blessedChancePorBlocoManual;
+  // Quanto seria com a chance de HOJE (9,21%) - mostra por que precisa cair
+  const comChanceDeHoje = blocosTotaisDia * 0.0921;
 
   const faixas = {};
   for (const [k, v] of Object.entries(c.faixas)) faixas[k] = total * v;
+  const somaFaixas = Object.values(c.faixas).reduce((a, b) => a + b, 0);
 
   return {
     deKits, deMineracao, deFarm, outras, total,
-    seContasseAoE,
-    fatorSeContasseAoE: seContasseAoE / deMineracao,
-    faixas,
+    blocosTotaisDia, blocosManuaisDia,
+    comChanceDeHoje,
+    fatorComChanceDeHoje: comChanceDeHoje / deMineracao,
+    faixas, somaFaixas,
+    faixasSomamUm: Math.abs(somaFaixas - 1) < 0.01,
     bossesPorDia: total * c.chanceChaveDeBossNaCrate,
     lotesDeBossPorDia: (total * c.chanceChaveDeBossNaCrate) / 25,
+    // Aberturas por clique necessarias para nao virar tarefa braçal
+    cliquesPorDiaCom500: total / 500,
   };
 }
 
@@ -343,10 +370,21 @@ function imprimir() {
   }
 
   L(); L('ORCAMENTO DE MULTIPLICADORES'); hr();
-  L(`Percentuais somados: +${R.mult.somaPercent}%  ->  ${R.mult.blocoPercent.toFixed(2)}x`);
-  L(`Multiplicadores nomeados: ${R.mult.blocoMult.toFixed(2)}x`);
+  L('Formula real (EffectRewardHelper.java:90-100):');
+  L('  valor = base x fortunate x (1 + booster% + skin% + armadura% + permBonus%) x frenzy');
+  L();
+  L(`Aditivos somados: +${R.mult.somaAditivos}%  (booster, skin, armadura)`);
+  L(`permBonus: +${R.mult.permMaior}% via "${R.mult.permVencedor}" — O MAIOR NO VENCE, nao somam`);
+  if (R.mult.permIgnorados.length) {
+    L(`  ignorados por perder para o maior: ${R.mult.permIgnorados.map(([k, v]) => k + ' (+' + v + '%)').join(', ')}`);
+  }
+  L(`Bloco aditivo: (1 + ${R.mult.somaPercent}/100) = ${R.mult.blocoAditivo.toFixed(2)}x`);
+  L(`Multiplicativos (fortunate x frenzy): ${R.mult.blocoMult.toFixed(2)}x`);
   L(`TOTAL: ${R.mult.total.toFixed(1)}x   (teto ${R.mult.teto}x)   ${R.mult.dentroDoTeto ? 'OK' : 'ESTOUROU'}`);
-  L(`Se o V3 revelar que percentuais MULTIPLICAM: ${R.mult.totalSeMultiplicativo.toFixed(0)}x  <- recalcular tudo`);
+  L();
+  L(`Fortunate ideal para bater o teto exato: ${R.mult.fortunateIdeal.toFixed(2)}x`);
+  L(`  -> increase-multiplier = ${((R.mult.fortunateIdeal - 1.05) / 99).toFixed(3)}`);
+  L(`Se o booster multiplicasse em vez de somar: ${R.mult.totalSeBoosterMultiplicasse.toFixed(0)}x (nao e o caso)`);
 
   L(); L('S1 - TESTE DE ESTAGNACAO'); hr();
   L(`Empilhamento maximo de um spawner: ${R.estag.empilhamentoMaximo}x  (mob-stack x spawner-stack)`);
@@ -377,15 +415,21 @@ function imprimir() {
   L('  Alvos: casual 1e12-1e15 | dedicado ~1,44e21 | hardcore ate ~1e23');
 
   L(); L('VOLUME DE CHAVES E BOSSES (endgame, por jogador)'); hr();
+  L(`Blocos/dia (manual x AoE ${P.tetos.aoeMultiplicadorMaximo}x): ${fmt(Math.round(R.chaves.blocosTotaisDia))}  (manuais: ${fmt(Math.round(R.chaves.blocosManuaisDia))})`);
+  L();
   L(`Kits cumulativos (3 contas): ${Math.round(R.chaves.deKits)}/dia`);
-  L(`Mineracao manual (blessed):  ${Math.round(R.chaves.deMineracao)}/dia`);
-  L(`Farm manual (clover):        ${Math.round(R.chaves.deFarm)}/dia`);
+  L(`Mineracao (blessed, todo bloco): ${Math.round(R.chaves.deMineracao)}/dia`);
+  L(`Farm (clover):               ${Math.round(R.chaves.deFarm)}/dia`);
   L(`Outras fontes:               ${Math.round(R.chaves.outras)}/dia`);
   L(`TOTAL:                       ${Math.round(R.chaves.total)}/dia`);
+  L(`  = ${Math.round(R.chaves.total / 24 / 60)} chaves por minuto, o dia inteiro`);
+  L(`  = ${R.chaves.cliquesPorDiaCom500.toFixed(0)} cliques/dia no upgrade de 500 aberturas`);
   L();
-  L(`Se o proc contasse blocos de AoE (teste V7): ${fmt(Math.round(R.chaves.seContasseAoE))}/dia`);
-  L(`  ou seja ${Math.round(R.chaves.fatorSeContasseAoE)}x mais chaves  <- e por isso que o C7 existe`);
+  L(`Com a chance de HOJE (blessed 9,21%): ${fmt(Math.round(R.chaves.comChanceDeHoje))}/dia`);
+  L(`  ou seja ${Math.round(R.chaves.fatorComChanceDeHoje)}x mais - inviavel. A chance TEM que cair`);
+  L(`  Alvo: blessed nivel 100 = ${(P.chaves.blessedChanceNivel100 * 100).toFixed(3)}%  (hoje 9,21%)`);
   L();
+  L(`Faixas somam 100%: ${R.chaves.faixasSomamUm ? 'SIM' : 'NAO (' + (R.chaves.somaFaixas * 100).toFixed(1) + '%)'}`);
   L('Distribuicao por faixa (por dia, e o intervalo medio entre ocorrencias):');
   for (const [k, chance] of Object.entries(P.chaves.faixas)) {
     const porDia = R.chaves.total * chance;

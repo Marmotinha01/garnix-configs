@@ -680,14 +680,15 @@ Além disso, prestígio é onde a **lei do número grande e frequente** se suste
 
 **A trava de ritmo: o requisito de cabeças cresce com o prestígio.** É o que faz "centenas de prestígios" ser verdade sem virar farsa. O `cost-increase-percent` aplicado às **cabeças** (não só aos coins) faz cada volta pedir mais que a anterior, e como o throughput de kill do jogador também cresce (mais spawners, `massacre` maior, `mob-stack` maior), as duas curvas correm juntas e o prestígio sobe de forma constante toda a temporada. É o loop de progressão perpétua que o público quer.
 
-**Calibração do `cost-increase-percent`, dependente do teste V8:**
+**Calibração do `cost-increase-percent` — V8 resolvido, é LINEAR:**
 
-| Se for | Valor a usar | No prestígio 500 |
-|---|---|---|
-Linear (+X% do base por prestígio) | **10%** | 51× o base |
-Composto (`(1+X)^P`) | **1%** | 145× o base |
+| | |
+|---|---|
+Fórmula real (`RankManager.java:235`) | `baseCost × (1 + prestige × percent / 100)` — **linear** |
+Valor a usar | **10%** |
+No prestígio 500 | **51×** o base |
 
-Com `10` **composto**, `1,10^500` = 4,9×10²⁰ vezes o base — inatingível e estoura o tipo numérico. Por isso V8 não é opcional. E você levantou o ponto certo: o aumento precisa **aparecer no `/ranks`**, senão o jogador paga mais sem entender por quê.
+O código usa `baseCost × (1 + prestige × percent / 100)` — **linear**. Então `10%` está certo e o prestígio 500 custa **51×** o base. Três bônus que o código já entrega: os custos são `BigDecimal` (o RankUP não tem o problema de `Long.MAX`), o multiplicador **se aplica a todos os custos inclusive `head`** (a trava de ritmo do eixo de cabeças funciona sem código novo), e o `CostFormatter` **já mostra o custo ajustado no `/ranks`**.
 
 **3. Desbloqueio de conteúdo, não só de números.** Esse é o que mais muda a percepção. Prestígio deixa de ser "um número no chat" e passa a ser **a chave de sistemas que só existem lá**:
 

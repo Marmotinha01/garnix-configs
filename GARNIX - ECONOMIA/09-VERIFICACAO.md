@@ -1,12 +1,44 @@
 # 09 — VERIFICAÇÃO
 
-Protocolo de testes in-game. **Nenhum `.yml` de plugin é editado antes de V1, V2, V3 e V8 estarem respondidos** — cada um deles pode mover o teto da temporada ou invalidar o orçamento de multiplicadores.
+Registro oficial dos testes. **Os 8 estão fechados** — 4 resolvidos lendo o código, 4 medidos in-game. Só os testes de carga (L1, L2) ficam para antes do lançamento.
 
-Preencha a coluna **Resultado** conforme for testando. Este arquivo é o registro oficial.
+**A Fase 2 está liberada.**
 
 ---
 
-## Fase 0 — Testes que podem mover o teto
+## ✅ TODOS OS 8 TESTES FECHADOS
+
+| Teste | Resultado |
+|---|---|
+**V1** | ✅ o `SUFFIX` vai a 10⁶³, sextilhão é `S`. **C3 desnecessário** |
+**V2** | ✅ spawners/máquinas/rankup seguros · ⚠️ crates e bosses perdem precisão acima de 9×10¹⁵. **C1 encolheu para 6 linhas** |
+**V3** | ✅ **somam** — e o **booster também soma**. Rank e VIP **competem** pelo mesmo nó |
+**V4** | ✅ auditoria de moedas limpa **exceto `gems`** (120×), que sai por projeto |
+**V5-A** | ✅ **70.000 blocos/h** medido (3.500 em 3 min). Eu errei por 7× |
+**V5-B** | ⚠️ **o teto da mina não existe** — sair e voltar reseta. Passou a ser decisão de projeto: **7×10⁶ blocos/h** |
+**V6** | ✅ spawners **continuam produzindo** após prestigiar. O desenho funciona |
+**V7** | ✅ `blessed` rola em **todo bloco de área**. **C7 desnecessário** — o volume é controlado pela chance |
+**V8** | ✅ **LINEAR** — usar 10%, prestígio 500 = 51× o base |
+
+### As 5 consequências grandes
+
+1. **Manual é 70.000 blocos/h, não 10.000.** Não é taxa de clique — com `Efficiency 1000` a quebra é instantânea e o jogador segura e arrasta, dando ~1 bloco/tick. Isso mudou o **valor-base do T20 de 1,64×10¹¹ para 3,81×10¹¹** e a razão por tier de 3,9× para **4,07×**.
+2. **O teto da mina não existe.** Sair e voltar reseta, e isso não será mudado. Então o throughput virou **decisão de projeto**: AoE máximo de 100× sobre o manual = 7×10⁶ blocos/h, que usa 43% da capacidade de reset e não exige o truque.
+3. **O volume de chaves é 4× maior que o projetado:** ~20.700/dia em vez de 4.800. As 5 faixas da crate foram recalibradas e o `blessed` cai de 9,21% para **0,095%** — com a chance de hoje seriam **1,93 milhão de chaves/dia**.
+4. **Dois códigos morreram:** **C3** (o `SUFFIX` já chega a sextilhão) e **C7** (a chance resolve melhor que código). **C1 encolheu** para 6 linhas.
+5. **O frenzy virou permanente.** A 19,4 blocos/s a barra de 1.000 blocos enche em **51s** contra uma janela de 180s — uptime ~100% em vez de 50%. Precisa subir `blocks-required` para ~3.500 na Fase 2.
+
+---
+
+## Achado extra da leitura do código
+
+Os diretórios `garnix-battle-pass`, `garnix-dungeons`, `garnix-tags` e `garnix-logger` existem em `Desktop/garnix/sources` mas têm **zero arquivos `.java` e zero `.yml`** — são pastas vazias, não sistemas escondidos. Isso fecha a dúvida de haver economia fora do repo de configs.
+
+`garnix-queues`, `garnix-lobby` e `garnix-proxy` têm código e config, mas são infraestrutura de rede (fila, lobby, proxy) — **sem impacto econômico**.
+
+---
+
+## Detalhe de cada teste
 
 ### V1 — O formatter `SUFFIX` chega a sextilhão?
 
@@ -20,13 +52,28 @@ Depois olhar, em ordem: o **scoreboard**, o `/coins ranking`, e a **actionbar da
 
 **O que esperar:** algo como `1 Sx` ou `1000 Qi`. Escala longa em português: milhão 10⁶ · bilhão 10⁹ · trilhão 10¹² · quatrilhão 10¹⁵ · quintilhão 10¹⁸ · **sextilhão 10²¹**.
 
-| | |
-|---|---|
-**Se renderizar certo** | ✅ segue o plano como está |
-**Se parar em Q/Qi** | o teto desce para ~10¹⁸ e a tabela de tiers recua ~1 tier, **ou** aprovamos o **C3** (tabela de sufixos configurável) |
-**Se der exceção** | C3 vira obrigatório antes de qualquer coisa |
+### ✅ RESULTADO — **PASSA.** Resolvido lendo o código.
 
-**Resultado:** _(a preencher)_
+`garnix-core/shared/src/main/java/com/redegarnix/core/shared/formatter/NumberFormatter.java:41-64`
+
+A tabela tem **22 entradas e vai até 10⁶³**:
+
+```java
+"Q",  // 10^15 — quadrillion
+"QQ", // 10^18 — quintillion
+"S",  // 10^21 — sextillion   <- nosso teto
+"SS", // 10^24
+...
+"V"   // 10^63 — vigintillion
+```
+
+E o `formatSuffix(BigDecimal)` é **todo `BigDecimal`**, com divisão em escala 10 — sem perda de precisão e sem risco de exceção.
+
+**10²¹ renderiza `1S`. O C3 não é necessário.**
+
+⚠️ **Atenção à convenção do plugin, que não é a intuitiva:** `Q` é **quatrilhão (10¹⁵)** e `QQ` é **quintilhão (10¹⁸)**. Sextilhão é `S`. Já alinhei o simulador com essa tabela exata, para o número no documento ser o mesmo texto que aparece na tela do jogador.
+
+**Resultado:** ✅ passa, nada a fazer.
 
 ---
 
@@ -51,12 +98,36 @@ Reiniciar, matar um mob, abrir o `/ranks`.
 
 **O que observar:** o valor recebido vira negativo ou aleatório? O `/ranks` mostra o número certo? Aparece algo no log?
 
-| | |
-|---|---|
-**Se truncar** | confirma que **C1** é obrigatório (já aprovado). Nada acima de 10¹⁸ pode ser escrito antes de C1 estar no ar |
-**Se funcionar** | ótimo — mas confirmar **também** o caminho de `costs:` do RankUP, que é string parseada à mão e pode usar `Long.parseLong` |
+### ✅ RESULTADO — resolvido no código, e **o C1 encolheu muito**
 
-**Resultado:** _(a preencher)_
+O medo era `getLong()` truncando. A auditoria do código mostra que **os dois plugins que mais importam já estão seguros**, e o problema real é outro e menor.
+
+**Seguros — `getString()` + `new BigDecimal()`, exato em qualquer magnitude:**
+
+| Plugin | Onde |
+|---|---|
+`garnix-spawners` | `MobConfigManager:126` (costs), `:141` (drops.amount), `:239` (custos de upgrade) |
+`garnix-machines` | `MachineConfigManager:94` (costs), `:123` (drops.amount), `:140` (sell-value) |
+`garnix-rankup` | `Rank.RankCost(..., BigDecimal amount)` |
+
+Isso resolve o item mais crítico: o **preço do spawner do T20 (7,2×10²⁰) é seguro como está.**
+
+**⚠️ Problema real, e é de PRECISÃO, não de overflow:**
+
+| Plugin | Código | Teto real |
+|---|---|---|
+`garnix-crates` | `CrateManager:264,269,274` → `BigDecimal.valueOf(config.getDouble(".amount", 1))` | **9,007×10¹⁵** |
+`garnix-bosses` | `BossConfigManager:160,165,170` → `BigDecimal.valueOf(cfg.getDouble(".amount"))` | **9,007×10¹⁵** |
+
+`double` tem 53 bits de mantissa, então acima de **9,007×10¹⁵ (quatrilhão)** o valor é silenciosamente arredondado. Pela tabela de tiers isso morde a partir do **T14**.
+
+**Consequência: o C1 deixa de ser "trocar os tipos numéricos do servidor inteiro" e passa a ser uma mudança pequena e cirúrgica** — trocar `getDouble` por `getString` + `new BigDecimal` em **6 linhas**, 3 em cada um desses dois plugins, seguindo o padrão que spawners e máquinas já usam.
+
+**A confirmar** (não apareceram na busca, provavelmente leem por helper compartilhado): `garnix-server-shops` (`price`), `garnix-mystery-boxes` (`amount`), `garnix-ontime` (`amount`).
+
+**Boa prática a adotar de qualquer forma:** escrever valores grandes **entre quotes** no YAML (`amount: '1440000000000000000000'`). Com quotes, o valor chega como String e não depende de qual resolver o SnakeYAML escolheu.
+
+**Resultado:** ✅ spawners, máquinas e rankup seguros · ⚠️ crates e bosses precisam da correção de 6 linhas
 
 ---
 
@@ -70,23 +141,130 @@ valor = base × enchant × (1 + Σpercent/100) × frenzy × booster × (1 + vip/
 
 Isso é inferência da forma dos configs mais um comentário em `GarnixFishing/skins.yml` linha 8 (*"currency-bonus — % **somado** aos corais por fisgada"*). **Não é prova.**
 
-**Como testar** — três leituras da actionbar, mesmo bloco, mesma mina:
+### ✅ RESULTADO — resolvido no código. **Somam — e mais coisas somam do que eu supunha.**
 
-| Passo | Equipar | Leitura esperada se **somar** | Se **multiplicar** |
-|---|---|---|---|
-1 | nada (referência) | `V` | `V` |
-2 | set T-V completo (4 peças × 12%) | `V × 1,48` | `V × 1,12⁴ = V × 1,57` |
-3 | + skin Mithril (+65%) | `V × 2,13` | `V × 1,57 × 1,65 = V × 2,59` |
-4 | + `fortunate` nível 1 | multiplica por ~1,05 nos dois casos | idem |
+A fórmula exata está em `garnix-mining/.../enchant/EffectRewardHelper.java:90-100`:
 
-O passo 2 já separa os dois casos: **1,48 contra 1,57**. Uma diferença de 6% — então vale usar um bloco de valor alto e conferir com calma, ou repetir a leitura.
+```java
+BigDecimal perBlock    = reward.getAmount().multiply(BigDecimal.valueOf(enchantMult));
+BigDecimal totalAmount = perBlock.multiply(BigDecimal.valueOf(blocksBroken))
+                                 .multiply(BigDecimal.valueOf(1.0 + totalBonus));
+frenzy.applyCurrency(totalAmount, effectiveTax, frenzyMultiplier);
+```
 
-| | |
+```
+valor = base × fortunate × (1 + booster% + skin% + armadura% + permBonus%) × frenzy
+```
+
+E o javadoc do `BonusCalculator` confirma sem ambiguidade:
+
+> *"Computes the **additive** reward bonus for a provider, **summing** the booster, the equipped skin, every equipped mining-armor piece and the player's permission-rank bonus. The result is additive: +20% booster, +10% skin and a +50% armor piece yield **0.80**. Callers apply it as `amount * (1.0 + bonus)`."*
+
+| O que | Como entra |
 |---|---|
-**Se somar** | ✅ orçamento de 100× vale como está |
-**Se multiplicar** | recalcular o orçamento inteiro. A pilha fica ~1.039× em vez de ~100×, e o valor-base de todos os 20 tiers desce ~1 ordem |
+`fortunate` (enchantMultiplier) | **multiplica** |
+Frenzy | **multiplica** |
+**Booster** | **soma**, como `(multiplicador − 1,0)` — um 3× contribui **+200%**, não ×3 |
+Skin | soma, como `(multiplicador − 1,0)` |
+Armadura (4 peças) | soma, `percent ? value/100 : value − 1,0` |
+`permBonus` (rank / VIP) | soma **um único valor** — ver abaixo |
 
-**Resultado:** _(a preencher)_
+### 🚩 Descoberta de projeto: rank e VIP **competem**, não se somam
+
+`BonusCalculator.permissionBonus()` lê nós `mining.bonus.<percent>` e o javadoc é explícito:
+
+> *"The nodes do not stack: **the largest one the player holds wins**."*
+
+O plano assumia que o bônus de rank (+20%) e o de VIP (+15%) **se somavam** para +35%. **Não somam.** Um jogador rank 20 com VIP garnix receberia só **+20%** — e o bônus de VIP que ele pagou não valeria absolutamente nada.
+
+**A correção, que na verdade fica mais elegante:** o VIP não *soma* ao rank, ele **substitui por um valor maior**. A proposta de valor do VIP passa a ser *"seu bônus é maior"* em vez de *"+15% em cima"*.
+
+| | Nó | Bônus efetivo |
+|---|---|---|
+Sem VIP, rank 20 | `mining.bonus.20` | +20% |
+celestial (entrada) | `mining.bonus.24` | +24% |
+imortal | `mining.bonus.27` | +27% |
+supremo | `mining.bonus.31` | +31% |
+**garnix (topo)** | `mining.bonus.35` | **+35%** |
+
+Assim todo nó de VIP é maior que o teto do rank (20%), o VIP sempre vale algo, e o sem-VIP ainda tem uma escada própria de 20 degraus visíveis. **Não precisa de código novo** — é só escolher os números certos.
+
+⚠️ **Dois detalhes operacionais do LuckPerms:** o nó tem que ser **materializado exato** no jogador (`mining.bonus.*` como wildcard **não concede nada**), e o `permBonus` **não se aplica ao provider `xp`** — só às moedas.
+
+### Consequência no orçamento
+
+Com o booster somando em vez de multiplicando, o bloco aditivo fica muito mais barato e **sobra orçamento para o `fortunate`**:
+
+| | Antes (suposição errada) | **Agora (código)** |
+|---|---|---|
+Bloco aditivo | 2,73× | **4,48×** (booster +200%, skin +65%, armadura +48%, permBonus +35%) |
+`fortunate` nível 100 | 7,98× (`increase-multiplier 0.07`) | **14,91× (`increase-multiplier 0.14`)** |
+Frenzy | 1,5× | 1,5× |
+**TOTAL** | 98,0× | **100,2×** ✅ |
+
+O `fortunate` **dobra de força** em relação ao que eu havia orçado — e isso é bom, porque ele é o encante que só se compra com gemas, ou seja é a recompensa do jogador dedicado, não do pagante.
+
+**Resultado:** ✅ somam · booster também soma · rank e VIP competem pelo mesmo nó · `fortunate` vai para `increase-multiplier: 0.14`
+
+---
+
+### Como testar in-game, se quiser confirmar na prática
+
+Se eu vestir 4 peças de armadura que dão **+12% cada**, eu ganho **+48%** (elas somam) ou **+57%** (elas multiplicam entre si)?
+
+```
+SOMANDO:      12 + 12 + 12 + 12 = 48%   ->  1,48x
+MULTIPLICANDO: 1,12 x 1,12 x 1,12 x 1,12  ->  1,57x
+```
+
+Parece pouca diferença com 4 peças. Mas quando **tudo** empilha (armadura + skin + rank + VIP + prestígio), a diferença vira **98× contra 151×** — e daí o valor-base de todos os 20 tiers precisa descer uma ordem inteira.
+
+### Passo a passo
+
+Você precisa de: uma conta de teste com permissão de admin, e um bloco na mina que pague um valor **redondo e grande** (para a conta ser fácil de fazer de cabeça).
+
+**Preparação**
+
+1. Entre na mina com a conta de teste.
+2. **Tire toda a armadura, tire a skin, e não tenha nenhum encante, booster nem frenzy ativo.** Precisa estar limpo.
+3. Escolha **um tipo de bloco só** e minere sempre esse mesmo bloco. Se a mina tiver vários, escolha o mais comum.
+
+**Medição 1 — a referência (sem nada)**
+
+4. Minere esse bloco e **anote quanto ganhou de coins**. Esse é o valor `V`.
+   - Se a actionbar não mostrar o ganho por bloco, use `/coins` antes e depois de minerar exatamente 10 blocos, e divida por 10.
+   - Anote com casas decimais se aparecerem.
+
+**Medição 2 — com o set de armadura completo (é essa que decide)**
+
+5. `/mina givearmor colecao` para receber o set **tier V** completo, e vista as 4 peças.
+6. Minere o **mesmo bloco** e anote o novo valor.
+7. Divida pelo valor da medição 1:
+
+| Resultado da divisão | Veredito |
+|---|---|
+**~1,48** | os percentuais **SOMAM** ✅ — é o que o plano assume |
+**~1,57** | os percentuais **MULTIPLICAM** ⚠️ — recalcular o orçamento |
+
+São 6% de diferença, então: minere **20 blocos** em cada medição e divida, em vez de confiar num só. Isso elimina o erro de arredondamento.
+
+**Medição 3 — confirmação com a skin (opcional, mas recomendada)**
+
+8. `/mina giveskin mithril` e aplique a skin (ela dá **+65%** em coins).
+9. Minere o mesmo bloco e divida pela medição 1:
+
+| Resultado | Veredito |
+|---|---|
+**~2,13** | somam (48% + 65% = 113%) ✅ |
+**~2,59** | multiplicam (1,57 × 1,65) ⚠️ |
+
+Aqui a diferença é de **21%**, muito mais fácil de ver do que os 6% do passo 2. Se as duas medições concordarem, a resposta está fechada.
+
+### O que fazer com o resultado
+
+**O que esperar agora que sabemos a fórmula:** o set T-V completo dá exatamente **+48%**, ou seja **1,48×**. Se medir isso, o código e o jogo concordam e não há surpresa em runtime. Se medir 1,57×, aí sim tem algo diferente entre o que o código diz e o que roda — e vale investigar.
+
+Esta medição virou **opcional e de confirmação**, não bloqueante.
 
 ---
 
@@ -110,11 +288,33 @@ Composto | **1%** |
 
 **Também verificar:** o aumento **aparece no `/ranks`**? Se não, o jogador paga mais sem entender por quê — e isso gera ticket de suporte, não engajamento.
 
-**Resultado:** _(a preencher)_
+### ✅ RESULTADO — **LINEAR**. Resolvido lendo o código, sem precisar de servidor.
+
+`garnix-rankup/plugin/src/main/java/com/redegarnix/rankup/manager/RankManager.java:229-237`
+
+```java
+/** Formula: baseCost * (1 + prestige * percent / 100). */
+public BigDecimal getEffectiveCost(BigDecimal baseCost, int prestige) {
+  double percent = getPrestigeCostPercent();
+  if (prestige <= 0 || percent <= 0) return baseCost;
+  double multiplier = 1.0 + (prestige * percent / 100.0);
+  return baseCost.multiply(BigDecimal.valueOf(multiplier));
+}
+```
+
+**É linear.** No prestígio 500 com `cost-increase-percent: 10` o custo é `1 + 500×0,10 = 51×` o base. **Viável — usar 10%.**
+
+E o código respondeu mais três coisas de graça:
+
+| Achado | Onde | Consequência |
+|---|---|---|
+**Os custos já são `BigDecimal`** | `Rank.RankCost(type, provider, BigDecimal amount)` | o caminho de custo do RankUP **não tem o problema de `Long.MAX`**. Essa parte do C1 já está pronta |
+**O multiplicador de prestígio se aplica a TODOS os custos**, inclusive `head` | `RankUPService:56,100,115` iteram `next.costs()` inteiro | ✅ **o requisito de cabeças cresce com o prestígio automaticamente** — a trava de ritmo do eixo de cabeças funciona sem código novo |
+**O aumento já aparece no menu** | `CostFormatter:30` — *"applying the prestige multiplier to each amount"* | ✅ sua preocupação com o `/ranks` já está atendida |
 
 ---
 
-## Fase 0 — Testes que ajustam números sem mover o teto
+## Detalhe dos testes de ajuste
 
 ### V4 — `gems` vs `gemas`
 
@@ -122,30 +322,123 @@ Os 20 `GarnixSpawners/spawners/*.yml` usam a chave **`gems`** em `drops:` e em t
 
 **Como testar:** matar um mob de spawner e ver se `/gema` mexe.
 
-**Resultado esperado:** provavelmente **não mexe**, e todo drop e todo custo de upgrade em gema dos spawners está falhando em silêncio hoje.
+### ✅ RESULTADO — **é bug, e a regra é mais ampla do que eu tinha**
 
-**Resolvido por projeto:** os upgrades de spawner passam a custar **dracmas**, não gemas. Então este teste é informativo, não bloqueante — mas vale saber se é bug ou alias.
+> *"Sim, você está correto. Qualquer currency em qualquer `.yml` que não estiver batendo com o nome das currencies em GarnixCurrencies (**nome do `.yml` sem o `.yml` no fim é o nome correto da currency**) está incorreta e precisa de correção. E obviamente nos spawners não terão gemas — aquilo foi colocado fictício e não deve ficar."*
 
-**Resultado:** _(a preencher)_
+Rodei a auditoria completa contra os 8 nomes válidos (`cash` · `coins` · `corais` · `dracmas` · `gemas` · `maquinaslimite` · `sementes` · `spawnerslimite`):
+
+| Escopo | Resultado |
+|---|---|
+36 `currency-id` / `enchant-currency` / `primary-id` / `secondary-id` / `upgrade-currency` / `multiplier-provider` do repo | ✅ **todos válidos** |
+Chaves de moeda usadas como seção (`costs.<moeda>`, `drops.<moeda>`) | 220 × `coins` ✅ · **120 × `gems`** ❌ |
+Listas de custo `- ''moeda valor''` (rankup, levels) | 56 `coins` · 37 `gemas` · 30 `cash` · 19 `head` — ✅ todos válidos |
+
+**O único erro no repo inteiro é o `gems` dos spawners, em 120 ocorrências.** E ele desaparece por projeto: os upgrades de spawner passam a custar **coins + dracmas**, e gemas saem de lá completamente.
+
+**Resultado:** ✅ auditoria limpa exceto `gems` (120×), que sai por projeto
 
 ---
 
-### V5 — Cronometrar os 4 tetos de throughput
+### V5 — Os 2 tetos que ancoram a tabela de tiers
 
-**Por que importa:** são os quatro números que a equivalência entre vias depende. Os valores abaixo saíram do cálculo dos configs e **nenhum deve ser alterado antes de medir**.
+**Por que importa:** o valor-base dos 20 tiers é derivado do teto de throughput da mina. Sem esses números, a coluna de valor-base é chute.
 
-| Via | Teto calculado | Como cheguei | Como medir |
+> ⚠️ **Correção de método.** A primeira versão deste teste pedia "minerar 5 min com encantes no máximo e contar blocos". **Estava errado** — os 15 `enchants/*.yml` são fictícios (`annihilation` a 60%, os cinco de entidade a 2,5), então isso mediria o output de uma árvore que vai ser reescrita na Fase 2. O que se mede é o **teto da mina** (geometria); as chances dos encantes são depois calibradas *contra* esse teto.
+
+#### O que é config e o que não é
+
+| Medição | Depende de config? | Por quê |
+|---|---|---|
+**A — taxa de clique** | ❌ **não** | `PickaxeItem.java:114` faz `meta.addEnchant(Enchantment.DIG_SPEED, 1000, true)` — **Efficiency 1000 hardcoded**. É a "Quebra Rápida ∞" da lore: **constante do servidor, igual para todos, não evolutiva, não comprável**. Qualquer bloco de pedra quebra instantaneamente, então o que se mede é só a mão do jogador. E o `accelerated` é `PotionEffectType.SPEED` (movimento), não velocidade de quebra |
+**B' — tamanho da mina** | ❌ **não** | é geometria da região. Independe de qual encante quebra o bloco |
+~~C — kills/h~~ | ✅ sim | `delay`, `mob-stack`, `spawner-stack` são fictícios. **Sai do V5** e vira parte do teste de carga L2: a pergunta certa não é "qual a taxa?" (aritmética) e sim "o servidor sustenta a taxa teórica?" |
+
+#### A — taxa de clique
+
+1. Picareta **sem nenhum encante de AoE comprado**.
+2. Anote os blocos na lore da picareta (`display: '&6Picareta &7[{blocks}]'`).
+3. Minere **3 minutos** cronometrados, no ritmo normal de jogo.
+4. Anote o final. `(final − inicial) ÷ 3 × 60 = blocos/hora`.
+
+### ✅ RESULTADO — **3.500 blocos em 3 minutos = 70.000 blocos/hora**
+
+| | |
+|---|---|
+Medido | **3.500 em 3 min = 19,4 blocos/s = 70.000/h** |
+Jogador rápido | ~4.000 em 3 min = **80.000/h** |
+Minha suposição | 10.000/h — **errei por 7×** |
+
+**Por que tão alto:** não é taxa de clique. Com `Efficiency 1000` a quebra é instantânea, então o jogador **segura o botão e arrasta**, e o servidor entrega ~1 bloco por tick (20/s). O teto teórico de 72.000/h é praticamente atingido só jogando normal.
+
+**O que isso mudou:**
+
+| | Antes | Depois |
+|---|---|---|
+Manual | 10.000/h | **70.000/h** |
+Valor-base T20 | 1,64×10¹¹ | **3,81×10¹¹** |
+Razão por tier | 3,9× | **4,07×** |
+Volume de chaves | ~4.800/dia | **~20.700/dia** |
+Uptime do frenzy | 50% (1.000 blocos a 5/s = 200s) | **~100%** — 1.000 blocos a 19,4/s = **51s** contra janela de 180s |
+
+⚠️ **O frenzy virou permanente.** A 19,4 blocos/s a barra de 1.000 blocos manuais enche em 51 segundos, contra uma janela de 180s. Ou seja o jogador ativo fica **sempre em frenzy**, e o multiplicador efetivo passa de 1,5× para ~2,0×. Isso precisa de ajuste na Fase 2: subir `blocks-required` para ~3.500 devolve o uptime a ~50%.
+
+⚠️ **A meta de 10.000 provavelmente está baixa.** Com quebra instantânea, um humano sustenta 5–8 cliques/s. Se o número real for 20.000+, o **volume de chaves dobra ou triplica** e as 5 faixas da crate precisam ser recalibradas (hoje: recheio 88% · jackpot 0,006% sobre ~4.800 aberturas/dia).
+
+**Mede-se uma vez e vale para sempre.** Como a quebra rápida é constante e hardcoded, este número não muda entre temporadas nem entre jogadores — só depende de quão rápido a pessoa clica.
+
+🚩 **Consequência para o orçamento de multiplicadores:** a quebra rápida **não entra no teto de 100×**. Ela é o mesmo piso para todo mundo, então não é vantagem de ninguém — é a linha de base contra a qual todos os multiplicadores são medidos. Vale para o `accelerated` também: movimento não é renda.
+
+#### B' — o teto da mina ✅ **RESOLVIDO por aritmética. Não precisa medir.**
+
+A região está em **`GarnixMining/data.yml`**, formato `mundo:x1:y1:z1:x2:y2:z2`:
+
+```yaml
+region: mina:-29:26:10:29:64:68
+```
+
+| Eixo | De | Até | Blocos |
 |---|---|---|---|
-Mineração | **1,6×10⁷ blocos/h** | região `mina:-29:26:10:29:64:68` = 59×39×59 ≈ 135.700 blocos ÷ `reset-cooldown: 30` | minerar 5 min com encantes no máximo e contar blocos; e cronometrar quantos resets/h a mina aguenta |
-Farm | **4,1×10⁶ colheitas/h** | 22.735 posições no `data.yml` ÷ `regrow-delay-seconds: 20` | contar posições reais do plot e cronometrar 5 min de colheita |
-Pesca | **~504 fisgadas/h** | `fishing-base-interval-seconds: 15` − speed 5 = 10s, × `double` 40% | cronometrar 20 fisgadas com vara no máximo |
-Passivo | **sem teto físico** | `s.limite` × `mob-stack 3` ÷ `delay 4s` | contar mobs/min de 1 spawner com stack cheio |
+X | −29 | 29 | **59** |
+Y | 26 | 64 | **39** |
+Z | 10 | 68 | **59** |
 
-**Medir também, porque entram no cálculo:**
-- **blocos manuais/hora** de um jogador ativo (o plano assume ~10.000/h) — é o que governa o volume de chaves e o uptime do frenzy
-- **kills/hora** de uma conta com autoclick — é o que governa a taxa de cabeças, ou seja o ritmo de rank e prestígio
+`59 × 39 × 59 = ` **135.759 blocos por mina cheia**
 
-**Resultado:** ver [metrics.csv](metrics.csv)
+E o código confirma que é um bloco sólido e que o reset é total:
+
+| Evidência | Onde |
+|---|---|
+`reset(int mineLevel)` → *"Regenerates **every** block"* | `SharedMineState.java:504` |
+`getTotalBlocks()` → `layout.cells.length`, o volume inteiro | `SharedMineState.java:118` |
+*"the mine floor of a box whose lid is the world surface"* | comentário do `MineLight` |
+
+```
+135.759 blocos × 120 resets/h (reset-cooldown: 30)  =  16.291.080  ≈  1,63×10⁷ blocos/hora
+```
+
+**A suposição original de 1,6×10⁷ estava certa com 1,8% de erro.** O valor-base do T20 passa de 1,67×10¹¹ para **1,64×10¹¹** — dentro da tolerância, e já corrigido em [02-TIERS.md](02-TIERS.md) e no simulador.
+
+### ⚠️ RESULTADO — **o teto não existe na prática**
+
+Medição in-game:
+
+> *"volta 100% resetadinha, mina completinha de blocos novos, e sim o cooldown é aplicado — **porém se o jogador sai da mina e volta, reseta**, porque a mina não guarda estado. E não pretendo mudar isso no código."*
+
+**Sair e voltar contorna o cooldown de 30s.** Então os 120 resets/h não são um teto — são um piso. O throughput de mineração **não tem limite físico**.
+
+**Consequência: o teto passa a ser uma decisão de projeto,** definida pelo multiplicador máximo da árvore de AoE.
+
+| | |
+|---|---|
+Manual medido | 70.000 blocos/h |
+**AoE máximo escolhido** | **100×** |
+**Endgame** | **7×10⁶ blocos/h** |
+Equivale a | ~51 minas limpas por hora (uma a cada 70s) = **43% da capacidade de reset** |
+
+**Por que 100× e não 233×** (o número que daria o teto antigo de 1,63×10⁷): com 233× o jogador precisaria de 120 resets/hora, exatamente o limite do cooldown, sem nenhuma margem — e quem quisesse mais teria que abusar do sair-e-voltar. Com 100× sobra folga e a mecânica funciona sem truque.
+
+**Resultado:** ✅ mina reseta 100% cheia · ✅ cooldown aplicado · ⚠️ **contornável ao sair e voltar** · teto = **decisão de projeto, 7×10⁶ blocos/h**
 
 ---
 
@@ -155,12 +448,16 @@ Passivo | **sem teto físico** | `s.limite` × `mob-stack 3` ÷ `delay 4s` | con
 
 **Como testar:** numa conta de teste, colocar spawners de tier alto, prestigiar, e ver se continuam produzindo.
 
-| | |
-|---|---|
-**Se continuarem** | ✅ o desenho de prestígio do plano funciona |
-**Se pararem** | prestígio precisa de outra mecânica — provavelmente uma permissão persistente de "já teve o rank N", concedida via C6 |
+### ✅ RESULTADO — **os spawners continuam produzindo.** O desenho funciona.
 
-**Resultado:** _(a preencher)_
+> *"Sim, os spawners continuam produzindo. Porém provavelmente não vou conseguir matar — e isso é meio irrelevante, até porque tem como burlar facilmente: é só outra conta que esteja no rank ir lá e matar, e minha conta vender, ou alguém vender e me enviar o dinheiro. Mesmo que tenha taxa de transferência é burlável, e não tem problema."*
+
+Duas coisas se resolvem aqui:
+
+1. **O prestígio é viável** — o spawner colocado não para, então perder a permissão de rank não destrói a produção. A proposta de prestígio do plano (preservar o que dinheiro não compra + bônus permanente + marcos de desbloqueio) fica de pé.
+2. **A lâmina depender do rank não é um problema real**, porque é contornável por outra conta e isso é aceito. Registrado como decisão: **não vamos tentar fechar esse contorno.** Ele até ajuda o prestígio a não ser punitivo.
+
+**Resultado:** ✅ spawners seguem produzindo após prestigiar · o contorno da lâmina é aceito por decisão
 
 ---
 
@@ -173,11 +470,43 @@ Passivo | **sem teto físico** | `s.limite` × `mob-stack 3` ÷ `delay 4s` | con
 Blocos de AoE (1,6×10⁷/h) | **1,4 milhão/hora** — absurdo, a crate perde qualquer sentido |
 Blocos manuais (~10⁴/h) | **~900/hora** — massivo e saudável, é o alvo do plano |
 
-**Como testar:** com `blessed` em nível alto, quebrar um bloco que dispare AoE grande (`annihilation` ou `colapse`) e ver se chove chave ou se vem no máximo uma.
+### ✅ RESULTADO — **rola em TODO bloco de área. E isso MATA o C7.**
 
-O plugin já tem o conceito: o frenzy conta `blocks-required: 1000` **só de blocos manuais, excluindo encantes, drill e bombas**. C7 é fazer a mesma regra valer para chave.
+Medição in-game, ~1 minuto com `Explosivo` nível 100 (4,2%) e `Abençoado` nível 100 (9,2%):
 
-**Resultado:** _(a preencher)_
+| | |
+|---|---|
+Explosivo ativou | 13× |
+Abençoado "ativou" | 17× |
+**Chaves no `/correio`** | **65** (zeradas antes do teste) |
+
+O código confirma, em `EnchantHandler.java:180`:
+
+> *"**Each block broken by area enchants gets its own Blessed roll**"*
+
+E o `tasks.blessed-flush-seconds: 30` **agrupa as entregas em lotes** — por isso 17 "ativações" continham 65 chaves. Não são 17 chaves, são 17 mensagens de lote.
+
+**A conta fecha exatamente:**
+
+```
+13 procs de explosivo x 26 blocos de area   = 338 blocos
++ ~368 blocos manuais                        = 706 blocos
+x 9,21%                                      = 65 chaves  ✅
+```
+
+### Por que isso mata o C7
+
+O C7 era "fazer a chave contar só bloco manual". Mas a medição mostra que o volume é controlável **pela chance**, que é config — e chance é uma alavanca melhor que mudança de código, porque preserva a sensação de "o AoE choveu chave", que é exatamente o que o público gosta.
+
+O problema é de escala, não de mecânica:
+
+| | Chaves/dia |
+|---|---|
+Com a chance de hoje (9,21%) sobre 2,1×10⁷ blocos/dia | **1,93 milhão** — inviável |
+**Alvo** | **~20.000** |
+Chance necessária | **0,095%** no nível 100 (hoje 9,21%) |
+
+**Resultado:** ✅ rola em todo bloco · ❌ **C7 desnecessário** · `blessed` nível 100 vai de 9,21% para **~0,095%**
 
 ---
 
