@@ -45,29 +45,19 @@ rewards:
 
   coins:
     type: CURRENCY
-    chance: 39.56
+    chance: 51.9459
     display: '&6Moedas'
     currency-id: coins
     amount: '250'
-  xp:
-    type: COMMAND
-    chance: 26.37
-    display: '&aExperiência'
-    command: xp {amount} {player}
-    amount: 500
-    icon:
-      material: EXP_BOTTLE
-      display: '&aExperiência'
-
   secundaria:
     type: CURRENCY
-    chance: 21.98
+    chance: 28.8617
     display: '&bdracmas'
     currency-id: dracmas
     amount: '25'
   combustivel:
     type: COMMAND
-    chance: 4
+    chance: 5.2524
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
     amount: 500
@@ -168,3 +158,88 @@ rewards:
       display: '&a&lLivro de Pilhagem 3'
       lore:
       - '&7O prêmio mais raro desta caixa.'
+
+  boss-colosso:
+    type: COMMAND
+    chance: 3
+    display: '&cBoss Colosso'
+    command: boss give boss {player} COLOSSO 1 1
+    amount: 1
+    icon:
+      material: MAGMA_CREAM
+      display: '&cBoss Colosso'
+
+  boss-inferno:
+    type: COMMAND
+    chance: 1.5
+    display: '&cBoss Inferno'
+    command: boss give boss {player} INFERNO 1 1
+    amount: 1
+    icon:
+      material: BLAZE_POWDER
+      display: '&cBoss Inferno'
+
+  boss-arauto:
+    type: COMMAND
+    chance: 0.6
+    display: '&cBoss Arauto'
+    command: boss give boss {player} ARAUTO 1 1
+    amount: 1
+    icon:
+      material: ENDER_PEARL
+      display: '&cBoss Arauto'
+
+  boss-tita:
+    type: COMMAND
+    chance: 0.2
+    display: '&4&lBoss Titã'
+    command: boss give boss {player} TITA 1 1
+    amount: 1
+    icon:
+      material: IRON_INGOT
+      glow: true
+      display: '&4&lBoss Titã'
+
+  boss-devorador:
+    type: COMMAND
+    chance: 0.05
+    display: '&4&lBoss Devorador'
+    command: boss give boss {player} DEVORADOR 1 1
+    amount: 1
+    icon:
+      material: NETHER_STAR
+      glow: true
+      display: '&4&lBoss Devorador'
+
+  matadora-sombria:
+    type: COMMAND
+    chance: 0.4
+    display: '&5Matadora Sombria'
+    command: boss give sword {player} sombria
+    amount: 1
+    icon:
+      material: IRON_SWORD
+      display: '&5Matadora Sombria'
+
+  matadora-ancestral:
+    type: COMMAND
+    chance: 0.08
+    display: '&6&lMatadora Ancestral'
+    command: boss give sword {player} ancestral
+    amount: 1
+    icon:
+      material: GOLD_SWORD
+      glow: true
+      display: '&6&lMatadora Ancestral'
+
+  autosell:
+    type: COMMAND
+    chance: 0.02
+    display: '&e&lVenda Automática'
+    command: armazem giveautosell {player} 1
+    amount: 1
+    icon:
+      material: HOPPER
+      glow: true
+      display: '&e&lVenda Automática'
+

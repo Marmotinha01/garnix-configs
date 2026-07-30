@@ -8,7 +8,7 @@ slot: 14
 
 commands:
   - 'cash add {player} 8'
-  - 'crates givekey rankup {player} 1'
+  - 'crates givekey vip {player} 1'
 
 collect-icon:
   texture: 'e00afa9898346fbaca43bbf93ddc13db64d23202b30de479457ca883871aa86c'
@@ -17,10 +17,12 @@ collect-icon:
   - '&7Recompensa diária para'
   - '&7quem vinculou o discord.'
   - ''
-  - '&8 ▪ &fCash: &6❂&l8 '
-  - '&8 ▪ &fChaves: &dx&l1 &dRankUP '
+  - ' &8Recompensas: '
+  - '&8 ▪ &6❂&l8 &6cash '
+  - '&8 ▪ &dx&l1 &dChave VIP '
   - ''
   - '&aClique para coletar.'
+  - ''
 
 no-permission-icon:
   texture: '5726d9d0632e40bda5bcf65839ba2cc98a87bd619c53adf00310d6fc71f042b5'

@@ -105,3 +105,70 @@ products:
       lore:
       - '&8 ▪ &fQuantia: &e100 '
       - ''
+
+  caixa-pesca-i:
+    slot: 19
+    cost: 45000
+    command: caixas give pesca-i {player} 1
+    icon:
+      material: CHEST
+      display: '&bCaixa de Pesca &lI'
+      lore:
+      - '&8 ▪ &fArmadura, skin e livro '
+      - '&8 ▪ &fda via da pesca '
+
+  caixa-pesca-ii:
+    slot: 20
+    cost: 320000
+    command: caixas give pesca-ii {player} 1
+    icon:
+      material: ENDER_CHEST
+      glow: true
+      display: '&b&lCaixa de Pesca II'
+      lore:
+      - '&8 ▪ &fPiso mais alto '
+      - '&8 ▪ &fe muito menos azar '
+      - '&8 ▪ &fNo site: &6❂&l900 '
+
+  chaves-pesca:
+    slot: 21
+    cost: 9000
+    command: crates givekey pesca {player} 10
+    icon:
+      material: TRIPWIRE_HOOK
+      display: '&bx&l10 &bChaves de Pesca'
+      lore:
+      - '&8 ▪ &fUm lote da crate da via '
+
+  booster-pesca:
+    slot: 22
+    cost: 28000
+    command: pesca givebooster {player} corais 3 10m 1
+    icon:
+      material: BLAZE_POWDER
+      display: '&b&lBooster 3x &7(10m)'
+      lore:
+      - '&8 ▪ &fDez minutos de corais '
+      - '&8 ▪ &ftriplicados '
+
+  forja:
+    slot: 23
+    cost: 60000
+    command: pesca giveforge {player} 1
+    icon:
+      material: ANVIL
+      display: '&bForja de Skin'
+      lore:
+      - '&8 ▪ &fJunta 7 skins iguais '
+      - '&8 ▪ &fna proxima da escada '
+
+  lim-armazem:
+    slot: 24
+    cost: 55000
+    command: armazem givelimititem {player} 500 1
+    icon:
+      material: CHEST
+      display: '&6Limite de Armazem &7(+500)'
+      lore:
+      - '&8 ▪ &fEspaco no armazem '
+      - '&8 ▪ &fde cacto '

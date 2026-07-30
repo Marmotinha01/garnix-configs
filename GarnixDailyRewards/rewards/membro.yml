@@ -8,7 +8,7 @@ slot: 12
 
 commands:
   - 'cash add {player} 20'
-  - 'crates givekey rankup {player} 2'
+  - 'crates givekey rankup {player} 1'
 
 collect-icon:
   texture: '1c8e0ddf2432f4332b87691b5952c7679763ef4f275b874e9bceb888ed5b5b9'
@@ -17,7 +17,9 @@ collect-icon:
   - '&7Recompensa diária aberta'
   - '&7a todos os jogadores.'
   - ''
-  - '&8 ▪ &fCash: &6❂&l20 '
-  - '&8 ▪ &fChaves: &dx&l2 &dRankUP '
+  - ' &8Recompensas: '
+  - '&8 ▪ &6❂&l20 &6cash '
+  - '&8 ▪ &dx&l1 &dChave RankUP '
   - ''
   - '&aClique para coletar.'
+  - ''

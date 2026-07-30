@@ -45,29 +45,19 @@ rewards:
 
   coins:
     type: CURRENCY
-    chance: 39.26
+    chance: 53.9735
     display: '&6Moedas'
     currency-id: coins
     amount: '250'
-  xp:
-    type: COMMAND
-    chance: 26.37
-    display: '&aExperiência'
-    command: xp {amount} {player}
-    amount: 500
-    icon:
-      material: EXP_BOTTLE
-      display: '&aExperiência'
-
   secundaria:
     type: CURRENCY
-    chance: 21.98
+    chance: 30.2174
     display: '&bcorais'
     currency-id: corais
     amount: '25'
   combustivel:
     type: COMMAND
-    chance: 4
+    chance: 5.4991
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
     amount: 500
@@ -178,4 +168,46 @@ rewards:
     icon:
       material: ENCHANTED_BOOK
       display: '&aLivro de Faro Aguçado 2'
+
+  lim-armazem:
+    type: COMMAND
+    chance: 0.9
+    display: '&6Limite de Armazém'
+    command: armazem givelimititem {player} 500 1
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&6Limite de Armazém'
+
+  lim-spawner:
+    type: COMMAND
+    chance: 0.4
+    display: '&cLimite de Spawners'
+    command: spawner givelimite {player} 1 1
+    amount: 1
+    icon:
+      material: MOB_SPAWNER
+      display: '&cLimite de Spawners'
+
+  lim-maquina:
+    type: COMMAND
+    chance: 0.6
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} 1 1
+    amount: 1
+    icon:
+      material: PISTON_BASE
+      display: '&9Limite de Máquinas'
+
+  autosell:
+    type: COMMAND
+    chance: 0.02
+    display: '&e&lVenda Automática'
+    command: armazem giveautosell {player} 1
+    amount: 1
+    icon:
+      material: HOPPER
+      glow: true
+      display: '&e&lVenda Automática'
+
 

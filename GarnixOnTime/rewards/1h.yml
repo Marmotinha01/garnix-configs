@@ -12,7 +12,9 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l1&fx &4Chave Bosses '
+    - '&8 ▪ &f&l7.500&fx &6Moedas '
+    - '&8 ▪ &f&l2&fx &4Chave Bosses '
+    - '&8 ▪ &f&l1&fx &fCombustível &7(2.000L) '
     - ''
 
 rewards:
@@ -20,9 +22,6 @@ rewards:
     type: CURRENCY
     currency-id: coins
     amount: '7500'
-    icon:
-      material: DOUBLE_PLANT
-      display: '&6&lMoedas'
 
   chaves:
     type: COMMAND
@@ -37,5 +36,5 @@ rewards:
     command: 'maquina givefuel {player} default 2000'
     amount: 1
     icon:
-      material: CHEST
-      display: '&eCombustível (2.000 L)'
+      material: BUCKET
+      display: '&fCombustível &7(2.000L)'

@@ -12,7 +12,9 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l1&fx &4Chave Bosses '
+    - '&8 ▪ &f&l56.300&fx &6Moedas '
+    - '&8 ▪ &f&l2&fx &4Chave Bosses '
+    - '&8 ▪ &f&l1&fx &6Limite de Armazém '
     - ''
 
 rewards:
@@ -20,9 +22,6 @@ rewards:
     type: CURRENCY
     currency-id: coins
     amount: '56300'
-    icon:
-      material: DOUBLE_PLANT
-      display: '&6&lMoedas'
 
   chaves:
     type: COMMAND
@@ -34,8 +33,8 @@ rewards:
 
   extra:
     type: COMMAND
-    command: 'maquina givefuel {player} default 2000'
+    command: 'armazem givelimititem {player} 500 1'
     amount: 1
     icon:
       material: CHEST
-      display: '&eCombustível (2.000 L)'
+      display: '&6Limite de Armazém'

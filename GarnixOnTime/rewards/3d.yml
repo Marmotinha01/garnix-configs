@@ -12,7 +12,9 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &f&l1&fx &4Chave Bosses '
+    - '&8 ▪ &f&l1.640.000&fx &6Moedas '
+    - '&8 ▪ &f&l5&fx &4Chave Bosses '
+    - '&8 ▪ &f&l1&fx &bCaixa Pesca I '
     - ''
 
 rewards:
@@ -20,9 +22,6 @@ rewards:
     type: CURRENCY
     currency-id: coins
     amount: '1640000'
-    icon:
-      material: DOUBLE_PLANT
-      display: '&6&lMoedas'
 
   chaves:
     type: COMMAND
@@ -34,8 +33,8 @@ rewards:
 
   extra:
     type: COMMAND
-    command: 'caixas give mineracao-i {player} {amount}'
+    command: 'caixas give pesca-i {player} {amount}'
     amount: 1
     icon:
       material: CHEST
-      display: '&eCaixa Mineração I'
+      display: '&bCaixa Pesca I'

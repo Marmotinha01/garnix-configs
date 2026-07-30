@@ -8,8 +8,7 @@ slot: 32
 
 commands:
   - 'cash add {player} 85'
-  - 'crates givekey rankup {player} 9'
-  - 'caixas give farm-i {player} 1'
+  - 'crates givekey vip {player} 9'
 
 collect-icon:
   texture: '68d40935279771adc63936ed9c8463abdf5c5ba78d2e86cb1ec10b4d1d225fb'
@@ -18,8 +17,9 @@ collect-icon:
   - '&7Recompensa que o cargo'
   - '&7Supremo libera por dia.'
   - ''
-  - '&8 ▪ &fCash: &6❂&l85 '
-  - '&8 ▪ &fChaves: &dx&l9 &dRankUP '
-  - '&8 ▪ &fCaixa: &ex&l1 &eCaixa Fazenda I '
+  - ' &8Recompensas: '
+  - '&8 ▪ &6❂&l85 &6cash '
+  - '&8 ▪ &dx&l9 &dChaves VIP '
   - ''
   - '&aClique para coletar.'
+  - ''
