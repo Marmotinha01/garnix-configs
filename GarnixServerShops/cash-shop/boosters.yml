@@ -1,0 +1,136 @@
+# Cash Shop — Boosters.
+#
+# Faixa A. O in-game so tem 5m e 10m; o 3x de 1h e do site, por decisao
+# do dono. O tempo EMPILHA sem teto entre boosters de mesmo multiplicador,
+# entao comprar seis 1h vale exatamente seis horas — nada se perde.
+
+title: 'SHOP - Boosters'
+
+paginated: false
+rows: 3
+back-slot: 22
+
+icon:
+  slot: 10
+  material: BLAZE_POWDER
+  display: '&6Boosters'
+  lore:
+  - '&7O 3x de 1 hora, que quase'
+  - '&7nao sai jogando.'
+  - ''
+  - '&6Clique para acessar.'
+
+broadcast-message:
+- ''
+- ' &6&lCASH SHOP &8- &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
+- ''
+
+products:
+
+  boost-mina:
+    slot: 10
+    amount: 1
+    price: 200
+    broadcast: true
+    commands:
+    - 'mina givebooster {player} coins 3 1h 1'
+    item:
+      material: DIAMOND_PICKAXE
+      display: '&bBooster de Mineracao'
+      lore:
+      - '&7Uma hora de renda triplicada'
+      - '&7na via escolhida.'
+      - ''
+      - '&8 ▪ &fMultiplicador: &c3x '
+      - '&8 ▪ &fDuracao: &f1 hora '
+      - '&8 ▪ &fVia: &7Mineracao '
+
+  boost-fazenda:
+    slot: 11
+    amount: 1
+    price: 200
+    broadcast: true
+    commands:
+    - 'fazenda givebooster {player} coins 3 1h 1'
+    item:
+      material: DIAMOND_HOE
+      display: '&aBooster de Fazenda'
+      lore:
+      - '&7Uma hora de renda triplicada'
+      - '&7na via escolhida.'
+      - ''
+      - '&8 ▪ &fMultiplicador: &c3x '
+      - '&8 ▪ &fDuracao: &f1 hora '
+      - '&8 ▪ &fVia: &7Fazenda '
+
+  boost-pesca:
+    slot: 12
+    amount: 1
+    price: 200
+    broadcast: true
+    commands:
+    - 'pesca givebooster {player} corais 3 1h 1'
+    item:
+      material: FISHING_ROD
+      display: '&3Booster de Pesca'
+      lore:
+      - '&7Uma hora de renda triplicada'
+      - '&7na via escolhida.'
+      - ''
+      - '&8 ▪ &fMultiplicador: &c3x '
+      - '&8 ▪ &fDuracao: &f1 hora '
+      - '&8 ▪ &fVia: &7Pesca '
+
+  boost-spawner:
+    slot: 14
+    amount: 1
+    price: 250
+    broadcast: true
+    commands:
+    - 'spawner givebooster {player} drops 3 1h 1'
+    item:
+      material: MOB_SPAWNER
+      display: '&eBooster de Spawners'
+      lore:
+      - '&7Uma hora de renda triplicada'
+      - '&7na via escolhida.'
+      - ''
+      - '&8 ▪ &fMultiplicador: &c3x '
+      - '&8 ▪ &fDuracao: &f1 hora '
+      - '&8 ▪ &fVia: &7Spawners '
+
+  boost-maquina:
+    slot: 15
+    amount: 1
+    price: 250
+    broadcast: true
+    commands:
+    - 'maquina givebooster {player} 3 1h 1'
+    item:
+      material: PISTON_BASE
+      display: '&9Booster de Maquinas'
+      lore:
+      - '&7Uma hora de renda triplicada'
+      - '&7na via escolhida.'
+      - ''
+      - '&8 ▪ &fMultiplicador: &c3x '
+      - '&8 ▪ &fDuracao: &f1 hora '
+      - '&8 ▪ &fVia: &7Maquinas '
+
+  boost-armazem:
+    slot: 16
+    amount: 1
+    price: 250
+    broadcast: true
+    commands:
+    - 'armazem givebooster {player} 3 1h 1'
+    item:
+      material: CACTUS
+      display: '&2Booster de Armazem'
+      lore:
+      - '&7Uma hora de renda triplicada'
+      - '&7na via escolhida.'
+      - ''
+      - '&8 ▪ &fMultiplicador: &c3x '
+      - '&8 ▪ &fDuracao: &f1 hora '
+      - '&8 ▪ &fVia: &7Cacto '

@@ -47,8 +47,14 @@ kit:
       - '&7Arremesse nos blocos para derrubá-los.'
       - '&8&oO ovo é reposto a cada arremesso.'
 
+# Recompensa do vencedor. Banda: BASE — presencial — custa deslocamento e tempo de arena.
+#
+# Nada em coins de proposito: evento nao tem gate de tier, entao um valor fixo
+# seria enorme no dia 1 e po no dia 5. Cash, chave e caixa sao neutros em tier.
+#
 rewards:
-- cash add {player} 5000
+- cash add {player} 20
+- crates givekey rankup {player} 10
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:
@@ -98,7 +104,7 @@ messages:
       &8▎ {c}Evento {c}&lSplegg {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/splegg entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmio: {c}5K de Cash
+      &8▶ &fPrêmios: &e[Splegg] &8+ &6❂&l20 &6cash &8+ &dx&l10 &dChaves RankUP
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -127,7 +133,7 @@ messages:
       &r
       &8▶ &7{player} &ffoi o último de pé no Splegg.
       &r
-      &8▪ &fPrêmio: {c}5K de Cash
+      &8▪ &fPrêmios: &e[Splegg] &8+ &6❂&l20 &6cash &8+ &dx&l10 &dChaves RankUP
       &r
 
   # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros

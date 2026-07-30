@@ -14,7 +14,10 @@ supremo:
   perm: vip.supremo
 
 imortal:
-  value: 5
+  # 6, nao 5: as outras duas tabelas de desconto do servidor
+  # (GarnixSpawners/ranks.yml e GarnixMachines/ranks.yml) usam 6, e o
+  # jogador nao tem como saber que o desconto muda de sistema para sistema.
+  value: 6
   color: a
   tag: '[Imortal]'
   perm: vip.imortal

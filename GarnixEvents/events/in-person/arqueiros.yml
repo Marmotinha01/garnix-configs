@@ -134,8 +134,15 @@ teams:
 cleanup-radius: 80.0
 
 # Executados no console para CADA jogador do time vencedor.
+# Recompensa do vencedor. Banda: PERICIA — presencial de pontaria/combate — perde-se para quem joga melhor.
+#
+# Nada em coins de proposito: evento nao tem gate de tier, entao um valor fixo
+# seria enorme no dia 1 e po no dia 5. Cash, chave e caixa sao neutros em tier.
+#
 rewards:
-- cash add {player} 5000
+- cash add {player} 25
+- crates givekey rankup {player} 15
+- caixas give mineracao-i {player} 1
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:
@@ -185,7 +192,7 @@ messages:
       &8▎ {c}Evento {c}&lArqueiros {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/arqueiros entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmio: {c}5K de Cash
+      &8▶ &fPrêmios: &2[Arqueiro] &8+ &6❂&l25 &6cash &8+ &dx&l15 &dChaves RankUP &8+ &ex&l1 &eCaixa Mineração I
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -214,7 +221,7 @@ messages:
       &r
       &8▶ &7{player} &ffoi o destaque e levou a tag.
       &r
-      &8▪ &fPrêmio: {c}5K de Cash
+      &8▪ &fPrêmios: &2[Arqueiro] &8+ &6❂&l25 &6cash &8+ &dx&l15 &dChaves RankUP &8+ &ex&l1 &eCaixa Mineração I
       &r
 
   # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
@@ -279,5 +286,5 @@ messages:
       &r
       &8▶ &7{player} &ffoi o destaque com &7{kills} &feliminações.
       &r
-      &8▪ &fPrêmio: {c}5K de Cash &7para todo o time
+      &8▪ &fPrêmios: &2[Arqueiro] &8+ &6❂&l25 &6cash &8+ &dx&l15 &dChaves RankUP &8+ &ex&l1 &eCaixa Mineração I &7para todo o time
       &r

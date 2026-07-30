@@ -6,7 +6,11 @@ increase-cost: 780.6
 # CHANCE flavour (percent)
 base-chance: 0.0000815
 increase-chance: 0.0000815
-key-id: "fazenda"
+# ⚠️ `farm`, nao `fazenda`. O CrateManager tira o id da crate do NOME DO ARQUIVO
+# (`CrateManager:156`), e o arquivo e `GarnixCrates/crates/farm.yml`. Apontando para
+# "fazenda" o encante rodava e nao entregava chave nenhuma, em silencio — e o clover
+# e o faucet de chave da fazenda inteira (~1.000/dia no orcamento da Fase 5).
+key-id: "farm"
 
 # Anunciado no flush em lote (a cada 30s), tokens {count} / {enchant}.
 stacked-messages:

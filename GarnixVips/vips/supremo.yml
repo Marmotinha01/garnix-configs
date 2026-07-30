@@ -1,7 +1,7 @@
 lp-group: "supremo"
 display: "SUPREMO"
 color: "&4"
-weight: 90
+weight: 100
 
 switcher-icon:
   texture: "c65f3bae0d203ba16fe1dc3d1307a86a638be924471f23e82abd9d78f8a3fca"

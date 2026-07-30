@@ -1,7 +1,7 @@
 lp-group: "imortal"
 display: "IMORTAL"
 color: "&b"
-weight: 100
+weight: 90
 
 switcher-icon:
   texture: "f9e16979309b5a9b673d60d1390bbab0d0385eac7254d828ada2a36a46f73a59"

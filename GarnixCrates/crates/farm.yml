@@ -49,10 +49,6 @@ rewards:
     display: '&6Moedas'
     currency-id: coins
     amount: '250'
-    icon:
-      material: 'INK_SACK'
-      data: 10
-      display: '&6&lMoedas'
   xp:
     type: COMMAND
     chance: 26.37
@@ -69,10 +65,6 @@ rewards:
     display: '&bsementes'
     currency-id: sementes
     amount: '25'
-    icon:
-      material: 'INK_SACK'
-      data: 5
-      display: '&b25 sementes'
   combustivel:
     type: COMMAND
     chance: 4
@@ -99,10 +91,6 @@ rewards:
     display: '&bsementes (lote)'
     currency-id: sementes
     amount: '500'
-    icon:
-      material: 'INK_SACK'
-      data: 5
-      display: '&b500 sementes'
   chave-boss:
     type: COMMAND
     chance: 1.2

@@ -259,6 +259,8 @@ Mesma estrutura, moeda `sementes`, `enchant-currency: sementes`.
 |---|---|---|
 1 | ~~`max-simultaneous` nas classes D e E~~ — ✅ **o plugin já resolve**, ver acima | — |
 2 | Ler o que `lighthing`, `rupture` e `cataclysm` do farm realmente quebram, e calibrar o farm igual | 4 |
-3 | Subir a árvore de farm ~204× | 4 |
-4 | Corrigir o `key-id` do `clover` | 4 |
+3 | ~~Subir a árvore de farm ~204×~~ — ✅ **feito**: a árvore de farm custa 6,42×10⁸ sementes contra 7,97×10⁸ gemas da mineração, ou seja **1,24×** (era 162×) | — |
+4 | ~~Corrigir o `key-id` do `clover`~~ — ✅ **feito**, e era bug real: apontava para `"fazenda"` mas o `CrateManager:156` tira o id do **nome do arquivo**, que é `farm.yml`. O encante rodava e **não entregava chave nenhuma, em silêncio** — e ele é o faucet de chave da fazenda inteira (~1.000/dia) | — |
 5 | Teste de carga L1 com a árvore no máximo e 250 contas | pré-lançamento |
+
+> A varredura que pegou o `clover` conferiu **toda** referência a chave e caixa do repo (`key-id`, `givekey`, `givevirtualkey`, `caixas give`) contra os arquivos que de fato existem. Era a única quebrada.

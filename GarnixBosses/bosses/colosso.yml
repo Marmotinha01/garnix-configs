@@ -42,20 +42,12 @@ rewards:
     display: '&6Moedas'
     currency-id: coins
     amount: '10800'
-    icon:
-      material: 'INK_SACK'
-      data: 10
-      display: '&6&lMoedas'
   secundaria:
     type: CURRENCY
     chance: 45.0
     display: '&bgemas'
     currency-id: gemas
     amount: '200'
-    icon:
-      material: 'INK_SACK'
-      data: 9
-      display: '&bgemas'
   chave-boss:
     type: COMMAND
     chance: 30.0

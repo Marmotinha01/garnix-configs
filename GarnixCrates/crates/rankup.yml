@@ -49,10 +49,6 @@ rewards:
     display: '&6Moedas'
     currency-id: coins
     amount: '250'
-    icon:
-      material: 'INK_SACK'
-      data: 10
-      display: '&6&lMoedas'
   xp:
     type: COMMAND
     chance: 18
@@ -69,10 +65,6 @@ rewards:
     display: '&bdracmas'
     currency-id: dracmas
     amount: '25'
-    icon:
-      material: 'INK_SACK'
-      data: 11
-      display: '&b25 dracmas'
   combustivel:
     type: COMMAND
     chance: 12
@@ -99,10 +91,6 @@ rewards:
     display: '&bdracmas (lote)'
     currency-id: dracmas
     amount: '500'
-    icon:
-      material: 'INK_SACK'
-      data: 11
-      display: '&b500 dracmas'
   chave-boss:
     type: COMMAND
     chance: 5.1

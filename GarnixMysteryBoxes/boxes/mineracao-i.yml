@@ -93,10 +93,6 @@ rewards:
     display: '&e1.000 gemas'
     currency-id: gemas
     amount: '1000'
-    icon:
-      material: 'INK_SACK'
-      data: 9
-      display: '&e1.000 gemas'
   booster:
     type: COMMAND
     chance: 2

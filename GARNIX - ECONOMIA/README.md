@@ -14,7 +14,7 @@ Diretório de trabalho da economia da temporada. Todo material de projeto, cálc
 | [01-ECONOMIA.md](01-ECONOMIA.md) | Documento mestre: moedas, eixos, leis de projeto, orçamentos | ✅ |
 | [02-TIERS.md](02-TIERS.md) | Tabela T1–T20 expandida, com todos os números derivados | ✅ |
 | [03-RANKING-APELOES.md](03-RANKING-APELOES.md) | Ranking de poder de cada vantagem + canal de aquisição | ✅ |
-| [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md) | Cada produto do site ↔ sua rota in-game e custo em horas | ⏳ Fase 7, com o cash-shop |
+| [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md) | Cada produto do site ↔ sua rota in-game e custo em horas | ✅ Fase 7 — os 42 produtos, 42/42 com comando conferido |
 | [05-MULTIPLICADORES.md](05-MULTIPLICADORES.md) | O orçamento de 100× detalhado por via | ✅ está em [01](01-ECONOMIA.md#6-orçamento-de-multiplicadores--teto-de-100) |
 | [06-ENCANTES.md](06-ENCANTES.md) | Classes A–E de custo de infra, chances, custos, travas | ✅ |
 | [07-LIVROS.md](07-LIVROS.md) | Os 3 sistemas de livro e as tabelas de loot de cada nível | ⏳ Fase 5, com as tabelas de loot |
@@ -25,6 +25,7 @@ Diretório de trabalho da economia da temporada. Todo material de projeto, cálc
 | [12-RANKINGS.md](12-RANKINGS.md) | Os 33 placares do servidor + **a distribuição dos R$ 1.000** de fim de temporada | ✅ |
 | [13-PASSIVO.md](13-PASSIVO.md) | A via passiva: spawners, lâmina e máquinas. Mecânica lida no código + os números aplicados | ✅ 3a–3d |
 | [14-FARM-PESCA.md](14-FARM-PESCA.md) | Fazenda e pesca: o teto físico do farm, o gate 2D da pesca, as skins | ✅ Fase 4 |
+| [16-KITS.md](16-KITS.md) | Especificação das chaves dos kits — ⛔ você aplica no jogo | ✅ |
 | [15-LOOT.md](15-LOOT.md) | Superfícies de recompensa: crates, caixas, bosses, ontime, dailies, robôs | ✅ Fase 5 |
 | [TESTES-IN-GAME.md](TESTES-IN-GAME.md) | **Checklist do que testar no jogo** — deixe aberto do lado enquanto testa | ✅ |
 | [metrics.csv](metrics.csv) | Metas de cronometragem por tier vs medido in-game | ✅ |
@@ -283,9 +284,17 @@ Então a 4b entrega a **especificação completa** — classe, moeda, fórmula, 
 
 **A regra da taxa, agora igual nos 5 sistemas:** ela incide **só sobre o que foi ganho** — a própria aposta do vencedor volta intacta. Uma alíquota só para o servidor inteiro, num campo só (`currencies/<id>.yml → command.subcommands.send.tax`).
 
-### ⏳ Fase 7 — shops · **por último, por sua decisão**
+### ✅ Fase 7 — shops · **feita por último, por sua decisão**
 
-coins-shop (273 produtos) · cash-shop nas 4 faixas · os 21 eventos · [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md).
+| Frente | Desfecho |
+|---|---|
+**coins-shop** | os ~250 produtos de decoração **ficam como estão** — são QoL e devem ser baratos, por decisão sua. Duas seções mexidas: **`farm.yml`**, a única com peso econômico, e **`god.yml`**, reprecificada para 1–3 min de jogo |
+**cash-shop** | **42 produtos em 7 categorias**, escritos do zero (só existia o `example.yml` de fábrica, que estava **live** vendendo 64 pedras por 10 cash — removido) |
+**os 22 eventos** | `cash add 5000–15000` → **10–40**, em 4 bandas. É a maior correção de cash do projeto. A linha virou **`Prêmios:` = tag + cash + chaves + caixa**, com as cores reais das moedas e a tag lida do campo `tag:` do próprio evento (`&6[Batatudo]`, `&c[Dinamite]`, `&4[SerialKiller]`…) |
+**paridade** | [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md) — os 42 produtos com rota in-game, **42/42 com comando conferido contra o arquivo** |
+**VIPs** | `weight` invertido corrigido: celestial (o VIP de entrada) estava em **110**, acima do garnix (80) |
+
+**O achado da fase — `farm.yml`.** A loja vendia `CACTUS` e `SAND` a 5.000 fixos, e são a **fonte única** dos dois (não caem da mina, não saem de crate nem caixa). Como a via do cacto é reinvestimento composto, preço fixo não deixava a loja barata: deixava a **via sem rampa**. E a peça que decide é a **areia** — o cacto cresce e volta de graça do armazém, a areia não faz nem uma coisa nem outra. Reancorado para um plot cheio ≈ **1 dia de renda no T4**.
 
 ---
 
@@ -303,8 +312,8 @@ coins-shop (273 produtos) · cash-shop nas 4 faixas · os 21 eventos · [04-PARI
 ~~C11~~ | ~~`garnix-warehouse`~~ | ~~`total_sold` + placar do cacto~~ | ❌ **recusado por você** (*"placar de cacto n precisa"*). Os R$ 120 do cacto foram para o prestígio |
 ~~C12~~ | ~~`garnix-spawners`~~ | ~~debitar `spawnerslimite` na compra~~ | ❌ **retirado** — não era bug. O dono confirmou que comparar sem debitar **é o desenho**: teto de lote por compra, que cresce com o que cai de recompensa |
 **C13** | `garnix-warehouse` | `getSellMultiplier(Player)` lendo `warehouse.sellmult.<N>`, aplicado no `SellService.computeValue` | ✅ **no ar** — é o que dá ao cacto as 15,6 ordens que o tamanho do plot (2,5) não dá |
-**C14** | `garnix-duels` | **taxa da aposta** — alíquota lida do GarnixCurrencies na liquidação, incidindo só sobre o prêmio, + a linha `{tax_info}` no ícone de valor do menu | ✅ **escrito e compilando** — aguardando sua revisão |
-**C15** | `garnix-crates`, `garnix-mystery-boxes`, `garnix-bosses` | recompensa `type: CURRENCY` sem `icon:` cair no **ícone da própria moeda** em vez de `BARRIER` | ⏳ **proposto** — ver [15-LOOT.md](15-LOOT.md#o-ícone-da-recompensa-de-moeda) |
+**C14** | `garnix-duels` | **taxa da aposta** — alíquota lida do GarnixCurrencies na liquidação, incidindo só sobre o prêmio, + a linha `{tax_info}` no ícone de valor do menu | ✅ **no ar** |
+**C15** | `garnix-crates`, `garnix-mystery-boxes`, `garnix-bosses`, `garnix-ontime`, `garnix-fishing` | recompensa `type: CURRENCY` herda o ícone da própria moeda **campo a campo**: material, `data` e `display` vêm da moeda quando o config não os declara, e a `lore:` do config entra por cima | ✅ **escrito e compilando** nos 5 — aguardando sua revisão |
 C3 | — | tabela de sufixos configurável | ❌ **desnecessário**, o V1 passou |
 C4, C5 | — | bônus de conjunto · teto AFK por conta | ⏸️ só se o simulador pedir |
 
@@ -329,10 +338,10 @@ Nada bloqueia o trabalho — cada uma tem um default. Detalhe em [13-PASSIVO.md]
 | # | Decisão | Default se ficar sem resposta |
 |---|---|---|
 **D1** | ~~Aprovar o C11~~ | ✅ **respondida** — recusada. O cacto fica sem placar e os R$ 120 foram para o prestígio |
-**D7** | **Aprovar o C15** (ícone automático da moeda nas recompensas) | os 31 blocos `icon:` seguem escritos à mão, já corrigidos e alinhados com a moeda |
-**D2** | **A data real do lançamento** (hoje os `release:` vão de 01/09/2026 a 20/09/2026) | só a data-base muda, **nenhum valor é recalculado** |
-**D3** | Nó `rankup.rank.1` no grupo default do LuckPerms (operação, fora do repo) | a escada de bônus começa em +2% em vez de +1% |
-**D4** | Quais chaves e quantidades cada kit dá — ⛔ **eu entrego só a especificação**, você aplica no jogo | Fase 5 |
+**D7** | ~~Aprovar o C15~~ | ✅ **aprovado e escrito** nos 5 sistemas. Os 31 blocos `icon:` redundantes foram removidos dos configs |
+**D2** | ~~A data real do lançamento~~ | ✅ **respondida: 07/08/2026.** As 42 datas de `release:` deslocadas em bloco, o que preserva todo o escalonamento — spawner N e máquina N seguem caindo no dia N. **T1 = 07/08/2026 · T20 = 26/08/2026** |
+**D3** | ~~Nó `rankup.rank.1` no grupo default do LuckPerms~~ | ✅ **eliminado, não precisa mais de você.** A escada passou a dar **N−1%** no rank N: o rank 1 vale 0% (que é o que ele já valia sem a permissão) e o teto é +19% no rank 20. Nada depende de operação manual |
+**D4** | Quais chaves e quantidades cada kit dá — ⛔ **eu entrego só a especificação**, você aplica no jogo | ✅ **especificação escrita** em [16-KITS.md](16-KITS.md) — 131 chaves + 5 caixas por coleta. ⛔ aplicar no jogo é seu |
 **D5** | Nomes finais das máquinas A–O · quantos fragmentos e com que nomes · nome e bônus da 10ª skin de farm | seguem como letra/placeholder até você mandar |
 
 ---

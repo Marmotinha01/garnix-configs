@@ -93,10 +93,6 @@ rewards:
     display: '&b1.000 corais'
     currency-id: corais
     amount: '1000'
-    icon:
-      material: 'INK_SACK'
-      data: 6
-      display: '&b1.000 corais'
   booster:
     type: COMMAND
     chance: 2

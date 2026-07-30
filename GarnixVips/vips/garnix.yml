@@ -1,7 +1,7 @@
 lp-group: "garnix"
 display: "GARNIX"
 color: "&6"
-weight: 80
+weight: 110
 
 switcher-icon:
   texture: "5189f347f42450cd2a2e9b8a5398807d28c7f4254bd99a8a499ce5435320955"

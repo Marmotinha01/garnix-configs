@@ -49,10 +49,6 @@ rewards:
     display: '&6Moedas'
     currency-id: coins
     amount: '250'
-    icon:
-      material: 'INK_SACK'
-      data: 10
-      display: '&6&lMoedas'
   xp:
     type: COMMAND
     chance: 26.37
@@ -69,10 +65,6 @@ rewards:
     display: '&bgemas'
     currency-id: gemas
     amount: '25'
-    icon:
-      material: 'INK_SACK'
-      data: 9
-      display: '&b25 gemas'
   combustivel:
     type: COMMAND
     chance: 4
@@ -99,10 +91,6 @@ rewards:
     display: '&bgemas (lote)'
     currency-id: gemas
     amount: '500'
-    icon:
-      material: 'INK_SACK'
-      data: 9
-      display: '&b500 gemas'
   chave-boss:
     type: COMMAND
     chance: 1.2

@@ -239,7 +239,27 @@ E o `CurrencyHook.getCurrencyIcon(id)` serve esse ícone pronto.
 
 ✅ **Corrigido**: os 31 agora derivam material e data do ícone que a própria moeda declara. O `display:` de cada um foi preservado.
 
-⏳ **C15 (proposto).** Fazer o `type: CURRENCY` sem `icon:` cair em `getCurrencyIcon(currencyId)` em vez de `BARRIER`. São ~3 linhas em cada um dos 3 plugins e transforma o ícone da moeda em fonte única da verdade: trocar o ícone de `coins` passa a atualizar toda crate, caixa e boss de uma vez, e some a chance de errar de novo em 31 lugares. **Sem o C15 nada quebra** — os blocos escritos à mão estão corretos hoje.
+✅ **C15 (aprovado e escrito).** O ícone é resolvido **campo a campo**, não tudo-ou-nada:
+
+| Campo | De onde vem |
+|---|---|
+`material` · `data` | da moeda, **quando o config não declara**. Se declarar, manda o config |
+`display` | do config se houver; senão o da moeda |
+`lore` | sempre do config — é justamente o que se quer acrescentar sem repetir o resto |
+
+Isso vale porque `getItemStack` devolve `null` quando a seção não tem `material`, `texture` nem `owner` — é esse `null` que distingue *"o config não declarou o item"* de *"declarou"*. Ou seja, dá para escrever só isto e funcionar:
+
+```yaml
+icon:
+  lore:
+  - '&7Cai direto na sua conta.'
+```
+
+**Cinco sistemas**, não três: `garnix-crates`, `garnix-mystery-boxes`, `garnix-bosses`, `garnix-ontime` e `garnix-fishing`. A varredura por `type: CURRENCY` achou os dois que eu tinha deixado de fora — e o da pesca era o que mais importava, porque lá o ícone **viaja no `mail.sendCurrency`** e é o que o jogador vê na caixa de entrada, não só um enfeite de menu.
+
+O `garnix-machines` ficou de fora **de propósito**: ele já resolve isso, só que na hora de renderizar o menu (`DropsMenu:105` documenta a mesma prioridade). Foi a implementação dele que serviu de referência.
+
+O helper é privado em cada plugin em vez de ir para o `CurrencyHook` do core: pôr o método no core obrigaria a atualizar o `garnix-core-spigot.jar` (26 MB) na pasta `libs/` dos 5 — e foi exatamente um jar desatualizado desses que quebrou a compilação do `garnix-duels` neste mesmo dia. Duplicar 20 linhas sai mais barato, e segue o padrão que o `readAmount` do C1 já estabeleceu.
 
 **Nota sobre materiais na economia.** As tabelas de loot **não têm nenhuma recompensa `type: ITEM`** — tudo é `CURRENCY` ou `COMMAND`. Então nenhum diamante, pedra ou sucata é entregue ao jogador. Onde `DIAMOND_CHESTPLATE` e afins aparecem, é **ícone de preview** de uma armadura ou livro, ou seja figura, não item.
 

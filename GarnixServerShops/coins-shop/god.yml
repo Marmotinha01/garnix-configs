@@ -1,4 +1,23 @@
-# Coins Shop — categoria de exemplo (sem broadcast).
+# Coins Shop — GOD. Kit de PvP.
+#
+# ── Preço: 1 a 3 minutos de jogo, por decisão do dono ────────────────────────
+#
+# "não impacta economicamente, pode deixar um valor simples para qualquer um comprar,
+#  mas tem que jogar — não é logar no servidor e comprar, tem que jogar uns 2-3 minutinhos"
+#
+# A âncora é a renda ativa do dia 1: 6,94×10^4 coins/h = 1.157 coins/min (02-TIERS.md,
+# batendo com os 70.000/h cronometrados no V5-A).
+#
+#   1.500  →  1,3 min   poções
+#   2.500  →  2,2 min   P5 (por peça) · espada e machado S5
+#   3.500  →  3,0 min   P6 (por peça) · espada e machado S6 · capa
+#
+# Era 150.000 a 500.000, que no dia 1 são 2 a 7 HORAS de mineração — longe de "uns
+# minutinhos". Do dia 5 em diante os dois preços dão no mesmo (a renda passa de
+# 10^8/dia), então este número só governa a PRIMEIRA sessão do jogador — que é
+# exatamente o que ele precisa governar.
+#
+# Estes preços NÃO entram no orçamento de sinks: é conveniência de PvP, não economia.
 
 title: Loja - GOD
 
@@ -32,7 +51,7 @@ command: 'lojagod'
 products:
   H-P5:
     amount: 1
-    price: 250000
+    price: 2500
     slot: 10
     item:
       material: DIAMOND_HELMET
@@ -46,7 +65,7 @@ products:
         - DURABILITY:5
   C-P5:
     amount: 1
-    price: 250000
+    price: 2500
     slot: 19
     item:
       material: DIAMOND_CHESTPLATE
@@ -60,7 +79,7 @@ products:
         - DURABILITY:5
   L-P5:
     amount: 1
-    price: 250000
+    price: 2500
     slot: 28
     item:
       material: DIAMOND_LEGGINGS
@@ -74,7 +93,7 @@ products:
         - DURABILITY:5
   B-P5:
     amount: 1
-    price: 250000
+    price: 2500
     slot: 37
     item:
       material: DIAMOND_BOOTS
@@ -88,7 +107,7 @@ products:
         - DURABILITY:5
   H-P6:
     amount: 1
-    price: 500000
+    price: 3500
     slot: 11
     item:
       material: DIAMOND_HELMET
@@ -102,7 +121,7 @@ products:
         - DURABILITY:6
   C-P6:
     amount: 1
-    price: 500000
+    price: 3500
     slot: 20
     item:
       material: DIAMOND_CHESTPLATE
@@ -116,7 +135,7 @@ products:
         - DURABILITY:6
   L-P6:
     amount: 1
-    price: 500000
+    price: 3500
     slot: 29
     item:
       material: DIAMOND_LEGGINGS
@@ -130,7 +149,7 @@ products:
         - DURABILITY:6
   B-P6:
     amount: 1
-    price: 500000
+    price: 3500
     slot: 38
     item:
       material: DIAMOND_BOOTS
@@ -144,7 +163,7 @@ products:
         - DURABILITY:6
   S-S5:
     amount: 1
-    price: 150000
+    price: 2500
     slot: 15
     item:
       material: DIAMOND_SWORD
@@ -160,7 +179,7 @@ products:
         - DURABILITY:5
   M-S5:
     amount: 1
-    price: 150000
+    price: 2500
     slot: 16
     item:
       material: DIAMOND_AXE
@@ -175,7 +194,7 @@ products:
         - DURABILITY:5
   S-S6:
     amount: 1
-    price: 300000
+    price: 3500
     slot: 33
     item:
       material: DIAMOND_SWORD
@@ -191,7 +210,7 @@ products:
         - DURABILITY:6
   M-S6:
     amount: 1
-    price: 300000
+    price: 3500
     slot: 34
     item:
       material: DIAMOND_AXE
@@ -206,7 +225,7 @@ products:
         - DURABILITY:6
   CAP:
     amount: 1
-    price: 500000
+    price: 3500
     slot: 13
     ask-quantity: true
     item:
@@ -214,7 +233,7 @@ products:
       data: 1
   pot-forca:
     amount: 16
-    price: 31250
+    price: 1500
     slot: 22
     item:
       material: POTION
@@ -223,7 +242,7 @@ products:
       display: "&dPoção de Força &7[II]"
   pot-velo:
     amount: 16
-    price: 31250
+    price: 1500
     slot: 31
     item:
       material: POTION

@@ -1,0 +1,188 @@
+# Cash Shop — Skins.
+#
+# As tres ultimas skins de cada via NAO sao forjaveis, por decisao do dono —
+# entao a rota in-game delas e caixa, e a de fora e esta. Sao o item de
+# status da temporada e valem ate +65% de renda, dentro do teto de 100x.
+
+title: 'SHOP - Skins'
+
+paginated: false
+rows: 5
+back-slot: 40
+
+icon:
+  slot: 13
+  material: NAME_TAG
+  display: '&5Skins'
+  lore:
+  - '&7As tres mais raras de cada'
+  - '&7via. Nenhuma e forjavel.'
+  - ''
+  - '&6Clique para acessar.'
+
+broadcast-message:
+- ''
+- ' &6&lCASH SHOP &8- &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
+- ''
+
+products:
+
+  jade:
+    slot: 10
+    amount: 1
+    price: 3500
+    broadcast: true
+    commands:
+    - 'mina giveskin {player} jade 1'
+    item:
+      material: INK_SACK
+      data: 2
+      display: '&aSkin Jade'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Mineracao '
+      - '&8 ▪ &fForjavel: &cnao '
+
+  safira:
+    slot: 19
+    amount: 1
+    price: 6000
+    broadcast: true
+    commands:
+    - 'mina giveskin {player} safira 1'
+    item:
+      material: INK_SACK
+      data: 4
+      display: '&9Skin Safira'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Mineracao '
+      - '&8 ▪ &fForjavel: &cnao '
+
+  mithril:
+    slot: 28
+    amount: 1
+    price: 12000
+    broadcast: true
+    commands:
+    - 'mina giveskin {player} mithril 1'
+    item:
+      material: DIAMOND
+      glow: true
+      display: '&b&lSkin Mithril'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Mineracao '
+      - '&8 ▪ &fForjavel: &cnao '
+
+  opala:
+    slot: 12
+    amount: 1
+    price: 3500
+    broadcast: true
+    commands:
+    - 'fazenda giveskin {player} opala 1'
+    item:
+      material: INK_SACK
+      data: 12
+      display: '&fSkin Opala'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Fazenda '
+      - '&8 ▪ &fForjavel: &cnao '
+
+  cristal:
+    slot: 21
+    amount: 1
+    price: 6000
+    broadcast: true
+    commands:
+    - 'fazenda giveskin {player} cristal 1'
+    item:
+      material: GLASS
+      display: '&bSkin Cristal'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Fazenda '
+      - '&8 ▪ &fForjavel: &cnao '
+
+  marfim:
+    slot: 30
+    amount: 1
+    price: 12000
+    broadcast: true
+    commands:
+    - 'fazenda giveskin {player} marfim 1'
+    item:
+      material: BONE
+      glow: true
+      display: '&e&lSkin Marfim'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Fazenda '
+      - '&8 ▪ &fForjavel: &cnao '
+
+  oceanita:
+    slot: 14
+    amount: 1
+    price: 3500
+    broadcast: true
+    commands:
+    - 'pesca giveskin {player} oceanita 1'
+    item:
+      material: INK_SACK
+      data: 6
+      display: '&3Skin Oceanita'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Pesca '
+      - '&8 ▪ &fForjavel: &cnao '
+
+  perola:
+    slot: 23
+    amount: 1
+    price: 6000
+    broadcast: true
+    commands:
+    - 'pesca giveskin {player} perola 1'
+    item:
+      material: ENDER_PEARL
+      display: '&fSkin Perola'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Pesca '
+      - '&8 ▪ &fForjavel: &cnao '
+
+  tempestita:
+    slot: 32
+    amount: 1
+    price: 12000
+    broadcast: true
+    commands:
+    - 'pesca giveskin {player} tempestita 1'
+    item:
+      material: NETHER_STAR
+      glow: true
+      display: '&d&lSkin Tempestita'
+      lore:
+      - '&7Uma das tres skins mais'
+      - '&7raras que a via tem.'
+      - ''
+      - '&8 ▪ &fVia: &7Pesca '
+      - '&8 ▪ &fForjavel: &cnao '

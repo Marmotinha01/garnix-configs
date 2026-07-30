@@ -52,8 +52,14 @@ palavras:
 - bicicleta
 - coração|coracao
 
+# Recompensa do vencedor. Banda: CHAT — chat rapido — se ganha digitando, o de menor atrito do servidor.
+#
+# Nada em coins de proposito: evento nao tem gate de tier, entao um valor fixo
+# seria enorme no dia 1 e po no dia 5. Cash, chave e caixa sao neutros em tier.
+#
 rewards:
-- cash add {player} 5000
+- cash add {player} 10
+- crates givekey rankup {player} 5
 
 # ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
 #
@@ -99,7 +105,7 @@ messages:
       &8▎ {c}Evento {c}&lDesembaralhe {c}iniciando!
       &8▎ &fResponda clicando &a&l<click:suggest_command:/desembaralhe ><hover:show_text:&fClique para já digitar &7/desembaralhe &fno chat.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmio: {c}5K de Cash
+      &8▶ &fPrêmios: &6❂&l10 &6cash &8+ &dx&l5 &dChaves RankUP
       &r
       &8▪ &fRevela em: &7{seconds}s
       &r
@@ -132,7 +138,7 @@ messages:
       &8▶ &7{player} &fdesembaralhou a palavra primeiro.
       &r
       &8▪ &fResposta: &7{answer}
-      &8▪ &fPrêmio: {c}5K de Cash
+      &8▪ &fPrêmios: &6❂&l10 &6cash &8+ &dx&l5 &dChaves RankUP
       &r
 # {answer} a resposta que ninguém acertou
   no-winner: |2

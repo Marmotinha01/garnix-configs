@@ -1,7 +1,7 @@
 lp-group: "celestial"
 display: "CELESTIAL"
 color: "&e"
-weight: 110
+weight: 80
 
 switcher-icon:
   texture: "200bf4bf14c8699c0f9209ca79fe18253e901e9ec3876a2ba095da052f69eba7"
