@@ -3,7 +3,7 @@
 # /caixas. E um comando fixo de proposito: aceitar comando livre no argumento
 # daria a qualquer jogador um jeito de fazer o servidor executar o que ele
 # escrevesse.
-back-shop-command: shop
+back-shop-command: shopcaixas
 
 title: Recompensas — {box}
 

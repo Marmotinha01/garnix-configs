@@ -20,6 +20,13 @@ icon:
   - ''
   - '&6Clique para acessar.'
 
+# Comando proprio da categoria. Existe para o botao de VOLTAR do preview de
+# caixa ter para onde levar: o /caixas ver abre o preview e o back-shop-command
+# do GarnixMysteryBoxes roda ISTO, devolvendo o jogador a categoria de onde ele
+# veio. Sem o comando proprio o unico destino possivel era o menu principal do
+# /shop, que faz o jogador perder o lugar.
+command: 'shopcaixas'
+
 broadcast-message:
 - ''
 - ' &6&lCASH SHOP &8- &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'

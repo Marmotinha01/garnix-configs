@@ -46,8 +46,7 @@ ui:
 
     product-lore:
     - ''
-    - '&8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
-    - '&8 ▪ &fQuantia: &f{amount} '
+    - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{value} {currency} '
     - ''
     - '&6Opções de uso:'
     - '{purchase-hint}'
@@ -78,8 +77,8 @@ ui:
 
     product-lore:
     - ''
-    - '&8 ▪ &fPreço: {symbol_color}{symbol}{primary_color}{value} {currency} '
-    - '&8 ▪ &fSeu desconto: {discount} '
+    - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{value} {currency} '
+    - '&8 ▪ &fDesconto: {discount} '
     - ''
     - '&aOpções de uso:'
     - '{purchase-hint}'
