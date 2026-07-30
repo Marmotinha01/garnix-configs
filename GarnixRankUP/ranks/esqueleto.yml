@@ -6,8 +6,13 @@ tag: "&7[Esqueleto]"
 texture: 'fca445749251bdd898fb83f667844e38a1dff79a1529f79a42447a0599310ea4'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.8'
+- 'lp user {player} permission unset warehouse.sellmult.117'
+- 'lp user {player} permission set rank.esqueleto true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.9 true'
 - 'lp user {player} permission set mining.bonus.9 true'
 - 'lp user {player} permission set spawner.buy.skeleton true'
 - 'lp user {player} permission set warehouse.sellmult.575 true'

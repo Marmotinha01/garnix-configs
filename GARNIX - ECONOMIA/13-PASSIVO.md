@@ -332,6 +332,25 @@ O tempo por volta cai ao longo da temporada (24 min no dia 10 → 5,5 min no dia
 
 ⚠️ **Os marcos de prestígio do plano (1, 5, 10, 25, 50, 100, 250, 500) foram calibrados contra o número errado** e precisam ser reescalados para o teto de 345.
 
+### 7.3b Os nomes — a letra continua sendo o id
+
+**A letra é o ID e não muda.** Os arquivos seguem `A.yml`–`O.yml` e os comandos seguem `maquina give {player} A`. O que ganhou nome foi o campo `translated`, que o `display: '&aMáquina {translated}'` monta na tela.
+
+| id | Tier | Nome | id | Tier | Nome |
+|---|---|---|---|---|---|
+`A` | T2 | Máquina de Carvão | `I` | T12 | Máquina de Obsidiana |
+`B` | T3 | Máquina de Pedra | `J` | T13 | Máquina de Quartzo |
+`C` | T5 | Máquina de Ferro | `K` | T14 | Máquina de Titânio |
+`D` | T6 | Máquina de Ouro | `L` | T16 | Máquina de Rubi |
+`E` | T7 | Máquina de Redstone | `M` | T17 | Máquina de Safira |
+`F` | T8 | Máquina de Lápis-Lazúli | `N` | T18 | Máquina de Platina |
+`G` | T9 | Máquina de Diamante | `O` | T19 | Máquina de Adamantita |
+`H` | T11 | Máquina de Esmeralda | | | |
+
+**Uma troca em relação à lista do dono:** ele abria com *Máquina de Madeira*, mas o `WOOD.yml` **já é a "Máquina Madeira"** — a inicial, com `release: ''`, sempre liberada. Seriam duas máquinas com o mesmo nome. Virou **Carvão**, que continua abaixo de pedra na escada.
+
+**A colisão com as skins não é problema aqui**, e vale registrar por quê: as skins de mineração e fazenda usam `pedra`, `ferro`, `ouro`, `diamante`, `esmeralda`, `quartzo`, `rubi` e `safira` — os mesmos materiais. Mas o display da máquina **sempre carrega a palavra "Máquina"**, então o jogador lê *"Máquina de Ferro"* e nunca confunde com a skin. O substantivo desambigua sozinho.
+
 ### 7.3 As 15 máquinas A–O — gate de prestígio
 
 **Decisão do dono:** *"podemos requisitar prestígio para comprar máquinas... pelo menos umas 3 requerendo ranks medianos, daí da 4 para cima requerer prestígio, logo as máquinas viriam APÓS os spawners e não juntamente."*

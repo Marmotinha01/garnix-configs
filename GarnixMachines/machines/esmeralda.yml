@@ -1,4 +1,4 @@
-order: 10
+order: 8
 
 # false = não aparece no menu de shop e não pode ser comprada.
 # A máquina continua funcional: só é obtida via /maquina give.
@@ -6,20 +6,20 @@ shop: true
 
 delay: 10s
 
-translated: "J"
-display: '&e{translated}'
+translated: "Esmeralda"
+display: '&eMáquina de {translated}'
 
 texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
 
-# Máquina J libera no dia 15 da temporada.
+# Máquina H libera no dia 13 da temporada.
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "21/08/2026 20:00"
+release: "19/08/2026 20:00"
 
-rank: '&e[Prestígio 170]'
+rank: '&e[Prestígio 110]'
 
-# ⚠️ Gate autoritativo. Concedida no prestígio 170 — DEPENDE DO C6 (listas de comando
+# ⚠️ Gate autoritativo. Concedida no prestígio 110 — DEPENDE DO C6 (listas de comando
 # por nível de prestígio). Sem o C6 esta máquina não tem rota.
-buy-permission: machines.buy.j
+buy-permission: machines.buy.esmeralda
 
 block:
   material: IRON_BLOCK
@@ -33,7 +33,7 @@ fuels:
 
 machine-item:
   texture: "14a679138a22790334b99f9a16b88362a79a52957f6112bc49c0cdc789ce"
-  display: '&aMáquina {translated}'
+  display: '&aMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'
   - '&7do seu terreno.'
@@ -43,7 +43,7 @@ machine-item:
   - '&aColoque no seu terreno.'
 
 costs:
-  coins: '267000000000000'
+  coins: '6110000000000'
 
 # ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
 # Convenção OPOSTA à dos spawners, que usam 0-100. Escrever 5 aqui significa
@@ -53,4 +53,4 @@ drops:
     type: CURRENCY
     currency-id: coins
     chance: 1.0
-    amount: '32400000000'
+    amount: '741000000'

@@ -342,7 +342,7 @@ Nada bloqueia o trabalho — cada uma tem um default. Detalhe em [13-PASSIVO.md]
 **D2** | ~~A data real do lançamento~~ | ✅ **respondida: 07/08/2026.** As 42 datas de `release:` deslocadas em bloco, o que preserva todo o escalonamento — spawner N e máquina N seguem caindo no dia N. **T1 = 07/08/2026 · T20 = 26/08/2026** |
 **D3** | ~~Nó `rankup.rank.1` no grupo default do LuckPerms~~ | ✅ **eliminado, não precisa mais de você.** A escada passou a dar **N−1%** no rank N: o rank 1 vale 0% (que é o que ele já valia sem a permissão) e o teto é +19% no rank 20. Nada depende de operação manual |
 **D4** | Quais chaves e quantidades cada kit dá — ⛔ **eu entrego só a especificação**, você aplica no jogo | ✅ **especificação escrita** em [16-KITS.md](16-KITS.md) — 131 chaves + 5 caixas por coleta. ⛔ aplicar no jogo é seu |
-**D5** | Nomes finais das máquinas A–O · quantos fragmentos e com que nomes · nome e bônus da 10ª skin de farm | seguem como letra/placeholder até você mandar |
+**D5** | ~~Nomes finais~~ | ✅ **fechada.** Máquinas: os 15 do dono, com *Madeira* → *Carvão* (o `WOOD.yml` já era a Máquina Madeira) — tabela em [13-PASSIVO.md](13-PASSIVO.md#73b-os-nomes--a-letra-continua-sendo-o-id). Fragmentos: 4, um por fonte (`presa` · `selo` · `marca` · `estilhaco`). Skin da fazenda: `ametista` |
 
 ---
 

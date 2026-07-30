@@ -6,8 +6,12 @@ tag: "&8&l[Wither]"
 texture: '74f328f5044129b5d1f96affd1b8c05bcde6bd8e756aff5c5020585eef8a3daf'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.19'
+- 'lp user {player} permission set rank.wither true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.20 true'
 - 'lp user {player} permission set mining.bonus.20 true'
 - 'lp user {player} permission set spawner.buy.wither true'
 - 'lp user {player} permission set warehouse.sellmult.1616000 true'

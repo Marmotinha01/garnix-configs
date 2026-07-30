@@ -6,8 +6,13 @@ tag: "&f[Ovelha]"
 texture: '84e5cdb0edb362cb454586d1fd0ebe971423f015b0b1bfc95f8d5af8afe7e810'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.2'
+- 'lp user {player} permission unset warehouse.sellmult.1'
+- 'lp user {player} permission set rank.ovelha true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.3 true'
 - 'lp user {player} permission set mining.bonus.3 true'
 - 'lp user {player} permission set spawner.buy.sheep true'
 - 'lp user {player} permission set warehouse.sellmult.5 true'

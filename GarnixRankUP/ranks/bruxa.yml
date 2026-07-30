@@ -6,11 +6,15 @@ tag: "&d[Bruxa]"
 texture: 'baf818b04d6ae98a69ad8d9463d8d0379921d3eb79222e1c6272f65372d80775'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.15'
+- 'lp user {player} permission set rank.bruxa true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.16 true'
 - 'lp user {player} permission set mining.bonus.16 true'
 - 'lp user {player} permission set spawner.buy.witch true'
-- 'lp user {player} permission set machines.buy.c true'
+- 'lp user {player} permission set machines.buy.ferro true'
 - 'lp user {player} permission set warehouse.sellmult.67420 true'
 
 costs:

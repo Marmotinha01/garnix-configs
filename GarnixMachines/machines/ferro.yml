@@ -1,4 +1,4 @@
-order: 13
+order: 3
 
 # false = não aparece no menu de shop e não pode ser comprada.
 # A máquina continua funcional: só é obtida via /maquina give.
@@ -6,20 +6,19 @@ shop: true
 
 delay: 10s
 
-translated: "M"
-display: '&e{translated}'
+translated: "Ferro"
+display: '&eMáquina de {translated}'
 
 texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
 
-# Máquina M libera no dia 18 da temporada.
+# Máquina C libera no dia 8 da temporada.
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "24/08/2026 20:00"
+release: "14/08/2026 20:00"
 
-rank: '&e[Prestígio 260]'
+rank: '&e[Rank 16]'
 
-# ⚠️ Gate autoritativo. Concedida no prestígio 260 — DEPENDE DO C6 (listas de comando
-# por nível de prestígio). Sem o C6 esta máquina não tem rota.
-buy-permission: machines.buy.m
+# ⚠️ Gate autoritativo. Concedida em GarnixRankUP/ranks/*.yml -> commands do rank 16.
+buy-permission: machines.buy.ferro
 
 block:
   material: IRON_BLOCK
@@ -33,7 +32,7 @@ fuels:
 
 machine-item:
   texture: "14a679138a22790334b99f9a16b88362a79a52957f6112bc49c0cdc789ce"
-  display: '&aMáquina {translated}'
+  display: '&aMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'
   - '&7do seu terreno.'
@@ -43,7 +42,7 @@ machine-item:
   - '&aColoque no seu terreno.'
 
 costs:
-  coins: '77200000000000000'
+  coins: '485000000'
 
 # ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
 # Convenção OPOSTA à dos spawners, que usam 0-100. Escrever 5 aqui significa
@@ -53,4 +52,4 @@ drops:
     type: CURRENCY
     currency-id: coins
     chance: 1.0
-    amount: '9330000000000'
+    amount: '51100'

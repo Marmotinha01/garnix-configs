@@ -6,8 +6,13 @@ tag: "&f[Lobo]"
 texture: '69d1d3113ec43ac2961dd59f28175fb4718873c6c448dfca8722317d67'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.6'
+- 'lp user {player} permission unset warehouse.sellmult.24'
+- 'lp user {player} permission set rank.lobo true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.7 true'
 - 'lp user {player} permission set mining.bonus.7 true'
 - 'lp user {player} permission set spawner.buy.wolf true'
 - 'lp user {player} permission set warehouse.sellmult.117 true'

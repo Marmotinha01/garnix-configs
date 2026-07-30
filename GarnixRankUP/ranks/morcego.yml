@@ -6,8 +6,13 @@ tag: "&8[Morcego]"
 texture: '6de75a2cc1c950e82f62abe20d42754379dfad6f5ff546e58f1c09061862bb92'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.4'
+- 'lp user {player} permission unset warehouse.sellmult.5'
+- 'lp user {player} permission set rank.morcego true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.5 true'
 - 'lp user {player} permission set mining.bonus.5 true'
 - 'lp user {player} permission set spawner.buy.bat true'
 - 'lp user {player} permission set warehouse.sellmult.24 true'

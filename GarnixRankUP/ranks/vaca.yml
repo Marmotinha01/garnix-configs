@@ -6,8 +6,12 @@ tag: "&e[Vaca]"
 texture: 'dc4b5f6d75126380f520a67ca57bc9a56aa11db8afe7e5dcb2a52dfcfeae0785'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.3'
+- 'lp user {player} permission set rank.vaca true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.4 true'
 - 'lp user {player} permission set mining.bonus.4 true'
 - 'lp user {player} permission set spawner.buy.cow true'
 - 'lp user {player} permission set warehouse.sellmult.5 true'

@@ -6,8 +6,13 @@ tag: "&f&l[Ghast]"
 texture: '7a8b714d32d7f6cf8b37e221b758b9c599ff76667c7cd45bbc49c5ef19858646'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.18'
+- 'lp user {player} permission unset warehouse.sellmult.330100'
+- 'lp user {player} permission set rank.ghast true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.19 true'
 - 'lp user {player} permission set mining.bonus.19 true'
 - 'lp user {player} permission set spawner.buy.ghast true'
 - 'lp user {player} permission set warehouse.sellmult.1616000 true'

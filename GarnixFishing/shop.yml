@@ -17,15 +17,22 @@
 #
 # ═══ O CÂMBIO NOVO ═══════════════════════════════════════════════════════════
 #
-#   1.100 corais = 1 de limite
+#   lote de   1  ->   1.100 corais por unidade
+#   lote de  10  ->   1.400 por unidade  (+27%)
+#   lote de 100  ->   1.900 por unidade  (+73%)
 #
-# Derivado: 2,19×10⁶ corais na temporada ÷ ~2.000 de limite, que é o teto útil
-# com folga (512 itens por bloco × os blocos que o jogador mantém).
+# A base de 1.100 é derivada: 2,19×10⁶ corais na temporada ÷ ~2.000 de limite,
+# que é o teto útil com folga (512 itens por bloco × os blocos que o jogador
+# mantém).
 #
-# ⚠️ Os três lotes têm EXATAMENTE o mesmo câmbio — o maior é só conveniência,
-# nunca desconto. Um desconto por volume aqui seria auto-anulável: o produto não
-# tem gate nem contador por jogador, então o mais barato por unidade dominaria e
-# os outros dois virariam decoração.
+# ⚠️ O câmbio CRESCE com o lote, ao contrário de toda loja normal — e é de
+# propósito. `spawnerslimite` é o item nº 1 do Ranking de Apelões: multiplica a
+# única via SEM teto físico. E corais são negociáveis (sem blacklist, por decisão
+# do dono), então um jogador pode comprar os corais dos outros e converter tudo
+# em capacidade. Com câmbio plano, concentrar não custaria nada a mais.
+#
+# Quem compra pouco não sente. Quem quer concentrar paga progressivamente mais —
+# que é exatamente o freio que o E5 pedia sem precisar proibir a troca.
 #
 # `maquinaslimite` entra pelo mesmo câmbio: as duas são moedas de contagem pura
 # e devem custar o mesmo esforço.
@@ -45,7 +52,7 @@ products:
 
   spawner-limit-10:
     slot: 11
-    cost: 11000
+    cost: 14000
     command: spawner givelimite {player} 10
     icon:
       material: PAPER
@@ -56,7 +63,7 @@ products:
 
   spawner-limit-100:
     slot: 12
-    cost: 110000
+    cost: 190000
     command: spawner givelimite {player} 100
     icon:
       material: PAPER
@@ -79,7 +86,7 @@ products:
 
   machine-limit-10:
     slot: 15
-    cost: 11000
+    cost: 14000
     command: maquina givelimite {player} 10
     icon:
       material: PAPER
@@ -90,7 +97,7 @@ products:
 
   machine-limit-100:
     slot: 16
-    cost: 110000
+    cost: 190000
     command: maquina givelimite {player} 100
     icon:
       material: PAPER

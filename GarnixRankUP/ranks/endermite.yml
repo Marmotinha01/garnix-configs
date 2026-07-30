@@ -6,8 +6,13 @@ tag: "&5[Endermite]"
 texture: '1730127e3ac7677122422df0028d9e7368bd157738c8c3cddecc502e896be01c'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.14'
+- 'lp user {player} permission unset warehouse.sellmult.13770'
+- 'lp user {player} permission set rank.endermite true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.15 true'
 - 'lp user {player} permission set mining.bonus.15 true'
 - 'lp user {player} permission set spawner.buy.endermite true'
 - 'lp user {player} permission set warehouse.sellmult.67420 true'

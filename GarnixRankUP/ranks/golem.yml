@@ -6,8 +6,12 @@ tag: "&7&l[Golem]"
 texture: 'da6e0429ccaabb6f5f0c5d513c795bed6d80fce72f57f4bc3a616aee23e12572'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.17'
+- 'lp user {player} permission set rank.golem true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.18 true'
 - 'lp user {player} permission set mining.bonus.18 true'
 - 'lp user {player} permission set spawner.buy.iron_golem true'
 - 'lp user {player} permission set warehouse.sellmult.330100 true'

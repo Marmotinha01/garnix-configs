@@ -6,8 +6,12 @@ tag: "&4[MagmaCube]"
 texture: 'a1c97a06efde04d00287bf20416404ab2103e10f08623087e1b0c1264a1c0f0c'
 
 commands:
+# Remove o no anterior das escadas onde SO O MAIOR CONTA, para o jogador nao
+# carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
+# aquilo e desbloqueio individual e precisa acumular.
+- 'lp user {player} permission unset mining.bonus.13'
+- 'lp user {player} permission set rank.magmacube true'
 - 'crate givevirtualkey rankup {player} 1'
-- 'lp user {player} permission set rankup.rank.14 true'
 - 'lp user {player} permission set mining.bonus.14 true'
 - 'lp user {player} permission set spawner.buy.magma_cube true'
 - 'lp user {player} permission set warehouse.sellmult.13770 true'
