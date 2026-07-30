@@ -79,11 +79,11 @@ rewards:
     type: COMMAND
     chance: 3
     display: '&dFragmento'
-    command: fragmentos givevirtual {player} fogo {amount}
+    command: fragmentos givevirtual {player} selo {amount}
     amount: 5
     icon:
-      material: BLAZE_POWDER
-      display: '&dFragmento de Fogo'
+      material: PAPER
+      display: '&eFragmento: Selo Lacrado'
 
   secundaria-lote:
     type: CURRENCY

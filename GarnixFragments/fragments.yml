@@ -1,33 +1,57 @@
-# Cada entrada é um tipo de fragmento. A chave (ex.: fogo) é o id usado nos
+# Cada entrada e um tipo de fragmento. A chave (ex.: presa) e o id usado nos
 # comandos e no custo da loja. Campos: display, icon.
+#
+# ── UM FRAGMENTO POR FONTE ──────────────────────────────────────────────
+#
+#   presa      bosses
+#   selo       crates e caixas misteriosas
+#   marca      eventos de chat
+#   estilhaco  eventos presenciais (o PvP)
+#
+# E o que faz o custo multi-fragmento da loja obrigar a tocar em varios
+# sistemas. Se dois tipos saissem do mesmo lugar, seriam uma moeda so com
+# passos extras — que era exatamente o estado anterior, com bosses e crates
+# dando ambos `fogo` e os outros dois sem faucet nenhum.
+#
+# Fragmento nao inflaciona: 500 sao 500 no dia 3 e no dia 20. E por isso que
+# ele e a rota in-game de item de site que preco em coins nao consegue ser.
 fragments:
-  fogo:
-    display: '&cFragmento de Fogo'
+  presa:
+    display: '&cFragmento: Presa Colossal'
     icon:
-      material: BLAZE_POWDER
-      display: '&c&lFragmento de Fogo'
+      material: BONE
+      display: '&c&lPresa Colossal'
       glow: true
       lore:
-      - '&7Um fragmento ardente,'
-      - '&7forjado nas chamas.'
-  
-  gelo:
-    display: '&bFragmento de Gelo'
+      - '&7O que sobra de um boss'
+      - '&7que nao aguentou o ultimo golpe.'
+
+  selo:
+    display: '&eFragmento: Selo Lacrado'
     icon:
-      material: ICE
-      display: '&b&lFragmento de Gelo'
+      material: PAPER
+      display: '&e&lSelo Lacrado'
       glow: true
       lore:
-      - '&7Um fragmento congelante,'
-      - '&7frio como o inverno.'
-  
-  natureza:
-    display: '&aFragmento de Natureza'
+      - '&7Estava lacrado dentro de'
+      - '&7algo que voce abriu.'
+
+  marca:
+    display: '&aFragmento: Marca do Vencedor'
     icon:
-      material: SAPLING
-      data: 0
-      display: '&a&lFragmento de Natureza'
+      material: NAME_TAG
+      display: '&a&lMarca do Vencedor'
       glow: true
       lore:
-      - '&7Um fragmento vivo,'
-      - '&7pulsando com energia natural.'
+      - '&7So quem venceu carrega.'
+      - '&7Nao se compra, se ganha.'
+
+  estilhaco:
+    display: '&5Fragmento: Estilhaco de Arena'
+    icon:
+      material: FLINT
+      display: '&5&lEstilhaco de Arena'
+      glow: true
+      lore:
+      - '&7Ficou no chao da arena'
+      - '&7depois da ultima luta.'

@@ -54,7 +54,7 @@ Caixa Garnix | 15.000 | jackpot absoluto | ~1 a cada 3 dias de crate no endgame 
 
 | Produto | Site | Rota in-game | Esforço |
 |---|---|---|---|
-jade · opala · oceanita | 3.500 | caixa | as 3 últimas de cada via **não são forjáveis**, por decisão sua |
+jade · ametista · oceanita | 3.500 | caixa | as 3 últimas de cada via **não são forjáveis**, por decisão sua |
 safira · cristal · pérola | 6.000 | caixa | idem |
 mithril · marfim · tempestita | 12.000 | jackpot de caixa | o item de status da temporada, +65% de renda |
 

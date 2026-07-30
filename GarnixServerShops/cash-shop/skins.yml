@@ -81,17 +81,17 @@ products:
       - '&8 ▪ &fVia: &7Mineracao '
       - '&8 ▪ &fForjavel: &cnao '
 
-  opala:
+  ametista:
     slot: 12
     amount: 1
     price: 3500
     broadcast: true
     commands:
-    - 'fazenda giveskin {player} opala 1'
+    - 'fazenda giveskin {player} ametista 1'
     item:
       material: INK_SACK
       data: 12
-      display: '&fSkin Opala'
+      display: '&fSkin Ametista'
       lore:
       - '&7Uma das tres skins mais'
       - '&7raras que a via tem.'

@@ -164,19 +164,19 @@ Semântica confirmada em `SkinManager.getNextSkin`: **`forgeable: true` na skin 
 
 **A fazenda estava violando a regra** e eu não tinha percebido: ela tinha **9 skins**, a forja chegava em `esmeralda`, e só **2** ficavam fora (`cristal`, `marfim`).
 
-Criei a 10ª (`opala`) e a escada passou a espelhar a da mineração degrau a degrau:
+Criei a 10ª (`ametista`) e a escada passou a espelhar a da mineração degrau a degrau:
 
 | Posição | Mineração | Fazenda | Pesca | Bônus |
 |---|---|---|---|---|
 6 (teto de forja) | rubi | ambar | abissita | +20% |
 7 (a forja alcança) | quartzo | esmeralda | serenita | +28% |
-**8** | jade | **opala** 🆕 | oceanita | **+38%** |
+**8** | jade | **ametista** 🆕 | oceanita | **+38%** |
 **9** | safira | cristal | perola | **+50%** |
 **10** | mithril | marfim | tempestita | **+65%** |
 
 Ajustei `esmeralda` 30 → 28 e `cristal` 45 → 50 para os degraus baterem. Agora as **três vias têm 10 skins e exatamente 3 fora da forja** — e a regra "vender as 3 mais raras no site" passa a valer igualmente nas três.
 
-⏳ **O nome `opala` é provisório** — o dono define o final.
+⏳ **O nome `ametista` é provisório** — o dono define o final.
 
 ---
 
@@ -186,4 +186,4 @@ Ajustei `esmeralda` 30 → 28 e `cristal` 45 → 50 para os degraus baterem. Ago
 |---|---|
 1 | **Armaduras** das três vias (60 arquivos) — a escada de bônus já está certa, falta **rota e preço**, que é a Fase 4b dos itens |
 2 | Os 3 encantes de livro da pesca (`speed`, `luck`, `double`) **não têm custo em config** — são 100% book-only, então dependem inteiramente das tabelas de loot da Fase 5 |
-3 | O nome final da skin `opala` |
+3 | O nome final da skin `ametista` |

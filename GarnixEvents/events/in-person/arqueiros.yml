@@ -143,6 +143,7 @@ rewards:
 - cash add {player} 25
 - crates givekey rankup {player} 15
 - caixas give mineracao-i {player} 1
+- fragmentos givevirtual {player} estilhaco 5
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:
@@ -192,7 +193,9 @@ messages:
       &8▎ {c}Evento {c}&lArqueiros {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/arqueiros entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &2[Arqueiro] &8+ &6❂&l25 &6cash &8+ &dx&l15 &dChaves RankUP &8+ &ex&l1 &eCaixa Mineração I
+      &8▶ &fPrêmios: &6❂&l25 &6cash &8+ &6x&l15 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração I
+      &8▪ &fVão para: &7Toda a equipe vencedora
+      &8▪ &fTag &2[Arqueiro]&f: &7só para quem mais eliminar
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -214,25 +217,48 @@ messages:
       &r
       &8▪ &fParticipantes: &7{count}
       &r
-# {player} venceu
-  winner: |2
-
-      &8▎ {c}Evento {c}&lArqueiros&f, {c}temos um vencedor!
-      &r
-      &8▶ &7{player} &ffoi o destaque e levou a tag.
-      &r
-      &8▪ &fPrêmios: &2[Arqueiro] &8+ &6❂&l25 &6cash &8+ &dx&l15 &dChaves RankUP &8+ &ex&l1 &eCaixa Mineração I
-      &r
+# ⚠️ SILENCIADO DE PROPÓSITO — não preencha este bloco.
+#
+# O GameEvent dispara 'winner' em TODA vitória (GameEvent:974) e o ArchersEvent
+# dispara 'team-won' logo depois (ArchersEvent:271). Com os dois preenchidos o
+# jogador lia duas mensagens de vitória seguidas, com a lista de prêmios repetida.
+#
+# Não dá para o código deixar de mandar, mas o `sendBlock` itera as linhas do
+# bloco — uma lista vazia envia nada. Então o desfecho de cada caminho fica com
+# UMA mensagem só:
+#
+#   vitória de time  ->  'team-won'   (prêmios da equipe + quem levou a tag)
+#   tempo esgotado   ->  'time-up-team' + 'team-won'
+#   vitória por W.O. ->  'walkover'   (é o único caminho onde o 'team-won' NÃO
+#                                      roda, porque o W.O. não define winningTeam)
+  winner: []
 
   # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros
   # saíram ou desconectaram. Enviada logo antes do bloco 'winner', que leva o prêmio.
+  #
+  # ⚠️ Isto acontece ANTES da batalha, no `checkLockedRoster` — entre as entradas
+  #    fecharem e o evento começar. Nesse momento os times ainda não foram
+  #    divididos (a divisão é ao iniciar), então a mensagem não pode falar em
+  #    "time vencedor" nem em "sem adversários": não há times nem luta ainda.
+  #
+  #    Quem kita NO MEIO da batalha não cai aqui. Se o vermelho zera com azuis
+  #    vivos, quem decide é o `checkVictory` do ArchersEvent (`red == 0` ->
+  #    winningTeam = BLUE) e a mensagem é o 'team-won'.
+  #
+  # ⚠️ Este é o ÚNICO caminho em que a lista de prêmios fica aqui, e é obrigatório:
+  #    o W.O. chama `finish(sole)` sem definir `winningTeam` (GameEvent:676-679),
+  #    e o 'team-won' só dispara com `winningTeam != null` (ArchersEvent:269). Ou
+  #    seja, num W.O. o 'team-won' NÃO roda — sem esta linha o vencedor não veria
+  #    prêmio nenhum. E aqui a tag entra na corrente porque ele ganhou tudo: é uma
+  #    vitória de um jogador só.
   walkover: |2
 
       &8▎ {c}Evento {c}&lArqueiros&f, {c}vitória por W.O.!
       &r
-      &8▶ &7{player} &fficou sem adversários no campo.
+      &8▶ &7{player} &ffoi o único que ficou até o início.
       &r
-      &8▪ &fMotivo: &7Os demais participantes saíram.
+      &8▪ &fMotivo: &7Os demais saíram antes de começar.
+      &8▪ &fPrêmios: &2[Arqueiro] &8+ &6❂&l25 &6cash &8+ &6x&l15 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração I
       &r
 
   # ── Eliminações ─────────────────────────────────────────────────────
@@ -284,7 +310,9 @@ messages:
       &8▎ {c}Evento {c}&lArqueiros&f, {c}temos um time vencedor!
       &8▎ &fO time {team} &fvenceu a batalha.
       &r
-      &8▶ &7{player} &ffoi o destaque com &7{kills} &feliminações.
+      &8▶ &7{player} &ffoi o destaque com &c&l{kills} &feliminações.
       &r
-      &8▪ &fPrêmios: &2[Arqueiro] &8+ &6❂&l25 &6cash &8+ &dx&l15 &dChaves RankUP &8+ &ex&l1 &eCaixa Mineração I &7para todo o time
+      &8▪ &fPrêmios: &6❂&l25 &6cash &8+ &6x&l15 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração I
+      &8▪ &fVão para: &7Toda a equipe vencedora
+      &8▪ &fTag &2[Arqueiro]&f: &7só para &7{player}&f, que mais eliminou
       &r

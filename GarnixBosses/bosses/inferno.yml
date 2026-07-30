@@ -62,12 +62,12 @@ rewards:
   fragmento:
     type: COMMAND
     chance: 20.0
-    display: '&dFragmento de Fogo'
-    command: fragmentos givevirtual {player} fogo {amount}
+    display: '&cFragmento: Presa Colossal'
+    command: fragmentos givevirtual {player} presa {amount}
     amount: 16
     icon:
-      material: BLAZE_POWDER
-      display: '&dFragmento de Fogo'
+      material: BONE
+      display: '&cFragmento: Presa Colossal'
 
   livro:
     type: COMMAND

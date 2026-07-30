@@ -82,13 +82,13 @@ rewards:
   skin-8:
     type: COMMAND
     chance: 12
-    display: '&5Skin opala'
-    command: fazenda giveskin {player} opala
+    display: '&5Skin ametista'
+    command: fazenda giveskin {player} ametista
     amount: 1
     icon:
       material: NETHER_STAR
       glow: true
-      display: '&5Skin opala'
+      display: '&5Skin ametista'
 
   livro:
     type: COMMAND

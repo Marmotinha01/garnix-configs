@@ -1,41 +1,170 @@
+# Loja de Fragmentos — a rota in-game do que o site vende.
+#
 # Cada entrada é um item da loja. Campos:
 #   icon     — ícone exibido (o custo é gerado automaticamente)
 #   cost     — fragmentos exigidos: <id>: <quantia> (aceita sufixos: 1.5K)
 #   commands — comandos executados no console ao comprar ({player} = comprador)
+#
+# ── POR QUE ELA EXISTE ──────────────────────────────────────────────────────
+#
+# Coins são exponenciais: qualquer preço em coins fica trivial dois dias depois.
+# Fragmento é CONTAGEM — 500 são 500 no dia 3 e no dia 20. É a única coisa no
+# servidor que consegue manter um item "difícil" a temporada inteira.
+#
+# Por isso esta loja não vende conveniência: ela é onde o jogador que NÃO paga
+# chega nos itens do cash-shop, por um caminho deliberadamente mais longo.
+#
+# ── A REGRA DO CUSTO ────────────────────────────────────────────────────────
+#
+# Todo item caro custa MAIS DE UM TIPO de fragmento, e os tipos vêm de fontes
+# diferentes (presa=boss · selo=crate/caixa · marca=chat · estilhaco=PvP). É o
+# que impede o jogador de morar num sistema só e comprar tudo: para levar o VIP
+# ele precisa ter matado boss, aberto caixa, ganhado evento de chat E lutado.
+#
+# Um custo de tipo único seria uma moeda com passos extras. Um custo de quatro
+# tipos é uma agenda.
+#
+# ⚠️ Os números abaixo assumem a taxa de drop atual (20% nos bosses, faixa rara
+#    nas crates, 3–5 por evento). Quando o M1 e o M2 forem medidos in-game, se a
+#    taxa real for k× a estimada, TODOS os custos multiplicam por k — nada mais
+#    muda, porque a loja não tem outro acoplamento.
+
 items:
-  diamantes:
+
+  # ── Faixa de entrada: o que o free alcança na primeira semana ─────────────
+
+  booster:
     icon:
-      material: DIAMOND
-      display: '&b&lKit de Diamantes'
-      lore:
-      - '&7Receba 16 diamantes.'
-    cost:
-      fogo: 100
-    commands:
-    - give {player} diamond 16
-  
-  espada-encantada:
-    icon:
-      material: DIAMOND_SWORD
-      display: '&c&lEspada Lendária'
+      material: BLAZE_POWDER
+      display: '&6&lBooster 3x de 1 Hora'
       glow: true
       lore:
-      - '&7Uma espada muito poderosa.'
+      - '&7Uma hora de renda triplicada'
+      - '&7na via que você escolher.'
+      - ''
+      - '&8 ▪ &fNo site: &6❂&l200 '
+      - '&8 ▪ &fAqui: &fsó fragmento '
     cost:
-      fogo: 250
-      natureza: 100
+      selo: 120
+      marca: 40
     commands:
-    - give {player} diamond_sword 1
-  
+    - 'mina givebooster {player} coins 3 1h 1'
+
+  chaves:
+    icon:
+      material: TRIPWIRE_HOOK
+      display: '&d&lLote de 25 Chaves'
+      lore:
+      - '&7Vinte e cinco chaves da'
+      - '&7crate de RankUP.'
+      - ''
+      - '&8 ▪ &fNo site: &6❂&l150 '
+    cost:
+      selo: 90
+    commands:
+    - 'crates givekey rankup {player} 25'
+
+  # ── Faixa média: pede duas fontes ────────────────────────────────────────
+
+  caixa-ii:
+    icon:
+      material: ENDER_CHEST
+      display: '&b&lCaixa de Mineração II'
+      glow: true
+      lore:
+      - '&7O canal premium de armadura,'
+      - '&7skin e livro.'
+      - ''
+      - '&8 ▪ &fNo site: &6❂&l900 '
+      - '&8 ▪ &fFontes: &fcaixa &8+ &fboss '
+    cost:
+      selo: 400
+      presa: 250
+    commands:
+    - 'caixas give mineracao-ii {player} 1'
+
+  lim-armazem:
+    icon:
+      material: CHEST
+      display: '&6&lLimite de Armazém'
+      lore:
+      - '&7Mais 500 de espaço no'
+      - '&7seu armazém de cacto.'
+      - ''
+      - '&8 ▪ &fNo site: &6❂&l800 '
+    cost:
+      presa: 350
+      estilhaco: 150
+    commands:
+    - 'armazem givelimititem {player} 500 1'
+
+  # ── Faixa alta: pede três fontes ─────────────────────────────────────────
+
+  lim-spawner:
+    icon:
+      material: MOB_SPAWNER
+      display: '&c&lLimite de Spawners'
+      glow: true
+      lore:
+      - '&7Mais um spawner no seu'
+      - '&7terreno. O item mais forte'
+      - '&7que o site vende.'
+      - ''
+      - '&8 ▪ &fNo site: &6❂&l4.000 '
+      - '&8 ▪ &fFontes: &f3 diferentes '
+    cost:
+      presa: 1200
+      selo: 900
+      estilhaco: 600
+    commands:
+    - 'spawner givelimite {player} 1 1'
+
   tag-vip:
     icon:
       material: NAME_TAG
-      display: '&6&lTag VIP (7 dias)'
+      display: '&6&lVIP Celestial (7 dias)'
+      glow: true
       lore:
-      - '&7Garanta uma tag exclusiva.'
+      - '&7O VIP de entrada, por sete'
+      - '&7dias. Ganho e desconto.'
+      - ''
+      - '&8 ▪ &fNo site: &6❂&l20.000 &7(30 dias) '
+      - '&8 ▪ &fFontes: &fas 4 '
     cost:
-      fogo: 500
-      gelo: 500
-      natureza: 500
+      presa: 1000
+      selo: 1000
+      marca: 500
+      estilhaco: 500
     commands:
-    - lp user {player} parent addtemp vip 7d
+    - 'vip givepaper {player} celestial 7d 1'
+
+  # ── O topo: a rota mais longa do servidor ────────────────────────────────
+  #
+  # O combustível infinito é o item MAIS raro do plano, e no site custa 60.000 de
+  # cash — mais do que um free vê na temporada inteira (560–700). Aqui ele existe,
+  # e o preço é honesto sobre isso: é uma temporada dedicada nas quatro fontes.
+  # Ninguém tropeça nele; quem chega, chegou de propósito.
+
+  combustivel-infinito:
+    icon:
+      material: LAVA_BUCKET
+      display: '&4&lCombustível Infinito'
+      glow: true
+      lore:
+      - '&7Uma máquina roda para sempre,'
+      - '&7sem nunca reabastecer.'
+      - ''
+      - '&7Só funciona em uma máquina por'
+      - '&7vez, então ponha na melhor que'
+      - '&7você tiver — o valor dele cresce'
+      - '&7junto com você.'
+      - ''
+      - '&8 ▪ &fNo site: &6❂&l60.000 '
+      - '&8 ▪ &fRaridade: &4Mítico '
+    cost:
+      presa: 6000
+      selo: 5000
+      marca: 2500
+      estilhaco: 2500
+    commands:
+    - 'maquina giveinfinitefuel {player} 1'

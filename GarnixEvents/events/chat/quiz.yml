@@ -97,6 +97,7 @@ perguntas:
 rewards:
 - cash add {player} 10
 - crates givekey rankup {player} 5
+- fragmentos givevirtual {player} marca 3
 
 # ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
 #
@@ -142,7 +143,7 @@ messages:
       &8▎ {c}Evento {c}&lQuiz {c}iniciando!
       &8▎ &fResponda clicando &a&l<click:suggest_command:/quiz ><hover:show_text:&fClique para já digitar &7/quiz &fno chat.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &6❂&l10 &6cash &8+ &dx&l5 &dChaves RankUP
+      &8▶ &fPrêmios: &6❂&l10 &6cash &8+ &6x&l5 &6Chaves RankUP
       &r
       &8▪ &fRevela em: &7{seconds}s
       &r
@@ -175,7 +176,7 @@ messages:
       &8▶ &7{player} &facertou a pergunta primeiro.
       &r
       &8▪ &fResposta: &7{answer}
-      &8▪ &fPrêmios: &6❂&l10 &6cash &8+ &dx&l5 &dChaves RankUP
+      &8▪ &fPrêmios: &6❂&l10 &6cash &8+ &6x&l5 &6Chaves RankUP
       &r
 # {answer} a resposta que ninguém acertou
   no-winner: |2

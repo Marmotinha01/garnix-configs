@@ -245,7 +245,7 @@ Erro contra o alvo | 0,034% | 0,38% |
 
 **A `shop.yml` da pesca era um exploit de uma linha:** `1.500 corais → 1.500 spawnerslimite`, câmbio 1:1 com o item nº 1 do Ranking de Apelões — e a pesca rende 2,19 **milhões** de corais na temporada. Novo câmbio: **1.100 corais = 1 de limite**.
 
-**As skins:** a fazenda tinha 9 e só **2** fora da forja, violando a regra de que as **3 mais raras** não são forjáveis. Criei a 10ª (`opala`, nome provisório) e as três vias ficaram idênticas: 10 skins, a forja alcança a 7ª, **3 fora**.
+**As skins:** a fazenda tinha 9 e só **2** fora da forja, violando a regra de que as **3 mais raras** não são forjáveis. Criei a 10ª (`ametista`, nome provisório) e as três vias ficaram idênticas: 10 skins, a forja alcança a 7ª, **3 fora**.
 
 ### ✅ Fase 4b — os ~212 itens · **ESPECIFICAÇÃO FECHADA**
 

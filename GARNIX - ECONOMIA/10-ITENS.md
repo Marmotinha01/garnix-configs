@@ -12,7 +12,7 @@ Especificação de **todo item que vai para o inventário do jogador** e tem efe
 
 | Métrica | No começo | **Agora** |
 |---|---|---|
-Itens ativáveis distintos | ~212 | ~214 (+ `opala`, + a Máquina de Combustível) |
+Itens ativáveis distintos | ~212 | ~214 (+ `ametista`, + a Máquina de Combustível) |
 **Com rota e preço em config** | **6** | **~70** |
 Sem rota nenhuma | ~162 (76%) | ~144 — e **cada um tem fase e canal definidos** |
 

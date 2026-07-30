@@ -3,7 +3,7 @@ location: world:83:60:5
 hologram:
   height: 2.3
   lines:
-  - '&6&lCAIXA RANKUP'
+  - '&6&lCAIXA RankUP'
   - ''
   - '&6Opções de uso:'
   - '&fBotão esquerdo &8➟ &7Preview'
@@ -16,7 +16,7 @@ slot: 15
 crate-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&6Chave Rankup'
+  display: '&6Chave RankUP'
   lore:
   - '&7Consiga subindo de rank'
   - '&7ao longo da sua jornada.'
@@ -25,7 +25,7 @@ crate-item:
 key-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&6Chave Rankup'
+  display: '&6Chave RankUP'
   lore:
   - '&7Consiga subindo de rank'
   - '&7ao longo da sua jornada.'
@@ -79,11 +79,11 @@ rewards:
     type: COMMAND
     chance: 9
     display: '&dFragmento'
-    command: fragmentos givevirtual {player} fogo {amount}
+    command: fragmentos givevirtual {player} selo {amount}
     amount: 5
     icon:
-      material: BLAZE_POWDER
-      display: '&dFragmento de Fogo'
+      material: PAPER
+      display: '&eFragmento: Selo Lacrado'
 
   secundaria-lote:
     type: CURRENCY

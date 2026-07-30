@@ -177,13 +177,13 @@ skins:
   #   marfim 65                 =  mithril 65
   #
   # ⏳ O NOME É PROVISÓRIO — o dono define o final.
-  opala:
+  ametista:
     display: '&bOpala'
     material: DIAMOND_HOE
     forgeable: false
     icon:
       material: DIAMOND_HOE
-      display: '&bSkin de Opala'
+      display: '&bSkin de Ametista'
       glow: true
       lore:
       - ''
