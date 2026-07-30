@@ -7,7 +7,9 @@ cooldown: '1d'
 slot: 33
 
 commands:
-  - 'cash add {player} 250'
+  - 'cash add {player} 120'
+  - 'crates givekey rankup {player} 12'
+  - 'caixas give mineracao-ii {player} 1'
 
 collect-icon:
   texture: '2090d09e173ee34138c3b01b48ee0be534bbb1ace0ddf5ff98e66f7b02113995'
@@ -16,6 +18,8 @@ collect-icon:
   - '&7Recompensa que o cargo'
   - '&7Garnix libera por dia.'
   - ''
-  - '&8 ▪ &fRecompensa: &6❂250 Cash '
+  - '&8 ▪ &fCash: &6❂120 '
+  - '&8 ▪ &fChaves: &d12x RankUP '
+  - '&8 ▪ &fCaixa: &e1x mineracao-ii '
   - ''
   - '&aClique para coletar.'

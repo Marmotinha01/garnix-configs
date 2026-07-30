@@ -64,8 +64,17 @@ amount-icon:
   - '&7neste duelo.'
   - ''
   - '&8 ▪ &fValor: {symbol_color}{symbol}{primary_color}{amount} {currency} '
+  - '{tax_info}'
   - ''
   - '&aClique para alterar.'
+  # A linha {tax_info}, que sempre diz se uma vitória sua paga taxa. A alíquota vem do
+  # GarnixCurrencies (currencies/<id>.yml → command.subcommands.send.tax), junto com a sua
+  # bypass-permission — é a mesma taxa do coinflip, do market e do baú-loja.
+  #
+  # A taxa incide SÓ SOBRE O PRÊMIO: a sua própria aposta volta intacta. Por isso {net} é
+  # o lucro líquido, e não o total depositado.
+  tax-free: '&8 ▪ &fTaxa: &aIsento '
+  tax-charged: '&8 ▪ &fTaxa: &c{tax}% &7(lucra {symbol_color}{symbol}&f{net}&7) '
 
 mode-icon:
   slot: 16

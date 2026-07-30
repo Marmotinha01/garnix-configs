@@ -74,6 +74,9 @@ duel:
   win-self: '&aVocê venceu o duelo.'
   lose-self: '&cVocê perdeu o duelo.'
   reward: '&aVocê recebeu &f{amount} {symbol_color}{symbol} &7{primary_color}{currency} &ade prêmio.'
+  # Mesma rota, com a alíquota dita em voz alta. A taxa incide só sobre o prêmio —
+  # a sua própria aposta volta intacta.
+  reward-tax: '&aVocê recebeu &f{amount} {symbol_color}{symbol} &7{primary_color}{currency} &ade prêmio &a(taxa de &f{tax}%&a).'
   refunded: '&eAposta de &f{amount} {symbol_color}{symbol} &7{primary_color}{currency} &edevolvida.'
   loot-window: '&eVocê tem &f{seconds}s &epara recolher os itens.'
   kit-needs-empty: '&cEsvazie seu inventário para duelar no Kit Setado.'

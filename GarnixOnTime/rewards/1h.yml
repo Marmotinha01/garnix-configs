@@ -19,24 +19,23 @@ rewards:
   coins:
     type: CURRENCY
     currency-id: coins
-    amount: 5000
+    amount: '7500'
     icon:
       material: DOUBLE_PLANT
-      display: '&6&l5.000 Moedas'
+      display: '&6&lMoedas'
 
-  diamonds:
-    type: ITEM
-    item:
-      material: DIAMOND
-      amount: 8
-      display: '&b&lDiamantes'
-      lore:
-        - '&7Recompensa por tempo online.'
-
-  key:
+  chaves:
     type: COMMAND
     command: 'crates givekey bosses {player} {amount}'
-    amount: 1
+    amount: 2
     icon:
       material: TRIPWIRE_HOOK
-      display: '&4Chave Bosses'
+      display: '&4&l2x Chave Bosses'
+
+  extra:
+    type: COMMAND
+    command: 'maquina givefuel {player} default 2000'
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&eCombustível (2.000 L)'

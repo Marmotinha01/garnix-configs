@@ -7,7 +7,9 @@ cooldown: '1d'
 slot: 28
 
 commands:
-  - 'cash add {player} 100'
+  - 'cash add {player} 120'
+  - 'crates givekey rankup {player} 12'
+  - 'caixas give mineracao-ii {player} 1'
 
 collect-icon:
   texture: '63f79b207d61e122523b83d61508d99cfa079d45bf23df2a9a5127f9071d4b00'
@@ -16,6 +18,8 @@ collect-icon:
   - '&7Recompensa que o cargo'
   - '&7Influencer libera por dia.'
   - ''
-  - '&8 ▪ &fRecompensa: &6❂100 Cash '
+  - '&8 ▪ &fCash: &6❂120 '
+  - '&8 ▪ &fChaves: &d12x RankUP '
+  - '&8 ▪ &fCaixa: &e1x mineracao-ii '
   - ''
   - '&aClique para coletar.'

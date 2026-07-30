@@ -25,6 +25,7 @@ Diretório de trabalho da economia da temporada. Todo material de projeto, cálc
 | [12-RANKINGS.md](12-RANKINGS.md) | Os 33 placares do servidor + **a distribuição dos R$ 1.000** de fim de temporada | ✅ |
 | [13-PASSIVO.md](13-PASSIVO.md) | A via passiva: spawners, lâmina e máquinas. Mecânica lida no código + os números aplicados | ✅ 3a–3d |
 | [14-FARM-PESCA.md](14-FARM-PESCA.md) | Fazenda e pesca: o teto físico do farm, o gate 2D da pesca, as skins | ✅ Fase 4 |
+| [15-LOOT.md](15-LOOT.md) | Superfícies de recompensa: crates, caixas, bosses, ontime, dailies, robôs | ✅ Fase 5 |
 | [TESTES-IN-GAME.md](TESTES-IN-GAME.md) | **Checklist do que testar no jogo** — deixe aberto do lado enquanto testa | ✅ |
 | [metrics.csv](metrics.csv) | Metas de cronometragem por tier vs medido in-game | ✅ |
 | [sim/](sim/) | Simulador em JavaScript — abre `sim/index.html` no navegador | ✅ |
@@ -268,9 +269,19 @@ Então a 4b entrega a **especificação completa** — classe, moeda, fórmula, 
 
 6 crates · 7 caixas · bosses (5 + 3 engatilhados) · OnTime · dailies · fragmentos · [07-LIVROS.md](07-LIVROS.md).
 
-### ⏳ Fase 6 — comércio
+### ✅ Fase 6 — comércio
 
-Taxa nos duelos e rake no bolão. Sem blacklist de moeda, por decisão.
+**Fechada.** Sem blacklist de moeda, por decisão sua — a mitigação é a taxa.
+
+| # | Item | Desfecho |
+|---|---|---|
+**E1** | duelos com 0% de taxa, o único canal de transferência pura entre contas | ✅ **resolvido pelo C14.** A alíquota vem do GarnixCurrencies, igual coinflip e market |
+**E2** | ~~rake no bolão~~ | ❌ **cancelado por você**: *"o bolão é um evento organizado pela staff e não precisa ser taxado"*. Fica 100% do bolo para o vencedor — é premiação de staff, não canal de transferência entre contas |
+**E3** | `bet.max-amount: 1.0E63` era um `double` | ✅ **menos grave do que eu havia registrado.** A quantia é lida e guardada em `BigDecimal`; o `double` só existe na *comparação* do limite, então **nada arredonda a aposta**. Corrigido para `1.0E24` (~1.000× a fortuna do dia 20) por ser um teto que quer dizer alguma coisa |
+**E4–E7** | cash negociável · limites negociáveis · cabeças negociáveis · coinflip taxa só o lucro | ✅ ficam como estão, por decisão sua. O freio é a taxa e, nas cabeças, a produção |
+**E8** | credenciais vivas no git | ⚠️ fora do escopo econômico — **rotacionar antes do lançamento** |
+
+**A regra da taxa, agora igual nos 5 sistemas:** ela incide **só sobre o que foi ganho** — a própria aposta do vencedor volta intacta. Uma alíquota só para o servidor inteiro, num campo só (`currencies/<id>.yml → command.subcommands.send.tax`).
 
 ### ⏳ Fase 7 — shops · **por último, por sua decisão**
 
@@ -284,13 +295,16 @@ coins-shop (273 produtos) · cash-shop nas 4 faixas · os 21 eventos · [04-PARI
 |---|---|---|---|
 **C1** | `garnix-crates`, `garnix-bosses` | trocar `getDouble` por `getString` + `new BigDecimal` — **6 linhas** (3 em cada) | ✅ aprovado, escopo reduzido pelo V2 |
 **C2** | `garnix-farm` | tabela de valor por nível no `levels.yml`, espelhando o `GarnixMining` | ✅ aprovado |
-**C6** | `garnix-rankup` | prestígio: lista global + listas **por nível** (`prestige.rewards.<n>.commands`) | ✅ **escrito** (+23 linhas em `RankUPService.java`) — aguardando sua revisão |
+**C6** | `garnix-rankup` | prestígio: lista global + listas **por nível** (`prestige.rewards.<n>.commands`) | ✅ **no ar** (+23 linhas em `RankUPService.java`) |
 **C7** | ~~`garnix-mining`, `garnix-farm`~~ | ~~proc de chave conta bloco manual~~ | ❌ **desnecessário** — o V7 mostrou que a chance resolve melhor que código |
 **C8** | `garnix-bosses` | `max-simultaneous` global | ✅ necessário (~30.000 spawns/dia em lotes) |
 **C9** | `garnix-mining` | `blocks_broken` de `int` para `long` | 🆕 **novo** — `int` estoura em 134h e um hardcore joga 160h |
 **C10** | `garnix-crates` | remover os aliases `caixa`/`caixas`, que colidem com o `GarnixMysteryBoxes` | ✅ aprovado |
-**C11** | `garnix-warehouse` | `total_sold VARCHAR(64)` + `topBySold` + menu — **o cacto é a única via sem placar** | ⏳ **aguardando aprovação** — ver [12-RANKINGS.md](12-RANKINGS.md#4--c11--o-ranking-do-cacto-precisa-da-sua-aprovação) |
+~~C11~~ | ~~`garnix-warehouse`~~ | ~~`total_sold` + placar do cacto~~ | ❌ **recusado por você** (*"placar de cacto n precisa"*). Os R$ 120 do cacto foram para o prestígio |
 ~~C12~~ | ~~`garnix-spawners`~~ | ~~debitar `spawnerslimite` na compra~~ | ❌ **retirado** — não era bug. O dono confirmou que comparar sem debitar **é o desenho**: teto de lote por compra, que cresce com o que cai de recompensa |
+**C13** | `garnix-warehouse` | `getSellMultiplier(Player)` lendo `warehouse.sellmult.<N>`, aplicado no `SellService.computeValue` | ✅ **no ar** — é o que dá ao cacto as 15,6 ordens que o tamanho do plot (2,5) não dá |
+**C14** | `garnix-duels` | **taxa da aposta** — alíquota lida do GarnixCurrencies na liquidação, incidindo só sobre o prêmio, + a linha `{tax_info}` no ícone de valor do menu | ✅ **escrito e compilando** — aguardando sua revisão |
+**C15** | `garnix-crates`, `garnix-mystery-boxes`, `garnix-bosses` | recompensa `type: CURRENCY` sem `icon:` cair no **ícone da própria moeda** em vez de `BARRIER` | ⏳ **proposto** — ver [15-LOOT.md](15-LOOT.md#o-ícone-da-recompensa-de-moeda) |
 C3 | — | tabela de sufixos configurável | ❌ **desnecessário**, o V1 passou |
 C4, C5 | — | bônus de conjunto · teto AFK por conta | ⏸️ só se o simulador pedir |
 
@@ -314,7 +328,8 @@ Nada bloqueia o trabalho — cada uma tem um default. Detalhe em [13-PASSIVO.md]
 
 | # | Decisão | Default se ficar sem resposta |
 |---|---|---|
-**D1** | **Aprovar o C11** (`total_sold` no `garnix-warehouse`) | os R$ 120 do cacto vão para o prestígio; o cacto fica sem placar |
+**D1** | ~~Aprovar o C11~~ | ✅ **respondida** — recusada. O cacto fica sem placar e os R$ 120 foram para o prestígio |
+**D7** | **Aprovar o C15** (ícone automático da moeda nas recompensas) | os 31 blocos `icon:` seguem escritos à mão, já corrigidos e alinhados com a moeda |
 **D2** | **A data real do lançamento** (hoje os `release:` vão de 01/09/2026 a 20/09/2026) | só a data-base muda, **nenhum valor é recalculado** |
 **D3** | Nó `rankup.rank.1` no grupo default do LuckPerms (operação, fora do repo) | a escada de bônus começa em +2% em vez de +1% |
 **D4** | Quais chaves e quantidades cada kit dá — ⛔ **eu entrego só a especificação**, você aplica no jogo | Fase 5 |

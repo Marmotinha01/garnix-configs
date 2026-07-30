@@ -20,18 +20,130 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
-# ATENÇÃO: o BoxManager PULA qualquer caixa sem nenhuma recompensa válida,
-# então a entrada abaixo é só um marcador para a caixa carregar. Apague o
-# bloco 'placeholder' assim que as recompensas reais forem definidas.
+# ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
+# sufixo de slot entrega o set inteiro (+48%) num drop só.
+#
+# ⚠️ ARMADURA NUNCA VAI PARA O SITE. Ela existe só via caixa — e como a
+# caixa II é comprável, quem paga compra CHANCE, não a peça.
 rewards:
 
-  placeholder:
-    type: NONE
-    chance: 100.0
-    display: '&cRecompensa Pendente'
+  armadura-v-mina:
+    type: COMMAND
+    chance: 20
+    display: '&5Peça de Armadura &5[T&lV&5] &7Mineração'
+    command: mina givearmor {player} tier-v_helmet
+    amount: 1
     icon:
-      material: BARRIER
-      display: '&cRecompensa Pendente'
-      lore:
-      - '&7As recompensas desta caixa'
-      - '&7ainda não foram definidas.'
+      material: DIAMOND_HELMET
+      glow: true
+      display: '&5Peça de Armadura &5[T&lV&5] &7Mineração'
+
+  armadura-v-farm:
+    type: COMMAND
+    chance: 18
+    display: '&5Peça de Armadura &5[T&lV&5] &7Fazenda'
+    command: fazenda givearmor {player} tier-v_boots
+    amount: 1
+    icon:
+      material: DIAMOND_BOOTS
+      glow: true
+      display: '&5Peça de Armadura &5[T&lV&5] &7Fazenda'
+
+  skin-mithril:
+    type: COMMAND
+    chance: 14
+    display: '&b&lSkin de Mithril'
+    command: mina giveskin {player} mithril
+    amount: 1
+    icon:
+      material: NETHER_STAR
+      glow: true
+      display: '&b&lSkin de Mithril'
+
+  skin-marfim:
+    type: COMMAND
+    chance: 12
+    display: '&f&lSkin de Marfim'
+    command: fazenda giveskin {player} marfim
+    amount: 1
+    icon:
+      material: NETHER_STAR
+      glow: true
+      display: '&f&lSkin de Marfim'
+
+  skin-tempestita:
+    type: COMMAND
+    chance: 10
+    display: '&3&lSkin de Tempestita'
+    command: pesca giveskin {player} tempestita
+    amount: 1
+    icon:
+      material: NETHER_STAR
+      glow: true
+      display: '&3&lSkin de Tempestita'
+
+  pilhagem-3:
+    type: COMMAND
+    chance: 8
+    display: '&a&lLivro de Pilhagem 3'
+    command: lamina givebook {player} pilhagem 3
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&a&lLivro de Pilhagem 3'
+
+  massacre-5:
+    type: COMMAND
+    chance: 6
+    display: '&4&lLivro de Massacre 5'
+    command: lamina givebook {player} massacre 5
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&4&lLivro de Massacre 5'
+
+  vaga:
+    type: COMMAND
+    chance: 5
+    display: '&b&lVaga de Visitante'
+    command: mina giveslot {player} 1
+    amount: 1
+    icon:
+      material: BEACON
+      glow: true
+      display: '&b&lVaga de Visitante'
+
+  maquina-especial:
+    type: COMMAND
+    chance: 4
+    display: '&b&lMáquina de Limite'
+    command: maquina give {player} LIMITE
+    amount: 1
+    icon:
+      material: LAPIS_BLOCK
+      glow: true
+      display: '&b&lMáquina de Limite'
+
+  matadora-hk:
+    type: COMMAND
+    chance: 2
+    display: '&4&lMatadora Hit-Kill'
+    command: boss give sword {player} hk
+    amount: 1
+    icon:
+      material: DIAMOND_SWORD
+      glow: true
+      display: '&4&lMatadora Hit-Kill'
+
+  combustivel-inf:
+    type: COMMAND
+    chance: 1
+    display: '&b&lCombustível Infinito'
+    command: maquina giveinfinitefuel {player}
+    amount: 1
+    icon:
+      material: COAL
+      glow: true
+      display: '&b&lCombustível Infinito'

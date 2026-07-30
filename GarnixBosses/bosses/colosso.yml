@@ -28,75 +28,62 @@ boss-icon:
 # NONE, CURRENCY, ITEM, COMMAND, COMMAND_ITEM
 
 rewards:
-  bad-luck:
+  azar:
     type: NONE
-    chance: 40.0
-    display: '&cAzar!'
+    chance: 25.0
+    display: '&8Azar'
     icon:
       material: WEB
-      display: '&c&lAzar!'
+      display: '&8Azar'
 
-  coins-reward:
+  coins:
     type: CURRENCY
     chance: 100.0
     display: '&6Moedas'
     currency-id: coins
-    amount: 50000
+    amount: '10800'
     icon:
-      material: DOUBLE_PLANT
+      material: 'INK_SACK'
+      data: 10
       display: '&6&lMoedas'
-
-  gems-reward:
+  secundaria:
     type: CURRENCY
-    chance: 25.0
-    display: '&bGemas'
+    chance: 45.0
+    display: '&bgemas'
     currency-id: gemas
-    amount: 10
+    amount: '200'
     icon:
-      material: EMERALD
-      display: '&b&lGemas'
-
-  xp-reward:
+      material: 'INK_SACK'
+      data: 9
+      display: '&bgemas'
+  chave-boss:
     type: COMMAND
-    chance: 50.0
-    display: '&aExperiência'
-    command: 'xp {amount} {player}'
-    amount: 500
-    icon:
-      material: EXP_BOTTLE
-      display: '&aExperiência'
-
-  key-reward:
-    type: COMMAND_ITEM
-    chance: 10.0
-    display: '&4Chave Bosses'
-    command: 'crates givekey bosses {player} {amount}'
+    chance: 30.0
+    display: '&c&lChave de Boss'
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 1
     icon:
       material: TRIPWIRE_HOOK
-      display: '&4&lChave Bosses'
       glow: true
+      display: '&c&lChave de Boss'
 
-  diamond-reward:
-    type: ITEM
-    chance: 30.0
-    display: '&bDiamantes'
-    item:
-      material: DIAMOND
-      amount: 5
-      display: '&b&lDiamantes do Boss'
-      lore:
-        - '&7Recompensa do Golem'
+  fragmento:
+    type: COMMAND
+    chance: 20.0
+    display: '&dFragmento de Fogo'
+    command: fragmentos givevirtual {player} fogo {amount}
+    amount: 8
+    icon:
+      material: BLAZE_POWDER
+      display: '&dFragmento de Fogo'
 
-  helmet-reward:
-    type: ITEM
-    chance: 5.0
-    display: '&6Capacete Dourado'
-    item:
-      material: GOLD_HELMET
-      display: '&6&lCapacete do Golem'
-      lore:
-        - '&7Um capacete forjado pelo'
-        - '&7poderoso Golem de Ferro.'
-      enchants:
-        - 'PROTECTION_ENVIRONMENTAL:3'
+  livro:
+    type: COMMAND
+    chance: 8
+    display: '&4Livro de Massacre 2'
+    command: lamina givebook {player} massacre 2
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&4Livro de Massacre 2'

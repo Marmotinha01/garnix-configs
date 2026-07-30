@@ -20,18 +20,94 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
-# ATENÇÃO: o BoxManager PULA qualquer caixa sem nenhuma recompensa válida,
-# então a entrada abaixo é só um marcador para a caixa carregar. Apague o
-# bloco 'placeholder' assim que as recompensas reais forem definidas.
+# ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
+# sufixo de slot entrega o set inteiro (+48%) num drop só.
+#
+# ⚠️ ARMADURA NUNCA VAI PARA O SITE. Ela existe só via caixa — e como a
+# caixa II é comprável, quem paga compra CHANCE, não a peça.
 rewards:
 
-  placeholder:
+  azar:
     type: NONE
-    chance: 100.0
-    display: '&cRecompensa Pendente'
+    chance: 3
+    display: '&8Azar'
     icon:
       material: BARRIER
-      display: '&cRecompensa Pendente'
+      display: '&8Azar'
       lore:
-      - '&7As recompensas desta caixa'
-      - '&7ainda não foram definidas.'
+      - '&7Raro, mas acontece.'
+
+  armadura-iii:
+    type: COMMAND
+    chance: 25
+    display: '&fPeça de Armadura &f[T&lIII&f]'
+    command: pesca givearmor {player} tier-iii_boots
+    amount: 1
+    icon:
+      material: IRON_BOOTS
+      display: '&fPeça de Armadura &f[T&lIII&f]'
+
+  armadura-iv:
+    type: COMMAND
+    chance: 22
+    display: '&6Peça de Armadura &6[T&lIV&6]'
+    command: pesca givearmor {player} tier-iv_chestplate
+    amount: 1
+    icon:
+      material: GOLD_CHESTPLATE
+      display: '&6Peça de Armadura &6[T&lIV&6]'
+
+  armadura-v:
+    type: COMMAND
+    chance: 15
+    display: '&5Peça de Armadura &5[T&lV&5]'
+    command: pesca givearmor {player} tier-v_leggings
+    amount: 1
+    icon:
+      material: DIAMOND_LEGGINGS
+      glow: true
+      display: '&5Peça de Armadura &5[T&lV&5]'
+
+  skin-7:
+    type: COMMAND
+    chance: 15
+    display: '&5Skin serenita'
+    command: pesca giveskin {player} serenita
+    amount: 1
+    icon:
+      material: NAME_TAG
+      glow: true
+      display: '&5Skin serenita'
+
+  skin-8:
+    type: COMMAND
+    chance: 12
+    display: '&5Skin oceanita'
+    command: pesca giveskin {player} oceanita
+    amount: 1
+    icon:
+      material: NETHER_STAR
+      glow: true
+      display: '&5Skin oceanita'
+
+  livro:
+    type: COMMAND
+    chance: 6
+    display: '&bLivro de Duplicata 4'
+    command: pesca givebook {player} double 4
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&bLivro de Duplicata 4'
+
+  booster:
+    type: COMMAND
+    chance: 2
+    display: '&d&lBooster 3x &7(10min)'
+    command: pesca givebooster {player} corais 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      glow: true
+      display: '&d&lBooster 3x &7(10min)'

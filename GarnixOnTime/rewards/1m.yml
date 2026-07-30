@@ -1,10 +1,10 @@
-required-time: '30d'
+required-time: '10d'
 
-display: '&a1 Mês Online'
+display: '&a10 Dias Online'
 
 reward-icon:
   material: WATCH
-  display: '&a&l1 Mês Online'
+  display: '&a&l10 Dias Online'
   lore:
     - '&7Fique online e resgate'
     - '&7a recompensa deste marco.'
@@ -19,24 +19,23 @@ rewards:
   coins:
     type: CURRENCY
     currency-id: coins
-    amount: 5000
+    amount: '1080000000000'
     icon:
       material: DOUBLE_PLANT
-      display: '&6&l5.000 Moedas'
+      display: '&6&lMoedas'
 
-  diamonds:
-    type: ITEM
-    item:
-      material: DIAMOND
-      amount: 8
-      display: '&b&lDiamantes'
-      lore:
-        - '&7Recompensa por tempo online.'
-
-  key:
+  chaves:
     type: COMMAND
     command: 'crates givekey bosses {player} {amount}'
-    amount: 1
+    amount: 15
     icon:
       material: TRIPWIRE_HOOK
-      display: '&4Chave Bosses'
+      display: '&4&l15x Chave Bosses'
+
+  extra:
+    type: COMMAND
+    command: 'caixas give mineracao-ii {player} {amount}'
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&eCaixa Mineração II'

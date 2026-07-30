@@ -7,7 +7,9 @@ cooldown: '1d'
 slot: 30
 
 commands:
-  - 'cash add {player} 100'
+  - 'cash add {player} 40'
+  - 'crates givekey rankup {player} 4'
+  - 'caixas give mineracao-i {player} 1'
 
 collect-icon:
   texture: 'a89b93fd616ed3670ccf647a0f9380398c0d4615634f2deff46c6edbdc712885'
@@ -16,6 +18,8 @@ collect-icon:
   - '&7Recompensa que o cargo'
   - '&7Celestial libera por dia.'
   - ''
-  - '&8 ▪ &fRecompensa: &6❂100 Cash '
+  - '&8 ▪ &fCash: &6❂40 '
+  - '&8 ▪ &fChaves: &d4x RankUP '
+  - '&8 ▪ &fCaixa: &e1x mineracao-i '
   - ''
   - '&aClique para coletar.'

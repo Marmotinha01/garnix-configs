@@ -7,7 +7,8 @@ cooldown: '1d'
 slot: 14
 
 commands:
-  - 'cash add {player} 50'
+  - 'cash add {player} 8'
+  - 'crates givekey rankup {player} 1'
 
 collect-icon:
   texture: 'e00afa9898346fbaca43bbf93ddc13db64d23202b30de479457ca883871aa86c'
@@ -16,7 +17,8 @@ collect-icon:
   - '&7Recompensa diária para'
   - '&7quem vinculou o discord.'
   - ''
-  - '&8 ▪ &fRecompensa: &6❂50 Cash '
+  - '&8 ▪ &fCash: &6❂8 '
+  - '&8 ▪ &fChaves: &d1x RankUP '
   - ''
   - '&aClique para coletar.'
 

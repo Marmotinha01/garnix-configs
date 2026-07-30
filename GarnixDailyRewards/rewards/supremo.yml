@@ -7,7 +7,9 @@ cooldown: '1d'
 slot: 32
 
 commands:
-  - 'cash add {player} 200'
+  - 'cash add {player} 85'
+  - 'crates givekey rankup {player} 9'
+  - 'caixas give farm-i {player} 1'
 
 collect-icon:
   texture: '68d40935279771adc63936ed9c8463abdf5c5ba78d2e86cb1ec10b4d1d225fb'
@@ -16,6 +18,8 @@ collect-icon:
   - '&7Recompensa que o cargo'
   - '&7Supremo libera por dia.'
   - ''
-  - '&8 ▪ &fRecompensa: &6❂200 Cash '
+  - '&8 ▪ &fCash: &6❂85 '
+  - '&8 ▪ &fChaves: &d9x RankUP '
+  - '&8 ▪ &fCaixa: &e1x farm-i '
   - ''
   - '&aClique para coletar.'

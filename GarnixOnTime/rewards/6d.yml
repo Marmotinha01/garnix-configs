@@ -19,24 +19,23 @@ rewards:
   coins:
     type: CURRENCY
     currency-id: coins
-    amount: 5000
+    amount: '473000000'
     icon:
       material: DOUBLE_PLANT
-      display: '&6&l5.000 Moedas'
+      display: '&6&lMoedas'
 
-  diamonds:
-    type: ITEM
-    item:
-      material: DIAMOND
-      amount: 8
-      display: '&b&lDiamantes'
-      lore:
-        - '&7Recompensa por tempo online.'
-
-  key:
+  chaves:
     type: COMMAND
     command: 'crates givekey bosses {player} {amount}'
-    amount: 1
+    amount: 9
     icon:
       material: TRIPWIRE_HOOK
-      display: '&4Chave Bosses'
+      display: '&4&l9x Chave Bosses'
+
+  extra:
+    type: COMMAND
+    command: 'caixas give mineracao-i {player} {amount}'
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&eCaixa Mineração I'

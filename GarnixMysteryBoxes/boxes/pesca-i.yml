@@ -20,18 +20,89 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
-# ATENÇÃO: o BoxManager PULA qualquer caixa sem nenhuma recompensa válida,
-# então a entrada abaixo é só um marcador para a caixa carregar. Apague o
-# bloco 'placeholder' assim que as recompensas reais forem definidas.
+# ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
+# sufixo de slot entrega o set inteiro (+48%) num drop só.
+#
+# ⚠️ ARMADURA NUNCA VAI PARA O SITE. Ela existe só via caixa — e como a
+# caixa II é comprável, quem paga compra CHANCE, não a peça.
 rewards:
 
-  placeholder:
+  azar:
     type: NONE
-    chance: 100.0
-    display: '&cRecompensa Pendente'
+    chance: 20
+    display: '&8Azar'
     icon:
       material: BARRIER
-      display: '&cRecompensa Pendente'
+      display: '&8Azar'
       lore:
-      - '&7As recompensas desta caixa'
-      - '&7ainda não foram definidas.'
+      - '&7Não foi dessa vez...'
+
+  armadura-i:
+    type: COMMAND
+    chance: 25
+    display: '&7Peça de Armadura &7[T&lI&7]'
+    command: pesca givearmor {player} tier-i_helmet
+    amount: 1
+    icon:
+      material: LEATHER_HELMET
+      display: '&7Peça de Armadura &7[T&lI&7]'
+
+  armadura-ii:
+    type: COMMAND
+    chance: 18
+    display: '&7Peça de Armadura &7[T&lII&7]'
+    command: pesca givearmor {player} tier-ii_chestplate
+    amount: 1
+    icon:
+      material: CHAINMAIL_CHESTPLATE
+      display: '&7Peça de Armadura &7[T&lII&7]'
+
+  armadura-iii:
+    type: COMMAND
+    chance: 10
+    display: '&fPeça de Armadura &f[T&lIII&f]'
+    command: pesca givearmor {player} tier-iii_leggings
+    amount: 1
+    icon:
+      material: IRON_LEGGINGS
+      display: '&fPeça de Armadura &f[T&lIII&f]'
+
+  skin-forjavel:
+    type: COMMAND
+    chance: 12
+    display: '&aSkin prata'
+    command: pesca giveskin {player} prata
+    amount: 1
+    icon:
+      material: NAME_TAG
+      display: '&aSkin prata'
+
+  forja:
+    type: COMMAND
+    chance: 8
+    display: '&6Forja de Skin'
+    command: pesca giveforge {player} 1
+    amount: 1
+    icon:
+      material: ANVIL
+      display: '&6Forja de Skin'
+
+  secundaria:
+    type: CURRENCY
+    chance: 5
+    display: '&b1.000 corais'
+    currency-id: corais
+    amount: '1000'
+    icon:
+      material: 'INK_SACK'
+      data: 6
+      display: '&b1.000 corais'
+  booster:
+    type: COMMAND
+    chance: 2
+    display: '&aBooster 2x &7(15min)'
+    command: pesca givebooster {player} corais 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      display: '&aBooster 2x &7(15min)'

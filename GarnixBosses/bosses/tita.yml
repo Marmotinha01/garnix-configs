@@ -1,18 +1,18 @@
-order: 2
+order: 4
 
-type: BLAZE
+type: IRON_GOLEM
 
-health: 50000
+health: 150000
 
-translated: 'Boss Inferno'
-display: '&6{translated}'
+translated: 'Boss Titã'
+display: '&5{translated}'
 
-texture: '1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502'
+texture: '74f328f5044129b5d1f96affd1b8c05bcde6bd8e756aff5c5020585eef8a3daf'
 
 reward-rolls: 3
 
 boss-icon:
-  texture: '1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502'
+  texture: '590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7'
   display: '{display}'
   lore:
     - '&7Invoque este boss dentro'
@@ -41,7 +41,7 @@ rewards:
     chance: 100.0
     display: '&6Moedas'
     currency-id: coins
-    amount: '20700000'
+    amount: '75300000000000'
     icon:
       material: 'INK_SACK'
       data: 10
@@ -49,13 +49,13 @@ rewards:
   secundaria:
     type: CURRENCY
     chance: 45.0
-    display: '&bsementes'
-    currency-id: sementes
-    amount: '400'
+    display: '&bdracmas'
+    currency-id: dracmas
+    amount: '800'
     icon:
       material: 'INK_SACK'
-      data: 5
-      display: '&bsementes'
+      data: 11
+      display: '&bdracmas'
   chave-boss:
     type: COMMAND
     chance: 30.0
@@ -72,18 +72,40 @@ rewards:
     chance: 20.0
     display: '&dFragmento de Fogo'
     command: fragmentos givevirtual {player} fogo {amount}
-    amount: 16
+    amount: 32
     icon:
       material: BLAZE_POWDER
       display: '&dFragmento de Fogo'
 
   livro:
     type: COMMAND
-    chance: 8
-    display: '&4Livro de Massacre 2'
-    command: lamina givebook {player} massacre 2
+    chance: 4
+    display: '&aLivro de Pilhagem 2'
+    command: lamina givebook {player} pilhagem 2
     amount: 1
     icon:
       material: ENCHANTED_BOOK
       glow: true
-      display: '&4Livro de Massacre 2'
+      display: '&aLivro de Pilhagem 2'
+
+  matadora:
+    type: COMMAND
+    chance: 1.5
+    display: '&5Matadora Ancestral'
+    command: boss give sword {player} ancestral
+    amount: 1
+    icon:
+      material: DIAMOND_SWORD
+      glow: true
+      display: '&5Matadora Ancestral'
+
+  caixa:
+    type: COMMAND
+    chance: 0.8
+    display: '&6&lCaixa Garnix'
+    command: caixas give garnix {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      glow: true
+      display: '&6&lCaixa Garnix'

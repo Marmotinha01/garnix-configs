@@ -4,11 +4,27 @@
 ranking-refresh-minutes: 5
 
 # Apostas
+#
+# Os dois campos são só os LIMITES do que se pode digitar — a quantia em si é lida e
+# guardada em BigDecimal, então nada aqui arredonda a aposta do jogador.
 bet:
+  # Piso anti-poeira, calibrado pelo dia 1: a casa faz 375.000 coins/dia no T1, então
+  # 15.000 é ~4% de um dia. Do dia 2 em diante é irrelevante, que é a intenção.
   min-amount: 15000.0
-  max-amount: 1.0E63
+  # Teto de sanidade contra dedo errado, não de economia — quem aposta já precisa TER o
+  # saldo. 10^24 é ~1.000x a fortuna do jogador dedicado no dia 20 (~10^21), ou seja
+  # inalcançável de propósito. O 1.0E63 anterior não queria dizer nada.
+  max-amount: 1.0E24
 
 # Moedas que NÃO podem ser apostadas (ids do GarnixCurrencies).
+#
+# A taxa sobre o prêmio vem do GarnixCurrencies (currencies/<id>.yml →
+# command.subcommands.send.tax), junto com a sua bypass-permission. Cada economia tem a
+# sua, e a alíquota é lida NO MOMENTO DA LIQUIDAÇÃO — quem comprou isenção durante o
+# duelo recebe o que pagou.
+#
+# A taxa incide SÓ SOBRE O PRÊMIO: a aposta do próprio vencedor volta intacta. É a mesma
+# regra do coinflip e do market, para o servidor ter um número só.
 currency-blacklist: []
 
 duel:

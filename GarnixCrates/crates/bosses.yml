@@ -33,66 +33,150 @@ key-item:
   - '&4Clique esquerdo para armazenar'
   - '&4ou abrir a chave em uma caixa.'
 
-# Tipos disponíveis: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+#
+# FAIXAS (ver 15-LOOT.md): recheio · bom · raro · epico · jackpot.
+# Calibradas para ~20.700 aberturas/dia no servidor inteiro.
+#
+# ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
+# mesma tabela. Por isso o premio em coins e FIXO e pequeno: no dia 1 e um
+# empurrao real, no dia 5 vira ruido. O valor da crate sao os ITENS.
 rewards:
-  azar:
-    type: NONE
-    chance: 0.5
-    display: '&cAzar!'
-    icon:
-      material: BARRIER
-      display: '&c&lAzar!'
-      lore:
-      - '&7Não foi dessa vez!'
-  
+
   coins:
     type: CURRENCY
-    chance: 50.0
+    chance: 39.56
     display: '&6Moedas'
     currency-id: coins
-    amount: 5000
+    amount: '250'
     icon:
-      material: DOUBLE_PLANT
+      material: 'INK_SACK'
+      data: 10
       display: '&6&lMoedas'
-  
   xp:
     type: COMMAND
-    chance: 25.0
+    chance: 26.37
     display: '&aExperiência'
     command: xp {amount} {player}
     amount: 500
     icon:
       material: EXP_BOTTLE
       display: '&aExperiência'
-  
-  stone:
-    type: COMMAND_ITEM
-    chance: 15.0
-    display: '&9Pedra'
-    command: give {player} minecraft:stone {amount}
-    amount: 100
-    item:
-      material: STONE
-      display: '&9Pedra'
+
+  secundaria:
+    type: CURRENCY
+    chance: 21.98
+    display: '&bdracmas'
+    currency-id: dracmas
+    amount: '25'
+    icon:
+      material: 'INK_SACK'
+      data: 11
+      display: '&b25 dracmas'
+  combustivel:
+    type: COMMAND
+    chance: 4
+    display: '&eCombustível'
+    command: maquina givefuel {player} default {amount}
+    amount: 500
+    icon:
+      material: COAL
+      display: '&eCombustível &7(500L)'
+
+  fragmento:
+    type: COMMAND
+    chance: 3
+    display: '&dFragmento'
+    command: fragmentos givevirtual {player} fogo {amount}
+    amount: 5
+    icon:
+      material: BLAZE_POWDER
+      display: '&dFragmento de Fogo'
+
+  secundaria-lote:
+    type: CURRENCY
+    chance: 3
+    display: '&bdracmas (lote)'
+    currency-id: dracmas
+    amount: '500'
+    icon:
+      material: 'INK_SACK'
+      data: 11
+      display: '&b500 dracmas'
+  chave-boss:
+    type: COMMAND
+    chance: 1.2
+    display: '&c&lChave de Boss'
+    command: crates givevirtualkey bosses {player} {amount}
+    amount: 1
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&c&lChave de Boss'
+
+  armadura-baixa:
+    type: COMMAND
+    chance: 0.5
+    display: '&7Peça de Armadura &7[T&lII&7]'
+    command: mina givearmor {player} tier-ii_boots
+    amount: 1
+    icon:
+      material: IRON_CHESTPLATE
+      display: '&7Peça de Armadura &7[T&lII&7]'
+
+  livro:
+    type: COMMAND
+    chance: 0.3
+    display: '&4Livro de Massacre 3'
+    command: lamina givebook {player} massacre 3
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&4Livro de Massacre 3'
+
+  armadura-alta:
+    type: COMMAND
+    chance: 0.0495
+    display: '&6Peça de Armadura &6[T&lIV&6]'
+    command: mina givearmor {player} tier-iv_helmet
+    amount: 1
+    icon:
+      material: DIAMOND_CHESTPLATE
+      glow: true
+      display: '&6Peça de Armadura &6[T&lIV&6]'
+
+  skin:
+    type: COMMAND
+    chance: 0.0297
+    display: '&5Skin jade'
+    command: mina giveskin {player} jade
+    amount: 1
+    icon:
+      material: NETHER_STAR
+      glow: true
+      display: '&5Skin jade'
+
+  booster-3x:
+    type: COMMAND
+    chance: 0.0198
+    display: '&d&lBooster 3x &7(10min)'
+    command: mina givebooster {player} coins 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      glow: true
+      display: '&d&lBooster 3x &7(10min)'
+
+  jackpot:
+    type: COMMAND
+    chance: 0.001
+    display: '&a&lLivro de Pilhagem 3'
+    command: lamina givebook {player} pilhagem 3
+    amount: 1
+    icon:
+      material: BEACON
+      glow: true
+      display: '&a&lLivro de Pilhagem 3'
       lore:
-      - '&7Pedra TOP!'
-  
-  diamonds:
-    type: ITEM
-    chance: 8.0
-    display: '&bDiamantes'
-    item:
-      material: DIAMOND
-      amount: 5
-      display: '&b&lDiamantes'
-  
-  leather-armor:
-    type: ITEM
-    chance: 1.5
-    display: '&cArmadura Vermelha'
-    item:
-      material: LEATHER_CHESTPLATE
-      color: '#FF5555'
-      display: '&cArmadura Vermelha'
-      lore:
-      - '&7Uma armadura de couro vermelha!'
+      - '&7O prêmio mais raro desta caixa.'
