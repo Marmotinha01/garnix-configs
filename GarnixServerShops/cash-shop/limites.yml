@@ -35,13 +35,16 @@ products:
     commands:
     - 'armazem giveautosell {player} 1'
     item:
-      material: HOPPER
-      display: '&eVenda Automatica'
+      material: DIODE
+      data: 0
+      glow: true
+      display: '&6Venda Automática'
       lore:
-      - '&7O armazem vende sozinho e'
-      - '&7nunca mais enche.'
+      - '&7Venda os cactos guardados'
+      - '&7no armazém sozinho.'
       - ''
-      - '&8 ▪ &fFaixa: &7A '
+      - '&8 ▾ &cSó funciona em terrenos '
+      - '&8 ▾ &cque você é o dono. '
 
   lim-armazem:
     slot: 12
@@ -51,13 +54,15 @@ products:
     commands:
     - 'armazem givelimititem {player} 500 1'
     item:
-      material: CHEST
-      display: '&6Limite de Armazem'
+      material: CACTUS
+      data: 0
+      glow: true
+      display: '&2Limite de Armazém'
       lore:
-      - '&7Mais 500 de espaco no'
-      - '&7seu armazem de cacto.'
+      - '&7Aumenta quantos cactos o'
+      - '&7seu armazém comporta.'
       - ''
-      - '&8 ▪ &fFaixa: &7B '
+      - '&8 ▪ &fQuantia: &a{amount} '
 
   lim-maquina:
     slot: 14
@@ -67,13 +72,15 @@ products:
     commands:
     - 'maquina givelimite {player} 1 1'
     item:
-      material: PISTON_BASE
-      display: '&9Limite de Maquinas'
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
       lore:
-      - '&7Mais uma maquina rodando'
-      - '&7ao mesmo tempo.'
+      - '&7Aumenta quantas máquinas'
+      - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fFaixa: &7B '
+      - '&8 ▪ &fQuantia: &9{amount} '
 
   lim-spawner:
     slot: 16
@@ -83,10 +90,12 @@ products:
     commands:
     - 'spawner givelimite {player} 1 1'
     item:
-      material: MOB_SPAWNER
-      display: '&cLimite de Spawners'
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
       lore:
-      - '&7Mais um spawner no seu'
-      - '&7terreno. O mais forte daqui.'
+      - '&7Aumenta quantos spawners'
+      - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fFaixa: &7C '
+      - '&8 ▪ &fQuantia: &b{amount} '

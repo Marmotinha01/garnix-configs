@@ -39,12 +39,15 @@ products:
     - 'lamina givebook {player} pilhagem 1 1'
     item:
       material: ENCHANTED_BOOK
-      display: '&6Livro Pilhagem &lI'
+      display: '&aLivro de Pilhagem &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Aumenta os drops que os'
+      - '&7mobs deixam ao morrer.'
       - ''
-      - '&8 ▪ &fEfeito: &f1,25x de drop '
+      - '&8 ▪ &fPilhagem: &a{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   pilhagem-2:
     slot: 19
@@ -55,12 +58,15 @@ products:
     - 'lamina givebook {player} pilhagem 2 1'
     item:
       material: ENCHANTED_BOOK
-      display: '&6Livro Pilhagem &lII'
+      display: '&aLivro de Pilhagem &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Aumenta os drops que os'
+      - '&7mobs deixam ao morrer.'
       - ''
-      - '&8 ▪ &fEfeito: &f1,5x de drop '
+      - '&8 ▪ &fPilhagem: &a{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   pilhagem-3:
     slot: 28
@@ -71,13 +77,15 @@ products:
     - 'lamina givebook {player} pilhagem 3 1'
     item:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&6&lLivro Pilhagem III'
+      display: '&aLivro de Pilhagem &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Aumenta os drops que os'
+      - '&7mobs deixam ao morrer.'
       - ''
-      - '&8 ▪ &fEfeito: &f2,0x de drop '
+      - '&8 ▪ &fPilhagem: &a{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   massacre-4:
     slot: 12
@@ -88,12 +96,15 @@ products:
     - 'lamina givebook {player} massacre 4 1'
     item:
       material: ENCHANTED_BOOK
-      display: '&cLivro Massacre &lIV'
+      display: '&4Livro de Massacre &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Quantos mobs a sua lâmina'
+      - '&7abate em um único golpe.'
       - ''
-      - '&8 ▪ &fEfeito: &fraio 16 '
+      - '&8 ▪ &fMassacre: &4{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   massacre-5:
     slot: 21
@@ -104,13 +115,15 @@ products:
     - 'lamina givebook {player} massacre 5 1'
     item:
       material: ENCHANTED_BOOK
-      glow: true
-      display: '&c&lLivro Massacre V'
+      display: '&4Livro de Massacre &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Quantos mobs a sua lâmina'
+      - '&7abate em um único golpe.'
       - ''
-      - '&8 ▪ &fEfeito: &fraio ilimitado '
+      - '&8 ▪ &fMassacre: &4{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   ceifador-3:
     slot: 30
@@ -121,12 +134,15 @@ products:
     - 'lamina givebook {player} ceifador 3 1'
     item:
       material: ENCHANTED_BOOK
-      display: '&5Livro Ceifador &lIII'
+      display: '&dLivro de Ceifador &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Chance de dobrar as'
+      - '&7cabeças que o mob solta.'
       - ''
-      - '&8 ▪ &fEfeito: &f75% de instakill '
+      - '&8 ▪ &fCeifador: &d{level} '
+      - ''
+      - '&7Arraste sobre a lâmina'
+      - '&7para aplicar o livro.'
 
   speed-5:
     slot: 14
@@ -137,12 +153,15 @@ products:
     - 'pesca givebook {player} speed 5 1'
     item:
       material: ENCHANTED_BOOK
-      display: '&3Livro Speed &lV'
+      display: '&bLivro de Correnteza &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Puxa o peixe mais rápido'
+      - '&7para a sua vara.'
       - ''
-      - '&8 ▪ &fEfeito: &f-5s no intervalo '
+      - '&8 ▪ &fCorrenteza: &b{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   double-5:
     slot: 23
@@ -153,12 +172,15 @@ products:
     - 'pesca givebook {player} double 5 1'
     item:
       material: ENCHANTED_BOOK
-      display: '&3Livro Double &lV'
+      display: '&dLivro de Fartura &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Chance de fisgar mais de'
+      - '&7uma recompensa por vez.'
       - ''
-      - '&8 ▪ &fEfeito: &f40% de fisgada dupla '
+      - '&8 ▪ &fFartura: &d{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   luck-5:
     slot: 32
@@ -169,9 +191,12 @@ products:
     - 'pesca givebook {player} luck 5 1'
     item:
       material: ENCHANTED_BOOK
-      display: '&3Livro Luck &lV'
+      display: '&aLivro de Faro Aguçado &7{level}'
       lore:
-      - '&7Aplique na sua ferramenta'
-      - '&7para ativar o efeito.'
+      - '&7Aumenta a chance de vir'
+      - '&7recompensa melhor.'
       - ''
-      - '&8 ▪ &fEfeito: &f+100% de peso raro '
+      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'

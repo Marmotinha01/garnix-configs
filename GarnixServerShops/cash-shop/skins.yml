@@ -35,15 +35,15 @@ products:
     commands:
     - 'mina giveskin {player} jade 1'
     item:
-      material: INK_SACK
-      data: 2
-      display: '&aSkin Jade'
+      material: DIAMOND_PICKAXE
+      glow: true
+      display: '&aSkin de Jade'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Mineracao '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
 
   safira:
     slot: 19
@@ -53,15 +53,15 @@ products:
     commands:
     - 'mina giveskin {player} safira 1'
     item:
-      material: INK_SACK
-      data: 4
-      display: '&9Skin Safira'
+      material: DIAMOND_PICKAXE
+      glow: true
+      display: '&9Skin de Safira'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Mineracao '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
 
   mithril:
     slot: 28
@@ -71,15 +71,15 @@ products:
     commands:
     - 'mina giveskin {player} mithril 1'
     item:
-      material: DIAMOND
+      material: DIAMOND_PICKAXE
       glow: true
-      display: '&b&lSkin Mithril'
+      display: '&4Skin de Mithril'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Mineracao '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
 
   ametista:
     slot: 12
@@ -89,15 +89,15 @@ products:
     commands:
     - 'fazenda giveskin {player} ametista 1'
     item:
-      material: INK_SACK
-      data: 12
-      display: '&fSkin Ametista'
+      material: DIAMOND_HOE
+      glow: true
+      display: '&bSkin de Ametista'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Fazenda '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
 
   cristal:
     slot: 21
@@ -107,14 +107,15 @@ products:
     commands:
     - 'fazenda giveskin {player} cristal 1'
     item:
-      material: GLASS
-      display: '&bSkin Cristal'
+      material: DIAMOND_HOE
+      glow: true
+      display: '&9Skin de Cristal'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Fazenda '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
 
   marfim:
     slot: 30
@@ -124,15 +125,15 @@ products:
     commands:
     - 'fazenda giveskin {player} marfim 1'
     item:
-      material: BONE
+      material: DIAMOND_HOE
       glow: true
-      display: '&e&lSkin Marfim'
+      display: '&fSkin de Marfim'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Fazenda '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
 
   oceanita:
     slot: 14
@@ -142,15 +143,14 @@ products:
     commands:
     - 'pesca giveskin {player} oceanita 1'
     item:
-      material: INK_SACK
-      data: 6
-      display: '&3Skin Oceanita'
+      material: FISHING_ROD
+      glow: true
+      display: '&1Skin de Oceanita'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Pesca '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   perola:
     slot: 23
@@ -160,14 +160,14 @@ products:
     commands:
     - 'pesca giveskin {player} perola 1'
     item:
-      material: ENDER_PEARL
-      display: '&fSkin Perola'
+      material: FISHING_ROD
+      glow: true
+      display: '&9Skin de Pérola'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Pesca '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   tempestita:
     slot: 32
@@ -177,12 +177,11 @@ products:
     commands:
     - 'pesca giveskin {player} tempestita 1'
     item:
-      material: NETHER_STAR
+      material: FISHING_ROD
       glow: true
-      display: '&d&lSkin Tempestita'
+      display: '&dSkin de Tempestita'
       lore:
-      - '&7Uma das tres skins mais'
-      - '&7raras que a via tem.'
       - ''
-      - '&8 ▪ &fVia: &7Pesca '
-      - '&8 ▪ &fForjavel: &cnao '
+      - ' &8Especificações:'
+      - '&8 ▪ &fCorais: &a+&l{bonus}&a% '
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '

@@ -37,12 +37,10 @@ products:
     - 'cactustower give {player} 4 1'
     item:
       material: CACTUS
-      display: '&2Torre de Cacto'
+      display: '&aTorre de Cacto &8[{floors} Andares]'
       lore:
-      - '&7Ergue uma torre 3x3 de'
-      - '&7quatro andares, pronta.'
-      - ''
-      - '&8 ▪ &fFaixa: &7A '
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
 
   maquina-cash:
     slot: 12
@@ -52,13 +50,16 @@ products:
     commands:
     - 'maquina give {player} CASH 1 1'
     item:
-      material: GOLD_BLOCK
-      display: '&6Maquina de Cash'
+      texture: 42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c
+      glow: true
+      display: '&b&lMáquina de {translated}'
       lore:
-      - '&7Produz cash sozinha, devagar.'
-      - '&7Nao existe na loja de maquinas.'
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
       - ''
-      - '&8 ▪ &fFaixa: &7C '
+      - '&8 ▪ &fQuantia: &b{amount} '
+      - ''
+      - '&bColoque no seu terreno.'
 
   vaga:
     slot: 14
@@ -68,13 +69,15 @@ products:
     commands:
     - 'mina giveslot {player} 1'
     item:
-      material: IRON_DOOR
-      display: '&eVaga de Visitante'
+      texture: 4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb
+      display: '&aVaga de Visitante'
       lore:
-      - '&7Mais um visitante na sua'
-      - '&7mina, pagando pedagio.'
+      - '&7Ative para desbloquear &a+1 vaga'
+      - '&7de visitante na sua mina.'
       - ''
-      - '&8 ▪ &fFaixa: &7D '
+      - '&c[!] Item consumível após o uso.'
+      - ''
+      - '&7Use com &fBotão direito &7para ativar.'
 
   matadora-hk:
     slot: 15
@@ -84,14 +87,14 @@ products:
     commands:
     - 'boss give sword {player} hk'
     item:
-      material: DIAMOND_SWORD
+      material: STICK
       glow: true
-      display: '&c&lMatadora Hit-Kill'
+      display: '&4Matadora Hit-Kill'
       lore:
-      - '&7Mata qualquer boss em um'
-      - '&7golpe, seja qual for o HP.'
       - ''
-      - '&8 ▪ &fFaixa: &7D '
+      - ' &8Informações: '
+      - '&8 ▪ &fKill-Stack: &e{kill_stack} '
+      - '&8 ▪ &fBosses abatidos: &e{kills} '
 
   fuel-infinito:
     slot: 16
@@ -101,11 +104,8 @@ products:
     commands:
     - 'maquina giveinfinitefuel {player} 1'
     item:
-      material: LAVA_BUCKET
       glow: true
-      display: '&4&lCombustivel Infinito'
+      display: '&b&lCombustível Infinito &7(Máquinas)'
       lore:
-      - '&7Uma maquina roda para sempre.'
-      - '&7O item mais raro do servidor.'
-      - ''
-      - '&8 ▪ &fFaixa: &7D '
+      - '&7A máquina nunca mais'
+      - '&7fica sem combustível.'

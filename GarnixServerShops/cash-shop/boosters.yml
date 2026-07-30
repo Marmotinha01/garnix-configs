@@ -35,15 +35,19 @@ products:
     commands:
     - 'mina givebooster {player} coins 3 1h 1'
     item:
-      material: DIAMOND_PICKAXE
-      display: '&bBooster de Mineracao'
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
       lore:
-      - '&7Uma hora de renda triplicada'
-      - '&7na via escolhida.'
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
       - ''
-      - '&8 ▪ &fMultiplicador: &c3x '
-      - '&8 ▪ &fDuracao: &f1 hora '
-      - '&8 ▪ &fVia: &7Mineracao '
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: {symbol_color}{primary_color}{display} '
+      - ' &8▪ &fBônus: &a{bonus} '
+      - ' &8▪ &fDuração: &7{duration} '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   boost-fazenda:
     slot: 11
@@ -53,15 +57,19 @@ products:
     commands:
     - 'fazenda givebooster {player} coins 3 1h 1'
     item:
-      material: DIAMOND_HOE
-      display: '&aBooster de Fazenda'
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
       lore:
-      - '&7Uma hora de renda triplicada'
-      - '&7na via escolhida.'
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
       - ''
-      - '&8 ▪ &fMultiplicador: &c3x '
-      - '&8 ▪ &fDuracao: &f1 hora '
-      - '&8 ▪ &fVia: &7Fazenda '
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: {symbol_color}{primary_color}{display} '
+      - ' &8▪ &fBônus: &a{multiplier}x '
+      - ' &8▪ &fDuração: &7{duration} '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   boost-pesca:
     slot: 12
@@ -71,15 +79,19 @@ products:
     commands:
     - 'pesca givebooster {player} corais 3 1h 1'
     item:
-      material: FISHING_ROD
-      display: '&3Booster de Pesca'
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
       lore:
-      - '&7Uma hora de renda triplicada'
-      - '&7na via escolhida.'
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
       - ''
-      - '&8 ▪ &fMultiplicador: &c3x '
-      - '&8 ▪ &fDuracao: &f1 hora '
-      - '&8 ▪ &fVia: &7Pesca '
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: {type} '
+      - ' &8▪ &fBônus: &a{bonus} '
+      - ' &8▪ &fDuração: &7{duration} '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   boost-spawner:
     slot: 14
@@ -89,15 +101,19 @@ products:
     commands:
     - 'spawner givebooster {player} drops 3 1h 1'
     item:
-      material: MOB_SPAWNER
-      display: '&eBooster de Spawners'
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
       lore:
-      - '&7Uma hora de renda triplicada'
-      - '&7na via escolhida.'
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
       - ''
-      - '&8 ▪ &fMultiplicador: &c3x '
-      - '&8 ▪ &fDuracao: &f1 hora '
-      - '&8 ▪ &fVia: &7Spawners '
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a{multiplier} '
+      - ' &8▪ &fDuração: &7{duration} '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   boost-maquina:
     slot: 15
@@ -107,15 +123,19 @@ products:
     commands:
     - 'maquina givebooster {player} 3 1h 1'
     item:
-      material: PISTON_BASE
-      display: '&9Booster de Maquinas'
+      material: POTION
+      data: 8237
+      display: '&aBooster de Máquina'
       lore:
-      - '&7Uma hora de renda triplicada'
-      - '&7na via escolhida.'
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
       - ''
-      - '&8 ▪ &fMultiplicador: &c3x '
-      - '&8 ▪ &fDuracao: &f1 hora '
-      - '&8 ▪ &fVia: &7Maquinas '
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a{multiplier} '
+      - ' &8▪ &fDuração: &7{duration} '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   boost-armazem:
     slot: 16
@@ -125,12 +145,16 @@ products:
     commands:
     - 'armazem givebooster {player} 3 1h 1'
     item:
-      material: CACTUS
-      display: '&2Booster de Armazem'
+      material: POTION
+      data: 8260
+      display: '&aBooster de Armazém'
       lore:
-      - '&7Uma hora de renda triplicada'
-      - '&7na via escolhida.'
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
       - ''
-      - '&8 ▪ &fMultiplicador: &c3x '
-      - '&8 ▪ &fDuracao: &f1 hora '
-      - '&8 ▪ &fVia: &7Cacto '
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aVenda de Cactos '
+      - ' &8▪ &fBônus: &a{multiplier} '
+      - ' &8▪ &fDuração: &7{duration} '
+      flags:
+      - HIDE_POTION_EFFECTS

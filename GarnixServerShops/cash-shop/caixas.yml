@@ -35,11 +35,12 @@ products:
     commands:
     - 'caixas give mineracao-ii {player} 1'
     item:
-      material: ENDER_CHEST
-      display: '&bCaixa de Mineracao &lII'
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&e&lCaixa Mineração &e[T&lII&e]'
       lore:
-      - '&7Piso mais alto e muito'
-      - '&7menos azar que a I.'
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   caixa-farm:
     slot: 11
@@ -49,11 +50,12 @@ products:
     commands:
     - 'caixas give farm-ii {player} 1'
     item:
-      material: ENDER_CHEST
-      display: '&aCaixa de Fazenda &lII'
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&a&lCaixa Farm &a[T&lII&a]'
       lore:
-      - '&7Piso mais alto e muito'
-      - '&7menos azar que a I.'
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   caixa-pesca:
     slot: 12
@@ -63,11 +65,12 @@ products:
     commands:
     - 'caixas give pesca-ii {player} 1'
     item:
-      material: ENDER_CHEST
-      display: '&3Caixa de Pesca &lII'
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&b&lCaixa Pesca &b[T&lII&b]'
       lore:
-      - '&7Piso mais alto e muito'
-      - '&7menos azar que a I.'
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   chaves-rankup:
     slot: 14
@@ -78,10 +81,11 @@ products:
     - 'crates givekey rankup {player} 25'
     item:
       material: TRIPWIRE_HOOK
-      display: '&dLote de Chaves'
+      glow: true
+      display: '&6Chave RankUP'
       lore:
-      - '&7Vinte e cinco chaves da'
-      - '&7crate de RankUP.'
+      - '&7Consiga subindo de rank'
+      - '&7ao longo da sua jornada.'
 
   caixa-garnix:
     slot: 16
@@ -91,9 +95,9 @@ products:
     commands:
     - 'caixas give garnix {player} 1'
     item:
-      material: BEACON
+      material: ENDER_CHEST
       glow: true
       display: '&6&lCaixa Garnix'
       lore:
-      - '&7O topo absoluto. Combustivel'
-      - '&7infinito, matadora e vaga.'
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

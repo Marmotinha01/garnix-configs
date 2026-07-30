@@ -44,33 +44,45 @@ products:
     cost: 1100
     command: spawner givelimite {player} 1
     icon:
-      material: PAPER
-      display: '&bLimite de Spawner'
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
       lore:
-      - '&8 ▪ &fQuantia: &b1 '
+      - '&7Aumenta quantos spawners'
+      - '&7você pode ter no terreno.'
       - ''
+      - '&8 ▪ &fQuantia: &b{amount} '
 
   spawner-limit-10:
     slot: 11
     cost: 14000
     command: spawner givelimite {player} 10
     icon:
-      material: PAPER
-      display: '&bLimite de Spawner'
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
       lore:
-      - '&8 ▪ &fQuantia: &b10 '
+      - '&7Aumenta quantos spawners'
+      - '&7você pode ter no terreno.'
       - ''
+      - '&8 ▪ &fQuantia: &b{amount} '
 
   spawner-limit-100:
     slot: 12
     cost: 190000
     command: spawner givelimite {player} 100
     icon:
-      material: PAPER
-      display: '&bLimite de Spawner'
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
       lore:
-      - '&8 ▪ &fQuantia: &b100 '
+      - '&7Aumenta quantos spawners'
+      - '&7você pode ter no terreno.'
       - ''
+      - '&8 ▪ &fQuantia: &b{amount} '
 
   # ── Limite de maquina ──────────────────────────────────────────────────────
   machine-limit-1:
@@ -78,33 +90,45 @@ products:
     cost: 1100
     command: maquina givelimite {player} 1
     icon:
-      material: PAPER
-      display: '&eLimite de Maquina'
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
       lore:
-      - '&8 ▪ &fQuantia: &e1 '
+      - '&7Aumenta quantas máquinas'
+      - '&7você pode ter no terreno.'
       - ''
+      - '&8 ▪ &fQuantia: &9{amount} '
 
   machine-limit-10:
     slot: 15
     cost: 14000
     command: maquina givelimite {player} 10
     icon:
-      material: PAPER
-      display: '&eLimite de Maquina'
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
       lore:
-      - '&8 ▪ &fQuantia: &e10 '
+      - '&7Aumenta quantas máquinas'
+      - '&7você pode ter no terreno.'
       - ''
+      - '&8 ▪ &fQuantia: &9{amount} '
 
   machine-limit-100:
     slot: 16
     cost: 190000
     command: maquina givelimite {player} 100
     icon:
-      material: PAPER
-      display: '&eLimite de Maquina'
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
       lore:
-      - '&8 ▪ &fQuantia: &e100 '
+      - '&7Aumenta quantas máquinas'
+      - '&7você pode ter no terreno.'
       - ''
+      - '&8 ▪ &fQuantia: &9{amount} '
 
   caixa-pesca-i:
     slot: 19
@@ -112,23 +136,23 @@ products:
     command: caixas give pesca-i {player} 1
     icon:
       material: CHEST
-      display: '&bCaixa de Pesca &lI'
+      glow: true
+      display: '&b&lCaixa Pesca &b[T&lI&b]'
       lore:
-      - '&8 ▪ &fArmadura, skin e livro '
-      - '&8 ▪ &fda via da pesca '
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   caixa-pesca-ii:
     slot: 20
     cost: 320000
     command: caixas give pesca-ii {player} 1
     icon:
-      material: ENDER_CHEST
+      material: TRAPPED_CHEST
       glow: true
-      display: '&b&lCaixa de Pesca II'
+      display: '&b&lCaixa Pesca &b[T&lII&b]'
       lore:
-      - '&8 ▪ &fPiso mais alto '
-      - '&8 ▪ &fe muito menos azar '
-      - '&8 ▪ &fNo site: &6❂900 '
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   chaves-pesca:
     slot: 21
@@ -136,39 +160,58 @@ products:
     command: crates givekey pesca {player} 10
     icon:
       material: TRIPWIRE_HOOK
-      display: '&bx&l10 &bChaves de Pesca'
+      glow: true
+      display: '&bChave Pesca'
       lore:
-      - '&8 ▪ &fUm lote da crate da via '
+      - '&7Consiga pescando peixes'
+      - '&7nas águas do servidor.'
 
   booster-pesca:
     slot: 22
     cost: 28000
     command: pesca givebooster {player} corais 3 10m 1
     icon:
-      material: BLAZE_POWDER
-      display: '&b&lBooster 3x &7(10m)'
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
       lore:
-      - '&8 ▪ &fDez minutos de corais '
-      - '&8 ▪ &ftriplicados '
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: {type} '
+      - ' &8▪ &fBônus: &a{bonus} '
+      - ' &8▪ &fDuração: &7{duration} '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   forja:
     slot: 23
     cost: 60000
     command: pesca giveforge {player} 1
     icon:
-      material: ANVIL
-      display: '&bForja de Skin'
+      texture: c03563c9259bdc86b44d1a02fee3853dea696770a28c4724d13f713f6c5ec54f
+      display: '&bForja de Skins'
       lore:
-      - '&8 ▪ &fJunta 7 skins iguais '
-      - '&8 ▪ &fna proxima da escada '
+      - '&7Combine skins para'
+      - '&7forjar uma melhor.'
+      - ''
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+      - ' &8Requisitos:'
+      - '&8 ▪ &c7 skins iguais '
 
   lim-armazem:
     slot: 24
     cost: 55000
     command: armazem givelimititem {player} 500 1
     icon:
-      material: CHEST
-      display: '&6Limite de Armazem &7(+500)'
+      material: CACTUS
+      data: 0
+      glow: true
+      display: '&2Limite de Armazém'
       lore:
-      - '&8 ▪ &fEspaco no armazem '
-      - '&8 ▪ &fde cacto '
+      - '&7Aumenta quantos cactos o'
+      - '&7seu armazém comporta.'
+      - ''
+      - '&8 ▪ &fQuantia: &a{amount} '

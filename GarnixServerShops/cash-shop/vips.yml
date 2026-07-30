@@ -39,16 +39,11 @@ products:
     commands:
     - 'vip givepaper {player} celestial 30d 1'
     item:
-      material: INK_SACK
-      data: 12
-      display: '&bVIP Celestial'
+      display: '{color}Papel &lVIP {vip}'
       lore:
-      - '&7Ganho em todas as vias e'
-      - '&7desconto em toda compra.'
+      - '&fDuração: &7{duration}'
       - ''
-      - '&8 ▪ &fGanho: &a+4% '
-      - '&8 ▪ &fDesconto: &a-3% '
-      - '&8 ▪ &fDuracao: &f30 dias '
+      - '{color}Clique para resgatar!'
 
   imortal:
     slot: 12
@@ -58,16 +53,11 @@ products:
     commands:
     - 'vip givepaper {player} imortal 30d 1'
     item:
-      material: INK_SACK
-      data: 10
-      display: '&aVIP Imortal'
+      display: '{color}Papel &lVIP {vip}'
       lore:
-      - '&7Ganho em todas as vias e'
-      - '&7desconto em toda compra.'
+      - '&fDuração: &7{duration}'
       - ''
-      - '&8 ▪ &fGanho: &a+7% '
-      - '&8 ▪ &fDesconto: &a-6% '
-      - '&8 ▪ &fDuracao: &f30 dias '
+      - '{color}Clique para resgatar!'
 
   supremo:
     slot: 14
@@ -77,16 +67,11 @@ products:
     commands:
     - 'vip givepaper {player} supremo 30d 1'
     item:
-      material: INK_SACK
-      data: 5
-      display: '&dVIP Supremo'
+      display: '{color}Papel &lVIP {vip}'
       lore:
-      - '&7Ganho em todas as vias e'
-      - '&7desconto em toda compra.'
+      - '&fDuração: &7{duration}'
       - ''
-      - '&8 ▪ &fGanho: &a+11% '
-      - '&8 ▪ &fDesconto: &a-10% '
-      - '&8 ▪ &fDuracao: &f30 dias '
+      - '{color}Clique para resgatar!'
 
   garnix:
     slot: 16
@@ -96,13 +81,8 @@ products:
     commands:
     - 'vip givepaper {player} garnix 30d 1'
     item:
-      material: NETHER_STAR
-      glow: true
-      display: '&6&lVIP Garnix'
+      display: '{color}Papel &lVIP {vip}'
       lore:
-      - '&7Ganho em todas as vias e'
-      - '&7desconto em toda compra.'
+      - '&fDuração: &7{duration}'
       - ''
-      - '&8 ▪ &fGanho: &a+15% '
-      - '&8 ▪ &fDesconto: &a-15% '
-      - '&8 ▪ &fDuracao: &f30 dias '
+      - '{color}Clique para resgatar!'
