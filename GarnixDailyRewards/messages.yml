@@ -1,7 +1,7 @@
 reward:
-  success: '&aVocê coletou &f{reward}&a.'
-  no-permission: '&cVocê não tem permissão para coletar &f{reward}&c.'
-  cooldown: '&cAguarde &f{time} &cpara coletar &f{reward} &cnovamente.'
+  success: '&aVocê coletou a &fRecompensa {reward}&a.'
+  no-permission: '&cVocê não tem permissão para coletar essa recompensa.'
+  cooldown: '&cAguarde &e{time} &cpara coletar novamente.'
 
 admin:
   reload: '&aConfigurações recarregadas com sucesso.'
