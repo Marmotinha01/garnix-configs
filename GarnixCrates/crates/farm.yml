@@ -51,7 +51,7 @@ rewards:
     amount: '250'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &7250 '
+      - '&fQuantia: &7250 '
   secundaria:
     type: CURRENCY
     chance: 30.1797
@@ -60,7 +60,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &725 '
+      - '&fQuantia: &725 '
   combustivel:
     type: COMMAND
     chance: 5.4922
@@ -92,7 +92,7 @@ rewards:
     amount: '500'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &7500 '
+      - '&fQuantia: &7500 '
   chave-boss:
     type: COMMAND
     chance: 1.2
@@ -117,6 +117,13 @@ rewards:
       material: LEATHER_CHESTPLATE
       color: '#5E8C3A'
       display: '&aPeitoral Farm &a[T&lII&a]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+3.0% '
+      - '&8 ▪ &5Sementes: &a+2.0% '
+      - '&8 ▪ &aXP: &a+2.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -127,9 +134,16 @@ rewards:
     command: fazenda giveforge {player} 1
     amount: 1
     icon:
-      material: ENCHANTED_BOOK
-      glow: true
-      display: '&6Forja de Skin'
+      texture: 13cfc3cbc0cf6f81774fa37b1f6608417c36aa19e5a429c97698ff94dafb3a6
+      display: '&eForja de Skins'
+      lore:
+      - '&7Combine skins para'
+      - '&7forjar uma melhor.'
+      - ''
+      - '&8 ▪ &fTipo: &eEnxada '
+      - ''
+      - ' &8Requisitos:'
+      - '&8 ▪ &c7 skins iguais '
 
   armadura-alta:
     type: COMMAND
@@ -141,6 +155,13 @@ rewards:
       material: LEATHER_LEGGINGS
       color: '#8FD44E'
       display: '&dCalça Farm &d[T&lIV&d]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+8.0% '
+      - '&8 ▪ &5Sementes: &a+5.5% '
+      - '&8 ▪ &aXP: &a+5.5% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -152,7 +173,10 @@ rewards:
     amount: 1
     icon:
       material: DIAMOND_HOE
-      display: '&aEsmeralda'
+      display: '&aSkin de Esmeralda'
+      lore:
+      - ''
+      - ' &8Especificações:'
       flags:
       - HIDE_ATTRIBUTES
 
@@ -164,8 +188,18 @@ rewards:
     amount: 1
     icon:
       material: POTION
-      glow: true
-      display: '&d&lBooster 3x &7(10min)'
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   jackpot:
     type: COMMAND
@@ -176,7 +210,10 @@ rewards:
     icon:
       material: DIAMOND_HOE
       glow: true
-      display: '&fMarfim'
+      display: '&fSkin de Marfim'
+      lore:
+      - ''
+      - ' &8Especificações:'
       flags:
       - HIDE_ATTRIBUTES
 
@@ -195,7 +232,7 @@ rewards:
       - '&7Aumenta quantos cactos o'
       - '&7seu armazém comporta.'
       - ''
-      - '&8 ▪ &fQuantia: &a{amount} '
+      - '&fQuantia: &a500 '
 
   lim-spawner:
     type: COMMAND
@@ -212,7 +249,7 @@ rewards:
       - '&7Aumenta quantos spawners'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&fQuantia: &b1 '
 
   lim-maquina:
     type: COMMAND
@@ -229,4 +266,4 @@ rewards:
       - '&7Aumenta quantas máquinas'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&fQuantia: &91 '

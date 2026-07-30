@@ -44,7 +44,7 @@ rewards:
     amount: '144000000000000000'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &7144.0Q '
+      - '&fQuantia: &7144.0Q '
   secundaria:
     type: CURRENCY
     chance: 45.0
@@ -53,7 +53,7 @@ rewards:
     amount: '1000'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &71K '
+      - '&fQuantia: &71K '
   chave-boss:
     type: COMMAND
     chance: 30.0
@@ -89,12 +89,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Pilhagem &7{level}'
+      display: '&aLivro de Pilhagem &7II'
       lore:
       - '&7Aumenta os drops que os'
       - '&7mobs deixam ao morrer.'
       - ''
-      - '&8 ▪ &fPilhagem: &a{level} '
+      - '&8 ▪ &fPilhagem: &aII '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'

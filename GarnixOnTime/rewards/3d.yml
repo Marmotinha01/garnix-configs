@@ -13,7 +13,7 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂18 cash '
-    - '&8 ▪ &fx&l1 &9Limite de Maquinas &7(+1) '
+    - '&8 ▪ &9x&l1 &9Limite de Maquinas &7(+1) '
     - ''
 
 rewards:
@@ -38,4 +38,4 @@ rewards:
       - '&7Aumenta quantas máquinas'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&fQuantia: &91 '

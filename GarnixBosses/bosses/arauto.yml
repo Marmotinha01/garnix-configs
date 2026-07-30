@@ -44,7 +44,7 @@ rewards:
     amount: '39500000000'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &739.5B '
+      - '&fQuantia: &739.5B '
   secundaria:
     type: CURRENCY
     chance: 45.0
@@ -53,7 +53,7 @@ rewards:
     amount: '600'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &7600 '
+      - '&fQuantia: &7600 '
   chave-boss:
     type: COMMAND
     chance: 30.0
@@ -89,12 +89,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Ceifador &7{level}'
+      display: '&dLivro de Ceifador &7II'
       lore:
       - '&7Chance de dobrar as'
       - '&7cabeças que o mob solta.'
       - ''
-      - '&8 ▪ &fCeifador: &d{level} '
+      - '&8 ▪ &fCeifador: &dII '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'

@@ -32,6 +32,7 @@ products:
     amount: 1
     price: 900
     broadcast: true
+    right-command: 'caixas ver mineracao-ii shop'
     commands:
     - 'caixas give mineracao-ii {player} 1'
     item:
@@ -47,6 +48,7 @@ products:
     amount: 1
     price: 900
     broadcast: true
+    right-command: 'caixas ver farm-ii shop'
     commands:
     - 'caixas give farm-ii {player} 1'
     item:
@@ -62,6 +64,7 @@ products:
     amount: 1
     price: 900
     broadcast: true
+    right-command: 'caixas ver pesca-ii shop'
     commands:
     - 'caixas give pesca-ii {player} 1'
     item:
@@ -92,6 +95,7 @@ products:
     amount: 1
     price: 15000
     broadcast: true
+    right-command: 'caixas ver garnix shop'
     commands:
     - 'caixas give garnix {player} 1'
     item:

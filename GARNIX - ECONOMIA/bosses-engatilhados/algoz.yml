@@ -57,7 +57,7 @@ rewards:
     amount: '473000'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &7473K '
+      - '&fQuantia: &7473K '
   secundaria:
     type: CURRENCY
     chance: 45.0
@@ -66,7 +66,7 @@ rewards:
     amount: '300'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &7300 '
+      - '&fQuantia: &7300 '
   chave-boss:
     type: COMMAND
     chance: 30.0
@@ -104,12 +104,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&4Livro de Massacre &7{level}'
+      display: '&4Livro de Massacre &7II'
       lore:
       - '&7Quantos mobs a sua lâmina'
       - '&7abate em um único golpe.'
       - ''
-      - '&8 ▪ &fMassacre: &4{level} '
+      - '&8 ▪ &fMassacre: &4II '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'

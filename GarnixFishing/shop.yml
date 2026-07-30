@@ -52,7 +52,7 @@ products:
       - '&7Aumenta quantos spawners'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&8 ▪ &fQuantia: &b1 '
 
   spawner-limit-10:
     slot: 11
@@ -67,7 +67,7 @@ products:
       - '&7Aumenta quantos spawners'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&8 ▪ &fQuantia: &b10 '
 
   spawner-limit-100:
     slot: 12
@@ -82,7 +82,7 @@ products:
       - '&7Aumenta quantos spawners'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&8 ▪ &fQuantia: &b100 '
 
   # ── Limite de maquina ──────────────────────────────────────────────────────
   machine-limit-1:
@@ -98,7 +98,7 @@ products:
       - '&7Aumenta quantas máquinas'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&8 ▪ &fQuantia: &91 '
 
   machine-limit-10:
     slot: 15
@@ -113,7 +113,7 @@ products:
       - '&7Aumenta quantas máquinas'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&8 ▪ &fQuantia: &910 '
 
   machine-limit-100:
     slot: 16
@@ -128,7 +128,7 @@ products:
       - '&7Aumenta quantas máquinas'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&8 ▪ &fQuantia: &9100 '
 
   caixa-pesca-i:
     slot: 19
@@ -180,8 +180,8 @@ products:
       - ''
       - ' &8Informações: '
       - ' &8▪ &fTipo: {type} '
-      - ' &8▪ &fBônus: &a{bonus} '
-      - ' &8▪ &fDuração: &7{duration} '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -214,4 +214,4 @@ products:
       - '&7Aumenta quantos cactos o'
       - '&7seu armazém comporta.'
       - ''
-      - '&8 ▪ &fQuantia: &a{amount} '
+      - '&8 ▪ &fQuantia: &a500 '

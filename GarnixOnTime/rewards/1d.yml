@@ -13,7 +13,7 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂12 cash '
-    - '&8 ▪ &fx&l1 &6Limite de Armazem &7(+500) '
+    - '&8 ▪ &6x&l1 &6Limite de Armazem &7(+500) '
     - ''
 
 rewards:
@@ -38,4 +38,4 @@ rewards:
       - '&7Aumenta quantos cactos o'
       - '&7seu armazém comporta.'
       - ''
-      - '&8 ▪ &fQuantia: &a{amount} '
+      - '&fQuantia: &a500 '

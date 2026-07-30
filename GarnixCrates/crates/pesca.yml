@@ -51,7 +51,7 @@ rewards:
     amount: '250'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &7250 '
+      - '&fQuantia: &7250 '
   secundaria:
     type: CURRENCY
     chance: 30.2174
@@ -60,7 +60,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &725 '
+      - '&fQuantia: &725 '
   combustivel:
     type: COMMAND
     chance: 5.4991
@@ -92,7 +92,7 @@ rewards:
     amount: '500'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &7500 '
+      - '&fQuantia: &7500 '
   chave-boss:
     type: COMMAND
     chance: 1.2
@@ -117,6 +117,12 @@ rewards:
       material: LEATHER_LEGGINGS
       color: '#2C6E8C'
       display: '&aCalça Pesca &a[T&lII&a]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &3Corais: &a+3.0% '
+      - '&8 ▪ &aXP: &a+2.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -128,12 +134,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&bLivro de Correnteza &7{level}'
+      display: '&bLivro de Correnteza &7III'
       lore:
       - '&7Puxa o peixe mais rápido'
       - '&7para a sua vara.'
       - ''
-      - '&8 ▪ &fCorrenteza: &b{level} '
+      - '&8 ▪ &fCorrenteza: &bIII '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -148,6 +154,12 @@ rewards:
       material: LEATHER_BOOTS
       color: '#3FB8D4'
       display: '&dBota Pesca &d[T&lIV&d]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &3Corais: &a+8.0% '
+      - '&8 ▪ &aXP: &a+5.5% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -159,7 +171,11 @@ rewards:
     amount: 1
     icon:
       material: FISHING_ROD
-      display: '&5Serenita'
+      display: '&5Skin de Serenita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   booster-3x:
     type: COMMAND
@@ -169,8 +185,18 @@ rewards:
     amount: 1
     icon:
       material: POTION
-      glow: true
-      display: '&d&lBooster 3x &7(10min)'
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   jackpot:
     type: COMMAND
@@ -181,7 +207,11 @@ rewards:
     icon:
       material: FISHING_ROD
       glow: true
-      display: '&dTempestita'
+      display: '&dSkin de Tempestita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   livro-luck:
     type: COMMAND
@@ -191,12 +221,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado &7{level}'
+      display: '&aLivro de Faro Aguçado &7II'
       lore:
       - '&7Aumenta a chance de vir'
       - '&7recompensa melhor.'
       - ''
-      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - '&8 ▪ &fFaro Aguçado: &aII '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -216,7 +246,7 @@ rewards:
       - '&7Aumenta quantos cactos o'
       - '&7seu armazém comporta.'
       - ''
-      - '&8 ▪ &fQuantia: &a{amount} '
+      - '&fQuantia: &a500 '
 
   lim-spawner:
     type: COMMAND
@@ -233,7 +263,7 @@ rewards:
       - '&7Aumenta quantos spawners'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&fQuantia: &b1 '
 
   lim-maquina:
     type: COMMAND
@@ -250,4 +280,4 @@ rewards:
       - '&7Aumenta quantas máquinas'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&fQuantia: &91 '

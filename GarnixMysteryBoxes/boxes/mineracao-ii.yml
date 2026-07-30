@@ -47,6 +47,13 @@ rewards:
       material: LEATHER_BOOTS
       color: '#C8922C'
       display: '&bBota Mineração &b[T&lIII&b]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+5.0% '
+      - '&8 ▪ &dGemas: &a+3.5% '
+      - '&8 ▪ &aXP: &a+3.5% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -60,6 +67,13 @@ rewards:
       material: LEATHER_CHESTPLATE
       color: '#F0B429'
       display: '&dPeitoral Mineração &d[T&lIV&d]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+8.0% '
+      - '&8 ▪ &dGemas: &a+5.5% '
+      - '&8 ▪ &aXP: &a+5.5% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -73,6 +87,13 @@ rewards:
       material: LEATHER_LEGGINGS
       color: '#FFD54A'
       display: '&6Calça Mineração &6[T&lV&6]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+12.0% '
+      - '&8 ▪ &dGemas: &a+8.0% '
+      - '&8 ▪ &aXP: &a+8.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -84,7 +105,10 @@ rewards:
     amount: 1
     icon:
       material: DIAMOND_PICKAXE
-      display: '&fQuartzo'
+      display: '&fSkin de Quartzo'
+      lore:
+      - ''
+      - ' &8Especificações:'
       flags:
       - HIDE_ATTRIBUTES
 
@@ -97,7 +121,10 @@ rewards:
     icon:
       material: DIAMOND_PICKAXE
       glow: true
-      display: '&aJade'
+      display: '&aSkin de Jade'
+      lore:
+      - ''
+      - ' &8Especificações:'
       flags:
       - HIDE_ATTRIBUTES
 
@@ -109,12 +136,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Pilhagem &7{level}'
+      display: '&aLivro de Pilhagem &7II'
       lore:
       - '&7Aumenta os drops que os'
       - '&7mobs deixam ao morrer.'
       - ''
-      - '&8 ▪ &fPilhagem: &a{level} '
+      - '&8 ▪ &fPilhagem: &aII '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -127,5 +154,15 @@ rewards:
     amount: 1
     icon:
       material: POTION
-      glow: true
-      display: '&d&lBooster 3x &7(10min)'
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS

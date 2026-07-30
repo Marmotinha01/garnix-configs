@@ -37,6 +37,13 @@ rewards:
       material: LEATHER_HELMET
       color: '#FFD54A'
       display: '&6Capacete Mineração &6[T&lV&6]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+12.0% '
+      - '&8 ▪ &dGemas: &a+8.0% '
+      - '&8 ▪ &aXP: &a+8.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -50,6 +57,13 @@ rewards:
       material: LEATHER_BOOTS
       color: '#B6F25C'
       display: '&6Bota Farm &6[T&lV&6]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+12.0% '
+      - '&8 ▪ &5Sementes: &a+8.0% '
+      - '&8 ▪ &aXP: &a+8.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -62,7 +76,10 @@ rewards:
     icon:
       material: DIAMOND_PICKAXE
       glow: true
-      display: '&4Mithril'
+      display: '&4Skin de Mithril'
+      lore:
+      - ''
+      - ' &8Especificações:'
       flags:
       - HIDE_ATTRIBUTES
 
@@ -75,7 +92,10 @@ rewards:
     icon:
       material: DIAMOND_HOE
       glow: true
-      display: '&fMarfim'
+      display: '&fSkin de Marfim'
+      lore:
+      - ''
+      - ' &8Especificações:'
       flags:
       - HIDE_ATTRIBUTES
 
@@ -88,7 +108,11 @@ rewards:
     icon:
       material: FISHING_ROD
       glow: true
-      display: '&dTempestita'
+      display: '&dSkin de Tempestita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   pilhagem-3:
     type: COMMAND
@@ -98,12 +122,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Pilhagem &7{level}'
+      display: '&aLivro de Pilhagem &7III'
       lore:
       - '&7Aumenta os drops que os'
       - '&7mobs deixam ao morrer.'
       - ''
-      - '&8 ▪ &fPilhagem: &a{level} '
+      - '&8 ▪ &fPilhagem: &aIII '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -116,12 +140,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&4Livro de Massacre &7{level}'
+      display: '&4Livro de Massacre &7V'
       lore:
       - '&7Quantos mobs a sua lâmina'
       - '&7abate em um único golpe.'
       - ''
-      - '&8 ▪ &fMassacre: &4{level} '
+      - '&8 ▪ &fMassacre: &4V '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -134,12 +158,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Ceifador &7{level}'
+      display: '&dLivro de Ceifador &7III'
       lore:
       - '&7Chance de dobrar as'
       - '&7cabeças que o mob solta.'
       - ''
-      - '&8 ▪ &fCeifador: &d{level} '
+      - '&8 ▪ &fCeifador: &dIII '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -152,12 +176,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&bLivro de Correnteza &7{level}'
+      display: '&bLivro de Correnteza &7V'
       lore:
       - '&7Puxa o peixe mais rápido'
       - '&7para a sua vara.'
       - ''
-      - '&8 ▪ &fCorrenteza: &b{level} '
+      - '&8 ▪ &fCorrenteza: &bV '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -170,12 +194,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Fartura &7{level}'
+      display: '&dLivro de Fartura &7V'
       lore:
       - '&7Chance de fisgar mais de'
       - '&7uma recompensa por vez.'
       - ''
-      - '&8 ▪ &fFartura: &d{level} '
+      - '&8 ▪ &fFartura: &dV '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -188,12 +212,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado &7{level}'
+      display: '&aLivro de Faro Aguçado &7V'
       lore:
       - '&7Aumenta a chance de vir'
       - '&7recompensa melhor.'
       - ''
-      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - '&8 ▪ &fFaro Aguçado: &aV '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -205,9 +229,15 @@ rewards:
     command: mina giveslot {player} 1
     amount: 1
     icon:
-      material: BEACON
-      glow: true
-      display: '&b&lVaga de Visitante'
+      texture: 4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb
+      display: '&aVaga de Visitante'
+      lore:
+      - '&7Ative para desbloquear &a+1 vaga'
+      - '&7de visitante na sua mina.'
+      - ''
+      - '&c[!] Item consumível após o uso.'
+      - ''
+      - '&7Use com &fBotão direito &7para ativar.'
 
   maquina-especial:
     type: COMMAND
@@ -216,9 +246,16 @@ rewards:
     command: maquina give {player} LIMITE
     amount: 1
     icon:
-      material: LAPIS_BLOCK
+      texture: 9a2d9b1e07d1e1a8b7b1e3e5e9e6a9e8f8a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0
       glow: true
       display: '&b&lMáquina de Limite'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&fQuantia: &b1 '
+      - ''
+      - '&bColoque no seu terreno.'
 
   matadora-hk:
     type: COMMAND
@@ -243,6 +280,8 @@ rewards:
     command: maquina giveinfinitefuel {player}
     amount: 1
     icon:
-      material: COAL
       glow: true
-      display: '&b&lCombustível Infinito'
+      display: '&b&lCombustível Infinito &7(Máquinas)'
+      lore:
+      - '&7A máquina nunca mais'
+      - '&7fica sem combustível.'

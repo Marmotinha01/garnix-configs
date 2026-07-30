@@ -47,6 +47,12 @@ rewards:
       material: LEATHER_HELMET
       color: '#24506B'
       display: '&7Capacete Pesca &7[T&lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &3Corais: &a+1.5% '
+      - '&8 ▪ &aXP: &a+1.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -60,6 +66,12 @@ rewards:
       material: LEATHER_CHESTPLATE
       color: '#2C6E8C'
       display: '&aPeitoral Pesca &a[T&lII&a]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &3Corais: &a+3.0% '
+      - '&8 ▪ &aXP: &a+2.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -73,6 +85,12 @@ rewards:
       material: LEATHER_LEGGINGS
       color: '#3494B0'
       display: '&bCalça Pesca &b[T&lIII&b]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &3Corais: &a+5.0% '
+      - '&8 ▪ &aXP: &a+3.5% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -84,7 +102,11 @@ rewards:
     amount: 1
     icon:
       material: FISHING_ROD
-      display: '&7Prata'
+      display: '&7Skin de Prata'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   forja:
     type: COMMAND
@@ -93,8 +115,16 @@ rewards:
     command: pesca giveforge {player} 1
     amount: 1
     icon:
-      material: ANVIL
-      display: '&6Forja de Skin'
+      texture: c03563c9259bdc86b44d1a02fee3853dea696770a28c4724d13f713f6c5ec54f
+      display: '&bForja de Skins'
+      lore:
+      - '&7Combine skins para'
+      - '&7forjar uma melhor.'
+      - ''
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+      - ' &8Requisitos:'
+      - '&8 ▪ &c7 skins iguais '
 
   secundaria:
     type: CURRENCY
@@ -104,7 +134,7 @@ rewards:
     amount: '1000'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &71K '
+      - '&fQuantia: &71K '
   booster:
     type: COMMAND
     chance: 2
@@ -113,7 +143,18 @@ rewards:
     amount: 1
     icon:
       material: POTION
-      display: '&aBooster 2x &7(15min)'
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   livro-luck:
     type: COMMAND
@@ -123,12 +164,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado &7{level}'
+      display: '&aLivro de Faro Aguçado &7III'
       lore:
       - '&7Aumenta a chance de vir'
       - '&7recompensa melhor.'
       - ''
-      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - '&8 ▪ &fFaro Aguçado: &aIII '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'

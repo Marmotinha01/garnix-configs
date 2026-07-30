@@ -13,7 +13,7 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂25 cash '
-    - '&8 ▪ &fx&l1 &cLimite de Spawners &7(+1) '
+    - '&8 ▪ &cx&l1 &cLimite de Spawners &7(+1) '
     - ''
 
 rewards:
@@ -38,4 +38,4 @@ rewards:
       - '&7Aumenta quantos spawners'
       - '&7você pode ter no terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&fQuantia: &b1 '

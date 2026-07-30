@@ -47,6 +47,12 @@ rewards:
       material: LEATHER_BOOTS
       color: '#3494B0'
       display: '&bBota Pesca &b[T&lIII&b]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &3Corais: &a+5.0% '
+      - '&8 ▪ &aXP: &a+3.5% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -60,6 +66,12 @@ rewards:
       material: LEATHER_CHESTPLATE
       color: '#3FB8D4'
       display: '&dPeitoral Pesca &d[T&lIV&d]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &3Corais: &a+8.0% '
+      - '&8 ▪ &aXP: &a+5.5% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -73,6 +85,12 @@ rewards:
       material: LEATHER_LEGGINGS
       color: '#57DCF2'
       display: '&6Calça Pesca &6[T&lV&6]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &3Corais: &a+12.0% '
+      - '&8 ▪ &aXP: &a+8.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -84,7 +102,11 @@ rewards:
     amount: 1
     icon:
       material: FISHING_ROD
-      display: '&5Serenita'
+      display: '&5Skin de Serenita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   skin-8:
     type: COMMAND
@@ -95,7 +117,11 @@ rewards:
     icon:
       material: FISHING_ROD
       glow: true
-      display: '&1Oceanita'
+      display: '&1Skin de Oceanita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
 
   livro:
     type: COMMAND
@@ -105,12 +131,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Fartura &7{level}'
+      display: '&dLivro de Fartura &7IV'
       lore:
       - '&7Chance de fisgar mais de'
       - '&7uma recompensa por vez.'
       - ''
-      - '&8 ▪ &fFartura: &d{level} '
+      - '&8 ▪ &fFartura: &dIV '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -123,8 +149,18 @@ rewards:
     amount: 1
     icon:
       material: POTION
-      glow: true
-      display: '&d&lBooster 3x &7(10min)'
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
 
   livro-luck:
     type: COMMAND
@@ -134,12 +170,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado &7{level}'
+      display: '&aLivro de Faro Aguçado &7IV'
       lore:
       - '&7Aumenta a chance de vir'
       - '&7recompensa melhor.'
       - ''
-      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - '&8 ▪ &fFaro Aguçado: &aIV '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -152,12 +188,12 @@ rewards:
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&bLivro de Correnteza &7{level}'
+      display: '&bLivro de Correnteza &7IV'
       lore:
       - '&7Puxa o peixe mais rápido'
       - '&7para a sua vara.'
       - ''
-      - '&8 ▪ &fCorrenteza: &b{level} '
+      - '&8 ▪ &fCorrenteza: &bIV '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'

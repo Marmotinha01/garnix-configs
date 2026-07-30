@@ -15,7 +15,7 @@ icon:
   material: BLAZE_POWDER
   display: '&6Boosters'
   lore:
-  - '&7O 3x de 1 hora, que quase'
+  - '&7O 3x de 1h, que quase'
   - '&7nao sai jogando.'
   - ''
   - '&6Clique para acessar.'
@@ -43,9 +43,9 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: {symbol_color}{primary_color}{display} '
-      - ' &8▪ &fBônus: &a{bonus} '
-      - ' &8▪ &fDuração: &7{duration} '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &71h '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -65,9 +65,9 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: {symbol_color}{primary_color}{display} '
-      - ' &8▪ &fBônus: &a{multiplier}x '
-      - ' &8▪ &fDuração: &7{duration} '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &71h '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -87,9 +87,9 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: {type} '
-      - ' &8▪ &fBônus: &a{bonus} '
-      - ' &8▪ &fDuração: &7{duration} '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &71h '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -109,9 +109,9 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: &aDrops '
-      - ' &8▪ &fBônus: &a{multiplier} '
-      - ' &8▪ &fDuração: &7{duration} '
+      - ' &8▪ &fTipo: &eDrops '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &71h '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -131,9 +131,9 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: &aDrops '
-      - ' &8▪ &fBônus: &a{multiplier} '
-      - ' &8▪ &fDuração: &7{duration} '
+      - ' &8▪ &fTipo: &9Drops '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &71h '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -153,8 +153,8 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: &aVenda de Cactos '
-      - ' &8▪ &fBônus: &a{multiplier} '
-      - ' &8▪ &fDuração: &7{duration} '
+      - ' &8▪ &fTipo: &2Venda de Cactos '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &71h '
       flags:
       - HIDE_POTION_EFFECTS

@@ -47,6 +47,13 @@ rewards:
       material: LEATHER_HELMET
       color: '#6E5B3A'
       display: '&7Capacete Mineração &7[T&lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+1.5% '
+      - '&8 ▪ &dGemas: &a+1.0% '
+      - '&8 ▪ &aXP: &a+1.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -60,6 +67,13 @@ rewards:
       material: LEATHER_CHESTPLATE
       color: '#8C6A2F'
       display: '&aPeitoral Mineração &a[T&lII&a]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+3.0% '
+      - '&8 ▪ &dGemas: &a+2.0% '
+      - '&8 ▪ &aXP: &a+2.0% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -73,6 +87,13 @@ rewards:
       material: LEATHER_LEGGINGS
       color: '#C8922C'
       display: '&bCalça Mineração &b[T&lIII&b]'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+5.0% '
+      - '&8 ▪ &dGemas: &a+3.5% '
+      - '&8 ▪ &aXP: &a+3.5% '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -84,7 +105,10 @@ rewards:
     amount: 1
     icon:
       material: GOLD_PICKAXE
-      display: '&6Ouro'
+      display: '&6Skin de Ouro'
+      lore:
+      - ''
+      - ' &8Especificações:'
       flags:
       - HIDE_ATTRIBUTES
 
@@ -95,8 +119,16 @@ rewards:
     command: mina giveforge {player} 1
     amount: 1
     icon:
-      material: ANVIL
-      display: '&6Forja de Skin'
+      texture: 818f83eb64f438e3f6ae3a5c2dea8ed10303bad85ac34a798659a275aa096506
+      display: '&6Forja de Skins'
+      lore:
+      - '&7Combine skins para'
+      - '&7forjar uma melhor.'
+      - ''
+      - '&8 ▪ &fTipo: &6Picareta '
+      - ''
+      - ' &8Requisitos:'
+      - '&8 ▪ &c7 skins iguais '
 
   secundaria:
     type: CURRENCY
@@ -106,7 +138,7 @@ rewards:
     amount: '1000'
     icon:
       lore:
-      - '&8 ▪ &fQuantia: &71K '
+      - '&fQuantia: &71K '
   booster:
     type: COMMAND
     chance: 2
@@ -115,4 +147,15 @@ rewards:
     amount: 1
     icon:
       material: POTION
-      display: '&aBooster 2x &7(15min)'
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS

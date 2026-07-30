@@ -1,3 +1,10 @@
+# Para onde o botao de VOLTAR leva quando o preview e aberto pelo /shop
+# (`/caixas ver <caixa> shop`). Deixe vazio para sempre voltar ao hub do
+# /caixas. E um comando fixo de proposito: aceitar comando livre no argumento
+# daria a qualquer jogador um jeito de fazer o servidor executar o que ele
+# escrevesse.
+back-shop-command: shop
+
 title: Recompensas — {box}
 
 shape:
