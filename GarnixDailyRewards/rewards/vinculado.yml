@@ -22,7 +22,6 @@ collect-icon:
   - '&8 ▪ &dx&l1 &dChave VIP '
   - ''
   - '&aClique para coletar.'
-  - ''
 
 no-permission-icon:
   texture: '5726d9d0632e40bda5bcf65839ba2cc98a87bd619c53adf00310d6fc71f042b5'

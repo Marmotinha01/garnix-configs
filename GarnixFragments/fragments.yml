@@ -17,41 +17,37 @@
 # ele e a rota in-game de item de site que preco em coins nao consegue ser.
 fragments:
   presa:
-    display: '&cFragmento: Presa Colossal'
+    display: '&4Presa Colossal'
     icon:
       material: BONE
-      display: '&c&lPresa Colossal'
+      display: '&4Presa Colossal'
       glow: true
       lore:
-      - '&7O que sobra de um boss'
-      - '&7que nao aguentou o ultimo golpe.'
+      - '&8Fragmento'
 
   selo:
-    display: '&eFragmento: Selo Lacrado'
+    display: '&eSelo Lacrado'
     icon:
       material: PAPER
-      display: '&e&lSelo Lacrado'
+      display: '&eSelo Lacrado'
       glow: true
       lore:
-      - '&7Estava lacrado dentro de'
-      - '&7algo que voce abriu.'
+      - '&8Fragmento'
 
   marca:
-    display: '&aFragmento: Marca do Vencedor'
+    display: '&6Marca do Vencedor'
     icon:
       material: NAME_TAG
-      display: '&a&lMarca do Vencedor'
+      display: '&6Marca do Vencedor'
       glow: true
       lore:
-      - '&7So quem venceu carrega.'
-      - '&7Nao se compra, se ganha.'
+      - '&8Fragmento'
 
   estilhaco:
-    display: '&5Fragmento: Estilhaco de Arena'
+    display: '&cEstilhaco de Arena'
     icon:
       material: FLINT
-      display: '&5&lEstilhaco de Arena'
+      display: '&cEstilhaco de Arena'
       glow: true
       lore:
-      - '&7Ficou no chao da arena'
-      - '&7depois da ultima luta.'
+      - '&8Fragmento'

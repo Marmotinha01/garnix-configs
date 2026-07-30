@@ -31,12 +31,12 @@ shop-icon:
 # Placeholders: {amount}, {display}.
 withdraw-lore:
 - ''
-- '&8 ▪ &fArmazenados: &e{amount} '
+- '&8 ▪ &fArmazenados: &ex{amount} '
 - ''
 - '&aClique para retirar.'
 
 # Lore dos fragmentos que o jogador ainda não possui.
 locked-lore:
 - ''
-- '&7Você ainda não encontrou'
-- '&7nenhum deste fragmento.'
+- '&8 ▾ &cSem fragmentos desse tipo. '
+- ''

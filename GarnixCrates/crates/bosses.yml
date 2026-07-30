@@ -73,7 +73,7 @@ rewards:
     amount: 5
     icon:
       material: PAPER
-      display: '&eFragmento: Selo Lacrado'
+      display: '&eSelo Lacrado'
 
   secundaria-lote:
     type: CURRENCY
