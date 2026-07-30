@@ -11,14 +11,15 @@
 # bonus    -> aplicado na VENDA dos drops (DropsMenu:56), so em moeda.
 #             ⚠️ o desconto NAO vale nos upgrades (UpgradeManager:137).
 #
-# Ordem efetiva (discount + bonus): garnix 50 > supremo 41 > investidor,
-# influencer e streamer 35 > imortal 33 > yt 31 > tiktoker 27 > celestial 27 >
-# miniyt 24 > rank.wither (19%) > ... > rank.porco (1%).
+# Ordem efetiva (discount + bonus): garnix 50 > supremo 41 > investidor e
+# influencer 35 > imortal, yt, tiktoker e streamer 33 > celestial e miniyt 27 >
+# rank.wither (19%) > ... > rank.porco (1%).
 #
-# Parceiro (miniyt/tiktoker/yt/streamer) tem GANHO mas nunca DESCONTO: o
-# desconto e a proposta de valor do VIP pago, e o que faz o P2W ser perceptivel
-# sem ser humilhante. Sem estas entradas os quatro anunciavam -10%/+10% no
-# /requisitos e recebiam ZERO — nao estavam em tabela nenhuma.
+# Os tiers de influencer ESPELHAM um VIP pago, por decisao do dono: yt, tiktoker
+# e streamer valem um imortal; miniyt vale um celestial. Espelhar em vez de
+# inventar uma escada propria mantem uma regra so no servidor — e como a tabela
+# devolve a primeira entrada por (discount + bonus), empatar significa que ter
+# os dois nao muda nada, que e o comportamento certo.
 
 celestial:
   discount: 3 # porcentagem de desconto na compra
@@ -57,26 +58,26 @@ influencer:
   permission: vip.influencer
 
 miniyt:
-  discount: 0 # parceiro nao tem desconto: isso e do VIP pago
-  bonus: 24 # porcentagem de bonus nos drops
+  discount: 3 # igual ao celestial
+  bonus: 24 # igual ao celestial
   tag: '&b&lMINIYT'
   permission: vip.miniyt
 
 tiktoker:
-  discount: 0 # parceiro nao tem desconto: isso e do VIP pago
-  bonus: 27 # porcentagem de bonus nos drops
+  discount: 6 # igual ao imortal
+  bonus: 27 # igual ao imortal
   tag: '&b&lTIKTOKER'
   permission: vip.tiktoker
 
 yt:
-  discount: 0 # parceiro nao tem desconto: isso e do VIP pago
-  bonus: 31 # porcentagem de bonus nos drops
+  discount: 6 # igual ao imortal
+  bonus: 27 # igual ao imortal
   tag: '&b&lYT'
   permission: vip.yt
 
 streamer:
-  discount: 0 # parceiro nao tem desconto: isso e do VIP pago
-  bonus: 35 # porcentagem de bonus nos drops
+  discount: 6 # igual ao imortal
+  bonus: 27 # igual ao imortal
   tag: '&b&lSTREAMER'
   permission: vip.streamer
 
