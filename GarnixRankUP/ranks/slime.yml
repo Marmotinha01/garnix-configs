@@ -10,6 +10,7 @@ commands:
 - 'lp user {player} permission set rankup.rank.12 true'
 - 'lp user {player} permission set mining.bonus.12 true'
 - 'lp user {player} permission set spawner.buy.slime true'
+- 'lp user {player} permission set warehouse.sellmult.2813 true'
 
 costs:
 - 'coins 7890000000000'

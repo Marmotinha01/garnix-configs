@@ -24,6 +24,7 @@ Diretório de trabalho da economia da temporada. Todo material de projeto, cálc
 | [11-CACTO.md](11-CACTO.md) | A via do cacto: reinvestimento, freios, paridade | ✅ |
 | [12-RANKINGS.md](12-RANKINGS.md) | Os 33 placares do servidor + **a distribuição dos R$ 1.000** de fim de temporada | ✅ |
 | [13-PASSIVO.md](13-PASSIVO.md) | A via passiva: spawners, lâmina e máquinas. Mecânica lida no código + os números aplicados | ✅ 3a–3d |
+| [14-FARM-PESCA.md](14-FARM-PESCA.md) | Fazenda e pesca: o teto físico do farm, o gate 2D da pesca, as skins | ✅ Fase 4 |
 | [TESTES-IN-GAME.md](TESTES-IN-GAME.md) | **Checklist do que testar no jogo** — deixe aberto do lado enquanto testa | ✅ |
 | [metrics.csv](metrics.csv) | Metas de cronometragem por tier vs medido in-game | ✅ |
 | [sim/](sim/) | Simulador em JavaScript — abre `sim/index.html` no navegador | ✅ |
@@ -225,13 +226,43 @@ Corrigido: `preço por item = 0,15 × renda ÷ itens(N)` e `upgrades por bloco =
 
 `sword.yml` (a lore do `ceifador` **mente** — diz instakill, o código diz que dobra cabeças) · máquinas A–O · máquinas especiais · `spawnerslimite` crescente · galpão e cacto.
 
-### ⏳ Fase 4 — Farm e Pesca
+### ✅ Fase 4 — Farm e Pesca · **APLICADA**
 
-Farm com o **C2** (tabela de valor por nível) + 10ª skin. Pesca com as 20 recompensas de coins gateadas por `required-level` e `max-weight`.
+Detalhe em [14-FARM-PESCA.md](14-FARM-PESCA.md). Resumo:
 
-### ⏳ Fase 4b — os ~212 itens
+| | Fazenda | Pesca |
+|---|---|---|
+Fatia da renda | 18% (conta ativa) | 7% (conta AFK) |
+O problema | nível não aumentava renda **nenhuma**; nível 100 em 1,7h | a pilha de multiplicadores **não alcança coins** |
+A solução | 300 níveis + a escada do **C2**, 3,90× a cada 15 | 20 recompensas com gate 2D: nível × skin da vara |
+Teto de throughput | **4,09×10⁶ colheitas/h** — físico e real (regrow por posição) | 504 fisgadas/h — a via mais estrangulada |
+Tempo por nível | 10,3 min, plano · nível 300 no dia 20 | 23,9h, plano · nível 20 no dia 19,9 |
+Erro contra o alvo | 0,034% | 0,38% |
 
-Especificação pronta em [10-ITENS.md](10-ITENS.md). Critério de conclusão: as listas A e B voltam **vazias** numa varredura do zero.
+**Dois erros meus na escada da fazenda**, ambos invisíveis nas pontas: espalhar geometricamente entre T1 e T20 estourava o alvo em **200× no meio**; e ao corrigir, modelar a pilha de multiplicadores como linear fazia o degrau sair com multiplicador **0,82** — ou seja **subir de nível faria ganhar menos**. A forma certa é a da mineração: ancorar nas duas pontas e interpolar geométrico puro.
+
+**A `shop.yml` da pesca era um exploit de uma linha:** `1.500 corais → 1.500 spawnerslimite`, câmbio 1:1 com o item nº 1 do Ranking de Apelões — e a pesca rende 2,19 **milhões** de corais na temporada. Novo câmbio: **1.100 corais = 1 de limite**.
+
+**As skins:** a fazenda tinha 9 e só **2** fora da forja, violando a regra de que as **3 mais raras** não são forjáveis. Criei a 10ª (`opala`, nome provisório) e as três vias ficaram idênticas: 10 skins, a forja alcança a 7ª, **3 fora**.
+
+### ✅ Fase 4b — os ~212 itens · **ESPECIFICAÇÃO FECHADA**
+
+Detalhe em [10-ITENS.md](10-ITENS.md).
+
+⚠️ **Uma correção de rumo:** eu tinha escrito que a lista A (itens sem rota) voltaria vazia ao fim desta fase. Não volta — e não é por falta de trabalho. **Quase nenhum destes itens tem campo de custo no próprio config.** `bombs.yml` e o bloco `drill:` são definições de item puras (material, lore, raio, cooldown); armaduras, skins, livros e matadoras idem.
+
+> **Dar preço a um item quase nunca é editar o arquivo do item.** É criar a linha que o entrega — e essa linha mora numa tabela de loot (Fase 5) ou numa entrada de loja (Fase 7).
+
+Então a 4b entrega a **especificação completa** — classe, moeda, fórmula, raridade e canal de cada um dos ~214 itens — e as Fases 5 e 7 escrevem as linhas. A lista A fecha ao fim da **Fase 7**.
+
+**O que a 4b fechou de fato:**
+
+| | |
+|---|---|
+**A tabela de boosters** | era o item que bloqueava qualquer preço. Ela **não pode morar num `.yml`**: os arquivos de booster são só templates, e `{multiplier}`/`{duration}` vêm dos argumentos do comando. Virou convenção: **8 combinações in-game + 4 no site**, × 7 sistemas, com o comando exato de cada um |
+**Um achado que muda a raridade** | **o booster não vale o mesmo em toda via.** Ele MULTIPLICA em spawner e máquina, e SOMA em mineração, fazenda e pesca. Um 3× de spawner vale exatamente 3×; o mesmo 3× de mineração vale ~2,2×, porque divide o bloco aditivo com skin, armadura e permBonus. **Um booster de spawner é ~1,4× mais forte e tem que ser proporcionalmente mais raro no loot** |
+**O mapa de onde cada rota mora** | é o que deixa as Fases 5 e 7 serem mecânicas |
+
 
 ### ⏳ Fase 5 — superfícies de recompensa
 

@@ -1,11 +1,11 @@
 display: "Cataclismo"
-max-level: 50
-base-cost: 500.0
-increase-cost: 200.0
+max-level: 500
+base-cost: 975.8
+increase-cost: 390.3
 
 # CHANCE flavour (percent)
-base-chance: 5
-increase-chance: 0.3
+base-chance: 0.1535
+increase-chance: 0.1535
 explosion-radius: 2
 
 title: "&c&lCATACLISMO"

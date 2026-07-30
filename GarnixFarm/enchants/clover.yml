@@ -1,11 +1,11 @@
 display: "Trevo"
-max-level: 50
-base-cost: 1000.0
-increase-cost: 400.0
+max-level: 500
+base-cost: 1952
+increase-cost: 780.6
 
 # CHANCE flavour (percent)
-base-chance: 2
-increase-chance: 0.15
+base-chance: 0.0000815
+increase-chance: 0.0000815
 key-id: "fazenda"
 
 # Anunciado no flush em lote (a cada 30s), tokens {count} / {enchant}.

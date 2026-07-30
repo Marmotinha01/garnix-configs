@@ -1,11 +1,11 @@
 display: "Espantalho de Palha"
-max-level: 50
-base-cost: 1500.0
-increase-cost: 600.0
+max-level: 500
+base-cost: 2927
+increase-cost: 1171
 
 # CHANCE flavour (percent): ao colher, chance de invocar o espantalho.
-base-chance: 2
-increase-chance: 0.15
+base-chance: 0.0187
+increase-chance: 0.0187
 
 # Companion: flutua acima do jogador por duration-ticks, seguindo-o, e a cada
 # harvest-interval-ticks colhe um disco de raio harvest-radius ao redor dele,

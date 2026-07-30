@@ -33,7 +33,7 @@ farms:
     crop: WHEAT
     exp: 1.0
     currencies:
-      primary: 5.0
+      primary: 0.5
       secondary: 10.0
     icon:
       slot: 11
@@ -49,14 +49,14 @@ farms:
     crop: CARROT
     exp: 3.0
     upgrade:
-      cost: 50000.0
+      cost: 10800000.0
       currency: coins
     require:
-      level: 5
-      crops: 500
+      level: 60
+      crops: 1105000
       crop-type: trigo
     currencies:
-      primary: 45.0
+      primary: 119
       secondary: 20.0
     icon:
       slot: 12
@@ -71,14 +71,14 @@ farms:
     crop: POTATO
     exp: 6.0
     upgrade:
-      cost: 500000.0
+      cost: 903000000000.0
       currency: coins
     require:
-      level: 20
-      crops: 15000
+      level: 150
+      crops: 5865000
       crop-type: cenoura
     currencies:
-      primary: 120.0
+      primary: 436000
       secondary: 30.0
     icon:
       slot: 13
@@ -93,14 +93,14 @@ farms:
     crop: NETHER_WART
     exp: 12.0
     upgrade:
-      cost: 5000000.0
+      cost: 11400000000000000.0
       currency: coins
     require:
-      level: 50
-      crops: 300000
+      level: 240
+      crops: 22066000
       crop-type: batata
     currencies:
-      primary: 350.0
+      primary: 1600000000
       secondary: 40.0
     icon:
       slot: 14

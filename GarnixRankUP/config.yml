@@ -43,63 +43,75 @@ prestige:
     '1':    # dia 10
       commands:
       - 'lp user {player} permission set machines.buy.d true'
+      - 'lp user {player} permission set warehouse.sellmult.1616000 true'
     # '10':  trocador de dracmas
     # - 'fragmentos give {player} <tipo> 1'   # ⏳ Fase 5
     '20':   # dia 10
       commands:
       - 'lp user {player} permission set machines.buy.e true'
+      - 'lp user {player} permission set warehouse.sellmult.1616000 true'
     # '35':  4o slot de booster
     # ⏳ nao existe permissao de slot de booster no codigo — precisaria de C novo
     '50':   # dia 11
       commands:
       - 'lp user {player} permission set machines.buy.f true'
+      - 'lp user {player} permission set warehouse.sellmult.7912000 true'
     # '65':  slot extra de maquina especial
     # ⏳ nao existe teto de slot de maquina — o dono definiu que nao tem teto
     '80':   # dia 12
       commands:
       - 'lp user {player} permission set machines.buy.g true'
+      - 'lp user {player} permission set warehouse.sellmult.38730000 true'
     # '95':  caixa de prestigio I
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '110':  # dia 13
       commands:
       - 'lp user {player} permission set machines.buy.h true'
+      - 'lp user {player} permission set warehouse.sellmult.189600000 true'
     # '125':  tag de prestigio I
     # ⏳ Fase 7, junto com as tags
     '140':  # dia 14
       commands:
       - 'lp user {player} permission set machines.buy.i true'
+      - 'lp user {player} permission set warehouse.sellmult.928400000 true'
     '155':    # +1 vaga de visitante
       commands:
       - 'mina giveslot {player} 1'
     '170':  # dia 15
       commands:
       - 'lp user {player} permission set machines.buy.j true'
+      - 'lp user {player} permission set warehouse.sellmult.4545000000 true'
     # '185':  caixa de prestigio II
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '200':  # dia 16
       commands:
       - 'lp user {player} permission set machines.buy.k true'
+      - 'lp user {player} permission set warehouse.sellmult.22250000000 true'
     # '215':  tag de prestigio II
     # ⏳ Fase 7
     '230':  # dia 17
       commands:
       - 'lp user {player} permission set machines.buy.l true'
+      - 'lp user {player} permission set warehouse.sellmult.108900000000 true'
     '245':    # +1 vaga de visitante
       commands:
       - 'mina giveslot {player} 1'
     '260':  # dia 18
       commands:
       - 'lp user {player} permission set machines.buy.m true'
+      - 'lp user {player} permission set warehouse.sellmult.533400000000 true'
     # '275':  tag de prestigio III
     # ⏳ Fase 7
     '290':  # dia 19
       commands:
       - 'lp user {player} permission set machines.buy.n true'
+      - 'lp user {player} permission set warehouse.sellmult.2611000000000 true'
     # '305':  caixa de prestigio III
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '320':  # dia 20
       commands:
       - 'lp user {player} permission set machines.buy.o true'
+      - 'lp user {player} permission set warehouse.sellmult.12790000000000 true'
     # '345':  TETO da temporada — titulo
     # ⏳ Fase 7
 

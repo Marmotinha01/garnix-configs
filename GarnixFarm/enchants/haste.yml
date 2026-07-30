@@ -1,7 +1,7 @@
 display: "Agilidade"
 max-level: 2
-base-cost: 400.0
-increase-cost: 400.0
+base-cost: 780.6
+increase-cost: 780.6
 
 # PASSIVE flavour (sem chance): tendo nível ≥ 1, o jogador ganha velocidade
 # infinita ao entrar na fazenda (amplificador = nível - 1), até sair ou desencantar.

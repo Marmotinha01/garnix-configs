@@ -1,11 +1,11 @@
 display: "Prosperidade"
-max-level: 100
-base-cost: 100.0
-increase-cost: 50.0
+max-level: 500
+base-cost: 195.2
+increase-cost: 97.58
 
 # MULTIPLIER flavour (coins)
 base-multiplier: 1.05
-increase-multiplier: 0.02
+increase-multiplier: 0.03241
 multiplier-provider: "coins"
 
 icon:

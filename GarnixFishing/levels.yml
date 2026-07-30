@@ -1,44 +1,51 @@
-# XP required to ADVANCE into each level. Level 0 is the start; the highest
-# configured level is the cap. Rewards (rewards.yml) unlock by level.
+# GarnixFishing — curva de XP da vara.
+#
+# ⚠️ ESTICADA. A curva antiga somava 157.500 XP no total, que numa conta AFK
+# pescando 24h e menos de 4 DIAS — a escada inteira das 20 recompensas de
+# coins esgotaria no dia 4 e os outros 16 dias nao abririam nada.
+#
+# Agora: 1 nivel por dia de pesca AFK, ~23,9h cada, nivel 20 no dia 20.
+# A razao de 1,0398 por nivel acompanha o crescimento das fisgadas/h
+# (240 -> 504 com speed 5 e double 40%), entao o tempo por nivel fica PLANO.
 
 levels:
   '1':
-    exp: 100
+    exp: 45934
   '2':
-    exp: 250
+    exp: 47764
   '3':
-    exp: 450
+    exp: 49666
   '4':
-    exp: 700
+    exp: 51643
   '5':
-    exp: 1000
+    exp: 53700
   '6':
-    exp: 1400
+    exp: 55838
   '7':
-    exp: 1900
+    exp: 58062
   '8':
-    exp: 2500
+    exp: 60374
   '9':
-    exp: 3200
+    exp: 62778
   '10':
-    exp: 4000
+    exp: 65278
   '11':
-    exp: 5000
+    exp: 67878
   '12':
-    exp: 6200
+    exp: 70581
   '13':
-    exp: 7600
+    exp: 73391
   '14':
-    exp: 9200
+    exp: 76314
   '15':
-    exp: 11000
+    exp: 79353
   '16':
-    exp: 13500
+    exp: 82513
   '17':
-    exp: 16500
+    exp: 85799
   '18':
-    exp: 20000
+    exp: 89215
   '19':
-    exp: 24000
+    exp: 92768
   '20':
-    exp: 29000
+    exp: 96462

@@ -103,6 +103,31 @@ const PARAMS = {
       frenzyUptimeReal: 1.5,   // nominal 2,0 x ~50% de uptime
     },
     teto: 100,
+    // ─── PICO vs SUSTENTADO ─────────────────────────────────────────────────
+    // O `teto: 100` acima e o PICO — com o booster ligado. Mas a escada de valor
+    // de cada via NAO e calibrada no pico, e sim no SUSTENTADO: tudo que o
+    // jogador tem permanentemente, SEM o booster.
+    //
+    // Por que: o booster do site e 3x de 1h, e o in-game vai ate 2x/30m ou
+    // 3x/10m. `Booster.canStackWith` exige MESMO multiplicador e `extend` soma
+    // tempo sem teto, entao a duracao acumula — o booster e rajada para quem
+    // depende do loot e pode ser permanente para quem compra.
+    //
+    // Se a escada fosse calibrada COM o booster, o alvo do tier passaria a
+    // descrever o PAGANTE e o jogador normal ficaria abaixo do alvo o tempo todo.
+    //
+    //   mineracao  pico 100,2x  ->  sustentado 55,47x   (razao 1,803)
+    //   fazenda    pico 100,0x  ->  sustentado 55,36x   (razao 1,806)
+    //   spawners   pico   8,1x  ->  sustentado  2,70x   (razao 3,000)
+    //   maquinas   pico   4,1x  ->  sustentado  1,35x   (razao 0,741)
+    //   pesca      pico   1,0x  ->  sustentado  1,00x   (a pilha nao alcanca coins)
+    sustentado: {
+      mineracao: 55.47,
+      fazenda: 55.36,
+      spawners: 2.70,
+      maquinas: 1.35,
+      pesca: 1.0,
+    },
   },
 
   // ------------------------------------------------------- empilhamento

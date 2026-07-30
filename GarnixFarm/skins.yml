@@ -156,10 +156,47 @@ skins:
       - HIDE_ATTRIBUTES
     bonuses:
       coins:
-        value: 30.0
+        value: 28.0
         percent: true
       sementes:
-        value: 19.0
+        value: 17.0
+        percent: true
+
+  # ⚠️ SKIN NOVA — a 10ª da fazenda, criada para fechar a assimetria com as
+  # outras duas vias. Mineração e pesca tinham 10 skins e QUATRO degraus acima
+  # do teto de forja; a fazenda tinha 9 e três. Como o farm já é a via mais
+  # frágil do repo, é a que menos podia perder conteúdo — e a regra "vender as
+  # 3 mais raras no site" só vale igualmente nas três vias se as três tiverem
+  # a mesma escada.
+  #
+  # A escada agora espelha a da mineração degrau a degrau:
+  #   âmbar 20 (teto de forja)  =  rubi 20
+  #   esmeralda 28              =  quartzo 28
+  #   OPALA 38                  =  jade 38
+  #   cristal 50                =  safira 50
+  #   marfim 65                 =  mithril 65
+  #
+  # ⏳ O NOME É PROVISÓRIO — o dono define o final.
+  opala:
+    display: '&bOpala'
+    material: DIAMOND_HOE
+    forgeable: false
+    icon:
+      material: DIAMOND_HOE
+      display: '&bSkin de Opala'
+      glow: true
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '{bonus}'
+      flags:
+      - HIDE_ATTRIBUTES
+    bonuses:
+      coins:
+        value: 38.0
+        percent: true
+      sementes:
+        value: 25.0
         percent: true
 
   cristal:
@@ -178,10 +215,10 @@ skins:
       - HIDE_ATTRIBUTES
     bonuses:
       coins:
-        value: 45.0
+        value: 50.0
         percent: true
       sementes:
-        value: 30.0
+        value: 34.0
         percent: true
 
   marfim:

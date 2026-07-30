@@ -1,11 +1,11 @@
 display: "Ceifa"
-max-level: 50
-base-cost: 700.0
-increase-cost: 250.0
+max-level: 500
+base-cost: 1366
+increase-cost: 487.9
 
 # CHANCE flavour (percent)
-base-chance: 3
-increase-chance: 0.2
+base-chance: 0.0997
+increase-chance: 0.0997
 harvest-radius: 4
 
 title: "&2&lCEIFA"

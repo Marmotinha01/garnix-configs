@@ -1,11 +1,11 @@
 display: "Laser"
-max-level: 50
-base-cost: 800.0
-increase-cost: 300.0
+max-level: 500
+base-cost: 1561
+increase-cost: 585.5
 
 # CHANCE flavour (percent)
-base-chance: 4
-increase-chance: 0.25
+base-chance: 0.1266
+increase-chance: 0.1266
 max-line-radius: 6
 
 title: "&b&lLASER"

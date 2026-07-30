@@ -11,6 +11,7 @@ commands:
 - 'lp user {player} permission set mining.bonus.6 true'
 - 'lp user {player} permission set spawner.buy.ocelot true'
 - 'lp user {player} permission set machines.buy.a true'
+- 'lp user {player} permission set warehouse.sellmult.24 true'
 
 costs:
 - 'coins 94600000'

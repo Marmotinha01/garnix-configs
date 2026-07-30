@@ -1,3 +1,46 @@
+# ═══ A ECONOMIA DO LITRO ═════════════════════════════════════════════════════
+#
+# MECÂNICA (MachineTickManager:86): 1 litro por ciclo, POR BLOCO — não por
+# máquina empilhada. Empilhar 64 unidades num bloco custa o mesmo combustível que
+# empilhar 1. Isso é bom e é intencional: recompensa consolidar.
+#
+# CONSUMO por bloco, pelos ciclos que os arquivos de máquina usam:
+#   máquinas A–O e as de moeda secundária  · ciclo 10s   → 8.640 L/dia
+#   Máquina de Combustível                 · ciclo 60s   →   1.440 L/dia
+#   Máquina de Cash                        · ciclo 432s  →     200 L/dia
+#   Máquina de Limite                      · ciclo 3600s →      24 L/dia
+#
+# ORÇAMENTO: combustível é 8% da renda diária (o sink recorrente do
+# 01-ECONOMIA). Como o consumo é fixo por bloco e a produção cresce com o tier,
+# o preço do litro tem que subir junto — senão o combustível vira grátis no dia 5.
+#
+#   preço do litro na banda N = 0,08 × produção/hora do bloco daquela banda ÷ 360
+#                             = 0,08 × amount × stack
+#
+# ⏳ O PREÇO EM SI ENTRA NA FASE 7 (coins-shop), com um produto por banda usando
+#    `release-in`. Um preço único para a temporada inteira não funciona: seria
+#    proibitivo no dia 3 e irrelevante no dia 10.
+#
+# A REGRA QUE FAZ O INFINITO VALER (01-ECONOMIA):
+#   O valor do combustível infinito é EXATAMENTE o custo do comum. Se o comum for
+#   barato demais, o infinito não vale nada e quem comprou se sente enganado; se
+#   for caro demais, o infinito vira obrigatório e o P2W passa de perceptível a
+#   punitivo. Os 8% são o ponto: +8% líquido para sempre na melhor máquina, mais
+#   o alívio de nunca reabastecer.
+#
+#   E como o infinito só funciona em UMA máquina por vez, o jogador o aplica na
+#   melhor que tem — então o valor dele CRESCE junto com o jogador e ele nunca
+#   fica obsoleto. É o que o torna o item mais raro do servidor sem precisar de
+#   nenhum teto artificial.
+#
+# ROTAS (o atrito é a TAREFA, não a escassez — ninguém deve ficar com máquina
+# parada, mas todo mundo deve sentir a chatice de ir abastecer):
+#   comum    · faixa "Bom" das crates, caixas, eventos, ontime  → ~70-80% do uptime
+#            · compra no /loja em coins                          → o resto
+#            · Máquina de Combustível (COMBUSTIVEL.yml)          → ~53% do consumo
+#   infinito · site (faixa C/D) + jackpot da caixa `garnix`
+#            · ⚠️ mais raro que as próprias máquinas especiais
+
 default:
   display: '&eCombustível'
   material: COAL

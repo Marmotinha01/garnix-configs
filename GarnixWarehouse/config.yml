@@ -36,4 +36,12 @@ farms:
     data: 0
     display: '&aCacto'
     currency: coins
-    sell-price: 10
+    # ⏳ Derivado de: alvo do cacto no dia 1 (renda x 15% / 24) dividido pela
+    # colheita/hora de uma farm de 100 blocos. A colheita/hora e uma
+    # ESTIMATIVA (teste M2): se a taxa real for k x a estimada, este numero
+    # divide por k e a escada de valor nao muda — ela e razao pura.
+    # ⏳ Derivado de: alvo do cacto no dia 1 (renda x 15% / 24) dividido pela
+    # colheita/hora de uma farm de 100 blocos. A colheita/hora e uma
+    # ESTIMATIVA (teste M2): se a taxa real for k x a estimada, este numero
+    # divide por k e a escada de valor nao muda — ela e razao pura.
+    sell-price: 0.499

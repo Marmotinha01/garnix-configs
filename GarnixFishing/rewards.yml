@@ -105,3 +105,346 @@ rewards:
       lore:
       - '&7Uma chave de caixa exclusiva!'
       glow: true
+
+  # ── AS 20 RECOMPENSAS DE COINS ──────────────────────────────────────────────
+  # Gate 2D: `required-level` (a escada de 20 niveis) x `weight` (a skin da vara).
+  # A recompensa do nivel N usa o peso da skin ceil(N/2), entao a skin ANTERIOR
+  # nao a alcanca — o equipamento compra ACESSO, nao multiplicador.
+  #
+  # Por que aqui e nao num multiplicador: a pilha da pesca nao chega em coins.
+  # `config.yml currency: corais`, e skins/armaduras/boosters empurram corais.
+  # Entao a amplitude toda vem do `amount` destas 20 recompensas.
+  #
+  # `amount` e lido como `new BigDecimal(getString(...))` (Reward.java:71) — por
+  # isso vai ENTRE ASPAS: sem aspas um inteiro grande viraria BigInteger e o
+  # getString devolveria nulo.
+
+  # nivel 1 · exige a skin default (peso 3)
+  coins_01:
+    required-level: 1
+    chance: 10
+    weight: 3
+    xp: 8
+    type: CURRENCY
+    currency-id: coins
+    amount: '50.1'
+    display: '&7Cardume'
+    icon:
+      material: RAW_FISH
+      display: '&7Cardume'
+      lore:
+      - '&7Exige a vara &fdefault&7.'
+
+  # nivel 2 · exige a skin default (peso 3)
+  coins_02:
+    required-level: 2
+    chance: 10
+    weight: 3
+    xp: 10
+    type: CURRENCY
+    currency-id: coins
+    amount: '298'
+    display: '&7Baú Afundado'
+    icon:
+      material: CHEST
+      display: '&7Baú Afundado'
+      lore:
+      - '&7Exige a vara &fdefault&7.'
+
+  # nivel 3 · exige a skin coral (peso 6)
+  coins_03:
+    required-level: 3
+    chance: 10
+    weight: 6
+    xp: 12
+    type: CURRENCY
+    currency-id: coins
+    amount: '2050'
+    display: '&fÂncora Perdida'
+    icon:
+      material: IRON_INGOT
+      display: '&fÂncora Perdida'
+      lore:
+      - '&7Exige a vara &fcoral&7.'
+
+  # nivel 4 · exige a skin coral (peso 6)
+  coins_04:
+    required-level: 4
+    chance: 10
+    weight: 6
+    xp: 14
+    type: CURRENCY
+    currency-id: coins
+    amount: '14000'
+    display: '&fCasco de Navio'
+    icon:
+      material: IRON_BLOCK
+      display: '&fCasco de Navio'
+      lore:
+      - '&7Exige a vara &fcoral&7.'
+
+  # nivel 5 · exige a skin escama (peso 10)
+  coins_05:
+    required-level: 5
+    chance: 10
+    weight: 10
+    xp: 17
+    type: CURRENCY
+    currency-id: coins
+    amount: '95200'
+    display: '&aCofre Salgado'
+    icon:
+      material: GOLD_INGOT
+      display: '&aCofre Salgado'
+      lore:
+      - '&7Exige a vara &fescama&7.'
+
+  # nivel 6 · exige a skin escama (peso 10)
+  coins_06:
+    required-level: 6
+    chance: 10
+    weight: 10
+    xp: 20
+    type: CURRENCY
+    currency-id: coins
+    amount: '645000'
+    display: '&aRelicário do Recife'
+    icon:
+      material: GOLD_BLOCK
+      display: '&aRelicário do Recife'
+      lore:
+      - '&7Exige a vara &fescama&7.'
+
+  # nivel 7 · exige a skin prata (peso 15)
+  coins_07:
+    required-level: 7
+    chance: 10
+    weight: 15
+    xp: 24
+    type: CURRENCY
+    currency-id: coins
+    amount: '4360000'
+    display: '&bTesouro da Corrente'
+    icon:
+      material: DIAMOND
+      display: '&bTesouro da Corrente'
+      lore:
+      - '&7Exige a vara &fprata&7.'
+
+  # nivel 8 · exige a skin prata (peso 15)
+  coins_08:
+    required-level: 8
+    chance: 10
+    weight: 15
+    xp: 29
+    type: CURRENCY
+    currency-id: coins
+    amount: '29300000'
+    display: '&bEspólio do Naufrágio'
+    icon:
+      material: DIAMOND_BLOCK
+      display: '&bEspólio do Naufrágio'
+      lore:
+      - '&7Exige a vara &fprata&7.'
+
+  # nivel 9 · exige a skin turquesa (peso 22)
+  coins_09:
+    required-level: 9
+    chance: 10
+    weight: 22
+    xp: 34
+    type: CURRENCY
+    currency-id: coins
+    amount: '196000000'
+    display: '&3Arca das Marés'
+    icon:
+      material: EMERALD
+      display: '&3Arca das Marés'
+      lore:
+      - '&7Exige a vara &fturquesa&7.'
+
+  # nivel 10 · exige a skin turquesa (peso 22)
+  coins_10:
+    required-level: 10
+    chance: 10
+    weight: 22
+    xp: 41
+    type: CURRENCY
+    currency-id: coins
+    amount: '1310000000'
+    display: '&3Câmara Submersa'
+    icon:
+      material: EMERALD_BLOCK
+      display: '&3Câmara Submersa'
+      lore:
+      - '&7Exige a vara &fturquesa&7.'
+
+  # nivel 11 · exige a skin abissita (peso 32)
+  coins_11:
+    required-level: 11
+    chance: 10
+    weight: 32
+    xp: 50
+    type: CURRENCY
+    currency-id: coins
+    amount: '8770000000'
+    display: '&9Galeão Perdido'
+    icon:
+      material: LAPIS_BLOCK
+      display: '&9Galeão Perdido'
+      lore:
+      - '&7Exige a vara &fabissita&7.'
+
+  # nivel 12 · exige a skin abissita (peso 32)
+  coins_12:
+    required-level: 12
+    chance: 10
+    weight: 32
+    xp: 59
+    type: CURRENCY
+    currency-id: coins
+    amount: '58400000000'
+    display: '&9Cofre do Abismo'
+    icon:
+      material: ENDER_CHEST
+      display: '&9Cofre do Abismo'
+      lore:
+      - '&7Exige a vara &fabissita&7.'
+
+  # nivel 13 · exige a skin serenita (peso 45)
+  coins_13:
+    required-level: 13
+    chance: 10
+    weight: 45
+    xp: 71
+    type: CURRENCY
+    currency-id: coins
+    amount: '388000000000'
+    display: '&dHerança do Leviatã'
+    icon:
+      material: BEACON
+      display: '&dHerança do Leviatã'
+      lore:
+      - '&7Exige a vara &fserenita&7.'
+
+  # nivel 14 · exige a skin serenita (peso 45)
+  coins_14:
+    required-level: 14
+    chance: 10
+    weight: 45
+    xp: 86
+    type: CURRENCY
+    currency-id: coins
+    amount: '2570000000000'
+    display: '&dTrono de Coral'
+    icon:
+      material: PRISMARINE
+      display: '&dTrono de Coral'
+      lore:
+      - '&7Exige a vara &fserenita&7.'
+
+  # nivel 15 · exige a skin oceanita (peso 65)
+  coins_15:
+    required-level: 15
+    chance: 10
+    weight: 65
+    rare: true
+    xp: 103
+    type: CURRENCY
+    currency-id: coins
+    amount: '17000000000000'
+    display: '&5Reserva Abissal'
+    icon:
+      material: PRISMARINE
+      display: '&5Reserva Abissal'
+      lore:
+      - '&7Exige a vara &foceanita&7.'
+
+  # nivel 16 · exige a skin oceanita (peso 65)
+  coins_16:
+    required-level: 16
+    chance: 10
+    weight: 65
+    rare: true
+    xp: 123
+    type: CURRENCY
+    currency-id: coins
+    amount: '112000000000000'
+    display: '&5Bóveda Oceânica'
+    icon:
+      material: SEA_LANTERN
+      display: '&5Bóveda Oceânica'
+      lore:
+      - '&7Exige a vara &foceanita&7.'
+
+  # nivel 17 · exige a skin perola (peso 90)
+  coins_17:
+    required-level: 17
+    chance: 10
+    weight: 90
+    rare: true
+    xp: 148
+    type: CURRENCY
+    currency-id: coins
+    amount: '742000000000000'
+    display: '&eLegado da Maré Negra'
+    icon:
+      material: NETHER_STAR
+      display: '&eLegado da Maré Negra'
+      lore:
+      - '&7Exige a vara &fperola&7.'
+      glow: true
+
+  # nivel 18 · exige a skin perola (peso 90)
+  coins_18:
+    required-level: 18
+    chance: 10
+    weight: 90
+    rare: true
+    xp: 177
+    type: CURRENCY
+    currency-id: coins
+    amount: '4890000000000000'
+    display: '&eRelíquia do Vórtice'
+    icon:
+      material: NETHER_STAR
+      display: '&eRelíquia do Vórtice'
+      lore:
+      - '&7Exige a vara &fperola&7.'
+      glow: true
+
+  # nivel 19 · exige a skin tempestita (peso 130)
+  coins_19:
+    required-level: 19
+    chance: 10
+    weight: 130
+    rare: true
+    xp: 213
+    type: CURRENCY
+    currency-id: coins
+    amount: '32200000000000000'
+    display: '&6&lCoroa do Mar Profundo'
+    icon:
+      material: DRAGON_EGG
+      display: '&6&lCoroa do Mar Profundo'
+      lore:
+      - '&7Exige a vara &ftempestita&7.'
+      glow: true
+
+  # nivel 20 · exige a skin tempestita (peso 130)
+  coins_20:
+    required-level: 20
+    chance: 10
+    weight: 130
+    rare: true
+    xp: 256
+    type: CURRENCY
+    currency-id: coins
+    amount: '212000000000000000'
+    display: '&6&lTesouro da Tempestade'
+    icon:
+      material: DRAGON_EGG
+      display: '&6&lTesouro da Tempestade'
+      lore:
+      - '&7Exige a vara &ftempestita&7.'
+      glow: true

@@ -3,14 +3,98 @@
 #   cost    — price in the config currency (corais).
 #   command — run as console on purchase; {player} = buyer's name.
 #   icon    — material/display/lore shown in the menu (shared buy-lore appended).
+#
+# ═══ POR QUE ESTE ARQUIVO FOI REESCRITO ══════════════════════════════════════
+#
+# Tinha UM produto, e ele era um exploit:
+#
+#   spawner-limit: cost 1500 corais  ->  spawner givelimite {player} 1500
+#
+# Câmbio 1:1 com o item nº 1 do Ranking de Apelões. A pesca rende ~2,19 milhões
+# de corais na temporada, então isso comprava ~2,19 MILHÕES de limite de spawner
+# — várias ordens acima de qualquer necessidade real, já que um bloco comporta
+# no máximo 512 itens de spawner.
+#
+# ═══ O CÂMBIO NOVO ═══════════════════════════════════════════════════════════
+#
+#   1.100 corais = 1 de limite
+#
+# Derivado: 2,19×10⁶ corais na temporada ÷ ~2.000 de limite, que é o teto útil
+# com folga (512 itens por bloco × os blocos que o jogador mantém).
+#
+# ⚠️ Os três lotes têm EXATAMENTE o mesmo câmbio — o maior é só conveniência,
+# nunca desconto. Um desconto por volume aqui seria auto-anulável: o produto não
+# tem gate nem contador por jogador, então o mais barato por unidade dominaria e
+# os outros dois virariam decoração.
+#
+# `maquinaslimite` entra pelo mesmo câmbio: as duas são moedas de contagem pura
+# e devem custar o mesmo esforço.
 products:
-  spawner-limit:
+
+  # ── Limite de spawner ──────────────────────────────────────────────────────
+  spawner-limit-1:
     slot: 10
-    cost: 1500
-    command: spawner givelimite {player} 1500
+    cost: 1100
+    command: spawner givelimite {player} 1
     icon:
       material: PAPER
       display: '&bLimite de Spawner'
       lore:
-      - '&8 ▪ &fQuantia: &71.5K '
+      - '&8 ▪ &fQuantia: &b1 '
+      - ''
+
+  spawner-limit-10:
+    slot: 11
+    cost: 11000
+    command: spawner givelimite {player} 10
+    icon:
+      material: PAPER
+      display: '&bLimite de Spawner'
+      lore:
+      - '&8 ▪ &fQuantia: &b10 '
+      - ''
+
+  spawner-limit-100:
+    slot: 12
+    cost: 110000
+    command: spawner givelimite {player} 100
+    icon:
+      material: PAPER
+      display: '&bLimite de Spawner'
+      lore:
+      - '&8 ▪ &fQuantia: &b100 '
+      - ''
+
+  # ── Limite de maquina ──────────────────────────────────────────────────────
+  machine-limit-1:
+    slot: 14
+    cost: 1100
+    command: maquina givelimite {player} 1
+    icon:
+      material: PAPER
+      display: '&eLimite de Maquina'
+      lore:
+      - '&8 ▪ &fQuantia: &e1 '
+      - ''
+
+  machine-limit-10:
+    slot: 15
+    cost: 11000
+    command: maquina givelimite {player} 10
+    icon:
+      material: PAPER
+      display: '&eLimite de Maquina'
+      lore:
+      - '&8 ▪ &fQuantia: &e10 '
+      - ''
+
+  machine-limit-100:
+    slot: 16
+    cost: 110000
+    command: maquina givelimite {player} 100
+    icon:
+      material: PAPER
+      display: '&eLimite de Maquina'
+      lore:
+      - '&8 ▪ &fQuantia: &e100 '
       - ''

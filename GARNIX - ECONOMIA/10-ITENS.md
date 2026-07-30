@@ -4,22 +4,31 @@ Especificação de **todo item que vai para o inventário do jogador** e tem efe
 
 **A lei:** nenhum item ativável existe sem **rota** e sem **preço**. Se um item não deve chegar ao jogador, ele **sai do config** — não fica como comando de admin. Item de admin sem preço é exatamente como economias de servidor vazam.
 
-Última atualização: **29/07/2026**
+Última atualização: **30/07/2026** (Fase 4b)
 
 ---
 
 ## Estado atual
 
-| Métrica | Valor |
-|---|---|
-Itens ativáveis distintos (contando variante/tier/nível) | **~212** |
-Templates de config que os geram | 48 |
-**Com rota de aquisição em config** | **~50** |
-**Sem rota nenhuma** — só comando de admin, ou nada | **~162 (76%)** |
-Com efeito econômico e **sem custo definido** | **28 grupos** |
-**Preços de item definidos no repo inteiro** | **6** |
+| Métrica | No começo | **Agora** |
+|---|---|---|
+Itens ativáveis distintos | ~212 | ~214 (+ `opala`, + a Máquina de Combustível) |
+**Com rota e preço em config** | **6** | **~70** |
+Sem rota nenhuma | ~162 (76%) | ~144 — e **cada um tem fase e canal definidos** |
 
-As 6 rotas que existem hoje: vara de pesca (10.000 coins) · máquina de madeira (1.000 coins) · os 20 spawners (5B coins) · limite de spawners (1.500 corais) · a lâmina (`/lamina`, grátis) · a matadora inicial (`/matadora`, grátis).
+**O que ganhou rota e preço até aqui:**
+
+| | |
+|---|---|
+20 spawners | rank N + coins do tier N + **dracmas** (o portão de tempo) |
+15 máquinas A–O | coins da banda · 3 por rank, 12 por prestígio |
+7 máquinas especiais | `shop: false` — rota por loot/site, produção calibrada |
+Vara de pesca | 10.000 coins (mantida) |
+Coral-shop | 6 produtos, câmbio **1.100 corais = 1 de limite** |
+Cacto | `sell-price` derivado + a escada `warehouse.sellmult` |
+3 upgrades de planta | coins, nos níveis 60 / 150 / 240 |
+
+As 6 rotas originais eram: vara de pesca (10.000 coins) · máquina de madeira (1.000 coins) · os 20 spawners (5B coins, idênticos) · limite de spawners (1.500 corais, o exploit 1:1) · a lâmina (`/lamina`, grátis) · a matadora inicial (`/matadora`, grátis).
 
 ### As 3 correntes quebradas
 
@@ -195,61 +204,132 @@ Kits VIP | chave premium + caixa | _(a definir)_ | diário/semanal/mensal |
 
 ---
 
-## Boosters — a tabela que não existe
+## Boosters — a tabela definitiva
 
-Os 7 tipos (Mineração, Fazenda, Pesca, Spawner-drops, Spawner-heads, Máquina, Armazém) precisam de tabela antes de qualquer preço.
+⚠️ **Ela não pode morar num `.yml`.** Os arquivos de booster (`GarnixMachines/booster-item.yml`, `GarnixSpawners/booster-items.yml`, e os blocos `booster-icon:` dos outros) são **só templates de item**: `{multiplier}` e `{duration}` são placeholders preenchidos pelos **argumentos do comando**. Não existe schema onde declarar valores permitidos.
 
-**Multiplicador — dois valores só:**
+Então a tabela é uma **convenção**, e ela vale porque só estas combinações são emitidas — pelas tabelas de loot (Fase 5) e pelas lojas (Fase 7). Nenhuma outra existe no servidor.
 
-| Mult. | Contribui | In-game | Site |
+### Os 7 sistemas e o comando exato de cada um
+
+| # | Sistema | Comando | Tipos |
 |---|---|---|---|
-**2×** | **+100%** aditivo | comum, mas difícil de conseguir (Épico de crate/caixa) | não vendido |
-**3×** | **+200%** aditivo | muito difícil (Lendário, jackpot) | ✅ **é o que o site vende** |
+1 | Mineração | `/mina givebooster <jogador> <tipo> <mult> <dur> [qtd]` | `coins` · `gemas` · `xp` · `both` |
+2 | Fazenda | `/fazenda givebooster <jogador> <tipo> <mult> <dur> [qtd]` | `coins` · `sementes` · `xp` · `both` |
+3 | Pesca | `/pesca givebooster <jogador> <tipo> <mult> <dur> [qtd]` | `xp` · `corais` · `both` |
+4–5 | Spawners | `/spawner givebooster <jogador> <tipo> <mult> <dur> [qtd]` | `DROPS` · `HEADS` |
+6 | Máquinas | `/maquina givebooster <jogador> <mult> <dur> [qtd]` | tipo único |
+7 | Armazém | `/armazem givebooster <jogador> <mult> <dur> [qtd]` | tipo único |
 
-⚠️ Lembrar do V3: **o booster SOMA** (`multiplicador − 1,0`), não multiplica. Um 3× contribui +200% dentro do `(1 + Σ)` — é por isso que ele consome menos orçamento do que parecia e o `fortunate` pôde ir a 14,91×.
+### ⚠️ O mesmo booster não vale o mesmo em toda via
 
-**Duração:**
+Isto é o que mais importa na hora de precificar, e só apareceu lendo o código:
 
-| | Durações |
+| Via | Como o booster entra | Um 3× vale |
+|---|---|---|
+Mineração · Fazenda · Pesca | **SOMA** no bloco aditivo (`+200%` dentro do `1 + Σ`) | ~2,2× na prática, porque divide o bloco com skin, armadura e permBonus |
+**Spawners · Máquinas** | **MULTIPLICA** (`total.multiply(boosterMultiplier)`) | **exatamente 3×** |
+Armazém (cacto) | SOMA, junto com o `sellbonus` | ~depende do `sellmult`, que é multiplicativo e fica fora |
+
+> **Um booster de spawner/máquina é ~1,4× mais forte que o mesmo booster de mineração.** Ele tem que ser proporcionalmente mais raro nas tabelas de loot, ou vira o item mais eficiente do servidor sem ninguém ter decidido isso.
+
+### As combinações permitidas — e nenhuma outra
+
+✅ **Decisão do dono:** *"boosters do site serão vendidos 3× de 1h apenas"* · *"no jogo não vai ter booster de 2× 1h, e de 3× no jogo só terá de 5m e 10m"*.
+
+| Multiplicador | Durações in-game | Site |
+|---|---|---|
+**2×** | **5m · 10m · 15m · 30m** | não vendido |
+**3×** | **5m · 10m** (só jackpot) | **1h — e só isso** |
+
+São **6 combinações in-game** e **1 no site**, × 7 sistemas = **49 itens de booster distintos**.
+
+⚠️ **Estes números são do ITEM — não são teto de duração.** Confirmado em `Booster.java:93-105`:
+
+```java
+canStackWith(other)  ->  mesmo provider  E  mesmo multiplicador
+extend(millis)       ->  expiresAt += millis        // sem teto
+```
+
+> **Dois boosters do mesmo multiplicador SOMAM tempo, indefinidamente.** 24 boosters de 3× 1h dão 24 horas de 3×. Multiplicadores diferentes **não** empilham — um 2× e um 3× do mesmo provider conflitam.
+
+Ou seja: **o multiplicador tem teto (3×), a duração não.** O que limita o tempo de booster de um jogador é a **oferta** — quantos ele consegue no loot ou compra no site — e é aí que o balanceamento mora, não numa trava de duração.
+
+**A separação é limpa e sem paywall:** a força máxima (3×) existe nos dois lados; o que o site vende é **densidade de tempo por item** — 1h contra os 10 minutos do jackpot in-game, ou seja **6× menos itens para o mesmo tempo ligado**.
+
+### 🚩 Isto muda como TODA a economia é calibrada
+
+Como a duração acumula, o booster **não é inerentemente uma rajada** — ele é rajada para quem depende do loot e pode ser permanente para quem compra. Então:
+
+> Se a escada de valor de uma via for calibrada para atingir o alvo **com** o booster ligado, o jogador que não tem booster fica **abaixo do alvo o tempo todo** — e o alvo do tier passa a descrever o pagante, não o jogador normal.
+
+E era exatamente o que a mineração e os spawners faziam. **A regra que unifica as 6 vias:**
+
+| | |
 |---|---|
-**Recompensa in-game** | **5m · 10m · 15m · 30m · 1h** — 1h é o teto absoluto |
-**Site** | maiores, definidas na Fase 7 |
+**Teto de pico** | **100×** em toda via — o invariante que já estava no plano |
+**Onde a escada é calibrada** | no **SUSTENTADO**: tudo que o jogador tem permanentemente, **sem o booster** |
 
-O in-game entrega a **sensação**, o site entrega o **efeito** — e nada fica atrás de paywall, porque a força máxima (3×) existe nos dois lados.
+Assim o alvo do tier descreve o **jogador normal**, e o booster é upside puro — de 1,35× a 3× conforme a via, para quem tem oferta.
+
+**Mecânica que já existe e não precisa de código:** 3 slots simultâneos (1 por tipo, `slots: [11, 13, 15]`), mesmo tipo **estende duração** em vez de compor multiplicador, tipo diferente conflita, e remover antes de 30s devolve item valendo 50% do tempo restante.
 
 **Mecânica que já existe e não precisa de código:** 3 slots simultâneos (1 por tipo, `slots: [11, 13, 15]`), mesmo tipo **estende duração** em vez de compor multiplicador, tipo diferente conflita, e remover antes de 30s devolve item valendo 50% do tempo restante.
 
 ---
 
-## Lista A — itens sem nenhuma rota
+## Lista A — itens sem rota, e onde cada um fecha
 
-Status: `❌` sem rota · `📋` rota especificada acima, falta escrever no YAML · `✅` pronto no config
+### ⚠️ A descoberta da Fase 4b: quase nenhum destes itens tem onde receber um preço
 
-| # | Grupo | Qtd | Status |
-|---|---|---|---|
-1 | Bombas (4 tiers) | 4 | 📋 |
-2 | Britadeira | 1 | 📋 |
-3 | Vaga de Visitante | 1 | 📋 |
-4 | Boosters (7 tipos × mult × duração) | ~70 | 📋 |
-5 | Forjas de skin (3 plugins) | 3 | 📋 |
-6 | Skins (mineração 9 · farm 9+1 · pesca 9) | 28 | 📋 |
-7 | Armaduras (3 plugins × 4 slots × 5 tiers) | 60 | 📋 |
-8 | Livros de pesca (3 × 5) | 15 | 📋 |
-9 | Livros da lâmina (massacre 5 · pilhagem 3 · ceifador 3) | 11 | 📋 |
-10 | Máquina de Cash | 1 | 📋 |
-11 | Combustível comum e infinito | 2 | 📋 |
-12 | Limites (máquinas, armazém) | 2 | 📋 |
-13 | Venda Automática | 1 | 📋 |
-14 | Bosses (3 → 5 → 8) | 8 | 📋 |
-15 | Matadoras (sombria, ancestral, hk) + kill-stack | 4 | 📋 |
-16 | **Chave VIP** | 1 | 📋 (todos os online a cada ativação de VIP) |
-17 | Robôs | 2 | 📋 |
-18 | Caixas misteriosas | 7 | 📋 |
-19 | Papel VIP | 1 | 📋 (é o produto do site) |
-20 | Fragmentos | 3+ | 📋 |
-21 | Ativador de baú · Reset KDR · Torre de Cacto · Limpador · Fly | 5 | 📋 |
+Eu tinha escrito que a lista A "volta vazia ao fim da Fase 4b". **Não volta, e não é por falta de trabalho** — é porque a maioria destes itens **não tem campo de custo no próprio config**. `bombs.yml` e o bloco `drill:` são definições de item puras: material, lore, raio, cooldown. Nenhum campo de preço. O mesmo vale para armaduras, skins, livros e matadoras.
 
-**Meta: a lista A volta vazia ao fim da Fase 4b.** O critério é mecânico — rodo a varredura do zero e comparo contagem com contagem. Se a segunda varredura achar um item que não está aqui, **este documento estava errado**, não o contrário.
+Ou seja: **"dar preço a um item" quase nunca é editar o arquivo do item.** É criar a linha que o entrega, e essa linha mora em outro lugar:
+
+| Onde a rota mora | Fase | Itens |
+|---|---|---|
+tabela de **loot** (crate, caixa, boss, ontime, daily) | **5** | armadura, skin, livro, forja, booster, fragmento, chave, robô |
+entrada de **loja** (coins-shop, cash-shop) | **7** | bomba, britadeira, combustível, conveniência, papel VIP, máquinas especiais |
+**config do próprio item** | ✅ feito | spawner, máquina A–O, vara, limite de spawner/máquina, cacto |
+
+Por isso a Fase 4b entrega **a especificação completa** — classe, moeda, fórmula, raridade e canal de cada item — e as Fases 5 e 7 escrevem as linhas. Inverter essa ordem é que seria errado: não dá para decidir o que cai numa crate antes de saber o que existe.
+
+### O catálogo, por fase que fecha
+
+| # | Grupo | Qtd | Fecha em | Canal |
+|---|---|---|---|---|
+1 | Bombas (4 tiers) | 4 | **7** | coins-shop, em **gemas** |
+2 | Britadeira | 1 | **7** | coins-shop, em **gemas** |
+3 | Vaga de Visitante | 1 | **5** | jackpot da caixa `garnix` (Mítico−) |
+4 | Boosters | 8 combinações × 7 sistemas | **5** e **7** | 2× e 3×-curto in-game · 3×-longo no site |
+5 | Forjas de skin (3) | 3 | **5** | faixa "Bom" da crate |
+6 | Skins (10 × 3 vias) | 30 | **5** | forja até a 7ª · caixa nas 3 últimas · site nas 3 mais raras |
+7 | Armaduras (3 × 4 × 5) | 60 | **5** | **só caixa. Nunca no site** |
+8 | Livros de pesca (3 × 5) | 15 | **5** | caixa de pesca · níveis 4–5 no site |
+9 | Livros da lâmina (11) | 11 | **5** | crate/boss · `pilhagem 3` e `massacre 5` no jackpot |
+10 | Máquina de Cash | 1 | **7** | ✅ config pronto (`shop: false`) · falta o preço no site |
+11 | Combustível comum · infinito | 2 | **7** | comum no coins-shop por banda · infinito no site + jackpot |
+12 | Limite de armazém | 1 | **7** | coins + dracmas |
+13 | Venda Automática | 1 | **7** | só cash (mantido caro, por decisão) |
+14 | Bosses (5 + 3 engatilhados) | 8 | **5** | chave de boss na faixa "Raro" |
+15 | Matadoras + kill-stack | 4 | **5** | `hk` no jackpot (Mítico−) |
+16 | Chave VIP | 1 | **5** | todos os online a cada ativação de VIP |
+17 | Robôs | 2 | **5** e **7** | site + jackpot · ⚠️ a lore mente (promete `×2.0` sem o campo existir) |
+18 | Caixas misteriosas | 7 | **5** | I in-game · II site + raro · `garnix` no topo |
+19 | Papel VIP | 1 | **7** | é o produto do site |
+20 | Fragmentos | 3+ | **5** | um por fonte (boss, evento, caixa, PvP) |
+21 | Ativador de baú · Reset KDR · Torre de Cacto · Limpador · Fly | 5 | **7** | coins, faixa de conveniência |
+
+**Critério de conclusão, corrigido:** a lista A volta vazia **ao fim da Fase 7**, não da 4b. O controle continua mecânico — rodo a varredura do zero e comparo contagem com contagem. Se a segunda varredura achar um item que não está aqui, **este documento estava errado**, não o contrário.
+
+### ✅ O que a Fase 4b fechou de fato
+
+| | |
+|---|---|
+**A tabela de boosters** | 8 combinações in-game + 4 no site, com o comando exato dos 7 sistemas — era o item que bloqueava qualquer preço |
+**A descoberta de que o booster não vale o mesmo em toda via** | multiplica em spawner/máquina, soma nas outras. Um 3× de spawner é ~1,4× mais forte que o mesmo de mineração e tem que ser proporcionalmente mais raro |
+**A fórmula de preço de cada classe** | ver §Como o preço é derivado |
+**O mapa de onde cada rota mora** | a tabela acima — é o que deixa as Fases 5 e 7 serem mecânicas |
 
 ---
 
@@ -266,17 +346,17 @@ Ordenada por dano à economia, com a decisão já tomada.
 5 | **Matadora Hit-Kill** | Mítico−, site faixa D. Teto real = oferta de chave de boss |
 6 | **Livro Massacre 5** (`-1`) | Mítico−. **Mantido infinito** — teto real = taxa de spawn |
 7 | **Livro Pilhagem 1–3** | ×2,0 no topo. Site faixa C + jackpot |
-8 | **Boosters ×7** | tabela 2×/3× × 5 durações. Ver §Boosters |
+8 | **Boosters ×7** | ✅ tabela fechada: 8 combinações in-game + 4 no site. ⚠️ multiplica em spawner/máquina e soma nas outras |
 9–11 | **Skins de topo** (8 nas 3 vias) | caixa + site (as 3 mais raras de cada) |
 12 | **60 peças de armadura** | **só caixa. Nunca no site** |
 13 | **3 Forjas de Skin** | crate, faixa "Bom" |
-14 | **Limites** (máquinas, armazém) | coins + dracmas, e **crescentes na temporada** |
+14 | **Limites** | ✅ spawner e máquina aplicados no coral-shop (1.100 corais = 1). Falta o do armazém |
 15 | **Venda Automática** | só cash + drop raro |
 16 | **Vaga de Visitante** | Mítico−, jackpot + VIP (VIP entrega no máx. 2 das 5) |
 17 | **Papel VIP** | é o produto do site |
 18 | **Kill-Stack** | crate de boss |
 19 | **Robô** | site + jackpot. Corrigir a lore mentirosa |
-20 | **Máquina de Cash** | 3–8 cash/dia, **limite 1 por conta** |
+20 | **Máquina de Cash** | ✅ aplicada: 2 cash/dia, ciclo de 432s, fora da loja de máquinas. ⚠️ o preço no site tem que ser MAIOR que o cash que ela produz na temporada, senão vira desconto na própria loja |
 21 | **Chave VIP** | todos os online a cada ativação de VIP |
 22 | **7 Caixas** | custo 0 **e** payload 0 → escrever as 7 tabelas |
 23–28 | Ativador de baú · Torre de Cacto · Limpador · Fly · Fragmentos · Reset KDR | coins/cash, faixa de conveniência |

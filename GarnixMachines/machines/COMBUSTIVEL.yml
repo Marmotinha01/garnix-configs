@@ -1,26 +1,26 @@
-order: 101
+order: 100
 
 # ⚠️ MAQUINA ESPECIAL — fora da loja de maquinas.
-# Rota: Site · jackpot da caixa garnix.
+# Rota: Recompensa rara · caixa II.
 # Só é obtida via /maquina give (ou pelas tabelas de loot da Fase 5).
 shop: false
 
-delay: 432s
+delay: 60s
 
-translated: Cash
+translated: Combustível
 display: '&b&l{translated}'
 
-texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
+texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
 
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "10/09/2026 20:00"
+release: "06/09/2026 20:00"
 
 rank: ''
 
-buy-permission: machines.buy.cash
+buy-permission: machines.buy.combustivel
 
 block:
-  material: GOLD_BLOCK
+  material: COAL_BLOCK
   data: 0
 
 fuels:
@@ -29,7 +29,7 @@ fuels:
 
 machine-item:
   glow: true
-  texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
+  texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
   display: '&b&lMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'
@@ -44,9 +44,13 @@ costs: {}
 
 # ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
 drops:
-  cash:
-    type: CURRENCY
-    currency-id: cash
-    chance: 1
-    # 2 cash/dia por unidade (200 ciclos de 432s x 0,01). Ver a regra de preco no site, no topo do gerador.
-    amount: '0.01'
+  combustivel:
+    type: COMMAND
+    chance: 0.1
+    # ~768 L/h num stack de 64 = ~53% do consumo de 4 blocos
+    amount: '2'
+    icon:
+      display: '&eCombustível'
+      material: COAL
+    commands:
+    - 'maquina givefuel {player} default {amount}'

@@ -1,11 +1,11 @@
 display: "Fertilidade"
-max-level: 100
-base-cost: 150.0
-increase-cost: 60.0
+max-level: 500
+base-cost: 292.7
+increase-cost: 117.1
 
 # MULTIPLIER flavour (sementes — economia secundária)
 base-multiplier: 1.05
-increase-multiplier: 0.02
+increase-multiplier: 0.003968
 multiplier-provider: "sementes"
 
 icon:

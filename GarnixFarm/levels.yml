@@ -9,11 +9,11 @@
 #   geometric:  xp(L) = base * growth^(L-1)    (growth = fator ×/nível, ~1.06–1.10)
 #   linear:     xp(L) = base + growth*(L-1)    (growth = passo/nível)
 
-max-level: 100
+max-level: 300
 formula:
-  type: polynomial
-  base: 100.0
-  growth: 2.2
+  type: geometric
+  base: 11992.1
+  growth: 1.02216
 
 # ── Escada de valor por nível (C2) ───────────────────────────────────────────
 # Multiplicador aplicado ao pagamento da colheita, sobre `currencies.primary` de
@@ -32,4 +32,25 @@ formula:
 # ⏳ A escada em si é calibrada na FASE 4, junto com a curva de XP (hoje
 #    `base: 100.0, growth: 2.2` dá 1,7 h para o nível 100, contra 40–50 h da
 #    mineração) e com o recusto dos 10 encantes.
-payout-multiplier: {}
+payout-multiplier:
+  '0': 1
+  '15': 3.927
+  '30': 15.42
+  '45': 60.57
+  '60': 1
+  '75': 3.927
+  '90': 15.42
+  '105': 60.57
+  '120': 237.9
+  '135': 934.3
+  '150': 1
+  '165': 3.927
+  '180': 15.42
+  '195': 60.57
+  '210': 237.9
+  '225': 934.3
+  '240': 1
+  '255': 3.927
+  '270': 15.42
+  '285': 60.57
+  '300': 237.9

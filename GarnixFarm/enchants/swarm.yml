@@ -1,11 +1,11 @@
 display: "Enxame"
-max-level: 50
-base-cost: 1200.0
-increase-cost: 450.0
+max-level: 500
+base-cost: 2342
+increase-cost: 878.2
 
 # CHANCE flavour (percent): ao colher, chance de invocar o enxame.
-base-chance: 3
-increase-chance: 0.2
+base-chance: 0.0256
+increase-chance: 0.0256
 
 # Companion visual + buff (sem colheita própria):
 # as abelhas orbitam o jogador por duration-ticks e, enquanto ativas, dão um bônus
