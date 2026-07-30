@@ -147,6 +147,25 @@ Vale de substituição | 192× pior | **3× pior** |
 
 🚩 **O VIP substitui o bônus de rank, não soma.** O plugin ordena por `discount + bonus` e devolve a **primeira** entrada que o jogador tem — o maior vence. Por isso todo nó de VIP fica acima do teto do rank: garnix **50** > supremo 41 > parceria 35 > imortal 33 > celestial 27 > **rank 20 = 20**. Parceria (investidor/influencer) tem o ganho do topo e **zero desconto**, para não criar uma via de revenda.
 
+
+#### ⚠️ Correção grande: o passivo estava alocado em dobro
+
+Achado ao ir calibrar o cacto. O documento mestre reparte a renda entre as 3 contas somando **100%** — e logo abaixo definia `Passivo por hora = renda(N) / 24`, que rodando 24h entrega **outros 100%**.
+
+> Os drops dos spawners e das máquinas saíram **4,55× altos**, e o total do servidor daria ~2× o teto de sextilhões.
+
+A causa é que a repartição existia por **conta-hora** e nunca por **via**. Escrevi a que faltava:
+
+| Conta | % | Vias |
+|---|---|---|
+AFK 1 | 22% | cacto **15%** + pesca **7%** |
+AFK 2 | 22% | **spawners 17%** + **máquinas 5%** |
+Ativa | 56% | mineração 35% + fazenda 18% + eventos 3% |
+
+As porcentagens **dentro** de cada conta são escolha de projeto; o total de cada conta **não é** — sai do modelo de 108 unidades.
+
+**A conferência que fecha:** com 22%, o passivo/h fica praticamente igual ao AFK/h de uma conta (3,44×10³ contra 3,47×10³ no T1). Tem que ser assim — a via passiva **é** o que a conta AFK 2 faz.
+
 #### ⏳ 3d — lâmina, máquinas, galpão e cacto
 
 **Primeiro item já aplicado: as 3 trilhas de upgrade**, porque ao ir calibrar a lâmina eu achei o bug de fundo do throughput.
@@ -173,7 +192,9 @@ O teto real por bloco era **2.700 kills/h**, não 1.382.400.
 `speed` | 3 níveis: 8s · 6s · 4s | throughput — **2,5×** |
 | **total** | **10 níveis, todos úteis** (eram 9, com 4 mortos) | |
 
-**Os `drops` não mudaram.** Meu modelo errado tinha o termo `⌈n/2⌉ × mob-stack(1→3)`, que é **numericamente idêntico** ao número de blocos do modelo correto (1 → 30). Erro de **0,00% nos 20 tiers** — então `drops.coins.amount`, as dracmas e os requisitos de cabeça da 3a seguem válidos. Foi sorte, não projeto.
+**Os `drops` mudaram duas vezes.** Primeiro o modelo de blocos (abaixo), depois a fatia da via passiva — ver a nota de correção no fim desta seção.
+
+**Sobre o modelo de blocos:** Meu modelo errado tinha o termo `⌈n/2⌉ × mob-stack(1→3)`, que é **numericamente idêntico** ao número de blocos do modelo correto (1 → 30). Erro de **0,00% nos 20 tiers** — então `drops.coins.amount`, as dracmas e os requisitos de cabeça da 3a seguem válidos. Foi sorte, não projeto.
 
 **Mas a UNIDADE dos custos estava errada.** `costs` é o preço de **um item de spawner**, e um bloco precisa de até **512 itens** juntados para produzir no máximo. Eu precificava como se 1 compra = 1 bloco:
 

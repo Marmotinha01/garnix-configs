@@ -124,8 +124,35 @@ renda(N)                = 375.000 × 6,61^(N-1)
 1u                      = renda(N) / 108
 AFK por hora, por conta = renda(N) / 108
 Ativo por hora          = renda(N) / 5,4
-Passivo por hora        = renda(N) / 24    (roda 24h, só a partir do T7)
 ```
+
+### ⚠️ A repartição por VIA — o que faltava, e o erro que isso causou
+
+Eu vinha usando `Passivo por hora = renda(N) / 24`. Rodando 24h, isso entrega **renda(N) inteira** — ou seja **outros 100%** em cima dos 100% que as três contas já somam. **O passivo estava alocado em dobro, e os drops dos spawners e das máquinas saíram 4,55× altos.**
+
+A causa é que a tabela acima reparte a renda por **conta-hora**, e nunca existiu uma repartição por **via**. Ela é esta, e cada linha cabe dentro da conta que a executa:
+
+| Conta | % da casa | Via | % da renda diária |
+|---|---|---|---|
+**AFK 1** | 22% | Cacto | **15%** |
+| | | Pesca | **7%** |
+**AFK 2** | 22% | **Spawners** | **17%** |
+| | | **Máquinas** | **5%** |
+**Ativa** | 56% | Mineração | **35%** |
+| | | Fazenda | **18%** |
+| | | Eventos e o resto | **3%** |
+| | **100%** | | **100%** |
+
+```
+Passivo por hora = renda(N) × 0,22 / 24     (spawners + máquinas, roda 24h)
+Cacto por hora   = renda(N) × 0,15 / 24     (roda 24h)
+```
+
+As porcentagens **dentro** de cada conta são escolha de projeto; o total de cada conta **não é** — sai do modelo de 108 unidades. Por isso cacto + pesca somam exatamente os 22% da AFK 1, e spawners + máquinas exatamente os 22% da AFK 2.
+
+**Cacto em 15% honra o "bem páreo"** que você pediu: é a maior fatia individual depois da mineração e da fazenda, e a maior de todas as vias que rodam sozinhas.
+
+**As máquinas ficam em 5%** porque chegam depois (3 por rank médio, 12 por prestígio) — a fatia delas cresce de 0% no T2 até 25% do passivo no T10.
 
 Sanidade nas duas pontas: no dia 1 (T1) o ativo rende **69.440 coins/h** — contra os **70.000/h medidos in-game**, ou seja a âncora fecha. No dia 20 (T20) o ativo rende 2,66×10²⁰/h e o AFK 1,33×10¹⁹/h.
 

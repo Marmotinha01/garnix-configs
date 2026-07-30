@@ -24,7 +24,7 @@ costs:
 drops:
   coins:
     chance: 100
-    amount: '1890000000'
+    amount: '415000000'
   dracmas:
     chance: 1
     amount: '15'

@@ -68,6 +68,28 @@ Eu tinha reportado como bug o fato de `ShopMenu:333` comparar o saldo sem debita
 
 É um **teto de lote por compra**, que cresce com o que cai de recompensa. O código faz exatamente isso. **O C12 está retirado.**
 
+### 🚩 O passivo estava alocado em DOBRO
+
+Achado ao ir calibrar o cacto. O [01-ECONOMIA.md](01-ECONOMIA.md) reparte a renda entre as 3 contas e o total fecha **100%**:
+
+| Conta | Tempo | Peso | % da casa |
+|---|---|---|---|
+AFK 1 (pesca + cacto) | 24h | 1× | 22% |
+AFK 2 (spawners) | 24h | 1× | 22% |
+Ativa | 3h | 20× | 56% |
+
+E logo abaixo o mesmo documento definia `Passivo por hora = renda(N) / 24`. Rodando 24h, isso entrega **renda(N) inteira** — ou seja **outros 100%** em cima dos 100% que as contas já somam.
+
+> **Os drops dos spawners e das máquinas saíram 4,55× altos**, e o total do servidor daria ~2× o teto de sextilhões.
+
+A causa: a tabela reparte por **conta-hora** e nunca existiu uma repartição por **via**. Escrevi ela agora ([01-ECONOMIA.md §4](01-ECONOMIA.md)) — cacto 15% + pesca 7% cabem nos 22% da AFK 1, spawners 17% + máquinas 5% cabem nos 22% da AFK 2, mineração 35% + fazenda 18% + eventos 3% cabem nos 56% da ativa.
+
+```
+Passivo por hora = renda(N) × 0,22 / 24
+```
+
+**A conferência que fecha:** com 22%, o passivo/h fica praticamente igual ao AFK/h de uma conta (3,44×10³ contra 3,47×10³ no T1). Tem que ser assim — a via passiva **é** o que a conta AFK 2 faz.
+
 ### 🚩 A fórmula do throughput — eu errei isso duas vezes
 
 ```
