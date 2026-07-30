@@ -133,7 +133,6 @@ rewards:
   secundaria:
     type: CURRENCY
     chance: 5
-    display: '&e1.000 gemas'
     currency-id: gemas
     amount: '1000'
     icon:

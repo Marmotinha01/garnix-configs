@@ -46,7 +46,6 @@ rewards:
   coins:
     type: CURRENCY
     chance: 53.9935
-    display: '&6Moedas'
     currency-id: coins
     amount: '250'
     icon:
@@ -55,7 +54,6 @@ rewards:
   secundaria:
     type: CURRENCY
     chance: 30.2174
-    display: '&bcorais'
     currency-id: corais
     amount: '25'
     icon:
@@ -87,7 +85,6 @@ rewards:
   secundaria-lote:
     type: CURRENCY
     chance: 3
-    display: '&bcorais (lote)'
     currency-id: corais
     amount: '500'
     icon:

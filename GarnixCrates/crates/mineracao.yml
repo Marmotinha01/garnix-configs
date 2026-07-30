@@ -46,7 +46,6 @@ rewards:
   coins:
     type: CURRENCY
     chance: 54.338
-    display: '&6Moedas'
     currency-id: coins
     amount: '250'
     icon:
@@ -55,7 +54,6 @@ rewards:
   secundaria:
     type: CURRENCY
     chance: 30.1797
-    display: '&bgemas'
     currency-id: gemas
     amount: '25'
     icon:
@@ -87,7 +85,6 @@ rewards:
   secundaria-lote:
     type: CURRENCY
     chance: 3
-    display: '&bgemas (lote)'
     currency-id: gemas
     amount: '500'
     icon:

@@ -133,7 +133,6 @@ rewards:
   secundaria:
     type: CURRENCY
     chance: 5
-    display: '&a1.000 sementes'
     currency-id: sementes
     amount: '1000'
     icon:

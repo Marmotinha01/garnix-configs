@@ -46,7 +46,6 @@ rewards:
   coins:
     type: CURRENCY
     chance: 35.021
-    display: '&6Moedas'
     currency-id: coins
     amount: '250'
     icon:
@@ -55,7 +54,6 @@ rewards:
   secundaria:
     type: CURRENCY
     chance: 19.445
-    display: '&bdracmas'
     currency-id: dracmas
     amount: '25'
     icon:
@@ -87,7 +85,6 @@ rewards:
   secundaria-lote:
     type: CURRENCY
     chance: 9
-    display: '&bdracmas (lote)'
     currency-id: dracmas
     amount: '500'
     icon:
