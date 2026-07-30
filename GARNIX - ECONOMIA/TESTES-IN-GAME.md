@@ -38,20 +38,36 @@ Autoclique no mob por **5 minutos cronometrados**, sem parar.
 
 **Por que:** é o termo que falta para derivar o `sell-price` do cacto. Sem ele a sexta via é chute. Você já deu as duas pontas (`randomTickSpeed 8`, `growth.cactus-modifier: 20000`, farms de 25–40k no dedicado e 5–15k no casual), mas a taxa efetiva depende de como a farm é montada.
 
+### ⚠️ Não meça "quanto acumula em 10 minutos"
+
+Era como eu tinha escrito, e **não funciona**: com o `initial-limit` em 1.500, o armazém enche e o excedente **se perde**. A medição leria 1.500 qualquer que fosse a taxa real — o teste mediria o limite, não a colheita.
+
+A pergunta certa é a inversa: **quanto tempo o armazém leva para encher.** Aí o limite deixa de ser o inimigo e vira o instrumento — ele é uma quantidade que você já conhece com exatidão.
+
 ### Preparação
-1. Uma farm de cacto de tamanho **conhecido** — conte os cactos plantados, ou use N torres 3×3×4 e me diga o N.
-2. Armazém vazio, ou anote o valor inicial.
-3. Autosell **desligado**, para acumular.
+1. Uma farm de cacto **pequena e contada** — 50 a 150 colunas. Pequena de propósito: numa farm grande 1.500 enche em segundos e o cronômetro não pega.
+2. Armazém **vazio**.
+3. Autosell **desligado**.
+4. Anote o `initial-limit` em vigor (hoje 1.500).
 
 ### Medição
-Deixe rodando **10 minutos** cronometrados, sem tocar.
+Cronometre do zero até o armazém bater no limite. Se encher em menos de 1 minuto, **arranque metade dos cactos** e repita — a taxa escala com o número de colunas, então uma farm menor só torna a leitura mais precisa.
 
 ### O que me mandar
-- Cactos plantados (blocos que crescem): ____
-- Cacto acumulado no armazém em 10 min: ____
-- Se der: o mesmo com uma farm 2× maior, para eu confirmar que escala linear
+- Colunas de cacto plantadas: ____
+- Altura das colunas (2, 3, 4 blocos?): ____
+- Limite do armazém no teste: ____
+- **Tempo até encher:** ____
 
-> **O que eu faço com isso:** `sell-price = alvo de renda do tier ÷ colheita/h`. Uma medição, um número.
+### A conta
+```
+colheita/h = limite ÷ tempo_em_horas
+por coluna = colheita/h ÷ colunas
+```
+
+Com isso eu extrapolo para qualquer tamanho de farm.
+
+> **O que trava nisso:** o `sell-price` do cacto (`alvo de renda do tier ÷ colheita/h`) e o preço da areia, que assume 3 blocos por coluna — se a coluna útil for 2 ou 4, o número de areias por plot muda e o preço com ele.
 
 ---
 

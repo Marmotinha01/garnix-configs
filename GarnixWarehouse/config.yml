@@ -2,7 +2,7 @@
 world: plotworld
 
 # Limite inicial de armazenamento de cada armazém ao ser criado.
-initial-limit: 1500
+initial-limit: 3000
 
 # Duração (segundos) da isenção do captcha após resolvê-lo.
 captcha-duration: 30
