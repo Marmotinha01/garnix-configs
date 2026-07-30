@@ -7,7 +7,11 @@ texture: 'baf818b04d6ae98a69ad8d9463d8d0379921d3eb79222e1c6272f65372d80775'
 
 commands:
 - 'crate givevirtualkey rankup {player} 1'
+- 'lp user {player} permission set rankup.rank.16 true'
+- 'lp user {player} permission set mining.bonus.16 true'
+- 'lp user {player} permission set spawner.buy.witch true'
+- 'lp user {player} permission set machines.buy.c true'
 
 costs:
-- 'coins 15000'
-- 'head COW 100'
+- 'coins 15100000000000000'
+- 'head ZOMBIE 30000'

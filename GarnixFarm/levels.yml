@@ -14,3 +14,22 @@ formula:
   type: polynomial
   base: 100.0
   growth: 2.2
+
+# ── Escada de valor por nível (C2) ───────────────────────────────────────────
+# Multiplicador aplicado ao pagamento da colheita, sobre `currencies.primary` de
+# farms.yml. A chave é o NÍVEL em que o degrau passa a valer, e ele vale até o
+# próximo declarado. Seção ausente = 1.0 sempre.
+#
+# Por que existe: o farm só tinha os 4 tipos de plantação como degrau de
+# pagamento — e são 4 por um teto da 1.8, não do config. Sem esta tabela não há
+# onde guardar as ~16 ordens de grandeza que a curva de tiers pede, e do nível 50
+# ao 100 a fazenda não ganhava nada. É o mesmo padrão do GarnixMining/levels.yml,
+# que reusa material com valor maior em vez de exigir 21 minérios.
+#
+# Só a moeda PRIMÁRIA leva o multiplicador. `sementes` fica linear de propósito,
+# como as gemas na mineração.
+#
+# ⏳ A escada em si é calibrada na FASE 4, junto com a curva de XP (hoje
+#    `base: 100.0, growth: 2.2` dá 1,7 h para o nível 100, contra 40–50 h da
+#    mineração) e com o recusto dos 10 encantes.
+payout-multiplier: {}

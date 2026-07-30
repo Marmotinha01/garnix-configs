@@ -7,7 +7,10 @@ texture: 'da6e0429ccaabb6f5f0c5d513c795bed6d80fce72f57f4bc3a616aee23e12572'
 
 commands:
 - 'crate givevirtualkey rankup {player} 1'
+- 'lp user {player} permission set rankup.rank.18 true'
+- 'lp user {player} permission set mining.bonus.18 true'
+- 'lp user {player} permission set spawner.buy.iron_golem true'
 
 costs:
-- 'coins 15000'
-- 'head COW 100'
+- 'coins 658000000000000000'
+- 'head SKELETON 40000'

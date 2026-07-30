@@ -9,24 +9,25 @@ display: "&6{translated}"
 
 texture: "5c09328ea0abdd88440b765f630ce192c7f23a3d1867d8f8807388f067c8081e"
 
-release: "05/03/2025 13:00"
+release: "11/09/2026 20:00"
 
 rank: "&c[Rank 11]"
 
 permissions:
-  buy: "spawner.buy.pigzombie"
-  kill: "spawner.kill.pigzombie"
+  buy: "spawner.buy.pig_zombie"
+  kill: ""
 
 costs:
-  coins: 5000000000
+  coins: '29900000000'
+  dracmas: '1460'
 
 drops:
   coins:
     chance: 100
-    amount: 5000000000
-  gems:
-    chance: 25
-    amount: 50
+    amount: '2090000'
+  dracmas:
+    chance: 1
+    amount: '11'
 
 spawner-item:
   material: MOB_SPAWNER
@@ -50,49 +51,51 @@ head-item:
   - '&aClique para armazenar.'
 
 upgrades:
-  mob-stack:
-    base: 1
-    1:
-      value: 2
-      costs:
-        coins: 10000000000
-    2:
-      value: 3
-      costs:
-        coins: 50000000000
-        gems: 100
-    3:
-      value: 3
-      costs:
-        coins: 200000000000
-        gems: 500
   spawner-stack:
     base: 64
     1:
-      value: 128
+      value: 96
       costs:
-        coins: 20000000000
+        coins: '9590000000'
     2:
-      value: 256
+      value: 144
       costs:
-        coins: 100000000000
+        coins: '33600000000'
     3:
+      value: 216
+      costs:
+        coins: '117000000000'
+    4:
+      value: 288
+      costs:
+        coins: '411000000000'
+    5:
+      value: 384
+      costs:
+        coins: '1440000000000'
+    6:
       value: 512
       costs:
-        coins: 500000000000
-        gems: 1000
+        coins: '5040000000000'
+        dracmas: '343000'
+  mob-stack:
+    base: 512
+    1:
+      value: -1
+      costs:
+        coins: '1790000000000'
+        dracmas: '87300'
   speed:
     1:
       delay: "8s"
       costs:
-        coins: 15000000000
+        coins: '185000000000'
     2:
       delay: "6s"
       costs:
-        coins: 75000000000
-        gems: 200
+        coins: '649000000000'
     3:
       delay: "4s"
       costs:
-        coins: 300000000000
-        gems: 500
+        coins: '2270000000000'
+        dracmas: '151000'

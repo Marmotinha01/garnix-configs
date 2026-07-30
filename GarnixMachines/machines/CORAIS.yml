@@ -1,0 +1,52 @@
+order: 105
+
+# ⚠️ MAQUINA ESPECIAL — fora da loja de maquinas.
+# Rota: Recompensa rara · caixa II.
+# Só é obtida via /maquina give (ou pelas tabelas de loot da Fase 5).
+shop: false
+
+delay: 10s
+
+translated: Corais
+display: '&b&l{translated}'
+
+texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
+
+# ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
+release: "08/09/2026 20:00"
+
+rank: ''
+
+buy-permission: machines.buy.corais
+
+block:
+  material: LAPIS_BLOCK
+  data: 0
+
+fuels:
+- default
+- infinite
+
+machine-item:
+  glow: true
+  texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
+  display: '&b&lMáquina de {translated}'
+  lore:
+  - '&7Produz sozinha dentro'
+  - '&7do seu terreno.'
+  - ''
+  - '&8 ▪ &fQuantia: &b{amount} '
+  - ''
+  - '&bColoque no seu terreno.'
+
+# Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
+costs: {}
+
+# ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
+drops:
+  corais:
+    type: CURRENCY
+    currency-id: corais
+    chance: 1
+    # ⏳ calibrar na Fase 4 contra a renda de corais da pesca
+    amount: '0.01'

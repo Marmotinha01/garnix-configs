@@ -141,8 +141,14 @@ function orcamentoMultiplicadores() {
 // Para cada tier, "ficar e melhor que subir?" Se sim em qualquer N, a curva esta errada.
 function testeEstagnacao() {
   const { tiers, crescimentoPorDia: g } = P.temporada;
-  const { mobStack, spawnerStack } = P.empilhamento;
-  const empMax = mobStack * spawnerStack;
+  const e = P.empilhamento;
+  // throughput por bloco = min(spawners no bloco, teto do mob-stack) x 3600/delay
+  // Ver o comentario em params.js: `mob-stack` e TETO, nao multiplicador.
+  const throughputNu = Math.min(e.spawnerStackBase, e.mobStackCapBase) * (3600 / e.delayBaseSeg);
+  // maxado: o nivel 1 do mob-stack torna o teto ilimitado, entao quem manda e
+  // o spawner-stack.
+  const throughputMax = e.spawnerStack * (3600 / e.delayMaxSeg);
+  const empMax = throughputMax / throughputNu;
   const tiersQueOEmpilhamentoVale = Math.log(empMax) / Math.log(g);
 
   const linhas = [];
@@ -158,8 +164,7 @@ function testeEstagnacao() {
 
     // Custo de empilhar tudo no tier N vs comprar o spawner do tier N+1
     const c = P.custos;
-    const precoSpawnerN = Number(rendaTier(n)) * c.spawnerSobreRenda;
-    const custoUpgradesN = precoSpawnerN * (c.upgradeNivel1 + c.upgradeNivel2 + c.upgradeNivel3);
+    const custoUpgradesN = Number(rendaTier(n)) * c.upgradesSobreRenda;
     const precoSpawnerN1 = Number(rendaTier(n + 1)) * c.spawnerSobreRenda;
 
     linhas.push({
@@ -191,15 +196,20 @@ function testeEstagnacao() {
 
   return {
     empilhamentoMaximo: empMax,
+    throughputNu,
+    throughputMax,
     crescimentoPorTier: g,
     tiersQueOEmpilhamentoVale,
-    quatroTiersAtrasIncompensavel: Math.pow(g, 4) > empMax,
+    // Com empMax = 60 em vez de 1.536, a barreira desce de 4 tiers para 3 — a lei
+    // fica mais forte. Testa o degrau imediatamente acima de tiersQueOEmpilhamentoVale.
+    tiersAtrasIncompensavel: Math.ceil(tiersQueOEmpilhamentoVale),
+    quatroTiersAtrasIncompensavel: Math.pow(g, 3) > empMax,
     perdaAoTrocar,
     // Conclusao de projeto: s.limite PRECISA crescer durante a temporada.
     exigeSlotsCrescentes: perdaAoTrocar > 1,
     linhas,
     falhas,
-    aprovado: falhas.length === 0 && Math.pow(g, 4) > empMax,
+    aprovado: falhas.length === 0 && Math.pow(g, 3) > empMax,
   };
 }
 
@@ -295,7 +305,8 @@ function testeOverflow() {
   for (let n = 1; n <= tiers; n++) {
     const renda = rendaTier(n);
     const spawner = bigMul(renda, c.spawnerSobreRenda);
-    const up3 = bigMul(spawner, c.upgradeNivel3);
+    // o upgrade mais caro que existe: ultimo nivel do spawner-stack
+    const up3 = bigMul(renda, c.upgradeNivelMaisCaro);
     let rank = bigMul(renda, P.sinks.rankParteEmCoins);
     const tetoRank = BigInt(c.tetoLongSafe);
     if (rank > tetoRank) rank = tetoRank;
@@ -393,10 +404,12 @@ function imprimir() {
   L(`Se o booster multiplicasse em vez de somar: ${R.mult.totalSeBoosterMultiplicasse.toFixed(0)}x (nao e o caso)`);
 
   L(); L('S1 - TESTE DE ESTAGNACAO'); hr();
-  L(`Empilhamento maximo de um spawner: ${R.estag.empilhamentoMaximo}x  (mob-stack x spawner-stack)`);
+  L(`Bloco NU:     ${R.estag.throughputNu.toExponential(2)} kills/h  (min(64, teto 512), delay 10s)`);
+  L(`Bloco MAXADO: ${R.estag.throughputMax.toExponential(2)} kills/h  (s.stack 512, teto ilimitado, delay 4s)`);
+  L(`Ganho de maxar um bloco: ${R.estag.empilhamentoMaximo.toFixed(0)}x   <- maxado / NU. mob-stack e TETO, nao fator`);
   L(`Crescimento de valor por tier: ${R.estag.crescimentoPorTier}x`);
-  L(`Empilhar ao maximo vale ${R.estag.tiersQueOEmpilhamentoVale.toFixed(2)} tiers`);
-  L(`Estar 4 tiers atras e incompensavel: ${R.estag.quatroTiersAtrasIncompensavel ? 'SIM' : 'NAO - PROBLEMA'}`);
+  L(`Maxar um bloco vale ${R.estag.tiersQueOEmpilhamentoVale.toFixed(2)} tiers`);
+  L(`Estar ${R.estag.tiersAtrasIncompensavel} tiers atras e incompensavel: ${R.estag.quatroTiersAtrasIncompensavel ? 'SIM' : 'NAO - PROBLEMA'}`);
   L(`Subir sempre bate ficar, em todos os 19 tiers: ${R.estag.falhas.length === 0 ? 'SIM' : 'NAO em ' + R.estag.falhas.map(f => 'T' + f.tier).join(', ')}`);
   L(`VEREDITO: ${R.estag.aprovado ? 'APROVADO' : 'REPROVADO'}`);
   L();
@@ -461,8 +474,13 @@ function imprimir() {
   L(`Primeiro tier que estoura: T${R.over.primeiroTierQueEstoura ?? '-'}`);
   L(`A parte em coins do rank nunca estoura: ${R.over.rankNuncaEstoura ? 'SIM (travada em 1e18)' : 'NAO - PROBLEMA'}`);
   for (const l of R.over.linhas.filter(x => x.spawnerEstoura || x.up3Estoura)) {
-    L(`  T${String(l.tier).padEnd(3)} spawner ${fmt(l.spawner).padEnd(10)} ${l.spawnerEstoura ? '<- estoura' : ''}  upgrade3 ${fmt(l.up3).padEnd(10)} ${l.up3Estoura ? '<- estoura' : ''}`);
+    L(`  T${String(l.tier).padEnd(3)} spawner ${fmt(l.spawner).padEnd(10)} ${l.spawnerEstoura ? '<- estoura' : ''}  upgrade+caro ${fmt(l.up3).padEnd(10)} ${l.up3Estoura ? '<- estoura' : ''}`);
   }
+  L();
+  L('RESOLVIDO NOS SPAWNERS SEM CODIGO: MobConfigManager le costs/drops/upgrades com');
+  L('  new BigDecimal(getString(...)). Com o valor ENTRE QUOTES no YAML ele chega como');
+  L('  String e nao passa por getLong. Os 20 arquivos da Fase 3b usam quotes em TODOS');
+  L('  os valores. O C1 continua necessario so em garnix-crates e garnix-bosses (V2).');
 
   L(); hr();
   const ok = R.estag.aprovado && R.mult.dentroDoTeto && R.cash.freeDentroDoAlvo && R.over.rankNuncaEstoura;

@@ -44,7 +44,25 @@ O crescimento não é escolhido, é **derivado das duas pontas físicas**.
 
 - **A fortuna de ontem vale 15% da renda de hoje.** Ninguém entesoura: guardar 25% de um tier é ~4% da renda do tier seguinte. É por isso que sinks de 75% não movem o número da manchete.
 - **Ninguém trava.** A renda de amanhã é 6,6× a de hoje; quem gastou demais recupera numa sessão.
-- **A lei "nunca compensa ficar parado" continua valendo.** Empilhamento máximo de um spawner = `mob-stack 3 × spawner-stack 512 = 1.536×`. Como `6,61³ = 289 < 1.536 < 1.909 = 6,61⁴`, empilhar ao máximo vale **~3,88 tiers** — e estar **4 tiers atrás segue incompensável**.
+- **A lei "nunca compensa ficar parado" continua valendo — e ficou mais forte.**
+
+  ⚠️ **Corrigido na Fase 3d, depois de eu errar duas vezes.** A fórmula real, lida em `MobManager:139-152`:
+
+  ```
+  kills/h por bloco = min( spawners no bloco , TETO do mob-stack ) × 3600 / delay
+  ```
+
+  **`mob-stack` é TETO, não multiplicador.** Detalhe completo em [13-PASSIVO.md](13-PASSIVO.md).
+
+  | | kills/h por bloco |
+  |---|---|
+  | bloco **nu** — `min(64, 512) × 3600/10s` | 23.040 |
+  | bloco **maxado** — `min(512, ∞) × 3600/4s` | 460.800 |
+  | **ganho de maxar um bloco** | **20×** |
+
+  Como `6,61¹ = 6,6 < 20 < 43,7 = 6,61²`, maxar um bloco vale **1,59 tier** — e estar **2 tiers atrás é incompensável**.
+
+  Minhas três versões: `1.536×` ("4 tiers") → `60×` ("3 tiers") → **`20×` ("2 tiers")**. Cada correção **fortaleceu** a lei; a folga real é menor do que eu vinha dizendo.
 
 ---
 
@@ -54,12 +72,12 @@ Legenda: **casa** = as 3 contas somadas · **ativo/h** = conta principal · **AF
 
 | T | Dia | Rank / Spawner | Casa/dia | Ativo/h | AFK/h | Passivo/h | Sinks (75%) |
 |---|---|---|---|---|---|---|---|
-| T1 | 1 | Coelho / RABBIT | 3,75×10⁵ | 6,94×10⁴ | 3,47×10³ | — | 2,81×10⁵ |
-| T2 | 2 | Porco / PIG | 2,48×10⁶ | 4,59×10⁵ | 2,30×10⁴ | — | 1,86×10⁶ |
-| T3 | 3 | Ovelha / SHEEP | 1,64×10⁷ | 3,03×10⁶ | 1,52×10⁵ | — | 1,23×10⁷ |
-| T4 | 4 | Vaca / COW | 1,08×10⁸ | 2,01×10⁷ | 1,00×10⁶ | — | 8,12×10⁷ |
-| T5 | 5 | Morcego / BAT | 7,16×10⁸ | 1,33×10⁸ | 6,63×10⁶ | — | 5,37×10⁸ |
-| T6 | 6 | Jaguatirica / OCELOT | 4,73×10⁹ | 8,76×10⁸ | 4,38×10⁷ | — | 3,55×10⁹ |
+| T1 | 1 | Coelho / RABBIT | 3,75×10⁵ | 6,94×10⁴ | 3,47×10³ | 1,56×10⁴ | 2,81×10⁵ |
+| T2 | 2 | Porco / PIG | 2,48×10⁶ | 4,59×10⁵ | 2,30×10⁴ | 1,03×10⁵ | 1,86×10⁶ |
+| T3 | 3 | Ovelha / SHEEP | 1,64×10⁷ | 3,03×10⁶ | 1,52×10⁵ | 6,83×10⁵ | 1,23×10⁷ |
+| T4 | 4 | Vaca / COW | 1,08×10⁸ | 2,01×10⁷ | 1,00×10⁶ | 4,51×10⁶ | 8,12×10⁷ |
+| T5 | 5 | Morcego / BAT | 7,16×10⁸ | 1,33×10⁸ | 6,63×10⁶ | 2,98×10⁷ | 5,37×10⁸ |
+| T6 | 6 | Jaguatirica / OCELOT | 4,73×10⁹ | 8,76×10⁸ | 4,38×10⁷ | 1,97×10⁸ | 3,55×10⁹ |
 | T7 | 7 | Lobo / WOLF | 3,13×10¹⁰ | 5,79×10⁹ | 2,90×10⁸ | 1,30×10⁹ | 2,35×10¹⁰ |
 | T8 | 8 | Zumbi / ZOMBIE | 2,07×10¹¹ | 3,83×10¹⁰ | 1,91×10⁹ | 8,61×10⁹ | 1,55×10¹¹ |
 | T9 | 9 | Esqueleto / SKELETON | 1,37×10¹² | 2,53×10¹¹ | 1,27×10¹⁰ | 5,69×10¹⁰ | 1,02×10¹² |
@@ -75,7 +93,9 @@ Legenda: **casa** = as 3 contas somadas · **ativo/h** = conta principal · **AF
 | T19 | 19 | Ghast | 2,18×10²⁰ | 4,03×10¹⁹ | 2,01×10¹⁸ | 9,07×10¹⁸ | 1,63×10²⁰ |
 | **T20** | **20** | Wither | **1,44×10²¹** | 2,66×10²⁰ | 1,33×10¹⁹ | 5,99×10¹⁹ | 1,08×10²¹ |
 
-O passivo só começa no **T7** — antes disso o jogador não tem capital para spawner e a conta daria valor de drop sub-inteiro. Ver §5 do [01-ECONOMIA.md](01-ECONOMIA.md).
+⚠️ **A restrição "o passivo só começa no T7" caiu na Fase 3b.** Ela existia só porque eu supus que um drop sub-inteiro arredondaria para zero. **Não arredonda:** `MobConfigManager:141` lê `drops.<id>.amount` como `new BigDecimal(getString(...))` e o saldo é `VARCHAR(255)` com clamp de 2 casas para baixo (`AccountRepository:99-105`). Ou seja **valor fracionário é legal** — o T1 paga `0.678` coin por kill e a conta fecha com erro de 0,02%.
+
+Consequência: a coluna **Passivo/h vale nos 20 tiers**, não a partir do T7, e os 20 spawners entregam o alvo com erro máximo de **0,29%** (ver [13-PASSIVO.md](13-PASSIVO.md)). O passivo dos primeiros tiers segue **pequeno em absoluto** — no T1 são 1,56×10⁴/h contra 6,94×10⁴/h da mina — mas isso é o tier falando, não uma exceção de desenho.
 
 ---
 
@@ -147,28 +167,47 @@ Os `mine-level-unlock` dos 15 encantes foram remapeados para a nova escala — v
 
 ## Custos derivados
 
-| T | Spawner (compra) | Rank (coins, simbólico) | Upgrade nível 1 | Upgrade nível 2 | Upgrade nível 3 |
-|---|---|---|---|---|---|
-| T1 | — | grátis | — | — | — |
-| T2 | 1,24×10⁶ | 4,96×10⁴ | 2,48×10⁵ | 1,24×10⁶ | 4,96×10⁶ |
-| T3 | 8,19×10⁶ | 3,28×10⁵ | 1,64×10⁶ | 8,19×10⁶ | 3,28×10⁷ |
-| T4 | 5,42×10⁷ | 2,17×10⁶ | 1,08×10⁷ | 5,42×10⁷ | 2,17×10⁸ |
-| T5 | 3,58×10⁸ | 1,43×10⁷ | 7,16×10⁷ | 3,58×10⁸ | 1,43×10⁹ |
-| T6 | 2,37×10⁹ | 9,46×10⁷ | 4,73×10⁸ | 2,37×10⁹ | 9,46×10⁹ |
-| T7 | 1,56×10¹⁰ | 6,26×10⁸ | 3,13×10⁹ | 1,56×10¹⁰ | 6,26×10¹⁰ |
-| T8 | 1,03×10¹¹ | 4,13×10⁹ | 2,07×10¹⁰ | 1,03×10¹¹ | 4,13×10¹¹ |
-| T9 | 6,83×10¹¹ | 2,73×10¹⁰ | 1,37×10¹¹ | 6,83×10¹¹ | 2,73×10¹² |
-| T10 | 4,52×10¹² | 1,81×10¹¹ | 9,03×10¹¹ | 4,52×10¹² | 1,81×10¹³ |
-| T11 | 2,99×10¹³ | 1,19×10¹² | 5,97×10¹² | 2,99×10¹³ | 1,19×10¹⁴ |
-| T12 | 1,97×10¹⁴ | 7,89×10¹² | 3,95×10¹³ | 1,97×10¹⁴ | 7,89×10¹⁴ |
-| T13 | 1,30×10¹⁵ | 5,22×10¹³ | 2,61×10¹⁴ | 1,30×10¹⁵ | 5,22×10¹⁵ |
-| T14 | 8,62×10¹⁵ | 3,45×10¹⁴ | 1,72×10¹⁵ | 8,62×10¹⁵ | 3,45×10¹⁶ |
-| T15 | 5,70×10¹⁶ | 2,28×10¹⁵ | 1,14×10¹⁶ | 5,70×10¹⁶ | 2,28×10¹⁷ |
-| T16 | 3,77×10¹⁷ | 1,51×10¹⁶ | 7,53×10¹⁶ | 3,77×10¹⁷ | 1,51×10¹⁸ |
-| T17 | 2,49×10¹⁸ | 9,96×10¹⁶ | 4,98×10¹⁷ | 2,49×10¹⁸ | ⚠️ 9,96×10¹⁸ |
-| T18 | ⚠️ 1,65×10¹⁹ | 6,58×10¹⁷ | 3,29×10¹⁸ | ⚠️ 1,65×10¹⁹ | ⚠️ 6,58×10¹⁹ |
-| T19 | ⚠️ 1,09×10²⁰ | 1,00×10¹⁸ (teto) | ⚠️ 2,18×10¹⁹ | ⚠️ 1,09×10²⁰ | ⚠️ 4,35×10²⁰ |
-| T20 | ⚠️ 7,19×10²⁰ | 1,00×10¹⁸ (teto) | ⚠️ 1,44×10²⁰ | ⚠️ 7,19×10²⁰ | ⚠️ 2,88×10²¹ |
+⚠️ **Reescrita duas vezes.** A primeira versão (`spawner = 0,5 × renda`, upgrades a `0,2/1,0/4,0×` o preço) somava **3,1× a renda diária**, 9× acima do orçamento. A segunda estava certa na fração mas errada na **unidade**: eu precificava como se **1 compra = 1 bloco**, quando `costs` é o preço de **um item de spawner** e um bloco precisa de até **512 itens** juntados para produzir no máximo. Comprar o conjunto do T20 saía por **2.304 dias** de renda.
+
+**A unidade correta:**
+
+```
+preço por ITEM     = 0,15 × casa/dia(N) ÷ itens(N)        itens(N) = blocos(N) × spawner-stack(N)
+upgrades por BLOCO = 0,20 × casa/dia(N) ÷ blocos(N)
+```
+
+Assim comprar o **conjunto inteiro** do tier N custa exatamente 15% da renda diária, e maxar **todos** os blocos custa exatamente 20% — a soma é os **35%** do [01-ECONOMIA.md](01-ECONOMIA.md), em todos os 20 tiers.
+
+**Estes valores são exatamente o que está nos 20 `GarnixSpawners/spawners/*.yml`.**
+
+| T | Blocos | Itens | Spawner (coins/item) | Spawner (dracmas/item) | Maxar 1 bloco (coins) | coins/kill |
+|---|---|---|---|---|---|---|
+| T1 | 1,0 | 64 | 879 | **0** (bootstrap) | 7,50×10⁴ | 0,678 |
+| T2 | 1,1 | 97 | 3,84×10³ | 20 | 4,49×10⁵ | 2,09 |
+| T3 | 2,4 | 269 | 9,13×10³ | 22,5 | 1,35×10⁶ | 3,78 |
+| T4 | 2,6 | 355 | 4,58×10⁴ | 73,5 | 8,23×10⁶ | 15,1 |
+| T5 | 4,3 | 675 | 1,59×10⁵ | 70,2 | 3,36×10⁷ | 43 |
+| T6 | 4,6 | 833 | 8,52×10⁵ | 140 | 2,07×10⁸ | 193 |
+| T7 | 6,5 | 1341 | 3,50×10⁶ | 134 | 9,59×10⁸ | 675 |
+| T8 | 6,9 | 1591 | 1,95×10⁷ | 220 | 5,95×10⁹ | 3,24×10³ |
+| T9 | 9,2 | 2327 | 8,81×10⁷ | 212 | 2,97×10¹⁰ | 1,27×10⁴ |
+| T10 | 9,7 | 2689 | 5,04×10⁸ | 315 | 1,86×10¹¹ | 6,38×10⁴ |
+| T11 | 12,3 | 3692 | 2,43×10⁹ | 308 | 9,70×10¹¹ | 2,70×10⁵ |
+| T12 | 12,9 | 4187 | 1,41×10¹⁰ | 429 | 6,10×10¹² | 1,39×10⁶ |
+| T13 | 15,8 | 5496 | 7,12×10¹⁰ | 424 | 3,29×10¹³ | 6,22×10⁶ |
+| T14 | 16,6 | 6143 | 4,21×10¹¹ | 566 | 2,08×10¹⁴ | 3,27×10⁷ |
+| T15 | 19,8 | 7799 | 2,19×10¹² | 566 | 1,15×10¹⁵ | 1,51×10⁸ |
+| T16 | 20,6 | 8617 | 1,31×10¹³ | 736 | 7,30×10¹⁵ | 8,06×10⁸ |
+| T17 | 24,2 | 10660 | 7,01×10¹³ | 743 | 4,12×10¹⁶ | 3,83×10⁹ |
+| T18 | 25,1 | 11670 | 4,23×10¹⁴ | 949 | 2,62×10¹⁷ | 2,06×10¹⁰ |
+| T19 | 28,9 | 14139 | 2,31×10¹⁵ | 970 | 1,50×10¹⁸ | 9,95×10¹⁰ |
+| T20 | 30,0 | 15360 | 1,40×10¹⁶ | 1,23×10³ | 9,59×10¹⁸ | 5,35×10¹¹ |
+
+Demais fórmulas: `dracmas = 0,35 dia de kill` para o conjunto e outros `0,35` para maxar tudo (os 30% que sobram são dos 3 livros da lâmina) · `coins/kill = (casa/dia ÷ 24) ÷ (kills/h × pilha de multiplicadores)`.
+
+A parte em coins do **rank** não está nesta tabela — vive em `GarnixRankUP/ranks/*.yml` e é `0,02 × casa/dia` com teto de 10¹⁸. O gate real do rank são **cabeças**.
+
+✅ **`Long.MAX` deixou de ser problema nos spawners.** Com a unidade corrigida o maior valor dos 20 arquivos é **4,04×10¹⁸**, abaixo dos 9,22×10¹⁸ — nenhum campo estoura, mesmo sem quotes. Os arquivos usam quotes assim mesmo, por segurança. O **C1 fica restrito a `garnix-crates` e `garnix-bosses`**, onde o V2 achou `getDouble`.
 
 Fórmulas: `spawner = 0,5 × casa/dia` · `rank coins = 0,02 × casa/dia` (teto 10¹⁸) · `upgrades = 0,2× / 1,0× / 4,0× o preço do spawner`.
 

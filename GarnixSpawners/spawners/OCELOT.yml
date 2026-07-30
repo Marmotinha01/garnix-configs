@@ -9,24 +9,25 @@ display: "&6{translated}"
 
 texture: "5657cd5c2989ff97570fec4ddcdc6926a68a3393250c1be1f0b114a1db1"
 
-release: "05/03/2025 13:00"
+release: "06/09/2026 20:00"
 
 rank: "&c[Rank 6]"
 
 permissions:
   buy: "spawner.buy.ocelot"
-  kill: "spawner.kill.ocelot"
+  kill: ""
 
 costs:
-  coins: 5000000000
+  coins: '3900000'
+  dracmas: '349'
 
 drops:
   coins:
     chance: 100
-    amount: 5000000000
-  gems:
-    chance: 25
-    amount: 50
+    amount: '634'
+  dracmas:
+    chance: 1
+    amount: '6'
 
 spawner-item:
   material: MOB_SPAWNER
@@ -50,49 +51,51 @@ head-item:
   - '&aClique para armazenar.'
 
 upgrades:
-  mob-stack:
-    base: 1
-    1:
-      value: 2
-      costs:
-        coins: 10000000000
-    2:
-      value: 3
-      costs:
-        coins: 50000000000
-        gems: 100
-    3:
-      value: 3
-      costs:
-        coins: 200000000000
-        gems: 500
   spawner-stack:
     base: 64
     1:
-      value: 128
+      value: 96
       costs:
-        coins: 20000000000
+        coins: '760000'
     2:
-      value: 256
+      value: 144
       costs:
-        coins: 100000000000
+        coins: '2660000'
     3:
+      value: 216
+      costs:
+        coins: '9310000'
+    4:
+      value: 288
+      costs:
+        coins: '32600000'
+    5:
+      value: 384
+      costs:
+        coins: '114000000'
+    6:
       value: 512
       costs:
-        coins: 500000000000
-        gems: 1000
+        coins: '399000000'
+        dracmas: '60600'
+  mob-stack:
+    base: 512
+    1:
+      value: -1
+      costs:
+        coins: '142000000'
+        dracmas: '15400'
   speed:
     1:
       delay: "8s"
       costs:
-        coins: 15000000000
+        coins: '14700000'
     2:
       delay: "6s"
       costs:
-        coins: 75000000000
-        gems: 200
+        coins: '51400000'
     3:
       delay: "4s"
       costs:
-        coins: 300000000000
-        gems: 500
+        coins: '180000000'
+        dracmas: '26700'

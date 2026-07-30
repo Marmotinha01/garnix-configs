@@ -1,17 +1,19 @@
-order: 2
+order: 100
 
-# false = não aparece no menu de shop e não pode ser comprada.
-# A máquina continua funcional: só é obtida via /maquina give.
+# ⚠️ MAQUINA ESPECIAL — fora da loja de maquinas.
+# Rota: Site · jackpot da caixa garnix.
+# Só é obtida via /maquina give (ou pelas tabelas de loot da Fase 5).
 shop: false
 
-delay: 10s
+delay: 432s
 
 translated: Cash
-display: '&e{translated}'
+display: '&b&l{translated}'
 
 texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
 
-release: ''
+# ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
+release: "10/09/2026 20:00"
 
 rank: ''
 
@@ -26,46 +28,25 @@ fuels:
 - infinite
 
 machine-item:
+  glow: true
   texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
-  display: '&aMáquina de {translated}'
+  display: '&b&lMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'
   - '&7do seu terreno.'
   - ''
-  - '&8 ▪ &fQuantia: &7{amount} '
+  - '&8 ▪ &fQuantia: &b{amount} '
   - ''
-  - '&aColoque no seu terreno.'
+  - '&bColoque no seu terreno.'
 
-costs:
-  coins: 1000
+# Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
+costs: {}
 
-# Tipos: CURRENCY, ITEM, COMMAND
-# icon: aceita tudo do ItemBuilder (material, texture, data, display, lore)
-# Para CURRENCY sem icon:, usa o ícone da própria currency automaticamente.
+# ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
 drops:
-  coins:
+  cash:
     type: CURRENCY
-    currency-id: coins
-    chance: 100
-    amount: 5
-  
-  madeira:
-    type: ITEM
-    chance: 50
-    amount: 1
-    icon:
-      display: '&aCash'
-      texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
-    sell-value:
-      coins: 10
-  
-  recompensa:
-    type: COMMAND
-    chance: 5
-    amount: 1
-    icon:
-      display: '&dRecompensa Especial'
-      texture: "64d3243735d15d777245a4df25e40df1e777809a49a304929aebb617a6bd0b8"
-    commands:
-    - give {player} diamond {amount}
-    physical: true # O comando giva itens físicos — limita pela capacidade do inventário
+    currency-id: cash
+    chance: 1
+    # 2 cash/dia por unidade (200 ciclos de 432s x 0,01). Ver a regra de preco no site, no topo do gerador.
+    amount: '0.01'

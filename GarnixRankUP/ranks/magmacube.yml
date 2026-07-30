@@ -7,7 +7,10 @@ texture: 'a1c97a06efde04d00287bf20416404ab2103e10f08623087e1b0c1264a1c0f0c'
 
 commands:
 - 'crate givevirtualkey rankup {player} 1'
+- 'lp user {player} permission set rankup.rank.14 true'
+- 'lp user {player} permission set mining.bonus.14 true'
+- 'lp user {player} permission set spawner.buy.magma_cube true'
 
 costs:
-- 'coins 15000'
-- 'head COW 100'
+- 'coins 345000000000000'
+- 'head WOLF 21000'

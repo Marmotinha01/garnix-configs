@@ -8,6 +8,7 @@ spawn:
   not-in-plot: '&cVocê precisa estar em um terreno para invocar um boss.'
   no-permission: '&cVocê não tem permissão para invocar bosses neste terreno.'
   already-exists: '&cJá existe um boss desse tipo invocado no terreno.'
+  server-limit: '&cO servidor atingiu o limite de bosses invocados. Tente em instantes.'
 
 boss-item:
   invalid-type: '&cTipo de boss inválido.'

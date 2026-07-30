@@ -2,7 +2,7 @@ order: 1
 
 # false = não aparece no menu de shop e não pode ser comprada.
 # A máquina continua funcional: só é obtida via /maquina give.
-shop: true
+shop: false
 
 delay: 10s
 

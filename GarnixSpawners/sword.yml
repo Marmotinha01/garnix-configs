@@ -24,14 +24,25 @@ no-enchants: ' &8◗ &cNenhum encantamento '
 # encantamento é o maior nível configurado em "levels"; "value"/"chance" por nível
 # definem o efeito no combate.
 enchantments:
+  # Quantos mobs do empilhamento morrem por golpe (MobManager:618-624).
+  # -1 abate a pilha inteira.
+  #
+  # A escada precisou subir. O bloco acumula ate `spawner-stack` por ciclo — 64 no
+  # comeco, 512 maxado — entao com os valores antigos (2/4/8/16) so o nivel 5
+  # dava conta no fim: 512 mobs a cada 4s exigem 128 abates/s, e a 5 cliques/s o
+  # nivel 4 entregava 80. Os quatro primeiros niveis eram decorativos.
+  #   nivel 1 (4)   -> 20 abates/s: cobre o bloco nu (64 a cada 10s = 6,4/s)
+  #   nivel 3 (64)  -> 320 abates/s: cobre o bloco maxado (128/s)
+  #   nivel 5 (-1)  -> a pilha inteira num golpe. Obrigatorio quando o `mob-stack`
+  #                    esta ilimitado e a pilha cresceu enquanto voce estava fora.
   massacre:
     display: '&4Massacre'
     book:
       material: ENCHANTED_BOOK
       display: '&4Livro de Massacre &7{level}'
       lore:
-      - '&7Aumenta o dano da sua'
-      - '&7lâmina contra os mobs.'
+      - '&7Quantos mobs a sua lâmina'
+      - '&7abate em um único golpe.'
       - ''
       - '&8 ▪ &fMassacre: &4{level} '
       - ''
@@ -39,15 +50,20 @@ enchantments:
       - '&7para aplicar o livro.'
     levels:
       '1':
-        value: 2
-      '2':
         value: 4
-      '3':
-        value: 8
-      '4':
+      '2':
         value: 16
+      '3':
+        value: 64
+      '4':
+        value: 256
       '5':
         value: -1
+  # Multiplicador direto sobre os drops (MobManager:715-717). E o encantamento
+  # mais apeloes do servidor: multiplica a unica via sem teto fisico.
+  # 2,0 no maximo — ja e o valor que o orcamento de 8,10x da via passiva assume
+  # (1,35 de bonus x pilhagem 2,0 x booster de drops 3,0). NAO subir sem
+  # recalcular `drops.coins.amount` dos 20 spawners.
   pilhagem:
     display: '&aPilhagem'
     book:
@@ -68,14 +84,20 @@ enchantments:
         value: 1.5
       '3':
         value: 2.0
+  # ⚠️ A lore MENTIA. Dizia "chance de abater o mob com um golpe so", mas
+  # MobManager:634-641 e claro: e chance de DOBRAR as cabecas do abate.
+  # Quem abate em um golpe e o `massacre`, nao este.
+  #
+  # As chances ficam como estao — 25/50/75% ja e o que o modelo de cabecas da
+  # Fase 3a assumiu (fator esperado 1,00 -> 1,75).
   ceifador:
     display: '&dCeifador'
     book:
       material: ENCHANTED_BOOK
       display: '&dLivro de Ceifador &7{level}'
       lore:
-      - '&7Chance de abater o mob'
-      - '&7com um golpe só.'
+      - '&7Chance de dobrar as'
+      - '&7cabeças que o mob solta.'
       - ''
       - '&8 ▪ &fCeifador: &d{level} '
       - ''

@@ -1,158 +1,88 @@
-# TESTES IN-GAME — checklist
+# TESTES IN-GAME — o que ainda falta medir
 
-Deixe este arquivo aberto do lado enquanto testa. **Só o Teste 1 é obrigatório**; os outros são rápidos e fecham pendências que não bloqueiam nada.
+Os **8 testes do protocolo V1–V8 estão fechados** (resultados e evidências em [09-VERIFICACAO.md](09-VERIFICACAO.md)). Este arquivo agora lista só o que **ainda falta cronometrar**, em ordem de risco.
 
-Ao fim, me manda os números — não precisa formatar, cru serve.
+**A regra que justifica cada teste:** o V5-A mostrou que minha estimativa de mineração manual estava **7× errada** (eu supunha 10.000 blocos/h; o real é 70.000). Cada número abaixo tem o mesmo potencial de erro, e cada um move uma fase inteira.
+
+Me manda os números crus, não precisa formatar.
 
 ---
 
-## ⭐ Teste 1 — Taxa de clique · **OBRIGATÓRIO** · 4 minutos
+## ⭐ M1 — Kills por hora de UM bloco de spawner · **o mais importante** · 5 minutos
 
-É o **último número que trava a Fase 2**. Ele define o volume de chaves do servidor (~4.800/dia hoje no plano) e o uptime do frenzy.
+**Por que:** é o número que sustenta os **dois eixos ao mesmo tempo**. Dele saem os requisitos de cabeça dos 20 ranks (e portanto o ritmo de prestígio), o valor das dracmas e o `drops.coins.amount` dos 20 spawners. Um erro de 3× move os três juntos.
+
+Meu modelo diz: `kills/h por bloco = min(spawners no bloco, teto do mob-stack) × 3600/delay`.
 
 ### Preparação
-
-1. Use uma **conta de teste** (ou a sua, desde que **sem encantes de AoE comprados**).
-2. Entre na mina.
-3. Se a picareta tiver encantes de AoE, remova: **shift + botão direito** na picareta → menu de gerenciar → desencantar. Deixe **zero** de `explosive`, `colapse`, `snake`, `blaze`, `kraken`, `meteor`, `wither`, `annihilation`, `rupture`, `lighthing`, `demolition`.
-   - `fortunate`, `gemmed`, `blessed` e `accelerated` **podem ficar** — nenhum deles quebra bloco extra.
+1. Um bloco de spawner **sozinho** no terreno (sem outros por perto — `stack-radius: 5`).
+2. Anote quantos **itens de spawner** você juntou nele e qual o `delay` atual.
+3. Lâmina com `massacre` alto, para não ser ele o gargalo.
+4. Colete os drops acumulados antes de começar, para zerar.
 
 ### Medição
-
-4. Olhe o **nome da picareta**: `Picareta [X]`. Esse `X` é o total de blocos que você já quebrou. **Anote o X inicial.**
-5. Minere **3 minutos** cronometrados, **no ritmo normal de quem está jogando**. Não force o clique nem segure o botão de forma diferente do normal — o que interessa é o ritmo real de jogo.
-6. Pare. **Espere 5 segundos** antes de ler (o display atualiza a cada 5s — `pickaxe-display-seconds: 5`).
-7. **Anote o X final.**
+Autoclique no mob por **5 minutos cronometrados**, sem parar.
 
 ### O que me mandar
+- Itens de spawner no bloco: ____
+- `delay` do bloco: ____
+- **Mobs abatidos em 5 min** (a lâmina mostra em "Mobs abatidos"): ____
+- Coins e dracmas acumulados no período: ____
+- CPS aproximado do autoclick: ____
 
-```
-X inicial:  ______
-X final:    ______
-```
-
-Se quiser conferir na hora: `(final − inicial) ÷ 3 × 60 = blocos por hora`.
-
-| | |
-|---|---|
-Meta atual do plano | 10.000/h |
-Banda humana realista | 18.000–29.000/h |
-Teto teórico | 72.000/h (1 bloco por tick) |
-
-⚠️ **Se der 20.000 ou mais**, o volume de chaves do servidor dobra ou triplica e eu recalibro as 5 faixas da crate. É por isso que este número importa.
+> **O que eu faço com isso:** se o medido divergir do modelo por um fator k, divido os requisitos de cabeça por k e multiplico o `drops.coins.amount` por k. É uma constante no gerador.
 
 ---
 
-## Teste 2 — Reset da mina · 1 minuto
+## ⭐ M2 — Colheita de cacto por hora · 10 minutos
 
-Confirma as duas premissas do teto de 1,63×10⁷ blocos/hora que eu calculei do `data.yml`.
+**Por que:** é o termo que falta para derivar o `sell-price` do cacto. Sem ele a sexta via é chute. Você já deu as duas pontas (`randomTickSpeed 8`, `growth.cactus-modifier: 20000`, farms de 25–40k no dedicado e 5–15k no casual), mas a taxa efetiva depende de como a farm é montada.
 
-1. Clique no **ícone de relógio** na hotbar (slot de reset).
-2. **A mina voltou 100% cheia?** Ou voltou parcial, com buracos?
-3. Tente resetar **de novo imediatamente**. O cooldown de 30 segundos é aplicado?
+### Preparação
+1. Uma farm de cacto de tamanho **conhecido** — conte os cactos plantados, ou use N torres 3×3×4 e me diga o N.
+2. Armazém vazio, ou anote o valor inicial.
+3. Autosell **desligado**, para acumular.
+
+### Medição
+Deixe rodando **10 minutos** cronometrados, sem tocar.
 
 ### O que me mandar
+- Cactos plantados (blocos que crescem): ____
+- Cacto acumulado no armazém em 10 min: ____
+- Se der: o mesmo com uma farm 2× maior, para eu confirmar que escala linear
 
-```
-Mina volta 100% cheia?     sim / não
-Cooldown de 30s aplicado?  sim / não
-```
+> **O que eu faço com isso:** `sell-price = alvo de renda do tier ÷ colheita/h`. Uma medição, um número.
 
 ---
 
-## Teste 3 — `gems` vs `gemas` · 2 minutos
+## M3 — Teste de carga · **antes do lançamento**
 
-Os 20 arquivos de spawner usam a chave **`gems`**, mas o ID da moeda é **`gemas`**. Quero saber se é bug ou alias. Não bloqueia nada — os upgrades vão passar a custar **dracmas** de qualquer forma — mas é bom saber.
+Decide quantos jogadores o dedicado aguenta, e é o único teste que pode obrigar a mexer nas chances dos encantes de classe D/E.
 
-1. `/gema` — anote o saldo atual.
-2. Coloque um spawner qualquer no seu terreno.
-3. Mate uns 20 mobs dele (o drop de gema é 25% de chance).
-4. `/gema` de novo.
+| # | Cenário | O que medir |
+|---|---|---|
+**L1** | 50 · 100 · 250 contas no perfil real (2 AFK + 1 ativa), árvore de encantes no máximo | pacotes/tick e TPS |
+**L2** | lote de 25–30 bosses invocados juntos (`boss-stack-radius: 5`) | TPS no pico |
 
-### O que me mandar
-
-```
-Saldo de gema mexeu?  sim / não
-```
+> **Se o TPS cair:** o ajuste é **baixar a chance da classe alta e subir o payoff por proc** — nunca baixar o payoff, porque isso desmonta a curva de tiers.
 
 ---
 
-## Teste 4 — Chave em bloco de AoE · 3 minutos
+## M4 — Conferências de que o config pegou · 5 min cada
 
-Define se a mudança de código **C7** é necessária. Se o proc de chave conta blocos quebrados por AoE, o volume seria **1.600× maior** que o projetado e a crate inteira perderia sentido.
+Não são medições, são checagens.
 
-1. `/gema add <você> 100000000` para ter gemas.
-2. Pelo menu `/mina`, compre **`blessed`** num nível alto (uns 50+).
-3. Compre também **`explosive`** ou **`colapse`** — qualquer um que quebre área.
-4. Minere até um AoE disparar.
-
-### O que observar
-
-Quando o AoE explode e quebra dezenas de blocos de uma vez:
-
-- **Chove chave** (várias de uma vez, proporcional aos blocos)? → o proc conta AoE, **C7 é obrigatório**
-- **Vem no máximo uma chave**, como se fosse um bloco só? → já conta só manual, **C7 desnecessário**
-
-### O que me mandar
-
-```
-Ao disparar AoE, vieram:  muitas chaves / no maximo uma
-```
+| # | O que conferir | Como |
+|---|---|---|
+**C-a** | O drop de **dracmas** do spawner cai | mate mobs e veja `/dracmas` mexer (chance de 1%, então mate bastante) |
+**C-b** | A trilha `spawner-stack` **agora entrega throughput** | compare kills/min antes e depois de subir um nível |
+**C-c** | O nível de `mob-stack` (ilimitado) deixa a pilha passar de 512 | fique ~1 min sem matar e olhe a nametag |
+**C-d** | `machines.buy.a` é concedida no rank 6 | chegue ao rank 6 e veja a máquina A aparecer em `/maquinas` |
+**C-e** | O **C6** funciona: `prestige.rewards` roda no nível certo | prestigie numa conta de teste e veja se `machines.buy.d` foi concedida |
+**C-f** | O `release:` escalonado bloqueia spawner de dia futuro | tente comprar o spawner 20 antes do dia 20 |
 
 ---
 
-## Teste 5 — Prestígio quebra spawner? · 5 minutos
+## Como isso volta para o plano
 
-O mais chato de montar, e o mais importante dos opcionais: se o spawner **já colocado** parar de produzir ao prestigiar, o sistema de prestígio precisa de outro desenho inteiro.
-
-1. Numa **conta de teste** (não na sua principal — isso reseta o rank):
-   ```
-   /ranks set <conta-teste> wither
-   ```
-   (`wither` é o rank 20, o último)
-2. `/spawner give <tipo> <stack>` e coloque **2 ou 3 spawners de tier alto** no terreno.
-3. Confirme que estão produzindo (drops caindo, holograma ativo).
-4. `/prestigio` e confirme.
-5. **Olhe os spawners que já estavam colocados.**
-
-### O que observar
-
-- Continuam produzindo normalmente? → ✅ o desenho de prestígio do plano funciona
-- Pararam / sumiram / deram erro? → ⚠️ preciso redesenhar o prestígio
-
-### O que me mandar
-
-```
-Spawners colocados apos prestigiar:  continuam produzindo / pararam
-Rank foi resetado para o primeiro?   sim / nao
-Prestigio subiu para 1?              sim / nao
-```
-
----
-
-## Resumo do que mandar
-
-Copie isto, preencha e me manda:
-
-```
-TESTE 1 (obrigatorio)
-  X inicial: ______
-  X final:   ______
-
-TESTE 2
-  Mina volta 100% cheia?     ___
-  Cooldown de 30s aplicado?  ___
-
-TESTE 3
-  Saldo de gema mexeu?  ___
-
-TESTE 4
-  Ao disparar AoE vieram:  ___
-
-TESTE 5
-  Spawners apos prestigiar:  ___
-  Rank resetou?              ___
-  Prestigio subiu?           ___
-```
-
-Se só der para fazer o **Teste 1**, já libera a Fase 2 — os outros quatro eu encaixo depois.
+Cada medição vira uma linha em [metrics.csv](metrics.csv) (meta vs medido). Divergência acima de **±25%** significa que a fase correspondente não fecha e eu regero os arquivos com a constante corrigida.

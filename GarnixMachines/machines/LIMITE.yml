@@ -1,0 +1,59 @@
+order: 101
+
+# ⚠️ MAQUINA ESPECIAL — fora da loja de maquinas.
+# Rota: Site · jackpot da caixa garnix.
+# Só é obtida via /maquina give (ou pelas tabelas de loot da Fase 5).
+shop: false
+
+delay: 3600s
+
+translated: Limite
+display: '&b&l{translated}'
+
+texture: "9a2d9b1e07d1e1a8b7b1e3e5e9e6a9e8f8a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0"
+
+# ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
+release: "12/09/2026 20:00"
+
+rank: ''
+
+buy-permission: machines.buy.limite
+
+block:
+  material: LAPIS_BLOCK
+  data: 0
+
+fuels:
+- default
+- infinite
+
+machine-item:
+  glow: true
+  texture: "9a2d9b1e07d1e1a8b7b1e3e5e9e6a9e8f8a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0"
+  display: '&b&lMáquina de {translated}'
+  lore:
+  - '&7Produz sozinha dentro'
+  - '&7do seu terreno.'
+  - ''
+  - '&8 ▪ &fQuantia: &b{amount} '
+  - ''
+  - '&bColoque no seu terreno.'
+
+# Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
+costs: {}
+
+# ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
+drops:
+  spawnerslimite:
+    type: CURRENCY
+    currency-id: spawnerslimite
+    chance: 1
+    # 24 por dia — 1 por hora
+    amount: '1'
+
+  maquinaslimite:
+    type: CURRENCY
+    currency-id: maquinaslimite
+    chance: 1
+    # 24 por dia — 1 por hora
+    amount: '1'

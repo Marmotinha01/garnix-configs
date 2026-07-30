@@ -1,9 +1,108 @@
 # ── Prestige ──
 prestige:
   # Cost increase per prestige level (percent). E.g. 10 = +10% per level.
-  cost-increase-percent: 10
-  # Commands run on prestige. Placeholders: {player}, {prestige}.
-  commands: []
+  # LINEAR: custo = base × (1 + prestigio × percent/100). Confirmado no V8.
+  # Vale também para os custos em `head`, então é a trava de ritmo da esteira.
+  cost-increase-percent: 2
+
+  # Comandos que rodam em QUALQUER prestígio. Placeholders: {player}, {prestige}.
+  #
+  # ⚠️ NÃO removemos as permissões de rank aqui, de propósito. O prestígio reseta
+  # SÓ a escada de rank (o plugin já zera `rank_order` para 1). Tudo o que o
+  # jogador acumulou fica: cabeças, dracmas, equipamento, spawners colocados e as
+  # permissões `spawner.buy.*`, `machines.buy.*` e `mining.bonus.*`.
+  #
+  # É isso que transforma prestigiar de castigo em VOLTA RÁPIDA — e o V6 já tinha
+  # provado que os spawners colocados continuam produzindo. A escada de rank vira
+  # o sink de cabeças que move o contador, que é exatamente o papel dela no eixo
+  # de cabeças.
+  #
+  # (Nota técnica: `lp permission unset` não aceita curinga, então remover exigiria
+  # 60 comandos por prestígio × ~345 prestígios. Além de errado pelo desenho,
+  # seria caro.)
+  commands:
+  - 'crate givevirtualkey rankup {player} 1'
+
+  # ── Marcos de prestígio (C6) ────────────────────────────────────────────────
+  # Níveis sem entrada são permitidos e não fazem nada, então só aparece aqui o
+  # que de fato recompensa. Roda DEPOIS de `commands`.
+  #
+  # Os marcos seguem o RITMO REAL de prestígio (~30/dia a partir do dia 10), não
+  # números redondos: o dia 10 sozinho já dá 39 prestígios, então marcos em
+  # 1/5/10/25 abririam 8 máquinas de uma vez. Assim cai uma máquina nova por dia,
+  # do dia 10 ao dia 20. Teto alcançável na temporada: ~345.
+  #
+  # Os marcos são INTERCALADOS: nos pares vem máquina, nos ímpares vem conteúdo.
+  # Nenhuma volta parece vazia, que era a reclamação original sobre o prestígio.
+  #
+  # ⏳ Os marcos de conteúdo estão COMENTADOS porque o alvo de cada um ainda não
+  #    existe: as caixas de prestígio nascem na Fase 5 e as tags na Fase 7. Um
+  #    comando apontando para um id inexistente falharia em silêncio, então eles
+  #    entram quando o alvo entrar. As 12 máquinas já estão vivas.
+  rewards:
+    '1':    # dia 10
+      commands:
+      - 'lp user {player} permission set machines.buy.d true'
+    # '10':  trocador de dracmas
+    # - 'fragmentos give {player} <tipo> 1'   # ⏳ Fase 5
+    '20':   # dia 10
+      commands:
+      - 'lp user {player} permission set machines.buy.e true'
+    # '35':  4o slot de booster
+    # ⏳ nao existe permissao de slot de booster no codigo — precisaria de C novo
+    '50':   # dia 11
+      commands:
+      - 'lp user {player} permission set machines.buy.f true'
+    # '65':  slot extra de maquina especial
+    # ⏳ nao existe teto de slot de maquina — o dono definiu que nao tem teto
+    '80':   # dia 12
+      commands:
+      - 'lp user {player} permission set machines.buy.g true'
+    # '95':  caixa de prestigio I
+    # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
+    '110':  # dia 13
+      commands:
+      - 'lp user {player} permission set machines.buy.h true'
+    # '125':  tag de prestigio I
+    # ⏳ Fase 7, junto com as tags
+    '140':  # dia 14
+      commands:
+      - 'lp user {player} permission set machines.buy.i true'
+    '155':    # +1 vaga de visitante
+      commands:
+      - 'mina giveslot {player} 1'
+    '170':  # dia 15
+      commands:
+      - 'lp user {player} permission set machines.buy.j true'
+    # '185':  caixa de prestigio II
+    # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
+    '200':  # dia 16
+      commands:
+      - 'lp user {player} permission set machines.buy.k true'
+    # '215':  tag de prestigio II
+    # ⏳ Fase 7
+    '230':  # dia 17
+      commands:
+      - 'lp user {player} permission set machines.buy.l true'
+    '245':    # +1 vaga de visitante
+      commands:
+      - 'mina giveslot {player} 1'
+    '260':  # dia 18
+      commands:
+      - 'lp user {player} permission set machines.buy.m true'
+    # '275':  tag de prestigio III
+    # ⏳ Fase 7
+    '290':  # dia 19
+      commands:
+      - 'lp user {player} permission set machines.buy.n true'
+    # '305':  caixa de prestigio III
+    # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
+    '320':  # dia 20
+      commands:
+      - 'lp user {player} permission set machines.buy.o true'
+    # '345':  TETO da temporada — titulo
+    # ⏳ Fase 7
+
 
 # Ranking refresh interval (minutes). Top size is fixed at 10.
 ranking-refresh-minutes: 5

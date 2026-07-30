@@ -107,9 +107,45 @@ const PARAMS = {
 
   // ------------------------------------------------------- empilhamento
   // E o numero que sustenta a lei "nunca compensa ficar parado".
+  //
+  // ⚠️ CORRIGIDO DUAS VEZES. A mecanica real, lida no codigo:
+  //
+  //   MobManager:139-152  por ciclo o bloco adiciona `spawner.getStackSize()`,
+  //                       CLAMPADO por (mob-stack cap - stack atual)
+  //   =>  kills/h por bloco = min(spawners no bloco, mobStackCap) x 3600/delay
+  //
+  // `mob-stack` NAO e multiplicador, e TETO. Duas consequencias:
+  //
+  //  (a) O numero 1.536 (= 3 x 512) que eu usava era errado nas DUAS pontas:
+  //      tratava um teto como fator, e comparava com um estado (1 mob, 1 bloco)
+  //      que nao e comprável.
+  //  (b) Com teto 3, a trilha `spawner-stack` (64->512, a mais cara do arquivo)
+  //      entregava ZERO — e usa-la era armadilha: 512 num bloco rende 3 por
+  //      ciclo, e os mesmos 512 em 171 blocos rendem 513.
+  //
+  // A CORRECAO (Fase 3d): `mob-stack` nasce no maximo (base 512) e ganha um unico
+  // nivel que troca o teto por ILIMITADO (`value: -1`, que o UpgradeManager:55 ja
+  // suporta) — util para nao perder producao quando o jogador nao mata rapido, e
+  // ordem-independente. `spawner-stack` passa a ser a trilha de throughput, com
+  // 6 niveis. Dois tetos SUBINDO seria dependente de ordem, porque throughput e
+  // min(A,B) e a compra "errada" primeiro nao entregaria nada.
+  //
+  //   nu     = min( 64, 512) x 3600/10 =  23.040 kills/h por bloco
+  //   maxado = min(512,  oo) x 3600/ 4 = 460.800 kills/h por bloco  ->  20x
+  //
+  // 6,61^1 = 6,6 < 20 < 43,7 = 6,61^2  ->  maxar um bloco vale 1,59 tiers.
+  // A lei fica ainda mais forte: estar 2 TIERS atras e incompensavel.
   empilhamento: {
-    mobStack: 3,
+    mobStackCapBase: 512,       // nasce no maximo; o nivel 1 o torna ilimitado
     spawnerStack: 512,
+    spawnerStackBase: 64,
+    delayBaseSeg: 10,
+    delayMaxSeg: 4,
+    // ⚠️ o termo de QUANTIDADE agora e o numero de BLOCOS de spawner no plot,
+    // porque `spawnerslimite` NAO e consumido (ShopMenu:333 so compara saldo) —
+    // ele limita a quantidade por COMPRA, nao o total possuido. Cresce 1 -> 30.
+    blocosNoDia1: 1,
+    blocosNoDia20: 30,
   },
 
   // ----------------------------------------------------- orcamento de sinks
@@ -123,13 +159,22 @@ const PARAMS = {
     rankParteEmCoins: 0.02,
   },
 
-  // Multiplicadores de custo em cima do preco do spawner
+  // Multiplicadores de custo em cima da renda diaria do tier.
+  //
+  // ⚠️ REESCRITO NA FASE 3B, quando os 20 YAMLs foram gerados de verdade. O antigo
+  // `spawnerSobreRenda: 0.5` mais os upgrades a 0,2/1,0/4,0 x o preco do spawner
+  // somavam 3,1x a renda diaria — 9x acima do orcamento de 35% do 01-ECONOMIA.
+  // Agora os dois numeros SAO o orcamento: 15% a compra, 20% maxar um slot inteiro.
   custos: {
-    spawnerSobreRenda: 0.5,       // spawner N custa 0,5 x renda(N)
-    upgradeNivel1: 0.2,           // x preco do spawner
-    upgradeNivel2: 1.0,
-    upgradeNivel3: 4.0,
-    tetoLongSafe: 1e18,           // nada escrito acima disso sem o C1
+    spawnerSobreRenda: 0.15,      // spawner N custa 0,15 x renda(N)
+    upgradesSobreRenda: 0.20,     // maxar UM slot (os 9 niveis) = 0,20 x renda(N)
+    upgradeRazaoNaTrilha: 3.5,    // escada geometrica dentro de cada trilha
+    // Nivel mais caro que existe: o ultimo do spawner-stack.
+    // 0,20 x 50,7% (peso da trilha) x 42,875/59,6 (peso do nivel) = 0,073 x renda(N)
+    upgradeNivelMaisCaro: 0.073,
+    dracmaSpawnerEmDiasDeKill: 0.35,
+    dracmaUpgradesEmDiasDeKill: 0.35,
+    tetoLongSafe: 1e18,           // nada escrito acima disso sem quotes no YAML
   },
 
   // ------------------------------------------------------------------- cash

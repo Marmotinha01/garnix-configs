@@ -3,6 +3,15 @@ debug: false
 ranking-refresh-minutes: 5
 ranking-size: 10
 
+# Teto global de bosses ENTIDADE vivos ao mesmo tempo no servidor (C8).
+# 0 = ilimitado. O teto vale so para invocar um boss NOVO: empilhar num que
+# ja existe continua liberado, porque empilhar nao cria entidade.
+#
+# Cada plot tem no maximo 1 entidade por TIPO de boss, entao a contagem e
+# limitada por (jogadores x tipos), nao pelo volume de chaves. Com 250
+# jogadores e 5 bosses o teorico e 1.250 — o valor abaixo sai do teste L2.
+max-simultaneous: 400
+
 boss-stack-radius: 5
 
 boss-nametag: '{display} §7x{stack}'

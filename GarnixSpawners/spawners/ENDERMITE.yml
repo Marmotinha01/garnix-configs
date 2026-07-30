@@ -9,24 +9,25 @@ display: "&5{translated}"
 
 texture: "1730127e3ac7677122422df0028d9e7368bd157738c8c3cddecc502e896be01c"
 
-release: "05/03/2025 13:00"
+release: "15/09/2026 20:00"
 
 rank: "&c[Rank 15]"
 
 permissions:
   buy: "spawner.buy.endermite"
-  kill: "spawner.kill.endermite"
+  kill: ""
 
 costs:
-  coins: 5000000000
+  coins: '43400000000000'
+  dracmas: '3170'
 
 drops:
   coins:
     chance: 100
-    amount: 5000000000000
-  gems:
-    chance: 25
-    amount: 50
+    amount: '1890000000'
+  dracmas:
+    chance: 1
+    amount: '15'
 
 spawner-item:
   material: MOB_SPAWNER
@@ -50,49 +51,51 @@ head-item:
   - '&aClique para armazenar.'
 
 upgrades:
-  mob-stack:
-    base: 1
-    1:
-      value: 2
-      costs:
-        coins: 10000000000
-    2:
-      value: 3
-      costs:
-        coins: 50000000000
-        gems: 100
-    3:
-      value: 3
-      costs:
-        coins: 200000000000
-        gems: 500
   spawner-stack:
     base: 64
     1:
-      value: 128
+      value: 96
       costs:
-        coins: 20000000000
+        coins: '18300000000000'
     2:
-      value: 256
+      value: 144
       costs:
-        coins: 100000000000
+        coins: '64100000000000'
     3:
+      value: 216
+      costs:
+        coins: '224000000000000'
+    4:
+      value: 288
+      costs:
+        coins: '785000000000000'
+    5:
+      value: 384
+      costs:
+        coins: '2750000000000000'
+    6:
       value: 512
       costs:
-        coins: 500000000000
-        gems: 1000
+        coins: '9610000000000000'
+        dracmas: '925000'
+  mob-stack:
+    base: 512
+    1:
+      value: -1
+      costs:
+        coins: '3420000000000000'
+        dracmas: '235000'
   speed:
     1:
       delay: "8s"
       costs:
-        coins: 15000000000
+        coins: '354000000000000'
     2:
       delay: "6s"
       costs:
-        coins: 75000000000
-        gems: 200
+        coins: '1240000000000000'
     3:
       delay: "4s"
       costs:
-        coins: 300000000000
-        gems: 500
+        coins: '4330000000000000'
+        dracmas: '408000'

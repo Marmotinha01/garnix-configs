@@ -9,24 +9,25 @@ display: "&d{translated}"
 
 texture: "baf818b04d6ae98a69ad8d9463d8d0379921d3eb79222e1c6272f65372d80775"
 
-release: "05/03/2025 13:00"
+release: "16/09/2026 20:00"
 
 rank: "&c[Rank 16]"
 
 permissions:
-  buy: "spawner.buy.bruxa"
-  kill: "spawner.kill.bruxa"
+  buy: "spawner.buy.witch"
+  kill: ""
 
 costs:
-  coins: 5000000000
+  coins: '271000000000000'
+  dracmas: '3750'
 
 drops:
   coins:
     chance: 100
-    amount: 5000000000000
-  gems:
-    chance: 25
-    amount: 50
+    amount: '10500000000'
+  dracmas:
+    chance: 1
+    amount: '16'
 
 spawner-item:
   material: MOB_SPAWNER
@@ -50,49 +51,51 @@ head-item:
   - '&aClique para armazenar.'
 
 upgrades:
-  mob-stack:
-    base: 1
-    1:
-      value: 2
-      costs:
-        coins: 10000000000
-    2:
-      value: 3
-      costs:
-        coins: 50000000000
-        gems: 100
-    3:
-      value: 3
-      costs:
-        coins: 200000000000
-        gems: 500
   spawner-stack:
     base: 64
     1:
-      value: 128
+      value: 96
       costs:
-        coins: 20000000000
+        coins: '121000000000000'
     2:
-      value: 256
+      value: 144
       costs:
-        coins: 100000000000
+        coins: '423000000000000'
     3:
+      value: 216
+      costs:
+        coins: '1480000000000000'
+    4:
+      value: 288
+      costs:
+        coins: '5190000000000000'
+    5:
+      value: 384
+      costs:
+        coins: '18200000000000000'
+    6:
       value: 512
       costs:
-        coins: 500000000000
-        gems: 1000
+        coins: '63500000000000000'
+        dracmas: '1150000'
+  mob-stack:
+    base: 512
+    1:
+      value: -1
+      costs:
+        coins: '22600000000000000'
+        dracmas: '293000'
   speed:
     1:
       delay: "8s"
       costs:
-        coins: 15000000000
+        coins: '2340000000000000'
     2:
       delay: "6s"
       costs:
-        coins: 75000000000
-        gems: 200
+        coins: '8190000000000000'
     3:
       delay: "4s"
       costs:
-        coins: 300000000000
-        gems: 500
+        coins: '28700000000000000'
+        dracmas: '507000'

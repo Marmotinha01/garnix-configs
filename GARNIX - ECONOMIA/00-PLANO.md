@@ -690,6 +690,36 @@ A flexibilidade de níveis vazios que você pediu serve exatamente para isso: al
 
 **Um adendo que casa com a temporada:** como tudo reseta em 20 dias, prestígio é o **critério natural de placar final**. Coins todo mundo zera; prestígio é o que mede quem realmente fez as voltas. Vale ser o critério de desempate do ranking geral e da premiação de fim de temporada.
 
+### Mérito de fim de temporada — os rankings e os R$ 1.000
+
+Documento completo em **[12-RANKINGS.md](12-RANKINGS.md)**. O resumo:
+
+O mérito fica em **vários rankings de várias economias e ações**, por sua decisão — e o levantamento do código mostrou que **quase tudo já existe**: **26 dimensões de ranking implementadas em 14 plugins** (33 contando as 8 moedas separadamente), 15 menus `ranking.yml` já em config, e **todas lendo do SQL**, ou seja incluindo jogador offline. Só falta **uma**: o **cacto não tem placar nenhum** — o `GarnixWarehouse` guarda só estado atual, nunca total vendido. Isso é o **C11**.
+
+Você vai distribuir **R$ 1.000** entre os **top 1** de alguns rankings. Isso traz uma lei nova, e ela é a mais importante da premiação:
+
+> **Dinheiro real atrás de um ranking que dinheiro real pode comprar é cashback disfarçado.** Se o top 1 de "coins gastos em spawner" ganha R$ 150, o caminho ótimo é comprar R$ 200 de cash e recuperar R$ 150. Portanto: **só entra na premiação ranking travado por TEMPO ou HABILIDADE.**
+
+É a lei dos dois eixos aplicada ao dinheiro de verdade — e por isso a premiação reforça o desenho em vez de furá-lo.
+
+| # | Ranking | Prêmio |
+|---|---|---|
+1 | **Prestígio** — o único placar que dinheiro não compra, por projeto | **R$ 250** |
+2 | **Bosses abatidos** | R$ 150 |
+3 | **Blocos quebrados** (Mineração) | R$ 120 |
+4 | **Colheitas** (Fazenda) | R$ 120 |
+5 | **Cacto vendido** (Galpão) — ⚠️ só existe com o **C11** | R$ 120 |
+6 | **Recompensas pescadas** | R$ 120 |
+7 | **Pontuação total de eventos** | R$ 80 |
+8 | **Tempo online** — pequeno de propósito: é um relógio, não uma conquista | R$ 40 |
+| | **8 vencedores** | **R$ 1.000** |
+
+As 4 vias de farm pagam **igual (R$ 120)** — a paridade que estamos calibrando há três fases não pode ser desmentida pelo prêmio.
+
+**Ficam fora, e o motivo importa:** saldo de **cash** (converter reais em reais), saldo de coins e das secundárias (parcialmente compradas), spawners/máquinas comprados ou gastos (riqueza pura), caixas abertas (chave é comprável), **duelos** (taxa 0% hoje — duas alts trocam vitórias de graça), coinflip (sorte + conluio), visitas/avaliação de loja (amigos clicando). Esses ganham **prêmio de status** — tag, cosmético, anúncio —, nunca dinheiro.
+
+**As 5 regras, publicadas no dia 1:** ① um prêmio por pessoa (do maior para o menor; quem já ganhou cede o lugar ao 2º — **8 pessoas felizes em vez de 3**) · ② **um prêmio por IP**, essencial porque o servidor permite 3 contas por IP · ③ piso mínimo por placar, senão o dinheiro soma ao prestígio · ④ conta punida está fora · ⑤ ⚠️ **snapshot e dump do banco antes do reset** — o wipe apaga as tabelas e placar não conferido é placar perdido.
+
 - **`GarnixRankUP/config.yml`**: implementar o acima — lista global de comandos por prestígio, listas por nível com vazios permitidos, e o `cost-increase-percent: 10` revalidado contra a curva de tiers (10% por prestígio pode ser pouco se o jogador preserva todo o estoque).
 - **`GarnixSpawners/ranks.yml` + `GarnixMachines/ranks.yml`** — reprojetar as escalas de VIP (hoje fictícias e invertidas) para celestial +4/−3 → garnix +15/−15, e adicionar as 20 entradas de rank. Fazer os dois arquivos juntos (são idênticos hoje).
 - **`GarnixSpawners/spawners/*.yml`** (20 arquivos, hoje todos com custo e drop idênticos): definir **compra = rank N + coins do tier N + dracmas (plano, ~1 dia de kill)**; drop de **coins + dracmas** por mob morto; drop de cabeça; e as 3 trilhas de upgrade custando **coins + dracmas** (não a chave `gems`, que não corresponde a moeda nenhuma). Corrigir `mob-stack` nível 2 e 3 (**ambos têm `value: 3`** — o nível 3 custa 4× e não dá nada, nos 20 arquivos) e o `rank`/`order` divergente em `SLIME.yml`.
@@ -1131,6 +1161,7 @@ Fontes em `Desktop/garnix/sources` (sincronizar `resources/` junto). **C1, C2, C
 **C4** *(opcional)* | Mining / Farm / Fishing | Campo de **bônus de conjunto** de armadura | Hoje 4 peças só somam. Se conjunto tem que importar, precisa de campo | nada — nice to have |
 **C5** *(opcional)* | Spawners / Machines | Retorno decrescente ou teto diário por conta em drop AFK | Protege a razão ativo:AFK de 20× contra empilhamento de contas | nada — só se o simulador mostrar quebra |
 **C8** | GarnixBosses | `max-simultaneous` global de bosses | **~30.000 spawns/dia com 100 jogadores, em lotes de 20–30** (`boss-stack-radius: 5`). É o pico de carga do servidor | estabilidade com 100+ jogadores |
+**C11** ⏳ | GarnixWarehouse | `total_sold VARCHAR(64)` + `topBySold` + `menus/ranking.yml` | **o cacto é a única das 4 vias sem placar** — o plugin guarda só estado atual, nunca o total vendido. Sem isso a via não pode ser premiada e a paridade fica só no papel. `VARCHAR` e não `BIGINT`, seguindo o padrão que o próprio plugin já usa | os R$ 120 do cacto na premiação |
 
 **C1, C2, C6 e C7: aprovados.** **C8 passou a necessário** com o volume alto de bosses (~30.000 spawns/dia em lotes). C3 depende de V1. C4 e C5 só se o teste ou o simulador pedirem.
 

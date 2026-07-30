@@ -1,35 +1,177 @@
-influencer:
-  discount: 10 # porcentagem de desconto na compra
-  bonus: 10 # porcentagem de bônus nos drops
-  tag: '&c&lINFLUENCER'
-  permission: vip.influencer
+# Tabela unica de desconto (na compra) e bonus (na venda dos drops).
+#
+# ⚠️ NAO SOMAM. O plugin ordena por (discount + bonus) decrescente e devolve
+#    a PRIMEIRA entrada cuja permissao o jogador tem — ou seja O MAIOR VENCE.
+#    Por isso todo no de VIP fica acima do teto do rank (20), senao o VIP nao
+#    valeria nada para quem chegou ao rank 20.
+#      MobConfigManager:313 / MachineConfigManager:247  -> a ordenacao
+#      MobConfigManager:319 / MachineConfigManager:242  -> o "primeiro vence"
+#
+# discount -> aplicado na COMPRA (ShopMenu:430). Exclusivo de VIP: rank e 0.
+# bonus    -> aplicado na VENDA dos drops (DropsMenu:56), so em moeda.
+#             ⚠️ o desconto NAO vale nos upgrades (UpgradeManager:137).
+#
+# Ordem efetiva (discount + bonus): garnix 50 > supremo 41 > investidor e
+# influencer 35 > imortal 33 > celestial 27 > rank 20 > ... > rank 1.
 
-investidor:
-  discount: 5
-  bonus: 5
-  tag: '&a&lINVESTIDOR'
-  permission: vip.investidor
-
-garnix:
-  discount: 10
-  bonus: 10
-  tag: '&6&lGARNIX'
-  permission: vip.garnix
-
-supremo:
-  discount: 15
-  bonus: 15
-  tag: '&4&lSUPREMO'
-  permission: vip.supremo
+celestial:
+  discount: 3 # porcentagem de desconto na compra
+  bonus: 24 # porcentagem de bonus nos drops
+  tag: '&e&lCELESTIAL'
+  permission: vip.celestial
 
 imortal:
-  discount: 20
-  bonus: 20
+  discount: 6 # porcentagem de desconto na compra
+  bonus: 27 # porcentagem de bonus nos drops
   tag: '&b&lIMORTAL'
   permission: vip.imortal
 
-celestial:
-  discount: 25
-  bonus: 25
-  tag: '&e&lCELESTIAL'
-  permission: vip.celestial
+supremo:
+  discount: 10 # porcentagem de desconto na compra
+  bonus: 31 # porcentagem de bonus nos drops
+  tag: '&4&lSUPREMO'
+  permission: vip.supremo
+
+garnix:
+  discount: 15 # porcentagem de desconto na compra
+  bonus: 35 # porcentagem de bonus nos drops
+  tag: '&6&lGARNIX'
+  permission: vip.garnix
+
+investidor:
+  discount: 0 # porcentagem de desconto na compra
+  bonus: 35 # porcentagem de bonus nos drops
+  tag: '&a&lINVESTIDOR'
+  permission: vip.investidor
+
+influencer:
+  discount: 0 # porcentagem de desconto na compra
+  bonus: 35 # porcentagem de bonus nos drops
+  tag: '&c&lINFLUENCER'
+  permission: vip.influencer
+
+# ── Ranks — so ganho, NUNCA desconto ──────────────────────────────────────
+# +1% por rank, linear e chato de proposito: previsivel, sempre visivel, e
+# nunca e a razao de alguem disparar ou travar. NAO tierar — se crescesse
+# geometricamente dobraria o exponencial que ja esta no valor-base.
+# O no e concedido em GarnixRankUP/ranks/<rank>.yml -> commands.
+
+rank-1:
+  discount: 0
+  bonus: 1
+  tag: '&7[Rank 1]'
+  permission: rankup.rank.1
+
+rank-2:
+  discount: 0
+  bonus: 2
+  tag: '&7[Rank 2]'
+  permission: rankup.rank.2
+
+rank-3:
+  discount: 0
+  bonus: 3
+  tag: '&7[Rank 3]'
+  permission: rankup.rank.3
+
+rank-4:
+  discount: 0
+  bonus: 4
+  tag: '&7[Rank 4]'
+  permission: rankup.rank.4
+
+rank-5:
+  discount: 0
+  bonus: 5
+  tag: '&7[Rank 5]'
+  permission: rankup.rank.5
+
+rank-6:
+  discount: 0
+  bonus: 6
+  tag: '&7[Rank 6]'
+  permission: rankup.rank.6
+
+rank-7:
+  discount: 0
+  bonus: 7
+  tag: '&7[Rank 7]'
+  permission: rankup.rank.7
+
+rank-8:
+  discount: 0
+  bonus: 8
+  tag: '&7[Rank 8]'
+  permission: rankup.rank.8
+
+rank-9:
+  discount: 0
+  bonus: 9
+  tag: '&7[Rank 9]'
+  permission: rankup.rank.9
+
+rank-10:
+  discount: 0
+  bonus: 10
+  tag: '&7[Rank 10]'
+  permission: rankup.rank.10
+
+rank-11:
+  discount: 0
+  bonus: 11
+  tag: '&7[Rank 11]'
+  permission: rankup.rank.11
+
+rank-12:
+  discount: 0
+  bonus: 12
+  tag: '&7[Rank 12]'
+  permission: rankup.rank.12
+
+rank-13:
+  discount: 0
+  bonus: 13
+  tag: '&7[Rank 13]'
+  permission: rankup.rank.13
+
+rank-14:
+  discount: 0
+  bonus: 14
+  tag: '&7[Rank 14]'
+  permission: rankup.rank.14
+
+rank-15:
+  discount: 0
+  bonus: 15
+  tag: '&7[Rank 15]'
+  permission: rankup.rank.15
+
+rank-16:
+  discount: 0
+  bonus: 16
+  tag: '&7[Rank 16]'
+  permission: rankup.rank.16
+
+rank-17:
+  discount: 0
+  bonus: 17
+  tag: '&7[Rank 17]'
+  permission: rankup.rank.17
+
+rank-18:
+  discount: 0
+  bonus: 18
+  tag: '&7[Rank 18]'
+  permission: rankup.rank.18
+
+rank-19:
+  discount: 0
+  bonus: 19
+  tag: '&7[Rank 19]'
+  permission: rankup.rank.19
+
+rank-20:
+  discount: 0
+  bonus: 20
+  tag: '&7[Rank 20]'
+  permission: rankup.rank.20

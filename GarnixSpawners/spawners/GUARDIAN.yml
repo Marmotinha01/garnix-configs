@@ -9,24 +9,25 @@ display: "&3{translated}"
 
 texture: "b8e725779c234c590cce854db5c10485ed8d8a33fa9b2bdc3424b68bb1380bed"
 
-release: "05/03/2025 13:00"
+release: "13/09/2026 20:00"
 
 rank: "&c[Rank 13]"
 
 permissions:
   buy: "spawner.buy.guardian"
-  kill: "spawner.kill.guardian"
+  kill: ""
 
 costs:
-  coins: 5000000000
+  coins: '1130000000000'
+  dracmas: '2200'
 
 drops:
   coins:
     chance: 100
-    amount: 5000000000
-  gems:
-    chance: 25
-    amount: 50
+    amount: '61900000'
+  dracmas:
+    chance: 1
+    amount: '13'
 
 spawner-item:
   material: MOB_SPAWNER
@@ -50,49 +51,51 @@ head-item:
   - '&aClique para armazenar.'
 
 upgrades:
-  mob-stack:
-    base: 1
-    1:
-      value: 2
-      costs:
-        coins: 10000000000
-    2:
-      value: 3
-      costs:
-        coins: 50000000000
-        gems: 100
-    3:
-      value: 3
-      costs:
-        coins: 200000000000
-        gems: 500
   spawner-stack:
     base: 64
     1:
-      value: 128
+      value: 96
       costs:
-        coins: 20000000000
+        coins: '419000000000'
     2:
-      value: 256
+      value: 144
       costs:
-        coins: 100000000000
+        coins: '1470000000000'
     3:
+      value: 216
+      costs:
+        coins: '5130000000000'
+    4:
+      value: 288
+      costs:
+        coins: '18000000000000'
+    5:
+      value: 384
+      costs:
+        coins: '62900000000000'
+    6:
       value: 512
       costs:
-        coins: 500000000000
-        gems: 1000
+        coins: '220000000000000'
+        dracmas: '579000'
+  mob-stack:
+    base: 512
+    1:
+      value: -1
+      costs:
+        coins: '78300000000000'
+        dracmas: '147000'
   speed:
     1:
       delay: "8s"
       costs:
-        coins: 15000000000
+        coins: '8100000000000'
     2:
       delay: "6s"
       costs:
-        coins: 75000000000
-        gems: 200
+        coins: '28300000000000'
     3:
       delay: "4s"
       costs:
-        coins: 300000000000
-        gems: 500
+        coins: '99200000000000'
+        dracmas: '255000'

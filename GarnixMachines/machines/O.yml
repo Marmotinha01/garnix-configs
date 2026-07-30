@@ -1,0 +1,56 @@
+order: 15
+
+# false = não aparece no menu de shop e não pode ser comprada.
+# A máquina continua funcional: só é obtida via /maquina give.
+shop: true
+
+delay: 10s
+
+translated: "O"
+display: '&e{translated}'
+
+texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
+
+# Máquina O libera no dia 20 da temporada.
+# ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
+release: "20/09/2026 20:00"
+
+rank: '&e[Prestígio 320]'
+
+# ⚠️ Gate autoritativo. Concedida no prestígio 320 — DEPENDE DO C6 (listas de comando
+# por nível de prestígio). Sem o C6 esta máquina não tem rota.
+buy-permission: machines.buy.o
+
+block:
+  material: IRON_BLOCK
+  data: 0
+
+# 'default' e 'infinite' são os únicos combustíveis que existem em fuels.yml.
+# (Os arquivos antigos listavam 'coal' e 'blaze', que não existem.)
+fuels:
+- default
+- infinite
+
+machine-item:
+  texture: "14a679138a22790334b99f9a16b88362a79a52957f6112bc49c0cdc789ce"
+  display: '&aMáquina {translated}'
+  lore:
+  - '&7Produz sozinha dentro'
+  - '&7do seu terreno.'
+  - ''
+  - '&8 ▪ &fQuantia: &7{amount} '
+  - ''
+  - '&aColoque no seu terreno.'
+
+costs:
+  coins: '3370000000000000000'
+
+# ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
+# Convenção OPOSTA à dos spawners, que usam 0-100. Escrever 5 aqui significa
+# "sempre", não "5%".
+drops:
+  coins:
+    type: CURRENCY
+    currency-id: coins
+    chance: 1.0
+    amount: '552000000000000'

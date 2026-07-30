@@ -9,24 +9,25 @@ display: "&8{translated}"
 
 texture: "6de75a2cc1c950e82f62abe20d42754379dfad6f5ff546e58f1c09061862bb92"
 
-release: "05/03/2025 13:00"
+release: "05/09/2026 20:00"
 
 rank: "&c[Rank 5]"
 
 permissions:
   buy: "spawner.buy.bat"
-  kill: "spawner.kill.bat"
+  kill: ""
 
 costs:
-  coins: 5000000000
+  coins: '678000'
+  dracmas: '228'
 
 drops:
   coins:
     chance: 100
-    amount: 5000000000
-  gems:
-    chance: 25
-    amount: 50
+    amount: '136'
+  dracmas:
+    chance: 1
+    amount: '5'
 
 spawner-item:
   material: MOB_SPAWNER
@@ -50,49 +51,51 @@ head-item:
   - '&aClique para armazenar.'
 
 upgrades:
-  mob-stack:
-    base: 1
-    1:
-      value: 2
-      costs:
-        coins: 10000000000
-    2:
-      value: 3
-      costs:
-        coins: 50000000000
-        gems: 100
-    3:
-      value: 3
-      costs:
-        coins: 200000000000
-        gems: 500
   spawner-stack:
     base: 64
     1:
-      value: 128
+      value: 96
       costs:
-        coins: 20000000000
+        coins: '115000'
     2:
-      value: 256
+      value: 144
       costs:
-        coins: 100000000000
+        coins: '402000'
     3:
+      value: 216
+      costs:
+        coins: '1410000'
+    4:
+      value: 288
+      costs:
+        coins: '4930000'
+    5:
+      value: 384
+      costs:
+        coins: '17200000'
+    6:
       value: 512
       costs:
-        coins: 500000000000
-        gems: 1000
+        coins: '60400000'
+        dracmas: '37500'
+  mob-stack:
+    base: 512
+    1:
+      value: -1
+      costs:
+        coins: '21500000'
+        dracmas: '9540'
   speed:
     1:
       delay: "8s"
       costs:
-        coins: 15000000000
+        coins: '2220000'
     2:
       delay: "6s"
       costs:
-        coins: 75000000000
-        gems: 200
+        coins: '7780000'
     3:
       delay: "4s"
       costs:
-        coins: 300000000000
-        gems: 500
+        coins: '27200000'
+        dracmas: '16500'
