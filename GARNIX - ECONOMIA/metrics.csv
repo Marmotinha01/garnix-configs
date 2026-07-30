@@ -1,0 +1,46 @@
+tier;dia;metrica;unidade;meta;tolerancia_min;tolerancia_max;medido;ok;observacao
+T1;1;renda_casa_dia;coins;10000;7500;12500;;;dia 1 - jogador novo minerando a mao
+T1;1;ativo_hora;coins/h;1850;1388;2313;;;conta principal 3h
+T1;1;afk_hora;coins/h;93;69;116;;;por conta AFK
+T1;1;valor_base_unidade;coins;1;1;1;;;ancora fixa - cobblestone nivel 0
+T5;5;renda_casa_dia;coins;41000000;30750000;51250000;;;
+T5;5;ativo_hora;coins/h;7580000;5685000;9475000;;;
+T5;5;afk_hora;coins/h;379000;284250;473750;;;
+T5;5;valor_base_unidade;coins;231;173;289;;;nivel de mina 20
+T10;10;renda_casa_dia;coins;1340000000000;1005000000000;1675000000000;;;
+T10;10;ativo_hora;coins/h;249000000000;186750000000;311250000000;;;
+T10;10;afk_hora;coins/h;12400000000;9300000000;15500000000;;;
+T10;10;passivo_hora;coins/h;55900000000;41925000000;69875000000;;;via de spawners roda 24h
+T10;10;valor_base_unidade;coins;210000;157500;262500;;;nivel de mina 45
+T15;15;renda_casa_dia;coins;44000000000000000;33000000000000000;55000000000000000;;;
+T15;15;ativo_hora;coins/h;8140000000000000;6105000000000000;10175000000000000;;;
+T15;15;afk_hora;coins/h;407000000000000;305250000000000;508750000000000;;;
+T15;15;passivo_hora;coins/h;1830000000000000;1372500000000000;2287500000000000;;;
+T15;15;valor_base_unidade;coins;190000000;142500000;237500000;;;nivel de mina 70
+T20;20;renda_casa_dia;coins;1440000000000000000000;1080000000000000000000;1800000000000000000000;;;sextilhoes - alvo final
+T20;20;ativo_hora;coins/h;267000000000000000000;200250000000000000000;333750000000000000000;;;
+T20;20;afk_hora;coins/h;13300000000000000000;9975000000000000000;16625000000000000000;;;
+T20;20;passivo_hora;coins/h;60000000000000000000;45000000000000000000;75000000000000000000;;;
+T20;20;valor_base_unidade;coins;167000000000;125250000000;208750000000;;;nivel de mina 100
+-;-;blocos_manuais_hora;blocos/h;10000;7500;12500;;;V5 - governa volume de chaves e uptime do frenzy
+-;-;blocos_hora_com_aoe;blocos/h;16000000;12000000;20000000;;;V5 - teto da mina - reset-cooldown 30s
+-;-;resets_mina_hora;resets/h;120;90;150;;;V5 - 135700 blocos por reset
+-;-;colheitas_hora;colheitas/h;4100000;3075000;5125000;;;V5 - 22735 posicoes / regrow 20s
+-;-;posicoes_plot_farm;posicoes;22735;20000;25000;;;V5 - conferir o numero real do plot
+-;-;fisgadas_hora;fisgadas/h;504;378;630;;;V5 - intervalo 15s menos speed 5 x double 40%
+-;-;kills_hora_1_spawner;kills/h;2700;2025;3375;;;V5 - stack cheio - governa a taxa de cabecas
+-;-;cabecas_hora_afk;cabecas/h;;;;;;V5 - derivar de kills_hora x chance de cabeca
+-;-;chaves_dia_endgame;chaves/dia;5000;3750;6250;;;soma de kits + blessed + clover + pesca + eventos
+-;-;bosses_dia_endgame;bosses/dia;275;206;344;;;chave de boss ~5% das aberturas
+-;-;uptime_frenzy;percent;50;40;60;;;1000 blocos a 5/s = 200s contra janela de 180s
+-;-;multiplicador_total_maximo;x;100;80;120;;;V3 - armadura + skin + rank + vip + fortunate + frenzy + booster 3x
+-;-;pacotes_tick_250_contas;pacotes/tick;10000;;10000;;;L1 - enchant-animation-budget - teto duro
+-;-;tps_250_contas;tps;20;19;20;;;L1 - com arvore de encantes no maximo
+-;-;tps_pico_bosses;tps;20;19;20;;;L2 - 5 jogadores x 30 bosses simultaneos
+-;-;cash_temporada_free;cash;400;300;500;;;daily membro 20/dia x 20 dias
+-;-;cash_temporada_free_vinculado;cash;550;450;700;;;+8/dia do vinculado
+-;-;cash_temporada_garnix;cash;2500;2000;3000;;;daily VIP 120/dia
+-;-;prestigios_dedicado;prestigios;;;;;;medir - depende de V8 e da taxa de cabecas
+-;-;riqueza_final_casual;coins;;1000000000000;1000000000000000;;;S2 - 1h/dia
+-;-;riqueza_final_dedicado;coins;1440000000000000000000;1080000000000000000000;1800000000000000000000;;;S2 - 3h/dia - o alvo
+-;-;riqueza_final_hardcore;coins;;;100000000000000000000000;;;S2 - 8h/dia - teto de nao estourar

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garnix — Simulador de Economia</title>
+<style>
+  :root {
+    --bg: #0f1115; --panel: #171a21; --line: #262b36;
+    --fg: #e6e9ef; --dim: #98a0ae; --accent: #4ade80;
+    --warn: #fbbf24; --bad: #f87171; --mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f7f8fa; --panel:#fff; --line:#e2e5ea; --fg:#151821; --dim:#5b6472; --accent:#16a34a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:14px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; padding:28px 20px 60px; }
+  .wrap { max-width:1120px; margin:0 auto; }
+  h1 { font-size:22px; margin:0 0 4px; letter-spacing:-.01em; }
+  h2 { font-size:15px; margin:32px 0 12px; text-transform:uppercase;
+       letter-spacing:.08em; color:var(--dim); font-weight:600; }
+  .sub { color:var(--dim); margin:0 0 20px; }
+  .panel { background:var(--panel); border:1px solid var(--line);
+           border-radius:10px; padding:16px 18px; margin-bottom:14px; }
+  .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); }
+  .kpi .label { color:var(--dim); font-size:11px; text-transform:uppercase; letter-spacing:.07em; }
+  .kpi .value { font:600 21px/1.25 var(--mono); margin-top:5px; }
+  .ok { color:var(--accent); } .warn { color:var(--warn); } .bad { color:var(--bad); }
+  .scroll { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font:12.5px/1.5 var(--mono); }
+  th,td { text-align:right; padding:5px 9px; border-bottom:1px solid var(--line); white-space:nowrap; }
+  th { color:var(--dim); font-weight:600; text-align:right; position:sticky; top:0; background:var(--panel); }
+  td:first-child, th:first-child { text-align:left; }
+  .note { color:var(--dim); font-size:12.5px; margin-top:10px; }
+  .badge { display:inline-block; padding:2px 8px; border-radius:999px;
+           font:600 11px var(--mono); border:1px solid currentColor; }
+  svg text { font:10px var(--mono); fill:var(--dim); }
+  code { font:12.5px var(--mono); background:var(--line); padding:1px 5px; border-radius:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Garnix — Simulador de Economia</h1>
+  <p class="sub">RankUP Heads · temporada de 20 dias · lê os parâmetros de <code>params.js</code></p>
+  <div id="app"></div>
+</div>
+
+<script src="params.js"></script>
+<script src="sim.js"></script>
+<script>
+const $ = (h) => { const d = document.createElement('div'); d.innerHTML = h.trim(); return d.firstChild; };
+const app = document.getElementById('app');
+const add = (h) => app.appendChild($(h));
+
+const R = relatorio();
+
+// ---------------------------------------------------------------- KPIs
+const veredito = R.estag.aprovado && R.mult.dentroDoTeto && R.cash.freeDentroDoAlvo && R.over.rankNuncaEstoura;
+add(`<div class="panel"><div class="grid">
+  ${kpi('Crescimento', R.crescimentoPorDia + '×/dia')}
+  ${kpi('T1 → T20', fmt(rendaTier(1)) + ' → ' + fmt(rendaTier(R.tiers)))}
+  ${kpi('Multiplicador total', R.mult.total.toFixed(1) + '×', R.mult.dentroDoTeto ? 'ok' : 'bad')}
+  ${kpi('Teste de estagnação', R.estag.aprovado ? 'aprovado' : 'reprovado', R.estag.aprovado ? 'ok' : 'bad')}
+  ${kpi('Cash do free', R.cash.free, R.cash.freeDentroDoAlvo ? 'ok' : 'warn')}
+  ${kpi('Modelo', veredito ? 'consistente' : 'inconsistente', veredito ? 'ok' : 'bad')}
+</div></div>`);
+
+function kpi(label, value, cls) {
+  return `<div class="kpi"><div class="label">${label}</div>
+          <div class="value ${cls||''}">${value}</div></div>`;
+}
+
+// ---------------------------------------------------------------- tabela de tiers
+add('<h2>Tabela de tiers</h2>');
+let rows = R.tabela.map(t => `<tr>
+  <td>T${t.tier}</td><td>${t.dia}</td>
+  <td>${fmt(t.renda)}</td><td>${fmt(t.ativoHora)}</td><td>${fmt(t.afkHora)}</td>
+  <td>${t.passivoHora ? fmt(t.passivoHora) : '—'}</td>
+  <td>${fmt(t.valorBase)}</td><td>${fmt(t.spawner)}</td><td>${fmt(t.rank)}</td><td>${fmt(t.sinks)}</td>
+</tr>`).join('');
+add(`<div class="panel scroll"><table>
+  <thead><tr><th>Tier</th><th>Dia</th><th>Casa/dia</th><th>Ativo/h</th><th>AFK/h</th>
+  <th>Passivo/h</th><th>Valor-base</th><th>Spawner</th><th>Rank (coins)</th><th>Sinks 75%</th></tr></thead>
+  <tbody>${rows}</tbody></table>
+  <p class="note">Passivo só a partir do T7. A parte em coins do rank é simbólica (2%) e travada em 1×10<sup>18</sup> — o gate real do rank são <strong>cabeças</strong>.</p>
+</div>`);
+
+// ---------------------------------------------------------------- curva de riqueza
+add('<h2>Curva de riqueza por perfil</h2>');
+add(`<div class="panel">${grafico()}
+  <p class="note">Escala logarítmica. Alvos: casual 10<sup>12</sup>–10<sup>15</sup> · dedicado ~1,44×10<sup>21</sup> · hardcore até ~10<sup>23</sup>.</p>
+</div>`);
+
+function grafico() {
+  const W = 1000, H = 300, ml = 62, mb = 30, mt = 12, mr = 12;
+  const cores = { casual:'#60a5fa', dedicado:'#4ade80', hardcore:'#fbbf24' };
+  const series = Object.entries(R.banda).map(([nome, b]) => ({
+    nome, cor: cores[nome],
+    pts: b.serie.map(d => ({ x: d.dia, y: Math.log10(Math.max(1, Number(d.acumulado))) })),
+  }));
+  const yMax = Math.ceil(Math.max(...series.flatMap(s => s.pts.map(p => p.y))));
+  const yMin = 3;
+  const X = (d) => ml + ((d - 1) / (R.dias - 1)) * (W - ml - mr);
+  const Y = (v) => mt + (1 - (v - yMin) / (yMax - yMin)) * (H - mt - mb);
+
+  let g = '';
+  for (let e = yMin; e <= yMax; e += 3) {
+    g += `<line x1="${ml}" y1="${Y(e)}" x2="${W-mr}" y2="${Y(e)}" stroke="var(--line)"/>`;
+    g += `<text x="${ml-8}" y="${Y(e)+3.5}" text-anchor="end">10^${e}</text>`;
+  }
+  for (let d = 1; d <= R.dias; d += 3) {
+    g += `<text x="${X(d)}" y="${H-8}" text-anchor="middle">d${d}</text>`;
+  }
+  for (const s of series) {
+    g += `<path d="${s.pts.map((p,i)=>(i?'L':'M')+X(p.x).toFixed(1)+' '+Y(p.y).toFixed(1)).join(' ')}"
+            fill="none" stroke="${s.cor}" stroke-width="2.2"/>`;
+  }
+  const leg = series.map((s,i) =>
+    `<circle cx="${ml+i*130+6}" cy="${mt+8}" r="4" fill="${s.cor}"/>
+     <text x="${ml+i*130+16}" y="${mt+11.5}" fill="var(--fg)">${s.nome}</text>`).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto">${g}${leg}</svg>`;
+}
+
+// ---------------------------------------------------------------- multiplicadores
+add('<h2>Orçamento de multiplicadores</h2>');
+const mp = Object.entries(R.params.multiplicadores.percent)
+  .map(([k,v]) => `<tr><td>${k}</td><td>+${v}%</td><td>somado</td></tr>`).join('');
+const mm = Object.entries(R.params.multiplicadores.mult)
+  .map(([k,v]) => `<tr><td>${k}</td><td>${v}×</td><td>multiplicativo</td></tr>`).join('');
+add(`<div class="panel scroll"><table>
+  <thead><tr><th>Fonte</th><th>Valor</th><th>Tipo</th></tr></thead><tbody>
+  ${mp}
+  <tr><td><strong>subtotal percentual</strong></td><td><strong>${R.mult.blocoPercent.toFixed(2)}×</strong></td><td>+${R.mult.somaPercent}%</td></tr>
+  ${mm}
+  <tr><td><strong>TOTAL</strong></td><td class="${R.mult.dentroDoTeto?'ok':'bad'}"><strong>${R.mult.total.toFixed(1)}×</strong></td><td>teto ${R.mult.teto}×</td></tr>
+  </tbody></table>
+  <p class="note">Se o teste <strong>V3</strong> revelar que percentuais <em>multiplicam</em> em vez de somar, o total vai a
+  <strong>${R.mult.totalSeMultiplicativo.toFixed(0)}×</strong> e o valor-base dos 20 tiers desce ~1 ordem. É o teste mais barato com maior alcance.</p>
+</div>`);
+
+// ---------------------------------------------------------------- estagnação
+add('<h2>S1 — Teste de estagnação</h2>');
+add(`<div class="panel"><div class="grid">
+  ${kpi('Empilhamento máximo', R.estag.empilhamentoMaximo + '×')}
+  ${kpi('Vale quantos tiers', R.estag.tiersQueOEmpilhamentoVale.toFixed(2))}
+  ${kpi('4 tiers atrás incompensável', R.estag.quatroTiersAtrasIncompensavel ? 'sim' : 'NÃO', R.estag.quatroTiersAtrasIncompensavel ? 'ok' : 'bad')}
+  ${kpi('Subir sempre bate ficar', R.estag.falhas.length === 0 ? 'em todos os 19' : 'falha em ' + R.estag.falhas.length, R.estag.falhas.length === 0 ? 'ok' : 'bad')}
+</div>
+<p class="note"><strong>Armadilha do vale de substituição:</strong> trocar um spawner maxado do tier N por um <em>nu</em> do tier N+1 no mesmo slot deixa aquele slot
+<strong class="warn">${R.estag.perdaAoTrocar.toFixed(0)}× pior</strong> até ser re-empilhado.
+Consequência de projeto: <strong>o <code>s.limite</code> precisa crescer durante a temporada</strong>, para o jogador <em>adicionar</em> em vez de <em>trocar</em>.
+Com slots fixos, subir de tier viraria punição — e seria exatamente a estagnação que queremos evitar.</p>
+</div>`);
+
+// ---------------------------------------------------------------- chaves
+add('<h2>Volume de chaves e bosses</h2>');
+const fx = Object.entries(R.params.chaves.faixas).map(([k,c]) => {
+  const pd = R.chaves.total * c;
+  return `<tr><td>${k}</td><td>${(c*100).toFixed(4)}%</td>
+    <td>${pd>=1 ? Math.round(pd)+'/dia' : '1 a cada '+(1/pd).toFixed(1)+' dias'}</td></tr>`;
+}).join('');
+add(`<div class="panel"><div class="grid">
+  ${kpi('Chaves/dia no endgame', Math.round(R.chaves.total))}
+  ${kpi('Bosses/dia', Math.round(R.chaves.bossesPorDia))}
+  ${kpi('Lotes de boss/dia', '~' + Math.round(R.chaves.lotesDeBossPorDia))}
+  ${kpi('Se contasse AoE (V7)', fmt(Math.round(R.chaves.seContasseAoE)) + '/dia', 'bad')}
+</div>
+<div class="scroll" style="margin-top:14px"><table>
+  <thead><tr><th>Faixa</th><th>Chance</th><th>Frequência</th></tr></thead><tbody>${fx}</tbody></table></div>
+<p class="note">Sem o <strong>C7</strong> (chave só em bloco manual) o volume seria
+<strong>${Math.round(R.chaves.fatorSeContasseAoE)}× maior</strong> e a crate perderia qualquer sentido.</p>
+</div>`);
+
+// ---------------------------------------------------------------- overflow
+add('<h2>Overflow — o que depende do C1</h2>');
+const ov = R.over.linhas.filter(l => l.spawnerEstoura || l.up3Estoura)
+  .map(l => `<tr><td>T${l.tier}</td><td class="${l.spawnerEstoura?'bad':''}">${fmt(l.spawner)}</td>
+             <td class="${l.up3Estoura?'bad':''}">${fmt(l.up3)}</td><td>${fmt(l.rank)}</td></tr>`).join('');
+add(`<div class="panel scroll">
+  <p class="note" style="margin:0 0 10px"><code>Long.MAX = ${fmt(R.over.LONG_MAX)}</code> —
+  acima disso o SnakeYAML promove para BigInteger e <code>getLong()</code> <strong>trunca mod 2⁶⁴ sem log nenhum</strong>.</p>
+  <table><thead><tr><th>Tier</th><th>Spawner</th><th>Upgrade nível 3</th><th>Rank (coins)</th></tr></thead>
+  <tbody>${ov}</tbody></table>
+  <p class="note">A parte em coins do rank é travada em 1×10<sup>18</sup> de propósito, para o rank
+  <strong>nunca</strong> depender do C1 — o eixo de cabeças é que carrega a dificuldade lá em cima.</p>
+</div>`);
+
+// ---------------------------------------------------------------- cash
+add('<h2>Orçamento de cash</h2>');
+add(`<div class="panel"><div class="grid">
+  ${kpi('Free', R.cash.free, R.cash.freeDentroDoAlvo ? 'ok' : 'warn')}
+  ${kpi('Free + vinculado', R.cash.freeVinculado)}
+  ${kpi('+ eventos', R.cash.comEventos)}
+  ${kpi('+ máquina de cash', R.cash.comMaquina)}
+  ${kpi('Garnix (VIP topo)', R.cash.garnix)}
+  ${kpi('Teto do whale', fmt(R.cash.tetoWhale), 'warn')}
+</div>
+<p class="note">Alvo do free na temporada: ${R.cash.alvo[0]}–${R.cash.alvo[1]}.</p></div>`);
+</script>
+</body>
+</html>
