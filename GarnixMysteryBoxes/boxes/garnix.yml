@@ -29,7 +29,7 @@ rewards:
 
   armadura-v-mina:
     type: COMMAND
-    chance: 20
+    chance: 17
     display: '&5Peça de Armadura &5[T&lV&5] &7Mineração'
     command: mina givearmor {player} tier-v_helmet
     amount: 1
@@ -40,7 +40,7 @@ rewards:
 
   armadura-v-farm:
     type: COMMAND
-    chance: 18
+    chance: 14
     display: '&5Peça de Armadura &5[T&lV&5] &7Fazenda'
     command: fazenda givearmor {player} tier-v_boots
     amount: 1
@@ -51,7 +51,7 @@ rewards:
 
   skin-mithril:
     type: COMMAND
-    chance: 14
+    chance: 11
     display: '&b&lSkin de Mithril'
     command: mina giveskin {player} mithril
     amount: 1
@@ -62,7 +62,7 @@ rewards:
 
   skin-marfim:
     type: COMMAND
-    chance: 12
+    chance: 10
     display: '&f&lSkin de Marfim'
     command: fazenda giveskin {player} marfim
     amount: 1
@@ -73,7 +73,7 @@ rewards:
 
   skin-tempestita:
     type: COMMAND
-    chance: 10
+    chance: 8
     display: '&3&lSkin de Tempestita'
     command: pesca giveskin {player} tempestita
     amount: 1
@@ -84,7 +84,7 @@ rewards:
 
   pilhagem-3:
     type: COMMAND
-    chance: 8
+    chance: 7
     display: '&a&lLivro de Pilhagem 3'
     command: lamina givebook {player} pilhagem 3
     amount: 1
@@ -95,7 +95,7 @@ rewards:
 
   massacre-5:
     type: COMMAND
-    chance: 6
+    chance: 5
     display: '&4&lLivro de Massacre 5'
     command: lamina givebook {player} massacre 5
     amount: 1
@@ -104,9 +104,53 @@ rewards:
       glow: true
       display: '&4&lLivro de Massacre 5'
 
+  ceifador-3:
+    type: COMMAND
+    chance: 6
+    display: '&5&lLivro de Ceifador 3'
+    command: lamina givebook {player} ceifador 3
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&5&lLivro de Ceifador 3'
+
+  speed-5:
+    type: COMMAND
+    chance: 4
+    display: '&b&lLivro de Correnteza 5'
+    command: pesca givebook {player} speed 5
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&b&lLivro de Correnteza 5'
+
+  double-5:
+    type: COMMAND
+    chance: 4
+    display: '&d&lLivro de Fartura 5'
+    command: pesca givebook {player} double 5
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&d&lLivro de Fartura 5'
+
+  luck-5:
+    type: COMMAND
+    chance: 4
+    display: '&a&lLivro de Faro Aguçado 5'
+    command: pesca givebook {player} luck 5
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      glow: true
+      display: '&a&lLivro de Faro Aguçado 5'
+
   vaga:
     type: COMMAND
-    chance: 5
+    chance: 4
     display: '&b&lVaga de Visitante'
     command: mina giveslot {player} 1
     amount: 1
@@ -117,7 +161,7 @@ rewards:
 
   maquina-especial:
     type: COMMAND
-    chance: 4
+    chance: 3
     display: '&b&lMáquina de Limite'
     command: maquina give {player} LIMITE
     amount: 1

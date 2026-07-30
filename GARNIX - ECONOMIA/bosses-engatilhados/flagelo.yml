@@ -1,0 +1,105 @@
+# Boss Flagelo — ENGATILHADO, banda T8–T10
+#
+# Não está no ar. Para lançar: copie este arquivo para GarnixBosses/bosses/
+# e dê reload. NENHUM dos 5 bosses ativos precisa ser tocado — este encaixa
+# no vão entre dois deles e paga a média geométrica dos vizinhos, então as
+# bandas existentes seguem válidas.
+#
+# ⚠️ `texture:` está vazio de propósito: é a cabeça do boss e é escolha
+#    cosmética. Cole um hash de head antes de lançar. O menu já funciona
+#    sem ela, porque o `boss-icon` usa material.
+
+order: 25
+
+type: WITCH
+
+health: 62000
+
+translated: 'Boss Flagelo'
+display: '&5{translated}'
+
+texture: ''
+
+reward-rolls: 3
+
+boss-icon:
+  material: BREWING_STAND_ITEM
+  display: '{display}'
+  lore:
+    - '&7Invoque este boss dentro'
+    - '&7do seu próprio terreno.'
+    - ''
+    - '&8 ▪ &fVida: &c❤{health} '
+    - '&8 ▪ &fStacks: &7x{stacks} '
+    - ''
+    - '&7Coloque-o em um terreno'
+    - '&7para começar a atacar.'
+
+# Types:
+# NONE, CURRENCY, ITEM, COMMAND, COMMAND_ITEM
+
+rewards:
+  azar:
+    type: NONE
+    chance: 25.0
+    display: '&8Azar'
+    icon:
+      material: WEB
+      display: '&8Azar'
+
+  # 0,01% da renda diária da banda. Com ~250 abates/dia dá ~2,5% do dia:
+  # sentido para o jogador, sem virar via de renda paralela.
+  coins:
+    type: CURRENCY
+    chance: 100.0
+    display: '&6Moedas'
+    currency-id: coins
+    amount: '904000000'
+  secundaria:
+    type: CURRENCY
+    chance: 45.0
+    display: '&5sementes'
+    currency-id: sementes
+    amount: '500'
+  chave-boss:
+    type: COMMAND
+    chance: 30.0
+    display: '&c&lChave de Boss'
+    command: crates givevirtualkey bosses {player} {amount}
+    amount: 1
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&c&lChave de Boss'
+
+  fragmento:
+    type: COMMAND
+    chance: 20.0
+    display: '&aFragmento de Natureza'
+    command: fragmentos givevirtual {player} natureza {amount}
+    amount: 48
+    icon:
+      material: BLAZE_POWDER
+      display: '&aFragmento de Natureza'
+
+  # O livro é o freio da temporada: sem gate de banda, o multiplicador chega
+  # cedo e a curva de tiers desanda. Pilhagem 2 segue exclusivo da T13+.
+  livro:
+    type: COMMAND
+    chance: 4
+    display: '&5Livro de Ceifador 2'
+    command: lamina givebook {player} ceifador 2
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&5Livro de Ceifador 2'
+
+  matadora:
+    type: COMMAND
+    chance: 2
+    display: '&6Matadora Sombria'
+    command: boss give sword {player} sombria
+    amount: 1
+    icon:
+      material: DIAMOND_SWORD
+      display: '&6Matadora Sombria'

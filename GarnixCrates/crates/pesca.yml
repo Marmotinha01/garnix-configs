@@ -45,7 +45,7 @@ rewards:
 
   coins:
     type: CURRENCY
-    chance: 39.56
+    chance: 39.26
     display: '&6Moedas'
     currency-id: coins
     amount: '250'
@@ -168,3 +168,14 @@ rewards:
       display: '&3&lSkin de Tempestita'
       lore:
       - '&7O prêmio mais raro desta caixa.'
+
+  livro-luck:
+    type: COMMAND
+    chance: 0.3
+    display: '&aLivro de Faro Aguçado 2'
+    command: pesca givebook {player} luck 2
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&aLivro de Faro Aguçado 2'
+

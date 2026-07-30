@@ -258,9 +258,37 @@ Mesma estrutura, moeda `sementes`, `enchant-currency: sementes`.
 | # | Item | Fase |
 |---|---|---|
 1 | ~~`max-simultaneous` nas classes D e E~~ — ✅ **o plugin já resolve**, ver acima | — |
-2 | Ler o que `lighthing`, `rupture` e `cataclysm` do farm realmente quebram, e calibrar o farm igual | 4 |
+2 | ~~Ler o que `lighthing`, `rupture` e `cataclysm` do farm realmente quebram~~ — ✅ **fechado, e a minha linha estava errada duas vezes** (ver abaixo) | — |
 3 | ~~Subir a árvore de farm ~204×~~ — ✅ **feito**: a árvore de farm custa 6,42×10⁸ sementes contra 7,97×10⁸ gemas da mineração, ou seja **1,24×** (era 162×) | — |
 4 | ~~Corrigir o `key-id` do `clover`~~ — ✅ **feito**, e era bug real: apontava para `"fazenda"` mas o `CrateManager:156` tira o id do **nome do arquivo**, que é `farm.yml`. O encante rodava e **não entregava chave nenhuma, em silêncio** — e ele é o faucet de chave da fazenda inteira (~1.000/dia) | — |
 5 | Teste de carga L1 com a árvore no máximo e 250 contas | pré-lançamento |
 
 > A varredura que pegou o `clover` conferiu **toda** referência a chave e caixa do repo (`key-id`, `givekey`, `givevirtualkey`, `caixas give`) contra os arquivos que de fato existem. Era a única quebrada.
+
+---
+
+## A árvore do farm — o item 2, e os dois erros que ele continha
+
+A linha que eu tinha escrito dizia *"ler o que `lighthing`, `rupture` e `cataclysm` do farm realmente quebram"*. Estava errada em duas frentes.
+
+**Erro 1: `lighthing` e `rupture` não existem no farm.** São encantes de **mineração**. O `GarnixFarm.java:86` lista os do farm: `prosperity · fertility · cataclysm · reap · laser · crossroads · haste · clover · swarm · scarecrow`. Eu copiei nomes da via errada.
+
+**Erro 2: já estava calibrado.** Fui ler o `FarmGameplay:524-530` e a forma real de cada um — e o detalhe que muda tudo é que **a colheita do farm é PLANA**: *"one column lookup per (x,z), no Y sweep"*. Não é a esfera 3D da mineração.
+
+| Encante | Forma real | Blocos/proc | Chance no 500 | Blocos esperados |
+|---|---|---|---|---|
+`cataclysm` | quadrado plano `(2r+1)²`, r=2 | 25 | 76,8% | 19,19 |
+`reap` | quadrado em volta do **jogador**, r=4 | 81 | 49,9% | 40,38 |
+`laser` | 4 linhas cardeais, r=6 | 24 | 63,3% | 15,19 |
+`crossroads` | 4 linhas diagonais, r=6 | 24 | 63,3% | 15,19 |
+| | | | **total com o bloco manual** | **90,95×** |
+
+E a verificação que fecha o assunto:
+
+```
+45.000 colheitas/h a mão  ×  90,95×  =  4,093×10⁶/h
+teto físico da farm       =  22.735 posições ÷ regrow 20s  =  4,092×10⁶/h
+                                                    razão  =  1,000×
+```
+
+**A árvore encosta no teto físico e não passa** — exatamente a mesma regra que governa a mineração. Acima do teto, subir chance de AoE não gera colheita nenhuma e só queima CPU. Não há o que calibrar: já está no lugar certo, por construção.

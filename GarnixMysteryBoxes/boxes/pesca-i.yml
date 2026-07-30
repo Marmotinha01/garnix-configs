@@ -39,7 +39,7 @@ rewards:
 
   armadura-i:
     type: COMMAND
-    chance: 25
+    chance: 19
     display: '&7Peça de Armadura &7[T&lI&7]'
     command: pesca givearmor {player} tier-i_helmet
     amount: 1
@@ -102,3 +102,14 @@ rewards:
     icon:
       material: POTION
       display: '&aBooster 2x &7(15min)'
+
+  livro-luck:
+    type: COMMAND
+    chance: 6
+    display: '&aLivro de Faro Aguçado 3'
+    command: pesca givebook {player} luck 3
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&aLivro de Faro Aguçado 3'
+
