@@ -35,9 +35,8 @@ back-icon:
   lore:
   - '&7Clique para voltar.'
 
-
 remove-icon:
-  slot: 49
+  slot: 51
   texture: "a3852bf616f31ed67c37de4b0baa2c5f8d8fca82e72dbcafcba66956a81c4"
   display: '&cRemover Chaves'
   lore:
@@ -49,7 +48,7 @@ remove-icon:
   - '&cClique para escolher.'
 
 open-icon:
-  slot: 51
+  slot: 49
   texture: "b221da4418bd3bfb42eb64d2ab429c61decb8f4bf7d4cfb77a162be3dcb0b927"
   display: '&aAbrir Chaves'
   lore:
