@@ -35,33 +35,40 @@ key-item:
 
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
-# FAIXAS (ver 15-LOOT.md): recheio · bom · raro · epico · jackpot.
-# Calibradas para ~20.700 aberturas/dia no servidor inteiro.
+# FAIXAS desta crate:
+#   comum 85% · comum plus 12% · mediana 2,5% ·
+#   rara 0,4% · raro plus 0,099% · jackpot 0,001%
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
 # mesma tabela. Por isso o premio em coins e FIXO e pequeno: no dia 1 e um
 # empurrao real, no dia 5 vira ruido. O valor da crate sao os ITENS.
+#
+# ⚠️ `chance` e PESO, nao porcentagem — Crate.java:100-105 normaliza por
+# totalChance. Somar 100 e so legibilidade.
 rewards:
 
+  # ── COMUM ────────────────────────────────────────────────────────── 85%
   coins:
     type: CURRENCY
-    chance: 54.338
+    chance: 47
     currency-id: coins
     amount: '250'
     icon:
       lore:
       - '&fQuantia: &7250 '
+
   secundaria:
     type: CURRENCY
-    chance: 30.1797
+    chance: 28
     currency-id: sementes
     amount: '25'
     icon:
       lore:
       - '&fQuantia: &725 '
+
   combustivel:
     type: COMMAND
-    chance: 5.4922
+    chance: 10
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
     amount: 500
@@ -69,154 +76,10 @@ rewards:
       material: COAL
       display: '&eCombustível &7(500L)'
 
-  fragmento:
-    type: COMMAND
-    chance: 3
-    display: '&dFragmento'
-    command: fragmentos givevirtual {player} selo {amount}
-    amount: 5
-    icon:
-      material: PAPER
-      glow: true
-      display: '&eSelo Lacrado'
-      lore:
-      - '&8Fragmento'
-
-  secundaria-lote:
-    type: CURRENCY
-    chance: 3
-    currency-id: sementes
-    amount: '500'
-    icon:
-      lore:
-      - '&fQuantia: &7500 '
-  chave-boss:
-    type: COMMAND
-    chance: 1.2
-    display: '&c&lChave de Boss'
-    command: crates givevirtualkey bosses {player} {amount}
-    amount: 1
-    icon:
-      material: TRIPWIRE_HOOK
-      glow: true
-      display: '&4Chave Bosses'
-      lore:
-      - '&7Consiga abatendo os bosses'
-      - '&7que aparecem no servidor.'
-
-  armadura-baixa:
-    type: COMMAND
-    chance: 0.5
-    display: '&7Peça de Armadura &7[T&lII&7]'
-    command: fazenda givearmor {player} tier-ii_chestplate
-    amount: 1
-    icon:
-      material: LEATHER_CHESTPLATE
-      color: '#5E8C3A'
-      display: '&aPeitoral Farm &a[T&lII&a]'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+3.0% '
-      - '&8 ▪ &5Sementes: &a+2.0% '
-      - '&8 ▪ &aXP: &a+2.0% '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  forja:
-    type: COMMAND
-    chance: 0.3
-    display: '&6Forja de Skin'
-    command: fazenda giveforge {player} 1
-    amount: 1
-    icon:
-      texture: 13cfc3cbc0cf6f81774fa37b1f6608417c36aa19e5a429c97698ff94dafb3a6
-      display: '&eForja de Skins'
-      lore:
-      - '&7Combine skins para'
-      - '&7forjar uma melhor.'
-      - ''
-      - '&8 ▪ &fTipo: &eEnxada '
-      - ''
-      - ' &8Requisitos:'
-      - '&8 ▪ &c7 skins iguais '
-
-  armadura-alta:
-    type: COMMAND
-    chance: 0.0495
-    display: '&6Peça de Armadura &6[T&lIV&6]'
-    command: fazenda givearmor {player} tier-iv_leggings
-    amount: 1
-    icon:
-      material: LEATHER_LEGGINGS
-      color: '#8FD44E'
-      display: '&dCalça Farm &d[T&lIV&d]'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+8.0% '
-      - '&8 ▪ &5Sementes: &a+5.5% '
-      - '&8 ▪ &aXP: &a+5.5% '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  skin:
-    type: COMMAND
-    chance: 0.0297
-    display: '&5Skin esmeralda'
-    command: fazenda giveskin {player} esmeralda
-    amount: 1
-    icon:
-      material: DIAMOND_HOE
-      display: '&aSkin de Esmeralda'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      flags:
-      - HIDE_ATTRIBUTES
-
-  booster-3x:
-    type: COMMAND
-    chance: 0.0198
-    display: '&d&lBooster 3x &7(10min)'
-    command: fazenda givebooster {player} coins 3 10m
-    amount: 1
-    icon:
-      material: POTION
-      data: 8227
-      display: '&eBooster de Fazenda'
-      lore:
-      - '&7Use este booster para ter'
-      - '&7seus ganhos aumentados.'
-      - ''
-      - ' &8Informações: '
-      - ' &8▪ &fTipo: &aCoins '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &710m '
-      flags:
-      - HIDE_POTION_EFFECTS
-
-  jackpot:
-    type: COMMAND
-    chance: 0.001
-    display: '&f&lSkin de Marfim'
-    command: fazenda giveskin {player} marfim
-    amount: 1
-    icon:
-      material: DIAMOND_HOE
-      glow: true
-      display: '&fSkin de Marfim'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      flags:
-      - HIDE_ATTRIBUTES
-
+  # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
   lim-armazem:
     type: COMMAND
-    chance: 0.9
+    chance: 3
     display: '&6Limite de Armazém'
     command: armazem givelimititem {player} 500 1
     amount: 1
@@ -231,9 +94,26 @@ rewards:
       - ''
       - '&fQuantia: &a500 '
 
+  lim-maquina:
+    type: COMMAND
+    chance: 2.5
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} 1 1
+    amount: 1
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&7Aumenta quantas máquinas'
+      - '&7você pode ter no terreno.'
+      - ''
+      - '&fQuantia: &91 '
+
   lim-spawner:
     type: COMMAND
-    chance: 0.4
+    chance: 2
     display: '&cLimite de Spawners'
     command: spawner givelimite {player} 1 1
     amount: 1
@@ -248,19 +128,131 @@ rewards:
       - ''
       - '&fQuantia: &b1 '
 
-  lim-maquina:
+  chave-vip:
     type: COMMAND
-    chance: 0.6
-    display: '&9Limite de Máquinas'
-    command: maquina givelimite {player} 1 1
+    chance: 2
+    display: '&d&lChave VIP'
+    command: crate givekey vip {player} {amount}
     amount: 1
     icon:
-      material: INK_SACK
-      data: 4
+      material: TRIPWIRE_HOOK
       glow: true
-      display: '&9Limite de Máquinas'
+      display: '&dChave Vip'
       lore:
-      - '&7Aumenta quantas máquinas'
-      - '&7você pode ter no terreno.'
+      - '&7Consiga jogando bastante'
+      - '&7no servidor todo dia.'
+
+  chave-boss:
+    type: COMMAND
+    chance: 1.5
+    display: '&c&lChave de Boss'
+    command: crate givekey bosses {player} {amount}
+    amount: 1
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga abatendo os bosses'
+      - '&7que aparecem no servidor.'
+
+  chave-rankup:
+    type: COMMAND
+    chance: 1
+    display: '&6&lChave RankUP'
+    command: crate givekey rankup {player} {amount}
+    amount: 1
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&6Chave RankUP'
+      lore:
+      - '&7Consiga subindo de rank'
+      - '&7ao longo da sua jornada.'
+
+  # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
+  booster-2x:
+    type: COMMAND
+    chance: 2.5
+    display: '&e&lBooster 2x &7(5min)'
+    command: fazenda givebooster {player} coins 2 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
       - ''
-      - '&fQuantia: &91 '
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  # ── RARA ────────────────────────────────────────────────────────── 0,4%
+  caixa-farm-i:
+    type: COMMAND
+    chance: 0.4
+    display: '&a&lCaixa Farm &a[T&lI&a]'
+    command: caixas give farm-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      glow: true
+      display: '&a&lCaixa Farm &a[T&lI&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  # ── RARO PLUS ─────────────────────────────────────────────────── 0,099%
+  skin-pedra:
+    type: COMMAND
+    chance: 0.06
+    display: '&8Skin de Pedra'
+    command: fazenda giveskin {player} pedra
+    amount: 1
+    icon:
+      material: STONE_HOE
+      display: '&8Skin de Pedra'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+2.0% '
+      - '&8 ▪ &5Sementes: &a+1.0% '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  skin-ferro:
+    type: COMMAND
+    chance: 0.039
+    display: '&7Skin de Ferro'
+    command: fazenda giveskin {player} ferro
+    amount: 1
+    icon:
+      material: IRON_HOE
+      display: '&7Skin de Ferro'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &6Coins: &a+5.0% '
+      - '&8 ▪ &5Sementes: &a+3.0% '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  # ── JACKPOT ─────────────────────────────────────────────────────── 0,001%
+  jackpot:
+    type: COMMAND
+    chance: 0.001
+    display: '&a&lCaixa Farm &a[T&lII&a]'
+    command: caixas give farm-ii {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&a&lCaixa Farm &a[T&lII&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
