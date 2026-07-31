@@ -1,11 +1,11 @@
 # Capacete Farm — Tier III.
 item:
-  display: "&bCapacete Farm &b[T&lIII&b]"
+  display: "&bCapacete Farm &b[Tier &lIII&b]"
   material: LEATHER_HELMET
-  color: "#74B043"
+  color: "#55FFFF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

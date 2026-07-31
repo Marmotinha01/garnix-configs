@@ -1,11 +1,11 @@
 # Calça Pesca — Tier IV.
 item:
-  display: "&dCalça Pesca &d[T&lIV&d]"
+  display: "&dCalça Pesca &d[Tier &lIV&d]"
   material: LEATHER_LEGGINGS
-  color: "#3FB8D4"
+  color: "#FF55FF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

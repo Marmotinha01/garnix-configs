@@ -1,11 +1,11 @@
 # Capacete Mineração — Tier I.
 item:
-  display: "&7Capacete Mineração &7[T&lI&7]"
+  display: "&7Capacete Mineração &7[Tier &lI&7]"
   material: LEATHER_HELMET
-  color: "#6E5B3A"
+  color: "#AAAAAA"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

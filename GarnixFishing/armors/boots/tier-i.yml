@@ -1,11 +1,11 @@
 # Bota Pesca — Tier I.
 item:
-  display: "&7Bota Pesca &7[T&lI&7]"
+  display: "&7Bota Pesca &7[Tier &lI&7]"
   material: LEATHER_BOOTS
-  color: "#24506B"
+  color: "#AAAAAA"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

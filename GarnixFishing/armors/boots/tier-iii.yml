@@ -1,11 +1,11 @@
 # Bota Pesca — Tier III.
 item:
-  display: "&bBota Pesca &b[T&lIII&b]"
+  display: "&bBota Pesca &b[Tier &lIII&b]"
   material: LEATHER_BOOTS
-  color: "#3494B0"
+  color: "#55FFFF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

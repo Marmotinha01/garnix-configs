@@ -49,7 +49,7 @@ default:
     display: '&eCombustível &7(Máquinas)'
     lore:
     - '&7Mantém a sua máquina'
-    - '&7produzindo sem parar.'
+    - '&7produzindo drops.'
     - ''
     - '&8 ▪ &fLitros: &c{liters} '
     - ''

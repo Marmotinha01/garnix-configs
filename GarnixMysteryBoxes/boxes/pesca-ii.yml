@@ -7,7 +7,7 @@ slot: 24
 box-item:
   material: TRAPPED_CHEST
   glow: true
-  display: '&b&lCaixa Pesca &b[T&lII&b]'
+  display: '&bCaixa Pesca &b[Tier &lII&b]'
   lore:
   - '&7Abra e descubra o que a sorte'
   - '&7guardou para você lá dentro.'
@@ -45,8 +45,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_BOOTS
-      color: '#3494B0'
-      display: '&bBota Pesca &b[T&lIII&b]'
+      color: '#55FFFF'
+      display: '&bBota Pesca &b[Tier &lIII&b]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -64,8 +64,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
-      color: '#3FB8D4'
-      display: '&dPeitoral Pesca &d[T&lIV&d]'
+      color: '#FF55FF'
+      display: '&dPeitoral Pesca &d[Tier &lIV&d]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -83,8 +83,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
-      color: '#57DCF2'
-      display: '&6Calça Pesca &6[T&lV&6]'
+      color: '#FFAA00'
+      display: '&6Calça Pesca &6[Tier &lV&6]'
       lore:
       - ''
       - ' &8Especificações:'

@@ -20,7 +20,7 @@ unlock-lore:
 - ''
 - '&aClique para desbloquear.'
 
-bonus-format: " &8 ▪ &f{Display}: &a+&l{value}&a{unit} "
+bonus-format: "&8 ▪ &a+&l{value}&a{unit} {primary_color}{Display} "
 
 skins:
   default:
@@ -45,7 +45,7 @@ skins:
       display: '&8Skin de Pedra'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -66,7 +66,7 @@ skins:
       display: '&7Skin de Ferro'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -87,7 +87,7 @@ skins:
       display: '&6Skin de Ouro'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -108,7 +108,7 @@ skins:
       display: '&bSkin de Diamante'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -129,7 +129,7 @@ skins:
       display: '&5Skin de Âmbar'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -150,7 +150,7 @@ skins:
       display: '&aSkin de Esmeralda'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -187,7 +187,7 @@ skins:
       glow: true
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -209,7 +209,7 @@ skins:
       glow: true
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -231,7 +231,7 @@ skins:
       glow: true
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES

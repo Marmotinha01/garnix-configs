@@ -7,7 +7,7 @@ slot: 20
 box-item:
   material: TRAPPED_CHEST
   glow: true
-  display: '&e&lCaixa Mineração &e[T&lII&e]'
+  display: '&6Caixa Mineração &6[Tier &lII&6]'
   lore:
   - '&7Abra e descubra o que a sorte'
   - '&7guardou para você lá dentro.'
@@ -45,8 +45,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_BOOTS
-      color: '#C8922C'
-      display: '&bBota Mineração &b[T&lIII&b]'
+      color: '#55FFFF'
+      display: '&bBota Mineração &b[Tier &lIII&b]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -65,8 +65,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
-      color: '#F0B429'
-      display: '&dPeitoral Mineração &d[T&lIV&d]'
+      color: '#FF55FF'
+      display: '&dPeitoral Mineração &d[Tier &lIV&d]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -85,8 +85,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
-      color: '#FFD54A'
-      display: '&6Calça Mineração &6[T&lV&6]'
+      color: '#FFAA00'
+      display: '&6Calça Mineração &6[Tier &lV&6]'
       lore:
       - ''
       - ' &8Especificações:'

@@ -1,11 +1,11 @@
 # Capacete Farm — Tier IV.
 item:
-  display: "&dCapacete Farm &d[T&lIV&d]"
+  display: "&dCapacete Farm &d[Tier &lIV&d]"
   material: LEATHER_HELMET
-  color: "#8FD44E"
+  color: "#FF55FF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

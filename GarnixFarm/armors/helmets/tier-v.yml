@@ -1,11 +1,11 @@
 # Capacete Farm — Tier V.
 item:
-  display: "&6Capacete Farm &6[T&lV&6]"
+  display: "&6Capacete Farm &6[Tier &lV&6]"
   material: LEATHER_HELMET
-  color: "#B6F25C"
+  color: "#FFAA00"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

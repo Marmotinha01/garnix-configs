@@ -1,11 +1,11 @@
 # Peitoral Mineração — Tier III.
 item:
-  display: "&bPeitoral Mineração &b[T&lIII&b]"
+  display: "&bPeitoral Mineração &b[Tier &lIII&b]"
   material: LEATHER_CHESTPLATE
-  color: "#C8922C"
+  color: "#55FFFF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

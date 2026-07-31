@@ -73,7 +73,7 @@ items:
     icon:
       material: TRAPPED_CHEST
       glow: true
-      display: '&e&lCaixa Mineração &e[T&lII&e]'
+      display: '&eCaixa Mineração &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

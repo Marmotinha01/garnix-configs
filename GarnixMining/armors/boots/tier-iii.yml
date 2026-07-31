@@ -1,11 +1,11 @@
 # Bota Mineração — Tier III.
 item:
-  display: "&bBota Mineração &b[T&lIII&b]"
+  display: "&bBota Mineração &b[Tier &lIII&b]"
   material: LEATHER_BOOTS
-  color: "#C8922C"
+  color: "#55FFFF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

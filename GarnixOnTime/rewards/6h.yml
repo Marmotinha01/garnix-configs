@@ -34,5 +34,5 @@ rewards:
       glow: true
       display: '&4Chave Bosses'
       lore:
-      - '&7Consiga abatendo os bosses'
-      - '&7que aparecem no servidor.'
+      - '&7Consiga abatendo bosses'
+      - '&7em seu terreno.'

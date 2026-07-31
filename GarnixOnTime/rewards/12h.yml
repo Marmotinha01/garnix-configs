@@ -32,7 +32,7 @@ rewards:
     icon:
       material: CHEST
       glow: true
-      display: '&a&lCaixa Farm &a[T&lI&a]'
+      display: '&aCaixa Farm &a[Tier &lI&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

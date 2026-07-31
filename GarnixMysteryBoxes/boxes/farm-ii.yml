@@ -7,7 +7,7 @@ slot: 22
 box-item:
   material: TRAPPED_CHEST
   glow: true
-  display: '&a&lCaixa Farm &a[T&lII&a]'
+  display: '&aCaixa Farm &a[Tier &lII&a]'
   lore:
   - '&7Abra e descubra o que a sorte'
   - '&7guardou para você lá dentro.'
@@ -45,8 +45,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_BOOTS
-      color: '#74B043'
-      display: '&bBota Farm &b[T&lIII&b]'
+      color: '#55FFFF'
+      display: '&bBota Farm &b[Tier &lIII&b]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -65,8 +65,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
-      color: '#8FD44E'
-      display: '&dPeitoral Farm &d[T&lIV&d]'
+      color: '#FF55FF'
+      display: '&dPeitoral Farm &d[Tier &lIV&d]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -85,8 +85,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
-      color: '#B6F25C'
-      display: '&6Calça Farm &6[T&lV&6]'
+      color: '#FFAA00'
+      display: '&6Calça Farm &6[Tier &lV&6]'
       lore:
       - ''
       - ' &8Especificações:'

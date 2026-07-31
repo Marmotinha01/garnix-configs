@@ -1,11 +1,11 @@
 # Bota Farm — Tier IV.
 item:
-  display: "&dBota Farm &d[T&lIV&d]"
+  display: "&dBota Farm &d[Tier &lIV&d]"
   material: LEATHER_BOOTS
-  color: "#8FD44E"
+  color: "#FF55FF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

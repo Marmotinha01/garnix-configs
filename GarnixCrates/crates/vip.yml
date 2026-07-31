@@ -16,7 +16,7 @@ slot: 16
 crate-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&dChave Vip'
+  display: '&dChave VIP'
   lore:
   - '&7Consiga jogando bastante'
   - '&7no servidor todo dia.'
@@ -25,7 +25,7 @@ crate-item:
 key-item:
   glow: true
   material: TRIPWIRE_HOOK
-  display: '&dChave Vip'
+  display: '&dChave VIP'
   lore:
   - '&7Consiga jogando bastante'
   - '&7no servidor todo dia.'
@@ -93,7 +93,7 @@ rewards:
   chave-boss:
     type: COMMAND
     chance: 1.2
-    display: '&c&lChave de Boss'
+    display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 1
     icon:
@@ -101,19 +101,19 @@ rewards:
       glow: true
       display: '&4Chave Bosses'
       lore:
-      - '&7Consiga abatendo os bosses'
-      - '&7que aparecem no servidor.'
+      - '&7Consiga abatendo bosses'
+      - '&7em seu terreno.'
 
   armadura-baixa:
     type: COMMAND
     chance: 0.5
-    display: '&7Peça de Armadura &7[T&lII&7]'
+    display: '&7Peça de Armadura &f[Tier &lII&F]'
     command: mina givearmor {player} tier-ii_chestplate
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
-      color: '#8C6A2F'
-      display: '&aPeitoral Mineração &a[T&lII&a]'
+      color: '#55FF55'
+      display: '&aPeitoral Mineração &a[Tier &lII&a]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -153,8 +153,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
-      color: '#F0B429'
-      display: '&dCalça Mineração &d[T&lIV&d]'
+      color: '#FF55FF'
+      display: '&dCalça Mineração &d[Tier &lIV&d]'
       lore:
       - ''
       - ' &8Especificações:'

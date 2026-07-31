@@ -1,11 +1,11 @@
 # Calça Farm — Tier II.
 item:
-  display: "&aCalça Farm &a[T&lII&a]"
+  display: "&aCalça Farm &a[Tier &lII&a]"
   material: LEATHER_LEGGINGS
-  color: "#5E8C3A"
+  color: "#55FF55"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

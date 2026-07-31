@@ -55,7 +55,7 @@ rewards:
     amount: '250'
     icon:
       lore:
-      - '&fQuantia: &7250 '
+      - '&fValor: &2$&a250 '
 
   secundaria:
     type: CURRENCY
@@ -64,7 +64,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&fQuantia: &725 '
+      - '&fValor: &5❋25 '
 
   combustivel:
     type: COMMAND
@@ -74,13 +74,18 @@ rewards:
     amount: 500
     icon:
       material: COAL
-      display: '&eCombustível &7(500L)'
+      display: '&eCombustível &7(Máquinas)'
+      lore:
+      - '&7Mantém a sua máquina'
+      - '&7produzindo drops.'
+      - ''
+      - '&8 ▪ &fLitros: &c500 '
 
   # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
   lim-armazem:
     type: COMMAND
     chance: 3
-    display: '&6Limite de Armazém'
+    display: '&2Limite de Armazém'
     command: armazem givelimititem {player} 500 1
     amount: 1
     icon:
@@ -92,7 +97,7 @@ rewards:
       - '&7Aumenta quantos cactos o'
       - '&7seu armazém comporta.'
       - ''
-      - '&fQuantia: &a500 '
+      - '&8 ▪ &fQuantia: &a500 '
 
   lim-maquina:
     type: COMMAND
@@ -109,12 +114,12 @@ rewards:
       - '&7Aumenta quantas máquinas'
       - '&7você pode ter no terreno.'
       - ''
-      - '&fQuantia: &91 '
+      - '&8 ▪ &fQuantia: &91 '
 
   lim-spawner:
     type: COMMAND
     chance: 2
-    display: '&cLimite de Spawners'
+    display: '&bLimite de Spawners'
     command: spawner givelimite {player} 1 1
     amount: 1
     icon:
@@ -126,18 +131,18 @@ rewards:
       - '&7Aumenta quantos spawners'
       - '&7você pode ter no terreno.'
       - ''
-      - '&fQuantia: &b1 '
+      - '&8 ▪ &fQuantia: &b1 '
 
   chave-vip:
     type: COMMAND
     chance: 2
-    display: '&d&lChave VIP'
+    display: '&dChave VIP'
     command: crate givekey vip {player} {amount}
     amount: 1
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      display: '&dChave Vip'
+      display: '&dChave VIP'
       lore:
       - '&7Consiga jogando bastante'
       - '&7no servidor todo dia.'
@@ -145,7 +150,7 @@ rewards:
   chave-boss:
     type: COMMAND
     chance: 1.5
-    display: '&c&lChave de Boss'
+    display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
     amount: 1
     icon:
@@ -153,13 +158,13 @@ rewards:
       glow: true
       display: '&4Chave Bosses'
       lore:
-      - '&7Consiga abatendo os bosses'
-      - '&7que aparecem no servidor.'
+      - '&7Consiga matando bosses'
+      - '&7em seu terreno.'
 
   chave-rankup:
     type: COMMAND
     chance: 1
-    display: '&6&lChave RankUP'
+    display: '&6Chave RankUP'
     command: crate givekey rankup {player} {amount}
     amount: 1
     icon:
@@ -174,7 +179,7 @@ rewards:
   booster-2x:
     type: COMMAND
     chance: 2.5
-    display: '&e&lBooster 2x &7(5min)'
+    display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 5m
     amount: 1
     icon:
@@ -196,13 +201,13 @@ rewards:
   caixa-farm-i:
     type: COMMAND
     chance: 0.4
-    display: '&a&lCaixa Farm &a[T&lI&a]'
+    display: '&aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
     amount: 1
     icon:
       material: CHEST
       glow: true
-      display: '&a&lCaixa Farm &a[T&lI&a]'
+      display: '&aCaixa Farm &a[Tier &lI&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -216,12 +221,12 @@ rewards:
     amount: 1
     icon:
       material: STONE_HOE
-      display: '&8Skin de Pedra'
+      display: '&7Skin de Pedra'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+2.0% '
-      - '&8 ▪ &5Sementes: &a+1.0% '
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l2&a% Coins '
+      - '&8 ▪ &5+&l1&5% Sementes '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -233,12 +238,12 @@ rewards:
     amount: 1
     icon:
       material: IRON_HOE
-      display: '&7Skin de Ferro'
+      display: '&fSkin de Ferro'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+5.0% '
-      - '&8 ▪ &5Sementes: &a+3.0% '
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l5&a% Coins '
+      - '&8 ▪ &5+&l3&5% Sementes '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -246,13 +251,13 @@ rewards:
   jackpot:
     type: COMMAND
     chance: 0.001
-    display: '&a&lCaixa Farm &a[T&lII&a]'
+    display: '&aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
     amount: 1
     icon:
       material: TRAPPED_CHEST
       glow: true
-      display: '&a&lCaixa Farm &a[T&lII&a]'
+      display: '&aCaixa Farm &a[Tier &lII&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

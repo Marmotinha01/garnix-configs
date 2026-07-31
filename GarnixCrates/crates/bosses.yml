@@ -18,8 +18,8 @@ crate-item:
   material: TRIPWIRE_HOOK
   display: '&4Chave Bosses'
   lore:
-  - '&7Consiga abatendo os bosses'
-  - '&7que aparecem no servidor.'
+  - '&7Consiga abatendo bosses'
+  - '&7em seu terreno.'
 
 # Item físico da chave (segurar e clicar com botão direito na crate abre).
 key-item:
@@ -27,8 +27,8 @@ key-item:
   material: TRIPWIRE_HOOK
   display: '&4Chave Bosses'
   lore:
-  - '&7Consiga abatendo os bosses'
-  - '&7que aparecem no servidor.'
+  - '&7Consiga abatendo bosses'
+  - '&7em seu terreno.'
   - ''
   - '&4Clique esquerdo para armazenar'
   - '&4ou abrir a chave em uma caixa.'
@@ -93,7 +93,7 @@ rewards:
   chave-boss:
     type: COMMAND
     chance: 1.2
-    display: '&c&lChave de Boss'
+    display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 1
     icon:
@@ -101,19 +101,19 @@ rewards:
       glow: true
       display: '&4Chave Bosses'
       lore:
-      - '&7Consiga abatendo os bosses'
-      - '&7que aparecem no servidor.'
+      - '&7Consiga abatendo bosses'
+      - '&7em seu terreno.'
 
   armadura-baixa:
     type: COMMAND
     chance: 0.5
-    display: '&7Peça de Armadura &7[T&lII&7]'
+    display: '&7Peça de Armadura &f[Tier &lII&F]'
     command: mina givearmor {player} tier-ii_boots
     amount: 1
     icon:
       material: LEATHER_BOOTS
-      color: '#8C6A2F'
-      display: '&aBota Mineração &a[T&lII&a]'
+      color: '#55FF55'
+      display: '&aBota Mineração &a[Tier &lII&a]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -150,8 +150,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_HELMET
-      color: '#F0B429'
-      display: '&dCapacete Mineração &d[T&lIV&d]'
+      color: '#FF55FF'
+      display: '&dCapacete Mineração &d[Tier &lIV&d]'
       lore:
       - ''
       - ' &8Especificações:'

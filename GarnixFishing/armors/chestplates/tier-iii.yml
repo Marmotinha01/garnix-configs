@@ -1,11 +1,11 @@
 # Peitoral Pesca — Tier III.
 item:
-  display: "&bPeitoral Pesca &b[T&lIII&b]"
+  display: "&bPeitoral Pesca &b[Tier &lIII&b]"
   material: LEATHER_CHESTPLATE
-  color: "#3494B0"
+  color: "#55FFFF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

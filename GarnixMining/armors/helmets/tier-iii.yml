@@ -1,11 +1,11 @@
 # Capacete Mineração — Tier III.
 item:
-  display: "&bCapacete Mineração &b[T&lIII&b]"
+  display: "&bCapacete Mineração &b[Tier &lIII&b]"
   material: LEATHER_HELMET
-  color: "#C8922C"
+  color: "#55FFFF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

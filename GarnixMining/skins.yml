@@ -32,7 +32,7 @@ unlock-lore:
 - '&aClique para desbloquear.'
 
 # {bonus} line layout for skins (see config.yml → bonus-lore-format for tokens).
-bonus-format: " &8 ▪ &f{Display}: &a+&l{value}&a{unit} "
+bonus-format: "&8 ▪ &a+&l{value}&a{unit} {primary_color}{Display} "
 
 skins:
   default:
@@ -54,10 +54,10 @@ skins:
     forgeable: true
     icon:
       material: STONE_PICKAXE
-      display: '&8Skin de Pedra'
+      display: '&7Skin de Pedra'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -75,10 +75,10 @@ skins:
     forgeable: true
     icon:
       material: IRON_PICKAXE
-      display: '&7Skin de Ferro'
+      display: '&fSkin de Ferro'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -99,7 +99,7 @@ skins:
       display: '&6Skin de Ouro'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -120,7 +120,7 @@ skins:
       display: '&bSkin de Diamante'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -141,7 +141,7 @@ skins:
       display: '&cSkin de Rubi'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -162,7 +162,7 @@ skins:
       display: '&fSkin de Quartzo'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -184,7 +184,7 @@ skins:
       glow: true
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -206,7 +206,7 @@ skins:
       glow: true
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES
@@ -228,7 +228,7 @@ skins:
       glow: true
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
       - '{bonus}'
       flags:
       - HIDE_ATTRIBUTES

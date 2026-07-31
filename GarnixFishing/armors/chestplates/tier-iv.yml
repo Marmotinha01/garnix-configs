@@ -1,11 +1,11 @@
 # Peitoral Pesca — Tier IV.
 item:
-  display: "&dPeitoral Pesca &d[T&lIV&d]"
+  display: "&dPeitoral Pesca &d[Tier &lIV&d]"
   material: LEATHER_CHESTPLATE
-  color: "#3FB8D4"
+  color: "#FF55FF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

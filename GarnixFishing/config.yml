@@ -23,7 +23,7 @@ xp-display:
 # {color} and {display} come from the provider — "xp" uses xp-display above, the
 # corais currency comes from GarnixCurrencies. An armor file may override this
 # layout with its own 'bonus-format'.
-bonus-lore-format: '&8 ▪ &f{Display}: &a+&l{value}&a{unit} '
+bonus-lore-format: "&8 ▪ &a+&l{value}&a{unit} {primary_color}{Display} "
 
 # Minutes between leaderboard rebuilds (the ranking keeps the top 10).
 ranking-refresh-minutes: 5

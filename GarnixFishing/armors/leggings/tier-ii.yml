@@ -1,11 +1,11 @@
 # Calça Pesca — Tier II.
 item:
-  display: "&aCalça Pesca &a[T&lII&a]"
+  display: "&aCalça Pesca &a[Tier &lII&a]"
   material: LEATHER_LEGGINGS
-  color: "#2C6E8C"
+  color: "#55FF55"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

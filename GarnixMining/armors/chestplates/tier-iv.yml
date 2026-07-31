@@ -1,11 +1,11 @@
 # Peitoral Mineração — Tier IV.
 item:
-  display: "&dPeitoral Mineração &d[T&lIV&d]"
+  display: "&dPeitoral Mineração &d[Tier &lIV&d]"
   material: LEATHER_CHESTPLATE
-  color: "#F0B429"
+  color: "#FF55FF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

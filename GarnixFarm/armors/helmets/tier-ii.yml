@@ -1,11 +1,11 @@
 # Capacete Farm — Tier II.
 item:
-  display: "&aCapacete Farm &a[T&lII&a]"
+  display: "&aCapacete Farm &a[Tier &lII&a]"
   material: LEATHER_HELMET
-  color: "#5E8C3A"
+  color: "#55FF55"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

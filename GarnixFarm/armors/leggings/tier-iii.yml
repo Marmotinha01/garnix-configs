@@ -1,11 +1,11 @@
 # Calça Farm — Tier III.
 item:
-  display: "&bCalça Farm &b[T&lIII&b]"
+  display: "&bCalça Farm &b[Tier &lIII&b]"
   material: LEATHER_LEGGINGS
-  color: "#74B043"
+  color: "#55FFFF"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

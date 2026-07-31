@@ -1,11 +1,11 @@
 # Bota Farm — Tier I.
 item:
-  display: "&7Bota Farm &7[T&lI&7]"
+  display: "&7Bota Farm &7[Tier &lI&7]"
   material: LEATHER_BOOTS
-  color: "#4C6B34"
+  color: "#AAAAAA"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

@@ -45,7 +45,7 @@ products:
     item:
       material: TRAPPED_CHEST
       glow: true
-      display: '&e&lCaixa Mineração &e[T&lII&e]'
+      display: '&eCaixa Mineração &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -61,7 +61,7 @@ products:
     item:
       material: TRAPPED_CHEST
       glow: true
-      display: '&a&lCaixa Farm &a[T&lII&a]'
+      display: '&aCaixa Farm &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -77,7 +77,7 @@ products:
     item:
       material: TRAPPED_CHEST
       glow: true
-      display: '&b&lCaixa Pesca &b[T&lII&b]'
+      display: '&bCaixa Pesca &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

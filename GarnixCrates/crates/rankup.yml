@@ -93,7 +93,7 @@ rewards:
   chave-boss:
     type: COMMAND
     chance: 5.1
-    display: '&c&lChave de Boss'
+    display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 1
     icon:
@@ -101,19 +101,19 @@ rewards:
       glow: true
       display: '&4Chave Bosses'
       lore:
-      - '&7Consiga abatendo os bosses'
-      - '&7que aparecem no servidor.'
+      - '&7Consiga abatendo bosses'
+      - '&7em seu terreno.'
 
   armadura-baixa:
     type: COMMAND
     chance: 2.125
-    display: '&7Peça de Armadura &7[T&lII&7]'
+    display: '&7Peça de Armadura &f[Tier &lII&F]'
     command: mina givearmor {player} tier-ii_helmet
     amount: 1
     icon:
       material: LEATHER_HELMET
-      color: '#8C6A2F'
-      display: '&aCapacete Mineração &a[T&lII&a]'
+      color: '#55FF55'
+      display: '&aCapacete Mineração &a[Tier &lII&a]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -150,8 +150,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
-      color: '#F0B429'
-      display: '&dPeitoral Mineração &d[T&lIV&d]'
+      color: '#FF55FF'
+      display: '&dPeitoral Mineração &d[Tier &lIV&d]'
       lore:
       - ''
       - ' &8Especificações:'

@@ -1,11 +1,11 @@
 # Peitoral Mineração — Tier V.
 item:
-  display: "&6Peitoral Mineração &6[T&lV&6]"
+  display: "&6Peitoral Mineração &6[Tier &lV&6]"
   material: LEATHER_CHESTPLATE
-  color: "#FFD54A"
+  color: "#FFAA00"
   lore:
     - ""
-    - " &8Especificações:"
+    - " &8Bônus: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

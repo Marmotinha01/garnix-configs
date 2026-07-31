@@ -7,7 +7,7 @@ slot: 15
 box-item:
   material: CHEST
   glow: true
-  display: '&b&lCaixa Pesca &b[T&lI&b]'
+  display: '&bCaixa Pesca &b[Tier &lI&b]'
   lore:
   - '&7Abra e descubra o que a sorte'
   - '&7guardou para você lá dentro.'
@@ -40,13 +40,13 @@ rewards:
   armadura-i:
     type: COMMAND
     chance: 19
-    display: '&7Peça de Armadura &7[T&lI&7]'
+    display: '&7Peça de Armadura &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_helmet
     amount: 1
     icon:
       material: LEATHER_HELMET
-      color: '#24506B'
-      display: '&7Capacete Pesca &7[T&lI&7]'
+      color: '#AAAAAA'
+      display: '&7Capacete Pesca &7[Tier &lI&7]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -59,13 +59,13 @@ rewards:
   armadura-ii:
     type: COMMAND
     chance: 18
-    display: '&7Peça de Armadura &7[T&lII&7]'
+    display: '&7Peça de Armadura &f[Tier &lII&F]'
     command: pesca givearmor {player} tier-ii_chestplate
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
-      color: '#2C6E8C'
-      display: '&aPeitoral Pesca &a[T&lII&a]'
+      color: '#55FF55'
+      display: '&aPeitoral Pesca &a[Tier &lII&a]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -83,8 +83,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
-      color: '#3494B0'
-      display: '&bCalça Pesca &b[T&lIII&b]'
+      color: '#55FFFF'
+      display: '&bCalça Pesca &b[Tier &lIII&b]'
       lore:
       - ''
       - ' &8Especificações:'

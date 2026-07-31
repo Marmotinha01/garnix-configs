@@ -32,7 +32,7 @@ rewards:
     icon:
       material: CHEST
       glow: true
-      display: '&e&lCaixa Mineração &e[T&lI&e]'
+      display: '&eCaixa Mineração &7[Tier &lI&7]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

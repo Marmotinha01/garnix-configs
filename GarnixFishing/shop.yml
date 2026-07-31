@@ -137,7 +137,7 @@ products:
     icon:
       material: CHEST
       glow: true
-      display: '&b&lCaixa Pesca &b[T&lI&b]'
+      display: '&bCaixa Pesca &7[Tier &lI&7]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -149,7 +149,7 @@ products:
     icon:
       material: TRAPPED_CHEST
       glow: true
-      display: '&b&lCaixa Pesca &b[T&lII&b]'
+      display: '&bCaixa Pesca &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

@@ -7,7 +7,7 @@ slot: 11
 box-item:
   material: CHEST
   glow: true
-  display: '&e&lCaixa Mineração &e[T&lI&e]'
+  display: '&6Caixa Mineração &6[Tier &lI&e6]'
   lore:
   - '&7Abra e descubra o que a sorte'
   - '&7guardou para você lá dentro.'
@@ -40,13 +40,13 @@ rewards:
   armadura-i:
     type: COMMAND
     chance: 25
-    display: '&7Peça de Armadura &7[T&lI&7]'
+    display: '&7Peça de Armadura &7[Tier &lI&7]'
     command: mina givearmor {player} tier-i_helmet
     amount: 1
     icon:
       material: LEATHER_HELMET
-      color: '#6E5B3A'
-      display: '&7Capacete Mineração &7[T&lI&7]'
+      color: '#AAAAAA'
+      display: '&7Capacete Mineração &7[Tier &lI&7]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -60,13 +60,13 @@ rewards:
   armadura-ii:
     type: COMMAND
     chance: 18
-    display: '&7Peça de Armadura &7[T&lII&7]'
+    display: '&7Peça de Armadura &f[Tier &lII&F]'
     command: mina givearmor {player} tier-ii_chestplate
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
-      color: '#8C6A2F'
-      display: '&aPeitoral Mineração &a[T&lII&a]'
+      color: '#55FF55'
+      display: '&aPeitoral Mineração &a[Tier &lII&a]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -85,8 +85,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
-      color: '#C8922C'
-      display: '&bCalça Mineração &b[T&lIII&b]'
+      color: '#55FFFF'
+      display: '&bCalça Mineração &b[Tier &lIII&b]'
       lore:
       - ''
       - ' &8Especificações:'

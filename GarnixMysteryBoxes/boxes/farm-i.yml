@@ -7,7 +7,7 @@ slot: 13
 box-item:
   material: CHEST
   glow: true
-  display: '&a&lCaixa Farm &a[T&lI&a]'
+  display: '&aCaixa Farm &a[Tier &lI&a]'
   lore:
   - '&7Abra e descubra o que a sorte'
   - '&7guardou para você lá dentro.'
@@ -40,13 +40,13 @@ rewards:
   armadura-i:
     type: COMMAND
     chance: 25
-    display: '&7Peça de Armadura &7[T&lI&7]'
+    display: '&7Peça de Armadura &7[Tier &lI&7]'
     command: fazenda givearmor {player} tier-i_helmet
     amount: 1
     icon:
       material: LEATHER_HELMET
-      color: '#4C6B34'
-      display: '&7Capacete Farm &7[T&lI&7]'
+      color: '#AAAAAA'
+      display: '&7Capacete Farm &7[Tier &lI&7]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -60,13 +60,13 @@ rewards:
   armadura-ii:
     type: COMMAND
     chance: 18
-    display: '&7Peça de Armadura &7[T&lII&7]'
+    display: '&7Peça de Armadura &f[Tier &lII&F]'
     command: fazenda givearmor {player} tier-ii_chestplate
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
-      color: '#5E8C3A'
-      display: '&aPeitoral Farm &a[T&lII&a]'
+      color: '#55FF55'
+      display: '&aPeitoral Farm &a[Tier &lII&a]'
       lore:
       - ''
       - ' &8Especificações:'
@@ -85,8 +85,8 @@ rewards:
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
-      color: '#74B043'
-      display: '&bCalça Farm &b[T&lIII&b]'
+      color: '#55FFFF'
+      display: '&bCalça Farm &b[Tier &lIII&b]'
       lore:
       - ''
       - ' &8Especificações:'
