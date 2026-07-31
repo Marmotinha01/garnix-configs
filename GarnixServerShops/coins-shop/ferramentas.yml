@@ -35,7 +35,7 @@ products:
   diamond-spade:
     amount: 1
     price: 5000
-    slot: 12
+    slot: 11
     item:
       material: DIAMOND_SPADE
       data: 0
@@ -51,7 +51,7 @@ products:
   diamond-axe:
     amount: 1
     price: 5000
-    slot: 14
+    slot: 15
     item:
       material: DIAMOND_AXE
       data: 0

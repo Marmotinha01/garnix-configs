@@ -165,7 +165,7 @@ booster-icon:
   - '&7seus ganhos aumentados.'
   - ''
   - ' &8Informações: '
-  - ' &8▪ &fTipo: {symbol_color}{primary_color}{display} '
+  - ' &8▪ &fTipo: {symbol_color}{primary_color}{Display} '
   - ' &8▪ &fBônus: &a{bonus} '
   - ' &8▪ &fDuração: &7{duration} '
   activation-lore:

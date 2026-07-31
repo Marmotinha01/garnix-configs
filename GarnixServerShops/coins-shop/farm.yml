@@ -56,7 +56,7 @@ icon:
   display: '&aFarm'
   lore:
   - '&7Itens de plantio para'
-  - '&7montar a sua fazenda.'
+  - '&7montar a sua plantação.'
   - ''
   - '&aClique para acessar.'
 
@@ -72,13 +72,6 @@ products:
       material: CACTUS
       data: 0
       amount: 1
-      display: '&aCacto'
-      lore:
-      - '&7A semente da sua farm. O que'
-      - '&7você colher replanta sozinho.'
-      - ''
-      - '&8 ▪ &fCresce: &asim '
-      - '&8 ▪ &fTambém sai do: &f/armazem '
   sand:
     amount: 1
     price: 5000
@@ -88,13 +81,6 @@ products:
       material: SAND
       data: 0
       amount: 1
-      display: '&eAreia'
-      lore:
-      - '&7A base de cada coluna. Não'
-      - '&7cresce e não volta do armazém.'
-      - ''
-      - '&8 ▪ &fCresce: &cnão '
-      - '&8 ▪ &fPrecisa de: &f1 por coluna '
   string:
     amount: 1
     price: 1500
@@ -104,7 +90,3 @@ products:
       material: STRING
       data: 0
       amount: 1
-      display: '&fLinha'
-      lore:
-      - '&7Para automatizar a colheita'
-      - '&7da sua farm de cacto.'
