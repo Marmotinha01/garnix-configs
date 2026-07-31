@@ -1,23 +1,27 @@
-order: 106
+order: 103
 
 # ⚠️ MAQUINA ESPECIAL — fora da loja de maquinas.
-# Rota: Recompensa rara · caixa II.
+# Rota: Site · jackpot da caixa garnix · caixa de maquinas.
 # Só é obtida via /maquina give (ou pelas tabelas de loot da Fase 5).
 shop: false
 
-delay: 10s
+# ⚠️ Era uma maquina `limite` so, que dropava spawnerslimite E maquinaslimite
+# no mesmo ciclo. Foi dividida em duas para cada limite ter a propria cabeca e
+# poder ser dada separada. O delay continua 3600s em cada uma, entao quem tiver
+# as duas recebe o mesmo 1+1 por hora de antes — nada mudou na economia.
+delay: 3600s
 
-translated: Corais
+translated: Limite de Máquinas
 display: '&b&l{translated}'
 
-texture: "e6799bfaa3a2c63ad85dd378e66d57d9a97a3f86d0d9f683c498632f4f5c"
+texture: "93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f"
 
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "14/08/2026 20:00"
+release: "18/08/2026 20:00"
 
 rank: ''
 
-buy-permission: machines.buy.corais
+buy-permission: machines.buy.limitemaquinas
 
 block:
   material: LAPIS_BLOCK
@@ -29,7 +33,7 @@ fuels:
 
 machine-item:
   glow: true
-  texture: "e6799bfaa3a2c63ad85dd378e66d57d9a97a3f86d0d9f683c498632f4f5c"
+  texture: "93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f"
   display: '&b&lMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'
@@ -44,9 +48,9 @@ costs: {}
 
 # ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
 drops:
-  corais:
+  maquinaslimite:
     type: CURRENCY
-    currency-id: corais
+    currency-id: maquinaslimite
     chance: 1
-    # ⏳ calibrar na Fase 4 contra a renda de corais da pesca
-    amount: '0.01'
+    # 24 por dia — 1 por hora
+    amount: '1'

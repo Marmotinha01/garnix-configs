@@ -9,7 +9,7 @@ delay: 10s
 translated: "Ferro"
 display: '&eMáquina de {translated}'
 
-texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
+texture: ""
 
 # Máquina C libera no dia 8 da temporada.
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
@@ -31,7 +31,8 @@ fuels:
 - infinite
 
 machine-item:
-  texture: "14a679138a22790334b99f9a16b88362a79a52957f6112bc49c0cdc789ce"
+  material: IRON_BLOCK
+  data: 0
   display: '&aMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'

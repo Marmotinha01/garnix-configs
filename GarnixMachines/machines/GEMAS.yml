@@ -10,7 +10,7 @@ delay: 10s
 translated: Gemas
 display: '&b&l{translated}'
 
-texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
+texture: "19ecbdcb554123fa4d31876538bc7fb247494aea325bd26595694505aebd10ed"
 
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
 release: "14/08/2026 20:00"
@@ -29,7 +29,7 @@ fuels:
 
 machine-item:
   glow: true
-  texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
+  texture: "19ecbdcb554123fa4d31876538bc7fb247494aea325bd26595694505aebd10ed"
   display: '&b&lMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'

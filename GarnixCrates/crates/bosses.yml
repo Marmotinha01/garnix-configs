@@ -132,7 +132,7 @@ rewards:
     command: boss give boss {player} TITA 1 1
     amount: 1
     icon:
-      texture: 74f328f5044129b5d1f96affd1b8c05bcde6bd8e756aff5c5020585eef8a3daf
+      texture: efec3e24551726cb3d64cbd1604a1a9f8a1e11693722a8aad5109a1fffa8d43c
       display: '&5Boss Titã'
       lore:
       - '&7Invoque este boss dentro'
@@ -152,7 +152,7 @@ rewards:
     command: boss give boss {player} DEVORADOR 1 1
     amount: 1
     icon:
-      texture: 74f328f5044129b5d1f96affd1b8c05bcde6bd8e756aff5c5020585eef8a3daf
+      texture: ef93e9e1de7c1f721514968e4cd7c30082be02061a0e1ce91e67c3f0d70d5840
       display: '&4Boss Devorador'
       lore:
       - '&7Invoque este boss dentro'

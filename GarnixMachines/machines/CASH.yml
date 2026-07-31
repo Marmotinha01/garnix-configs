@@ -10,7 +10,7 @@ delay: 432s
 translated: Cash
 display: '&b&l{translated}'
 
-texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
+texture: "c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071"
 
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
 release: "16/08/2026 20:00"
@@ -29,7 +29,7 @@ fuels:
 
 machine-item:
   glow: true
-  texture: "42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c"
+  texture: "c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071"
   display: '&b&lMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'

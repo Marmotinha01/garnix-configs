@@ -10,7 +10,7 @@ delay: 60s
 translated: Combustível
 display: '&b&l{translated}'
 
-texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
+texture: "150c11b7c9b9070034f44721c6ea9d1b7775283014979f2d8126bb5a1765188e"
 
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
 release: "12/08/2026 20:00"
@@ -29,7 +29,7 @@ fuels:
 
 machine-item:
   glow: true
-  texture: "75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9"
+  texture: "150c11b7c9b9070034f44721c6ea9d1b7775283014979f2d8126bb5a1765188e"
   display: '&b&lMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'

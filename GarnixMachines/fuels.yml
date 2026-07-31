@@ -8,7 +8,8 @@
 #   máquinas A–O e as de moeda secundária  · ciclo 10s   → 8.640 L/dia
 #   Máquina de Combustível                 · ciclo 60s   →   1.440 L/dia
 #   Máquina de Cash                        · ciclo 432s  →     200 L/dia
-#   Máquina de Limite                      · ciclo 3600s →      24 L/dia
+#   Máquina de Limite de Spawners          · ciclo 3600s →      24 L/dia
+#   Máquina de Limite de Máquinas          · ciclo 3600s →      24 L/dia
 #
 # ORÇAMENTO: combustível é 8% da renda diária (o sink recorrente do
 # 01-ECONOMIA). Como o consumo é fixo por bloco e a produção cresce com o tier,

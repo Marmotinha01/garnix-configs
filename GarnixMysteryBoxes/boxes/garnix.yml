@@ -239,16 +239,34 @@ rewards:
       - ''
       - '&7Use com &fBotão direito &7para ativar.'
 
-  maquina-especial:
+  maquina-limite-spawners:
     type: COMMAND
-    chance: 3
-    display: '&b&lMáquina de Limite'
-    command: maquina give {player} LIMITE
+    chance: 1.5
+    display: '&b&lMáquina de Limite de Spawners'
+    command: maquina give {player} LIMITE-SPAWNERS
     amount: 1
     icon:
-      texture: 9a2d9b1e07d1e1a8b7b1e3e5e9e6a9e8f8a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0
+      texture: a61b98d8934900a08ab7c0d60f3476c569bf7ff637196dce644e8cc4b7ba325a
       glow: true
-      display: '&b&lMáquina de Limite'
+      display: '&b&lMáquina de Limite de Spawners'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&fQuantia: &b1 '
+      - ''
+      - '&bColoque no seu terreno.'
+
+  maquina-limite-maquinas:
+    type: COMMAND
+    chance: 1.5
+    display: '&b&lMáquina de Limite de Máquinas'
+    command: maquina give {player} LIMITE-MAQUINAS
+    amount: 1
+    icon:
+      texture: 93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f
+      glow: true
+      display: '&b&lMáquina de Limite de Máquinas'
       lore:
       - '&7Produz sozinha dentro'
       - '&7do seu terreno.'

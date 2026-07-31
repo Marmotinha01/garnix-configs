@@ -1,23 +1,27 @@
 order: 102
 
 # ⚠️ MAQUINA ESPECIAL — fora da loja de maquinas.
-# Rota: Site · jackpot da caixa garnix.
+# Rota: Site · jackpot da caixa garnix · caixa de maquinas.
 # Só é obtida via /maquina give (ou pelas tabelas de loot da Fase 5).
 shop: false
 
+# ⚠️ Era uma maquina `limite` so, que dropava spawnerslimite E maquinaslimite
+# no mesmo ciclo. Foi dividida em duas para cada limite ter a propria cabeca e
+# poder ser dada separada. O delay continua 3600s em cada uma, entao quem tiver
+# as duas recebe o mesmo 1+1 por hora de antes — nada mudou na economia.
 delay: 3600s
 
-translated: Limite
+translated: Limite de Spawners
 display: '&b&l{translated}'
 
-texture: "9a2d9b1e07d1e1a8b7b1e3e5e9e6a9e8f8a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0"
+texture: "a61b98d8934900a08ab7c0d60f3476c569bf7ff637196dce644e8cc4b7ba325a"
 
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
 release: "18/08/2026 20:00"
 
 rank: ''
 
-buy-permission: machines.buy.limite
+buy-permission: machines.buy.limitespawners
 
 block:
   material: LAPIS_BLOCK
@@ -29,7 +33,7 @@ fuels:
 
 machine-item:
   glow: true
-  texture: "9a2d9b1e07d1e1a8b7b1e3e5e9e6a9e8f8a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0"
+  texture: "a61b98d8934900a08ab7c0d60f3476c569bf7ff637196dce644e8cc4b7ba325a"
   display: '&b&lMáquina de {translated}'
   lore:
   - '&7Produz sozinha dentro'
@@ -47,13 +51,6 @@ drops:
   spawnerslimite:
     type: CURRENCY
     currency-id: spawnerslimite
-    chance: 1
-    # 24 por dia — 1 por hora
-    amount: '1'
-
-  maquinaslimite:
-    type: CURRENCY
-    currency-id: maquinaslimite
     chance: 1
     # 24 por dia — 1 por hora
     amount: '1'
