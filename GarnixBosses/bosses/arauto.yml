@@ -45,7 +45,7 @@ rewards:
     amount: '39500000000'
     icon:
       lore:
-      - '&fQuantia: &739.5B '
+      - '&fValor: &2$&a{amount}'
   secundaria:
     type: CURRENCY
     chance: 45.0
@@ -53,7 +53,7 @@ rewards:
     amount: '600'
     icon:
       lore:
-      - '&fQuantia: &7600 '
+      - '&fValor: &3✶{amount}'
   chave-boss:
     type: COMMAND
     chance: 30.0
