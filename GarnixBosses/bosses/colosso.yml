@@ -26,11 +26,23 @@ boss-icon:
 
 # Types:
 # NONE, CURRENCY, ITEM, COMMAND, COMMAND_ITEM
-
+#
+# FAIXAS deste boss:
+#   comum 87% (azar 25 incluso) · comum plus 10% · incomum 2% ·
+#   semi raro 0,6% · raro 0,3% · raro plus 0,09% · jackpot 0,01%
+#
+# ⚠️ `chance` e PESO — RewardManager usa RandomSelector.weighted, que normaliza
+# pelo total. MAS o menu imprime o peso cru como porcentagem
+# (BossRewardsMenu.java:136), entao somar 100 aqui nao e so legibilidade: e o
+# que faz o numero que o jogador ve ser verdade.
+#
+# ⚠️ reward-rolls: 3 — cada abate sorteia 3 vezes nesta tabela.
 rewards:
+
+  # ── COMUM ────────────────────────────────────────────────────────── 87%
   azar:
     type: NONE
-    chance: 25.0
+    chance: 25
     display: '&8Azar'
     icon:
       material: WEB
@@ -40,48 +52,171 @@ rewards:
 
   coins:
     type: CURRENCY
-    chance: 100.0
+    chance: 30
     currency-id: coins
     amount: '10800'
     icon:
       lore:
       - '&fQuantia: &710.8K '
-  secundaria:
+
+  gemas:
     type: CURRENCY
-    chance: 45.0
+    chance: 17
     currency-id: gemas
     amount: '200'
     icon:
       lore:
       - '&fQuantia: &7200 '
-  chave-boss:
+
+  dracmas:
+    type: CURRENCY
+    chance: 15
+    currency-id: dracmas
+    amount: '100'
+    icon:
+      lore:
+      - '&fQuantia: &7100 '
+
+  # ── COMUM PLUS ───────────────────────────────────────────────────── 10%
+  lim-armazem:
     type: COMMAND
-    chance: 30.0
+    chance: 4
+    display: '&2Limite de Armazém'
+    command: armazem givelimititem {player} {amount} 1
+    amount: 500
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&fValor: &2∞500'
+
+  lim-maquina:
+    type: COMMAND
+    chance: 3.5
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 1
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞1'
+
+  lim-spawner:
+    type: COMMAND
+    chance: 2.5
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 1
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞1'
+
+  # ── INCOMUM ───────────────────────────────────────────────────────── 2%
+  chaves-boss-5:
+    type: COMMAND
+    chance: 2
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
-    amount: 1
+    amount: 5
     icon:
       material: TRIPWIRE_HOOK
       glow: true
+      amount: 5
       display: '&4Chave Bosses'
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
 
-  livro:
+  # ── SEMI RARO ───────────────────────────────────────────────────── 0,6%
+  boss-inferno:
     type: COMMAND
-    chance: 8
-    display: '&4Livro de Massacre 2'
-    command: lamina givebook {player} massacre 2
+    chance: 0.6
+    display: '&6Boss Inferno'
+    command: boss give boss {player} INFERNO 1 {amount}
     amount: 1
     icon:
-      material: ENCHANTED_BOOK
-      display: '&4Livro de Massacre &7II'
+      texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
+      display: '&6Boss Inferno'
       lore:
-      - '&7Quantos mobs a sua lâmina'
-      - '&7abate em um único golpe.'
-      - ''
-      - '&8 ▪ &fMassacre: &4II '
-      - ''
-      - '&7Arraste sobre a lâmina'
-      - '&7para aplicar o livro.'
+      - '&fVida: &4❤50K'
+
+  # ── RARO ────────────────────────────────────────────────────────── 0,3%
+  boss-arauto:
+    type: COMMAND
+    chance: 0.2
+    display: '&dBoss Arauto'
+    command: boss give boss {player} ARAUTO 1 {amount}
+    amount: 1
+    icon:
+      texture: 38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677
+      display: '&dBoss Arauto'
+      lore:
+      - '&fVida: &4❤75K'
+
+  caixa-runas:
+    type: COMMAND
+    chance: 0.1
+    display: '&5Caixa Runas'
+    command: caixas give runas {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&5Caixa Runas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  # ── RARO PLUS ──────────────────────────────────────────────────── 0,09%
+  chaves-boss-10:
+    type: COMMAND
+    chance: 0.09
+    display: '&cChave de Boss'
+    command: crates givevirtualkey bosses {player} {amount}
+    amount: 10
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      amount: 10
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  # ── JACKPOT ─────────────────────────────────────────────────────── 0,01%
+  caixa-boosters:
+    type: COMMAND
+    chance: 0.006
+    display: '&aCaixa Booster'
+    command: caixas give boosters {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&aCaixa Booster'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-caixas:
+    type: COMMAND
+    chance: 0.004
+    display: '&dCaixa Caixas'
+    command: caixas give caixas {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      glow: true
+      display: '&dCaixa Caixas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
