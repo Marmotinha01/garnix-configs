@@ -8,7 +8,7 @@ shop: false
 delay: 10s
 
 translated: Sementes
-display: '&b&l{translated}'
+display: '&5{translated}'
 
 texture: "66963f79e5f01536d04be18c99330cdacdee91b3232baebe58baca05f4640d1a"
 
@@ -30,14 +30,14 @@ fuels:
 machine-item:
   glow: true
   texture: "66963f79e5f01536d04be18c99330cdacdee91b3232baebe58baca05f4640d1a"
-  display: '&b&lMáquina de {translated}'
+  display: '&5Máquina de {translated}'
   lore:
-  - '&7Produz sozinha dentro'
-  - '&7do seu terreno.'
+  - '&7Rende drops sozinha no'
+  - '&7terreno, dia e noite.'
   - ''
-  - '&8 ▪ &fQuantia: &b{amount} '
+  - '&8 ▪ &fQuantia: &5{amount} '
   - ''
-  - '&bColoque no seu terreno.'
+  - '&5Coloque no seu terreno.'
 
 # Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
 costs: {}

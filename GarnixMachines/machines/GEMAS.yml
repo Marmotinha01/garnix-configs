@@ -8,7 +8,7 @@ shop: false
 delay: 10s
 
 translated: Gemas
-display: '&b&l{translated}'
+display: '&d{translated}'
 
 texture: "19ecbdcb554123fa4d31876538bc7fb247494aea325bd26595694505aebd10ed"
 
@@ -30,14 +30,14 @@ fuels:
 machine-item:
   glow: true
   texture: "19ecbdcb554123fa4d31876538bc7fb247494aea325bd26595694505aebd10ed"
-  display: '&b&lMáquina de {translated}'
+  display: '&dMáquina de {translated}'
   lore:
-  - '&7Produz sozinha dentro'
-  - '&7do seu terreno.'
+  - '&7Rende drops sozinha no'
+  - '&7terreno, dia e noite.'
   - ''
-  - '&8 ▪ &fQuantia: &b{amount} '
+  - '&8 ▪ &fQuantia: &d{amount} '
   - ''
-  - '&bColoque no seu terreno.'
+  - '&dColoque no seu terreno.'
 
 # Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
 costs: {}

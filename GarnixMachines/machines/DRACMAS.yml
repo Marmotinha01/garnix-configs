@@ -8,7 +8,7 @@ shop: false
 delay: 10s
 
 translated: Dracmas
-display: '&b&l{translated}'
+display: '&e{translated}'
 
 texture: "c3d14561bbd063f70424a8afcc37bfe9c74562ea36f7bfa3f23206830c64faf1"
 
@@ -30,14 +30,14 @@ fuels:
 machine-item:
   glow: true
   texture: "c3d14561bbd063f70424a8afcc37bfe9c74562ea36f7bfa3f23206830c64faf1"
-  display: '&b&lMáquina de {translated}'
+  display: '&eMáquina de {translated}'
   lore:
-  - '&7Produz sozinha dentro'
-  - '&7do seu terreno.'
+  - '&7Rende drops sozinha no'
+  - '&7terreno, dia e noite.'
   - ''
-  - '&8 ▪ &fQuantia: &b{amount} '
+  - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&bColoque no seu terreno.'
+  - '&eColoque no seu terreno.'
 
 # Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
 costs: {}

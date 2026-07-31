@@ -8,7 +8,7 @@ shop: false
 delay: 432s
 
 translated: Cash
-display: '&b&l{translated}'
+display: '&6{translated}'
 
 texture: "c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071"
 
@@ -30,14 +30,14 @@ fuels:
 machine-item:
   glow: true
   texture: "c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071"
-  display: '&b&lMáquina de {translated}'
+  display: '&6Máquina de {translated}'
   lore:
-  - '&7Produz sozinha dentro'
-  - '&7do seu terreno.'
+  - '&7Rende drops sozinha no'
+  - '&7terreno, dia e noite.'
   - ''
-  - '&8 ▪ &fQuantia: &b{amount} '
+  - '&8 ▪ &fQuantia: &6{amount} '
   - ''
-  - '&bColoque no seu terreno.'
+  - '&6Coloque no seu terreno.'
 
 # Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
 costs: {}

@@ -189,20 +189,20 @@ rewards:
   jackpot:
     type: COMMAND
     chance: 0.05
-    display: '&b&lMáquina de Cash'
-    command: maquina give {player} CASH
+    display: '&6Máquina de Cash'
+    command: maquina give {player} cash
     amount: 1
     icon:
-      texture: 42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c
+      texture: c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071
       glow: true
-      display: '&b&lMáquina de {translated}'
+      display: '&6Máquina de Cash'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - '&fQuantia: &b500 '
+      - '&fQuantia: &61 '
       - ''
-      - '&bColoque no seu terreno.'
+      - '&6Coloque no seu terreno.'
 
   lim-armazem:
     type: COMMAND

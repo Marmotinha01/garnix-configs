@@ -36,8 +36,8 @@ machine-item:
   data: 10
   display: '&aMáquina de {translated}'
   lore:
-  - '&7Produz sozinha dentro'
-  - '&7do seu terreno.'
+  - '&7Rende drops sozinha no'
+  - '&7terreno, dia e noite.'
   - ''
   - '&8 ▪ &fQuantia: &7{amount} '
   - ''

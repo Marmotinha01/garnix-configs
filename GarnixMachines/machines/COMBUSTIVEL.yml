@@ -8,7 +8,7 @@ shop: false
 delay: 60s
 
 translated: Combustível
-display: '&b&l{translated}'
+display: '&8{translated}'
 
 texture: "150c11b7c9b9070034f44721c6ea9d1b7775283014979f2d8126bb5a1765188e"
 
@@ -30,14 +30,14 @@ fuels:
 machine-item:
   glow: true
   texture: "150c11b7c9b9070034f44721c6ea9d1b7775283014979f2d8126bb5a1765188e"
-  display: '&b&lMáquina de {translated}'
+  display: '&8Máquina de {translated}'
   lore:
-  - '&7Produz sozinha dentro'
-  - '&7do seu terreno.'
+  - '&7Rende drops sozinha no'
+  - '&7terreno, dia e noite.'
   - ''
-  - '&8 ▪ &fQuantia: &b{amount} '
+  - '&8 ▪ &fQuantia: &8{amount} '
   - ''
-  - '&bColoque no seu terreno.'
+  - '&8Coloque no seu terreno.'
 
 # Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
 costs: {}

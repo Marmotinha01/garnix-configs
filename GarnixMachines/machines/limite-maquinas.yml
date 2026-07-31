@@ -11,8 +11,8 @@ shop: false
 # as duas recebe o mesmo 1+1 por hora de antes — nada mudou na economia.
 delay: 3600s
 
-translated: Limite de Máquinas
-display: '&b&l{translated}'
+translated: L. de Máquinas
+display: '&9{translated}'
 
 texture: "93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f"
 
@@ -34,14 +34,14 @@ fuels:
 machine-item:
   glow: true
   texture: "93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f"
-  display: '&b&lMáquina de {translated}'
+  display: '&9Máquina de {translated}'
   lore:
-  - '&7Produz sozinha dentro'
-  - '&7do seu terreno.'
+  - '&7Rende drops sozinha no'
+  - '&7terreno, dia e noite.'
   - ''
-  - '&8 ▪ &fQuantia: &b{amount} '
+  - '&8 ▪ &fQuantia: &9{amount} '
   - ''
-  - '&bColoque no seu terreno.'
+  - '&9Coloque no seu terreno.'
 
 # Sem `costs`: a máquina não é comprável em coins. A rota é loot ou site.
 costs: {}

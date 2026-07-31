@@ -22,137 +22,138 @@ box-item:
 #
 # ⚠️ So entram as maquinas com `shop: false` em GarnixMachines/machines —
 # as que NAO sao compraveis na loja de maquinas. Quem esta na loja tem preco
-# em coins e nao precisa de rota de loot; estas sete so saem daqui, do site
+# em coins e nao precisa de rota de loot; estas oito so saem daqui, do site
 # e da caixa garnix.
 #
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve uma maquina. O que
-# separa as sete e o valor — moeda secundaria em baixo, Cash e Limite no topo.
+# separa as oito e o valor — moeda secundaria em baixo, Cash e os dois
+# limites no topo.
 rewards:
 
   sementes:
     type: COMMAND
     chance: 20
-    display: '&b&lMáquina de Sementes'
-    command: maquina give {player} SEMENTES
+    display: '&5Máquina de Sementes'
+    command: maquina give {player} sementes
     amount: 1
     icon:
       texture: 66963f79e5f01536d04be18c99330cdacdee91b3232baebe58baca05f4640d1a
       glow: true
-      display: '&b&lMáquina de Sementes'
+      display: '&5Máquina de Sementes'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - '&bColoque no seu terreno.'
+      - '&5Coloque no seu terreno.'
 
   corais:
     type: COMMAND
     chance: 20
-    display: '&b&lMáquina de Corais'
-    command: maquina give {player} CORAIS
+    display: '&3Máquina de Corais'
+    command: maquina give {player} corais
     amount: 1
     icon:
       texture: e6799bfaa3a2c63ad85dd378e66d57d9a97a3f86d0d9f683c498632f4f5c
       glow: true
-      display: '&b&lMáquina de Corais'
+      display: '&3Máquina de Corais'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - '&bColoque no seu terreno.'
+      - '&3Coloque no seu terreno.'
 
   gemas:
     type: COMMAND
     chance: 20
-    display: '&b&lMáquina de Gemas'
-    command: maquina give {player} GEMAS
+    display: '&dMáquina de Gemas'
+    command: maquina give {player} gemas
     amount: 1
     icon:
       texture: 19ecbdcb554123fa4d31876538bc7fb247494aea325bd26595694505aebd10ed
       glow: true
-      display: '&b&lMáquina de Gemas'
+      display: '&dMáquina de Gemas'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - '&bColoque no seu terreno.'
+      - '&dColoque no seu terreno.'
 
   dracmas:
     type: COMMAND
     chance: 15
-    display: '&b&lMáquina de Dracmas'
-    command: maquina give {player} DRACMAS
+    display: '&eMáquina de Dracmas'
+    command: maquina give {player} dracmas
     amount: 1
     icon:
       texture: c3d14561bbd063f70424a8afcc37bfe9c74562ea36f7bfa3f23206830c64faf1
       glow: true
-      display: '&b&lMáquina de Dracmas'
+      display: '&eMáquina de Dracmas'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - '&bColoque no seu terreno.'
+      - '&eColoque no seu terreno.'
 
   combustivel:
     type: COMMAND
     chance: 12
-    display: '&b&lMáquina de Combustível'
-    command: maquina give {player} COMBUSTIVEL
+    display: '&8Máquina de Combustível'
+    command: maquina give {player} combustivel
     amount: 1
     icon:
       texture: 150c11b7c9b9070034f44721c6ea9d1b7775283014979f2d8126bb5a1765188e
       glow: true
-      display: '&b&lMáquina de Combustível'
+      display: '&8Máquina de Combustível'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - '&bColoque no seu terreno.'
+      - '&8Coloque no seu terreno.'
 
   cash:
     type: COMMAND
     chance: 8
-    display: '&b&lMáquina de Cash'
-    command: maquina give {player} CASH
+    display: '&6Máquina de Cash'
+    command: maquina give {player} cash
     amount: 1
     icon:
       texture: c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071
       glow: true
-      display: '&b&lMáquina de Cash'
+      display: '&6Máquina de Cash'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - '&bColoque no seu terreno.'
+      - '&6Coloque no seu terreno.'
 
   limite-spawners:
     type: COMMAND
     chance: 2.5
-    display: '&b&lMáquina de Limite de Spawners'
-    command: maquina give {player} LIMITE-SPAWNERS
+    display: '&bMáquina de L. de Spawners'
+    command: maquina give {player} limite-spawners
     amount: 1
     icon:
       texture: a61b98d8934900a08ab7c0d60f3476c569bf7ff637196dce644e8cc4b7ba325a
       glow: true
-      display: '&b&lMáquina de Limite de Spawners'
+      display: '&bMáquina de L. de Spawners'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
       - '&bColoque no seu terreno.'
 
   limite-maquinas:
     type: COMMAND
     chance: 2.5
-    display: '&b&lMáquina de Limite de Máquinas'
-    command: maquina give {player} LIMITE-MAQUINAS
+    display: '&9Máquina de L. de Máquinas'
+    command: maquina give {player} limite-maquinas
     amount: 1
     icon:
       texture: 93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f
       glow: true
-      display: '&b&lMáquina de Limite de Máquinas'
+      display: '&9Máquina de L. de Máquinas'
       lore:
-      - '&7Produz sozinha dentro'
-      - '&7do seu terreno.'
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - '&bColoque no seu terreno.'
+      - '&9Coloque no seu terreno.'
