@@ -26,12 +26,12 @@ shop-icon:
   - '&aClique para acessar.'
 
 # Lore das runas que o jogador possui (clicável).
-# Placeholders: {amount}, {display}.
+# Placeholders: {amount}, {display}, {color} = cor da própria runa.
 withdraw-lore:
 - ''
-- '&8 ▪ &fArmazenados: &ex{amount} '
+- '&8 ▪ &fArmazenadas: &ex{amount} '
 - ''
-- '&aClique para retirar.'
+- '{color}Clique para retirar.'
 
 # Lore das runas que o jogador ainda não possui.
 locked-lore:

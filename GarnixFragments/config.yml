@@ -1,9 +1,10 @@
 # Linhas extras na lore do item físico da runa.
-# Placeholders: {amount} = runas no item, {display} = nome.
+# Placeholders: {amount} = runas no item, {display} = nome,
+#               {color} = cor da própria runa (&4 na Sagrada, &2 na Eterna...).
 fragment-lore:
 - ''
 - '&8 ▪ &fQuantia: &e{amount} &7runa(s) '
 - ''
-- '&aOpções de uso:'
+- '{color}Opções de uso:'
 - '&fBotão direito &8➟ &7Ativar todos'
 - '&fBotão dir. + SHIFT &8➟ &7Juntar'

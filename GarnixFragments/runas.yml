@@ -20,7 +20,8 @@ runas:
       texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       display: '&4Runa Sagrada'
       lore:
-      - '&8Runa'
+      - '&7Junte e troque na loja'
+      - '&7por itens exclusivos.'
 
   eterna:
     display: '&2Runa Eterna'
@@ -28,7 +29,8 @@ runas:
       texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
       display: '&2Runa Eterna'
       lore:
-      - '&8Runa'
+      - '&7Junte e troque na loja'
+      - '&7por itens exclusivos.'
 
   divina:
     display: '&fRuna Divina'
@@ -36,7 +38,8 @@ runas:
       texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
       display: '&fRuna Divina'
       lore:
-      - '&8Runa'
+      - '&7Junte e troque na loja'
+      - '&7por itens exclusivos.'
 
   primal:
     display: '&3Runa Primal'
@@ -44,4 +47,5 @@ runas:
       texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
       display: '&3Runa Primal'
       lore:
-      - '&8Runa'
+      - '&7Junte e troque na loja'
+      - '&7por itens exclusivos.'
