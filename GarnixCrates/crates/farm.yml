@@ -176,9 +176,30 @@ rewards:
       - '&7ao longo da sua jornada.'
 
   # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
-  booster-2x:
+  booster-sementes-2x:
     type: COMMAND
-    chance: 2.5
+    chance: 1.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} sementes 2 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &5Sementes '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  booster-coins-2x:
+    type: COMMAND
+    chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 5m
     amount: 1

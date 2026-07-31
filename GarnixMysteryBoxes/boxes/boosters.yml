@@ -1,0 +1,1639 @@
+# O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
+# segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
+
+# Slot que esta caixa ocupa no menu /caixas (omita para não aparecer na lista).
+slot: 40
+
+box-item:
+  material: TRAPPED_CHEST
+  glow: true
+  display: '&aCaixa Booster'
+  lore:
+  - '&7Abra e descubra o que a sorte'
+  - '&7guardou para você lá dentro.'
+  - ''
+  - '&aOpções de uso:'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
+
+# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# 'chance' é o peso do sorteio (não precisa somar 100).
+#
+# ⚠️ 15 boosters × 5 variações = 75 premios. Os 15 sao TODOS os providers de
+# booster do servidor: mineracao (coins·gemas·xp·both), fazenda
+# (coins·sementes·xp·both), pesca (corais·xp·both), maquinas (drops),
+# spawners (drops·heads) e armazem (venda de cactos).
+#
+# ⚠️ Peso por variacao, igual para os 15: 2x 15m = 2 · 2x 30m = 1,5 ·
+# 2x 1h = 1 · 3x 5m = 1 · 3x 10m = 0,5. Soma 6 por provider e 90 no total,
+# entao um booster especifico sai em peso/90 (o 2x 15m da mineracao = 2,2%).
+# O 3x 10m e o mais raro de cada linha, e os 2x curtos sao o recheio.
+#
+# ⚠️ Esta caixa nao tem `azar`: toda abertura devolve um booster.
+rewards:
+
+  # ── Booster de Mineração — Coins
+  mina-coins-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} coins 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-coins-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} coins 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-coins-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} coins 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-coins-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} coins 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-coins-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} coins 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Mineração — Gemas
+  mina-gemas-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} gemas 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-gemas-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} gemas 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-gemas-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} gemas 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-gemas-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} gemas 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &dGemas '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-gemas-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} gemas 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &dGemas '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Mineração — XP
+  mina-xp-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} xp 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-xp-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} xp 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-xp-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} xp 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-xp-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} xp 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-xp-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} xp 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Mineração — XP + Coins + Gemas
+  mina-both-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-both-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-both-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-both-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  mina-both-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Fazenda — Coins
+  fazenda-coins-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} coins 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-coins-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} coins 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-coins-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} coins 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-coins-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} coins 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-coins-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} coins 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Fazenda — Sementes
+  fazenda-sementes-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} sementes 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &5Sementes '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-sementes-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} sementes 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &5Sementes '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-sementes-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} sementes 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &5Sementes '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-sementes-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} sementes 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &5Sementes '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-sementes-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} sementes 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &5Sementes '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Fazenda — XP
+  fazenda-xp-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} xp 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-xp-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} xp 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-xp-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} xp 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-xp-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} xp 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-xp-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} xp 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Fazenda — XP + Coins + Sementes
+  fazenda-both-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} both 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-both-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} both 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-both-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} both 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-both-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} both 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  fazenda-both-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&eBooster de Fazenda'
+    command: fazenda givebooster {player} both 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8227
+      display: '&eBooster de Fazenda'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Pesca — Corais
+  pesca-corais-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} corais 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-corais-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} corais 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-corais-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} corais 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-corais-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} corais 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-corais-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} corais 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &3Corais '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Pesca — XP
+  pesca-xp-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} xp 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-xp-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} xp 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-xp-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} xp 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-xp-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} xp 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-xp-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} xp 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Pesca — XP + Corais
+  pesca-both-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} both 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &3Corais '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-both-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} both 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &3Corais '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-both-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} both 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &3Corais '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-both-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} both 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &3Corais '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  pesca-both-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&bBooster de Pesca'
+    command: pesca givebooster {player} both 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8203
+      display: '&bBooster de Pesca'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &3Corais '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Máquina — Drops
+  maquina-drops-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&aBooster de Máquina'
+    command: maquina givebooster {player} 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8237
+      display: '&aBooster de Máquina'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  maquina-drops-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&aBooster de Máquina'
+    command: maquina givebooster {player} 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8237
+      display: '&aBooster de Máquina'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  maquina-drops-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&aBooster de Máquina'
+    command: maquina givebooster {player} 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8237
+      display: '&aBooster de Máquina'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  maquina-drops-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&aBooster de Máquina'
+    command: maquina givebooster {player} 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8237
+      display: '&aBooster de Máquina'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  maquina-drops-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&aBooster de Máquina'
+    command: maquina givebooster {player} 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8237
+      display: '&aBooster de Máquina'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Spawner — Drops
+  spawner-drops-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} drops 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  spawner-drops-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} drops 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  spawner-drops-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} drops 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  spawner-drops-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} drops 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  spawner-drops-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} drops 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aDrops '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Spawner — Heads
+  spawner-heads-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} heads 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aHeads '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  spawner-heads-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} heads 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aHeads '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  spawner-heads-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} heads 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aHeads '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  spawner-heads-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} heads 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aHeads '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  spawner-heads-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&aBooster de Spawner'
+    command: spawner givebooster {player} heads 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8230
+      display: '&aBooster de Spawner'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aHeads '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+
+  # ── Booster de Armazém — Venda de Cactos
+  armazem-venda-2x-15m:
+    type: COMMAND
+    chance: 2
+    display: '&aBooster de Armazém'
+    command: armazem givebooster {player} 2 15m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8260
+      display: '&aBooster de Armazém'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aVenda de Cactos '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  armazem-venda-2x-30m:
+    type: COMMAND
+    chance: 1.5
+    display: '&aBooster de Armazém'
+    command: armazem givebooster {player} 2 30m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8260
+      display: '&aBooster de Armazém'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aVenda de Cactos '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  armazem-venda-2x-1h:
+    type: COMMAND
+    chance: 1
+    display: '&aBooster de Armazém'
+    command: armazem givebooster {player} 2 1h
+    amount: 1
+    icon:
+      material: POTION
+      data: 8260
+      display: '&aBooster de Armazém'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aVenda de Cactos '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &71h '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  armazem-venda-3x-5m:
+    type: COMMAND
+    chance: 1
+    display: '&aBooster de Armazém'
+    command: armazem givebooster {player} 3 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8260
+      display: '&aBooster de Armazém'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aVenda de Cactos '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  armazem-venda-3x-10m:
+    type: COMMAND
+    chance: 0.5
+    display: '&aBooster de Armazém'
+    command: armazem givebooster {player} 3 10m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8260
+      display: '&aBooster de Armazém'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &aVenda de Cactos '
+      - ' &8▪ &fBônus: &a3x '
+      - ' &8▪ &fDuração: &710m '
+      flags:
+      - HIDE_POTION_EFFECTS
+

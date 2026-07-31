@@ -74,16 +74,6 @@ rewards:
     amount: 500
     icon:
       material: COAL
-      display: '&eCombustível &7(500L)'
-
-  combustivel:
-    type: COMMAND
-    chance: 10
-    display: '&eCombustível'
-    command: maquina givefuel {player} default {amount}
-    amount: 500
-    icon:
-      material: COAL
       display: '&eCombustível'
       lore:
       - '&7Mantém a sua máquina'
@@ -186,9 +176,30 @@ rewards:
       - '&7ao longo da sua jornada.'
 
   # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
-  booster-2x:
+  booster-gemas-2x:
     type: COMMAND
-    chance: 2.5
+    chance: 1.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} gemas 2 5m
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  booster-coins-2x:
+    type: COMMAND
+    chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} coins 2 5m
     amount: 1
