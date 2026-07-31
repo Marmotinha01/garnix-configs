@@ -69,19 +69,6 @@ rewards:
       material: COAL
       display: '&eCombustível &7(500L)'
 
-  runa:
-    type: COMMAND
-    chance: 3
-    display: '&2Runa Eterna'
-    command: runas givevirtual {player} eterna {amount}
-    amount: 5
-    icon:
-      texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
-      glow: true
-      display: '&2Runa Eterna'
-      lore:
-      - '&8Runa'
-
   secundaria-lote:
     type: CURRENCY
     chance: 3
