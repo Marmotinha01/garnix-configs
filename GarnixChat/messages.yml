@@ -77,6 +77,9 @@ tags:
       &9Jogador com mais limite de máquina do servidor.
       &7
       &fM. Limite: &9∞%currencies_maquinaslimite%
+  # Sem hover de proposito: o numero ja esta na tag, nao ha o que revelar.
+  prestige:
+    text: '&b[★%rankup_prestige%]'
   rank:
     text: '%rankup_rank_tag_chat%'
     hover: '&fPrestígio: &b★%rankup_prestige%'
@@ -149,11 +152,11 @@ tags:
 
 # ── Formato dos canais ── tokens: {player}, {message}, {lp_prefix}, {lp_suffix}, %papi%
 global:
-  format: '&8[&7&lG&8] {clan} {lp_suffix} {rank} {cash} {myth} {coins} {dracmas} {gemas} {sementes} {corais} {slimite} {mlimite} {sumo} {fight} {parkour} {corrida} {spleef} {splegg} {killer} {destemido} {mvp} {tnt-run} {sniper} {paintball} {arqueiros} {batata-quente} &f{nick}&7: &7{message}'
+  format: '&8[&7&lG&8] {clan} {lp_suffix} {prestige} {rank} {cash} {myth} {coins} {dracmas} {gemas} {sementes} {corais} {slimite} {mlimite} {sumo} {fight} {parkour} {corrida} {spleef} {splegg} {killer} {destemido} {mvp} {tnt-run} {sniper} {paintball} {arqueiros} {batata-quente} &f{nick}&7: &7{message}'
 
 local:
   # tokens extras: {message}
-  format: '&8[&e&lL&8] {clan} {lp_suffix} {rank} {cash} {myth} {coins} {dracmas} {gemas} {sementes} {corais} {slimite} {mlimite} {sumo} {fight} {parkour} {corrida} {spleef} {splegg} {killer} {destemido} {mvp} {tnt-run} {sniper} {paintball} {arqueiros} {batata-quente} &f{nick}&7: &e{message}'
+  format: '&8[&e&lL&8] {clan} {lp_suffix} {prestige} {rank} {cash} {myth} {coins} {dracmas} {gemas} {sementes} {corais} {slimite} {mlimite} {sumo} {fight} {parkour} {corrida} {spleef} {splegg} {killer} {destemido} {mvp} {tnt-run} {sniper} {paintball} {arqueiros} {batata-quente} &f{nick}&7: &e{message}'
   # Enviado quando não há nenhum outro jogador válido no raio.
   alone: '&cVocê está sozinho... ninguém por perto para conversar.'
 

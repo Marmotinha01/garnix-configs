@@ -5,7 +5,7 @@
 # escrevesse.
 back-shop-command: shopcaixas
 
-title: Recompensas — {box}
+title: '{box}'
 
 shape:
 - XXXXXXXXX

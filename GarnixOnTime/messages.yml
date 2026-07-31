@@ -4,7 +4,10 @@ command:
   never-joined: '&cO jogador &f{player} &7nunca entrou no servidor.'
 
 milestone:
-  received: '&aVocê atingiu &f{reward} &7(&e{time}&7). As recompensas foram enviadas ao correio. &7(/correio)'
+  # {time} = o tempo exigido pelo marco, ja formatado ("3h", "5d").
+  # {reward} tambem esta disponivel: e o display do marco, por extenso e ja
+  # colorido ("&a3 Horas Online") — nao use os dois juntos, e a mesma informacao.
+  received: '&aRecompensa desbloqueada por ficar &f{time} &aonline! &7(/correio)'
 
 admin:
   reloaded: '&aConfigurações recarregadas com sucesso.'

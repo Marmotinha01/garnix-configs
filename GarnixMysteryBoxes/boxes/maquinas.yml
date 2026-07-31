@@ -43,8 +43,6 @@ rewards:
       lore:
       - '&7Rende drops sozinha no'
       - '&7terreno, dia e noite.'
-      - ''
-      - '&5Coloque no seu terreno.'
 
   corais:
     type: COMMAND
@@ -59,8 +57,6 @@ rewards:
       lore:
       - '&7Rende drops sozinha no'
       - '&7terreno, dia e noite.'
-      - ''
-      - '&3Coloque no seu terreno.'
 
   gemas:
     type: COMMAND
@@ -75,8 +71,6 @@ rewards:
       lore:
       - '&7Rende drops sozinha no'
       - '&7terreno, dia e noite.'
-      - ''
-      - '&dColoque no seu terreno.'
 
   dracmas:
     type: COMMAND
@@ -91,8 +85,6 @@ rewards:
       lore:
       - '&7Rende drops sozinha no'
       - '&7terreno, dia e noite.'
-      - ''
-      - '&eColoque no seu terreno.'
 
   combustivel:
     type: COMMAND
@@ -107,8 +99,6 @@ rewards:
       lore:
       - '&7Rende drops sozinha no'
       - '&7terreno, dia e noite.'
-      - ''
-      - '&8Coloque no seu terreno.'
 
   cash:
     type: COMMAND
@@ -123,8 +113,6 @@ rewards:
       lore:
       - '&7Rende drops sozinha no'
       - '&7terreno, dia e noite.'
-      - ''
-      - '&6Coloque no seu terreno.'
 
   limite-spawners:
     type: COMMAND
@@ -139,8 +127,6 @@ rewards:
       lore:
       - '&7Rende drops sozinha no'
       - '&7terreno, dia e noite.'
-      - ''
-      - '&bColoque no seu terreno.'
 
   limite-maquinas:
     type: COMMAND
@@ -155,5 +141,3 @@ rewards:
       lore:
       - '&7Rende drops sozinha no'
       - '&7terreno, dia e noite.'
-      - ''
-      - '&9Coloque no seu terreno.'
