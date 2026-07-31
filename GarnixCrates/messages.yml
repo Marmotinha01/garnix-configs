@@ -16,16 +16,16 @@ keys:
   open-delay: '&cAguarde para abrir outra caixa.'
   need-in-hand: '&cVocê precisa estar segurando uma chave.'
   wrong-crate: '&cEssa chave não pode abrir esta caixa.'
-  stored-single: '&aVocê armazenou &f1x {key} &ano seu &f/crates&a.'
-  stored-multiple: '&aVocê armazenou &fx{amount} {key} &ano seu &f/crates&a.'
+  stored-single: '&aVocê armazenou &fx&l1 {key} &ano &7/crates&a.'
+  stored-multiple: '&aVocê armazenou &fx&l{amount} {key} &ano &7/crates&a.'
 
 opened:
   one:
-  - '&aVocê abriu &f1 caixa&a. Recompensas no correio. &7(/correio)'
+  - '&aVocê abriu &fx&l1 {key}&a! &7(/correio)'
   many:
-  - '&aVocê abriu &fx{amount} caixas&a. Recompensas no correio. &7(/correio)'
+  - '&aVocê abriu &fx&l{amount} {key}&a! &7(/correio)'
   with-key:
-  - '&aVocê abriu &fx{amount} {key}&a. Recompensas no correio. &7(/correio)'
+  - '&aVocê abriu &fx&l{amount} {key}&a! &7(/correio)'
 
 conversations:
   cancelled: '&cOperação cancelada.'
