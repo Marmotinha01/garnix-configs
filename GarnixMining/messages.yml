@@ -178,7 +178,7 @@ admin:
     givebooster: /mina givebooster <jogador> <tipo> <multiplicador> <duração> [quantidade]
     giveskin: /mina giveskin <jogador> <skinId> [quantidade]
     giveforge: /mina giveforge <jogador> <quantidade>
-    givearmor: /mina givearmor <jogador> <armorId|coleção> [quantidade]
+    givearmor: /mina givearmor <jogador> <armadura|coleção> [quantidade]
     givebomb: /mina givebomb <jogador> <bombId> [quantidade]
     givedrill: /mina givedrill <jogador> [quantidade]
     giveslot: /mina giveslot <jogador> [quantidade]
@@ -208,7 +208,7 @@ admin:
   skin-given: '&aSkin &f{skin} &adada para &f{player}&a.'
   forge-given: '&aForja de skins &f(x{amount}) &adada para &f{player}&a.'
   armor-not-found: '&cArmadura/coleção não encontrada: &f{armor}'
-  armor-given: '&aArmadura &f{armor} &adada para &f{player}&a.'
+  armor-given: '&aArmadura {armor} &adada para &f{player}&a.'
   collection-given: '&aColeção &f{collection} &adada para &f{player}&a.'
   bomb-not-found: '&cBomba não encontrada: &f{bomb}'
   bomb-given: '&aBomba &f{bomb} &adada para &f{player}&a.'
