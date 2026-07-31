@@ -142,9 +142,12 @@ Espelha a mineração. `booster-icon`, `forge-icon`, 9 skins (`pedra`→`marfim`
 | Item | Efeito | Rota hoje | **Rota proposta** |
 |---|---|---|---|
 `boss-icon` ×3 (→5, →8) | invocável, **empilhável (`boss-stack-radius: 5`)** | ❌ nenhuma, nem admin documentado | **chave de boss** (~5% das aberturas de crate) → ~250–300/dia |
-`swords.default` (Matadora Inicial) | 500 de dano | ✅ `/matadora` grátis | manter |
-`swords.sombria` | 750 | ❌ só admin | dracmas + crate de boss |
-`swords.ancestral` | 1500 | ❌ | jackpot de crate de boss |
+`swords.default` (Matadora Inicial) | 250 de dano | ✅ `/matadora` grátis | manter |
+**`swords.bruta`** 🆕 | 500 | ❌ | **crate de boss, faixa rara** |
+`swords.sombria` | 750 | ❌ só admin | dracmas + **jackpot de crate de boss** |
+`swords.ancestral` | 1500 | ❌ | **a definir** (saiu do jackpot da crate) |
+**`swords.runica`** 🆕 | 4000 | ❌ | **a definir** |
+**`swords.abissal`** 🆕 | 9000 | ❌ | **a definir** |
 **`swords.hk`** | **hit-kill — mata qualquer boss em 1 golpe** | ❌ | **site (faixa D)** + jackpot | **Mítico −** |
 `kill-stack-item` | sobe o nível da matadora, nível ilimitado no comando | ❌ | crate de boss, faixa "Bom" |
 

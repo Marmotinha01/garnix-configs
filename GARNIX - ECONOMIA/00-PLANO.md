@@ -464,7 +464,7 @@ Existem **três sistemas de livro**, todos com a mesma mecânica (item de loot q
 | Sistema | Arquivo | Encantes | Efeito econômico |
 |---|---|---|---|
 **Espada de spawner** | `GarnixSpawners/sword.yml` | `massacre` 1–5 (raio, `value: 2/4/8/16/-1`, sendo −1 = ilimitado), **`pilhagem` 1–3 (`1,25 / 1,5 / 2,0` multiplicador de drop)**, `ceifador` 1–3 (instakill 25/50/75%) | `pilhagem` é multiplicador direto na única via sem teto físico. `massacre` + `ceifador` são throughput de kill → **cabeças**, que é a moeda do rankup |
-**Espada de boss** | `GarnixBosses/swords.yml` + `config.yml` `kill-stack-item` | `default` 500 → `sombria` 750 → `ancestral` 1500 → `hk` (**hit-kill**) | controla a taxa de faucet dos bosses. `hk` trivializa os 3 bosses (25k/50k/75k HP) e transforma boss em renda previsível |
+**Espada de boss** | `GarnixBosses/swords.yml` + `config.yml` `kill-stack-item` | `default` 250 → `bruta` 500 → `sombria` 750 → `ancestral` 1500 → `runica` 4000 → `abissal` 9000 → `hk` (**hit-kill**) | controla a taxa de faucet dos bosses. `hk` trivializa os 3 bosses (25k/50k/75k HP) e transforma boss em renda previsível |
 **Vara de pesca** | `GarnixFishing/enchants.yml` | `speed` 1–5 (segundos a menos no intervalo), `luck` 15/30/50/75/100% (peso de `rare`), `double` 5/10/18/28/40% | age sobre a via **mais estrangulada** (504 fisgadas/h). `speed` 5 leva o intervalo de 15s para 10s = **1,5× throughput**; `double` 40% = 1,4×. Juntos ~2,1× |
 
 ### Regras de projeto para os livros

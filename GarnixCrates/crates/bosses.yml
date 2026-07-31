@@ -88,18 +88,18 @@ rewards:
       lore:
       - '&fVida: &4❤75K'
 
-  matadora-sombria:
+  matadora-bruta:
     type: COMMAND
     chance: 0.1
-    display: '&5Matadora Sombria'
-    command: boss give sword {player} sombria
+    display: '&7Matadora Bruta'
+    command: boss give sword {player} bruta
     amount: 1
     icon:
-      material: IRON_SWORD
+      material: STONE_SWORD
       glow: true
-      display: '&5Matadora Sombria'
+      display: '&7Matadora Bruta'
       lore:
-      - '&fDano: &c750'
+      - '&fDano: &c500'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
   # ── RARO PLUS ──────────────────────────────────────────────────── 0,09%
@@ -132,15 +132,15 @@ rewards:
   jackpot:
     type: COMMAND
     chance: 0.001
-    display: '&bMatadora Ancestral'
-    command: boss give sword {player} ancestral
+    display: '&5Matadora Sombria'
+    command: boss give sword {player} sombria
     amount: 1
     icon:
-      material: DIAMOND_SWORD
+      material: IRON_SWORD
       glow: true
-      display: '&bMatadora Ancestral'
+      display: '&5Matadora Sombria'
       lore:
-      - '&fDano: &c1.500'
+      - '&fDano: &c750'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
   # ── AZAR ────────────────────────────────────────────────────────── 25%

@@ -1,5 +1,17 @@
 title: Caixas Misteriosas
-rows: 5
+
+# Menu paginado: os slots das caixas saem daqui ('.'), e a ORDEM sai do `weight`
+# de cada arquivo em boxes/ — peso menor primeiro (as piores), peso maior por
+# ultimo (as melhores). Caixa sem `weight` nao aparece nesta lista.
+#
+# '<' e '>' sao os botoes de pagina anterior/proxima; so aparecem quando ha
+# mais de uma pagina. Com 15 slots livres e 12 caixas, hoje e uma pagina so.
+shape:
+- XXXXXXXXX
+- XX.....XX
+- <X.....X>
+- XX.....XX
+- XXXXXXXXX
 
 box-lore:
 - ''

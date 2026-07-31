@@ -1,8 +1,9 @@
 # O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
 # segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
 
-# Slot que esta caixa ocupa no menu /caixas (omita para não aparecer na lista).
-slot: 33
+# Raridade desta caixa, usada para ordenar o menu /caixas: quanto MAIOR o peso,
+# mais rara e mais tarde ela aparece na lista (omita para não aparecer nela).
+weight: 70
 
 box-item:
   material: TRAPPED_CHEST

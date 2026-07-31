@@ -13,6 +13,20 @@ swords:
       - ''
       glow: true
   
+  bruta:
+    damage: 500
+    item:
+      material: STONE_SWORD
+      display: '&7Matadora Bruta'
+      lore:
+      - ''
+      - ' &8Informações: '
+      - '&8 ▪ &fDano: &c{damage} '
+      - '&8 ▪ &fKill-Stack: &4{kill_stack} '
+      - '&8 ▪ &fBosses abatidos: &7{kills} '
+      - ''
+      glow: true
+
   sombria:
     damage: 750
     item:
@@ -41,6 +55,34 @@ swords:
       - ''
       glow: true
   
+  runica:
+    damage: 4000
+    item:
+      material: DIAMOND_SWORD
+      display: '&6Matadora Rúnica'
+      lore:
+      - ''
+      - ' &8Informações: '
+      - '&8 ▪ &fDano: &c{damage} '
+      - '&8 ▪ &fKill-Stack: &4{kill_stack} '
+      - '&8 ▪ &fBosses abatidos: &7{kills} '
+      - ''
+      glow: true
+
+  abissal:
+    damage: 9000
+    item:
+      material: DIAMOND_SWORD
+      display: '&3Matadora Abissal'
+      lore:
+      - ''
+      - ' &8Informações: '
+      - '&8 ▪ &fDano: &c{damage} '
+      - '&8 ▪ &fKill-Stack: &4{kill_stack} '
+      - '&8 ▪ &fBosses abatidos: &7{kills} '
+      - ''
+      glow: true
+
   hk:
     hit-kill: true
     item:
