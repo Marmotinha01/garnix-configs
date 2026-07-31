@@ -2,3 +2,15 @@ debug: false
 
 # Ranking de crates abertas (reconstruído do banco neste intervalo, em minutos).
 ranking-refresh-minutes: 5
+# ── Placeholder de chaves guardadas ──
+# Alimenta o %crates_stored_<crate>% usado nos hologramas das caixas. O texto e
+# escolhido pela quantia: has-keys quando ele tem chave daquela crate, no-keys
+# quando nao tem. Tokens: {amount} = quantas ele tem · {keys-plural} = chave/chaves.
+#
+# Existe tambem o %crates_keys_<crate>%, que devolve so o numero cru.
+placeholder:
+  has-keys: '&f&l{amount} &f{keys-plural}!'
+  no-keys: '&cNada para abrir.'
+  # Concordancia do {keys-plural}: 1 usa o singular, qualquer outro numero o plural.
+  key-singular: 'chave'
+  key-plural: 'chaves'

@@ -5,6 +5,8 @@ hologram:
   lines:
   - '&e&lCAIXA MINERAÇAO'
   - ''
+  - '%crates_stored_mineracao%'
+  - ''
   - '&eOpções de uso:'
   - '&fBotão esquerdo &8➟ &7Preview'
   - '&fBotão direito &8➟ &7Abrir'
@@ -31,7 +33,8 @@ key-item:
   - '&7abrindo essa chave.'
   - ''
   - '&eOpções de uso:'
-  - '&fBotão direito &8➟ &7Abrir/Armazenar'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Armazenar'
 
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #

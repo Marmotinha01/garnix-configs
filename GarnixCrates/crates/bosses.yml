@@ -5,6 +5,8 @@ hologram:
   lines:
   - '&4&lCAIXA BOSSES'
   - ''
+  - '%crates_stored_bosses%'
+  - ''
   - '&4Opções de uso:'
   - '&fBotão esquerdo &8➟ &7Preview'
   - '&fBotão direito &8➟ &7Abrir'
@@ -18,8 +20,8 @@ crate-item:
   material: TRIPWIRE_HOOK
   display: '&4Chave Bosses'
   lore:
-      - '&7Consiga recompensas'
-      - '&7abrindo essa chave.'
+  - '&7Consiga recompensas'
+  - '&7abrindo essa chave.'
 
 # Item físico da chave (segurar e clicar com botão direito na crate abre).
 key-item:
@@ -31,7 +33,8 @@ key-item:
   - '&7abrindo essa chave.'
   - ''
   - '&4Opções de uso:'
-  - '&fBotão direito &8➟ &7Abrir/Armazenar'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Armazenar'
 
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #

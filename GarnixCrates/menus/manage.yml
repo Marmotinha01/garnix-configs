@@ -13,6 +13,11 @@ chance-lore:
 - ''
 - '&8 ▪ &fChance: &c{chance}% '
 
+# Sufixo exclusivo do azar. Sem bloco de filtro, a lore dele terminava colada na
+# linha da chance enquanto todas as outras fecham com uma linha em branco.
+bad-luck-lore:
+- ''
+
 filter-status:
   is-filtered:
   - ''
