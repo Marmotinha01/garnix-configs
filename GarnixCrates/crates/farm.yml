@@ -1,10 +1,9 @@
 location: world:83:60:-5
 
 hologram:
-  height: 2.3
+  height: 2.4
   lines:
   - '&a&lCAIXA FARM'
-  - ''
   - '%crates_stored_farm%'
   - ''
   - '&aOpções de uso:'

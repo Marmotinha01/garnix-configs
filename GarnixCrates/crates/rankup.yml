@@ -1,10 +1,9 @@
 location: world:83:60:5
 
 hologram:
-  height: 2.3
+  height: 2.4
   lines:
   - '&6&lCAIXA RankUP'
-  - ''
   - '%crates_stored_rankup%'
   - ''
   - '&6Opções de uso:'

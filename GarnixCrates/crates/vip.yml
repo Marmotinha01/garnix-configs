@@ -1,10 +1,9 @@
 location: world:81:60:7
 
 hologram:
-  height: 2.3
+  height: 2.4
   lines:
   - '&d&lCAIXA VIP'
-  - ''
   - '%crates_stored_vip%'
   - ''
   - '&dOpções de uso:'

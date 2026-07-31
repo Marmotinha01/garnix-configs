@@ -1,10 +1,9 @@
 location: world:84:60:-2
 
 hologram:
-  height: 2.3
+  height: 2.4
   lines:
   - '&e&lCAIXA MINERAÇAO'
-  - ''
   - '%crates_stored_mineracao%'
   - ''
   - '&eOpções de uso:'

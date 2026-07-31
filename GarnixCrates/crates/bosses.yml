@@ -1,10 +1,9 @@
 location: world:84:60:2
 
 hologram:
-  height: 2.3
+  height: 2.4
   lines:
   - '&4&lCAIXA BOSSES'
-  - ''
   - '%crates_stored_bosses%'
   - ''
   - '&4Opções de uso:'
