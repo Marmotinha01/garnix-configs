@@ -1,10 +1,10 @@
-material: CACTUS
-data: 0
+material: INK_SACK
+data: 2
 glow: true
 display: '&2Limite de Armazém'
 lore:
-- '&7Aumenta quantos cactos o'
-- '&7seu armazém comporta.'
+- '&7Aumente a capacidade de'
+- '&7estoque do seu terreno.'
 - ''
 - '&8 ▪ &fQuantia: &a{amount} '
 - ''

@@ -35,7 +35,7 @@ rewards:
       glow: true
       display: '&bLimite de Spawners'
       lore:
-      - '&7Aumenta quantos spawners'
-      - '&7você pode ter no terreno.'
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
       - ''
       - '&fQuantia: &b1 '

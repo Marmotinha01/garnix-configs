@@ -49,8 +49,8 @@ products:
       glow: true
       display: '&bLimite de Spawners'
       lore:
-      - '&7Aumenta quantos spawners'
-      - '&7você pode ter no terreno.'
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
       - ''
       - '&8 ▪ &fQuantia: &b1 '
 
@@ -64,8 +64,8 @@ products:
       glow: true
       display: '&bLimite de Spawners'
       lore:
-      - '&7Aumenta quantos spawners'
-      - '&7você pode ter no terreno.'
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
       - ''
       - '&8 ▪ &fQuantia: &b10 '
 
@@ -79,8 +79,8 @@ products:
       glow: true
       display: '&bLimite de Spawners'
       lore:
-      - '&7Aumenta quantos spawners'
-      - '&7você pode ter no terreno.'
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
       - ''
       - '&8 ▪ &fQuantia: &b100 '
 
@@ -95,8 +95,8 @@ products:
       glow: true
       display: '&9Limite de Máquinas'
       lore:
-      - '&7Aumenta quantas máquinas'
-      - '&7você pode ter no terreno.'
+      - '&7Aumente o seu poder de'
+      - '&7compra de máquinas.'
       - ''
       - '&8 ▪ &fQuantia: &91 '
 
@@ -110,8 +110,8 @@ products:
       glow: true
       display: '&9Limite de Máquinas'
       lore:
-      - '&7Aumenta quantas máquinas'
-      - '&7você pode ter no terreno.'
+      - '&7Aumente o seu poder de'
+      - '&7compra de máquinas.'
       - ''
       - '&8 ▪ &fQuantia: &910 '
 
@@ -125,8 +125,8 @@ products:
       glow: true
       display: '&9Limite de Máquinas'
       lore:
-      - '&7Aumenta quantas máquinas'
-      - '&7você pode ter no terreno.'
+      - '&7Aumente o seu poder de'
+      - '&7compra de máquinas.'
       - ''
       - '&8 ▪ &fQuantia: &9100 '
 
@@ -206,12 +206,12 @@ products:
     cost: 55000
     command: armazem givelimititem {player} 500 1
     icon:
-      material: CACTUS
-      data: 0
+      material: INK_SACK
+      data: 2
       glow: true
       display: '&2Limite de Armazém'
       lore:
-      - '&7Aumenta quantos cactos o'
-      - '&7seu armazém comporta.'
+      - '&7Aumente a capacidade de'
+      - '&7estoque do seu terreno.'
       - ''
       - '&8 ▪ &fQuantia: &a500 '
