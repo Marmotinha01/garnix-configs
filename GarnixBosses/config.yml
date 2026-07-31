@@ -10,7 +10,7 @@ ranking-size: 10
 # Cada plot tem no maximo 1 entidade por TIPO de boss, entao a contagem e
 # limitada por (jogadores x tipos), nao pelo volume de chaves. Com 250
 # jogadores e 5 bosses o teorico e 1.250 — o valor abaixo sai do teste L2.
-max-simultaneous: 400
+max-simultaneous: 0
 
 boss-stack-radius: 5
 
@@ -18,11 +18,13 @@ boss-nametag: '{display} §7x{stack}'
 
 kill-stack-item:
   material: written_book
-  display: '&4Kill-Stack +{level}'
+  display: '&4Livro de Kill-Stack'
   lore:
-  - '&7Aplique este livro na'
-  - '&7sua matadora e suba nível.'
+  - '&7Elimine mais bosses'
+  - '&7ao abater apenas um.'
   - ''
-  - '&8 ▪ &fComando: &f/matadora '
+  - '&8 ▪ &fNível: &c{level} '
   - ''
+  - '&4Arraste sobre uma'
+  - '&4matadora para aplicar.'
   glow: true

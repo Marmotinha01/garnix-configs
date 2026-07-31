@@ -58,14 +58,10 @@ rewards:
       texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
       display: '&cBoss Colosso'
       lore:
-      - '&7Invoque este boss dentro'
-      - '&7do seu próprio terreno.'
+      - '&7Consiga recompensas'
+      - '&7abatendo este boss.'
       - ''
-      - '&8 ▪ &fVida: &c❤{health} '
-      - '&8 ▪ &fStacks: &7x{stacks} '
-      - ''
-      - '&7Coloque-o em um terreno'
-      - '&7para começar a atacar.'
+      - '&8 ▪ &fVida: &c❤25K '
 
   # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
   boss-inferno:
@@ -78,14 +74,10 @@ rewards:
       texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
       display: '&6Boss Inferno'
       lore:
-      - '&7Invoque este boss dentro'
-      - '&7do seu próprio terreno.'
+      - '&7Consiga recompensas'
+      - '&7abatendo este boss.'
       - ''
-      - '&8 ▪ &fVida: &c❤{health} '
-      - '&8 ▪ &fStacks: &7x{stacks} '
-      - ''
-      - '&7Coloque-o em um terreno'
-      - '&7para começar a atacar.'
+      - '&8 ▪ &fVida: &c❤50K '
 
   # ── RARA ────────────────────────────────────────────────────────── 0,4%
   boss-arauto:
@@ -98,14 +90,10 @@ rewards:
       texture: 38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677
       display: '&dBoss Arauto'
       lore:
-      - '&7Invoque este boss dentro'
-      - '&7do seu próprio terreno.'
+      - '&7Consiga recompensas'
+      - '&7abatendo este boss.'
       - ''
-      - '&8 ▪ &fVida: &c❤{health} '
-      - '&8 ▪ &fStacks: &7x{stacks} '
-      - ''
-      - '&7Coloque-o em um terreno'
-      - '&7para começar a atacar.'
+      - '&8 ▪ &fVida: &c❤75K '
 
   matadora-sombria:
     type: COMMAND
@@ -118,11 +106,7 @@ rewards:
       glow: true
       display: '&5Matadora Sombria'
       lore:
-      - ''
-      - ' &8Informações: '
-      - '&8 ▪ &fDano: &e{damage} '
-      - '&8 ▪ &fKill-Stack: &e{kill_stack} '
-      - '&8 ▪ &fBosses abatidos: &e{kills} '
+      - '&fDano: &c750'
 
   # ── RARO PLUS ──────────────────────────────────────────────────── 0,09%
   boss-tita:
@@ -135,14 +119,10 @@ rewards:
       texture: efec3e24551726cb3d64cbd1604a1a9f8a1e11693722a8aad5109a1fffa8d43c
       display: '&5Boss Titã'
       lore:
-      - '&7Invoque este boss dentro'
-      - '&7do seu próprio terreno.'
+      - '&7Consiga recompensas'
+      - '&7abatendo este boss.'
       - ''
-      - '&8 ▪ &fVida: &c❤{health} '
-      - '&8 ▪ &fStacks: &7x{stacks} '
-      - ''
-      - '&7Coloque-o em um terreno'
-      - '&7para começar a atacar.'
+      - '&8 ▪ &fVida: &c❤150K '
 
   # ── RARÍSSIMA ─────────────────────────────────────────────────── 0,009%
   boss-devorador:
@@ -155,14 +135,10 @@ rewards:
       texture: ef93e9e1de7c1f721514968e4cd7c30082be02061a0e1ce91e67c3f0d70d5840
       display: '&4Boss Devorador'
       lore:
-      - '&7Invoque este boss dentro'
-      - '&7do seu próprio terreno.'
+      - '&7Consiga recompensas'
+      - '&7abatendo este boss.'
       - ''
-      - '&8 ▪ &fVida: &c❤{health} '
-      - '&8 ▪ &fStacks: &7x{stacks} '
-      - ''
-      - '&7Coloque-o em um terreno'
-      - '&7para começar a atacar.'
+      - '&8 ▪ &fVida: &c❤300K '
 
   # ── JACKPOT ─────────────────────────────────────────────────────── 0,001%
   jackpot:
@@ -176,8 +152,4 @@ rewards:
       glow: true
       display: '&bMatadora Ancestral'
       lore:
-      - ''
-      - ' &8Informações: '
-      - '&8 ▪ &fDano: &e{damage} '
-      - '&8 ▪ &fKill-Stack: &e{kill_stack} '
-      - '&8 ▪ &fBosses abatidos: &e{kills} '
+      - '&fDano: &c1.500'

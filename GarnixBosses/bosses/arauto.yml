@@ -15,14 +15,14 @@ boss-icon:
   texture: '38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677'
   display: '{display}'
   lore:
-    - '&7Invoque este boss dentro'
-    - '&7do seu próprio terreno.'
+    - '&7Consiga recompensas'
+    - '&7abatendo este boss.'
     - ''
     - '&8 ▪ &fVida: &c❤{health} '
     - '&8 ▪ &fStacks: &7x{stacks} '
     - ''
-    - '&7Coloque-o em um terreno'
-    - '&7para começar a atacar.'
+    - '&dColoque-o em um terreno'
+    - '&dpara começar a atacar.'
 
 # Types:
 # NONE, CURRENCY, ITEM, COMMAND, COMMAND_ITEM
