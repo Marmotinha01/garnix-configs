@@ -6,7 +6,7 @@ void-teleport-y: 0
 # Regras aplicadas 5 segundos após o start do servidor.
 world-rules:
   # gamerule randomTickSpeed (aplicado em todos os mundos)
-  random-tick-speed: 3
+  random-tick-speed: 8
   # Mundo que recebe "time set 0" e "gamerule doDaylightCycle false"
   static-time-world: "plotworld"
 
