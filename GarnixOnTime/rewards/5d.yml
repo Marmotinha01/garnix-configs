@@ -13,7 +13,7 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂22 cash '
-    - '&8 ▪ &cx&l60 &cPresa Colossal '
+    - '&8 ▪ &cx&l60 &cRuna Sagrada '
     - ''
 
 rewards:
@@ -27,11 +27,11 @@ rewards:
 
   extra:
     type: COMMAND
-    command: 'fragmentos givevirtual {player} presa {amount}'
+    command: 'runas givevirtual {player} sagrada {amount}'
     amount: 60
     icon:
-      material: BONE
+      texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       glow: true
-      display: '&4Presa Colossal'
+      display: '&4Runa Sagrada'
       lore:
-      - '&8Fragmento'
+      - '&8Runa'

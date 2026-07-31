@@ -13,7 +13,7 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂5 cash '
-    - '&8 ▪ &ex&l15 &eSelo Lacrado '
+    - '&8 ▪ &ex&l15 &2Runa Eterna '
     - ''
 
 rewards:
@@ -27,11 +27,11 @@ rewards:
 
   extra:
     type: COMMAND
-    command: 'fragmentos givevirtual {player} selo {amount}'
+    command: 'runas givevirtual {player} eterna {amount}'
     amount: 15
     icon:
-      material: PAPER
+      texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
       glow: true
-      display: '&eSelo Lacrado'
+      display: '&2Runa Eterna'
       lore:
-      - '&8Fragmento'
+      - '&8Runa'

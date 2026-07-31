@@ -1,6 +1,6 @@
-title: Seus Fragmentos
+title: Suas Runas
 
-# . = fragmento (paginado)  | < = página anterior  | > = próxima página
+# . = runa (paginada)  | < = página anterior  | > = próxima página
 shape:
 - XXXXXXXXX
 - XX.....XX
@@ -15,19 +15,19 @@ empty-icon:
   amount: 0
   display: '&cVazio'
   lore:
-  - '&7Nenhum fragmento encontrado.'
+  - '&7Nenhuma runa encontrada.'
 
 shop-icon:
   slot: 49
   material: EMERALD
-  display: '&aLoja de Fragmentos'
+  display: '&aLoja de Runas'
   lore:
-  - '&7Troque os fragmentos que'
+  - '&7Troque as runas que'
   - '&7você juntou por itens.'
   - ''
   - '&aClique para acessar.'
 
-# Lore dos fragmentos que o jogador possui (clicável).
+# Lore das runas que o jogador possui (clicável).
 # Placeholders: {amount}, {display}.
 withdraw-lore:
 - ''
@@ -35,8 +35,8 @@ withdraw-lore:
 - ''
 - '&aClique para retirar.'
 
-# Lore dos fragmentos que o jogador ainda não possui.
+# Lore das runas que o jogador ainda não possui.
 locked-lore:
 - ''
-- '&8 ▾ &cSem fragmentos desse tipo. '
+- '&8 ▾ &cSem runas desse tipo. '
 - ''

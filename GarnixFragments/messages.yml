@@ -1,38 +1,38 @@
 # Item físico (ativar / empilhar)
 fragment:
-  activated: '&aVocê ativou &e{amount} &7{fragments} de &f{display}&7.'
-  merged: '&aVocê juntou &fx{count} &aitens em um só de &f{amount} &a{fragments} de &f{display}&a.'
-  merge-none: '&cNão há outros fragmentos iguais para juntar.'
-  unknown-type: '&cEste tipo de fragmento não existe mais.'
+  activated: '&aVocê ativou &ex{amount} &7de &f{display}&7.'
+  merged: '&aVocê juntou &fx{count} &aitens em um só de &e{amount} &7de &f{display}&a.'
+  merge-none: '&cNão há outras runas iguais para juntar.'
+  unknown-type: '&cEste tipo de runa não existe mais.'
 
 # Retirada (conversation)
 withdraw:
   cancel-word: cancelar
   prompt:
   - ''
-  - '  &aQuantos fragmentos de &f{display} &avocê deseja retirar?'
+  - '  &aQuantas &f{display} &avocê deseja retirar?'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   invalid: '&cInforme uma quantia válida.'
   not-enough: '&cVocê só possui &e{amount} &7{fragments} {stored}.'
   inventory-full: '&cSeu inventário está cheio.'
-  empty: '&cVocê não possui fragmentos deste tipo armazenados.'
-  success: '&aVocê retirou &e{amount} &7{fragments} de &f{display}&7.'
+  empty: '&cVocê não possui runas deste tipo armazenadas.'
+  success: '&aVocê retirou &ex{amount} &7de &f{display}&7.'
 
 # Loja
 shop:
   purchased: '&aVocê comprou &f{item}&7.'
-  cannot-afford: '&cVocê precisa de &e{amount} &7{fragments} de &f{display}&7.'
+  cannot-afford: '&cVocê precisa de &e{amount} &7de &f{display}&7.'
 
 # Comandos administrativos
 admin:
   reload-success: '&aConfigurações recarregadas com sucesso.'
   reset: '&aArmazenamento de &f{player} &afoi resetado.'
   player-offline: '&cO jogador &f{player} &7não está online.'
-  unknown-type: '&cO tipo de fragmento &f{type} &7não existe.'
+  unknown-type: '&cO tipo de runa &f{type} &7não existe.'
   invalid-amount: '&cInforme uma quantia válida (ex: 100, 1.5K).'
   give: '&aEntregue &ex{quantity} &7item(ns) de &f{display} &7(&e{amount} &7cada) a &f{player}&7.'
-  give-virtual: '&aAdicionado &e{amount} &7{fragments} de &f{display} &7ao armazenamento de &f{player}&7.'
+  give-virtual: '&aAdicionado &e{amount} &7de &f{display} &7ao armazenamento de &f{player}&7.'
 
 # ── Entrega de itens ───────────────────────────────────────────────────
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.

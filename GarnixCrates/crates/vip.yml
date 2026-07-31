@@ -69,18 +69,18 @@ rewards:
       material: COAL
       display: '&eCombustível &7(500L)'
 
-  fragmento:
+  runa:
     type: COMMAND
     chance: 3
-    display: '&dFragmento'
-    command: fragmentos givevirtual {player} selo {amount}
+    display: '&2Runa Eterna'
+    command: runas givevirtual {player} eterna {amount}
     amount: 5
     icon:
-      material: PAPER
+      texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
       glow: true
-      display: '&eSelo Lacrado'
+      display: '&2Runa Eterna'
       lore:
-      - '&8Fragmento'
+      - '&8Runa'
 
   secundaria-lote:
     type: CURRENCY

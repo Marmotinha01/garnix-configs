@@ -118,7 +118,7 @@ prestige:
       - 'lp user {player} permission set machines.buy.ouro true'
       - 'lp user {player} permission set warehouse.sellmult.1616000 true'
     # '10':  trocador de dracmas
-    # - 'fragmentos give {player} <tipo> 1'   # ⏳ Fase 5
+    # - 'runas give {player} <tipo> 1'   # ⏳ Fase 5
     '20':   # dia 10
       commands:
       - 'lp user {player} permission set machines.buy.redstone true'

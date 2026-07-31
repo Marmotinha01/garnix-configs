@@ -111,8 +111,7 @@ frases:
 #
 rewards:
 - cash add {player} 10
-- crates givekey rankup {player} 5
-- fragmentos givevirtual {player} marca 3
+- crates givekey vip {player} 5
 
 # ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
 #
@@ -159,7 +158,7 @@ messages:
       &8▎ {c}Evento {c}&lDigite Rápido {c}iniciando!
       &8▎ &fResponda clicando &a&l<click:suggest_command:/digite-rapido ><hover:show_text:&fClique para já digitar &7/digite-rapido &fno chat.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &6❂10 cash &8+ &6x&l5 &6Chaves RankUP
+      &8▶ &fPrêmios: &6❂10 cash &8+ &dx&l5 &dChaves VIP
       &r
       &8▪ &fRevela em: &7{seconds}s
       &r
@@ -192,7 +191,7 @@ messages:
       &8▶ &7{player} &fdigitou a frase primeiro.
       &r
       &8▪ &fResposta: &7{answer}
-      &8▪ &fPrêmios: &6❂10 cash &8+ &6x&l5 &6Chaves RankUP
+      &8▪ &fPrêmios: &6❂10 cash &8+ &dx&l5 &dChaves VIP
       &r
 # {answer} a resposta que ninguém acertou
   no-winner: |2

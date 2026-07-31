@@ -1,0 +1,51 @@
+# Cada entrada e um tipo de runa. A chave (ex.: sagrada) e o id usado nos
+# comandos e no custo da loja. Campos: display, icon.
+#
+# ── UMA RUNA POR FONTE ──────────────────────────────────────────────────
+#
+#   sagrada    bosses
+#   eterna     crates e caixas misteriosas
+#   divina     ⚠️ SEM FONTE — saia dos eventos de chat
+#   primal     ⚠️ SEM FONTE — saia dos eventos presenciais (o PvP)
+#
+# E o que faz o custo multi-runa da loja obrigar a tocar em varios sistemas.
+# Se dois tipos saissem do mesmo lugar, seriam uma moeda so com passos extras.
+#
+# ⚠️ Runa nao inflaciona: 500 sao 500 no dia 3 e no dia 20. E por isso que
+# ela e a rota in-game de item de site que preco em coins nao consegue ser.
+runas:
+  sagrada:
+    display: '&4Runa Sagrada'
+    icon:
+      texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
+      display: '&4Runa Sagrada'
+      glow: true
+      lore:
+      - '&8Runa'
+
+  eterna:
+    display: '&2Runa Eterna'
+    icon:
+      texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
+      display: '&2Runa Eterna'
+      glow: true
+      lore:
+      - '&8Runa'
+
+  divina:
+    display: '&fRuna Divina'
+    icon:
+      texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
+      display: '&fRuna Divina'
+      glow: true
+      lore:
+      - '&8Runa'
+
+  primal:
+    display: '&3Runa Primal'
+    icon:
+      texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
+      display: '&3Runa Primal'
+      glow: true
+      lore:
+      - '&8Runa'

@@ -1,0 +1,142 @@
+# O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
+# segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
+
+# Slot que esta caixa ocupa no menu /caixas (omita para não aparecer na lista).
+slot: 33
+
+box-item:
+  material: TRAPPED_CHEST
+  glow: true
+  display: '&bCaixa Máquinas'
+  lore:
+  - '&7Abra e descubra o que a sorte'
+  - '&7guardou para você lá dentro.'
+  - ''
+  - '&bOpções de uso:'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
+
+# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# 'chance' é o peso do sorteio (não precisa somar 100).
+#
+# ⚠️ So entram as maquinas com `shop: false` em GarnixMachines/machines —
+# as que NAO sao compraveis na loja de maquinas. Quem esta na loja tem preco
+# em coins e nao precisa de rota de loot; estas sete so saem daqui, do site
+# e da caixa garnix.
+#
+# ⚠️ Esta caixa nao tem `azar`: toda abertura devolve uma maquina. O que
+# separa as sete e o valor — moeda secundaria em baixo, Cash e Limite no topo.
+rewards:
+
+  sementes:
+    type: COMMAND
+    chance: 20
+    display: '&b&lMáquina de Sementes'
+    command: maquina give {player} SEMENTES
+    amount: 1
+    icon:
+      texture: 75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9
+      glow: true
+      display: '&b&lMáquina de Sementes'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&bColoque no seu terreno.'
+
+  corais:
+    type: COMMAND
+    chance: 20
+    display: '&b&lMáquina de Corais'
+    command: maquina give {player} CORAIS
+    amount: 1
+    icon:
+      texture: 75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9
+      glow: true
+      display: '&b&lMáquina de Corais'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&bColoque no seu terreno.'
+
+  gemas:
+    type: COMMAND
+    chance: 20
+    display: '&b&lMáquina de Gemas'
+    command: maquina give {player} GEMAS
+    amount: 1
+    icon:
+      texture: 75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9
+      glow: true
+      display: '&b&lMáquina de Gemas'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&bColoque no seu terreno.'
+
+  dracmas:
+    type: COMMAND
+    chance: 15
+    display: '&b&lMáquina de Dracmas'
+    command: maquina give {player} DRACMAS
+    amount: 1
+    icon:
+      texture: 75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9
+      glow: true
+      display: '&b&lMáquina de Dracmas'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&bColoque no seu terreno.'
+
+  combustivel:
+    type: COMMAND
+    chance: 12
+    display: '&b&lMáquina de Combustível'
+    command: maquina give {player} COMBUSTIVEL
+    amount: 1
+    icon:
+      texture: 75ebd499c6f8bbca5253a37bf9bc3557a20136db4f2e799e11bf2ea8f09c0de9
+      glow: true
+      display: '&b&lMáquina de Combustível'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&bColoque no seu terreno.'
+
+  cash:
+    type: COMMAND
+    chance: 8
+    display: '&b&lMáquina de Cash'
+    command: maquina give {player} CASH
+    amount: 1
+    icon:
+      texture: 42c3d731770797e17abcb14ae0fc9d9e068deb749dddb92501c0f6145769e25c
+      glow: true
+      display: '&b&lMáquina de Cash'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&bColoque no seu terreno.'
+
+  limite:
+    type: COMMAND
+    chance: 5
+    display: '&b&lMáquina de Limite'
+    command: maquina give {player} LIMITE
+    amount: 1
+    icon:
+      texture: 9a2d9b1e07d1e1a8b7b1e3e5e9e6a9e8f8a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0
+      glow: true
+      display: '&b&lMáquina de Limite'
+      lore:
+      - '&7Produz sozinha dentro'
+      - '&7do seu terreno.'
+      - ''
+      - '&bColoque no seu terreno.'

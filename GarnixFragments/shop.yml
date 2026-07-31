@@ -1,14 +1,14 @@
-# Loja de Fragmentos — a rota in-game do que o site vende.
+# Loja de Runas — a rota in-game do que o site vende.
 #
 # Cada entrada é um item da loja. Campos:
 #   icon     — ícone exibido (o custo é gerado automaticamente)
-#   cost     — fragmentos exigidos: <id>: <quantia> (aceita sufixos: 1.5K)
+#   cost     — runas exigidas: <id>: <quantia> (aceita sufixos: 1.5K)
 #   commands — comandos executados no console ao comprar ({player} = comprador)
 #
 # ── POR QUE ELA EXISTE ──────────────────────────────────────────────────────
 #
 # Coins são exponenciais: qualquer preço em coins fica trivial dois dias depois.
-# Fragmento é CONTAGEM — 500 são 500 no dia 3 e no dia 20. É a única coisa no
+# Runa é CONTAGEM — 500 são 500 no dia 3 e no dia 20. É a única coisa no
 # servidor que consegue manter um item "difícil" a temporada inteira.
 #
 # Por isso esta loja não vende conveniência: ela é onde o jogador que NÃO paga
@@ -16,8 +16,8 @@
 #
 # ── A REGRA DO CUSTO ────────────────────────────────────────────────────────
 #
-# Todo item caro custa MAIS DE UM TIPO de fragmento, e os tipos vêm de fontes
-# diferentes (presa=boss · selo=crate/caixa · marca=chat · estilhaco=PvP). É o
+# Todo item caro custa MAIS DE UM TIPO de runa, e os tipos vêm de fontes
+# diferentes (sagrada=boss · eterna=crate/caixa · divina=? · primal=?). É o
 # que impede o jogador de morar num sistema só e comprar tudo: para levar o VIP
 # ele precisa ter matado boss, aberto caixa, ganhado evento de chat E lutado.
 #
@@ -49,8 +49,8 @@ items:
       flags:
       - HIDE_POTION_EFFECTS
     cost:
-      selo: 120
-      marca: 40
+      eterna: 120
+      divina: 40
     commands:
     - 'mina givebooster {player} coins 3 1h 1'
 
@@ -63,7 +63,7 @@ items:
       - '&7Consiga subindo de rank'
       - '&7ao longo da sua jornada.'
     cost:
-      selo: 90
+      eterna: 90
     commands:
     - 'crates givekey rankup {player} 25'
 
@@ -78,8 +78,8 @@ items:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
     cost:
-      selo: 400
-      presa: 250
+      eterna: 400
+      sagrada: 250
     commands:
     - 'caixas give mineracao-ii {player} 1'
 
@@ -95,8 +95,8 @@ items:
       - ''
       - '&8 ▪ &fQuantia: &a500 '
     cost:
-      presa: 350
-      estilhaco: 150
+      sagrada: 350
+      primal: 150
     commands:
     - 'armazem givelimititem {player} 500 1'
 
@@ -114,9 +114,9 @@ items:
       - ''
       - '&8 ▪ &fQuantia: &b1 '
     cost:
-      presa: 1200
-      selo: 900
-      estilhaco: 600
+      sagrada: 1200
+      eterna: 900
+      primal: 600
     commands:
     - 'spawner givelimite {player} 1 1'
 
@@ -128,9 +128,9 @@ items:
       - ''
       - '{color}Clique para resgatar!'
     cost:
-      presa: 1000
-      selo: 1000
-      marca: 500
-      estilhaco: 500
+      sagrada: 1000
+      eterna: 1000
+      divina: 500
+      primal: 500
     commands:
     - 'vip givepaper {player} celestial 7d 1'

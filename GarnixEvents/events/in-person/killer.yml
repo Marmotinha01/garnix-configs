@@ -54,9 +54,7 @@ cleanup-radius: 60.0
 #
 rewards:
 - cash add {player} 25
-- crates givekey rankup {player} 15
-- caixas give mineracao-i {player} 1
-- fragmentos givevirtual {player} estilhaco 5
+- crates givekey vip {player} 15
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:
@@ -106,7 +104,7 @@ messages:
       &8▎ {c}Evento {c}&lKiller {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/killer entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &4[SerialKiller] &8+ &6❂25 cash &8+ &6x&l15 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração I
+      &8▶ &fPrêmios: &4Tag [SerialKiller] &8+ &6❂25 cash &8+ &dx&l15 &dChaves VIP
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -135,7 +133,7 @@ messages:
       &r
       &8▶ &7{player} &fganhou o evento Killer.
       &r
-      &8▪ &fPrêmios: &4[SerialKiller] &8+ &6❂25 cash &8+ &6x&l15 &6Chaves RankUP &8+ &ex&l1 &eCaixa Mineração I
+      &8▪ &fPrêmios: &4Tag [SerialKiller] &8+ &6❂25 cash &8+ &dx&l15 &dChaves VIP
       &r
 
   # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros

@@ -1,0 +1,141 @@
+# O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
+# segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
+
+# Slot que esta caixa ocupa no menu /caixas (omita para não aparecer na lista).
+slot: 29
+
+box-item:
+  material: ENDER_CHEST
+  glow: true
+  display: '&dCaixa Caixas'
+  lore:
+  - '&7Abra e descubra o que a sorte'
+  - '&7guardou para você lá dentro.'
+  - ''
+  - '&dOpções de uso:'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
+
+# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# 'chance' é o peso do sorteio (não precisa somar 100).
+#
+# ⚠️ Esta caixa sorteia OUTRAS CAIXAS — ela não tem `azar`. Abrir sempre
+# devolve uma caixa, e o que varia é qual. Ela também nao se sorteia a si
+# mesma: sem isso, uma abertura poderia so devolver a propria caixa.
+#
+# ⚠️ O piso e o teto vem das caixas sorteadas, nao daqui. As de tier I
+# carregam 20% de azar proprio, as de tier II 3%, e a garnix nenhum.
+rewards:
+
+  mineracao-i:
+    type: COMMAND
+    chance: 20
+    display: '&6Caixa Mineração &6[Tier &lI&6]'
+    command: caixas give mineracao-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      glow: true
+      display: '&6Caixa Mineração &6[Tier &lI&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  farm-i:
+    type: COMMAND
+    chance: 20
+    display: '&aCaixa Farm &a[Tier &lI&a]'
+    command: caixas give farm-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      glow: true
+      display: '&aCaixa Farm &a[Tier &lI&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  pesca-i:
+    type: COMMAND
+    chance: 20
+    display: '&bCaixa Pesca &b[Tier &lI&b]'
+    command: caixas give pesca-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      glow: true
+      display: '&bCaixa Pesca &b[Tier &lI&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  mineracao-ii:
+    type: COMMAND
+    chance: 11
+    display: '&6Caixa Mineração &6[Tier &lII&6]'
+    command: caixas give mineracao-ii {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&6Caixa Mineração &6[Tier &lII&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  farm-ii:
+    type: COMMAND
+    chance: 11
+    display: '&aCaixa Farm &a[Tier &lII&a]'
+    command: caixas give farm-ii {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&aCaixa Farm &a[Tier &lII&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  pesca-ii:
+    type: COMMAND
+    chance: 11
+    display: '&bCaixa Pesca &b[Tier &lII&b]'
+    command: caixas give pesca-ii {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&bCaixa Pesca &b[Tier &lII&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  maquinas:
+    type: COMMAND
+    chance: 5
+    display: '&bCaixa Máquinas'
+    command: caixas give maquinas {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&bCaixa Máquinas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  garnix:
+    type: COMMAND
+    chance: 2
+    display: '&6&lCaixa Garnix'
+    command: caixas give garnix {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      glow: true
+      display: '&6&lCaixa Garnix'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

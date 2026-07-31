@@ -1,8 +1,8 @@
-# Linhas extras na lore do item físico do fragmento.
-# Placeholders: {amount} = fragmentos no item, {display} = nome.
+# Linhas extras na lore do item físico da runa.
+# Placeholders: {amount} = runas no item, {display} = nome.
 fragment-lore:
 - ''
-- '&8 ▪ &fQuantia: &e{amount} &7fragmento(s) '
+- '&8 ▪ &fQuantia: &e{amount} &7runa(s) '
 - ''
 - '&aOpções de uso:'
 - '&fBotão direito &8➟ &7Ativar todos'

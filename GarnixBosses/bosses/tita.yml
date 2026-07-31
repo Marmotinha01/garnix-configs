@@ -66,18 +66,18 @@ rewards:
       - '&7Consiga abatendo bosses'
       - '&7em seu terreno.'
 
-  fragmento:
+  runa:
     type: COMMAND
     chance: 20.0
-    display: '&4Presa Colossal'
-    command: fragmentos givevirtual {player} presa {amount}
+    display: '&4Runa Sagrada'
+    command: runas givevirtual {player} sagrada {amount}
     amount: 32
     icon:
-      material: BONE
+      texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       glow: true
-      display: '&4Presa Colossal'
+      display: '&4Runa Sagrada'
       lore:
-      - '&8Fragmento'
+      - '&8Runa'
 
   livro:
     type: COMMAND

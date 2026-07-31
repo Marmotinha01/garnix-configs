@@ -1,4 +1,4 @@
-title: Loja de Fragmentos
+title: Loja de Runas
 
 # . = item (paginado)  | < = página anterior  | > = próxima página
 shape:
@@ -27,7 +27,7 @@ back-icon:
 # Formato de cada linha de custo. Placeholders: {amount}, {display}.
 cost-line: '&8 ▪ &e{amount} &7de &f{display} '
 
-# Lore de cada item. {cost} vira uma linha por fragmento exigido.
+# Lore de cada item. {cost} vira uma linha por runa exigida.
 purchase-lore:
 - ''
 - ' &8Custos:'
