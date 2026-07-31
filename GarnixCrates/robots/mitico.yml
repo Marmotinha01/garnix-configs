@@ -1,0 +1,24 @@
+# Robô `mitico` — auto-opener. O nome do arquivo é o ID usado no
+# `/crates giverobot mitico <jogador> <quantia>`.
+#
+# boost-threshold  — teto de chance REAL (%) elegível ao rate-up deste robô.
+# boost-multiplier — multiplicador de peso das elegíveis (1.0 = sem boost).
+# O azar (type: NONE) NUNCA é turbinado, então robô melhor = menos azar também.
+seconds: 2
+boost-threshold: 3.0
+boost-multiplier: 3.0
+
+item:
+  texture: "665c54366f88fb3280b1c3fc500ce2b799c8dd327ab6d41c9bc959488f5cfd92"
+  display: "&6Robô Mítico"
+  lore:
+  - '&7Abre as chaves por você e'
+  - '&7deixa os prêmios melhores.'
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fAbre chaves a cada &a&l2&as&f. '
+  - ''
+  - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+  - ' &a+&l140&a% &fsobre a chance deles.'
+  - ''
+  - '&6Equipe no &f/crates&6.'

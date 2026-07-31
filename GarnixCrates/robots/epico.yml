@@ -1,0 +1,24 @@
+# Robô `epico` — auto-opener. O nome do arquivo é o ID usado no
+# `/crates giverobot epico <jogador> <quantia>`.
+#
+# boost-threshold  — teto de chance REAL (%) elegível ao rate-up deste robô.
+# boost-multiplier — multiplicador de peso das elegíveis (1.0 = sem boost).
+# O azar (type: NONE) NUNCA é turbinado, então robô melhor = menos azar também.
+seconds: 6
+boost-threshold: 3.0
+boost-multiplier: 1.5
+
+item:
+  texture: "9f88362c6c9951f7dd3119f99e58a7c2a77370448f61b2f53008b21e5f65ae97"
+  display: "&dRobô Épico"
+  lore:
+  - '&7Abre as chaves por você e'
+  - '&7deixa os prêmios melhores.'
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fAbre chaves a cada &a&l6&as&f. '
+  - ''
+  - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+  - ' &a+&l40&a% &fsobre a chance deles.'
+  - ''
+  - '&dEquipe no &f/crates&d.'

@@ -30,168 +30,51 @@ key-item:
   - '&7Consiga jogando bastante'
   - '&7no servidor todo dia.'
   - ''
-  - '&dClique esquerdo para armazenar'
-  - '&dou abrir a chave em uma caixa.'
+  - '&dOpções de uso:'
+  - '&fBotão direito &8➟ &7Abrir/Armazenar'
 
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
-# FAIXAS (ver 15-LOOT.md): recheio · bom · raro · epico · jackpot.
-# Calibradas para ~20.700 aberturas/dia no servidor inteiro.
+# FAIXAS desta crate:
+#   comum 84% · comum plus 12% · mediana 2,5% · mediana plus 1% ·
+#   rara 0,4% · raríssima 0,099% · jackpot 0,001%
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
 # mesma tabela. Por isso o premio em coins e FIXO e pequeno: no dia 1 e um
 # empurrao real, no dia 5 vira ruido. O valor da crate sao os ITENS.
+#
+# ⚠️ Esta e a crate de MAIOR VOLUME do servidor: cada ativacao de VIP da uma
+# chave para TODOS os online. E por isso que o topo dela e caixa e robo — item
+# que nao inflaciona moeda — e que o cash do jackpot e um evento raro.
+#
+# ⚠️ `chance` e PESO, nao porcentagem — Crate.java:100-105 normaliza por
+# totalChance. Somar 100 e so legibilidade (o azar entra por cima, ver no fim).
 rewards:
 
+  # ── COMUM ────────────────────────────────────────────────────────── 84%
   coins:
     type: CURRENCY
-    chance: 54.2916
+    chance: 44
     currency-id: coins
     amount: '250'
     icon:
       lore:
-      - '&fQuantia: &7250 '
-  secundaria:
+      - '&fValor: &2$&a250 '
+
+  dracmas:
     type: CURRENCY
-    chance: 30.1539
-    currency-id: gemas
+    chance: 40
+    currency-id: dracmas
     amount: '25'
     icon:
       lore:
-      - '&fQuantia: &725 '
-  combustivel:
-    type: COMMAND
-    chance: 5.4875
-    display: '&eCombustível'
-    command: maquina givefuel {player} default {amount}
-    amount: 500
-    icon:
-      material: COAL
-      display: '&eCombustível &7(500L)'
+      - '&fValor: &e✆25 '
 
-  secundaria-lote:
-    type: CURRENCY
-    chance: 3
-    currency-id: gemas
-    amount: '500'
-    icon:
-      lore:
-      - '&fQuantia: &7500 '
-  chave-boss:
-    type: COMMAND
-    chance: 1.2
-    display: '&cChave de Boss'
-    command: crates givevirtualkey bosses {player} {amount}
-    amount: 1
-    icon:
-      material: TRIPWIRE_HOOK
-      glow: true
-      display: '&4Chave Bosses'
-      lore:
-      - '&7Consiga abatendo bosses'
-      - '&7em seu terreno.'
-
-  armadura-baixa:
-    type: COMMAND
-    chance: 0.5
-    display: '&7Peça de Armadura &f[Tier &lII&F]'
-    command: mina givearmor {player} tier-ii_chestplate
-    amount: 1
-    icon:
-      material: LEATHER_CHESTPLATE
-      color: '#55FF55'
-      display: '&aPeitoral Mineração &a[Tier &lII&a]'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+3.0% '
-      - '&8 ▪ &dGemas: &a+2.0% '
-      - '&8 ▪ &aXP: &a+2.0% '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  booster:
-    type: COMMAND
-    chance: 0.3
-    display: '&aBooster 2x 30min'
-    command: mina givebooster {player} coins 2 30m
-    amount: 1
-    icon:
-      material: POTION
-      data: 8201
-      display: '&6Booster de Mineração'
-      lore:
-      - '&7Use este booster para ter'
-      - '&7seus ganhos aumentados.'
-      - ''
-      - ' &8Informações: '
-      - ' &8▪ &fTipo: &aCoins '
-      - ' &8▪ &fBônus: &a2x '
-      - ' &8▪ &fDuração: &730m '
-      flags:
-      - HIDE_POTION_EFFECTS
-
-  armadura-alta:
-    type: COMMAND
-    chance: 0.0495
-    display: '&6Peça de Armadura &6[T&lIV&6]'
-    command: mina givearmor {player} tier-iv_leggings
-    amount: 1
-    icon:
-      material: LEATHER_LEGGINGS
-      color: '#FF55FF'
-      display: '&dCalça Mineração &d[Tier &lIV&d]'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+8.0% '
-      - '&8 ▪ &dGemas: &a+5.5% '
-      - '&8 ▪ &aXP: &a+5.5% '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  skin:
-    type: COMMAND
-    chance: 0.0297
-    display: '&5Skin quartzo'
-    command: mina giveskin {player} quartzo
-    amount: 1
-    icon:
-      material: DIAMOND_PICKAXE
-      display: '&fSkin de Quartzo'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      flags:
-      - HIDE_ATTRIBUTES
-
-  booster-3x:
-    type: COMMAND
-    chance: 0.0198
-    display: '&d&lBooster 3x &7(10min)'
-    command: mina givebooster {player} coins 3 10m
-    amount: 1
-    icon:
-      material: POTION
-      data: 8201
-      display: '&6Booster de Mineração'
-      lore:
-      - '&7Use este booster para ter'
-      - '&7seus ganhos aumentados.'
-      - ''
-      - ' &8Informações: '
-      - ' &8▪ &fTipo: &aCoins '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &710m '
-      flags:
-      - HIDE_POTION_EFFECTS
-
+  # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
   lim-armazem:
     type: COMMAND
-    chance: 0.9
-    display: '&6Limite de Armazém'
+    chance: 5
+    display: '&2Limite de Armazém'
     command: armazem givelimititem {player} 500 1
     amount: 1
     icon:
@@ -203,28 +86,11 @@ rewards:
       - '&7Aumente a capacidade de'
       - '&7estoque do seu terreno.'
       - ''
-      - '&fQuantia: &a500 '
-
-  lim-spawner:
-    type: COMMAND
-    chance: 0.4
-    display: '&cLimite de Spawners'
-    command: spawner givelimite {player} 1 1
-    amount: 1
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&fQuantia: &b1 '
+      - '&8 ▪ &fQuantia: &a500 '
 
   lim-maquina:
     type: COMMAND
-    chance: 0.6
+    chance: 4
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} 1 1
     amount: 1
@@ -237,44 +103,171 @@ rewards:
       - '&7Aumente o seu poder de'
       - '&7compra de máquinas.'
       - ''
-      - '&fQuantia: &91 '
+      - '&8 ▪ &fQuantia: &91 '
 
-  papel-celestial:
+  lim-spawner:
     type: COMMAND
-    chance: 0.05
-    display: '&b&lPapel VIP Celestial &7(1d)'
-    command: vip givepaper {player} celestial 1d 1
+    chance: 3
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} 1 1
     amount: 1
     icon:
-      display: '&b&lPapel VIP Celestial &7(1d)'
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
       lore:
-      - '&fDuração: &71d'
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
       - ''
-      - '{color}Clique para resgatar!'
+      - '&8 ▪ &fQuantia: &b1 '
 
-  papel-imortal:
+  # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
+  chaves-boss-3:
     type: COMMAND
-    chance: 0.02
-    display: '&a&lPapel VIP Imortal &7(1d)'
-    command: vip givepaper {player} imortal 1d 1
+    chance: 2.5
+    display: '&cChave de Boss'
+    command: crate givekey bosses {player} {amount}
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga matando bosses'
+      - '&7em seu terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &43 '
+
+  # ── MEDIANA PLUS ──────────────────────────────────────────────────── 1%
+  chaves-boss-5:
+    type: COMMAND
+    chance: 0.6
+    display: '&cChave de Boss'
+    command: crate givekey bosses {player} {amount}
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga matando bosses'
+      - '&7em seu terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &45 '
+
+  robo-comum:
+    type: COMMAND
+    chance: 0.4
+    display: '&aRobô Comum'
+    command: crates giverobot comum {player} {amount}
     amount: 1
     icon:
-      display: '&a&lPapel VIP Imortal &7(1d)'
+      texture: 6eeb623328cbcda01c4894b93c302be57f10a4dea93a7d54a907dd9caa4e45ca
+      display: '&aRobô Comum'
       lore:
-      - '&fDuração: &71d'
+      - '&7Abre as chaves por você,'
+      - '&7sem precisar clicar.'
       - ''
-      - '{color}Clique para resgatar!'
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l20&as&f. '
 
-  papel-supremo:
+  # ── RARA ────────────────────────────────────────────────────────── 0,4%
+  robo-raro:
     type: COMMAND
-    chance: 0.008
-    display: '&d&lPapel VIP Supremo &7(1d)'
-    command: vip givepaper {player} supremo 1d 1
+    chance: 0.4
+    display: '&bRobô Raro'
+    command: crates giverobot raro {player} {amount}
     amount: 1
     icon:
-      display: '&d&lPapel VIP Supremo &7(1d)'
+      texture: 639faf58180d8c3228c6d6d107b28c748dd11b9a18a4cb1681d2feff7549e888
+      display: '&bRobô Raro'
       lore:
-      - '&fDuração: &71d'
+      - '&7Abre as chaves por você e'
+      - '&7deixa os prêmios melhores.'
       - ''
-      - '{color}Clique para resgatar!'
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l10&as&f. '
+      - ''
+      - ' &fPrêmios abaixo de &c&l2&c% &fganham'
+      - ' &a+&l15&a% &fsobre a chance deles.'
 
+  # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,099%
+  caixa-boosters:
+    type: COMMAND
+    chance: 0.04
+    display: '&aCaixa Booster'
+    command: caixas give boosters {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&aCaixa Booster'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-caixas:
+    type: COMMAND
+    chance: 0.035
+    display: '&dCaixa Caixas'
+    command: caixas give caixas {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      glow: true
+      display: '&dCaixa Caixas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-maquinas:
+    type: COMMAND
+    chance: 0.024
+    display: '&bCaixa Máquinas'
+    command: caixas give maquinas {player} {amount}
+    amount: 1
+    icon:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&bCaixa Máquinas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  # ── JACKPOT ─────────────────────────────────────────────────────── 0,001%
+  jackpot:
+    type: COMMAND
+    chance: 0.001
+    display: '&6❂250 Cash'
+    command: cash add {player} 250
+    amount: 1
+    icon:
+      material: GOLD_INGOT
+      glow: true
+      display: '&6❂250 Cash'
+      lore:
+      - '&7A moeda que compra tudo'
+      - '&7no /shop premium.'
+      - ''
+      - '&8 ▪ &fQuantia: &6❂250 '
+
+  # ── AZAR ────────────────────────────────────────────────────────── 25%
+  # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
+  # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
+  # recebe absolutamente nada. Aparece no preview, some do /crates manage
+  # (nao da para filtrar o azar) e NUNCA e turbinado por robo.
+  #
+  # Peso 33,3333 sobre os 100 dos premios: 33,3333/133,3333 = 25% das
+  # aberturas, ou 250 a cada 1.000. Os pesos acima ficaram intactos — o
+  # que muda e que cada um agora vale 0,75x do que valia (44 = 33%).
+  azar:
+    type: NONE
+    chance: 33.3333
+    display: '&8Azar'
+    icon:
+      material: WEB
+      display: '&8Azar'
+      lore:
+      - '&7Não foi dessa vez.'
+      - '&7Tente na próxima chave.'

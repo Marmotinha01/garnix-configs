@@ -1,0 +1,124 @@
+# O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
+# segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
+
+# Slot que esta caixa ocupa no menu /caixas (omita para não aparecer na lista).
+slot: 42
+
+box-item:
+  material: TRAPPED_CHEST
+  glow: true
+  display: '&cCaixa Robôs'
+  lore:
+  - '&7Abra e descubra o que a sorte'
+  - '&7guardou para você lá dentro.'
+  - ''
+  - '&cOpções de uso:'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
+
+# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# 'chance' é o peso do sorteio (não precisa somar 100).
+#
+# ⚠️ O robo NAO e cosmetico: com ~20.700 chaves/dia no servidor, ele e o que
+# torna o volume de chaves utilizavel. Por isso o Comum e o recheio desta
+# caixa — todo mundo precisa de um — e o que se compra aqui e o TIER.
+#
+# ⚠️ Cada tier abre mais rapido E turbina mais os premios raros
+# (boost-threshold / boost-multiplier em GarnixCrates/robots/). O Mitico e o
+# unico que nao sai daqui em volume: 1 em 100 aberturas. Ele e produto de site.
+#
+# ⚠️ Esta caixa nao tem `azar`: toda abertura devolve um robo.
+rewards:
+
+  comum:
+    type: COMMAND
+    chance: 45
+    display: '&aRobô Comum'
+    command: crates giverobot comum {player} {amount}
+    amount: 1
+    icon:
+      texture: 6eeb623328cbcda01c4894b93c302be57f10a4dea93a7d54a907dd9caa4e45ca
+      display: '&aRobô Comum'
+      lore:
+      - '&7Abre as chaves por você,'
+      - '&7sem precisar clicar.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l20&as&f. '
+
+  raro:
+    type: COMMAND
+    chance: 30
+    display: '&bRobô Raro'
+    command: crates giverobot raro {player} {amount}
+    amount: 1
+    icon:
+      texture: 639faf58180d8c3228c6d6d107b28c748dd11b9a18a4cb1681d2feff7549e888
+      display: '&bRobô Raro'
+      lore:
+      - '&7Abre as chaves por você e'
+      - '&7deixa os prêmios melhores.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l10&as&f. '
+      - ''
+      - ' &fPrêmios abaixo de &c&l2&c% &fganham'
+      - ' &a+&l15&a% &fsobre a chance deles.'
+
+  epico:
+    type: COMMAND
+    chance: 18
+    display: '&dRobô Épico'
+    command: crates giverobot epico {player} {amount}
+    amount: 1
+    icon:
+      texture: 9f88362c6c9951f7dd3119f99e58a7c2a77370448f61b2f53008b21e5f65ae97
+      display: '&dRobô Épico'
+      lore:
+      - '&7Abre as chaves por você e'
+      - '&7deixa os prêmios melhores.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l6&as&f. '
+      - ''
+      - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+      - ' &a+&l40&a% &fsobre a chance deles.'
+
+  lendario:
+    type: COMMAND
+    chance: 6
+    display: '&4Robô Lendário'
+    command: crates giverobot lendario {player} {amount}
+    amount: 1
+    icon:
+      texture: 5b0c2db42e90f83fae6551c96e83669211a77c2c155c54d1523af3079f9565ed
+      display: '&4Robô Lendário'
+      lore:
+      - '&7Abre as chaves por você e'
+      - '&7deixa os prêmios melhores.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l4&as&f. '
+      - ''
+      - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+      - ' &a+&l75&a% &fsobre a chance deles.'
+
+  mitico:
+    type: COMMAND
+    chance: 1
+    display: '&6Robô Mítico'
+    command: crates giverobot mitico {player} {amount}
+    amount: 1
+    icon:
+      texture: 665c54366f88fb3280b1c3fc500ce2b799c8dd327ab6d41c9bc959488f5cfd92
+      display: '&6Robô Mítico'
+      lore:
+      - '&7Abre as chaves por você e'
+      - '&7deixa os prêmios melhores.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l2&as&f. '
+      - ''
+      - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+      - ' &a+&l140&a% &fsobre a chance deles.'

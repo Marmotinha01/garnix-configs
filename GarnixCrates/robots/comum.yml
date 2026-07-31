@@ -1,0 +1,21 @@
+# Robô `comum` — auto-opener. O nome do arquivo é o ID usado no
+# `/crates giverobot comum <jogador> <quantia>`.
+#
+# boost-threshold  — teto de chance REAL (%) elegível ao rate-up deste robô.
+# boost-multiplier — multiplicador de peso das elegíveis (1.0 = sem boost).
+# O azar (type: NONE) NUNCA é turbinado, então robô melhor = menos azar também.
+seconds: 20
+boost-threshold: 0
+boost-multiplier: 1.0
+
+item:
+  texture: "6eeb623328cbcda01c4894b93c302be57f10a4dea93a7d54a907dd9caa4e45ca"
+  display: "&aRobô Comum"
+  lore:
+  - '&7Abre as chaves por você,'
+  - '&7sem precisar clicar.'
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fAbre chaves a cada &a&l20&as&f. '
+  - ''
+  - '&aEquipe no &f/crates&a.'

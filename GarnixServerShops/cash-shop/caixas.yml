@@ -97,6 +97,42 @@ products:
       - '&7Consiga subindo de rank'
       - '&7ao longo da sua jornada.'
 
+  caixa-robos:
+    slot: 13
+    amount: 1
+    price: 1200
+    broadcast: true
+    right-command: 'caixas ver robos shop'
+    commands:
+    - 'caixas give robos {player} 1'
+    item:
+      material: TRAPPED_CHEST
+      glow: true
+      display: '&cCaixa Robôs'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  robo-mitico:
+    slot: 15
+    amount: 1
+    price: 6000
+    broadcast: true
+    commands:
+    - 'crates giverobot mitico {player} 1'
+    item:
+      texture: 665c54366f88fb3280b1c3fc500ce2b799c8dd327ab6d41c9bc959488f5cfd92
+      display: '&6Robô Mítico'
+      lore:
+      - '&7Abre as chaves por você e'
+      - '&7deixa os prêmios melhores.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l2&as&f. '
+      - ''
+      - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+      - ' &a+&l140&a% &fsobre a chance deles.'
+
   caixa-garnix:
     slot: 16
     amount: 1

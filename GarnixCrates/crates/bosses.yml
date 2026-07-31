@@ -18,8 +18,8 @@ crate-item:
   material: TRIPWIRE_HOOK
   display: '&4Chave Bosses'
   lore:
-  - '&7Consiga abatendo bosses'
-  - '&7em seu terreno.'
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
 
 # Item físico da chave (segurar e clicar com botão direito na crate abre).
 key-item:
@@ -27,11 +27,11 @@ key-item:
   material: TRIPWIRE_HOOK
   display: '&4Chave Bosses'
   lore:
-  - '&7Consiga abatendo bosses'
-  - '&7em seu terreno.'
+  - '&7Consiga recompensas'
+  - '&7abrindo essa chave.'
   - ''
-  - '&4Clique esquerdo para armazenar'
-  - '&4ou abrir a chave em uma caixa.'
+  - '&4Opções de uso:'
+  - '&fBotão direito &8➟ &7Abrir/Armazenar'
 
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
@@ -107,6 +107,7 @@ rewards:
       display: '&5Matadora Sombria'
       lore:
       - '&fDano: &c750'
+      flags: [ 'HIDE_ATTRIBUTES' ]
 
   # ── RARO PLUS ──────────────────────────────────────────────────── 0,09%
   boss-tita:
@@ -153,3 +154,24 @@ rewards:
       display: '&bMatadora Ancestral'
       lore:
       - '&fDano: &c1.500'
+      flags: [ 'HIDE_ATTRIBUTES' ]
+
+  # ── AZAR ────────────────────────────────────────────────────────── 25%
+  # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
+  # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
+  # recebe absolutamente nada. Aparece no preview, some do /crates manage
+  # (nao da para filtrar o azar) e NUNCA e turbinado por robo.
+  #
+  # Peso 33,3333 sobre os 100 dos premios: 33,3333/133,3333 = 25% das
+  # aberturas, ou 250 a cada 1.000. Os pesos acima ficaram intactos — o
+  # que muda e que cada um agora vale 0,75x do que valia (47 = 35,25%).
+  azar:
+    type: NONE
+    chance: 33.3333
+    display: '&8Azar'
+    icon:
+      material: WEB
+      display: '&8Azar'
+      lore:
+      - '&7Não foi dessa vez.'
+      - '&7Tente na próxima chave.'

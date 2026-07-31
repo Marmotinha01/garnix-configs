@@ -1,0 +1,24 @@
+# Robô `raro` — auto-opener. O nome do arquivo é o ID usado no
+# `/crates giverobot raro <jogador> <quantia>`.
+#
+# boost-threshold  — teto de chance REAL (%) elegível ao rate-up deste robô.
+# boost-multiplier — multiplicador de peso das elegíveis (1.0 = sem boost).
+# O azar (type: NONE) NUNCA é turbinado, então robô melhor = menos azar também.
+seconds: 10
+boost-threshold: 2.0
+boost-multiplier: 1.25
+
+item:
+  texture: "639faf58180d8c3228c6d6d107b28c748dd11b9a18a4cb1681d2feff7549e888"
+  display: "&bRobô Raro"
+  lore:
+  - '&7Abre as chaves por você e'
+  - '&7deixa os prêmios melhores.'
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fAbre chaves a cada &a&l10&as&f. '
+  - ''
+  - ' &fPrêmios abaixo de &c&l2&c% &fganham'
+  - ' &a+&l15&a% &fsobre a chance deles.'
+  - ''
+  - '&bEquipe no &f/crates&b.'

@@ -1,0 +1,24 @@
+# Robô `lendario` — auto-opener. O nome do arquivo é o ID usado no
+# `/crates giverobot lendario <jogador> <quantia>`.
+#
+# boost-threshold  — teto de chance REAL (%) elegível ao rate-up deste robô.
+# boost-multiplier — multiplicador de peso das elegíveis (1.0 = sem boost).
+# O azar (type: NONE) NUNCA é turbinado, então robô melhor = menos azar também.
+seconds: 4
+boost-threshold: 3.0
+boost-multiplier: 2.0
+
+item:
+  texture: "5b0c2db42e90f83fae6551c96e83669211a77c2c155c54d1523af3079f9565ed"
+  display: "&4Robô Lendário"
+  lore:
+  - '&7Abre as chaves por você e'
+  - '&7deixa os prêmios melhores.'
+  - ''
+  - ' &8Informações: '
+  - ' &8▪ &fAbre chaves a cada &a&l4&as&f. '
+  - ''
+  - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+  - ' &a+&l75&a% &fsobre a chance deles.'
+  - ''
+  - '&4Equipe no &f/crates&4.'

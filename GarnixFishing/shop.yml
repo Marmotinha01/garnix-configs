@@ -163,8 +163,8 @@ products:
       glow: true
       display: '&bChave Pesca'
       lore:
-      - '&7Consiga pescando peixes'
-      - '&7nas águas do servidor.'
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
 
   booster-pesca:
     slot: 22
