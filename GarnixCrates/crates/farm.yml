@@ -74,7 +74,7 @@ rewards:
     amount: 500
     icon:
       material: COAL
-      display: '&eCombustível &7(Máquinas)'
+      display: '&eCombustível'
       lore:
       - '&7Mantém a sua máquina'
       - '&7produzindo drops.'

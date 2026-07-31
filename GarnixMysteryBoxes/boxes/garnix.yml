@@ -281,7 +281,7 @@ rewards:
     amount: 1
     icon:
       glow: true
-      display: '&b&lCombustível Infinito &7(Máquinas)'
+      display: '&b&lCombustível Infinito'
       lore:
       - '&7A máquina nunca mais'
       - '&7fica sem combustível.'

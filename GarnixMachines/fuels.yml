@@ -46,7 +46,7 @@ default:
   material: COAL
   data: 0
   item:
-    display: '&eCombustível &7(Máquinas)'
+    display: '&eCombustível'
     lore:
     - '&7Mantém a sua máquina'
     - '&7produzindo drops.'
@@ -63,7 +63,7 @@ infinite:
   data: 1
   item:
     glow: true
-    display: '&b&lCombustível Infinito &7(Máquinas)'
+    display: '&b&lCombustível Infinito'
     lore:
     - '&7A máquina nunca mais'
     - '&7fica sem combustível.'
