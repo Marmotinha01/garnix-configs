@@ -10,7 +10,7 @@ shape:
 
 sword-item-lore:
 - ''
-- '&8 ▪ &fDano: &c❤{damage} '
+- '&8 ▪ &fDano: &c{damage} '
 - ''
 
 sword-item-lore-hitkill:

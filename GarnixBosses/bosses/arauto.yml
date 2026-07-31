@@ -18,7 +18,7 @@ boss-icon:
     - '&7Consiga recompensas'
     - '&7abatendo este boss.'
     - ''
-    - '&8 ▪ &fVida: &c❤{health} '
+    - '&8 ▪ &fVida: &4❤{health} '
     - '&8 ▪ &fStacks: &7x{stacks} '
     - ''
     - '&dColoque-o em um terreno'

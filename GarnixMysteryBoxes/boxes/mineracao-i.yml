@@ -32,10 +32,10 @@ rewards:
     chance: 20
     display: '&8Azar'
     icon:
-      material: BARRIER
+      material: WEB
       display: '&8Azar'
       lore:
-      - '&7Não foi dessa vez...'
+      - '&7Não foi dessa vez.'
 
   armadura-i:
     type: COMMAND

@@ -12,7 +12,7 @@ boss-item-lore:
 - '&7Invoque este boss dentro'
 - '&7do seu próprio terreno.'
 - ''
-- '&8 ▪ &fVida: &c❤{health} '
+- '&8 ▪ &fVida: &4❤{health} '
 - '&8 ▪ &fRecompensas: &7{rewards} '
 - ''
 - '&eOpções de uso:'

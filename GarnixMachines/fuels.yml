@@ -52,7 +52,7 @@ default:
     - '&7Mantém a sua máquina'
     - '&7produzindo drops.'
     - ''
-    - '&8 ▪ &fLitros: &c{liters} '
+    - '&8 ▪ &fLitros: &7{liters} '
     - ''
     - '&eOpções de uso:'
     - '&fBotão direito &8➟ &7Aplicar'

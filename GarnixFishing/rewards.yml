@@ -77,7 +77,7 @@ rewards:
     chance: 8
     weight: 4
     xp: 15
-    type: COMMAND_ITEM
+    type: COMMAND
     command: give {player} diamond {amount}
     amount: 2
     display: '&bCarga de Diamantes'

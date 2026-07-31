@@ -55,7 +55,7 @@ rewards:
     amount: '250'
     icon:
       lore:
-      - '&fValor: &2$&a250 '
+      - '&fValor: &2$&a{amount}'
 
   secundaria:
     type: CURRENCY
@@ -64,7 +64,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&fValor: &5❋25 '
+      - '&fValor: &5❋{amount}'
 
   combustivel:
     type: COMMAND
@@ -76,34 +76,28 @@ rewards:
       material: COAL
       display: '&eCombustível'
       lore:
-      - '&7Mantém a sua máquina'
-      - '&7produzindo drops.'
-      - ''
-      - '&8 ▪ &fLitros: &c500 '
+      - '&fLitros: &7{amount}L'
 
   # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
   lim-armazem:
     type: COMMAND
     chance: 3
     display: '&2Limite de Armazém'
-    command: armazem givelimititem {player} 500 1
-    amount: 1
+    command: armazem givelimititem {player} {amount} 1
+    amount: 500
     icon:
       material: INK_SACK
       data: 2
       glow: true
       display: '&2Limite de Armazém'
       lore:
-      - '&7Aumente a capacidade de'
-      - '&7estoque do seu terreno.'
-      - ''
-      - '&8 ▪ &fQuantia: &a500 '
+      - '&fValor: &2∞{amount}'
 
   lim-maquina:
     type: COMMAND
     chance: 2.5
     display: '&9Limite de Máquinas'
-    command: maquina givelimite {player} 1 1
+    command: maquina givelimite {player} {amount} 1
     amount: 1
     icon:
       material: INK_SACK
@@ -111,16 +105,13 @@ rewards:
       glow: true
       display: '&9Limite de Máquinas'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&8 ▪ &fQuantia: &91 '
+      - '&fValor: &9∞{amount}'
 
   lim-spawner:
     type: COMMAND
     chance: 2
     display: '&bLimite de Spawners'
-    command: spawner givelimite {player} 1 1
+    command: spawner givelimite {player} {amount} 1
     amount: 1
     icon:
       material: INK_SACK
@@ -128,10 +119,7 @@ rewards:
       glow: true
       display: '&bLimite de Spawners'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b1 '
+      - '&fValor: &b∞{amount}'
 
   chave-vip:
     type: COMMAND
@@ -144,8 +132,8 @@ rewards:
       glow: true
       display: '&dChave VIP'
       lore:
-      - '&7Consiga jogando bastante'
-      - '&7no servidor todo dia.'
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
 
   chave-boss:
     type: COMMAND
@@ -158,8 +146,8 @@ rewards:
       glow: true
       display: '&4Chave Bosses'
       lore:
-      - '&7Consiga matando bosses'
-      - '&7em seu terreno.'
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
 
   chave-rankup:
     type: COMMAND
@@ -172,15 +160,15 @@ rewards:
       glow: true
       display: '&6Chave RankUP'
       lore:
-      - '&7Consiga subindo de rank'
-      - '&7ao longo da sua jornada.'
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
 
   # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
   booster-sementes-2x:
     type: COMMAND
     chance: 1.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} sementes 2 5m
+    command: fazenda givebooster {player} sementes 2 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -201,7 +189,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} coins 2 5m
+    command: fazenda givebooster {player} coins 2 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -237,8 +225,8 @@ rewards:
   skin-pedra:
     type: COMMAND
     chance: 0.06
-    display: '&8Skin de Pedra'
-    command: fazenda giveskin {player} pedra
+    display: '&7Skin de Pedra'
+    command: fazenda giveskin {player} pedra {amount}
     amount: 1
     icon:
       material: STONE_HOE
@@ -254,8 +242,8 @@ rewards:
   skin-ferro:
     type: COMMAND
     chance: 0.039
-    display: '&7Skin de Ferro'
-    command: fazenda giveskin {player} ferro
+    display: '&fSkin de Ferro'
+    command: fazenda giveskin {player} ferro {amount}
     amount: 1
     icon:
       material: IRON_HOE
@@ -301,4 +289,3 @@ rewards:
       display: '&8Azar'
       lore:
       - '&7Não foi dessa vez.'
-      - '&7Tente na próxima chave.'

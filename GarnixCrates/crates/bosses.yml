@@ -58,10 +58,7 @@ rewards:
       texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
       display: '&cBoss Colosso'
       lore:
-      - '&7Consiga recompensas'
-      - '&7abatendo este boss.'
-      - ''
-      - '&8 ▪ &fVida: &c❤25K '
+      - '&fVida: &4❤25K'
 
   # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
   boss-inferno:
@@ -74,10 +71,7 @@ rewards:
       texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
       display: '&6Boss Inferno'
       lore:
-      - '&7Consiga recompensas'
-      - '&7abatendo este boss.'
-      - ''
-      - '&8 ▪ &fVida: &c❤50K '
+      - '&fVida: &4❤50K'
 
   # ── RARA ────────────────────────────────────────────────────────── 0,4%
   boss-arauto:
@@ -90,10 +84,7 @@ rewards:
       texture: 38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677
       display: '&dBoss Arauto'
       lore:
-      - '&7Consiga recompensas'
-      - '&7abatendo este boss.'
-      - ''
-      - '&8 ▪ &fVida: &c❤75K '
+      - '&fVida: &4❤75K'
 
   matadora-sombria:
     type: COMMAND
@@ -120,10 +111,7 @@ rewards:
       texture: efec3e24551726cb3d64cbd1604a1a9f8a1e11693722a8aad5109a1fffa8d43c
       display: '&5Boss Titã'
       lore:
-      - '&7Consiga recompensas'
-      - '&7abatendo este boss.'
-      - ''
-      - '&8 ▪ &fVida: &c❤150K '
+      - '&fVida: &4❤150K'
 
   # ── RARÍSSIMA ─────────────────────────────────────────────────── 0,009%
   boss-devorador:
@@ -136,10 +124,7 @@ rewards:
       texture: ef93e9e1de7c1f721514968e4cd7c30082be02061a0e1ce91e67c3f0d70d5840
       display: '&4Boss Devorador'
       lore:
-      - '&7Consiga recompensas'
-      - '&7abatendo este boss.'
-      - ''
-      - '&8 ▪ &fVida: &c❤300K '
+      - '&fVida: &4❤300K'
 
   # ── JACKPOT ─────────────────────────────────────────────────────── 0,001%
   jackpot:
@@ -174,4 +159,3 @@ rewards:
       display: '&8Azar'
       lore:
       - '&7Não foi dessa vez.'
-      - '&7Tente na próxima chave.'
