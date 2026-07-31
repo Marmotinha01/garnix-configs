@@ -45,6 +45,7 @@ rod-skins:
     currency-bonus: 2
     max-weight: 6
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&3Skin de Coral'
       lore:
@@ -60,6 +61,7 @@ rod-skins:
     currency-bonus: 5
     max-weight: 10
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&6Skin de Escama'
       lore:
@@ -75,6 +77,7 @@ rod-skins:
     currency-bonus: 9
     max-weight: 15
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&7Skin de Prata'
       lore:
@@ -90,6 +93,7 @@ rod-skins:
     currency-bonus: 14
     max-weight: 22
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&bSkin de Turquesa'
       lore:
@@ -105,6 +109,7 @@ rod-skins:
     currency-bonus: 20
     max-weight: 32
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&aSkin de Abissita'
       lore:
@@ -120,6 +125,7 @@ rod-skins:
     currency-bonus: 28
     max-weight: 45
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&5Skin de Serenita'
       lore:
@@ -135,9 +141,9 @@ rod-skins:
     currency-bonus: 38
     max-weight: 65
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&1Skin de Oceanita'
-      glow: true
       lore:
       - ''
       - ' &8Especificações:'
@@ -151,9 +157,9 @@ rod-skins:
     currency-bonus: 50
     max-weight: 90
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&9Skin de Pérola'
-      glow: true
       lore:
       - ''
       - ' &8Especificações:'
@@ -167,9 +173,9 @@ rod-skins:
     currency-bonus: 65
     max-weight: 130
     icon:
+      glow: true
       material: FISHING_ROD
       display: '&dSkin de Tempestita'
-      glow: true
       lore:
       - ''
       - ' &8Especificações:'

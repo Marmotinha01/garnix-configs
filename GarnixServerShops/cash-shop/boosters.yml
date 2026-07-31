@@ -22,7 +22,7 @@ icon:
 
 broadcast-message:
 - ''
-- ' &6&lCASH SHOP &8- &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
+- ' &6&lSHOP &7{player} &fcomprou {item} &fpor {symbol_color}{symbol}{primary_color}{value}&f!'
 - ''
 
 products:
@@ -109,7 +109,7 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: &eDrops '
+      - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &71h '
       flags:
@@ -131,7 +131,7 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: &9Drops '
+      - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &71h '
       flags:
@@ -153,7 +153,7 @@ products:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: &2Venda de Cactos '
+      - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &71h '
       flags:
