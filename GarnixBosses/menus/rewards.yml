@@ -1,4 +1,4 @@
-title: Recompensas ▸ {boss}
+title: Recompensas - {boss}
 
 shape:
 - XXXXXXXXX
@@ -10,11 +10,10 @@ shape:
 
 reward-item-lore:
 - ''
-- '&8 ▪ &fChance: &7{chance} '
-- ''
+- '&8 ▪ &fChance: &c{chance} '
 
-reward-toggle-enabled: '&aClique para adicionar ao filtro.'
-reward-toggle-disabled: '&cClique para remover do filtro.'
+reward-toggle-enabled: '&cClique para parar de receber.'
+reward-toggle-disabled: '&aClique para voltar a receber.'
 
 sort-icon:
   slot: 50

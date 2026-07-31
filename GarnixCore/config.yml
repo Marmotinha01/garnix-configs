@@ -211,6 +211,10 @@ captcha:
 
 confirm:
   rows: 3
+  # Travamento anti-spam dos dois botoes, em ticks. Um cliente consegue mandar
+  # varios pacotes de clique no mesmo tick e cada um dispararia a acao inteira.
+  # Nao baixe para 0: e a barreira que vale para TODOS os menus de confirmacao.
+  interaction-delay: 20
   confirm:
     slot: 15
     material: STAINED_GLASS_PANE
