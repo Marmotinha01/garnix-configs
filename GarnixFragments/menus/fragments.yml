@@ -3,11 +3,9 @@ title: Suas Runas
 # . = runa (paginada)  | < = página anterior  | > = próxima página
 shape:
 - XXXXXXXXX
-- XX.....XX
-- <X.....X>
-- XX.....XX
+- X.X.X.X.X
 - XXXXXXXXX
-- XXXXXXXXX
+- XXX<X>XXX
 
 empty-icon:
   slot: 22
@@ -18,7 +16,7 @@ empty-icon:
   - '&7Nenhuma runa encontrada.'
 
 shop-icon:
-  slot: 49
+  slot: 31
   material: EMERALD
   display: '&aLoja de Runas'
   lore:
