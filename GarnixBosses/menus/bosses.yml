@@ -15,8 +15,7 @@ boss-item-lore:
 - '&8 ▪ &fVida: &4❤{health} '
 - '&8 ▪ &fRecompensas: &7{rewards} '
 - ''
-- '&eOpções de uso:'
-- '&fBotão esquerdo &8➟ &7Recompensas'
+- '&eClique para ver as recompensas.'
 
 back-icon:
   slot: 49

@@ -35,6 +35,8 @@ rewards:
     icon:
       material: WEB
       display: '&8Azar'
+      lore:
+      - '&7Não foi dessa vez.'
 
   coins:
     type: CURRENCY

@@ -12,6 +12,11 @@ reward-item-lore:
 - ''
 - '&8 ▪ &fChance: &c{chance} '
 
+# Sufixo exclusivo do azar. Sem o bloco de toggle, a lore dele terminava colada na
+# linha da chance enquanto todas as outras fecham com uma linha em branco.
+bad-luck-lore:
+- ''
+
 reward-toggle-enabled: '&cClique para parar de receber.'
 reward-toggle-disabled: '&aClique para voltar a receber.'
 
