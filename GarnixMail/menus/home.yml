@@ -68,9 +68,43 @@ send-package-icon:
   - ''
   - '&bClique para enviar.'
 
+# ── Leitura do {total} ─────────────────────────────────────────────────
+# O {total} e a quantia REAL que o correio entrega, somando todas as linhas
+# agrupadas naquele icone. Como o mesmo numero significa coisas diferentes,
+# o simbolo na frente dele muda:
+#
+#   chaves, itens  ▶  x165      (quantia de itens)
+#   moedas         ▶  $1.500    (valor — vem do proprio GarnixCurrencies)
+#   limites        ▶  ∞1.500    (valor — vem do command-totals abaixo)
+
+# Usado quando nao e moeda e nao casa em nenhum command-totals.
+default-total:
+  symbol: 'x'
+  symbol-color: '&a'
+  primary-color: '&a'
+
+# Comandos cujo {total} e um VALOR, nao uma quantia de itens.
+# Os limites entram aqui porque a caixa da o ITEM de limite por comando, e nao
+# um deposito de saldo — entao nem maquinas e spawners, que sao moedas de
+# verdade, seriam reconhecidos sozinhos. A cor acompanha a lore da recompensa.
+# A chave casa com o COMECO do comando; a primeira que casar vence.
+command-totals:
+  'armazem givelimititem':
+    symbol: '∞'
+    symbol-color: '&2'
+    primary-color: '&2'
+  'maquina givelimite':
+    symbol: '∞'
+    symbol-color: '&9'
+    primary-color: '&9'
+  'spawner givelimite':
+    symbol: '∞'
+    symbol-color: '&b'
+    primary-color: '&b'
+
 mail-lore:
 - ''
-- '&8 ▪ &fTotal: &ax{total} '
+- '&8 ▪ &fTotal: {symbol_color}{symbol}{primary_color}{total} '
 - '&8 ▪ &fRemetente: &7{sender} '
 - '&8 ▪ &fData: &7{date} '
 - ''
