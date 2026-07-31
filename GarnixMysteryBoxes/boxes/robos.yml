@@ -58,7 +58,7 @@ rewards:
       display: '&bRobô Raro'
       lore:
       - '&7Abre as chaves por você e'
-      - '&7deixa os prêmios melhores.'
+      - '&7aumenta suas chances raras.'
       - ''
       - ' &8Informações: '
       - ' &8▪ &fAbre chaves a cada &a&l10&as&f. '
@@ -77,7 +77,7 @@ rewards:
       display: '&dRobô Épico'
       lore:
       - '&7Abre as chaves por você e'
-      - '&7deixa os prêmios melhores.'
+      - '&7aumenta suas chances raras.'
       - ''
       - ' &8Informações: '
       - ' &8▪ &fAbre chaves a cada &a&l6&as&f. '
@@ -96,7 +96,7 @@ rewards:
       display: '&4Robô Lendário'
       lore:
       - '&7Abre as chaves por você e'
-      - '&7deixa os prêmios melhores.'
+      - '&7aumenta suas chances raras.'
       - ''
       - ' &8Informações: '
       - ' &8▪ &fAbre chaves a cada &a&l4&as&f. '
@@ -115,7 +115,7 @@ rewards:
       display: '&6Robô Mítico'
       lore:
       - '&7Abre as chaves por você e'
-      - '&7deixa os prêmios melhores.'
+      - '&7aumenta suas chances raras.'
       - ''
       - ' &8Informações: '
       - ' &8▪ &fAbre chaves a cada &a&l2&as&f. '
