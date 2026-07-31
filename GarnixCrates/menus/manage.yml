@@ -21,12 +21,10 @@ bad-luck-lore:
 filter-status:
   is-filtered:
   - ''
-  - '&7Clique para &cremover&7 essa'
-  - '&7recompensa do seu filtro.'
+  - '&aClique para voltar a receber.'
   not-filtered:
   - ''
-  - '&7Clique para &aadicionar&7 essa'
-  - '&7recompensa ao seu filtro.'
+  - '&cClique para parar de receber.'
 
 back-icon:
   slot: 47
