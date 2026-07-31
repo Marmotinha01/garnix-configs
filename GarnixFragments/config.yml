@@ -3,8 +3,8 @@
 #               {color} = cor da própria runa (&4 na Sagrada, &2 na Eterna...).
 fragment-lore:
 - ''
-- '&8 ▪ &fQuantia: &e{amount} &7runa(s) '
+- '&8 ▪ &fQuantia: {color}{amount} '
 - ''
 - '{color}Opções de uso:'
-- '&fBotão direito &8➟ &7Ativar todos'
+- '&fBotão direito &8➟ &7Armazenar'
 - '&fBotão dir. + SHIFT &8➟ &7Juntar'
