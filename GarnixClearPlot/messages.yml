@@ -1,9 +1,9 @@
 give:
-  success: '&aVocê entregou &fx{amount} &aLimpador de Terreno para &f{player}&a.'
-  received: '&aVocê recebeu &fx{amount} &aLimpador de Terreno&a.'
+  success: '&aVocê entregou &f{amount}x &aLimpador de Terreno para &f{player}&a.'
+  received: '&aVocê recebeu &f{amount}x &aLimpador de Terreno&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
+  mailed: '&eVocê está em um evento! &f{amount}x &eLimpador de Terreno foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! Os Limpadores que sobraram foram para o seu &6/correio&e.'
 
 usage:
   not-on-plot: '&cVocê precisa estar dentro de um terreno para usar isto.'
@@ -11,18 +11,20 @@ usage:
   not-owner: '&cApenas o dono do terreno pode limpá-lo.'
   already-clearing: '&cEste terreno já está sendo limpo.'
   no-allowed-blocks: '&cNenhum bloco está configurado para ser removido.'
+  # Mostrada quando o item saiu da mão entre o clique e o confirmar (drop com Q).
+  item-not-in-hand: '&cVocê precisa estar segurando o Limpador de Terreno.'
 
 clear:
-  confirmed: '&aLimpeza iniciada. Acompanhe o progresso na action bar.'
+  confirmed: '&aLimpeza iniciada! Acompanhe o progresso na action bar.'
   cancelled: '&7Limpeza cancelada.'
-  complete: '&aLimpeza concluída em &f{duration}&a. &7Blocos removidos: &f{cleared}'
+  complete: '&aLimpeza concluída! &f{cleared} &ablocos removidos em &f{duration}&a.'
   interrupted: '&eA limpeza do seu terreno foi interrompida.'
 
 command:
-  no-permission: '&cVocê não tem permissão.'
+  no-permission: '&cVocê não tem permissão para usar este comando.'
   player-not-found: '&cJogador &f{input} &cnão encontrado.'
   list-header: '&7Limpezas ativas: &f{count}'
-  list-entry: '  &8▪ &f{plot} &7(dono: &f{owner}&7, &f{percent}%&7)'
+  list-entry: '&8• &f{plot} &7(dono: &f{owner}&7, &f{percent}%&7)'
   list-empty: '&7Nenhuma limpeza ativa no momento.'
   stopall: '&aTodas as limpezas foram canceladas. &7({count})'
 

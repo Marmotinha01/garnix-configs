@@ -1,17 +1,19 @@
 give:
-  success: '&aVocê entregou &fx{amount} &aTorre de Cacto de &f{floors} &aandares para &f{player}&a.'
-  received: '&aVocê recebeu &fx{amount} &aTorre de Cacto de &f{floors} &aandares&a.'
+  success: '&aVocê entregou &f{amount}x &aTorre de Cacto de &f{floors} &aandares para &f{player}&a.'
+  received: '&aVocê recebeu &f{amount}x &aTorre de Cacto de &f{floors} &aandares&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
+  mailed: '&eVocê está em um evento! &f{amount}x &eTorre de Cacto de &f{floors} &eandares foi para o seu &6/correio&e.'
+  leftover: '&eSeu inventário encheu! As Torres de Cacto que sobraram foram para o seu &6/correio&e.'
 
 place:
-  success: '&aTorre de Cacto construída.'
+  success: '&aTorre de Cacto construída!'
   cannot-place: '&cVocê só pode construir a torre dentro do seu terreno.'
   cancelled: '&7Construção cancelada.'
+  # Mostrada quando o item saiu da mão entre o clique e o confirmar (drop com Q).
+  item-not-in-hand: '&cVocê precisa estar segurando a Torre de Cacto.'
 
 command:
-  no-permission: '&cVocê não tem permissão.'
+  no-permission: '&cVocê não tem permissão para usar este comando.'
   player-not-found: '&cJogador &f{input} &cnão encontrado.'
 
 reload-success: '&aConfigurações recarregadas com sucesso.'
