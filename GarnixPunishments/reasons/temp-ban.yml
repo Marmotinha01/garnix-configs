@@ -5,6 +5,7 @@ title: Motivos - Ban Temporário
 rows: 6
 
 item-lore:
+- ''
 - '&8 ▪ &fDuração: &7{duration} '
 - ''
 - '&aClique para selecionar.'
@@ -64,7 +65,7 @@ reasons:
 
   # Capítulo 5 — economia e patrimônio
   scam:
-    slot: 15
+    slot: 25
     display: 'Golpe (Art. 5.1)'
     icon: EMERALD
     duration: 30d

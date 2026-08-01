@@ -2,9 +2,10 @@
 #   duration is required per reason (that's the "tempo certinho" applied).
 
 title: Motivos - Mute Temporário
-rows: 6
+rows: 4
 
 item-lore:
+- ''
 - '&8 ▪ &fDuração: &7{duration} '
 - ''
 - '&aClique para selecionar.'
@@ -17,7 +18,7 @@ no-permission-icon:
   - '&7este motivo de punição.'
 
 back-icon:
-  slot: 49
+  slot: 31
   texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
   display: '&eVoltar'
   lore:

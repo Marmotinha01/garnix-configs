@@ -7,9 +7,10 @@
 #   reasons.<id>          — display / icon / data / slot / permission (no duration = permanent)
 
 title: Motivos - Banimento
-rows: 6
+rows: 5
 
 item-lore:
+- ''
 - '&8 ▪ &fDuração: &7{duration} '
 - ''
 - '&aClique para selecionar.'
@@ -22,7 +23,7 @@ no-permission-icon:
   - '&7este motivo de punição.'
 
 back-icon:
-  slot: 49
+  slot: 40
   texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
   display: '&eVoltar'
   lore:
@@ -33,7 +34,7 @@ reasons:
 
   # Capítulo 4 — divulgação
   link-malicioso:
-    slot: 10
+    slot: 11
     display: 'Link malicioso ou phishing (Art. 4.4)'
     icon: TRIPWIRE_HOOK
 
@@ -43,33 +44,33 @@ reasons:
     display: 'Venda por dinheiro real concluída (Art. 5.6)'
     icon: GOLD_BLOCK
   chargeback:
-    slot: 14
+    slot: 13
     display: 'Estorno de compra (Art. 5.8)'
     icon: GOLD_INGOT
 
   # Capítulo 6 — trapaça
   hack:
-    slot: 16
+    slot: 14
     display: 'Uso de hack ou client alterado (Art. 6.1)'
     icon: DIAMOND_SWORD
   macro:
-    slot: 19
+    slot: 15
     display: 'Macro e automação (Art. 6.4)'
     icon: DISPENSER
 
   # Capítulo 7 — conta e identidade
   falsa-identidade-golpe:
-    slot: 21
+    slot: 20
     display: 'Se passar por staff para golpe (Art. 7.4)'
     icon: SKULL_ITEM
     data: 3
   evasao-punicao:
-    slot: 23
+    slot: 21
     display: 'Fugir da punição em outra conta (Art. 7.5)'
     icon: ENDER_PEARL
 
   # Capítulo 8 — denúncias e suporte
   prova-forjada:
-    slot: 25
+    slot: 22
     display: 'Prova falsificada contra outro (Art. 8.3)'
     icon: WRITTEN_BOOK
