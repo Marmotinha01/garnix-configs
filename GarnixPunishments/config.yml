@@ -42,6 +42,15 @@ labels:
     expired: '&7Expirada'
     revoked: '&cRevogada'
 
+# LuckPerms groups that are immune to punishment. Immunity is NOT a permission — it lives here, so
+# no wildcard can hand it out by accident. Membership resolves through inheritance: a group that
+# inherits a listed one is immune too, without being listed. Leave the list empty for nobody immune.
+#
+# Careful: an immune account is also untouchable by /check and /dupeip, and an IP ban is refused in
+# full when ANY known account on that address is immune — including an alt of the immune player.
+exempt-groups:
+- master
+
 # Commands a muted player cannot use (chat bypass prevention). Lowercase, no slash.
 mute-blocked-commands:
 - g

@@ -12,7 +12,7 @@ commands:
     duplicate: '&c{player} já possui uma punição ativa desse tipo.'
     self: '&cVocê não pode se punir.'
     no-ip: '&cNão há um IP registrado para {player} (ele nunca entrou).'
-    exempt-alt: '&cNão é possível: uma conta imune está online neste IP.'
+    exempt-alt: '&cNão é possível: há uma conta imune neste IP.'
     error: '&cErro ao aplicar punição: {error}'
   pardon:
     success: '&a{player} foi perdoado de {count} punição(ões).'
@@ -246,7 +246,6 @@ revoke-messages:
   - '  &f{player} &7não está mais banido.'
   - ''
   - '  &8▪ &fPunição: &7Banimento'
-  - '  &8▪ &fID: &7#{code}'
   - '  &8▪ &fStaff: &7{staff}'
   - ''
   tempban:
@@ -255,7 +254,6 @@ revoke-messages:
   - '  &f{player} &7não está mais banido.'
   - ''
   - '  &8▪ &fPunição: &7Banimento Temporário'
-  - '  &8▪ &fID: &7#{code}'
   - '  &8▪ &fStaff: &7{staff}'
   - ''
   mute:
@@ -264,7 +262,6 @@ revoke-messages:
   - '  &f{player} &7não está mais silenciado.'
   - ''
   - '  &8▪ &fPunição: &7Mute'
-  - '  &8▪ &fID: &7#{code}'
   - '  &8▪ &fStaff: &7{staff}'
   - ''
   tempmute:
@@ -273,7 +270,6 @@ revoke-messages:
   - '  &f{player} &7não está mais silenciado.'
   - ''
   - '  &8▪ &fPunição: &7Mute Temporário'
-  - '  &8▪ &fID: &7#{code}'
   - '  &8▪ &fStaff: &7{staff}'
   - ''
   warn:
@@ -282,7 +278,6 @@ revoke-messages:
   - '  &f{player} &7teve um aviso removido.'
   - ''
   - '  &8▪ &fPunição: &7Aviso'
-  - '  &8▪ &fID: &7#{code}'
   - '  &8▪ &fStaff: &7{staff}'
   - ''
   ipban:
@@ -291,7 +286,6 @@ revoke-messages:
   - '  &f{player} &7não está mais banido por IP.'
   - ''
   - '  &8▪ &fPunição: &7Banimento de IP'
-  - '  &8▪ &fID: &7#{code}'
   - '  &8▪ &fStaff: &7{staff}'
   - ''
   # Full pardon (all punishments at once — no single id)

@@ -318,7 +318,7 @@ Usado em dois grupos, e só neles:
 Limitações técnicas que a equipe precisa conhecer:
 - Atinge apenas o **último IP conhecido**; quem trocou de IP não é alcançado.
 - Falha se o alvo nunca teve IP registrado.
-- É recusado por inteiro se houver conta **isenta** online no mesmo IP.
+- É recusado por inteiro se **qualquer** conta conhecida naquele IP for de um grupo isento — online ou não, e mesmo que seja uma alt antiga.
 - Atinge **todas as contas** do endereço. Quem for atingido por engano não tem código — aceitar contestação **por nick**.
 - **`/perdoar` remove todos os bans de IP** ligados ao jogador. Nunca use em conta coberta por ban de IP.
 
@@ -330,7 +330,7 @@ Limitações técnicas que a equipe precisa conhecer:
 2. **Punição sem prova anexada é falta disciplinar.** O bypass existe para emergência, não para pular a prova.
 3. **Conflito de interesse é vedado** — não punir rival de plot, sócio, cliente ou parte de negociação própria.
 4. **Punição silenciosa** é para casos que não devem ser divulgados, não para esconder erro.
-5. **Isenção não é privilégio.** Conta isenta online derruba o ban de IP inteiro do endereço.
+5. **Isenção não é privilégio.** Ela vem do **grupo** no `exempt-groups` do config, não de permissão — e uma conta isenta que já passou por um endereço derruba o ban de IP inteiro dele, mesmo offline. Cargo isento que loga na casa de terceiro inutiliza o ban de IP daquele endereço.
 6. **Revogação e edição são auditadas.** Editar a duração preserva o código; revogar e reaplicar gera código novo e exige avisar o jogador.
 7. **Console é sempre silencioso e não registra artigo.** Use o menu sempre que houver artigo aplicável.
 8. **`/checkid` é ferramenta interna.** Não oriente jogador a usá-lo — ele só tem o código.
@@ -414,10 +414,20 @@ O **display** de cada motivo termina em `(Art. X.Y)`, porque é ele que vira o t
 
 ### Permissões sugeridas
 
-- **Moderação júnior:** `punishments.punish` + `punishments.type.warn`, `punishments.type.tempmute` e `punishments.type.tempban`. Isso libera todo o `warn.yml`, todo o `temp-mute.yml` e os `temp-ban` de 3d e 7d.
-- **Restrito a sênior pelo tipo:** `punishments.type.ban`, `punishments.type.ipban` e `punishments.type.mute` fecham os três arquivos inteiros de uma vez — o `TypeMenu` já checa esse nó antes de abrir a lista de motivos. Não é preciso repetir permissão motivo a motivo neles.
-- **Restrito a sênior pelo motivo:** os `temp-ban` de 15d e 30d, que dividem o mesmo tipo com os de 3d e 7d e por isso só se separam individualmente. Cada um leva `permission: punishments.reason.<id>` no próprio arquivo.
-- **Não existe teto de duração por cargo.** `punishments.duration.max.<tempo>` está declarado em `Permissions.java` mas nunca é lido, e o fluxo do `/punir` não deixa a equipe digitar duração — ela vem sempre do motivo escolhido. Quem controla a duração é a permissão do motivo.
+São **dois grupos**, declarados no `plugin.yml` do plugin. Cada cargo recebe **um** nó e herda o resto — não se distribui permissão solta, e mudar o que um cargo pode fazer é mexer num lugar só.
+
+| Cargo | Nó único | Aplica | Revisa | Vê IP |
+|---|---|---|:--:|:--:|
+| **Ajudante** | `punishments.grupo.ajudante` | aviso e mute temporário | não | não |
+| **Moderador** | `punishments.grupo.moderador` | **todos** os tipos | não | não |
+| **Acima de moderador** | `punishments.*` | todos os tipos | sim | sim |
+
+- **Ajudante** leva `/punir` (só com os tipos aviso e mute temporário no menu), `/check`, `/checkid` e os alertas de moderação. O `TypeMenu` **esconde** os tipos sem permissão, então ele nem chega a ver a opção de banimento.
+- **Moderador** ganha os outros quatro tipos, o `/staff`, a aba de alts e a punição silenciosa. Aplicar ban de IP **não** exige ver IP nenhum.
+- **Revisão é dos superiores.** Revogar, editar e `/perdoar` ficam fora do moderador — casa com o §9.3, onde a revisão é resposta a ticket com código, não decisão de quem aplicou.
+- **Ninguém abaixo de superior vê IP.** O único ponto que imprime o IP cru é o cabeçalho do `/dupeip`. A aba de alts do `/check` lista as contas do mesmo endereço sem mostrar o endereço, então ela pode ficar com o moderador.
+- **Sem permissão por motivo.** Como o ajudante não tem ban temporário e o moderador tem tudo, nada mais se separa dentro de um mesmo tipo: os 16 `punishments.reason.<id>` que existiam no `temp-ban.yml` foram removidos. O mecanismo continua no plugin para o dia em que existir um cargo intermediário.
+- **Não existe teto de duração por cargo.** `punishments.duration.max.<tempo>` está declarado em `Permissions.java` mas nunca é lido, e o fluxo do `/punir` não deixa a equipe digitar duração — ela vem sempre do motivo escolhido.
 
 ### Migração do que já existe
 
