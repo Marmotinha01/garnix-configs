@@ -13,7 +13,7 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂50 cash '
-    - '&8 ▪ &6x&l1 &6&lCaixa Garnix '
+    - '&8 ▪ &6x&l1 &6Caixa Garnix '
     - ''
 
 rewards:
@@ -32,7 +32,7 @@ rewards:
     icon:
       material: ENDER_CHEST
       glow: true
-      display: '&6&lCaixa Garnix'
+      display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

@@ -219,13 +219,13 @@ rewards:
   jackpot:
     type: COMMAND
     chance: 0.05
-    display: '&6&lCaixa Garnix'
+    display: '&6Caixa Garnix'
     command: caixas give garnix {player} {amount}
     amount: 1
     icon:
       material: ENDER_CHEST
       glow: true
-      display: '&6&lCaixa Garnix'
+      display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

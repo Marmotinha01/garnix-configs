@@ -306,14 +306,14 @@ rewards:
   garnix:
     type: COMMAND
     chance: 3
-    display: '&6&lCaixa Garnix'
+    display: '&6Caixa Garnix'
     command: caixas give garnix {player} {amount}
     amount: 1
     icon:
       material: ENDER_CHEST
       amount: 1
       glow: true
-      display: '&6&lCaixa Garnix'
+      display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -321,14 +321,14 @@ rewards:
   garnix-x2:
     type: COMMAND
     chance: 1
-    display: '&6&lCaixa Garnix'
+    display: '&6Caixa Garnix'
     command: caixas give garnix {player} {amount}
     amount: 2
     icon:
       material: ENDER_CHEST
       amount: 2
       glow: true
-      display: '&6&lCaixa Garnix'
+      display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

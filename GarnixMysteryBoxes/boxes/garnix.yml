@@ -8,7 +8,7 @@ weight: 120
 box-item:
   material: ENDER_CHEST
   glow: true
-  display: '&6&lCaixa Garnix'
+  display: '&6Caixa Garnix'
   lore:
   - '&7Abra e descubra o que a sorte'
   - '&7guardou para você lá dentro.'
