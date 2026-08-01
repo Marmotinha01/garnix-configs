@@ -56,7 +56,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l2&a% &aCoins '
       - '&8 ▪ &a+&l1&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -75,7 +74,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -94,7 +92,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l9&a% &aCoins '
       - '&8 ▪ &a+&l5&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -113,7 +110,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l14&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -132,7 +128,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l20&a% &aCoins '
       - '&8 ▪ &a+&l12&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -152,7 +147,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l2&a% &aCoins '
       - '&8 ▪ &a+&l1&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -171,7 +165,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -190,7 +183,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l9&a% &aCoins '
       - '&8 ▪ &a+&l5&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -209,7 +201,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l14&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -228,7 +219,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l20&a% &aCoins '
       - '&8 ▪ &a+&l12&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -249,7 +239,6 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l2% &3Corais '
       - '&8 ▪ &cPeso até &l6&ckg '
-      - ''
 
   pesca-escama:
     type: COMMAND
@@ -267,7 +256,6 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l5% &3Corais '
       - '&8 ▪ &cPeso até &l10&ckg '
-      - ''
 
   pesca-prata:
     type: COMMAND
@@ -285,7 +273,6 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l9% &3Corais '
       - '&8 ▪ &cPeso até &l15&ckg '
-      - ''
 
   pesca-turquesa:
     type: COMMAND
@@ -303,7 +290,6 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l14% &3Corais '
       - '&8 ▪ &cPeso até &l22&ckg '
-      - ''
 
   pesca-abissita:
     type: COMMAND
@@ -321,4 +307,3 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l20% &3Corais '
       - '&8 ▪ &cPeso até &l32&ckg '
-      - ''

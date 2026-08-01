@@ -49,10 +49,9 @@ rewards:
       display: '&7Capacete Pesca &7[Tier &lI&7]'
       lore:
       - ''
-      - ' &8Bônus: '
+      - ' &8Especificações '
       - '&8 ▪ &a+&l1.5&a% &3Corais '
       - '&8 ▪ &a+&l1&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -68,10 +67,9 @@ rewards:
       display: '&aPeitoral Pesca &a[Tier &lII&a]'
       lore:
       - ''
-      - ' &8Bônus: '
+      - ' &8Especificações '
       - '&8 ▪ &a+&l3&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -87,10 +85,9 @@ rewards:
       display: '&bCalça Pesca &b[Tier &lIII&b]'
       lore:
       - ''
-      - ' &8Bônus: '
+      - ' &8Especificações '
       - '&8 ▪ &a+&l5&a% &3Corais '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -109,7 +106,6 @@ rewards:
       - ' &8Especificações:'
       - '&8 ▪ &a+&l9% &3Corais '
       - '&8 ▪ &cPeso até &l15&ckg '
-      - ''
 
   forja:
     type: COMMAND

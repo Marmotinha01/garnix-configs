@@ -5,7 +5,7 @@ item:
   color: "#FFAA00"
   lore:
     - ""
-    - " &8Bônus: "
+    - " &8Especificações: "
     - "{bonus}"
     - ""
   flags: ["HIDE_ATTRIBUTES"]

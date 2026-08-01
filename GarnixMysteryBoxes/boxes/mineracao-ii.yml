@@ -49,11 +49,10 @@ rewards:
       display: '&bBota Mineração &b[Tier &lIII&b]'
       lore:
       - ''
-      - ' &8Bônus: '
+      - ' &8Especificações '
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &dGemas '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -69,11 +68,10 @@ rewards:
       display: '&dPeitoral Mineração &d[Tier &lIV&d]'
       lore:
       - ''
-      - ' &8Bônus: '
+      - ' &8Especificações '
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &dGemas '
       - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -89,11 +87,10 @@ rewards:
       display: '&6Calça Mineração &6[Tier &lV&6]'
       lore:
       - ''
-      - ' &8Bônus: '
+      - ' &8Especificações '
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &dGemas '
       - '&8 ▪ &a+&l8&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -111,7 +108,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l17&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -130,7 +126,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l25&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 

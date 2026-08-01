@@ -60,7 +60,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l17&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -80,7 +79,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l25&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -100,7 +98,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l50&a% &aCoins '
       - '&8 ▪ &a+&l34&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -120,7 +117,6 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l45&a% &dGemas '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -140,7 +136,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l17&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -162,7 +157,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l25&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -182,7 +176,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l50&a% &aCoins '
       - '&8 ▪ &a+&l34&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -202,7 +195,6 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l45&a% &5Sementes '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -223,7 +215,6 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l28% &3Corais '
       - '&8 ▪ &cPeso até &l45&ckg '
-      - ''
 
   pesca-oceanita:
     type: COMMAND
@@ -241,7 +232,6 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l38% &3Corais '
       - '&8 ▪ &cPeso até &l65&ckg '
-      - ''
 
   pesca-perola:
     type: COMMAND
@@ -259,7 +249,6 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l50% &3Corais '
       - '&8 ▪ &cPeso até &l90&ckg '
-      - ''
 
   pesca-tempestita:
     type: COMMAND
@@ -277,4 +266,3 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - '&8 ▪ &a+&l65% &3Corais '
       - '&8 ▪ &cPeso até &l130&ckg '
-      - ''
