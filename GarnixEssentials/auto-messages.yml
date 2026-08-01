@@ -24,7 +24,7 @@ messages:
   regras:
   - ''
   - '  &cFique atento as &lregras &cdo servidor!'
-  - '  <hover(&7Clique para acessar!)&4https://redegarnix.com/rules>'
+  - '  <hover(&7Clique para acessar!)&4https://regras.redegarnix.com>'
   - ''
   
   vincular:

@@ -17,5 +17,5 @@ commands:
     - regra
     send-msg:
     - ''
-    - '  &4&lREGRAS &8▶ &7https://redegarnix.com/rules '
+    - '  &4&lREGRAS &8▶ &7https://regras.redegarnix.com '
     - ''
