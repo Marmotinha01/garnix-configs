@@ -140,7 +140,6 @@ rewards:
     amount: 1
     icon:
       material: TRAPPED_CHEST
-      glow: true
       display: '&5Caixa Runas'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -181,7 +180,6 @@ rewards:
     amount: 1
     icon:
       material: TRAPPED_CHEST
-      glow: true
       display: '&aCaixa Booster'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -195,7 +193,6 @@ rewards:
     amount: 1
     icon:
       material: ENDER_CHEST
-      glow: true
       display: '&dCaixa Caixas'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -209,7 +206,6 @@ rewards:
     amount: 1
     icon:
       material: TRAPPED_CHEST
-      glow: true
       display: '&cCaixa Robôs'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -224,7 +220,6 @@ rewards:
     amount: 1
     icon:
       material: ENDER_CHEST
-      glow: true
       display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'

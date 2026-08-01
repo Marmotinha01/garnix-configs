@@ -31,7 +31,6 @@ rewards:
     amount: 1
     icon:
       material: CHEST
-      glow: true
       display: '&eCaixa Mineração &7[Tier &lI&7]'
       lore:
       - '&7Abra e descubra o que a sorte'

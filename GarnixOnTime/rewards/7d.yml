@@ -31,7 +31,6 @@ rewards:
     amount: 1
     icon:
       material: TRAPPED_CHEST
-      glow: true
       display: '&aCaixa Farm &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'

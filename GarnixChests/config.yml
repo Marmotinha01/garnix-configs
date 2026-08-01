@@ -51,7 +51,6 @@ chest:
   activator-item:
     material: CHEST
     display: '&6Ativador de Baú'
-    glow: true
     lore:
     - '&7Libera mais um baú na'
     - '&7sua lista de baús.'

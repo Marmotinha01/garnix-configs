@@ -7,7 +7,6 @@ weight: 110
 
 box-item:
   material: ENDER_CHEST
-  glow: true
   display: '&dCaixa Caixas'
   lore:
   - '&7Abra e descubra o que a sorte'
@@ -42,7 +41,6 @@ rewards:
     icon:
       material: CHEST
       amount: 1
-      glow: true
       display: '&6Caixa Mineração &6[Tier &lI&6]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -57,7 +55,6 @@ rewards:
     icon:
       material: CHEST
       amount: 2
-      glow: true
       display: '&6Caixa Mineração &6[Tier &lI&6]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -72,7 +69,6 @@ rewards:
     icon:
       material: CHEST
       amount: 1
-      glow: true
       display: '&aCaixa Farm &a[Tier &lI&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -87,7 +83,6 @@ rewards:
     icon:
       material: CHEST
       amount: 2
-      glow: true
       display: '&aCaixa Farm &a[Tier &lI&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -102,7 +97,6 @@ rewards:
     icon:
       material: CHEST
       amount: 1
-      glow: true
       display: '&bCaixa Pesca &b[Tier &lI&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -117,7 +111,6 @@ rewards:
     icon:
       material: CHEST
       amount: 2
-      glow: true
       display: '&bCaixa Pesca &b[Tier &lI&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -132,7 +125,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 1
-      glow: true
       display: '&6Caixa Mineração &6[Tier &lII&6]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -147,7 +139,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 2
-      glow: true
       display: '&6Caixa Mineração &6[Tier &lII&6]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -162,7 +153,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 1
-      glow: true
       display: '&aCaixa Farm &a[Tier &lII&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -177,7 +167,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 2
-      glow: true
       display: '&aCaixa Farm &a[Tier &lII&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -192,7 +181,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 1
-      glow: true
       display: '&bCaixa Pesca &b[Tier &lII&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -207,7 +195,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 2
-      glow: true
       display: '&bCaixa Pesca &b[Tier &lII&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -222,7 +209,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 1
-      glow: true
       display: '&bCaixa Máquinas'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -237,7 +223,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 2
-      glow: true
       display: '&bCaixa Máquinas'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -252,7 +237,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 1
-      glow: true
       display: '&aCaixa Booster'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -267,7 +251,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 2
-      glow: true
       display: '&aCaixa Booster'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -282,7 +265,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 1
-      glow: true
       display: '&5Caixa Runas'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -297,7 +279,6 @@ rewards:
     icon:
       material: TRAPPED_CHEST
       amount: 2
-      glow: true
       display: '&5Caixa Runas'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -312,7 +293,6 @@ rewards:
     icon:
       material: ENDER_CHEST
       amount: 1
-      glow: true
       display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -327,7 +307,6 @@ rewards:
     icon:
       material: ENDER_CHEST
       amount: 2
-      glow: true
       display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'

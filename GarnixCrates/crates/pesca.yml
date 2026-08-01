@@ -223,7 +223,6 @@ rewards:
     amount: 1
     icon:
       material: CHEST
-      glow: true
       display: '&bCaixa Pesca &b[Tier &lI&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -271,7 +270,6 @@ rewards:
     amount: 1
     icon:
       material: TRAPPED_CHEST
-      glow: true
       display: '&bCaixa Pesca &b[Tier &lII&b]'
       lore:
       - '&7Abra e descubra o que a sorte'

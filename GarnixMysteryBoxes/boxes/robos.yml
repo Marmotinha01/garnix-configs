@@ -7,7 +7,6 @@ weight: 60
 
 box-item:
   material: TRAPPED_CHEST
-  glow: true
   display: '&cCaixa Robôs'
   lore:
   - '&7Abra e descubra o que a sorte'

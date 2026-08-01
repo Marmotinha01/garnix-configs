@@ -44,7 +44,6 @@ products:
     - 'caixas give mineracao-ii {player} 1'
     item:
       material: TRAPPED_CHEST
-      glow: true
       display: '&eCaixa Mineração &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -60,7 +59,6 @@ products:
     - 'caixas give farm-ii {player} 1'
     item:
       material: TRAPPED_CHEST
-      glow: true
       display: '&aCaixa Farm &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -76,7 +74,6 @@ products:
     - 'caixas give pesca-ii {player} 1'
     item:
       material: TRAPPED_CHEST
-      glow: true
       display: '&bCaixa Pesca &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -107,7 +104,6 @@ products:
     - 'caixas give robos {player} 1'
     item:
       material: TRAPPED_CHEST
-      glow: true
       display: '&cCaixa Robôs'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -143,7 +139,6 @@ products:
     - 'caixas give garnix {player} 1'
     item:
       material: ENDER_CHEST
-      glow: true
       display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'

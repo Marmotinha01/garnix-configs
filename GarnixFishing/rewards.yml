@@ -104,7 +104,6 @@ rewards:
       display: '&6&lTesouro do Mar'
       lore:
       - '&7Uma chave de caixa exclusiva!'
-      glow: true
 
   # ── AS 20 RECOMPENSAS DE COINS ──────────────────────────────────────────────
   # Gate 2D: `required-level` (a escada de 20 niveis) x `weight` (a skin da vara).

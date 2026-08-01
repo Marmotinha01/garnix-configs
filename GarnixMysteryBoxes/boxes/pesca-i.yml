@@ -7,7 +7,6 @@ weight: 40
 
 box-item:
   material: CHEST
-  glow: true
   display: '&bCaixa Pesca &b[Tier &lI&b]'
   lore:
   - '&7Abra e descubra o que a sorte'

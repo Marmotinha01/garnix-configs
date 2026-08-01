@@ -136,7 +136,6 @@ products:
     command: caixas give pesca-i {player} 1
     icon:
       material: CHEST
-      glow: true
       display: '&bCaixa Pesca &7[Tier &lI&7]'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -148,7 +147,6 @@ products:
     command: caixas give pesca-ii {player} 1
     icon:
       material: TRAPPED_CHEST
-      glow: true
       display: '&bCaixa Pesca &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'

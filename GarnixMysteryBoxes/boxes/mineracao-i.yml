@@ -7,7 +7,6 @@ weight: 20
 
 box-item:
   material: CHEST
-  glow: true
   display: '&6Caixa Mineração &6[Tier &lI&e6]'
   lore:
   - '&7Abra e descubra o que a sorte'

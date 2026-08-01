@@ -28,7 +28,6 @@ fuels:
 - infinite
 
 machine-item:
-  glow: true
   texture: "150c11b7c9b9070034f44721c6ea9d1b7775283014979f2d8126bb5a1765188e"
   display: '&8Máquina de {translated}'
   lore:

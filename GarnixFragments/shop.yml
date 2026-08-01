@@ -72,7 +72,6 @@ items:
   caixa-ii:
     icon:
       material: TRAPPED_CHEST
-      glow: true
       display: '&eCaixa Mineração &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'
