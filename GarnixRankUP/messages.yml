@@ -3,6 +3,8 @@ reload-success: '&aConfigurações recarregadas com sucesso.'
 rankup-success: '&aVocê evoluiu para o rank {rank_tag}&a.'
 max-rank: '&cVocê já está no rank máximo. Use &f/prestigio &cpara reiniciar seu progresso.'
 rank-not-released: '&cEste rank ainda não foi liberado. Liberação: &f{date}'
+# Falha na cobrança (ex.: banco indisponível), não falta de recursos. O que foi debitado é estornado.
+rankup-error: '&cNão foi possível concluir a evolução. Tente novamente em instantes.'
 
 # {costs} expands into one cost line per requirement (cost-line for currencies, cost-line-head for heads).
 insufficient:

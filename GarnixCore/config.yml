@@ -27,6 +27,11 @@ database:
       idle-timeout: 600000
       max-lifetime: 1800000
       connection-timeout: 30000
+      # Intervalo (ms) do ping em conexões OCIOSAS. Faz o pool trocar um socket que
+      # morreu do lado do servidor ANTES de entregá-lo a um plugin — sem isso, um
+      # restart do MySQL é descoberto um plugin de cada vez, cada um tomando a
+      # exceção. Precisa ser >= 30000 e menor que max-lifetime; 0 desliga.
+      keepalive: 120000
       leak-detection-threshold: 0
   
   # ── MongoDB ──────────────────────────────────────────────────────────
