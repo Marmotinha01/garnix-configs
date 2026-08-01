@@ -29,7 +29,8 @@ box-item:
 # (amount: 2) e o que mostra que sao duas.
 #
 # ⚠️ O piso e o teto vem das caixas sorteadas, nao daqui. As de tier I
-# carregam 20% de azar proprio, as de tier II 3%, e a garnix nenhum.
+# carregam 20% de azar proprio, as de tier II 3%, e a garnix nenhum. As duas
+# de skins tambem nao tem azar: sortear uma delas sempre vira skin.
 rewards:
 
   mineracao-i:
@@ -116,6 +117,34 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
+  skins-i:
+    type: COMMAND
+    chance: 12
+    display: '&eCaixa Skins &e[Tier &lI&e]'
+    command: caixas give skins-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      amount: 1
+      display: '&eCaixa Skins &e[Tier &lI&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  skins-i-x2:
+    type: COMMAND
+    chance: 6
+    display: '&eCaixa Skins &e[Tier &lI&e]'
+    command: caixas give skins-i {player} {amount}
+    amount: 2
+    icon:
+      material: CHEST
+      amount: 2
+      display: '&eCaixa Skins &e[Tier &lI&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
   mineracao-ii:
     type: COMMAND
     chance: 6
@@ -196,6 +225,34 @@ rewards:
       material: CHEST
       amount: 2
       display: '&bCaixa Pesca &b[Tier &lII&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  skins-ii:
+    type: COMMAND
+    chance: 6
+    display: '&eCaixa Skins &e[Tier &lII&e]'
+    command: caixas give skins-ii {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      amount: 1
+      display: '&eCaixa Skins &e[Tier &lII&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  skins-ii-x2:
+    type: COMMAND
+    chance: 3
+    display: '&eCaixa Skins &e[Tier &lII&e]'
+    command: caixas give skins-ii {player} {amount}
+    amount: 2
+    icon:
+      material: CHEST
+      amount: 2
+      display: '&eCaixa Skins &e[Tier &lII&e]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

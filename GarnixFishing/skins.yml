@@ -35,7 +35,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   coral:
@@ -51,7 +51,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   escama:
@@ -67,7 +67,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   prata:
@@ -83,7 +83,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   turquesa:
@@ -99,7 +99,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   abissita:
@@ -115,7 +115,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   serenita:
@@ -131,7 +131,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   oceanita:
@@ -147,7 +147,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   perola:
@@ -163,7 +163,7 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   tempestita:
@@ -179,5 +179,5 @@ rod-skins:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}% &3Corais '
+      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '

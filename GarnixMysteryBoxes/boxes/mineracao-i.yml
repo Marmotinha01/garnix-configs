@@ -7,7 +7,7 @@ weight: 20
 
 box-item:
   material: CHEST
-  display: '&6Caixa Mineração &6[Tier &lI&e6]'
+  display: '&6Caixa Mineração &6[Tier &lI&6]'
   lore:
   - '&7Abra e descubra o que a sorte'
   - '&7guardou para você lá dentro.'
@@ -40,7 +40,7 @@ rewards:
   armadura-i:
     type: COMMAND
     chance: 25
-    display: '&7Peça de Armadura &7[Tier &lI&7]'
+    display: '&7Capacete Mineração &7[Tier &lI&7]'
     command: mina givearmor {player} tier-i_helmet
     amount: 1
     icon:
@@ -49,10 +49,10 @@ rewards:
       display: '&7Capacete Mineração &7[Tier &lI&7]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+1.5% '
-      - '&8 ▪ &dGemas: &a+1.0% '
-      - '&8 ▪ &aXP: &a+1.0% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &dGemas '
+      - '&8 ▪ &a+&l1&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -60,7 +60,7 @@ rewards:
   armadura-ii:
     type: COMMAND
     chance: 18
-    display: '&7Peça de Armadura &f[Tier &lII&F]'
+    display: '&aPeitoral Mineração &a[Tier &lII&a]'
     command: mina givearmor {player} tier-ii_chestplate
     amount: 1
     icon:
@@ -69,10 +69,10 @@ rewards:
       display: '&aPeitoral Mineração &a[Tier &lII&a]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+3.0% '
-      - '&8 ▪ &dGemas: &a+2.0% '
-      - '&8 ▪ &aXP: &a+2.0% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l3&a% &aCoins '
+      - '&8 ▪ &a+&l2&a% &dGemas '
+      - '&8 ▪ &a+&l2&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -80,7 +80,7 @@ rewards:
   armadura-iii:
     type: COMMAND
     chance: 10
-    display: '&fPeça de Armadura &f[T&lIII&f]'
+    display: '&bCalça Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_leggings
     amount: 1
     icon:
@@ -89,10 +89,10 @@ rewards:
       display: '&bCalça Mineração &b[Tier &lIII&b]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+5.0% '
-      - '&8 ▪ &dGemas: &a+3.5% '
-      - '&8 ▪ &aXP: &a+3.5% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l3.5&a% &dGemas '
+      - '&8 ▪ &a+&l3.5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -100,7 +100,7 @@ rewards:
   skin-forjavel:
     type: COMMAND
     chance: 12
-    display: '&aSkin ouro'
+    display: '&6Skin de Ouro'
     command: mina giveskin {player} ouro
     amount: 1
     icon:
@@ -108,14 +108,17 @@ rewards:
       display: '&6Skin de Ouro'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l9&a% &aCoins '
+      - '&8 ▪ &a+&l5&a% &dGemas '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   forja:
     type: COMMAND
     chance: 8
-    display: '&6Forja de Skin'
+    display: '&6Forja de Skins'
     command: mina giveforge {player} 1
     amount: 1
     icon:

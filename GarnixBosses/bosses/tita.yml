@@ -147,7 +147,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7{amount}'
 
   # ── SEMI RARO ───────────────────────────────────────────────────── 3,5%
   boss-devorador:
@@ -205,7 +205,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7{amount}'
 
   caixa-boosters:
     type: COMMAND

@@ -144,7 +144,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7{amount}'
 
   # ── SEMI RARO ───────────────────────────────────────────────────── 0,6%
   boss-inferno:
@@ -200,7 +200,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7{amount}'
 
   # ── JACKPOT ─────────────────────────────────────────────────────── 0,01%
   caixa-boosters:

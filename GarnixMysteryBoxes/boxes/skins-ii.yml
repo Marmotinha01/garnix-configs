@@ -1,0 +1,280 @@
+# O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
+# segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
+
+# Raridade desta caixa, usada para ordenar o menu /caixas: quanto MAIOR o peso,
+# mais rara e mais tarde ela aparece na lista (omita para não aparecer nela).
+weight: 105
+
+box-item:
+  material: CHEST
+  display: '&eCaixa Skins &e[Tier &lII&e]'
+  lore:
+  - '&7Abra e descubra o que a sorte'
+  - '&7guardou para você lá dentro.'
+  - ''
+  - '&eOpções de uso:'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir'
+
+# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# 'chance' é o peso do sorteio (não precisa somar 100).
+#
+# ⚠️ Esta caixa só sorteia SKIN — ela não tem `azar`. Abrir sempre devolve
+# uma skin, e o que varia é qual das três vias e qual degrau da escada.
+#
+# ⚠️ ESCADA DA TIER II — os degraus 7 a 10 de cada via, ou seja tudo que a
+# forja NÃO alcança (`forgeable: false` nos três skins.yml). Os degraus 2 a
+# 6, que a forja alcança, ficam na caixa skins-i.
+#   mineração: quartzo · jade · safira · mithril
+#   fazenda:   esmeralda · opala · cristal · marfim
+#   pesca:     serenita · oceanita · pérola · tempestita
+#
+# ⚠️ O DEGRAU 10 (mithril · marfim · tempestita) era exclusivo da Caixa
+# Garnix. Ele continua aqui no menor peso de todos — 6 de 100 dentro da via,
+# ou seja 2% da caixa por via e 6% de sair alguma das três. A Garnix segue
+# sendo a fonte mais provável dessas três skins.
+#
+# ⚠️ As três vias valem o MESMO: cada uma soma 100 de peso (48/30/16/6),
+# então abrir é 1/3 mineração, 1/3 fazenda, 1/3 pesca. Dentro da via o peso
+# despenca conforme a skin sobe na escada.
+#
+# ⚠️ A lore de cada ícone espelha o item real (skins.yml de cada plugin) —
+# preview e item recebido têm que bater linha a linha. A única linha extra é
+# a de `Tipo`, que mantém a leitura igual à da caixa skins-i.
+rewards:
+
+  # ── MINERAÇÃO ─────────────────────────────────────────────────── 1/3
+  mineracao-quartzo:
+    type: COMMAND
+    chance: 48
+    display: '&fSkin de Quartzo &8Mineração'
+    command: mina giveskin {player} quartzo
+    amount: 1
+    icon:
+      material: DIAMOND_PICKAXE
+      display: '&fSkin de Quartzo'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fTipo: &6Picareta '
+      - '&8 ▪ &a+&l28&a% &aCoins '
+      - '&8 ▪ &a+&l17&a% &dGemas '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  mineracao-jade:
+    type: COMMAND
+    chance: 30
+    display: '&aSkin de Jade &8Mineração'
+    command: mina giveskin {player} jade
+    amount: 1
+    icon:
+      material: DIAMOND_PICKAXE
+      glow: true
+      display: '&aSkin de Jade'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fTipo: &6Picareta '
+      - '&8 ▪ &a+&l38&a% &aCoins '
+      - '&8 ▪ &a+&l25&a% &dGemas '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  mineracao-safira:
+    type: COMMAND
+    chance: 16
+    display: '&9Skin de Safira &8Mineração'
+    command: mina giveskin {player} safira
+    amount: 1
+    icon:
+      material: DIAMOND_PICKAXE
+      glow: true
+      display: '&9Skin de Safira'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fTipo: &6Picareta '
+      - '&8 ▪ &a+&l50&a% &aCoins '
+      - '&8 ▪ &a+&l34&a% &dGemas '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  mineracao-mithril:
+    type: COMMAND
+    chance: 6
+    display: '&4Skin de Mithril &8Mineração'
+    command: mina giveskin {player} mithril
+    amount: 1
+    icon:
+      material: DIAMOND_PICKAXE
+      glow: true
+      display: '&4Skin de Mithril'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fTipo: &6Picareta '
+      - '&8 ▪ &a+&l65&a% &aCoins '
+      - '&8 ▪ &a+&l45&a% &dGemas '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  # ── FAZENDA ───────────────────────────────────────────────────── 1/3
+  farm-esmeralda:
+    type: COMMAND
+    chance: 48
+    display: '&aSkin de Esmeralda &8Fazenda'
+    command: fazenda giveskin {player} esmeralda
+    amount: 1
+    icon:
+      material: DIAMOND_HOE
+      display: '&aSkin de Esmeralda'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fTipo: &eEnxada '
+      - '&8 ▪ &a+&l28&a% &aCoins '
+      - '&8 ▪ &a+&l17&a% &5Sementes '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  # O id continua `ametista` (skins.yml da fazenda) — o nome do item é Opala e
+  # ainda é provisório. Se o dono trocar o nome, troca aqui e no skins.yml.
+  farm-ametista:
+    type: COMMAND
+    chance: 30
+    display: '&bSkin de Ametista &8Fazenda'
+    command: fazenda giveskin {player} ametista
+    amount: 1
+    icon:
+      material: DIAMOND_HOE
+      glow: true
+      display: '&bSkin de Ametista'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fTipo: &eEnxada '
+      - '&8 ▪ &a+&l38&a% &aCoins '
+      - '&8 ▪ &a+&l25&a% &5Sementes '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  farm-cristal:
+    type: COMMAND
+    chance: 16
+    display: '&9Skin de Cristal &8Fazenda'
+    command: fazenda giveskin {player} cristal
+    amount: 1
+    icon:
+      material: DIAMOND_HOE
+      glow: true
+      display: '&9Skin de Cristal'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fTipo: &eEnxada '
+      - '&8 ▪ &a+&l50&a% &aCoins '
+      - '&8 ▪ &a+&l34&a% &5Sementes '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  farm-marfim:
+    type: COMMAND
+    chance: 6
+    display: '&fSkin de Marfim &8Fazenda'
+    command: fazenda giveskin {player} marfim
+    amount: 1
+    icon:
+      material: DIAMOND_HOE
+      glow: true
+      display: '&fSkin de Marfim'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fTipo: &eEnxada '
+      - '&8 ▪ &a+&l65&a% &aCoins '
+      - '&8 ▪ &a+&l45&a% &5Sementes '
+      - ''
+      flags:
+      - HIDE_ATTRIBUTES
+
+  # ── PESCA ─────────────────────────────────────────────────────── 1/3
+  pesca-serenita:
+    type: COMMAND
+    chance: 48
+    display: '&5Skin de Serenita &8Pesca'
+    command: pesca giveskin {player} serenita
+    amount: 1
+    icon:
+      material: FISHING_ROD
+      glow: true
+      display: '&5Skin de Serenita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - '&8 ▪ &a+&l28% &3Corais '
+      - '&8 ▪ &cPeso até &l45&ckg '
+      - ''
+
+  pesca-oceanita:
+    type: COMMAND
+    chance: 30
+    display: '&1Skin de Oceanita &8Pesca'
+    command: pesca giveskin {player} oceanita
+    amount: 1
+    icon:
+      material: FISHING_ROD
+      glow: true
+      display: '&1Skin de Oceanita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - '&8 ▪ &a+&l38% &3Corais '
+      - '&8 ▪ &cPeso até &l65&ckg '
+      - ''
+
+  pesca-perola:
+    type: COMMAND
+    chance: 16
+    display: '&9Skin de Pérola &8Pesca'
+    command: pesca giveskin {player} perola
+    amount: 1
+    icon:
+      material: FISHING_ROD
+      glow: true
+      display: '&9Skin de Pérola'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - '&8 ▪ &a+&l50% &3Corais '
+      - '&8 ▪ &cPeso até &l90&ckg '
+      - ''
+
+  pesca-tempestita:
+    type: COMMAND
+    chance: 6
+    display: '&dSkin de Tempestita &8Pesca'
+    command: pesca giveskin {player} tempestita
+    amount: 1
+    icon:
+      material: FISHING_ROD
+      glow: true
+      display: '&dSkin de Tempestita'
+      lore:
+      - ''
+      - ' &8Especificações:'
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - '&8 ▪ &a+&l65% &3Corais '
+      - '&8 ▪ &cPeso até &l130&ckg '
+      - ''

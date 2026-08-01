@@ -40,7 +40,7 @@ rewards:
   armadura-i:
     type: COMMAND
     chance: 25
-    display: '&7Peça de Armadura &7[Tier &lI&7]'
+    display: '&7Capacete Farm &7[Tier &lI&7]'
     command: fazenda givearmor {player} tier-i_helmet
     amount: 1
     icon:
@@ -49,10 +49,10 @@ rewards:
       display: '&7Capacete Farm &7[Tier &lI&7]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+1.5% '
-      - '&8 ▪ &5Sementes: &a+1.0% '
-      - '&8 ▪ &aXP: &a+1.0% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &5Sementes '
+      - '&8 ▪ &a+&l1&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -60,7 +60,7 @@ rewards:
   armadura-ii:
     type: COMMAND
     chance: 18
-    display: '&7Peça de Armadura &f[Tier &lII&F]'
+    display: '&aPeitoral Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_chestplate
     amount: 1
     icon:
@@ -69,10 +69,10 @@ rewards:
       display: '&aPeitoral Farm &a[Tier &lII&a]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+3.0% '
-      - '&8 ▪ &5Sementes: &a+2.0% '
-      - '&8 ▪ &aXP: &a+2.0% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l3&a% &aCoins '
+      - '&8 ▪ &a+&l2&a% &5Sementes '
+      - '&8 ▪ &a+&l2&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -80,7 +80,7 @@ rewards:
   armadura-iii:
     type: COMMAND
     chance: 10
-    display: '&fPeça de Armadura &f[T&lIII&f]'
+    display: '&bCalça Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_leggings
     amount: 1
     icon:
@@ -89,10 +89,10 @@ rewards:
       display: '&bCalça Farm &b[Tier &lIII&b]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+5.0% '
-      - '&8 ▪ &5Sementes: &a+3.5% '
-      - '&8 ▪ &aXP: &a+3.5% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l3.5&a% &5Sementes '
+      - '&8 ▪ &a+&l3.5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -100,7 +100,7 @@ rewards:
   skin-forjavel:
     type: COMMAND
     chance: 12
-    display: '&aSkin ouro'
+    display: '&6Skin de Ouro'
     command: fazenda giveskin {player} ouro
     amount: 1
     icon:
@@ -108,14 +108,17 @@ rewards:
       display: '&6Skin de Ouro'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l9&a% &aCoins '
+      - '&8 ▪ &a+&l5&a% &5Sementes '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   forja:
     type: COMMAND
     chance: 8
-    display: '&6Forja de Skin'
+    display: '&eForja de Skins'
     command: fazenda giveforge {player} 1
     amount: 1
     icon:

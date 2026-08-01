@@ -27,7 +27,8 @@ skin-equipped-icon:
   - '&8 ▪ &fBônus: &a+&l{bonus}&a% '
   - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
   - ''
-  - '&aClique para recuperar.'
+  - '{skin-color}Opções de uso:'
+  - '&fBotão esquerdo &8➟ &7Recuperar skin'
 
 # Shown when the player has at least one active booster (clickable → booster menu).
 booster-icon:

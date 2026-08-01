@@ -40,7 +40,7 @@ rewards:
   armadura-iii:
     type: COMMAND
     chance: 17
-    display: '&fPeça de Armadura &f[T&lIII&f]'
+    display: '&bBota Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_boots
     amount: 1
     icon:
@@ -49,9 +49,9 @@ rewards:
       display: '&bBota Pesca &b[Tier &lIII&b]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &3Corais: &a+5.0% '
-      - '&8 ▪ &aXP: &a+3.5% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l5&a% &3Corais '
+      - '&8 ▪ &a+&l3.5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -59,7 +59,7 @@ rewards:
   armadura-iv:
     type: COMMAND
     chance: 14
-    display: '&6Peça de Armadura &6[T&lIV&6]'
+    display: '&dPeitoral Pesca &d[Tier &lIV&d]'
     command: pesca givearmor {player} tier-iv_chestplate
     amount: 1
     icon:
@@ -68,9 +68,9 @@ rewards:
       display: '&dPeitoral Pesca &d[Tier &lIV&d]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &3Corais: &a+8.0% '
-      - '&8 ▪ &aXP: &a+5.5% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l8&a% &3Corais '
+      - '&8 ▪ &a+&l5.5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -78,7 +78,7 @@ rewards:
   armadura-v:
     type: COMMAND
     chance: 15
-    display: '&5Peça de Armadura &5[T&lV&5]'
+    display: '&6Calça Pesca &6[Tier &lV&6]'
     command: pesca givearmor {player} tier-v_leggings
     amount: 1
     icon:
@@ -87,9 +87,9 @@ rewards:
       display: '&6Calça Pesca &6[Tier &lV&6]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &3Corais: &a+12.0% '
-      - '&8 ▪ &aXP: &a+8.0% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l12&a% &3Corais '
+      - '&8 ▪ &a+&l8&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -97,21 +97,24 @@ rewards:
   skin-7:
     type: COMMAND
     chance: 15
-    display: '&5Skin serenita'
+    display: '&5Skin de Serenita'
     command: pesca giveskin {player} serenita
     amount: 1
     icon:
       material: FISHING_ROD
+      glow: true
       display: '&5Skin de Serenita'
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &a+&l28% &3Corais '
+      - '&8 ▪ &cPeso até &l45&ckg '
+      - ''
 
   skin-8:
     type: COMMAND
     chance: 12
-    display: '&5Skin oceanita'
+    display: '&1Skin de Oceanita'
     command: pesca giveskin {player} oceanita
     amount: 1
     icon:
@@ -121,7 +124,9 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &fPeso máximo: &c&l{max_weight}&ckg '
+      - '&8 ▪ &a+&l38% &3Corais '
+      - '&8 ▪ &cPeso até &l65&ckg '
+      - ''
 
   livro:
     type: COMMAND

@@ -40,7 +40,7 @@ rewards:
   armadura-iii:
     type: COMMAND
     chance: 25
-    display: '&fPeça de Armadura &f[T&lIII&f]'
+    display: '&bBota Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_boots
     amount: 1
     icon:
@@ -49,10 +49,10 @@ rewards:
       display: '&bBota Mineração &b[Tier &lIII&b]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+5.0% '
-      - '&8 ▪ &dGemas: &a+3.5% '
-      - '&8 ▪ &aXP: &a+3.5% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l3.5&a% &dGemas '
+      - '&8 ▪ &a+&l3.5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -60,7 +60,7 @@ rewards:
   armadura-iv:
     type: COMMAND
     chance: 22
-    display: '&6Peça de Armadura &6[T&lIV&6]'
+    display: '&dPeitoral Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_chestplate
     amount: 1
     icon:
@@ -69,10 +69,10 @@ rewards:
       display: '&dPeitoral Mineração &d[Tier &lIV&d]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+8.0% '
-      - '&8 ▪ &dGemas: &a+5.5% '
-      - '&8 ▪ &aXP: &a+5.5% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l8&a% &aCoins '
+      - '&8 ▪ &a+&l5.5&a% &dGemas '
+      - '&8 ▪ &a+&l5.5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -80,7 +80,7 @@ rewards:
   armadura-v:
     type: COMMAND
     chance: 15
-    display: '&5Peça de Armadura &5[T&lV&5]'
+    display: '&6Calça Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_leggings
     amount: 1
     icon:
@@ -89,10 +89,10 @@ rewards:
       display: '&6Calça Mineração &6[Tier &lV&6]'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &6Coins: &a+12.0% '
-      - '&8 ▪ &dGemas: &a+8.0% '
-      - '&8 ▪ &aXP: &a+8.0% '
+      - ' &8Bônus: '
+      - '&8 ▪ &a+&l12&a% &aCoins '
+      - '&8 ▪ &a+&l8&a% &dGemas '
+      - '&8 ▪ &a+&l8&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
@@ -100,7 +100,7 @@ rewards:
   skin-7:
     type: COMMAND
     chance: 15
-    display: '&5Skin quartzo'
+    display: '&fSkin de Quartzo'
     command: mina giveskin {player} quartzo
     amount: 1
     icon:
@@ -108,14 +108,17 @@ rewards:
       display: '&fSkin de Quartzo'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l28&a% &aCoins '
+      - '&8 ▪ &a+&l17&a% &dGemas '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   skin-8:
     type: COMMAND
     chance: 12
-    display: '&5Skin jade'
+    display: '&aSkin de Jade'
     command: mina giveskin {player} jade
     amount: 1
     icon:
@@ -124,7 +127,10 @@ rewards:
       display: '&aSkin de Jade'
       lore:
       - ''
-      - ' &8Especificações:'
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l38&a% &aCoins '
+      - '&8 ▪ &a+&l25&a% &dGemas '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 

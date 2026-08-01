@@ -137,7 +137,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7{amount}'
 
   chave-boss:
     type: COMMAND
@@ -153,7 +153,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7{amount}'
 
   chave-rankup:
     type: COMMAND
@@ -169,7 +169,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7{amount}'
 
   # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
   booster-xp-2x:
@@ -226,7 +226,7 @@ rewards:
       display: '&bCaixa Pesca &b[Tier &lI&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
+      - '&7guardou para você lá dentros.'
 
   # ── RARO PLUS ─────────────────────────────────────────────────── 0,099%
   skin-coral:
@@ -242,7 +242,7 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l2% &3Corais '
+      - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &cPeso até &l6&ckg '
 
   skin-escama:
@@ -258,7 +258,7 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l2% &3Corais '
+      - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &cPeso até &l10&ckg '
 
   # ── JACKPOT ─────────────────────────────────────────────────────── 0,001%
