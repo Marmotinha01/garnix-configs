@@ -84,9 +84,9 @@ broadcasts:
   listing-created:
     enabled: true
     command: /mercado
-    hover: '&7Clique para abrir o &f/mercado&7.'
+    hover: '&bClique para abrir o mercado.'
     message:
     - ''
-    - '  &6&lMERCADO &8▶ &e{player} &7colocou um item à venda.'
+    - '  &b&lMERCADO &7{player} &fcolocou um item à venda!'
     - '  &f{item} &7por {currency_prefix}{price}'
     - ''

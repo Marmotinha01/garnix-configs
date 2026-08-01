@@ -24,7 +24,66 @@ back-icon:
   - '&7Clique para voltar.'
 
 reasons:
-  conduta:
-    slot: 13
-    display: Conduta inadequada
+  # Capítulo 2 — chat e convivência
+  flood:
+    slot: 11
+    display: 'Flood no chat (Art. 2.1)'
     icon: PAPER
+  spam:
+    slot: 12
+    display: 'Spam de caracteres (Art. 2.2)'
+    icon: SIGN
+  caps:
+    slot: 13
+    display: 'Insistir no caps lock (Art. 2.3)'
+    icon: NOTE_BLOCK
+  poluicao:
+    slot: 14
+    display: 'Poluição visual no chat (Art. 2.4)'
+    icon: ITEM_FRAME
+  mau-uso-canal:
+    slot: 15
+    display: 'Uso do canal errado (Art. 2.5)'
+    icon: EMPTY_MAP
+
+  toxicidade:
+    slot: 20
+    display: 'Provocação e toxicidade (Art. 2.6)'
+    icon: BLAZE_POWDER
+  assunto-inadequado:
+    slot: 21
+    display: 'Assunto inadequado (Art. 2.7)'
+    icon: BOOK
+
+  # Capítulo 3 — conduta grave (as faixas leves; o resto é ban de IP)
+  construcao-ofensiva:
+    slot: 22
+    display: 'Construção ou placa ofensiva (Art. 3.9)'
+    icon: BRICK
+  anti-jogo:
+    slot: 23
+    display: 'Atrapalhar de propósito (Art. 3.10)'
+    icon: IRON_FENCE
+
+  # Capítulo 4 — divulgação
+  divulgacao-propria:
+    slot: 24
+    display: 'Divulgação de conteúdo próprio (Art. 4.3)'
+    icon: WRITTEN_BOOK
+
+  # Capítulo 7 — conta e identidade
+  skin-ofensiva:
+    slot: 30
+    display: 'Skin ou capa ofensiva (Art. 7.1)'
+    icon: SKULL_ITEM
+    data: 3
+  apelido-nick:
+    slot: 31
+    display: 'Apelido ofensivo no /nick (Art. 7.3)'
+    icon: NAME_TAG
+
+  # Capítulo 8 — denúncias e suporte
+  denuncia-falsa:
+    slot: 32
+    display: 'Denúncia mentirosa (Art. 8.2)'
+    icon: BOOK_AND_QUILL

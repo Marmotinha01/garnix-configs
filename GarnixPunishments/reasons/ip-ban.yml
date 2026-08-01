@@ -26,11 +26,53 @@ back-icon:
   - '&7Clique para voltar.'
 
 reasons:
-  ban-evasion:
+  # O acesso ao arquivo inteiro é restrito por punishments.type.ipban.
+
+  # Capítulo 3 — conduta grave (3.1 a 3.6, todas ban de IP)
+  discriminacao:
     slot: 11
-    display: Ban Evasion (uso de alt)
+    display: 'Discurso de ódio e discriminação (Art. 3.1)'
     icon: REDSTONE_BLOCK
-  hack-alt:
+  assedio:
+    slot: 12
+    display: 'Assédio e conteúdo sexual (Art. 3.2)'
+    icon: SKULL_ITEM
+    data: 1
+  apologia:
+    slot: 13
+    display: 'Apologia (Art. 3.3)'
+    icon: BLAZE_POWDER
+  ameaca-virtual:
+    slot: 14
+    display: 'Ameaça virtual (Art. 3.4)'
+    icon: REDSTONE_TORCH_ON
+  ameaca-grave:
     slot: 15
-    display: Hack reincidente em alts
-    icon: DIAMOND_SWORD
+    display: 'Ameaça à pessoa ou ao servidor (Art. 3.5)'
+    icon: TNT
+  doxxing:
+    slot: 20
+    display: 'Expor dados pessoais (Art. 3.6)'
+    icon: PAPER
+
+  # Capítulo 4 — divulgação (acessório: só quando o link comprometeu contas)
+  link-malicioso-ip:
+    slot: 21
+    display: 'Link malicioso que comprometeu contas (Art. 4.4)'
+    icon: TRIPWIRE_HOOK
+
+  # Capítulo 6 — ataque à integridade da rede
+  abuso-bug:
+    slot: 22
+    display: 'Abusar de bug ou duplicar itens (Art. 6.5)'
+    icon: COMMAND
+  ataque-servidor:
+    slot: 23
+    display: 'Ataque ao servidor (Art. 6.7)'
+    icon: FIREBALL
+
+  # Capítulo 7 — conta e identidade
+  invasao-conta:
+    slot: 24
+    display: 'Invadir conta de outro (Art. 7.6)'
+    icon: IRON_DOOR

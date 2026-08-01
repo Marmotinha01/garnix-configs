@@ -339,20 +339,26 @@ Limitações técnicas que a equipe precisa conhecer:
 
 ## Anexo A — Mapa técnico regra → reason
 
-> **Não aplicado.** Referência de configuração; nada foi alterado no `garnix-punishments`.
+> **Aplicado** em 01/08/2026 nos seis arquivos de `reasons/`. **58 motivos**, um por artigo.
 
 Cada artigo vira **exatamente um motivo**. Todo `id` é único em toda a pasta `reasons/` (o plugin indexa num mapa global). A duração é fixa por motivo, o que coincide com o modelo de punição única.
 
+O **display** de cada motivo termina em `(Art. X.Y)`, porque é ele que vira o texto do motivo gravado na punição e exibido na tela de ban — é assim que o §9.3 entrega ao punido o artigo a que ele tem direito. Usa-se `Art.` e nunca `§`: o caractere `§` é o prefixo de cor do Minecraft e seria comido pelo cliente.
+
 ### Ocupação dos menus
 
-| Arquivo | Motivos | Folga (de ~53 slots) |
+| Arquivo | Motivos | Folga (de 53 slots) |
 |---|:--:|:--:|
 | `warn.yml` | 13 | 40 |
-| `temp-mute.yml` | 7 | 46 |
-| `temp-ban.yml` | 22 | 31 |
-| `ban.yml` | 9 | 44 |
+| `temp-mute.yml` | 5 | 48 |
+| `temp-ban.yml` | 21 | 32 |
+| `ban.yml` | 8 | 45 |
 | `mute.yml` | 1 | 52 |
 | `ip-ban.yml` | 10 | 43 |
+
+### Os motivos da escada não entram nos menus
+
+`warn_stage_1`, `warn_stage_2`, `warn_stage_3` e `warn_stage_final` ficam **só** no `warns.yml`. O plugin nunca resolve `reasonId` contra a pasta `reasons/` — `ReasonConfig.byId()` existe mas não é chamado em lugar nenhum, e a punição da escada já carrega o texto `Reincidência de avisos` vindo de `warns.escalation-reason`. Registrá-los nos menus só criaria quatro botões que deixariam a equipe aplicar "Reincidência de avisos" na mão, por fora da escada.
 
 ### `warn.yml`
 
@@ -362,8 +368,6 @@ Cada artigo vira **exatamente um motivo**. Todo `id` é único em toda a pasta `
 
 | id | Artigo | Duração |
 |---|:--:|:--:|
-| `warn_stage_1` | 1.2 | 5m |
-| `warn_stage_2` | 1.2 | 30m |
 | `ofensa` | 2.8 | 6h |
 | `flood-organizado` | 2.9 | 12h |
 | `informacao-falsa` | 2.10 | 12h |
@@ -374,7 +378,6 @@ Cada artigo vira **exatamente um motivo**. Todo `id` é único em toda a pasta `
 
 | id | Artigo | Duração |
 |---|:--:|:--:|
-| `warn_stage_3` | 1.2 | 1d |
 | `burlar-filtro` | 2.11 | 3d |
 | `perseguicao` | 3.7 | 15d |
 | `chantagem` | 3.8 | 30d |
@@ -399,7 +402,7 @@ Cada artigo vira **exatamente um motivo**. Todo `id` é único em toda a pasta `
 
 ### `ban.yml`
 
-`warn_stage_final` 1.2 · `link-malicioso` 4.4 · `rmt-consumado` 5.6 · `chargeback` 5.8 · `hack` 6.1 · `macro` 6.4 · `falsa-identidade-golpe` 7.4 · `evasao-punicao` 7.5 · `prova-forjada` 8.3
+`link-malicioso` 4.4 · `rmt-consumado` 5.6 · `chargeback` 5.8 · `hack` 6.1 · `macro` 6.4 · `falsa-identidade-golpe` 7.4 · `evasao-punicao` 7.5 · `prova-forjada` 8.3
 
 ### `mute.yml`
 
@@ -411,9 +414,10 @@ Cada artigo vira **exatamente um motivo**. Todo `id` é único em toda a pasta `
 
 ### Permissões sugeridas
 
-- **Moderação júnior:** todo `warn.yml`, todo `temp-mute.yml` e os `temp-ban` de 3d e 7d.
-- **Restrito a sênior** via `punishments.reason.<id>`: todo `ban.yml`, `ip-ban.yml`, `mute.yml` e os `temp-ban` de 15d e 30d.
-- Usar também `punishments.duration.max.<tempo>` por cargo — restringir só por motivo deixa a júnior aplicando qualquer duração dos motivos liberados.
+- **Moderação júnior:** `punishments.punish` + `punishments.type.warn`, `punishments.type.tempmute` e `punishments.type.tempban`. Isso libera todo o `warn.yml`, todo o `temp-mute.yml` e os `temp-ban` de 3d e 7d.
+- **Restrito a sênior pelo tipo:** `punishments.type.ban`, `punishments.type.ipban` e `punishments.type.mute` fecham os três arquivos inteiros de uma vez — o `TypeMenu` já checa esse nó antes de abrir a lista de motivos. Não é preciso repetir permissão motivo a motivo neles.
+- **Restrito a sênior pelo motivo:** os `temp-ban` de 15d e 30d, que dividem o mesmo tipo com os de 3d e 7d e por isso só se separam individualmente. Cada um leva `permission: punishments.reason.<id>` no próprio arquivo.
+- **Não existe teto de duração por cargo.** `punishments.duration.max.<tempo>` está declarado em `Permissions.java` mas nunca é lido, e o fluxo do `/punir` não deixa a equipe digitar duração — ela vem sempre do motivo escolhido. Quem controla a duração é a permissão do motivo.
 
 ### Migração do que já existe
 
@@ -426,6 +430,8 @@ Cada artigo vira **exatamente um motivo**. Todo `id` é único em toda a pasta `
 | `ofensa` | mute.yml | `ofensa` em temp-mute.yml, 6h (2.8) |
 | `flood` | temp-mute.yml (1h) | `flood` em warn.yml (2.1) |
 | `conduta` | warn.yml | dissolvido nos artigos específicos |
+
+Punições já gravadas com os ids antigos **não quebram**: o que o `/check` e a tela de ban mostram é o texto do motivo gravado junto com a punição, não uma consulta ao arquivo. Id removido só deixa de aparecer no menu.
 
 ---
 

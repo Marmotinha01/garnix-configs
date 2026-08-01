@@ -23,7 +23,10 @@ back-icon:
   - '&7Clique para voltar.'
 
 reasons:
-  ofensa:
+  # Sanção terminal de chat, fora da escada de avisos. Não corresponde a nenhum artigo:
+  # é a última instância, sempre com justificativa registrada no ticket.
+  # O acesso ao arquivo inteiro é restrito por punishments.type.mute.
+  chat-terminal:
     slot: 13
-    display: Ofensa / Desrespeito
-    icon: NAME_TAG
+    display: 'Mute definitivo de chat'
+    icon: WEB

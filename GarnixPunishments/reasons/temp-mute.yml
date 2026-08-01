@@ -24,8 +24,33 @@ back-icon:
   - '&7Clique para voltar.'
 
 reasons:
-  flood:
-    slot: 13
-    display: Flood / Spam no chat
+  # Capítulo 2 — chat e convivência
+  ofensa:
+    slot: 11
+    display: 'Ofensa a jogador (Art. 2.8)'
+    icon: NAME_TAG
+    duration: 6h
+  flood-organizado:
+    slot: 12
+    display: 'Flood combinado (Art. 2.9)'
     icon: PAPER
-    duration: 1h
+    duration: 12h
+  informacao-falsa:
+    slot: 13
+    display: 'Informação falsa (Art. 2.10)'
+    icon: WRITTEN_BOOK
+    duration: 12h
+
+  # Capítulo 4 — divulgação
+  divulgacao-nome:
+    slot: 14
+    display: 'Citar outro servidor (Art. 4.2)'
+    icon: BOOK_AND_QUILL
+    duration: 12h
+
+  # Capítulo 8 — denúncias e suporte
+  desacato:
+    slot: 15
+    display: 'Desacato à equipe (Art. 8.1)'
+    icon: GOLD_HELMET
+    duration: 1d

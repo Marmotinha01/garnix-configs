@@ -48,11 +48,11 @@ challenge:
   - '&eSeu desafio de {currency_prefix}{amount} &eexpirou. O valor foi devolvido.'
   starting:
   - ''
-  - '  &6&lCOINFLIP &8▶ &f{opponent} &7aceitou o seu desafio.'
+  - '  &e&lCOINFLIP &a{opponent} &faceitou o seu desafio!'
   - '  &7O sorteio começa em &f{seconds}s&7. {watch}'
   - ''
   watch-text: '&a&l[ASSISTIR]'
-  watch-hover: '&7Clique para acompanhar a animação.'
+  watch-hover: '&eClique para acompanhar.'
   spectate-unavailable:
   - '&cEsse desafio não está mais em andamento.'
   won:
@@ -65,7 +65,7 @@ challenge:
 inbox:
   header:
   - ''
-  - '  &6&lCOINFLIP &8▶ &7Resultados de enquanto você estava offline:'
+  - '  &e&lCOINFLIP &7Resultados de enquanto você estava offline:'
   - ''
   line-won:
   - '  &a▶ Venceu &f{opponent} &ae ganhou {currency_prefix}{amount}&a.'
@@ -83,16 +83,16 @@ broadcasts:
   challenge-created:
     enabled: true
     command: /coinflip
-    hover: '&7Clique para abrir o menu do coinflip.'
+    hover: '&eClique para ver os desafios.'
     message:
     - ''
-    - '  &6&lCOINFLIP &8▶ &e{player} &7criou um desafio.'
+    - '  &e&lCOINFLIP &7{player} &fcriou um desafio!'
     - '  &7Aposta de {currency_prefix}{amount}'
     - ''
   challenge-finished:
     enabled: true
     message:
     - ''
-    - '  &6&lCOINFLIP &8▶ &7(/coinflip)'
-    - '  &e{winner} &7venceu &e{loser} &7e levou {currency_prefix}{amount}&7.'
+    - '  &e&lCOINFLIP &7(/coinflip)'
+    - '  &a{winner} &7venceu &c{loser} &fe levou {currency_prefix}{amount}&f!'
     - ''

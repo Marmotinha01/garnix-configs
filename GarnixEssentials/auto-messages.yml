@@ -30,7 +30,7 @@ messages:
   vincular:
   - ''
   - '  &aVincule sua conta com nosso Discord.'
-  - '  <hover(&7Clique para vincular!) run(/vincular)&fClique &lAQUI &fpara vincular!> &e(VIP Grátis)'
+  - '  <hover(&7Clique para vincular!) run(/comovincular)&fClique &lAQUI &fpara vincular!> &e(VIP Grátis)'
   - ''
   
   equipe:

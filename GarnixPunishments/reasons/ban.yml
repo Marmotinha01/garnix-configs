@@ -29,7 +29,47 @@ back-icon:
   - '&7Clique para voltar.'
 
 reasons:
-  divulgacao:
-    slot: 13
-    display: Divulgação de outro servidor
-    icon: BOOK_AND_QUILL
+  # O acesso ao arquivo inteiro é restrito por punishments.type.ban.
+
+  # Capítulo 4 — divulgação
+  link-malicioso:
+    slot: 10
+    display: 'Link malicioso ou phishing (Art. 4.4)'
+    icon: TRIPWIRE_HOOK
+
+  # Capítulo 5 — economia e patrimônio
+  rmt-consumado:
+    slot: 12
+    display: 'Venda por dinheiro real concluída (Art. 5.6)'
+    icon: GOLD_BLOCK
+  chargeback:
+    slot: 14
+    display: 'Estorno de compra (Art. 5.8)'
+    icon: GOLD_INGOT
+
+  # Capítulo 6 — trapaça
+  hack:
+    slot: 16
+    display: 'Uso de hack ou client alterado (Art. 6.1)'
+    icon: DIAMOND_SWORD
+  macro:
+    slot: 19
+    display: 'Macro e automação (Art. 6.4)'
+    icon: DISPENSER
+
+  # Capítulo 7 — conta e identidade
+  falsa-identidade-golpe:
+    slot: 21
+    display: 'Se passar por staff para golpe (Art. 7.4)'
+    icon: SKULL_ITEM
+    data: 3
+  evasao-punicao:
+    slot: 23
+    display: 'Fugir da punição em outra conta (Art. 7.5)'
+    icon: ENDER_PEARL
+
+  # Capítulo 8 — denúncias e suporte
+  prova-forjada:
+    slot: 25
+    display: 'Prova falsificada contra outro (Art. 8.3)'
+    icon: WRITTEN_BOOK

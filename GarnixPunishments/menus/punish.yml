@@ -53,22 +53,29 @@ mode-public:
   slot: 15
   material: WOOL
   data: 5
-  display: '&aModo: &fPública'
+  display: '&aModo Pública'
   lore:
   - '&7O aviso da punição vai'
   - '&7para toda a rede.'
   - ''
-  - '&eClique para alternar.'
+  - '&aClique para alternar.'
 mode-silent:
   slot: 15
   material: WOOL
   data: 8
-  display: '&7Modo: &fSilenciosa'
+  display: '&eModo Silenciosa'
   lore:
   - '&7Apenas a staff com permissão'
   - '&7verá o aviso da punição.'
   - ''
   - '&eClique para alternar.'
+
+# Valores injetados em {punishment} e {proof} nas lores de confirmação. A cor vem daqui:
+# o campo preenchido sai em &7, o que ainda falta sai em &c.
+value-punishment-set: '&7{type} - {reason}'
+value-punishment-none: '&cNão definida'
+value-proof-set: '&7{proof}'
+value-proof-none: '&cNão anexada'
 
 confirm-ready:
   slot: 31
@@ -90,8 +97,8 @@ confirm-not-ready:
   - '&7Preencha os campos abaixo'
   - '&7antes de aplicar a punição.'
   - ''
-  - '&8 ▪ &fPunição &7(tipo e motivo) '
-  - '&8 ▪ &fProva '
+  - '&8 ▪ &fPunição: {punishment} '
+  - '&8 ▪ &fProva: {proof} '
   - ''
   - '&8 ▾ &cCampos incompletos. '
   - ''

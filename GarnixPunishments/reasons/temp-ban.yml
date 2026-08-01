@@ -24,13 +24,141 @@ back-icon:
   - '&7Clique para voltar.'
 
 reasons:
-  hack:
+  # Motivos de 15d e 30d são restritos a cargo sênior pela permissão de cada um.
+  # Os de 3d e 7d ficam abertos a quem já tem punishments.type.tempban.
+
+  # Capítulo 2 — chat e convivência
+  burlar-filtro:
+    slot: 10
+    display: 'Burlar o filtro de palavras (Art. 2.11)'
+    icon: SIGN
+    duration: 3d
+
+  # Capítulo 3 — conduta grave
+  perseguicao:
     slot: 11
-    display: Uso de Hack
-    icon: DIAMOND_SWORD
+    display: 'Perseguição (Art. 3.7)'
+    icon: COMPASS
+    duration: 15d
+    permission: punishments.reason.perseguicao
+  chantagem:
+    slot: 12
+    display: 'Chantagem (Art. 3.8)'
+    icon: GOLD_INGOT
     duration: 30d
-  killaura:
+    permission: punishments.reason.chantagem
+  cumplicidade:
+    slot: 13
+    display: 'Ajudar quem infringiu (Art. 3.11)'
+    icon: CHEST
+    duration: 15d
+    permission: punishments.reason.cumplicidade
+
+  # Capítulo 4 — divulgação
+  divulgacao-ip:
+    slot: 14
+    display: 'Divulgação de outro servidor (Art. 4.1)'
+    icon: BOOK_AND_QUILL
+    duration: 30d
+    permission: punishments.reason.divulgacao-ip
+
+  # Capítulo 5 — economia e patrimônio
+  scam:
     slot: 15
-    display: KillAura / Combate Ilegal
+    display: 'Golpe (Art. 5.1)'
+    icon: EMERALD
+    duration: 30d
+    permission: punishments.reason.scam
+  scam-tentativa:
+    slot: 16
+    display: 'Tentativa de golpe (Art. 5.2)'
+    icon: GOLD_NUGGET
+    duration: 7d
+  abuso-confianca:
+    slot: 19
+    display: 'Abuso de confiança (Art. 5.3)'
+    icon: TRAPPED_CHEST
+    duration: 30d
+    permission: punishments.reason.abuso-confianca
+  anuncio-enganoso:
+    slot: 20
+    display: 'Anúncio enganoso (Art. 5.4)'
+    icon: ITEM_FRAME
+    duration: 7d
+  rmt-oferta:
+    slot: 21
+    display: 'Oferecer venda por dinheiro real (Art. 5.5)'
+    icon: GOLD_BLOCK
+    duration: 15d
+    permission: punishments.reason.rmt-oferta
+  venda-conta:
+    slot: 22
+    display: 'Vender, trocar ou alugar conta (Art. 5.7)'
+    icon: SKULL_ITEM
+    data: 3
+    duration: 30d
+    permission: punishments.reason.venda-conta
+  lag-proposital:
+    slot: 23
+    display: 'Causar lag de propósito (Art. 5.9)'
+    icon: HOPPER
+    duration: 30d
+    permission: punishments.reason.lag-proposital
+  ocultacao-patrimonio:
+    slot: 24
+    display: 'Esconder patrimônio na apuração (Art. 5.10)'
+    icon: ENDER_CHEST
+    duration: 30d
+    permission: punishments.reason.ocultacao-patrimonio
+  manipulacao-mercado:
+    slot: 25
+    display: 'Manipular o mercado (Art. 5.11)'
+    icon: EMERALD_BLOCK
+    duration: 30d
+    permission: punishments.reason.manipulacao-mercado
+  fraude-suporte:
+    slot: 28
+    display: 'Mentir no suporte (Art. 5.12)'
+    icon: BOOK
+    duration: 15d
+    permission: punishments.reason.fraude-suporte
+
+  # Capítulo 6 — trapaça
+  hack-confesso:
+    slot: 29
+    display: 'Assumir o hack antes da prova (Art. 6.2)'
     icon: IRON_SWORD
     duration: 30d
+    permission: punishments.reason.hack-confesso
+  mod-proibido:
+    slot: 30
+    display: 'Mod fora da lista permitida (Art. 6.3)'
+    icon: MAP
+    duration: 7d
+  obstrucao:
+    slot: 31
+    display: 'Atrapalhar a apuração (Art. 6.6)'
+    icon: FLINT_AND_STEEL
+    duration: 30d
+    permission: punishments.reason.obstrucao
+
+  # Capítulo 7 — conta e identidade
+  nick-ofensivo:
+    slot: 32
+    display: 'Nick da conta ofensivo (Art. 7.2)'
+    icon: NAME_TAG
+    duration: 7d
+
+  # Capítulo 8 — denúncias e suporte
+  prova-forjada-propria:
+    slot: 33
+    display: 'Prova falsificada na revisão (Art. 8.4)'
+    icon: WRITTEN_BOOK
+    duration: 30d
+    permission: punishments.reason.prova-forjada-propria
+  ma-fe:
+    slot: 34
+    display: 'Má-fé não prevista (Art. 8.5)'
+    icon: PAPER
+    duration: 15d
+    permission: punishments.reason.ma-fe
