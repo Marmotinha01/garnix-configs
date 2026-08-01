@@ -65,7 +65,7 @@ reasons:
 
   # Capítulo 5 — economia e patrimônio
   scam:
-    slot: 25
+    slot: 15
     display: 'Golpe (Art. 5.1)'
     icon: EMERALD
     duration: 30d
