@@ -7,7 +7,7 @@ cooldown: '1d'
 slot: 14
 
 commands:
-  - 'cash add {player} 8'
+  - 'cash add {player} 10'
   - 'crates givekey vip {player} 1'
 
 collect-icon:
@@ -18,7 +18,7 @@ collect-icon:
   - '&7quem vinculou o discord.'
   - ''
   - ' &8Recompensas: '
-  - '&8 ▪ &6❂8 cash '
+  - '&8 ▪ &6❂10 cash '
   - '&8 ▪ &dx&l1 &dChave VIP '
   - ''
   - '&aClique para coletar.'
