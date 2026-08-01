@@ -104,7 +104,7 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l28% &3Corais '
+      - '&8 ▪ &a+&l28&a% &3Corais '
       - '&8 ▪ &cPeso até &l45&ckg '
 
   skin-8:
@@ -120,7 +120,7 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l38% &3Corais '
+      - '&8 ▪ &a+&l38&a% &3Corais '
       - '&8 ▪ &cPeso até &l65&ckg '
 
   livro:

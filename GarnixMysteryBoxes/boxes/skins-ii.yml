@@ -40,8 +40,7 @@ box-item:
 # despenca conforme a skin sobe na escada.
 #
 # ⚠️ A lore de cada ícone espelha o item real (skins.yml de cada plugin) —
-# preview e item recebido têm que bater linha a linha. A única linha extra é
-# a de `Tipo`, que mantém a leitura igual à da caixa skins-i.
+# preview e item recebido têm que bater linha a linha, sem nenhuma linha extra.
 rewards:
 
   # ── MINERAÇÃO ─────────────────────────────────────────────────── 1/3
@@ -57,7 +56,6 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l17&a% &dGemas '
       flags:
@@ -76,7 +74,6 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l25&a% &dGemas '
       flags:
@@ -95,7 +92,6 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l50&a% &aCoins '
       - '&8 ▪ &a+&l34&a% &dGemas '
       flags:
@@ -114,7 +110,6 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fTipo: &6Picareta '
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l45&a% &dGemas '
       flags:
@@ -133,7 +128,6 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l17&a% &5Sementes '
       flags:
@@ -154,7 +148,6 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l25&a% &5Sementes '
       flags:
@@ -173,7 +166,6 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l50&a% &aCoins '
       - '&8 ▪ &a+&l34&a% &5Sementes '
       flags:
@@ -192,7 +184,6 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fTipo: &eEnxada '
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l45&a% &5Sementes '
       flags:
@@ -212,8 +203,7 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &fTipo: &bVara de Pesca '
-      - '&8 ▪ &a+&l28% &3Corais '
+      - '&8 ▪ &a+&l28&a% &3Corais '
       - '&8 ▪ &cPeso até &l45&ckg '
 
   pesca-oceanita:
@@ -229,8 +219,7 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &fTipo: &bVara de Pesca '
-      - '&8 ▪ &a+&l38% &3Corais '
+      - '&8 ▪ &a+&l38&a% &3Corais '
       - '&8 ▪ &cPeso até &l65&ckg '
 
   pesca-perola:
@@ -246,8 +235,7 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &fTipo: &bVara de Pesca '
-      - '&8 ▪ &a+&l50% &3Corais '
+      - '&8 ▪ &a+&l50&a% &3Corais '
       - '&8 ▪ &cPeso até &l90&ckg '
 
   pesca-tempestita:
@@ -263,6 +251,5 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &fTipo: &bVara de Pesca '
-      - '&8 ▪ &a+&l65% &3Corais '
+      - '&8 ▪ &a+&l65&a% &3Corais '
       - '&8 ▪ &cPeso até &l130&ckg '
