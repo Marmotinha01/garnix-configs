@@ -41,11 +41,16 @@ blocked-crafts:
 # Temporary Fly Item
 temporary-fly-item:
   material: FEATHER
-  display: '&aFly Temporário'
+  glow: true
+  display: '&bFly Temporário'
   lore:
-  - '&fDuração: &7{duration}'
+  - '&7Libera o voo livre pelo'
+  - '&7tempo indicado abaixo.'
   - ''
-  - '&eClique para ativar!'
+  - '&8 ▪ &fDuração: &7{duration} '
+  - ''
+  - '&bOpções de uso:'
+  - '&fBotão direito &8➟ &7Ativar'
 
 # Auto Click valid entities
 auto-click:

@@ -18,10 +18,19 @@ key-groups: 4
 # Papers are given via /vip givepaper <player> <vip> <duration> and contain NBT data
 # that allows them to be activated by right-clicking. The VIP is granted with the
 # specified duration and the paper is consumed.
+#
+# 'display'/'lore' here are only the FALLBACK. Each VIP may ship its own paper in
+# vips/<id>.yml under 'paper-icon' (material or texture, data, glow, flags, display,
+# lore) — that section wins whenever it exists, and the block below is used only by
+# VIPs that don't define one. Placeholders: {color} {display} {duration} in the
+# per-VIP section; {color} {vip} {duration} in the fallback ({vip} already carries
+# the VIP's color + bold).
 paper-vip:
   blacklist: [ "ajudante", "moderador", "yt", "miniyt", "tiktoker", "streamer", "investidor" ]
   display: '{color}Papel &lVIP {vip}'
   lore:
-  - '&fDuração: &7{duration}'
   - ''
-  - '{color}Clique para resgatar!'
+  - '&8 ▪ &fDuração: {color}{duration} '
+  - ''
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Resgatar'

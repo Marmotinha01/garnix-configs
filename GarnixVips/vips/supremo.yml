@@ -43,6 +43,16 @@ advantages-icon:
     - " &8 ▪ &fPode coletar {color}Recompensa Diária &fexclusiva. "
     - ""
 
+paper-icon:
+  material: "PAPER"
+  display: "{color}Papel &lVIP {color}&l{display}"
+  lore:
+    - ""
+    - "&8 ▪ &fDuração: {color}{duration} "
+    - ""
+    - "{color}Opções de uso:"
+    - "&fBotão direito &8➟ &7Resgatar"
+
 add-broadcast:
   title:
     title: "{color}{player} &fativou"

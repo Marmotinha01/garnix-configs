@@ -21,7 +21,6 @@ admin:
   - '  &c/vip unfreeze &8(console)'
   - '  &c/vip reload'
   - ''
-  - ''
 
 add:
   success: '&aConcedido {vip} &apara &f{player} &apor &e{duration}&a.'
