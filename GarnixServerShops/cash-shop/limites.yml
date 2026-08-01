@@ -41,10 +41,10 @@ products:
       display: '&6Venda Automática'
       lore:
       - '&7Venda os cactos guardados'
-      - '&7no armazém sozinho.'
+      - '&7no armazém automaticamente.'
       - ''
-      - '&8 ▾ &cSó funciona em terrenos '
-      - '&8 ▾ &cque você é o dono. '
+      - '&8 ▪ &cFunciona apenas '
+      - '&8 ▪ &cem seus terrenos. '
 
   lim-armazem:
     slot: 12

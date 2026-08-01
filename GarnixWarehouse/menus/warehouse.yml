@@ -55,8 +55,8 @@ autosell-icon:
   material: DIODE
   display: '&6Venda Automática'
   lore:
-  - '&7Venda os cactos do armazém'
-  - '&7sozinho, de tempos em tempos.'
+  - '&7Venda os cactos guardados'
+  - '&7no armazém automaticamente.'
   - ''
   - '&6Clique para gerenciar.'
 
