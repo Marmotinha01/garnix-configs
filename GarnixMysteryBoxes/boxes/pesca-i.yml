@@ -49,7 +49,7 @@ rewards:
       display: '&7Capacete Pesca &7[Tier &lI&7]'
       lore:
       - ''
-      - ' &8Especificações '
+      - ' &8Especificações: '
       - '&8 ▪ &a+&l1.5&a% &3Corais '
       - '&8 ▪ &a+&l1&a% &bXP '
       flags:
@@ -67,7 +67,7 @@ rewards:
       display: '&aPeitoral Pesca &a[Tier &lII&a]'
       lore:
       - ''
-      - ' &8Especificações '
+      - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
       flags:
@@ -85,7 +85,7 @@ rewards:
       display: '&bCalça Pesca &b[Tier &lIII&b]'
       lore:
       - ''
-      - ' &8Especificações '
+      - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &3Corais '
       - '&8 ▪ &a+&l3.5&a% &bXP '
       flags:

@@ -49,7 +49,7 @@ rewards:
       display: '&bBota Mineração &b[Tier &lIII&b]'
       lore:
       - ''
-      - ' &8Especificações '
+      - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &dGemas '
       - '&8 ▪ &a+&l3.5&a% &bXP '
@@ -68,7 +68,7 @@ rewards:
       display: '&dPeitoral Mineração &d[Tier &lIV&d]'
       lore:
       - ''
-      - ' &8Especificações '
+      - ' &8Especificações: '
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &dGemas '
       - '&8 ▪ &a+&l5.5&a% &bXP '
@@ -87,7 +87,7 @@ rewards:
       display: '&6Calça Mineração &6[Tier &lV&6]'
       lore:
       - ''
-      - ' &8Especificações '
+      - ' &8Especificações: '
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &dGemas '
       - '&8 ▪ &a+&l8&a% &bXP '

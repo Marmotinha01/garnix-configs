@@ -39,7 +39,7 @@ rewards:
       display: '&6Capacete Mineração &6[Tier &lV&6]'
       lore:
       - ''
-      - ' &8Especificações '
+      - ' &8Especificações: '
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &dGemas '
       - '&8 ▪ &a+&l8&a% &bXP '
@@ -58,7 +58,7 @@ rewards:
       display: '&6Bota Farm &6[Tier &lV&6]'
       lore:
       - ''
-      - ' &8Especificações '
+      - ' &8Especificações: '
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &5Sementes '
       - '&8 ▪ &a+&l8&a% &bXP '
