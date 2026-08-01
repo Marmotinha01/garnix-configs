@@ -138,14 +138,13 @@ visitor-slots-max: 5
 # item. 'flags' is optional (Bukkit ItemFlags).
 slot-item:
   texture: "4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb"
-  display: "&aVaga de Visitante"
+  display: '&aVaga de Visitante'
   lore:
-    - "&7Ative para desbloquear &a+1 vaga"
-    - "&7de visitante na sua mina."
-    - ""
-    - "&c[!] Item consumível após o uso."
-    - ""
-    - "&7Use com &fBotão direito &7para ativar."
+  - '&7Desbloqueia mais uma vaga'
+  - '&7de visitante na sua mina.'
+  - ''
+  - '&aOpções de uso:'
+  - '&fBotão direito &8➟ &7Ativar'
 
 booster:
   # Minimum remaining time (seconds) required to recover an active booster.
