@@ -10,8 +10,6 @@ lore:
 - ' &c▎ &fEncantamentos: '
 - '{enchantments}'
 - ''
-- '&cOpções de uso:'
-- '&fArraste um livro &8➟ &7Encantar'
 
 glow: true
 
@@ -39,12 +37,14 @@ enchantments:
     display: '&4Massacre'
     book:
       material: ENCHANTED_BOOK
-      display: '&4Livro de Massacre &7{level}'
+      display: '&4Livro de Massacre'
       lore:
       - '&7Quantos mobs a sua lâmina'
       - '&7abate em um único golpe.'
       - ''
-      - '&8 ▪ &fMassacre: &4{level} '
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fTipo: &cLâmina '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -68,12 +68,14 @@ enchantments:
     display: '&aPilhagem'
     book:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Pilhagem &7{level}'
+      display: '&aLivro de Pilhagem'
       lore:
       - '&7Aumenta os drops que os'
       - '&7mobs deixam ao morrer.'
       - ''
-      - '&8 ▪ &fPilhagem: &a{level} '
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fTipo: &cLâmina '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -94,12 +96,14 @@ enchantments:
     display: '&dCeifador'
     book:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Ceifador &7{level}'
+      display: '&dLivro de Ceifador'
       lore:
       - '&7Chance de dobrar as'
       - '&7cabeças que o mob solta.'
       - ''
-      - '&8 ▪ &fCeifador: &d{level} '
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fTipo: &cLâmina '
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'

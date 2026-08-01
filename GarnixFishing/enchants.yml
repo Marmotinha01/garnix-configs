@@ -13,12 +13,14 @@ enchantments:
     display: '&bCorrenteza'
     book:
       material: ENCHANTED_BOOK
-      display: '&bLivro de Correnteza &7{level}'
+      display: '&bLivro de Correnteza'
       lore:
       - '&7Puxa o peixe mais rápido'
       - '&7para a sua vara.'
       - ''
-      - '&8 ▪ &fCorrenteza: &b{level} '
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -38,12 +40,14 @@ enchantments:
     display: '&aFaro Aguçado'
     book:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado &7{level}'
+      display: '&aLivro de Faro Aguçado'
       lore:
       - '&7Aumenta a chance de vir'
       - '&7recompensa melhor.'
       - ''
-      - '&8 ▪ &fFaro Aguçado: &a{level} '
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -63,12 +67,14 @@ enchantments:
     display: '&dFartura'
     book:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Fartura &7{level}'
+      display: '&dLivro de Fartura'
       lore:
       - '&7Chance de fisgar mais de'
       - '&7uma recompensa por vez.'
       - ''
-      - '&8 ▪ &fFartura: &d{level} '
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
