@@ -20,54 +20,199 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
-# ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
-# sufixo de slot entrega o set inteiro (+48%) num drop só.
+# ⚠️ Esta caixa NAO tem `azar`: toda abertura devolve premio. Os 15 pesos
+# somam 100 de proposito — aqui peso e porcentagem, e a leitura fica direta.
 #
-# ⚠️ ARMADURA NUNCA VAI PARA O SITE. Ela existe só via caixa — e como a
-# caixa II é comprável, quem paga compra CHANCE, não a peça.
+# ⚠️ As seis faixas, do recheio ao topo:
+#   COMUM          21,5% x2  as duas maquinas de limite, 5 de cada
+#   COMUM PLUS     18%       maquina de cash, 3 de uma vez
+#   RARO            9% x3    vaga de visitante · robo lendario · torre 15
+#   RARISSIMO     2,5% x4    25 caixas · 15 skins II · tempestita · torre 30
+#   RARISSIMO+    0,5% x3    mithril · marfim · robo mitico
+#   JACKPOT      0,25% x2    combustivel infinito · matadora hit-kill
+#
+# ⚠️ `/maquina give <jogador> <tipo> [stack] [quantidade]`: o PRIMEIRO int e o
+# stack gravado no NBT da maquina (MachineItemBuilder), ou seja o "5x" real, e
+# por isso ele vem do `{amount}`. O segundo e quantos ITENS entregar e fica
+# sempre 1 — senao virava 5 itens de 5.
+#
+# ⚠️ `{amount}` no display, na lore e no icone sai do `amount:` da recompensa —
+# o mesmo numero que o comando recebe. Escreva a quantia UMA vez, no `amount:`.
+#
+# ⚠️ Icone de cabeca (`texture`) ignora `amount` (SpigotConfig:497 so aplica
+# amount no ramo de `material`). Por isso a quantia das maquinas vive na lore, e
+# so as duas caixas — que sao CHEST/ENDER_CHEST — empilham no proprio icone.
+#
+# ⚠️ O combustivel infinito estava sem `material` e o BoxManager descarta a
+# recompensa quando `getItemStack` devolve null: o jackpot da caixa mais rara do
+# servidor nunca era sorteado. Agora ele espelha o item real (COAL:1 + glow).
 rewards:
 
-  armadura-v-mina:
+  maquina-limite-spawners:
     type: COMMAND
-    chance: 17
-    display: '&6&lCapacete Mineração &6[Tier &lV&6]'
-    command: mina givearmor {player} tier-v_helmet
-    amount: 1
+    chance: 21.5
+    display: '&b&l{amount}x Máquina de L. de Spawners'
+    command: maquina give {player} limite-spawners {amount} 1
+    amount: 5
     icon:
-      material: LEATHER_HELMET
-      color: '#FFAA00'
-      display: '&6Capacete Mineração &6[Tier &lV&6]'
+      texture: a61b98d8934900a08ab7c0d60f3476c569bf7ff637196dce644e8cc4b7ba325a
+      display: '&bMáquina de L. de Spawners'
       lore:
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
       - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l12&a% &aCoins '
-      - '&8 ▪ &a+&l8&a% &dGemas '
-      - '&8 ▪ &a+&l8&a% &bXP '
-      flags:
-      - HIDE_ATTRIBUTES
+      - '&8 ▪ &fQuantia: &b{amount} '
+      - ''
+      - '&bColoque no seu terreno.'
 
-  armadura-v-farm:
+  maquina-limite-maquinas:
     type: COMMAND
-    chance: 14
-    display: '&6&lBota Farm &6[Tier &lV&6]'
-    command: fazenda givearmor {player} tier-v_boots
+    chance: 21.5
+    display: '&9&l{amount}x Máquina de L. de Máquinas'
+    command: maquina give {player} limite-maquinas {amount} 1
+    amount: 5
+    icon:
+      texture: 93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f
+      display: '&9Máquina de L. de Máquinas'
+      lore:
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
+      - ''
+      - '&8 ▪ &fQuantia: &9{amount} '
+      - ''
+      - '&9Coloque no seu terreno.'
+
+  maquina-cash:
+    type: COMMAND
+    chance: 18
+    display: '&6&l{amount}x Máquina de Cash'
+    command: maquina give {player} cash {amount} 1
+    amount: 3
+    icon:
+      texture: c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071
+      display: '&6Máquina de Cash'
+      lore:
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
+      - ''
+      - '&8 ▪ &fQuantia: &6{amount} '
+      - ''
+      - '&6Coloque no seu terreno.'
+
+  vaga:
+    type: COMMAND
+    chance: 9
+    display: '&a&lVaga de Visitante'
+    command: mina giveslot {player} 1
     amount: 1
     icon:
-      material: LEATHER_BOOTS
-      color: '#FFAA00'
-      display: '&6Bota Farm &6[Tier &lV&6]'
+      texture: 4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb
+      display: '&aVaga de Visitante'
+      lore:
+      - '&7Desbloqueia mais uma vaga'
+      - '&7de visitante na sua mina.'
+      - ''
+      - '&aOpções de uso:'
+      - '&fBotão direito &8➟ &7Ativar'
+
+  robo-lendario:
+    type: COMMAND
+    chance: 9
+    display: '&4&lRobô Lendário'
+    command: crates giverobot lendario {player} {amount}
+    amount: 1
+    icon:
+      texture: 5b0c2db42e90f83fae6551c96e83669211a77c2c155c54d1523af3079f9565ed
+      display: '&4Robô Lendário'
+      lore:
+      - '&7Abre as chaves por você e'
+      - '&7aumenta suas chances raras.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l4&as&f. '
+      - ''
+      - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+      - ' &a+&l75&a% &fsobre a chance deles.'
+
+  torre-cacto-15:
+    type: COMMAND
+    chance: 9
+    display: '&a&lTorre de Cacto &8[15 Andares]'
+    command: cactustower give {player} 15 1
+    amount: 1
+    icon:
+      material: CACTUS
+      display: '&aTorre de Cacto &8[15 Andares]'
+      lore:
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
+      - ''
+      - '&aOpções de uso:'
+      - '&fBotão direito &8➟ &7Construir'
+
+  caixas:
+    type: COMMAND
+    chance: 2.5
+    display: '&d&l{amount}x Caixa Caixas'
+    command: caixas give caixas {player} {amount}
+    amount: 25
+    icon:
+      material: ENDER_CHEST
+      amount: 25
+      display: '&dCaixa Caixas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  skins-ii:
+    type: COMMAND
+    chance: 2.5
+    display: '&e&l{amount}x Caixa Skins &e[Tier &lII&e]'
+    command: caixas give skins-ii {player} {amount}
+    amount: 15
+    icon:
+      material: CHEST
+      amount: 15
+      display: '&eCaixa Skins &e[Tier &lII&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  skin-tempestita:
+    type: COMMAND
+    chance: 2.5
+    display: '&d&lSkin de Tempestita'
+    command: pesca giveskin {player} tempestita
+    amount: 1
+    icon:
+      material: FISHING_ROD
+      glow: true
+      display: '&dSkin de Tempestita'
       lore:
       - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l12&a% &aCoins '
-      - '&8 ▪ &a+&l8&a% &5Sementes '
-      - '&8 ▪ &a+&l8&a% &bXP '
-      flags:
-      - HIDE_ATTRIBUTES
+      - ' &8Especificações:'
+      - '&8 ▪ &a+&l65&a% &3Corais '
+      - '&8 ▪ &cPeso até &l130&ckg '
+
+  torre-cacto-30:
+    type: COMMAND
+    chance: 2.5
+    display: '&a&lTorre de Cacto &8[30 Andares]'
+    command: cactustower give {player} 30 1
+    amount: 1
+    icon:
+      material: CACTUS
+      display: '&aTorre de Cacto &8[30 Andares]'
+      lore:
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
+      - ''
+      - '&aOpções de uso:'
+      - '&fBotão direito &8➟ &7Construir'
 
   skin-mithril:
     type: COMMAND
-    chance: 11
+    chance: 0.5
     display: '&4&lSkin de Mithril'
     command: mina giveskin {player} mithril
     amount: 1
@@ -85,7 +230,7 @@ rewards:
 
   skin-marfim:
     type: COMMAND
-    chance: 10
+    chance: 0.5
     display: '&f&lSkin de Marfim'
     command: fazenda giveskin {player} marfim
     amount: 1
@@ -101,184 +246,46 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  skin-tempestita:
+  robo-mitico:
     type: COMMAND
-    chance: 8
-    display: '&d&lSkin de Tempestita'
-    command: pesca giveskin {player} tempestita
+    chance: 0.5
+    display: '&6&lRobô Mítico'
+    command: crates giverobot mitico {player} {amount}
     amount: 1
     icon:
-      material: FISHING_ROD
+      texture: 665c54366f88fb3280b1c3fc500ce2b799c8dd327ab6d41c9bc959488f5cfd92
+      display: '&6Robô Mítico'
+      lore:
+      - '&7Abre as chaves por você e'
+      - '&7aumenta suas chances raras.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fAbre chaves a cada &a&l2&as&f. '
+      - ''
+      - ' &fPrêmios abaixo de &c&l3&c% &fganham'
+      - ' &a+&l140&a% &fsobre a chance deles.'
+
+  combustivel-inf:
+    type: COMMAND
+    chance: 0.25
+    display: '&b&lCombustível Infinito'
+    command: maquina giveinfinitefuel {player}
+    amount: 1
+    icon:
+      material: COAL
+      data: 1
       glow: true
-      display: '&dSkin de Tempestita'
+      display: '&b&lCombustível Infinito'
       lore:
+      - '&7A máquina nunca mais'
+      - '&7fica sem combustível.'
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l65&a% &3Corais '
-      - '&8 ▪ &cPeso até &l130&ckg '
-
-  pilhagem-3:
-    type: COMMAND
-    chance: 7
-    display: '&a&lLivro de Pilhagem 3'
-    command: lamina givebook {player} pilhagem 3
-    amount: 1
-    icon:
-      material: ENCHANTED_BOOK
-      display: '&aLivro de Pilhagem &7III'
-      lore:
-      - '&7Aumenta os drops que os'
-      - '&7mobs deixam ao morrer.'
-      - ''
-      - '&8 ▪ &fPilhagem: &aIII '
-      - ''
-      - '&7Arraste sobre a lâmina'
-      - '&7para aplicar o livro.'
-
-  massacre-5:
-    type: COMMAND
-    chance: 5
-    display: '&4&lLivro de Massacre 5'
-    command: lamina givebook {player} massacre 5
-    amount: 1
-    icon:
-      material: ENCHANTED_BOOK
-      display: '&4Livro de Massacre &7V'
-      lore:
-      - '&7Quantos mobs a sua lâmina'
-      - '&7abate em um único golpe.'
-      - ''
-      - '&8 ▪ &fMassacre: &4V '
-      - ''
-      - '&7Arraste sobre a lâmina'
-      - '&7para aplicar o livro.'
-
-  ceifador-3:
-    type: COMMAND
-    chance: 6
-    display: '&5&lLivro de Ceifador 3'
-    command: lamina givebook {player} ceifador 3
-    amount: 1
-    icon:
-      material: ENCHANTED_BOOK
-      display: '&dLivro de Ceifador &7III'
-      lore:
-      - '&7Chance de dobrar as'
-      - '&7cabeças que o mob solta.'
-      - ''
-      - '&8 ▪ &fCeifador: &dIII '
-      - ''
-      - '&7Arraste sobre a lâmina'
-      - '&7para aplicar o livro.'
-
-  speed-5:
-    type: COMMAND
-    chance: 4
-    display: '&b&lLivro de Correnteza 5'
-    command: pesca givebook {player} speed 5
-    amount: 1
-    icon:
-      material: ENCHANTED_BOOK
-      display: '&bLivro de Correnteza &7V'
-      lore:
-      - '&7Puxa o peixe mais rápido'
-      - '&7para a sua vara.'
-      - ''
-      - '&8 ▪ &fCorrenteza: &bV '
-      - ''
-      - '&7Arraste sobre a vara'
-      - '&7para aplicar o livro.'
-
-  double-5:
-    type: COMMAND
-    chance: 4
-    display: '&d&lLivro de Fartura 5'
-    command: pesca givebook {player} double 5
-    amount: 1
-    icon:
-      material: ENCHANTED_BOOK
-      display: '&dLivro de Fartura &7V'
-      lore:
-      - '&7Chance de fisgar mais de'
-      - '&7uma recompensa por vez.'
-      - ''
-      - '&8 ▪ &fFartura: &dV '
-      - ''
-      - '&7Arraste sobre a vara'
-      - '&7para aplicar o livro.'
-
-  luck-5:
-    type: COMMAND
-    chance: 4
-    display: '&a&lLivro de Faro Aguçado 5'
-    command: pesca givebook {player} luck 5
-    amount: 1
-    icon:
-      material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado &7V'
-      lore:
-      - '&7Aumenta a chance de vir'
-      - '&7recompensa melhor.'
-      - ''
-      - '&8 ▪ &fFaro Aguçado: &aV '
-      - ''
-      - '&7Arraste sobre a vara'
-      - '&7para aplicar o livro.'
-
-  vaga:
-    type: COMMAND
-    chance: 4
-    display: '&b&lVaga de Visitante'
-    command: mina giveslot {player} 1
-    amount: 1
-    icon:
-      texture: 4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb
-      display: '&aVaga de Visitante'
-      lore:
-      - '&7Ative para desbloquear &a+1 vaga'
-      - '&7de visitante na sua mina.'
-      - ''
-      - '&c[!] Item consumível após o uso.'
-      - ''
-      - '&7Use com &fBotão direito &7para ativar.'
-
-  maquina-limite-spawners:
-    type: COMMAND
-    chance: 1.5
-    display: '&bMáquina de L. de Spawners'
-    command: maquina give {player} limite-spawners
-    amount: 1
-    icon:
-      texture: a61b98d8934900a08ab7c0d60f3476c569bf7ff637196dce644e8cc4b7ba325a
-      display: '&bMáquina de L. de Spawners'
-      lore:
-      - '&7Rende drops sozinha no'
-      - '&7terreno, dia e noite.'
-      - ''
-      - '&fQuantia: &b1 '
-      - ''
-      - '&bColoque no seu terreno.'
-
-  maquina-limite-maquinas:
-    type: COMMAND
-    chance: 1.5
-    display: '&9Máquina de L. de Máquinas'
-    command: maquina give {player} limite-maquinas
-    amount: 1
-    icon:
-      texture: 93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f
-      display: '&9Máquina de L. de Máquinas'
-      lore:
-      - '&7Rende drops sozinha no'
-      - '&7terreno, dia e noite.'
-      - ''
-      - '&fQuantia: &91 '
-      - ''
-      - '&9Coloque no seu terreno.'
+      - '&bOpções de uso:'
+      - '&fBotão direito &8➟ &7Aplicar'
 
   matadora-hk:
     type: COMMAND
-    chance: 2
+    chance: 0.25
     display: '&4&lMatadora Hit-Kill'
     command: boss give sword {player} hk
     amount: 1
@@ -287,20 +294,8 @@ rewards:
       glow: true
       display: '&4Matadora Hit-Kill'
       lore:
+      - '&7Abate qualquer boss em'
+      - '&7um único golpe.'
       - ''
       - ' &8Informações: '
-      - '&8 ▪ &fKill-Stack: &e{kill_stack} '
-      - '&8 ▪ &fBosses abatidos: &e{kills} '
-
-  combustivel-inf:
-    type: COMMAND
-    chance: 1
-    display: '&b&lCombustível Infinito'
-    command: maquina giveinfinitefuel {player}
-    amount: 1
-    icon:
-      glow: true
-      display: '&b&lCombustível Infinito'
-      lore:
-      - '&7A máquina nunca mais'
-      - '&7fica sem combustível.'
+      - '&8 ▪ &fDano: &cHit-Kill '

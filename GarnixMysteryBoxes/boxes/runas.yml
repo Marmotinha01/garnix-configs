@@ -49,7 +49,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &4x25 '
+      - '&8 ▪ &fQuantia: &4x{amount} '
 
   sagrada-50:
     type: COMMAND
@@ -64,7 +64,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &4x50 '
+      - '&8 ▪ &fQuantia: &4x{amount} '
 
   sagrada-100:
     type: COMMAND
@@ -79,7 +79,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &4x100 '
+      - '&8 ▪ &fQuantia: &4x{amount} '
 
   sagrada-250:
     type: COMMAND
@@ -94,7 +94,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &4x250 '
+      - '&8 ▪ &fQuantia: &4x{amount} '
 
   sagrada-500:
     type: COMMAND
@@ -109,7 +109,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &4x500 '
+      - '&8 ▪ &fQuantia: &4x{amount} '
 
 
   # ── Runa Eterna
@@ -126,7 +126,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &2x25 '
+      - '&8 ▪ &fQuantia: &2x{amount} '
 
   eterna-50:
     type: COMMAND
@@ -141,7 +141,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &2x50 '
+      - '&8 ▪ &fQuantia: &2x{amount} '
 
   eterna-100:
     type: COMMAND
@@ -156,7 +156,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &2x100 '
+      - '&8 ▪ &fQuantia: &2x{amount} '
 
   eterna-250:
     type: COMMAND
@@ -171,7 +171,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &2x250 '
+      - '&8 ▪ &fQuantia: &2x{amount} '
 
   eterna-500:
     type: COMMAND
@@ -186,7 +186,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &2x500 '
+      - '&8 ▪ &fQuantia: &2x{amount} '
 
 
   # ── Runa Divina
@@ -203,7 +203,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &fx25 '
+      - '&8 ▪ &fQuantia: &fx{amount} '
 
   divina-50:
     type: COMMAND
@@ -218,7 +218,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &fx50 '
+      - '&8 ▪ &fQuantia: &fx{amount} '
 
   divina-100:
     type: COMMAND
@@ -233,7 +233,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &fx100 '
+      - '&8 ▪ &fQuantia: &fx{amount} '
 
   divina-250:
     type: COMMAND
@@ -248,7 +248,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &fx250 '
+      - '&8 ▪ &fQuantia: &fx{amount} '
 
   divina-500:
     type: COMMAND
@@ -263,7 +263,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &fx500 '
+      - '&8 ▪ &fQuantia: &fx{amount} '
 
 
   # ── Runa Primal
@@ -280,7 +280,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &3x25 '
+      - '&8 ▪ &fQuantia: &3x{amount} '
 
   primal-50:
     type: COMMAND
@@ -295,7 +295,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &3x50 '
+      - '&8 ▪ &fQuantia: &3x{amount} '
 
   primal-100:
     type: COMMAND
@@ -310,7 +310,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &3x100 '
+      - '&8 ▪ &fQuantia: &3x{amount} '
 
   primal-250:
     type: COMMAND
@@ -325,7 +325,7 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &3x250 '
+      - '&8 ▪ &fQuantia: &3x{amount} '
 
   primal-500:
     type: COMMAND
@@ -340,5 +340,5 @@ rewards:
       - '&7Junte e troque na loja'
       - '&7por itens exclusivos.'
       - ''
-      - '&8 ▪ &fQuantia: &3x500 '
+      - '&8 ▪ &fQuantia: &3x{amount} '
 
