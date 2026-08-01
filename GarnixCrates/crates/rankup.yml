@@ -125,11 +125,12 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      amount: 5
       display: '&4Chave Bosses'
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
+      - ''
+      - '&8▪ &fQuantia: &7{amount}'
 
   caixa-runas:
     type: COMMAND
@@ -155,11 +156,12 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      amount: 10
       display: '&4Chave Bosses'
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
+      - ''
+      - '&8▪ &fQuantia: &7{amount}'
 
   # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,95%
   cash:

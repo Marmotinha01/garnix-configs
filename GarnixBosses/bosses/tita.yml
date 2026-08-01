@@ -142,11 +142,12 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      amount: 25
       display: '&4Chave Bosses'
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
+      - ''
+      - '&8▪ &fQuantia: &7{amount}'
 
   # ── SEMI RARO ───────────────────────────────────────────────────── 3,5%
   boss-devorador:
@@ -200,11 +201,12 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      amount: 50
       display: '&4Chave Bosses'
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
+      - ''
+      - '&8▪ &fQuantia: &7{amount}'
 
   caixa-boosters:
     type: COMMAND

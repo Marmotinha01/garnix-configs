@@ -145,11 +145,12 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      amount: 50
       display: '&4Chave Bosses'
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
+      - ''
+      - '&8▪ &fQuantia: &7{amount}'
 
   # ── RARO ────────────────────────────────────────────────────────── 4,5%
   boss-devorador-3:
@@ -189,12 +190,12 @@ rewards:
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      # Sem `amount:` de proposito — 75 estoura a pilha de 64 do TRIPWIRE_HOOK e o
-      # canto do icone mostraria um numero errado. O total certo o correio ja da.
       display: '&4Chave Bosses'
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
+      - ''
+      - '&8▪ &fQuantia: &7{amount}'
 
   caixa-boosters:
     type: COMMAND
