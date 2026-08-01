@@ -271,7 +271,7 @@ rewards:
     command: caixas give farm-ii {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       display: '&aCaixa Farm &a[Tier &lII&a]'
       lore:
       - '&7Abra e descubra o que a sorte'

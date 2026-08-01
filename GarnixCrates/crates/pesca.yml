@@ -269,7 +269,7 @@ rewards:
     command: caixas give pesca-ii {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       display: '&bCaixa Pesca &b[Tier &lII&b]'
       lore:
       - '&7Abra e descubra o que a sorte'

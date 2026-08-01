@@ -184,7 +184,7 @@ rewards:
     command: caixas give runas {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       display: '&5Caixa Runas'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -214,7 +214,7 @@ rewards:
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       display: '&aCaixa Booster'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -227,7 +227,7 @@ rewards:
     command: caixas give robos {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       display: '&cCaixa Robôs'
       lore:
       - '&7Abra e descubra o que a sorte'

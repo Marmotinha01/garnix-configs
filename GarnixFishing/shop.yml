@@ -146,7 +146,7 @@ products:
     cost: 320000
     command: caixas give pesca-ii {player} 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       display: '&bCaixa Pesca &f[Tier &lII&f]'
       lore:
       - '&7Abra e descubra o que a sorte'

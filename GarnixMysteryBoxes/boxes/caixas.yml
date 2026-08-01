@@ -123,7 +123,7 @@ rewards:
     command: caixas give mineracao-ii {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 1
       display: '&6Caixa Mineração &6[Tier &lII&6]'
       lore:
@@ -137,7 +137,7 @@ rewards:
     command: caixas give mineracao-ii {player} {amount}
     amount: 2
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 2
       display: '&6Caixa Mineração &6[Tier &lII&6]'
       lore:
@@ -151,7 +151,7 @@ rewards:
     command: caixas give farm-ii {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 1
       display: '&aCaixa Farm &a[Tier &lII&a]'
       lore:
@@ -165,7 +165,7 @@ rewards:
     command: caixas give farm-ii {player} {amount}
     amount: 2
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 2
       display: '&aCaixa Farm &a[Tier &lII&a]'
       lore:
@@ -179,7 +179,7 @@ rewards:
     command: caixas give pesca-ii {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 1
       display: '&bCaixa Pesca &b[Tier &lII&b]'
       lore:
@@ -193,7 +193,7 @@ rewards:
     command: caixas give pesca-ii {player} {amount}
     amount: 2
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 2
       display: '&bCaixa Pesca &b[Tier &lII&b]'
       lore:
@@ -207,7 +207,7 @@ rewards:
     command: caixas give maquinas {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 1
       display: '&bCaixa Máquinas'
       lore:
@@ -221,7 +221,7 @@ rewards:
     command: caixas give maquinas {player} {amount}
     amount: 2
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 2
       display: '&bCaixa Máquinas'
       lore:
@@ -235,7 +235,7 @@ rewards:
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 1
       display: '&aCaixa Booster'
       lore:
@@ -249,7 +249,7 @@ rewards:
     command: caixas give boosters {player} {amount}
     amount: 2
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 2
       display: '&aCaixa Booster'
       lore:
@@ -263,7 +263,7 @@ rewards:
     command: caixas give runas {player} {amount}
     amount: 1
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 1
       display: '&5Caixa Runas'
       lore:
@@ -277,7 +277,7 @@ rewards:
     command: caixas give runas {player} {amount}
     amount: 2
     icon:
-      material: TRAPPED_CHEST
+      material: CHEST
       amount: 2
       display: '&5Caixa Runas'
       lore:
