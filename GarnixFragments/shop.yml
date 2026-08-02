@@ -189,7 +189,7 @@ items:
     slot: 23
     icon:
       material: FIREBALL
-      display: '&4Explosivo &4[&l2x2&4]'
+      display: '&4Explosivo'
       lore:
       - '&7Explode uma área inteira'
       - '&7da mina de uma só vez.'
@@ -204,7 +204,7 @@ items:
     slot: 24
     icon:
       material: FIREBALL
-      display: '&4Explosivo &4[&l4x4&4]'
+      display: '&4Explosivo'
       lore:
       - '&7Explode uma área inteira'
       - '&7da mina de uma só vez.'

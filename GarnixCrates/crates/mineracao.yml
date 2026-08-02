@@ -100,24 +100,24 @@ rewards:
   bomba-2x2:
     type: COMMAND
     chance: 5
-    display: '&4Explosivo &4[&l2x2&4]'
+    display: '&4Explosivo'
     command: mina givebomb {player} 2x2 {amount}
     amount: 1
     icon:
       material: FIREBALL
-      display: '&4Explosivo &4[&l2x2&4]'
+      display: '&4Explosivo'
       lore:
       - '&fÁrea: &42x2'
 
   bomba-4x4:
     type: COMMAND
     chance: 4
-    display: '&4Explosivo &4[&l4x4&4]'
+    display: '&4Explosivo'
     command: mina givebomb {player} 4x4 {amount}
     amount: 1
     icon:
       material: FIREBALL
-      display: '&4Explosivo &4[&l4x4&4]'
+      display: '&4Explosivo'
       lore:
       - '&fÁrea: &44x4'
 
@@ -348,24 +348,24 @@ rewards:
   bomba-6x6:
     type: COMMAND
     chance: 0.4
-    display: '&4Explosivo &4[&l6x6&4]'
+    display: '&4Explosivo'
     command: mina givebomb {player} 6x6 {amount}
     amount: 1
     icon:
       material: FIREBALL
-      display: '&4Explosivo &4[&l6x6&4]'
+      display: '&4Explosivo'
       lore:
       - '&fÁrea: &46x6'
 
   bomba-8x8:
     type: COMMAND
     chance: 0.1
-    display: '&4Explosivo &4[&l8x8&4]'
+    display: '&4Explosivo'
     command: mina givebomb {player} 8x8 {amount}
     amount: 1
     icon:
       material: FIREBALL
-      display: '&4Explosivo &4[&l8x8&4]'
+      display: '&4Explosivo'
       lore:
       - '&fÁrea: &48x8'
 
