@@ -166,7 +166,7 @@ rewards:
   cash:
     type: CURRENCY
     chance: 0.3
-    currency-id: coins
+    currency-id: cash
     amount: '100'
     icon:
       lore:

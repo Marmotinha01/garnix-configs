@@ -242,7 +242,7 @@ rewards:
   jackpot:
     type: CURRENCY
     chance: 0.001
-    currency-id: coins
+    currency-id: cash
     amount: '250'
     icon:
       lore:

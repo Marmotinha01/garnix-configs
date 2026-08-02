@@ -45,10 +45,10 @@ rewards:
     chance: 3
     display: '&8Azar'
     icon:
-      material: BARRIER
+      material: WEB
       display: '&8Azar'
       lore:
-      - '&7Raro, mas acontece.'
+      - '&7Não foi dessa vez.'
 
   armadura-iii:
     type: COMMAND
