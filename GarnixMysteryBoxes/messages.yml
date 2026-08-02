@@ -1,27 +1,27 @@
 reload-success: '&aConfigurações recarregadas com sucesso.'
 
-opened-win: '&aVocê abriu &f{box} &ae ganhou {reward}&a.'
+opened-win: '&aVocê abriu uma caixa e ganhou {reward}&a!'
 
 # Abertura em lote (SHIFT + botão direito). O cabeçalho vem uma vez e cada prêmio
 # entra em uma linha própria. Placeholders: {box}, {amount} e {reward}.
-opened-win-multi: '&aVocê abriu &f{amount}x {box} &ae ganhou:'
-opened-win-entry: ' &8 ▪ &f{reward} '
+opened-win-multi: '&a\n&a  &fx&l{amount}&fx caixas abertas:'
+opened-win-entry: '&8 ▪ &f{reward} '
 
 # Mostrada quando o jogador dá SHIFT + botão direito sem caixa suficiente na mão.
 # {amount} = quantas o lote pede · {held} = quantas ele tem · {box} = a caixa.
-not-enough-boxes: '&cVocê precisa de &f{amount}x {box} &cna mão para abrir de uma vez. &7(você tem {held})'
+not-enough-boxes: '&cVocê precisa de &cx{amount} {box} &cna mão para abrir.'
 
 # Título do menu de confirmação ao abrir uma caixa. Placeholder: {box}
 confirm-title: 'Abrir {box}'
 # O mesmo, para o lote. Placeholders: {box} e {amount}
-confirm-title-multi: 'Abrir {amount}x {box}'
+confirm-title-multi: 'Abrir x{amount} {box}'
 
 animation:
   win-title: '&fVocê ganhou:'
   win-subtitle: '{reward}'
   # Usados no lote, onde não existe UM prêmio para mostrar. Placeholder: {amount}
   win-title-multi: '&fVocê ganhou:'
-  win-subtitle-multi: '&f{amount} prêmios'
+  win-subtitle-multi: '&6{amount} prêmios'
 
 box-not-found: '&cCaixa &f{input} &cnão encontrada.'
 player-not-found: '&cJogador não encontrado.'
