@@ -47,12 +47,20 @@ key-item:
 #
 # ⚠️ `chance` e PESO, nao porcentagem — Crate.java:100-105 normaliza por
 # totalChance. Somar 100 e so legibilidade.
+#
+# ⚠️ `/mina givebomb <jogador> <bombId> [quantidade]`: o bombId e a chave do
+# bloco em `GarnixMining/bombs.yml` — 2x2, 4x4, 6x6 e 8x8. Ja a britadeira
+# nao tem id: `/mina givedrill <jogador> [quantidade]`.
+#
+# ⚠️ Os quatro explosivos se chamam "Explosivo" no item real, os quatro. O
+# `[2x2]` do display existe so para o broadcast e o preview dizerem QUAL
+# saiu — sem ele os quatro premios ficam com o mesmo nome.
 rewards:
 
   # ── COMUM ────────────────────────────────────────────────────────── 85%
   coins:
     type: CURRENCY
-    chance: 47
+    chance: 41
     currency-id: coins
     amount: '250'
     icon:
@@ -61,7 +69,7 @@ rewards:
 
   secundaria:
     type: CURRENCY
-    chance: 28
+    chance: 25
     currency-id: gemas
     amount: '25'
     icon:
@@ -79,6 +87,30 @@ rewards:
       display: '&eCombustível'
       lore:
       - '&fLitros: &7{amount}L'
+
+  bomba-2x2:
+    type: COMMAND
+    chance: 5
+    display: '&4Explosivo &4[&l2x2&4]'
+    command: mina givebomb {player} 2x2 {amount}
+    amount: 1
+    icon:
+      material: FIREBALL
+      display: '&4Explosivo &4[&l2x2&4]'
+      lore:
+      - '&fÁrea: &42x2'
+
+  bomba-4x4:
+    type: COMMAND
+    chance: 4
+    display: '&4Explosivo &4[&l4x4&4]'
+    command: mina givebomb {player} 4x4 {amount}
+    amount: 1
+    icon:
+      material: FIREBALL
+      display: '&4Explosivo &4[&l4x4&4]'
+      lore:
+      - '&fÁrea: &44x4'
 
   # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
   lim-armazem:
@@ -174,7 +206,7 @@ rewards:
   # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
   booster-gemas-2x:
     type: COMMAND
-    chance: 1.5
+    chance: 0.8
     display: '&6Booster de Mineração'
     command: mina givebooster {player} gemas 2 5m {amount}
     amount: 1
@@ -195,7 +227,7 @@ rewards:
 
   booster-coins-2x:
     type: COMMAND
-    chance: 1
+    chance: 0.6
     display: '&6Booster de Mineração'
     command: mina givebooster {player} coins 2 5m {amount}
     amount: 1
@@ -214,16 +246,66 @@ rewards:
       flags:
       - HIDE_POTION_EFFECTS
 
+  britadeira:
+    type: COMMAND
+    chance: 0.6
+    display: '&cBritadeira'
+    command: mina givedrill {player} {amount}
+    amount: 1
+    icon:
+      material: HOPPER
+      glow: true
+      display: '&cBritadeira'
+      lore:
+      - '&fÁrea: &c3x3'
+
+  bomba-6x6:
+    type: COMMAND
+    chance: 0.4
+    display: '&4Explosivo &4[&l6x6&4]'
+    command: mina givebomb {player} 6x6 {amount}
+    amount: 1
+    icon:
+      material: FIREBALL
+      display: '&4Explosivo &4[&l6x6&4]'
+      lore:
+      - '&fÁrea: &46x6'
+
+  bomba-8x8:
+    type: COMMAND
+    chance: 0.1
+    display: '&4Explosivo &4[&l8x8&4]'
+    command: mina givebomb {player} 8x8 {amount}
+    amount: 1
+    icon:
+      material: FIREBALL
+      display: '&4Explosivo &4[&l8x8&4]'
+      lore:
+      - '&fÁrea: &48x8'
+
   # ── RARA ────────────────────────────────────────────────────────── 0,4%
   caixa-mineracao-i:
     type: COMMAND
-    chance: 0.4
+    chance: 0.25
     display: '&6Caixa Mineração &6[Tier &lI&6]'
     command: caixas give mineracao-i {player} {amount}
     amount: 1
     icon:
       material: CHEST
       display: '&6Caixa Mineração &6[Tier &lI&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-recursos:
+    type: COMMAND
+    chance: 0.15
+    display: '&2Caixa Recursos'
+    command: caixas give recursos {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&2Caixa Recursos'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

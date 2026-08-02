@@ -14,7 +14,8 @@ box-item:
   - ''
   - '&eOpções de uso:'
   - '&fBotão esquerdo &8➟ &7Preview'
-  - '&fBotão direito &8➟ &7Abrir'
+  - '&fBotão direito &8➟ &7Abrir x1'
+  - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
 # ── RECOMPENSAS ───────────────────────────────────────────────────────
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
@@ -25,6 +26,14 @@ box-item:
 #
 # ⚠️ ARMADURA NUNCA VAI PARA O SITE. Ela existe só via caixa — e como a
 # caixa II é comprável, quem paga compra CHANCE, não a peça.
+#
+# ⚠️ Os explosivos sao escadinha entre as duas caixas: 2x2 e 4x4 saem daqui,
+# 6x6 e 8x8 so na Tier II. A britadeira sai nas duas, 1 aqui e 3 la.
+#
+# ⚠️ `/mina givebomb <jogador> <bombId> [quantidade]`: o bombId e a chave do
+# bloco em `GarnixMining/bombs.yml`. Os quatro explosivos se chamam so
+# "Explosivo" no item real — o `[2x2]` do display existe para o broadcast e o
+# preview dizerem QUAL saiu.
 rewards:
 
   azar:
@@ -39,7 +48,7 @@ rewards:
 
   armadura-i:
     type: COMMAND
-    chance: 25
+    chance: 19
     display: '&7Capacete Mineração &7[Tier &lI&7]'
     command: mina givearmor {player} tier-i_helmet
     amount: 1
@@ -58,7 +67,7 @@ rewards:
 
   armadura-ii:
     type: COMMAND
-    chance: 18
+    chance: 15
     display: '&aPeitoral Mineração &a[Tier &lII&a]'
     command: mina givearmor {player} tier-ii_chestplate
     amount: 1
@@ -113,7 +122,7 @@ rewards:
 
   forja:
     type: COMMAND
-    chance: 8
+    chance: 7
     display: '&6Forja de Skins'
     command: mina giveforge {player} 1
     amount: 1
@@ -131,12 +140,66 @@ rewards:
 
   secundaria:
     type: CURRENCY
-    chance: 5
+    chance: 4
     currency-id: gemas
     amount: '1000'
     icon:
       lore:
       - '&fQuantia: &7{amount} '
+
+  bomba-2x2:
+    type: COMMAND
+    chance: 6
+    display: '&4Explosivo &4[&l2x2&4]'
+    command: mina givebomb {player} 2x2 {amount}
+    amount: 1
+    icon:
+      material: FIREBALL
+      display: '&4Explosivo &4[&l2x2&4]'
+      lore:
+      - '&7Explode uma área da mina.'
+      - ''
+      - '&8 ▪ &fÁrea: &42x2 '
+      - ''
+      - '&4Opções de uso:'
+      - '&fBotão direito &8➟ &7Usar'
+
+  bomba-4x4:
+    type: COMMAND
+    chance: 3
+    display: '&4Explosivo &4[&l4x4&4]'
+    command: mina givebomb {player} 4x4 {amount}
+    amount: 1
+    icon:
+      material: FIREBALL
+      display: '&4Explosivo &4[&l4x4&4]'
+      lore:
+      - '&7Explode uma área da mina.'
+      - ''
+      - '&8 ▪ &fÁrea: &44x4 '
+      - ''
+      - '&4Opções de uso:'
+      - '&fBotão direito &8➟ &7Usar'
+
+  britadeira:
+    type: COMMAND
+    chance: 2
+    display: '&cBritadeira'
+    command: mina givedrill {player} {amount}
+    amount: 1
+    icon:
+      material: HOPPER
+      glow: true
+      display: '&cBritadeira'
+      lore:
+      - '&7Perfura a coluna inteira'
+      - '&7até o fundo da mina.'
+      - ''
+      - '&8 ▪ &fÁrea: &c3x3 '
+      - ''
+      - '&cOpções de uso:'
+      - '&fBotão direito &8➟ &7Usar'
+
   booster:
     type: COMMAND
     chance: 2

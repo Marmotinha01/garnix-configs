@@ -1,0 +1,81 @@
+# Layout da abertura em lote (SHIFT + botao direito).
+#
+# QUANTAS CAIXAS O LOTE CONSOME E QUANTAS BOBINAS EXISTEM AQUI. Quatro bobinas =
+# 4 caixas por SHIFT. Acrescente uma quinta e o SHIFT passa a pedir 5 caixas na
+# mao — nao existe numero fixo no codigo.
+title: Abrindo x{amount} {box}!
+won-title: Você ganhou!
+
+rows: 5
+
+# Cada bobina e uma COLUNA: 5 slots, um por linha. Os slots vao de BAIXO PARA
+# CIMA de proposito — e isso que faz os itens rolarem de cima para baixo.
+# Trocar a ordem inverte o sentido; listar 9 slots seguidos faria uma bobina
+# horizontal, como a do animation.yml. Nada disso e codigo.
+reels:
+  '1':
+  - 37
+  - 28
+  - 19
+  - 10
+  - 1
+  '2':
+  - 39
+  - 30
+  - 21
+  - 12
+  - 3
+  '3':
+  - 41
+  - 32
+  - 23
+  - 14
+  - 5
+  '4':
+  - 43
+  - 34
+  - 25
+  - 16
+  - 7
+
+# Posicao do premio dentro da bobina: 2 = o terceiro slot da lista, ou seja a
+# linha do meio (slots 19, 21, 23 e 25).
+center-index: 2
+
+# Os marcadores da linha do meio, entre as bobinas.
+pointer-slots:
+- 18
+- 20
+- 22
+- 24
+- 26
+
+filler-item:
+  material: STAINED_GLASS_PANE
+  data: 15
+  display: ' '
+
+pointer-item:
+  material: STAINED_GLASS_PANE
+  data: 1
+  display: '&6&l▶ SORTEANDO ◀'
+
+# Quantos deslizes antes de travar e os ticks por deslize (inicio rapido → fim lento).
+shifts: 45
+min-interval: 1
+max-interval: 9
+
+# Deslizes de atraso de uma bobina para a proxima: elas travam da esquerda para a
+# direita, uma de cada vez, em vez de todas no mesmo frame. 0 = todas juntas.
+reel-stagger: 6
+
+# Ticks que o resultado fica na tela antes de fechar (20 ticks = 1s).
+close-delay: 60
+
+tick-sound: NOTE_STICKS
+tick-volume: 0.6
+tick-pitch-min: 0.8
+tick-pitch-max: 2.0
+win-sound: LEVEL_UP
+win-volume: 1.0
+win-pitch: 1.0

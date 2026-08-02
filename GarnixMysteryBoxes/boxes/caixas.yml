@@ -14,7 +14,8 @@ box-item:
   - ''
   - '&dOpções de uso:'
   - '&fBotão esquerdo &8➟ &7Preview'
-  - '&fBotão direito &8➟ &7Abrir'
+  - '&fBotão direito &8➟ &7Abrir x1'
+  - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
 # ── RECOMPENSAS ───────────────────────────────────────────────────────
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
@@ -337,6 +338,34 @@ rewards:
       material: CHEST
       amount: 2
       display: '&5Caixa Runas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  recursos:
+    type: COMMAND
+    chance: 3.5
+    display: '&2Caixa Recursos'
+    command: caixas give recursos {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      amount: 1
+      display: '&2Caixa Recursos'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  recursos-x2:
+    type: COMMAND
+    chance: 1.5
+    display: '&2Caixa Recursos'
+    command: caixas give recursos {player} {amount}
+    amount: 2
+    icon:
+      material: CHEST
+      amount: 2
+      display: '&2Caixa Recursos'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

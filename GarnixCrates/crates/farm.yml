@@ -217,13 +217,26 @@ rewards:
   # ── RARA ────────────────────────────────────────────────────────── 0,4%
   caixa-farm-i:
     type: COMMAND
-    chance: 0.4
+    chance: 0.25
     display: '&aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
     amount: 1
     icon:
       material: CHEST
       display: '&aCaixa Farm &a[Tier &lI&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-recursos:
+    type: COMMAND
+    chance: 0.15
+    display: '&2Caixa Recursos'
+    command: caixas give recursos {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&2Caixa Recursos'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

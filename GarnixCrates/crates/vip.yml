@@ -188,7 +188,7 @@ rewards:
   # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,099%
   caixa-boosters:
     type: COMMAND
-    chance: 0.04
+    chance: 0.03
     display: '&aCaixa Booster'
     command: caixas give boosters {player} {amount}
     amount: 1
@@ -201,7 +201,7 @@ rewards:
 
   caixa-caixas:
     type: COMMAND
-    chance: 0.035
+    chance: 0.025
     display: '&dCaixa Caixas'
     command: caixas give caixas {player} {amount}
     amount: 1
@@ -221,6 +221,19 @@ rewards:
     icon:
       material: CHEST
       display: '&bCaixa Máquinas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-recursos:
+    type: COMMAND
+    chance: 0.02
+    display: '&2Caixa Recursos'
+    command: caixas give recursos {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&2Caixa Recursos'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

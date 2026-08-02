@@ -14,7 +14,8 @@ box-item:
   - ''
   - '&bOpções de uso:'
   - '&fBotão esquerdo &8➟ &7Preview'
-  - '&fBotão direito &8➟ &7Abrir'
+  - '&fBotão direito &8➟ &7Abrir x1'
+  - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
 # ── RECOMPENSAS ───────────────────────────────────────────────────────
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE

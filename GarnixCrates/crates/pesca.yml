@@ -217,7 +217,7 @@ rewards:
   # ── RARA ────────────────────────────────────────────────────────── 0,4%
   caixa-pesca-i:
     type: COMMAND
-    chance: 0.4
+    chance: 0.25
     display: '&bCaixa Pesca &b[Tier &lI&b]'
     command: caixas give pesca-i {player} {amount}
     amount: 1
@@ -226,7 +226,20 @@ rewards:
       display: '&bCaixa Pesca &b[Tier &lI&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentros.'
+      - '&7guardou para você lá dentro.'
+
+  caixa-recursos:
+    type: COMMAND
+    chance: 0.15
+    display: '&2Caixa Recursos'
+    command: caixas give recursos {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&2Caixa Recursos'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   # ── RARO PLUS ─────────────────────────────────────────────────── 0,099%
   skin-coral:

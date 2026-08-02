@@ -5,7 +5,8 @@ title: Caixas Misteriosas
 # ultimo (as melhores). Caixa sem `weight` nao aparece nesta lista.
 #
 # '<' e '>' sao os botoes de pagina anterior/proxima; so aparecem quando ha
-# mais de uma pagina. Com 15 slots livres e 12 caixas, hoje e uma pagina so.
+# mais de uma pagina. Com 15 slots livres e 15 caixas, hoje e uma pagina so —
+# a proxima caixa criada ja abre a segunda pagina.
 shape:
 - XXXXXXXXX
 - XX.....XX
