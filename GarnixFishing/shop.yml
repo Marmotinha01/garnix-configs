@@ -4,205 +4,223 @@
 #   command — run as console on purchase; {player} = buyer's name.
 #   icon    — material/display/lore shown in the menu (shared buy-lore appended).
 #
-# ═══ POR QUE ESTE ARQUIVO FOI REESCRITO ══════════════════════════════════════
+# ═══ O QUE A LOJA VENDE ══════════════════════════════════════════════════════
 #
-# Tinha UM produto, e ele era um exploit:
+# Três blocos, e só eles:
 #
-#   spawner-limit: cost 1500 corais  ->  spawner givelimite {player} 1500
+#   chaves    pesca e bosses, em lotes de 16 e 32
+#   limites   spawner · máquina · armazém, em lotes de 5, 15 e 30
+#   caixas    Recursos, Runas e Booster
 #
-# Câmbio 1:1 com o item nº 1 do Ranking de Apelões. A pesca rende ~2,19 milhões
-# de corais na temporada, então isso comprava ~2,19 MILHÕES de limite de spawner
-# — várias ordens acima de qualquer necessidade real, já que um bloco comporta
-# no máximo 512 itens de spawner.
+# A pesca é a via AFK: ela não devolve poder de combate nem item de progressão
+# direto, ela devolve CHANCE (chave, caixa) e CAPACIDADE (limite). Quem quer a
+# peça em si abre a caixa ou vai na via ativa.
 #
-# ═══ O CÂMBIO NOVO ═══════════════════════════════════════════════════════════
+# ═══ POR QUE O LIMITE TEM CÂMBIO CRESCENTE ═══════════════════════════════════
 #
-#   lote de   1  ->   1.100 corais por unidade
-#   lote de  10  ->   1.400 por unidade  (+27%)
-#   lote de 100  ->   1.900 por unidade  (+73%)
+# Antes daqui existia um produto só, e ele era um exploit: 1.500 corais compravam
+# 1.500 de limite de spawner, câmbio 1:1 com o item nº 1 do Ranking de Apelões. A
+# pesca rende ~2,19 milhões de corais na temporada, então aquilo comprava ~2,19
+# MILHÕES de limite — várias ordens acima de qualquer necessidade real, já que um
+# bloco comporta no máximo 512 itens de spawner.
 #
-# A base de 1.100 é derivada: 2,19×10⁶ corais na temporada ÷ ~2.000 de limite,
+# O câmbio agora CRESCE com o lote, ao contrário de toda loja normal:
+#
+#   lote de  5  ->  1.300 corais por unidade
+#   lote de 15  ->  1.500 por unidade  (+15%)
+#   lote de 30  ->  1.667 por unidade  (+28%)
+#
+# A base de ~1.100 é derivada: 2,19×10⁶ corais na temporada ÷ ~2.000 de limite,
 # que é o teto útil com folga (512 itens por bloco × os blocos que o jogador
-# mantém).
+# mantém). Os lotes daqui partem dela e sobem.
 #
-# ⚠️ O câmbio CRESCE com o lote, ao contrário de toda loja normal — e é de
-# propósito. `spawnerslimite` é o item nº 1 do Ranking de Apelões: multiplica a
-# única via SEM teto físico. E corais são negociáveis (sem blacklist, por decisão
-# do dono), então um jogador pode comprar os corais dos outros e converter tudo
-# em capacidade. Com câmbio plano, concentrar não custaria nada a mais.
+# É de propósito. `spawnerslimite` é o item nº 1 do Ranking de Apelões: multiplica
+# a única via SEM teto físico. E corais são negociáveis (sem blacklist, por decisão
+# do dono), então um jogador pode comprar os corais dos outros e converter tudo em
+# capacidade. Com câmbio plano, concentrar não custaria nada a mais.
 #
 # Quem compra pouco não sente. Quem quer concentrar paga progressivamente mais —
 # que é exatamente o freio que o E5 pedia sem precisar proibir a troca.
 #
-# `maquinaslimite` entra pelo mesmo câmbio: as duas são moedas de contagem pura
-# e devem custar o mesmo esforço.
+# `maquinaslimite` entra pelo mesmo câmbio: as duas são moedas de contagem pura e
+# devem custar o mesmo esforço.
+#
+# ⚠️ O armazém segue a MESMA escala de lote (5/15/30) por decisão do dono — a
+# leitura do menu fica uniforme nas três colunas. O preço dele é 1/10 do dos
+# outros dois porque a unidade dele sempre valeu 1/10: o item de armazém vendido
+# em todo o resto do servidor é 500 por 55.000 corais, ou seja 110 por unidade,
+# contra 1.100 dos limites de compra.
+#
+# ═══ CHAVES ══════════════════════════════════════════════════════════════════
+#
+# Câmbio plano, sem desconto por lote — chave não é vetor de concentração, os 16
+# e os 32 existem só para poupar clique:
+#
+#   chave de pesca    875 corais cada   (o lote de 10 já custava 900)
+#   chave de bosses  1.500 corais cada
+#
+# A de boss custa ~1,7× porque a fonte dela é matar boss, não ficar AFK — este é
+# o preço de furar essa fila com uma via passiva.
 products:
 
-  # ── Limite de spawner ──────────────────────────────────────────────────────
-  spawner-limit-1:
+  # ── Chaves ─────────────────────────────────────────────────────────────────
+  chave-pesca-16:
     slot: 10
-    cost: 1100
-    command: spawner givelimite {player} 1
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b1 '
-
-  spawner-limit-10:
-    slot: 11
     cost: 14000
-    command: spawner givelimite {player} 10
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b10 '
-
-  spawner-limit-100:
-    slot: 12
-    cost: 190000
-    command: spawner givelimite {player} 100
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b100 '
-
-  # ── Limite de maquina ──────────────────────────────────────────────────────
-  machine-limit-1:
-    slot: 14
-    cost: 1100
-    command: maquina givelimite {player} 1
-    icon:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&8 ▪ &fQuantia: &91 '
-
-  machine-limit-10:
-    slot: 15
-    cost: 14000
-    command: maquina givelimite {player} 10
-    icon:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&8 ▪ &fQuantia: &910 '
-
-  machine-limit-100:
-    slot: 16
-    cost: 190000
-    command: maquina givelimite {player} 100
-    icon:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&8 ▪ &fQuantia: &9100 '
-
-  caixa-pesca-i:
-    slot: 19
-    cost: 45000
-    command: caixas give pesca-i {player} 1
-    icon:
-      material: CHEST
-      display: '&bCaixa Pesca &7[Tier &lI&7]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  caixa-pesca-ii:
-    slot: 20
-    cost: 320000
-    command: caixas give pesca-ii {player} 1
-    icon:
-      material: CHEST
-      display: '&bCaixa Pesca &f[Tier &lII&f]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  chaves-pesca:
-    slot: 21
-    cost: 9000
-    command: crates givekey pesca {player} 10
+    command: crates givekey pesca {player} 16
     icon:
       material: TRIPWIRE_HOOK
+      amount: 16
       glow: true
       display: '&bChave Pesca'
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
+      - ''
+      - '&8 ▪ &fQuantia: &7x16 '
 
-  booster-pesca:
-    slot: 22
+  chave-pesca-32:
+    slot: 11
     cost: 28000
-    command: pesca givebooster {player} corais 3 10m 1
+    command: crates givekey pesca {player} 32
     icon:
-      material: POTION
-      data: 8203
-      display: '&bBooster de Pesca'
+      material: TRIPWIRE_HOOK
+      amount: 32
+      glow: true
+      display: '&bChave Pesca'
       lore:
-      - '&7Use este booster para ter'
-      - '&7seus ganhos aumentados.'
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
       - ''
-      - ' &8Informações: '
-      - ' &8▪ &fTipo: {type} '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &710m '
-      flags:
-      - HIDE_POTION_EFFECTS
+      - '&8 ▪ &fQuantia: &7x32 '
 
-  forja:
+  chave-bosses-16:
+    slot: 15
+    cost: 24000
+    command: crates givekey bosses {player} 16
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 16
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+      - ''
+      - '&8 ▪ &fQuantia: &7x16 '
+
+  chave-bosses-32:
+    slot: 16
+    cost: 48000
+    command: crates givekey bosses {player} 32
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 32
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+      - ''
+      - '&8 ▪ &fQuantia: &7x32 '
+
+  # ── Limite de spawner ──────────────────────────────────────────────────────
+  spawner-limit-5:
+    slot: 19
+    cost: 6500
+    command: spawner givelimite {player} 5 1
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
+      - ''
+      - '&8 ▪ &fQuantia: &b5 '
+
+  spawner-limit-15:
+    slot: 28
+    cost: 22500
+    command: spawner givelimite {player} 15 1
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
+      - ''
+      - '&8 ▪ &fQuantia: &b15 '
+
+  spawner-limit-30:
+    slot: 37
+    cost: 50000
+    command: spawner givelimite {player} 30 1
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
+      - ''
+      - '&8 ▪ &fQuantia: &b30 '
+
+  # ── Limite de maquina ──────────────────────────────────────────────────────
+  machine-limit-5:
+    slot: 21
+    cost: 6500
+    command: maquina givelimite {player} 5 1
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&7Aumente o seu poder de'
+      - '&7compra de máquinas.'
+      - ''
+      - '&8 ▪ &fQuantia: &95 '
+
+  machine-limit-15:
+    slot: 30
+    cost: 22500
+    command: maquina givelimite {player} 15 1
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&7Aumente o seu poder de'
+      - '&7compra de máquinas.'
+      - ''
+      - '&8 ▪ &fQuantia: &915 '
+
+  machine-limit-30:
+    slot: 39
+    cost: 50000
+    command: maquina givelimite {player} 30 1
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&7Aumente o seu poder de'
+      - '&7compra de máquinas.'
+      - ''
+      - '&8 ▪ &fQuantia: &930 '
+
+  # ── Limite de armazem ──────────────────────────────────────────────────────
+  warehouse-limit-5:
     slot: 23
-    cost: 60000
-    command: pesca giveforge {player} 1
-    icon:
-      texture: c03563c9259bdc86b44d1a02fee3853dea696770a28c4724d13f713f6c5ec54f
-      display: '&bForja de Skins'
-      lore:
-      - '&7Combine skins para'
-      - '&7forjar uma melhor.'
-      - ''
-      - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
-      - ' &8Requisitos:'
-      - '&8 ▪ &c7 skins iguais '
-
-  lim-armazem:
-    slot: 24
-    cost: 55000
-    command: armazem givelimititem {player} 500 1
+    cost: 650
+    command: armazem givelimititem {player} 5 1
     icon:
       material: INK_SACK
       data: 2
@@ -212,4 +230,68 @@ products:
       - '&7Aumente a capacidade de'
       - '&7estoque do seu terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &a500 '
+      - '&8 ▪ &fQuantia: &a5 '
+
+  warehouse-limit-15:
+    slot: 32
+    cost: 2250
+    command: armazem givelimititem {player} 15 1
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&7Aumente a capacidade de'
+      - '&7estoque do seu terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &a15 '
+
+  warehouse-limit-30:
+    slot: 41
+    cost: 5000
+    command: armazem givelimititem {player} 30 1
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&7Aumente a capacidade de'
+      - '&7estoque do seu terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &a30 '
+
+  # ── Caixas ─────────────────────────────────────────────────────────────────
+  caixa-recursos:
+    slot: 25
+    cost: 40000
+    command: caixas give recursos {player} 1
+    icon:
+      material: CHEST
+      display: '&2Caixa Recursos'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-runas:
+    slot: 34
+    cost: 60000
+    command: caixas give runas {player} 1
+    icon:
+      material: CHEST
+      display: '&5Caixa Runas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-boosters:
+    slot: 43
+    cost: 35000
+    command: caixas give boosters {player} 1
+    icon:
+      material: CHEST
+      display: '&aCaixa Booster'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

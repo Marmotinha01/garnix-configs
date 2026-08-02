@@ -1,6 +1,10 @@
 title: Loja de Runas
 
 # . = item (paginado)  | < = página anterior  | > = próxima página
+#
+# 7 por linha × 3 linhas = 21 vagas, e a loja tem 18 itens: tudo cabe numa
+# página só. Com as 5 vagas de antes a lista quebrava em duas, e a segunda
+# página vinha com três itens.
 shape:
 - XXXXXXXXX
 - XX.....XX

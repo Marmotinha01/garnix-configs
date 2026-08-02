@@ -1,6 +1,6 @@
 # Loja de Runas — a rota in-game do que o site vende.
 #
-# Cada entrada é um item da loja. Campos:
+# Cada entrada e um item da loja. Campos:
 #   icon     — ícone exibido (o custo é gerado automaticamente)
 #   cost     — runas exigidas: <id>: <quantia> (aceita sufixos: 1.5K)
 #   commands — comandos executados no console ao comprar ({player} = comprador)
@@ -11,125 +11,309 @@
 # Runa é CONTAGEM — 500 são 500 no dia 3 e no dia 20. É a única coisa no
 # servidor que consegue manter um item "difícil" a temporada inteira.
 #
-# Por isso esta loja não vende conveniência: ela é onde o jogador que NÃO paga
-# chega nos itens do cash-shop, por um caminho deliberadamente mais longo.
+# Por isso esta loja não vende conveniência barata: ela é onde o jogador que NÃO
+# paga chega nos itens do cash-shop, por um caminho deliberadamente mais longo.
+#
+# ── O QUE ELA VENDE ─────────────────────────────────────────────────────────
+#
+#   utilitários   limpador, ativador de baú, reset de KDR
+#   throughput    bomba 2x2, bomba 4x4, britadeira
+#   caixas        Recursos, Booster e as quatro de Tier I
+#   forjas        pesca, fazenda e mineração (as três pelo mesmo preço)
+#   cacto         torre de 5, 10 e 15 andares
 #
 # ── A REGRA DO CUSTO ────────────────────────────────────────────────────────
 #
 # Todo item caro custa MAIS DE UM TIPO de runa, e os tipos vêm de fontes
 # diferentes (sagrada=boss · eterna=crate/caixa · divina=? · primal=?). É o
-# que impede o jogador de morar num sistema só e comprar tudo: para levar o VIP
-# ele precisa ter matado boss, aberto caixa, ganhado evento de chat E lutado.
+# que impede o jogador de morar num sistema só e comprar tudo: para levar a
+# britadeira ele precisa ter matado boss, aberto caixa, ganhado evento de chat
+# E lutado.
 #
 # Um custo de tipo único seria uma moeda com passos extras. Um custo de quatro
-# tipos é uma agenda.
+# tipos é uma agenda. Só a faixa de entrada (utilitário de conveniência e a
+# bomba pequena) cobra um tipo só.
+#
+# A faixa vai de 90 (limpador) a 1.000 de um mesmo tipo (britadeira) — os lotes
+# da Caixa Runas (25 · 50 · 100 · 250 · 500) foram desenhados contra ela, então
+# mexer nos extremos daqui pede revisar o comentário de `boxes/runas.yml`.
 #
 # ⚠️ Os números abaixo assumem a taxa de drop atual (20% nos bosses, faixa rara
 #    nas crates, 3–5 por evento). Quando o M1 e o M2 forem medidos in-game, se a
 #    taxa real for k× a estimada, TODOS os custos multiplicam por k — nada mais
 #    muda, porque a loja não tem outro acoplamento.
+#
+# ⚠️ A britadeira é o maior throughput do jogo (coluna inteira, 3x3 por nível,
+#    10 simultâneas). Ela é o único item de quatro runas daqui, e é de propósito:
+#    é o produto que mais empurra o Ranking de Apelões.
 
 items:
 
-  # ── Faixa de entrada: o que o free alcança na primeira semana ─────────────
+  # ── Faixa de entrada: um tipo só, o que o free alcança na primeira semana ──
 
-  booster:
+  limpador-terreno:
     icon:
-      material: POTION
-      data: 8201
-      display: '&6Booster de Mineração'
-      lore:
-      - '&7Use este booster para ter'
-      - '&7seus ganhos aumentados.'
-      - ''
-      - ' &8Informações: '
-      - ' &8▪ &fTipo: &aCoins '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &71h '
-      flags:
-      - HIDE_POTION_EFFECTS
-    cost:
-      eterna: 120
-      divina: 40
-    commands:
-    - 'mina givebooster {player} coins 3 1h 1'
-
-  chaves:
-    icon:
-      material: TRIPWIRE_HOOK
+      material: GOLD_SPADE
+      data: 0
       glow: true
-      display: '&6Chave RankUP'
+      display: '&eLimpador de Terreno'
       lore:
-      - '&7Consiga subindo de rank'
-      - '&7ao longo da sua jornada.'
+      - '&7Limpa todos os blocos'
+      - '&7do seu terreno de uma vez.'
+      flags:
+      - HIDE_ATTRIBUTES
     cost:
       eterna: 90
     commands:
-    - 'crates givekey rankup {player} 25'
+    - 'clearplot give {player} 1'
+
+  ativador-bau:
+    icon:
+      material: CHEST
+      display: '&6Ativador de Baú'
+      lore:
+      - '&7Libera mais um baú na'
+      - '&7sua lista de baús.'
+    cost:
+      eterna: 120
+    commands:
+    - 'bau giveitem {player} 1'
+
+  reset-kdr:
+    icon:
+      material: NETHER_STAR
+      glow: true
+      display: '&bReset de KDR'
+      lore:
+      - '&7Zera os seus abates e'
+      - '&7mortes dentro do clan.'
+    cost:
+      primal: 120
+    commands:
+    - 'clan giveresetkdr {player} 1'
+
+  bomba-2x2:
+    icon:
+      material: FIREBALL
+      display: '&4Explosivo &4[&l2x2&4]'
+      lore:
+      - '&7Explode uma área inteira'
+      - '&7da mina de uma só vez.'
+      - ''
+      - '&8 ▪ &fÁrea: &42x2 '
+    cost:
+      eterna: 150
+    commands:
+    - 'mina givebomb {player} 2x2 1'
 
   # ── Faixa média: pede duas fontes ────────────────────────────────────────
 
-  caixa-ii:
+  caixa-boosters:
     icon:
       material: CHEST
-      display: '&eCaixa Mineração &f[Tier &lII&f]'
+      display: '&aCaixa Booster'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+    cost:
+      eterna: 200
+      divina: 80
+    commands:
+    - 'caixas give boosters {player} 1'
+
+  caixa-recursos:
+    icon:
+      material: CHEST
+      display: '&2Caixa Recursos'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+    cost:
+      eterna: 220
+      divina: 90
+    commands:
+    - 'caixas give recursos {player} 1'
+
+  torre-cacto-5:
+    icon:
+      material: CACTUS
+      display: '&aTorre de Cacto &8[5 Andares]'
+      lore:
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
+    cost:
+      eterna: 250
+      primal: 100
+    commands:
+    - 'cactustower give {player} 5 1'
+
+  forja-pesca:
+    icon:
+      texture: c03563c9259bdc86b44d1a02fee3853dea696770a28c4724d13f713f6c5ec54f
+      display: '&bForja de Skins'
+      lore:
+      - '&7Combine skins para'
+      - '&7forjar uma melhor.'
+      - ''
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+      - ' &8Requisitos:'
+      - '&8 ▪ &c7 skins iguais '
+    cost:
+      eterna: 280
+      divina: 120
+    commands:
+    - 'pesca giveforge {player} 1'
+
+  forja-fazenda:
+    icon:
+      texture: 13cfc3cbc0cf6f81774fa37b1f6608417c36aa19e5a429c97698ff94dafb3a6
+      display: '&eForja de Skins'
+      lore:
+      - '&7Combine skins para'
+      - '&7forjar uma melhor.'
+      - ''
+      - '&8 ▪ &fTipo: &eEnxada '
+      - ''
+      - ' &8Requisitos:'
+      - '&8 ▪ &c7 skins iguais '
+    cost:
+      eterna: 280
+      divina: 120
+    commands:
+    - 'fazenda giveforge {player} 1'
+
+  forja-mineracao:
+    icon:
+      texture: 818f83eb64f438e3f6ae3a5c2dea8ed10303bad85ac34a798659a275aa096506
+      display: '&6Forja de Skins'
+      lore:
+      - '&7Combine skins para'
+      - '&7forjar uma melhor.'
+      - ''
+      - '&8 ▪ &fTipo: &6Picareta '
+      - ''
+      - ' &8Requisitos:'
+      - '&8 ▪ &c7 skins iguais '
+    cost:
+      eterna: 280
+      divina: 120
+    commands:
+    - 'mina giveforge {player} 1'
+
+  bomba-4x4:
+    icon:
+      material: FIREBALL
+      display: '&4Explosivo &4[&l4x4&4]'
+      lore:
+      - '&7Explode uma área inteira'
+      - '&7da mina de uma só vez.'
+      - ''
+      - '&8 ▪ &fÁrea: &44x4 '
+    cost:
+      eterna: 300
+      sagrada: 120
+    commands:
+    - 'mina givebomb {player} 4x4 1'
+
+  caixa-pesca-i:
+    icon:
+      material: CHEST
+      display: '&bCaixa Pesca &b[Tier &lI&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+    cost:
+      eterna: 350
+      sagrada: 150
+    commands:
+    - 'caixas give pesca-i {player} 1'
+
+  caixa-farm-i:
+    icon:
+      material: CHEST
+      display: '&aCaixa Farm &a[Tier &lI&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+    cost:
+      eterna: 350
+      sagrada: 150
+    commands:
+    - 'caixas give farm-i {player} 1'
+
+  caixa-mineracao-i:
+    icon:
+      material: CHEST
+      display: '&6Caixa Mineração &6[Tier &lI&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+    cost:
+      eterna: 350
+      sagrada: 150
+    commands:
+    - 'caixas give mineracao-i {player} 1'
+
+  caixa-skins-i:
+    icon:
+      material: CHEST
+      display: '&eCaixa Skins &e[Tier &lI&e]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
     cost:
       eterna: 400
-      sagrada: 250
+      sagrada: 180
     commands:
-    - 'caixas give mineracao-ii {player} 1'
-
-  lim-armazem:
-    icon:
-      material: INK_SACK
-      data: 2
-      glow: true
-      display: '&2Limite de Armazém'
-      lore:
-      - '&7Aumente a capacidade de'
-      - '&7estoque do seu terreno.'
-      - ''
-      - '&8 ▪ &fQuantia: &a500 '
-    cost:
-      sagrada: 350
-      primal: 150
-    commands:
-    - 'armazem givelimititem {player} 500 1'
+    - 'caixas give skins-i {player} 1'
 
   # ── Faixa alta: pede três fontes ─────────────────────────────────────────
 
-  lim-spawner:
+  torre-cacto-10:
     icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
+      material: CACTUS
+      display: '&aTorre de Cacto &8[10 Andares]'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b1 '
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
     cost:
-      sagrada: 1200
-      eterna: 900
-      primal: 600
+      eterna: 450
+      sagrada: 300
+      primal: 200
     commands:
-    - 'spawner givelimite {player} 1 1'
+    - 'cactustower give {player} 10 1'
 
-  tag-vip:
+  torre-cacto-15:
     icon:
-      display: '{color}Papel &lVIP {vip}'
+      material: CACTUS
+      display: '&aTorre de Cacto &8[15 Andares]'
       lore:
-      - '&fDuração: &77d'
-      - ''
-      - '{color}Clique para resgatar!'
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
     cost:
-      sagrada: 1000
+      eterna: 700
+      sagrada: 500
+      primal: 350
+    commands:
+    - 'cactustower give {player} 15 1'
+
+  # ── Faixa topo: as quatro fontes ─────────────────────────────────────────
+
+  britadeira:
+    icon:
+      material: HOPPER
+      glow: true
+      display: '&cBritadeira'
+      lore:
+      - '&7Quebra a coluna inteira'
+      - '&7de blocos abaixo dela.'
+      - ''
+      - '&8 ▪ &fÁrea: &c3x3 '
+    cost:
       eterna: 1000
-      divina: 500
+      sagrada: 700
+      divina: 400
       primal: 500
     commands:
-    - 'vip givepaper {player} celestial 7d 1'
+    - 'mina givedrill {player} 1'
