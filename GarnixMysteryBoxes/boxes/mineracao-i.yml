@@ -134,9 +134,6 @@ rewards:
       - '&7forjar uma melhor.'
       - ''
       - '&8 ▪ &fTipo: &6Picareta '
-      - ''
-      - ' &8Requisitos:'
-      - '&8 ▪ &c7 skins iguais '
 
   secundaria:
     type: CURRENCY
@@ -157,12 +154,7 @@ rewards:
       material: FIREBALL
       display: '&4Explosivo &4[&l2x2&4]'
       lore:
-      - '&7Explode uma área da mina.'
-      - ''
-      - '&8 ▪ &fÁrea: &42x2 '
-      - ''
-      - '&4Opções de uso:'
-      - '&fBotão direito &8➟ &7Usar'
+      - '&fÁrea: &42x2'
 
   bomba-4x4:
     type: COMMAND
@@ -174,12 +166,7 @@ rewards:
       material: FIREBALL
       display: '&4Explosivo &4[&l4x4&4]'
       lore:
-      - '&7Explode uma área da mina.'
-      - ''
-      - '&8 ▪ &fÁrea: &44x4 '
-      - ''
-      - '&4Opções de uso:'
-      - '&fBotão direito &8➟ &7Usar'
+      - '&fÁrea: &44x4'
 
   britadeira:
     type: COMMAND
@@ -192,13 +179,7 @@ rewards:
       glow: true
       display: '&cBritadeira'
       lore:
-      - '&7Perfura a coluna inteira'
-      - '&7até o fundo da mina.'
-      - ''
-      - '&8 ▪ &fÁrea: &c3x3 '
-      - ''
-      - '&cOpções de uso:'
-      - '&fBotão direito &8➟ &7Usar'
+      - '&fÁrea: &c3x3'
 
   booster:
     type: COMMAND

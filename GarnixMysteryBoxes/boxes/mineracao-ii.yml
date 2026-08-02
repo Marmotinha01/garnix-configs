@@ -170,12 +170,7 @@ rewards:
       material: FIREBALL
       display: '&4Explosivo &4[&l6x6&4]'
       lore:
-      - '&7Explode uma área da mina.'
-      - ''
-      - '&8 ▪ &fÁrea: &46x6 '
-      - ''
-      - '&4Opções de uso:'
-      - '&fBotão direito &8➟ &7Usar'
+      - '&fÁrea: &46x6'
 
   bomba-8x8:
     type: COMMAND
@@ -187,12 +182,7 @@ rewards:
       material: FIREBALL
       display: '&4Explosivo &4[&l8x8&4]'
       lore:
-      - '&7Explode uma área da mina.'
-      - ''
-      - '&8 ▪ &fÁrea: &48x8 '
-      - ''
-      - '&4Opções de uso:'
-      - '&fBotão direito &8➟ &7Usar'
+      - '&fÁrea: &48x8'
 
   britadeira:
     type: COMMAND
@@ -206,13 +196,7 @@ rewards:
       glow: true
       display: '&cBritadeira'
       lore:
-      - '&7Perfura a coluna inteira'
-      - '&7até o fundo da mina.'
-      - ''
-      - '&8 ▪ &fÁrea: &c3x3 '
-      - ''
-      - '&cOpções de uso:'
-      - '&fBotão direito &8➟ &7Usar'
+      - '&fÁrea: &c3x3'
 
   booster:
     type: COMMAND

@@ -122,9 +122,6 @@ rewards:
       - '&7forjar uma melhor.'
       - ''
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
-      - ' &8Requisitos:'
-      - '&8 ▪ &c7 skins iguais '
 
   secundaria:
     type: CURRENCY

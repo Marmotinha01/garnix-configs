@@ -174,38 +174,32 @@ rewards:
     type: COMMAND
     chance: 3
     display: '&4Runa Sagrada'
-    command: runas givevirtual {player} sagrada {amount}
+    command: runas give {player} sagrada {amount} 1
     amount: 25
     icon:
       texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       display: '&4Runa Sagrada'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &4x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   sagrada-50:
     type: COMMAND
     chance: 1.5
     display: '&4Runa Sagrada'
-    command: runas givevirtual {player} sagrada {amount}
+    command: runas give {player} sagrada {amount} 1
     amount: 50
     icon:
       texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       display: '&4Runa Sagrada'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &4x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   # ── Runa Eterna
   eterna-25:
     type: COMMAND
     chance: 3
     display: '&2Runa Eterna'
-    command: runas givevirtual {player} eterna {amount}
+    command: runas give {player} eterna {amount} 1
     amount: 25
     icon:
       texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
@@ -220,7 +214,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&2Runa Eterna'
-    command: runas givevirtual {player} eterna {amount}
+    command: runas give {player} eterna {amount} 1
     amount: 50
     icon:
       texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
@@ -236,62 +230,50 @@ rewards:
     type: COMMAND
     chance: 3
     display: '&fRuna Divina'
-    command: runas givevirtual {player} divina {amount}
+    command: runas give {player} divina {amount} 1
     amount: 25
     icon:
       texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
       display: '&fRuna Divina'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &fx{amount} '
+      - '&fQuantia: &7x{amount}'
 
   divina-50:
     type: COMMAND
     chance: 1.5
     display: '&fRuna Divina'
-    command: runas givevirtual {player} divina {amount}
+    command: runas give {player} divina {amount} 1
     amount: 50
     icon:
       texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
       display: '&fRuna Divina'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &fx{amount} '
+      - '&fQuantia: &7x{amount}'
 
   # ── Runa Primal
   primal-25:
     type: COMMAND
     chance: 3
     display: '&3Runa Primal'
-    command: runas givevirtual {player} primal {amount}
+    command: runas give {player} primal {amount} 1
     amount: 25
     icon:
       texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
       display: '&3Runa Primal'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &3x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   primal-50:
     type: COMMAND
     chance: 1.5
     display: '&3Runa Primal'
-    command: runas givevirtual {player} primal {amount}
+    command: runas give {player} primal {amount} 1
     amount: 50
     icon:
       texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
       display: '&3Runa Primal'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &3x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   # ── Coins
   coins-25:
@@ -333,14 +315,7 @@ rewards:
       data: 0
       display: '&eCombustível'
       lore:
-      - '&7Mantém a sua máquina'
-      - '&7produzindo drops.'
-      - ''
-      - '&8 ▪ &fLitros: &7{amount} '
-      - ''
-      - '&eOpções de uso:'
-      - '&fBotão direito &8➟ &7Aplicar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fLitros: &7{amount}L'
 
   combustivel-50:
     type: COMMAND
@@ -353,14 +328,7 @@ rewards:
       data: 0
       display: '&eCombustível'
       lore:
-      - '&7Mantém a sua máquina'
-      - '&7produzindo drops.'
-      - ''
-      - '&8 ▪ &fLitros: &7{amount} '
-      - ''
-      - '&eOpções de uso:'
-      - '&fBotão direito &8➟ &7Aplicar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fLitros: &7{amount}L'
 
   combustivel-100:
     type: COMMAND
@@ -373,14 +341,7 @@ rewards:
       data: 0
       display: '&eCombustível'
       lore:
-      - '&7Mantém a sua máquina'
-      - '&7produzindo drops.'
-      - ''
-      - '&8 ▪ &fLitros: &7{amount} '
-      - ''
-      - '&eOpções de uso:'
-      - '&fBotão direito &8➟ &7Aplicar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fLitros: &7{amount}L'
 
   # ── Limite de Armazém
   lim-armazem-25:
@@ -395,14 +356,7 @@ rewards:
       glow: true
       display: '&2Limite de Armazém'
       lore:
-      - '&7Aumente a capacidade de'
-      - '&7estoque do seu terreno.'
-      - ''
-      - '&8 ▪ &fValor: &a{amount} '
-      - ''
-      - '&2Opções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &2∞{amount}'
 
   lim-armazem-50:
     type: COMMAND
@@ -416,14 +370,7 @@ rewards:
       glow: true
       display: '&2Limite de Armazém'
       lore:
-      - '&7Aumente a capacidade de'
-      - '&7estoque do seu terreno.'
-      - ''
-      - '&8 ▪ &fValor: &a{amount} '
-      - ''
-      - '&2Opções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &2∞{amount}'
 
   lim-armazem-100:
     type: COMMAND
@@ -437,14 +384,7 @@ rewards:
       glow: true
       display: '&2Limite de Armazém'
       lore:
-      - '&7Aumente a capacidade de'
-      - '&7estoque do seu terreno.'
-      - ''
-      - '&8 ▪ &fValor: &a{amount} '
-      - ''
-      - '&2Opções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &2∞{amount}'
 
   # ── Ativador de Baú
   ativador-bau:
@@ -459,9 +399,6 @@ rewards:
       lore:
       - '&7Libera mais um baú na'
       - '&7sua lista de baús.'
-      - ''
-      - '&6Opções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
 
   # ── Limpador de Terreno
   limpador-terreno:
@@ -478,9 +415,6 @@ rewards:
       lore:
       - '&7Limpa todos os blocos'
       - '&7do seu terreno de uma vez.'
-      - ''
-      - '&eOpções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
       flags:
       - HIDE_ATTRIBUTES
 
@@ -497,14 +431,7 @@ rewards:
       glow: true
       display: '&9Limite de Máquinas'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&8 ▪ &fValor: &9{amount} '
-      - ''
-      - '&9Opções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &9∞{amount}'
 
   lim-maquina-50:
     type: COMMAND
@@ -518,14 +445,7 @@ rewards:
       glow: true
       display: '&9Limite de Máquinas'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&8 ▪ &fValor: &9{amount} '
-      - ''
-      - '&9Opções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &9∞{amount}'
 
   lim-maquina-100:
     type: COMMAND
@@ -539,14 +459,7 @@ rewards:
       glow: true
       display: '&9Limite de Máquinas'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&8 ▪ &fValor: &9{amount} '
-      - ''
-      - '&9Opções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &9∞{amount}'
 
   # ── Limite de Spawners
   lim-spawner-25:
@@ -561,14 +474,7 @@ rewards:
       glow: true
       display: '&bLimite de Spawners'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fValor: &b{amount} '
-      - ''
-      - '&bOpções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &b∞{amount}'
 
   lim-spawner-50:
     type: COMMAND
@@ -582,14 +488,7 @@ rewards:
       glow: true
       display: '&bLimite de Spawners'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fValor: &b{amount} '
-      - ''
-      - '&bOpções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &b∞{amount}'
 
   lim-spawner-100:
     type: COMMAND
@@ -603,14 +502,7 @@ rewards:
       glow: true
       display: '&bLimite de Spawners'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fValor: &b{amount} '
-      - ''
-      - '&bOpções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
-      - '&fBotão dir. + SHIFT &8➟ &7Juntar'
+      - '&fValor: &b∞{amount}'
 
   # ── Caixa Runas
   caixa-runas:
@@ -641,6 +533,3 @@ rewards:
       lore:
       - '&7Zera os seus abates e'
       - '&7mortes dentro do clan.'
-      - ''
-      - '&bOpções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'

@@ -41,76 +41,61 @@ rewards:
     type: COMMAND
     chance: 12
     display: '&4Runa Sagrada'
-    command: runas givevirtual {player} sagrada {amount}
+    command: runas give {player} sagrada {amount} 1
     amount: 25
     icon:
       texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       display: '&4Runa Sagrada'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &4x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   sagrada-50:
     type: COMMAND
     chance: 7
     display: '&4Runa Sagrada'
-    command: runas givevirtual {player} sagrada {amount}
+    command: runas give {player} sagrada {amount} 1
     amount: 50
     icon:
       texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       display: '&4Runa Sagrada'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &4x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   sagrada-100:
     type: COMMAND
     chance: 4
     display: '&4Runa Sagrada'
-    command: runas givevirtual {player} sagrada {amount}
+    command: runas give {player} sagrada {amount} 1
     amount: 100
     icon:
       texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       display: '&4Runa Sagrada'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &4x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   sagrada-250:
     type: COMMAND
     chance: 1.5
     display: '&4Runa Sagrada'
-    command: runas givevirtual {player} sagrada {amount}
+    command: runas give {player} sagrada {amount} 1
     amount: 250
     icon:
       texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       display: '&4Runa Sagrada'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &4x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   sagrada-500:
     type: COMMAND
     chance: 0.5
     display: '&4Runa Sagrada'
-    command: runas givevirtual {player} sagrada {amount}
+    command: runas give {player} sagrada {amount} 1
     amount: 500
     icon:
       texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
       display: '&4Runa Sagrada'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &4x{amount} '
+      - '&fQuantia: &7x{amount}'
 
 
   # ── Runa Eterna
@@ -118,76 +103,61 @@ rewards:
     type: COMMAND
     chance: 12
     display: '&2Runa Eterna'
-    command: runas givevirtual {player} eterna {amount}
+    command: runas give {player} eterna {amount} 1
     amount: 25
     icon:
       texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
       display: '&2Runa Eterna'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &2x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   eterna-50:
     type: COMMAND
     chance: 7
     display: '&2Runa Eterna'
-    command: runas givevirtual {player} eterna {amount}
+    command: runas give {player} eterna {amount} 1
     amount: 50
     icon:
       texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
       display: '&2Runa Eterna'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &2x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   eterna-100:
     type: COMMAND
     chance: 4
     display: '&2Runa Eterna'
-    command: runas givevirtual {player} eterna {amount}
+    command: runas give {player} eterna {amount} 1
     amount: 100
     icon:
       texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
       display: '&2Runa Eterna'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &2x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   eterna-250:
     type: COMMAND
     chance: 1.5
     display: '&2Runa Eterna'
-    command: runas givevirtual {player} eterna {amount}
+    command: runas give {player} eterna {amount} 1
     amount: 250
     icon:
       texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
       display: '&2Runa Eterna'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &2x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   eterna-500:
     type: COMMAND
     chance: 0.5
     display: '&2Runa Eterna'
-    command: runas givevirtual {player} eterna {amount}
+    command: runas give {player} eterna {amount} 1
     amount: 500
     icon:
       texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
       display: '&2Runa Eterna'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &2x{amount} '
+      - '&fQuantia: &7x{amount}'
 
 
   # ── Runa Divina
@@ -195,76 +165,61 @@ rewards:
     type: COMMAND
     chance: 12
     display: '&fRuna Divina'
-    command: runas givevirtual {player} divina {amount}
+    command: runas give {player} divina {amount} 1
     amount: 25
     icon:
       texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
       display: '&fRuna Divina'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &fx{amount} '
+      - '&fQuantia: &7x{amount}'
 
   divina-50:
     type: COMMAND
     chance: 7
     display: '&fRuna Divina'
-    command: runas givevirtual {player} divina {amount}
+    command: runas give {player} divina {amount} 1
     amount: 50
     icon:
       texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
       display: '&fRuna Divina'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &fx{amount} '
+      - '&fQuantia: &7x{amount}'
 
   divina-100:
     type: COMMAND
     chance: 4
     display: '&fRuna Divina'
-    command: runas givevirtual {player} divina {amount}
+    command: runas give {player} divina {amount} 1
     amount: 100
     icon:
       texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
       display: '&fRuna Divina'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &fx{amount} '
+      - '&fQuantia: &7x{amount}'
 
   divina-250:
     type: COMMAND
     chance: 1.5
     display: '&fRuna Divina'
-    command: runas givevirtual {player} divina {amount}
+    command: runas give {player} divina {amount} 1
     amount: 250
     icon:
       texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
       display: '&fRuna Divina'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &fx{amount} '
+      - '&fQuantia: &7x{amount}'
 
   divina-500:
     type: COMMAND
     chance: 0.5
     display: '&fRuna Divina'
-    command: runas givevirtual {player} divina {amount}
+    command: runas give {player} divina {amount} 1
     amount: 500
     icon:
       texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
       display: '&fRuna Divina'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &fx{amount} '
+      - '&fQuantia: &7x{amount}'
 
 
   # ── Runa Primal
@@ -272,74 +227,59 @@ rewards:
     type: COMMAND
     chance: 12
     display: '&3Runa Primal'
-    command: runas givevirtual {player} primal {amount}
+    command: runas give {player} primal {amount} 1
     amount: 25
     icon:
       texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
       display: '&3Runa Primal'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &3x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   primal-50:
     type: COMMAND
     chance: 7
     display: '&3Runa Primal'
-    command: runas givevirtual {player} primal {amount}
+    command: runas give {player} primal {amount} 1
     amount: 50
     icon:
       texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
       display: '&3Runa Primal'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &3x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   primal-100:
     type: COMMAND
     chance: 4
     display: '&3Runa Primal'
-    command: runas givevirtual {player} primal {amount}
+    command: runas give {player} primal {amount} 1
     amount: 100
     icon:
       texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
       display: '&3Runa Primal'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &3x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   primal-250:
     type: COMMAND
     chance: 1.5
     display: '&3Runa Primal'
-    command: runas givevirtual {player} primal {amount}
+    command: runas give {player} primal {amount} 1
     amount: 250
     icon:
       texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
       display: '&3Runa Primal'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &3x{amount} '
+      - '&fQuantia: &7x{amount}'
 
   primal-500:
     type: COMMAND
     chance: 0.5
     display: '&3Runa Primal'
-    command: runas givevirtual {player} primal {amount}
+    command: runas give {player} primal {amount} 1
     amount: 500
     icon:
       texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
       display: '&3Runa Primal'
       lore:
-      - '&7Junte e troque na loja'
-      - '&7por itens exclusivos.'
-      - ''
-      - '&8 ▪ &fQuantia: &3x{amount} '
+      - '&fQuantia: &7x{amount}'
 
