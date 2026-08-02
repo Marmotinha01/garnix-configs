@@ -6,7 +6,7 @@
 weight: 105
 
 box-item:
-  material: CHEST
+  material: ENDER_CHEST
   display: '&eCaixa Skins &e[Tier &lII&e]'
   lore:
   - '&7Abra e descubra o que a sorte'

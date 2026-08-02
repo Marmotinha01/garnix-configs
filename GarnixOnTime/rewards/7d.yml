@@ -12,20 +12,11 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂28 cash '
-    - '&8 ▪ &dx&l10 &dChaves VIP '
+    - '&8 ▪ &dx&l10 &dChave VIP '
     - '&8 ▪ &bx&l1 &bCaixa Pesca &b[Tier &lII&b] '
     - ''
 
 rewards:
-  cash:
-    type: COMMAND
-    command: 'cash add {player} 28'
-    amount: 1
-    icon:
-      material: GOLD_INGOT
-      display: '&6❂28 Cash'
-
   chave:
     type: COMMAND
     command: 'crates givekey vip {player} {amount}'
@@ -43,7 +34,7 @@ rewards:
     command: 'caixas give pesca-ii {player} {amount}'
     amount: 1
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       display: '&bCaixa Pesca &b[Tier &lII&b]'
       lore:
       - '&7Abra e descubra o que a sorte'

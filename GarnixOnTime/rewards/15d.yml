@@ -12,20 +12,11 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂50 cash '
-    - '&8 ▪ &dx&l15 &dChaves VIP '
+    - '&8 ▪ &dx&l15 &dChave VIP '
     - '&8 ▪ &dx&l1 &dCaixa Caixas '
     - ''
 
 rewards:
-  cash:
-    type: COMMAND
-    command: 'cash add {player} 50'
-    amount: 1
-    icon:
-      material: GOLD_INGOT
-      display: '&6❂50 Cash'
-
   chave:
     type: COMMAND
     command: 'crates givekey vip {player} {amount}'

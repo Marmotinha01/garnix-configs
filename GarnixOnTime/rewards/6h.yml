@@ -12,20 +12,11 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂8 cash '
-    - '&8 ▪ &ax&l5 &aChaves Farm '
+    - '&8 ▪ &ax&l5 &aChave Farm '
     - '&8 ▪ &bx&l1 &bCaixa Pesca &b[Tier &lI&b] '
     - ''
 
 rewards:
-  cash:
-    type: COMMAND
-    command: 'cash add {player} 8'
-    amount: 1
-    icon:
-      material: GOLD_INGOT
-      display: '&6❂8 Cash'
-
   chave:
     type: COMMAND
     command: 'crates givekey farm {player} {amount}'

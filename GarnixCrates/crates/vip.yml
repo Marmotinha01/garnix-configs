@@ -212,19 +212,6 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  caixa-maquinas:
-    type: COMMAND
-    chance: 0.024
-    display: '&bCaixa Máquinas'
-    command: caixas give maquinas {player} {amount}
-    amount: 1
-    icon:
-      material: CHEST
-      display: '&bCaixa Máquinas'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
   caixa-recursos:
     type: COMMAND
     chance: 0.02

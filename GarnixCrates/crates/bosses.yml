@@ -102,6 +102,19 @@ rewards:
       - '&fDano: &c500'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
+  caixa-bosses-i:
+    type: COMMAND
+    chance: 0.25
+    display: '&4Caixa Bosses &4[Tier &lI&4]'
+    command: caixas give bosses-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&4Caixa Bosses &4[Tier &lI&4]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
   # ── RARO PLUS ──────────────────────────────────────────────────── 0,09%
   boss-tita:
     type: COMMAND
@@ -114,6 +127,19 @@ rewards:
       display: '&5Boss Titã'
       lore:
       - '&fVida: &4❤150K'
+
+  caixa-bosses-ii:
+    type: COMMAND
+    chance: 0.02
+    display: '&4Caixa Bosses &4[Tier &lII&4]'
+    command: caixas give bosses-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&4Caixa Bosses &4[Tier &lII&4]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   # ── RARÍSSIMA ─────────────────────────────────────────────────── 0,009%
   boss-devorador:

@@ -12,20 +12,11 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂5 cash '
-    - '&8 ▪ &ex&l5 &eChaves Mineração '
+    - '&8 ▪ &ex&l5 &eChave Mineração '
     - '&8 ▪ &ax&l1 &aCaixa Farm &a[Tier &lI&a] '
     - ''
 
 rewards:
-  cash:
-    type: COMMAND
-    command: 'cash add {player} 5'
-    amount: 1
-    icon:
-      material: GOLD_INGOT
-      display: '&6❂5 Cash'
-
   chave:
     type: COMMAND
     command: 'crates givekey mineracao {player} {amount}'

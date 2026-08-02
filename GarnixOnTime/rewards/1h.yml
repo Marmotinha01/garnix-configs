@@ -12,19 +12,21 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂3 cash '
-    - '&8 ▪ &ex&l3 &eChaves Mineração '
     - '&8 ▪ &ax&l1 &aCaixa Booster '
+    - '&8 ▪ &ex&l3 &eChave Mineração '
     - ''
 
 rewards:
-  cash:
+  caixa:
     type: COMMAND
-    command: 'cash add {player} 3'
+    command: 'caixas give boosters {player} {amount}'
     amount: 1
     icon:
-      material: GOLD_INGOT
-      display: '&6❂3 Cash'
+      material: CHEST
+      display: '&aCaixa Booster'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   chave:
     type: COMMAND
@@ -37,14 +39,3 @@ rewards:
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
-
-  caixa:
-    type: COMMAND
-    command: 'caixas give boosters {player} {amount}'
-    amount: 1
-    icon:
-      material: CHEST
-      display: '&aCaixa Booster'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'

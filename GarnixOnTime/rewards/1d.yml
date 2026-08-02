@@ -12,19 +12,21 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂12 cash '
-    - '&8 ▪ &4x&l3 &4Chaves Bosses '
     - '&8 ▪ &5x&l1 &5Caixa Runas '
+    - '&8 ▪ &4x&l3 &4Chave Bosses '
     - ''
 
 rewards:
-  cash:
+  caixa:
     type: COMMAND
-    command: 'cash add {player} 12'
+    command: 'caixas give runas {player} {amount}'
     amount: 1
     icon:
-      material: GOLD_INGOT
-      display: '&6❂12 Cash'
+      material: CHEST
+      display: '&5Caixa Runas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   chave:
     type: COMMAND
@@ -37,14 +39,3 @@ rewards:
       lore:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
-
-  caixa:
-    type: COMMAND
-    command: 'caixas give runas {player} {amount}'
-    amount: 1
-    icon:
-      material: CHEST
-      display: '&5Caixa Runas'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'

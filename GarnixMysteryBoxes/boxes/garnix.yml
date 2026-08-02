@@ -186,7 +186,7 @@ rewards:
     command: caixas give skins-ii {player} {amount}
     amount: 15
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       amount: 15
       display: '&eCaixa Skins &e[Tier &lII&e]'
       lore:

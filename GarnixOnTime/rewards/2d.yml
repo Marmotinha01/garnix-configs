@@ -12,20 +12,11 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂15 cash '
-    - '&8 ▪ &4x&l5 &4Chaves Bosses '
+    - '&8 ▪ &4x&l5 &4Chave Bosses '
     - '&8 ▪ &2x&l1 &2Caixa Recursos '
     - ''
 
 rewards:
-  cash:
-    type: COMMAND
-    command: 'cash add {player} 15'
-    amount: 1
-    icon:
-      material: GOLD_INGOT
-      display: '&6❂15 Cash'
-
   chave:
     type: COMMAND
     command: 'crates givekey bosses {player} {amount}'

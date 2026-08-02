@@ -212,18 +212,9 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   # ── JACKPOT ──────────────────────────────────────────────────────── 0,05%
-  jackpot:
-    type: COMMAND
-    chance: 0.05
-    display: '&6Caixa Garnix'
-    command: caixas give garnix {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      display: '&6Caixa Garnix'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
+  # ⚠️ VAGO. A Caixa Garnix saiu daqui por decisão do dono (ago/2026) — ela é o
+  # item de 15.000 de cash do site e não pode cair de uma crate sem gate. Esta
+  # crate está sem jackpot até a faixa ser preenchida.
 
   # ── AZAR ────────────────────────────────────────────────────────── 25%
   # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega

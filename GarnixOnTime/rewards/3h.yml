@@ -12,20 +12,11 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂5 cash '
-    - '&8 ▪ &bx&l3 &bChaves Pesca '
+    - '&8 ▪ &bx&l3 &bChave Pesca '
     - '&8 ▪ &6x&l1 &6Caixa Mineração &6[Tier &lI&6] '
     - ''
 
 rewards:
-  cash:
-    type: COMMAND
-    command: 'cash add {player} 5'
-    amount: 1
-    icon:
-      material: GOLD_INGOT
-      display: '&6❂5 Cash'
-
   chave:
     type: COMMAND
     command: 'crates givekey pesca {player} {amount}'

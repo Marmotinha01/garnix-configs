@@ -15,8 +15,8 @@ insufficient:
 - ''
 # Currency cost line. Placeholders: {rank_color} {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
 cost-line: '  &8► {symbol_color}{symbol}{primary_color}{amount} {currency}'
-# Head cost line. Placeholders: {rank_color} {amount} {display}
-cost-line-head: '  &8► {rank_color}x{amount} &7Heads de {display}'
+# Head cost line. Placeholders: {color} {rank_color} {amount} {display}
+cost-line-head: '  &8► {color}x{amount} {color}Heads de {display}'
 
 prestige-success: '&aVocê evoluiu para o prestígio &f{prestige}&a.'
 prestige-not-last-rank: '&cVocê precisa estar no último rank para prestigiar.'

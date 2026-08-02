@@ -12,20 +12,11 @@ reward-icon:
     - '&8 ▪ &fNecessário: &7{required_time} online '
     - ''
     - ' &8Recompensas:'
-    - '&8 ▪ &6❂25 cash '
-    - '&8 ▪ &dx&l8 &dChaves VIP '
+    - '&8 ▪ &dx&l8 &dChave VIP '
     - '&8 ▪ &ax&l1 &aCaixa Farm &a[Tier &lII&a] '
     - ''
 
 rewards:
-  cash:
-    type: COMMAND
-    command: 'cash add {player} 25'
-    amount: 1
-    icon:
-      material: GOLD_INGOT
-      display: '&6❂25 Cash'
-
   chave:
     type: COMMAND
     command: 'crates givekey vip {player} {amount}'
@@ -43,7 +34,7 @@ rewards:
     command: 'caixas give farm-ii {player} {amount}'
     amount: 1
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       display: '&aCaixa Farm &a[Tier &lII&a]'
       lore:
       - '&7Abra e descubra o que a sorte'

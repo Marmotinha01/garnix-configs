@@ -1,0 +1,315 @@
+# O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
+# segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
+
+# Raridade desta caixa, usada para ordenar o menu /caixas: quanto MAIOR o peso,
+# mais rara e mais tarde ela aparece na lista (omita para não aparecer nela).
+weight: 65
+
+box-item:
+  material: CHEST
+  display: '&4Caixa Bosses &4[Tier &lI&4]'
+  lore:
+  - '&7Abra e descubra o que a sorte'
+  - '&7guardou para você lá dentro.'
+  - ''
+  - '&4Opções de uso:'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir x1'
+  - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
+
+# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# 'chance' é o peso do sorteio (não precisa somar 100).
+#
+# ⚠️ SEM AZAR, por decisão do dono: toda abertura devolve alguma coisa. O que
+# varia é qual boss e quantos.
+#
+# ⚠️ `/boss give boss <jogador> <BOSS> <stacks> 1`: o PRIMEIRO int é o que
+# escala — ele é a quantidade de bosses. O segundo é sempre 1. Inverter os
+# dois entrega um boss só e o erro passa em silêncio.
+#
+# ⚠️ `/boss give killstack <jogador> <nivel> [quantia]`: aqui o NÍVEL vem
+# primeiro (1) e a quantia depois. É a ordem oposta à do boss.
+#
+# ⚠️ As matadoras vão até a Ancestral nesta caixa. Rúnica e Abissal são
+# exclusivas da Tier II — é o que separa as duas.
+#
+# ⚠️ Os três volumes de cada boss (1x, 3x e 5x) usam o mesmo ícone; quem
+# mostra quantos são é a pilha (`amount:`) e o `{amount}x` do display.
+rewards:
+
+  # ── COLOSSO — o recheio da tabela
+  boss-colosso:
+    type: COMMAND
+    chance: 18
+    display: '&c&l{amount}x Boss Colosso'
+    command: boss give boss {player} COLOSSO {amount} 1
+    amount: 1
+    icon:
+      texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
+      amount: 1
+      display: '&cBoss Colosso'
+      lore:
+      - '&fVida: &4❤25K'
+
+  boss-colosso-x3:
+    type: COMMAND
+    chance: 9
+    display: '&c&l{amount}x Boss Colosso'
+    command: boss give boss {player} COLOSSO {amount} 1
+    amount: 3
+    icon:
+      texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
+      amount: 3
+      display: '&cBoss Colosso'
+      lore:
+      - '&fVida: &4❤25K'
+
+  boss-colosso-x5:
+    type: COMMAND
+    chance: 4.5
+    display: '&c&l{amount}x Boss Colosso'
+    command: boss give boss {player} COLOSSO {amount} 1
+    amount: 5
+    icon:
+      texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
+      amount: 5
+      display: '&cBoss Colosso'
+      lore:
+      - '&fVida: &4❤25K'
+
+  # ── INFERNO
+  boss-inferno:
+    type: COMMAND
+    chance: 14
+    display: '&6&l{amount}x Boss Inferno'
+    command: boss give boss {player} INFERNO {amount} 1
+    amount: 1
+    icon:
+      texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
+      amount: 1
+      display: '&6Boss Inferno'
+      lore:
+      - '&fVida: &4❤50K'
+
+  boss-inferno-x3:
+    type: COMMAND
+    chance: 7
+    display: '&6&l{amount}x Boss Inferno'
+    command: boss give boss {player} INFERNO {amount} 1
+    amount: 3
+    icon:
+      texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
+      amount: 3
+      display: '&6Boss Inferno'
+      lore:
+      - '&fVida: &4❤50K'
+
+  boss-inferno-x5:
+    type: COMMAND
+    chance: 3.5
+    display: '&6&l{amount}x Boss Inferno'
+    command: boss give boss {player} INFERNO {amount} 1
+    amount: 5
+    icon:
+      texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
+      amount: 5
+      display: '&6Boss Inferno'
+      lore:
+      - '&fVida: &4❤50K'
+
+  # ── ARAUTO
+  boss-arauto:
+    type: COMMAND
+    chance: 10
+    display: '&d&l{amount}x Boss Arauto'
+    command: boss give boss {player} ARAUTO {amount} 1
+    amount: 1
+    icon:
+      texture: 38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677
+      amount: 1
+      display: '&dBoss Arauto'
+      lore:
+      - '&fVida: &4❤75K'
+
+  boss-arauto-x3:
+    type: COMMAND
+    chance: 5
+    display: '&d&l{amount}x Boss Arauto'
+    command: boss give boss {player} ARAUTO {amount} 1
+    amount: 3
+    icon:
+      texture: 38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677
+      amount: 3
+      display: '&dBoss Arauto'
+      lore:
+      - '&fVida: &4❤75K'
+
+  boss-arauto-x5:
+    type: COMMAND
+    chance: 2.5
+    display: '&d&l{amount}x Boss Arauto'
+    command: boss give boss {player} ARAUTO {amount} 1
+    amount: 5
+    icon:
+      texture: 38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677
+      amount: 5
+      display: '&dBoss Arauto'
+      lore:
+      - '&fVida: &4❤75K'
+
+  # ── TITÃ
+  boss-tita:
+    type: COMMAND
+    chance: 6
+    display: '&5&l{amount}x Boss Titã'
+    command: boss give boss {player} TITA {amount} 1
+    amount: 1
+    icon:
+      texture: efec3e24551726cb3d64cbd1604a1a9f8a1e11693722a8aad5109a1fffa8d43c
+      amount: 1
+      display: '&5Boss Titã'
+      lore:
+      - '&fVida: &4❤150K'
+
+  boss-tita-x3:
+    type: COMMAND
+    chance: 3
+    display: '&5&l{amount}x Boss Titã'
+    command: boss give boss {player} TITA {amount} 1
+    amount: 3
+    icon:
+      texture: efec3e24551726cb3d64cbd1604a1a9f8a1e11693722a8aad5109a1fffa8d43c
+      amount: 3
+      display: '&5Boss Titã'
+      lore:
+      - '&fVida: &4❤150K'
+
+  boss-tita-x5:
+    type: COMMAND
+    chance: 1.5
+    display: '&5&l{amount}x Boss Titã'
+    command: boss give boss {player} TITA {amount} 1
+    amount: 5
+    icon:
+      texture: efec3e24551726cb3d64cbd1604a1a9f8a1e11693722a8aad5109a1fffa8d43c
+      amount: 5
+      display: '&5Boss Titã'
+      lore:
+      - '&fVida: &4❤150K'
+
+  # ── DEVORADOR
+  boss-devorador:
+    type: COMMAND
+    chance: 3
+    display: '&4&l{amount}x Boss Devorador'
+    command: boss give boss {player} DEVORADOR {amount} 1
+    amount: 1
+    icon:
+      texture: ef93e9e1de7c1f721514968e4cd7c30082be02061a0e1ce91e67c3f0d70d5840
+      amount: 1
+      display: '&4Boss Devorador'
+      lore:
+      - '&fVida: &4❤300K'
+
+  boss-devorador-x3:
+    type: COMMAND
+    chance: 1.5
+    display: '&4&l{amount}x Boss Devorador'
+    command: boss give boss {player} DEVORADOR {amount} 1
+    amount: 3
+    icon:
+      texture: ef93e9e1de7c1f721514968e4cd7c30082be02061a0e1ce91e67c3f0d70d5840
+      amount: 3
+      display: '&4Boss Devorador'
+      lore:
+      - '&fVida: &4❤300K'
+
+  boss-devorador-x5:
+    type: COMMAND
+    chance: 0.75
+    display: '&4&l{amount}x Boss Devorador'
+    command: boss give boss {player} DEVORADOR {amount} 1
+    amount: 5
+    icon:
+      texture: ef93e9e1de7c1f721514968e4cd7c30082be02061a0e1ce91e67c3f0d70d5840
+      amount: 5
+      display: '&4Boss Devorador'
+      lore:
+      - '&fVida: &4❤300K'
+
+  # ── MATADORAS
+  matadora-bruta:
+    type: COMMAND
+    chance: 3
+    display: '&7Matadora Bruta'
+    command: boss give sword {player} bruta
+    amount: 1
+    icon:
+      material: STONE_SWORD
+      glow: true
+      display: '&7Matadora Bruta'
+      lore:
+      - '&fDano: &c500'
+      flags: [ 'HIDE_ATTRIBUTES' ]
+
+  matadora-sombria:
+    type: COMMAND
+    chance: 1.5
+    display: '&5Matadora Sombria'
+    command: boss give sword {player} sombria
+    amount: 1
+    icon:
+      material: IRON_SWORD
+      glow: true
+      display: '&5Matadora Sombria'
+      lore:
+      - '&fDano: &c750'
+      flags: [ 'HIDE_ATTRIBUTES' ]
+
+  matadora-ancestral:
+    type: COMMAND
+    chance: 0.5
+    display: '&bMatadora Ancestral'
+    command: boss give sword {player} ancestral
+    amount: 1
+    icon:
+      material: DIAMOND_SWORD
+      glow: true
+      display: '&bMatadora Ancestral'
+      lore:
+      - '&fDano: &c1500'
+      flags: [ 'HIDE_ATTRIBUTES' ]
+
+  # ── LIVRO
+  livro-killstack:
+    type: COMMAND
+    chance: 2
+    display: '&4&l{amount}x Livro de Kill-Stack'
+    command: boss give killstack {player} 1 {amount}
+    amount: 1
+    icon:
+      material: BOOK
+      glow: true
+      display: '&4Livro de Kill-Stack'
+      lore:
+      - '&7Elimine mais bosses'
+      - '&7ao abater apenas um.'
+      - ''
+      - '&8 ▪ &fNível: &c1 '
+      - '&8 ▪ &fQuantia: &c{amount} '
+      flags: [ 'HIDE_POTION_EFFECTS' ]
+
+  # ── O DEGRAU PARA A TIER II
+  caixa-bosses-ii:
+    type: COMMAND
+    chance: 0.5
+    display: '&4Caixa Bosses &4[Tier &lII&4]'
+    command: caixas give bosses-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&4Caixa Bosses &4[Tier &lII&4]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

@@ -8,16 +8,21 @@ shape:
 - XXXXXXXXX
 - XXXXXXXXX
 
-# As duas linhas aceitam {rank_color}: a cor do rank que está sendo pago — no
-# available-icon, o próximo rank do jogador.
+# Duas cores disponíveis nas linhas de custo:
+#
+#   {rank_color} = a cor do rank sendo PAGO (no available-icon, o próximo rank).
+#   {color}      = só na linha de head: a cor do rank do MOB da head, igual à do
+#                  item que o jogador tem na mão. Não é a do rank anterior — cada
+#                  mob paga dois ranks seguidos (a Vaca custa head de PIG, não de
+#                  SHEEP), então ela vem do mob, nunca de `order - 1`.
 #
 # {amount} já sai abreviado (3000 vira 3K, 1500 vira 1.5K) e {display} é só o
-# nome do mob ("Coelho"), então a palavra "Cabeças de" é escrita aqui.
+# nome do mob ("Coelho"), então a palavra "Heads de" é escrita aqui.
 #
 # Currency cost line. Placeholders: {rank_color} {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
 cost-format: '&8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency} '
-# Head cost line. Placeholders: {rank_color} {amount} {display}
-cost-format-head: '&8 ▪ {rank_color}x{amount} &7Heads de {display} '
+# Head cost line. Placeholders: {color} {rank_color} {amount} {display}
+cost-format-head: '&8 ▪ {color}x{amount} {color}Heads de {display} '
 
 empty-icon:
   slot: 22
