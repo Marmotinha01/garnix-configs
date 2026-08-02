@@ -155,3 +155,17 @@ rewards:
       - ' &8▪ &fDuração: &715m '
       flags:
       - HIDE_POTION_EFFECTS
+
+  # ── O DEGRAU PARA A TIER II
+  caixa-farm-ii:
+    type: COMMAND
+    chance: 0.5
+    display: '&aCaixa Farm &a[Tier &lII&a]'
+    command: caixas give farm-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&aCaixa Farm &a[Tier &lII&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

@@ -170,3 +170,17 @@ rewards:
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
 
+
+  # ── O DEGRAU PARA A TIER II
+  caixa-pesca-ii:
+    type: COMMAND
+    chance: 0.5
+    display: '&bCaixa Pesca &b[Tier &lII&b]'
+    command: caixas give pesca-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&bCaixa Pesca &b[Tier &lII&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

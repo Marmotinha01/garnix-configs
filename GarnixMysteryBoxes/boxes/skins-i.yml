@@ -294,3 +294,17 @@ rewards:
       - ' &8Especificações:'
       - '&8 ▪ &a+&l20% &3Corais '
       - '&8 ▪ &cPeso até &l32&ckg '
+
+  # ── O DEGRAU PARA A TIER II
+  caixa-skins-ii:
+    type: COMMAND
+    chance: 1.5
+    display: '&eCaixa Skins &e[Tier &lII&e]'
+    command: caixas give skins-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&eCaixa Skins &e[Tier &lII&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

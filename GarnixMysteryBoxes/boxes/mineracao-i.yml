@@ -201,3 +201,17 @@ rewards:
       - ' &8▪ &fDuração: &715m '
       flags:
       - HIDE_POTION_EFFECTS
+
+  # ── O DEGRAU PARA A TIER II
+  caixa-mineracao-ii:
+    type: COMMAND
+    chance: 0.5
+    display: '&6Caixa Mineração &6[Tier &lII&6]'
+    command: caixas give mineracao-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&6Caixa Mineração &6[Tier &lII&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
