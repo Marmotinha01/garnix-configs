@@ -130,7 +130,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8 ▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7x{amount}'
 
   caixa-runas:
     type: COMMAND
@@ -160,7 +160,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8 ▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7x{amount}'
 
   # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,95%
   cash:

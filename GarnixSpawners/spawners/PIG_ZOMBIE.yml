@@ -36,7 +36,7 @@ spawner-item:
   - '&7Gera mobs sem parar'
   - '&7dentro do seu terreno.'
   - ''
-  - '&8 ▪ &fQuantia: &7{amount} '
+  - '&8 ▪ &fQuantia: &7x{amount} '
   - ''
   - '&aColoque no seu terreno.'
 

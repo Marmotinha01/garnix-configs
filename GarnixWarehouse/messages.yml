@@ -14,7 +14,7 @@ farm:
   sold: '&aVocê vendeu &f{display} &apor {symbol_color}{symbol}{primary_color}{amount} {currency}&a.'
 
 farm-item:
-  amount: '&fQuantia: &7{amount}'
+  amount: '&fQuantia: &7x{amount}'
   sell: '&fVenda: {symbol_color}{symbol}{primary_color}{amount}'
   click-action: '&aClique para gerenciar.'
   empty: '&cNenhum cacto armazenado.'

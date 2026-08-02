@@ -130,7 +130,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8 ▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7x{amount}'
 
   # ── MEDIANA PLUS ──────────────────────────────────────────────────── 1%
   chaves-boss-5:
@@ -147,7 +147,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8 ▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7x{amount}'
 
   robo-comum:
     type: COMMAND

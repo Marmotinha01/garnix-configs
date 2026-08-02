@@ -7,7 +7,7 @@ info-icon:
   - '&7O que está guardado no'
   - '&7armazém deste terreno.'
   - ''
-  - '&8 ▪ &fQuantia: &7{amount} '
+  - '&8 ▪ &fQuantia: &7x{amount} '
   - '&8 ▪ &fValor: {value} '
   - ''
 

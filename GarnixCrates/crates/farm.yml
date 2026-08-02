@@ -137,7 +137,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8 ▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7x{amount}'
 
   chave-boss:
     type: COMMAND
@@ -153,7 +153,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8 ▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7x{amount}'
 
   chave-rankup:
     type: COMMAND
@@ -169,7 +169,7 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
       - ''
-      - '&8 ▪ &fQuantia: &7{amount}'
+      - '&8 ▪ &fQuantia: &7x{amount}'
 
   # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
   booster-sementes-2x:

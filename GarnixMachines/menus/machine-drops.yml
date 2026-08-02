@@ -14,7 +14,7 @@ drop-currency-lore:
 
 drop-item-lore:
 - ''
-- '&8 ▪ &fQuantia: &7{amount} '
+- '&8 ▪ &fQuantia: &7x{amount} '
 - ''
 - '&aClique para coletar.'
 

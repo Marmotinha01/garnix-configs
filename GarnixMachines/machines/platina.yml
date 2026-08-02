@@ -39,7 +39,7 @@ machine-item:
   - '&7Rende drops sozinha no'
   - '&7terreno, dia e noite.'
   - ''
-  - '&8 ▪ &fQuantia: &7{amount} '
+  - '&8 ▪ &fQuantia: &7x{amount} '
   - ''
   - '&aColoque no seu terreno.'
 
