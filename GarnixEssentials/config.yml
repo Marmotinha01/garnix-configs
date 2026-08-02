@@ -141,7 +141,9 @@ clearlag:
   - MOB_SPAWNER:0
   - SKULL_ITEM:3
   - STICK:0
-  - WRITTEN_BOOK:0
+  # BOOK e o Livro de Kill-Stack; o WRITTEN_BOOK abaixo e o material antigo dele,
+  # mantido porque os livros dados antes da troca continuam sendo written_book.
+  - BOOK:0
   - DIAMOND_SWORD:0
   - GOLD_SWORD:0
   - IRON_SWORD:0

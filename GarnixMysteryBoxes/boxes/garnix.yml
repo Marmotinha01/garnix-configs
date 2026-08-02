@@ -45,6 +45,15 @@ box-item:
 # a quantia depois. Aqui e nivel 1 e `{amount}` 3 — tres livros de +1, que o
 # jogador junta com SHIFT + botao direito num unico +3 se quiser.
 #
+# ⚠️ O icone do livro e `BOOK`, igual ao item real (GarnixBosses/config.yml).
+# Com `WRITTEN_BOOK` apareciam as linhas de autor e geracao ("by / Original")
+# entre o display e a lore: `glow: true` so poe LURE + HIDE_ENCHANTS
+# (ItemBuilder:272-278), quem esconde isso e o HIDE_POTION_EFFECTS, que na
+# Bukkit tambem cobre "book and firework information". O item real nunca
+# mostrou porque o KillStackItem aplica `ItemFlag.values()` inteiro. O material
+# mudou por outro motivo (o livro abria a tela de leitura no clique direito) e
+# levou a diferenca junto — `BOOK` nao tem essas linhas para esconder.
+#
 # ⚠️ `/vip givepaper <jogador> <vip> <duracao> [quantidade]` exige o jogador
 # ONLINE (VipCommand:335) — o que sempre e o caso aqui, porque a caixa so abre
 # na mao de quem esta no servidor. A duracao usa o formato d/h/m/s.
@@ -220,7 +229,7 @@ rewards:
     command: boss give killstack {player} 1 {amount}
     amount: 3
     icon:
-      material: WRITTEN_BOOK
+      material: BOOK
       glow: true
       display: '&4Livro de Kill-Stack'
       lore:

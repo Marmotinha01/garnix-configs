@@ -16,8 +16,13 @@ boss-stack-radius: 5
 
 boss-nametag: '{display} §7x{stack}'
 
+# ⚠️ O material NAO pode ser `written_book`. A tela de leitura do livro e aberta
+# pelo proprio cliente (PlayerControllerMP#sendUseItem roda o uso do item local),
+# entao cancelar o PlayerInteractEvent no servidor nao fecha ela — abria por
+# cima ate do merge com SHIFT. `book` e inerte no clique direito e o `glow`
+# abaixo devolve o brilho.
 kill-stack-item:
-  material: written_book
+  material: book
   display: '&4Livro de Kill-Stack'
   lore:
   - '&7Elimine mais bosses'
