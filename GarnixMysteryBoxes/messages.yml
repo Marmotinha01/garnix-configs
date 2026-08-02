@@ -2,10 +2,17 @@ reload-success: '&aConfigurações recarregadas com sucesso.'
 
 opened-win: '&aVocê abriu uma caixa e ganhou {reward}&a!'
 
-# Abertura em lote (SHIFT + botão direito). O cabeçalho vem uma vez e cada prêmio
-# entra em uma linha própria. Placeholders: {box}, {amount} e {reward}.
-opened-win-multi: '&a\n&a  &fx&l{amount}&fx caixas abertas:'
-opened-win-entry: '&8 ▪ &f{reward} '
+# Abertura em lote (SHIFT + botão direito). A linha que contém SÓ {rewards} vira uma
+# linha por prêmio, escrita no formato de 'opened-win-entry'; as outras saem como
+# estão. Mover, tirar ou repetir linhas aqui muda a mensagem sem tocar no código.
+# Placeholders: {box} e {amount} no bloco · {reward} na entrada.
+opened-win-multi:
+- ''
+- '  &fx&l{amount}&fx caixas abertas:'
+- ''
+- '{rewards}'
+- ''
+opened-win-entry: ' &8 ▪ {reward} '
 
 # Mostrada quando o jogador dá SHIFT + botão direito sem caixa suficiente na mão.
 # {amount} = quantas o lote pede · {held} = quantas ele tem · {box} = a caixa.

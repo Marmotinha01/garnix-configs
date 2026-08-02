@@ -145,7 +145,7 @@ rewards:
     amount: '1000'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &d۞{amount}'
 
   bomba-2x2:
     type: COMMAND

@@ -133,7 +133,7 @@ rewards:
     amount: '1000'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &3✶{amount}'
   booster:
     type: COMMAND
     chance: 2
