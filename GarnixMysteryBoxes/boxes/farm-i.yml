@@ -26,6 +26,18 @@ box-item:
 #
 # ⚠️ ARMADURA NUNCA VAI PARA O SITE. Ela existe só via caixa — e como a
 # caixa II é comprável, quem paga compra CHANCE, não a peça.
+#
+# ⚠️ ESCADA DA ARMADURA — esta caixa sorteia as QUATRO peças dos tiers I, II
+# e III (12 peças). Os tiers IV e V só saem na caixa farm-ii; o tier III
+# aparece nas duas, e é o degrau que liga uma caixa na outra.
+#
+# ⚠️ ESCADA DA SKIN — degraus 2 a 5 da enxada (pedra · ferro · ouro ·
+# diamante). A default (degrau 1) nunca sai de caixa e os degraus 6 a 10
+# ficam na caixa farm-ii.
+#
+# ⚠️ A lore de cada ícone espelha o item real (GarnixFarm/skins.yml e
+# GarnixFarm/armors/) — preview e item recebido têm que bater linha a
+# linha, sem nenhuma linha extra.
 rewards:
 
   azar:
@@ -38,9 +50,10 @@ rewards:
       lore:
       - '&7Não foi dessa vez.'
 
-  armadura-i:
+  # ── ARMADURA TIER I ───────────────────────────────────────────── 24%
+  armadura-i-capacete:
     type: COMMAND
-    chance: 25
+    chance: 6
     display: '&7Capacete Farm &7[Tier &lI&7]'
     command: fazenda givearmor {player} tier-i_helmet
     amount: 1
@@ -57,9 +70,86 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  armadura-ii:
+  armadura-i-peitoral:
     type: COMMAND
-    chance: 18
+    chance: 6
+    display: '&7Peitoral Farm &7[Tier &lI&7]'
+    command: fazenda givearmor {player} tier-i_chestplate
+    amount: 1
+    icon:
+      material: LEATHER_CHESTPLATE
+      color: '#AAAAAA'
+      display: '&7Peitoral Farm &7[Tier &lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &5Sementes '
+      - '&8 ▪ &a+&l1&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-i-calca:
+    type: COMMAND
+    chance: 6
+    display: '&7Calça Farm &7[Tier &lI&7]'
+    command: fazenda givearmor {player} tier-i_leggings
+    amount: 1
+    icon:
+      material: LEATHER_LEGGINGS
+      color: '#AAAAAA'
+      display: '&7Calça Farm &7[Tier &lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &5Sementes '
+      - '&8 ▪ &a+&l1&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-i-bota:
+    type: COMMAND
+    chance: 6
+    display: '&7Bota Farm &7[Tier &lI&7]'
+    command: fazenda givearmor {player} tier-i_boots
+    amount: 1
+    icon:
+      material: LEATHER_BOOTS
+      color: '#AAAAAA'
+      display: '&7Bota Farm &7[Tier &lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &5Sementes '
+      - '&8 ▪ &a+&l1&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  # ── ARMADURA TIER II ──────────────────────────────────────────── 18%
+  armadura-ii-capacete:
+    type: COMMAND
+    chance: 4.5
+    display: '&aCapacete Farm &a[Tier &lII&a]'
+    command: fazenda givearmor {player} tier-ii_helmet
+    amount: 1
+    icon:
+      material: LEATHER_HELMET
+      color: '#55FF55'
+      display: '&aCapacete Farm &a[Tier &lII&a]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l3&a% &aCoins '
+      - '&8 ▪ &a+&l2&a% &5Sementes '
+      - '&8 ▪ &a+&l2&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-ii-peitoral:
+    type: COMMAND
+    chance: 4.5
     display: '&aPeitoral Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_chestplate
     amount: 1
@@ -76,9 +166,86 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  armadura-iii:
+  armadura-ii-calca:
     type: COMMAND
-    chance: 10
+    chance: 4.5
+    display: '&aCalça Farm &a[Tier &lII&a]'
+    command: fazenda givearmor {player} tier-ii_leggings
+    amount: 1
+    icon:
+      material: LEATHER_LEGGINGS
+      color: '#55FF55'
+      display: '&aCalça Farm &a[Tier &lII&a]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l3&a% &aCoins '
+      - '&8 ▪ &a+&l2&a% &5Sementes '
+      - '&8 ▪ &a+&l2&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-ii-bota:
+    type: COMMAND
+    chance: 4.5
+    display: '&aBota Farm &a[Tier &lII&a]'
+    command: fazenda givearmor {player} tier-ii_boots
+    amount: 1
+    icon:
+      material: LEATHER_BOOTS
+      color: '#55FF55'
+      display: '&aBota Farm &a[Tier &lII&a]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l3&a% &aCoins '
+      - '&8 ▪ &a+&l2&a% &5Sementes '
+      - '&8 ▪ &a+&l2&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  # ── ARMADURA TIER III ─────────────────────────────────────────── 11%
+  armadura-iii-capacete:
+    type: COMMAND
+    chance: 2.75
+    display: '&bCapacete Farm &b[Tier &lIII&b]'
+    command: fazenda givearmor {player} tier-iii_helmet
+    amount: 1
+    icon:
+      material: LEATHER_HELMET
+      color: '#55FFFF'
+      display: '&bCapacete Farm &b[Tier &lIII&b]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l3.5&a% &5Sementes '
+      - '&8 ▪ &a+&l3.5&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-iii-peitoral:
+    type: COMMAND
+    chance: 2.75
+    display: '&bPeitoral Farm &b[Tier &lIII&b]'
+    command: fazenda givearmor {player} tier-iii_chestplate
+    amount: 1
+    icon:
+      material: LEATHER_CHESTPLATE
+      color: '#55FFFF'
+      display: '&bPeitoral Farm &b[Tier &lIII&b]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l3.5&a% &5Sementes '
+      - '&8 ▪ &a+&l3.5&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-iii-calca:
+    type: COMMAND
+    chance: 2.75
     display: '&bCalça Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_leggings
     amount: 1
@@ -95,9 +262,63 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  skin-forjavel:
+  armadura-iii-bota:
     type: COMMAND
-    chance: 12
+    chance: 2.75
+    display: '&bBota Farm &b[Tier &lIII&b]'
+    command: fazenda givearmor {player} tier-iii_boots
+    amount: 1
+    icon:
+      material: LEATHER_BOOTS
+      color: '#55FFFF'
+      display: '&bBota Farm &b[Tier &lIII&b]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l3.5&a% &5Sementes '
+      - '&8 ▪ &a+&l3.5&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  # ── SKINS ─────────────────────────────────────────────────────── 12%
+  skin-pedra:
+    type: COMMAND
+    chance: 4.5
+    display: '&7Skin de Pedra'
+    command: fazenda giveskin {player} pedra
+    amount: 1
+    icon:
+      material: STONE_HOE
+      display: '&7Skin de Pedra'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l2&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &5Sementes '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  skin-ferro:
+    type: COMMAND
+    chance: 3.5
+    display: '&fSkin de Ferro'
+    command: fazenda giveskin {player} ferro
+    amount: 1
+    icon:
+      material: IRON_HOE
+      display: '&fSkin de Ferro'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l3&a% &5Sementes '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  skin-ouro:
+    type: COMMAND
+    chance: 2.5
     display: '&6Skin de Ouro'
     command: fazenda giveskin {player} ouro
     amount: 1
@@ -109,6 +330,23 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l9&a% &aCoins '
       - '&8 ▪ &a+&l5&a% &5Sementes '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  skin-diamante:
+    type: COMMAND
+    chance: 1.5
+    display: '&bSkin de Diamante'
+    command: fazenda giveskin {player} diamante
+    amount: 1
+    icon:
+      material: DIAMOND_HOE
+      display: '&bSkin de Diamante'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l14&a% &aCoins '
+      - '&8 ▪ &a+&l8&a% &5Sementes '
       flags:
       - HIDE_ATTRIBUTES
 
