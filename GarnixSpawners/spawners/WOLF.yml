@@ -11,7 +11,7 @@ texture: "69d1d3113ec43ac2961dd59f28175fb4718873c6c448dfca8722317d67"
 
 release: "13/08/2026 20:00"
 
-rank: "&c[Rank 7]"
+rank: "&f[Lobo]"
 
 permissions:
   buy: "spawner.buy.wolf"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

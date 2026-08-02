@@ -29,7 +29,6 @@ remove-stack-conversation:
   prompt:
   - ''
   - '  &aInforme quantas máquinas de &f{display} &adeseja remover.'
-  - '  &fDisponível: &7{stack}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
 

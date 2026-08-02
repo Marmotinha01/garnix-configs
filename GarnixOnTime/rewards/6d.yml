@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂25 cash '
-    - '&8 ▪ &cx&l1 &cLimite de Spawners &7(+1) '
+    - '&8 ▪ &dx&l8 &dChaves VIP '
+    - '&8 ▪ &ax&l1 &aCaixa Farm &a[Tier &lII&a] '
     - ''
 
 rewards:
@@ -25,17 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂25 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'spawner givelimite {player} 1 1'
+    command: 'crates givekey vip {player} {amount}'
+    amount: 8
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give farm-ii {player} {amount}'
     amount: 1
     icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
+      material: CHEST
+      display: '&aCaixa Farm &a[Tier &lII&a]'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&fQuantia: &b1 '
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

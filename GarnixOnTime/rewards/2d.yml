@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂15 cash '
-    - '&8 ▪ &bx&l1 &bCaixa Pesca I '
+    - '&8 ▪ &4x&l5 &4Chaves Bosses '
+    - '&8 ▪ &2x&l1 &2Caixa Recursos '
     - ''
 
 rewards:
@@ -25,13 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂15 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'caixas give pesca-i {player} {amount}'
+    command: 'crates givekey bosses {player} {amount}'
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give recursos {player} {amount}'
     amount: 1
     icon:
       material: CHEST
-      display: '&bCaixa Pesca &7[Tier &lI&7]'
+      display: '&2Caixa Recursos'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

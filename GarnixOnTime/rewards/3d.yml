@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂18 cash '
-    - '&8 ▪ &9x&l1 &9Limite de Maquinas &7(+1) '
+    - '&8 ▪ &4x&l7 &4Chaves Bosses '
+    - '&8 ▪ &cx&l1 &cCaixa Robôs '
     - ''
 
 rewards:
@@ -25,17 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂18 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'maquina givelimite {player} 1 1'
+    command: 'crates givekey bosses {player} {amount}'
+    amount: 7
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give robos {player} {amount}'
     amount: 1
     icon:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
+      material: CHEST
+      display: '&cCaixa Robôs'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&fQuantia: &91 '
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

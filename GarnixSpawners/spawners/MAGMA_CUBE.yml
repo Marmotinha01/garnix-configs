@@ -11,7 +11,7 @@ texture: "a1c97a06efde04d00287bf20416404ab2103e10f08623087e1b0c1264a1c0f0c"
 
 release: "20/08/2026 20:00"
 
-rank: "&c[Rank 14]"
+rank: "&4[MagmaCube]"
 
 permissions:
   buy: "spawner.buy.magma_cube"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

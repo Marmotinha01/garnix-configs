@@ -7,8 +7,9 @@ cooldown: '1d'
 slot: 28
 
 commands:
-  - 'cash add {player} 120'
-  - 'crates givekey vip {player} 4'
+  - 'cash add {player} 60'
+  - 'crates givekey bosses {player} 2'
+  - 'crates givekey vip {player} 2'
 
 collect-icon:
   texture: '63f79b207d61e122523b83d61508d99cfa079d45bf23df2a9a5127f9071d4b00'
@@ -18,7 +19,8 @@ collect-icon:
   - '&7Influencer libera por dia.'
   - ''
   - ' &8Recompensas: '
-  - '&8 ▪ &6❂120 cash '
-  - '&8 ▪ &dx&l4 &dChaves VIP '
+  - '&8 ▪ &6❂60 cash '
+  - '&8 ▪ &4x&l2 &4Chaves de Boss '
+  - '&8 ▪ &dx&l2 &dChaves VIP '
   - ''
   - '&aClique para coletar.'

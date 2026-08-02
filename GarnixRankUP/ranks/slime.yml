@@ -11,7 +11,7 @@ commands:
 # aquilo e desbloqueio individual e precisa acumular.
 - 'lp user {player} permission unset mining.bonus.11'
 - 'lp user {player} permission set rank.slime true'
-- 'crate givevirtualkey rankup {player} 1'
+- 'crate givevirtualkey rankup {player} 3'
 - 'lp user {player} permission set mining.bonus.12 true'
 - 'lp user {player} permission set spawner.buy.slime true'
 - 'lp user {player} permission set warehouse.sellmult.2813 true'

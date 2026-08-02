@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂28 cash '
-    - '&8 ▪ &ax&l1 &a&lCaixa Fazenda II '
+    - '&8 ▪ &dx&l10 &dChaves VIP '
+    - '&8 ▪ &bx&l1 &bCaixa Pesca &b[Tier &lII&b] '
     - ''
 
 rewards:
@@ -25,13 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂28 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'caixas give farm-ii {player} {amount}'
+    command: 'crates givekey vip {player} {amount}'
+    amount: 10
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give pesca-ii {player} {amount}'
     amount: 1
     icon:
       material: CHEST
-      display: '&aCaixa Farm &f[Tier &lII&f]'
+      display: '&bCaixa Pesca &b[Tier &lII&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

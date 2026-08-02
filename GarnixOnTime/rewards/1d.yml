@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂12 cash '
-    - '&8 ▪ &6x&l1 &6Limite de Armazem &7(+500) '
+    - '&8 ▪ &4x&l3 &4Chaves Bosses '
+    - '&8 ▪ &5x&l1 &5Caixa Runas '
     - ''
 
 rewards:
@@ -25,17 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂12 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'armazem givelimititem {player} 500 1'
+    command: 'crates givekey bosses {player} {amount}'
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give runas {player} {amount}'
     amount: 1
     icon:
-      material: INK_SACK
-      data: 2
-      glow: true
-      display: '&2Limite de Armazém'
+      material: CHEST
+      display: '&5Caixa Runas'
       lore:
-      - '&7Aumente a capacidade de'
-      - '&7estoque do seu terreno.'
-      - ''
-      - '&fQuantia: &a500 '
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

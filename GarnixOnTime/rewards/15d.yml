@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂50 cash '
-    - '&8 ▪ &6x&l1 &6Caixa Garnix '
+    - '&8 ▪ &dx&l15 &dChaves VIP '
+    - '&8 ▪ &dx&l1 &dCaixa Caixas '
     - ''
 
 rewards:
@@ -25,13 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂50 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'caixas give garnix {player} {amount}'
+    command: 'crates givekey vip {player} {amount}'
+    amount: 15
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give caixas {player} {amount}'
     amount: 1
     icon:
       material: ENDER_CHEST
-      display: '&6Caixa Garnix'
+      display: '&dCaixa Caixas'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

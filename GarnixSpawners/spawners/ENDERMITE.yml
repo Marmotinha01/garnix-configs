@@ -11,7 +11,7 @@ texture: "1730127e3ac7677122422df0028d9e7368bd157738c8c3cddecc502e896be01c"
 
 release: "21/08/2026 20:00"
 
-rank: "&c[Rank 15]"
+rank: "&5[Endermite]"
 
 permissions:
   buy: "spawner.buy.endermite"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

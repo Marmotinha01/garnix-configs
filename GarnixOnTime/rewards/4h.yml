@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂5 cash '
-    - '&8 ▪ &ex&l1 &eCaixa Mineracao I '
+    - '&8 ▪ &ex&l5 &eChaves Mineração '
+    - '&8 ▪ &ax&l1 &aCaixa Farm &a[Tier &lI&a] '
     - ''
 
 rewards:
@@ -25,13 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂5 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'caixas give mineracao-i {player} {amount}'
+    command: 'crates givekey mineracao {player} {amount}'
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&eChave Mineração'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give farm-i {player} {amount}'
     amount: 1
     icon:
       material: CHEST
-      display: '&eCaixa Mineração &7[Tier &lI&7]'
+      display: '&aCaixa Farm &a[Tier &lI&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

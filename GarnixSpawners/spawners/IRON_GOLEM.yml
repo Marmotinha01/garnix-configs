@@ -11,7 +11,7 @@ texture: "da6e0429ccaabb6f5f0c5d513c795bed6d80fce72f57f4bc3a616aee23e12572"
 
 release: "24/08/2026 20:00"
 
-rank: "&c[Rank 18]"
+rank: "&7&l[Golem]"
 
 permissions:
   buy: "spawner.buy.iron_golem"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

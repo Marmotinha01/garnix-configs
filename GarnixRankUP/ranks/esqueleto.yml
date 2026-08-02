@@ -12,7 +12,7 @@ commands:
 - 'lp user {player} permission unset mining.bonus.8'
 - 'lp user {player} permission unset warehouse.sellmult.117'
 - 'lp user {player} permission set rank.esqueleto true'
-- 'crate givevirtualkey rankup {player} 1'
+- 'crate givevirtualkey rankup {player} 2'
 - 'lp user {player} permission set mining.bonus.9 true'
 - 'lp user {player} permission set spawner.buy.skeleton true'
 - 'lp user {player} permission set warehouse.sellmult.575 true'

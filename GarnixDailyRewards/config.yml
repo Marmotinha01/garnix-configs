@@ -7,7 +7,7 @@
 # não há nenhuma), caso você prefira montar o texto no próprio scoreboard/tab.
 placeholder:
   # Usado quando há pelo menos 1 recompensa para coletar.
-  has-rewards: '&a{amount} {reward_plural}.'
+  has-rewards: '&a{amount} {reward_plural}!'
   # Usado quando não há nenhuma recompensa disponível.
   no-rewards: '&cNada para coletar.'
   # Palavra substituída em {reward_plural}, concordando com {amount}.

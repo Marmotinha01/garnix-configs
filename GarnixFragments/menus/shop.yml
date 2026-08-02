@@ -6,10 +6,10 @@ title: Loja de Runas
 #   linha 2   caixas gerais      |  caixas das vias
 #   linha 3   utilitários        |  mineração
 #   linha 4   forjas             |  torres de cacto
-rows: 5
+rows: 6
 
 back-icon:
-  slot: 40
+  slot: 49
   texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
   display: '&eVoltar'
   lore:

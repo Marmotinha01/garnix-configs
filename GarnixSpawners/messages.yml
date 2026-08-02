@@ -34,7 +34,6 @@ remove-stack-conversation:
   prompt:
   - ''
   - '  &aInforme quantos spawners de &f{display} &adeseja remover.'
-  - '  &fDisponível: &7{stack}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
 
@@ -74,6 +73,8 @@ heads:
   spawner-not-found: '&cSpawner não encontrado.'
   empty: '&cEste spawner não possui heads.'
   no-permission: '&cVocê não pode coletar heads deste spawner.'
+  merged: '&aVocê juntou &fx{amount} &aheads de &f{display} &aem &fx{total}&a.'
+  merge-none: '&cNão há outras heads desse tipo para juntar.'
 
 heads-conversation:
   invalid-amount: '&cInforme uma quantia válida.'
@@ -83,13 +84,11 @@ heads-conversation:
   collect-prompt:
   - ''
   - '  &aInforme quantas heads de &f{display} &adeseja coletar.'
-  - '  &fDisponível: &7{available}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
   withdraw-prompt:
   - ''
   - '  &aInforme quantas heads de &f{display} &adeseja retirar.'
-  - '  &fDisponível: &7{available}'
   - '  &7Para cancelar digite &8cancelar&7.'
   - ''
 
@@ -160,10 +159,14 @@ commands:
     - '  &c/heads set <jogador> <tipo> <heads>'
     - '  &c/heads add <jogador> <tipo> <heads>'
     - '  &c/heads remove <jogador> <tipo> <heads>'
+    - '  &c/heads giveitem <jogador> <tipo> <heads>'
     - ''
     set: '&6Heads de &e{type} &6de &f{player} &6definidas para &e{amount}&6.'
     add: '&6x{amount} &6heads de &e{type} &6adicionadas a &f{player}&6.'
     remove: '&6x{amount} &6heads de &e{type} &6removidas de &f{player}&6.'
+    giveitem: '&6Head de &e{type} &6de &ex{amount} &6entregue a &f{player}&6.'
+    unknown-type: '&cO tipo &f{type} &cnão existe.'
+    invalid-amount: '&cA quantia deve ser maior que zero.'
     insufficient: '&cO jogador &f{player} &cnão tem heads suficientes.'
 
 plot-transfer-returned: '&eSeus spawners foram devolvidos pois o terreno mudou de dono.'

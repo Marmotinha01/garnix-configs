@@ -11,7 +11,7 @@ texture: "baf818b04d6ae98a69ad8d9463d8d0379921d3eb79222e1c6272f65372d80775"
 
 release: "22/08/2026 20:00"
 
-rank: "&c[Rank 16]"
+rank: "&d[Bruxa]"
 
 permissions:
   buy: "spawner.buy.witch"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

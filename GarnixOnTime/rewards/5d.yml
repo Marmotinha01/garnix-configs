@@ -13,6 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂22 cash '
+    - '&8 ▪ &dx&l5 &dChaves VIP '
+    - '&8 ▪ &6x&l1 &6Caixa Mineração &6[Tier &lII&6] '
     - ''
 
 rewards:
@@ -24,3 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂22 Cash'
 
+  chave:
+    type: COMMAND
+    command: 'crates givekey vip {player} {amount}'
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give mineracao-ii {player} {amount}'
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&6Caixa Mineração &6[Tier &lII&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

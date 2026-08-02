@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂10 cash '
-    - '&8 ▪ &ax&l1 &aCaixa Fazenda I '
+    - '&8 ▪ &bx&l5 &bChaves Pesca '
+    - '&8 ▪ &ex&l1 &eCaixa Skins &e[Tier &lI&e] '
     - ''
 
 rewards:
@@ -25,13 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂10 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'caixas give farm-i {player} {amount}'
+    command: 'crates givekey pesca {player} {amount}'
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&bChave Pesca'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give skins-i {player} {amount}'
     amount: 1
     icon:
       material: CHEST
-      display: '&aCaixa Farm &a[Tier &lI&a]'
+      display: '&eCaixa Skins &e[Tier &lI&e]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

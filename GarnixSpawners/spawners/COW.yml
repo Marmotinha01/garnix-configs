@@ -11,7 +11,7 @@ texture: "f950a62ee54546b924a94ca34318c046591719b8eb1367589f89020b1e59d3d9"
 
 release: "10/08/2026 20:00"
 
-rank: "&c[Rank 4]"
+rank: "&e[Vaca]"
 
 permissions:
   buy: "spawner.buy.cow"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

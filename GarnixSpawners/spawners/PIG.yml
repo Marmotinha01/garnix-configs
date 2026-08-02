@@ -11,7 +11,7 @@ texture: "9b1760e3778f8087046b86bec6a0a83a567625f30f0d6bce866d4bed95dba6c1"
 
 release: "08/08/2026 20:00"
 
-rank: "&c[Rank 2]"
+rank: "&d[Porco]"
 
 permissions:
   buy: "spawner.buy.pig"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

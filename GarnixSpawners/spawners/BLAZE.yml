@@ -11,7 +11,7 @@ texture: "737623f79f7eb4f3f80da65b652cc44b2148eea41f9ffe2e86a23bdf49ab77b1"
 
 release: "23/08/2026 20:00"
 
-rank: "&c[Rank 17]"
+rank: "&6[Blaze]"
 
 permissions:
   buy: "spawner.buy.blaze"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

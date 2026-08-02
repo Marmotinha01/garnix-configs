@@ -1,7 +1,7 @@
-# Currency cost line. Placeholders: {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
+# Currency cost line. Placeholders: {rank_color} {symbol_color} {symbol} {primary_color} {secondary_color} {amount} {currency}
 cost-format: '&8 ▪ {symbol_color}{symbol}{primary_color}{amount} {currency} '
-# Head cost line. Placeholders: {amount} {display}
-cost-format-head: '&8 ▪ &f{amount} &7{display} '
+# Head cost line. Placeholders: {rank_color} {amount} {display}
+cost-format-head: '&8 ▪ {rank_color}x{amount} &7Heads de {display} '
 
 rankup:
   info-icon:

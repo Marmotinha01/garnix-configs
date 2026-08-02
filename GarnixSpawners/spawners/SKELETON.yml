@@ -11,7 +11,7 @@ texture: "fca445749251bdd898fb83f667844e38a1dff79a1529f79a42447a0599310ea4"
 
 release: "15/08/2026 20:00"
 
-rank: "&c[Rank 9]"
+rank: "&7[Esqueleto]"
 
 permissions:
   buy: "spawner.buy.skeleton"
@@ -41,14 +41,16 @@ spawner-item:
   - '&aColoque no seu terreno.'
 
 head-item:
-  display: "&aCabeça de {translated}"
+  display: "{color}Head de {translated}"
   lore:
   - '&7Cabeça que caiu de um'
   - '&7mob do seu spawner.'
   - ''
   - '&8 ▪ &fQuantia: &e{amount} '
   - ''
-  - '&aClique para armazenar.'
+  - '{color}Opções de uso:'
+  - '&fBotão direito &8➟ &7Armazenar'
+  - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
 upgrades:
   spawner-stack:

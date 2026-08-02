@@ -13,7 +13,8 @@ reward-icon:
     - ''
     - ' &8Recompensas:'
     - '&8 ▪ &6❂3 cash '
-    - '&8 ▪ &6x&l3 &6Chaves RankUP '
+    - '&8 ▪ &ex&l3 &eChaves Mineração '
+    - '&8 ▪ &ax&l1 &aCaixa Booster '
     - ''
 
 rewards:
@@ -25,14 +26,25 @@ rewards:
       material: GOLD_INGOT
       display: '&6❂3 Cash'
 
-  extra:
+  chave:
     type: COMMAND
-    command: 'crates givekey rankup {player} {amount}'
+    command: 'crates givekey mineracao {player} {amount}'
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
       glow: true
-      display: '&6Chave RankUP'
+      display: '&eChave Mineração'
       lore:
-      - '&7Consiga subindo de rank'
-      - '&7ao longo da sua jornada.'
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  caixa:
+    type: COMMAND
+    command: 'caixas give boosters {player} {amount}'
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&aCaixa Booster'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
