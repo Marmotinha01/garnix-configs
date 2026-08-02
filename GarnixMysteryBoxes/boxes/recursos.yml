@@ -65,7 +65,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   gemas-50:
     type: CURRENCY
@@ -74,7 +74,7 @@ rewards:
     amount: '50'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   gemas-100:
     type: CURRENCY
@@ -83,7 +83,7 @@ rewards:
     amount: '100'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   # ── Sementes
   sementes-25:
@@ -93,7 +93,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   sementes-50:
     type: CURRENCY
@@ -102,7 +102,7 @@ rewards:
     amount: '50'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   sementes-100:
     type: CURRENCY
@@ -111,7 +111,7 @@ rewards:
     amount: '100'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   # ── Corais
   corais-25:
@@ -121,7 +121,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   corais-50:
     type: CURRENCY
@@ -130,7 +130,7 @@ rewards:
     amount: '50'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   corais-100:
     type: CURRENCY
@@ -139,7 +139,7 @@ rewards:
     amount: '100'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   # ── Dracmas
   dracmas-25:
@@ -149,7 +149,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   dracmas-50:
     type: CURRENCY
@@ -158,7 +158,7 @@ rewards:
     amount: '50'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   dracmas-100:
     type: CURRENCY
@@ -167,7 +167,7 @@ rewards:
     amount: '100'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   # ── Runa Sagrada
   sagrada-25:
@@ -301,7 +301,7 @@ rewards:
     amount: '25'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   coins-50:
     type: CURRENCY
@@ -310,7 +310,7 @@ rewards:
     amount: '50'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   coins-100:
     type: CURRENCY
@@ -319,7 +319,7 @@ rewards:
     amount: '100'
     icon:
       lore:
-      - '&fQuantia: &7{amount} '
+      - '&fValor: &7{amount} '
 
   # ── Combustível
   combustivel-25:
@@ -398,7 +398,7 @@ rewards:
       - '&7Aumente a capacidade de'
       - '&7estoque do seu terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &a{amount} '
+      - '&8 ▪ &fValor: &a{amount} '
       - ''
       - '&2Opções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
@@ -419,7 +419,7 @@ rewards:
       - '&7Aumente a capacidade de'
       - '&7estoque do seu terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &a{amount} '
+      - '&8 ▪ &fValor: &a{amount} '
       - ''
       - '&2Opções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
@@ -440,7 +440,7 @@ rewards:
       - '&7Aumente a capacidade de'
       - '&7estoque do seu terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &a{amount} '
+      - '&8 ▪ &fValor: &a{amount} '
       - ''
       - '&2Opções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
@@ -500,7 +500,7 @@ rewards:
       - '&7Aumente o seu poder de'
       - '&7compra de máquinas.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&8 ▪ &fValor: &9{amount} '
       - ''
       - '&9Opções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
@@ -521,7 +521,7 @@ rewards:
       - '&7Aumente o seu poder de'
       - '&7compra de máquinas.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&8 ▪ &fValor: &9{amount} '
       - ''
       - '&9Opções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
@@ -542,7 +542,7 @@ rewards:
       - '&7Aumente o seu poder de'
       - '&7compra de máquinas.'
       - ''
-      - '&8 ▪ &fQuantia: &9{amount} '
+      - '&8 ▪ &fValor: &9{amount} '
       - ''
       - '&9Opções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
@@ -564,7 +564,7 @@ rewards:
       - '&7Aumente o seu poder de'
       - '&7compra de spawners.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&8 ▪ &fValor: &b{amount} '
       - ''
       - '&bOpções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
@@ -585,7 +585,7 @@ rewards:
       - '&7Aumente o seu poder de'
       - '&7compra de spawners.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&8 ▪ &fValor: &b{amount} '
       - ''
       - '&bOpções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
@@ -606,7 +606,7 @@ rewards:
       - '&7Aumente o seu poder de'
       - '&7compra de spawners.'
       - ''
-      - '&8 ▪ &fQuantia: &b{amount} '
+      - '&8 ▪ &fValor: &b{amount} '
       - ''
       - '&bOpções de uso:'
       - '&fBotão direito &8➟ &7Ativar'
