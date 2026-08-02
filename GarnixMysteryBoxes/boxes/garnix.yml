@@ -63,8 +63,6 @@ rewards:
       - '&7terreno, dia e noite.'
       - ''
       - '&8 ▪ &fQuantia: &b{amount} '
-      - ''
-      - '&bColoque no seu terreno.'
 
   maquina-limite-maquinas:
     type: COMMAND
@@ -80,8 +78,6 @@ rewards:
       - '&7terreno, dia e noite.'
       - ''
       - '&8 ▪ &fQuantia: &9{amount} '
-      - ''
-      - '&9Coloque no seu terreno.'
 
   maquina-cash:
     type: COMMAND
@@ -97,8 +93,6 @@ rewards:
       - '&7terreno, dia e noite.'
       - ''
       - '&8 ▪ &fQuantia: &6{amount} '
-      - ''
-      - '&6Coloque no seu terreno.'
 
   vaga:
     type: COMMAND
@@ -112,9 +106,6 @@ rewards:
       lore:
       - '&7Desbloqueia mais uma vaga'
       - '&7de visitante na sua mina.'
-      - ''
-      - '&aOpções de uso:'
-      - '&fBotão direito &8➟ &7Ativar'
 
   robo-lendario:
     type: COMMAND
@@ -147,9 +138,6 @@ rewards:
       lore:
       - '&7Levanta uma torre de cacto'
       - '&7pronta no seu terreno.'
-      - ''
-      - '&aOpções de uso:'
-      - '&fBotão direito &8➟ &7Construir'
 
   caixas:
     type: COMMAND
@@ -207,9 +195,6 @@ rewards:
       lore:
       - '&7Levanta uma torre de cacto'
       - '&7pronta no seu terreno.'
-      - ''
-      - '&aOpções de uso:'
-      - '&fBotão direito &8➟ &7Construir'
 
   skin-mithril:
     type: COMMAND
@@ -280,9 +265,6 @@ rewards:
       lore:
       - '&7A máquina nunca mais'
       - '&7fica sem combustível.'
-      - ''
-      - '&bOpções de uso:'
-      - '&fBotão direito &8➟ &7Aplicar'
 
   matadora-hk:
     type: COMMAND
