@@ -48,7 +48,7 @@ rewards:
   mineracao-quartzo:
     type: COMMAND
     chance: 48
-    display: '&fSkin de Quartzo &8Mineração'
+    display: '&fSkin de Quartzo'
     command: mina giveskin {player} quartzo
     amount: 1
     icon:
@@ -65,7 +65,7 @@ rewards:
   mineracao-jade:
     type: COMMAND
     chance: 30
-    display: '&aSkin de Jade &8Mineração'
+    display: '&aSkin de Jade'
     command: mina giveskin {player} jade
     amount: 1
     icon:
@@ -83,7 +83,7 @@ rewards:
   mineracao-safira:
     type: COMMAND
     chance: 16
-    display: '&9Skin de Safira &8Mineração'
+    display: '&9Skin de Safira'
     command: mina giveskin {player} safira
     amount: 1
     icon:
@@ -101,7 +101,7 @@ rewards:
   mineracao-mithril:
     type: COMMAND
     chance: 6
-    display: '&4Skin de Mithril &8Mineração'
+    display: '&4Skin de Mithril'
     command: mina giveskin {player} mithril
     amount: 1
     icon:
@@ -120,7 +120,7 @@ rewards:
   farm-esmeralda:
     type: COMMAND
     chance: 48
-    display: '&aSkin de Esmeralda &8Fazenda'
+    display: '&aSkin de Esmeralda'
     command: fazenda giveskin {player} esmeralda
     amount: 1
     icon:
@@ -139,7 +139,7 @@ rewards:
   farm-ametista:
     type: COMMAND
     chance: 30
-    display: '&bSkin de Ametista &8Fazenda'
+    display: '&bSkin de Ametista'
     command: fazenda giveskin {player} ametista
     amount: 1
     icon:
@@ -157,7 +157,7 @@ rewards:
   farm-cristal:
     type: COMMAND
     chance: 16
-    display: '&9Skin de Cristal &8Fazenda'
+    display: '&9Skin de Cristal'
     command: fazenda giveskin {player} cristal
     amount: 1
     icon:
@@ -175,7 +175,7 @@ rewards:
   farm-marfim:
     type: COMMAND
     chance: 6
-    display: '&fSkin de Marfim &8Fazenda'
+    display: '&fSkin de Marfim'
     command: fazenda giveskin {player} marfim
     amount: 1
     icon:
@@ -194,7 +194,7 @@ rewards:
   pesca-serenita:
     type: COMMAND
     chance: 48
-    display: '&5Skin de Serenita &8Pesca'
+    display: '&5Skin de Serenita'
     command: pesca giveskin {player} serenita
     amount: 1
     icon:
@@ -210,7 +210,7 @@ rewards:
   pesca-oceanita:
     type: COMMAND
     chance: 30
-    display: '&1Skin de Oceanita &8Pesca'
+    display: '&1Skin de Oceanita'
     command: pesca giveskin {player} oceanita
     amount: 1
     icon:
@@ -226,7 +226,7 @@ rewards:
   pesca-perola:
     type: COMMAND
     chance: 16
-    display: '&9Skin de Pérola &8Pesca'
+    display: '&9Skin de Pérola'
     command: pesca giveskin {player} perola
     amount: 1
     icon:
@@ -242,7 +242,7 @@ rewards:
   pesca-tempestita:
     type: COMMAND
     chance: 6
-    display: '&dSkin de Tempestita &8Pesca'
+    display: '&dSkin de Tempestita'
     command: pesca giveskin {player} tempestita
     amount: 1
     icon:

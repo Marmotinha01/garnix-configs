@@ -49,7 +49,7 @@ skins:
       - HIDE_ATTRIBUTES
 
   pedra:
-    display: '&8Pedra'
+    display: '&7Pedra'
     material: STONE_PICKAXE
     forgeable: true
     icon:
@@ -70,7 +70,7 @@ skins:
         percent: true
 
   ferro:
-    display: '&7Ferro'
+    display: '&fFerro'
     material: IRON_PICKAXE
     forgeable: true
     icon:

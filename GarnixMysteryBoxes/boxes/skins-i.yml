@@ -46,7 +46,7 @@ rewards:
   mineracao-pedra:
     type: COMMAND
     chance: 30
-    display: '&7Skin de Pedra &8Mineração'
+    display: '&7Skin de Pedra'
     command: mina giveskin {player} pedra
     amount: 1
     icon:
@@ -63,7 +63,7 @@ rewards:
   mineracao-ferro:
     type: COMMAND
     chance: 25
-    display: '&fSkin de Ferro &8Mineração'
+    display: '&fSkin de Ferro'
     command: mina giveskin {player} ferro
     amount: 1
     icon:
@@ -80,7 +80,7 @@ rewards:
   mineracao-ouro:
     type: COMMAND
     chance: 20
-    display: '&6Skin de Ouro &8Mineração'
+    display: '&6Skin de Ouro'
     command: mina giveskin {player} ouro
     amount: 1
     icon:
@@ -97,7 +97,7 @@ rewards:
   mineracao-diamante:
     type: COMMAND
     chance: 15
-    display: '&bSkin de Diamante &8Mineração'
+    display: '&bSkin de Diamante'
     command: mina giveskin {player} diamante
     amount: 1
     icon:
@@ -114,7 +114,7 @@ rewards:
   mineracao-rubi:
     type: COMMAND
     chance: 10
-    display: '&cSkin de Rubi &8Mineração'
+    display: '&cSkin de Rubi'
     command: mina giveskin {player} rubi
     amount: 1
     icon:
@@ -132,12 +132,12 @@ rewards:
   farm-pedra:
     type: COMMAND
     chance: 30
-    display: '&8Skin de Pedra &8Fazenda'
+    display: '&7Skin de Pedra'
     command: fazenda giveskin {player} pedra
     amount: 1
     icon:
       material: STONE_HOE
-      display: '&8Skin de Pedra'
+      display: '&7Skin de Pedra'
       lore:
       - ''
       - ' &8Especificações: '
@@ -149,12 +149,12 @@ rewards:
   farm-ferro:
     type: COMMAND
     chance: 25
-    display: '&7Skin de Ferro &8Fazenda'
+    display: '&fSkin de Ferro'
     command: fazenda giveskin {player} ferro
     amount: 1
     icon:
       material: IRON_HOE
-      display: '&7Skin de Ferro'
+      display: '&fSkin de Ferro'
       lore:
       - ''
       - ' &8Especificações: '
@@ -166,7 +166,7 @@ rewards:
   farm-ouro:
     type: COMMAND
     chance: 20
-    display: '&6Skin de Ouro &8Fazenda'
+    display: '&6Skin de Ouro'
     command: fazenda giveskin {player} ouro
     amount: 1
     icon:
@@ -183,7 +183,7 @@ rewards:
   farm-diamante:
     type: COMMAND
     chance: 15
-    display: '&bSkin de Diamante &8Fazenda'
+    display: '&bSkin de Diamante'
     command: fazenda giveskin {player} diamante
     amount: 1
     icon:
@@ -200,7 +200,7 @@ rewards:
   farm-ambar:
     type: COMMAND
     chance: 10
-    display: '&5Skin de Âmbar &8Fazenda'
+    display: '&5Skin de Âmbar'
     command: fazenda giveskin {player} ambar
     amount: 1
     icon:
@@ -218,7 +218,7 @@ rewards:
   pesca-coral:
     type: COMMAND
     chance: 30
-    display: '&3Skin de Coral &8Pesca'
+    display: '&3Skin de Coral'
     command: pesca giveskin {player} coral
     amount: 1
     icon:
@@ -234,7 +234,7 @@ rewards:
   pesca-escama:
     type: COMMAND
     chance: 25
-    display: '&6Skin de Escama &8Pesca'
+    display: '&6Skin de Escama'
     command: pesca giveskin {player} escama
     amount: 1
     icon:
@@ -250,13 +250,13 @@ rewards:
   pesca-prata:
     type: COMMAND
     chance: 20
-    display: '&7Skin de Prata &8Pesca'
+    display: '&fSkin de Prata'
     command: pesca giveskin {player} prata
     amount: 1
     icon:
       material: FISHING_ROD
       glow: true
-      display: '&7Skin de Prata'
+      display: '&fSkin de Prata'
       lore:
       - ''
       - ' &8Especificações:'
@@ -266,7 +266,7 @@ rewards:
   pesca-turquesa:
     type: COMMAND
     chance: 15
-    display: '&bSkin de Turquesa &8Pesca'
+    display: '&bSkin de Turquesa'
     command: pesca giveskin {player} turquesa
     amount: 1
     icon:
@@ -282,7 +282,7 @@ rewards:
   pesca-abissita:
     type: COMMAND
     chance: 10
-    display: '&aSkin de Abissita &8Pesca'
+    display: '&aSkin de Abissita'
     command: pesca giveskin {player} abissita
     amount: 1
     icon:

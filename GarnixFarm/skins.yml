@@ -37,12 +37,12 @@ skins:
       - HIDE_ATTRIBUTES
 
   pedra:
-    display: '&8Pedra'
+    display: '&7Pedra'
     material: STONE_HOE
     forgeable: true
     icon:
       material: STONE_HOE
-      display: '&8Skin de Pedra'
+      display: '&7Skin de Pedra'
       lore:
       - ''
       - ' &8Especificações: '
@@ -58,12 +58,12 @@ skins:
         percent: true
 
   ferro:
-    display: '&7Ferro'
+    display: '&fFerro'
     material: IRON_HOE
     forgeable: true
     icon:
       material: IRON_HOE
-      display: '&7Skin de Ferro'
+      display: '&fSkin de Ferro'
       lore:
       - ''
       - ' &8Especificações: '

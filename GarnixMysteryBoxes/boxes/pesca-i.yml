@@ -95,13 +95,13 @@ rewards:
   skin-forjavel:
     type: COMMAND
     chance: 12
-    display: '&7Skin de Prata'
+    display: '&fSkin de Prata'
     command: pesca giveskin {player} prata
     amount: 1
     icon:
       material: FISHING_ROD
       glow: true
-      display: '&7Skin de Prata'
+      display: '&fSkin de Prata'
       lore:
       - ''
       - ' &8Especificações:'

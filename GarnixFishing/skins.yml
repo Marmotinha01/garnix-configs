@@ -71,7 +71,7 @@ rod-skins:
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
 
   prata:
-    display: '&7Prata'
+    display: '&fPrata'
     material: FISHING_ROD
     forgeable: true
     currency-bonus: 9
@@ -79,7 +79,7 @@ rod-skins:
     icon:
       glow: true
       material: FISHING_ROD
-      display: '&7Skin de Prata'
+      display: '&fSkin de Prata'
       lore:
       - ''
       - ' &8Especificações:'
