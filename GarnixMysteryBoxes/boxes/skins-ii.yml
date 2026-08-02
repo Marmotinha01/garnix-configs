@@ -49,7 +49,7 @@ rewards:
     type: COMMAND
     chance: 48
     display: '&fSkin de Quartzo'
-    command: mina giveskin {player} quartzo
+    command: mina giveskin {player} quartzo {amount}
     amount: 1
     icon:
       material: DIAMOND_PICKAXE
@@ -66,7 +66,7 @@ rewards:
     type: COMMAND
     chance: 30
     display: '&aSkin de Jade'
-    command: mina giveskin {player} jade
+    command: mina giveskin {player} jade {amount}
     amount: 1
     icon:
       material: DIAMOND_PICKAXE
@@ -84,7 +84,7 @@ rewards:
     type: COMMAND
     chance: 16
     display: '&9Skin de Safira'
-    command: mina giveskin {player} safira
+    command: mina giveskin {player} safira {amount}
     amount: 1
     icon:
       material: DIAMOND_PICKAXE
@@ -102,7 +102,7 @@ rewards:
     type: COMMAND
     chance: 6
     display: '&4Skin de Mithril'
-    command: mina giveskin {player} mithril
+    command: mina giveskin {player} mithril {amount}
     amount: 1
     icon:
       material: DIAMOND_PICKAXE
@@ -121,7 +121,7 @@ rewards:
     type: COMMAND
     chance: 48
     display: '&aSkin de Esmeralda'
-    command: fazenda giveskin {player} esmeralda
+    command: fazenda giveskin {player} esmeralda {amount}
     amount: 1
     icon:
       material: DIAMOND_HOE
@@ -140,7 +140,7 @@ rewards:
     type: COMMAND
     chance: 30
     display: '&bSkin de Ametista'
-    command: fazenda giveskin {player} ametista
+    command: fazenda giveskin {player} ametista {amount}
     amount: 1
     icon:
       material: DIAMOND_HOE
@@ -158,7 +158,7 @@ rewards:
     type: COMMAND
     chance: 16
     display: '&9Skin de Cristal'
-    command: fazenda giveskin {player} cristal
+    command: fazenda giveskin {player} cristal {amount}
     amount: 1
     icon:
       material: DIAMOND_HOE
@@ -176,7 +176,7 @@ rewards:
     type: COMMAND
     chance: 6
     display: '&fSkin de Marfim'
-    command: fazenda giveskin {player} marfim
+    command: fazenda giveskin {player} marfim {amount}
     amount: 1
     icon:
       material: DIAMOND_HOE
@@ -195,7 +195,7 @@ rewards:
     type: COMMAND
     chance: 48
     display: '&5Skin de Serenita'
-    command: pesca giveskin {player} serenita
+    command: pesca giveskin {player} serenita {amount}
     amount: 1
     icon:
       material: FISHING_ROD
@@ -211,7 +211,7 @@ rewards:
     type: COMMAND
     chance: 30
     display: '&1Skin de Oceanita'
-    command: pesca giveskin {player} oceanita
+    command: pesca giveskin {player} oceanita {amount}
     amount: 1
     icon:
       material: FISHING_ROD
@@ -227,7 +227,7 @@ rewards:
     type: COMMAND
     chance: 16
     display: '&9Skin de Pérola'
-    command: pesca giveskin {player} perola
+    command: pesca giveskin {player} perola {amount}
     amount: 1
     icon:
       material: FISHING_ROD
@@ -243,7 +243,7 @@ rewards:
     type: COMMAND
     chance: 6
     display: '&dSkin de Tempestita'
-    command: pesca giveskin {player} tempestita
+    command: pesca giveskin {player} tempestita {amount}
     amount: 1
     icon:
       material: FISHING_ROD

@@ -21,6 +21,11 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
+# ⚠️ Esta caixa nao tem `azar`: toda abertura devolve premio. Azar so existe
+# nas crates e nos bosses. Os 20 pontos que o azar tinha foram devolvidos
+# para os premios na mesma proporcao — nenhuma recompensa mudou de posicao
+# na tabela, todas ficaram ~1,24x mais provaveis.
+#
 # ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
 # sufixo de slot entrega o set inteiro (+48%) num drop só.
 #
@@ -48,22 +53,12 @@ box-item:
 # preview dizerem QUAL saiu.
 rewards:
 
-  azar:
-    type: NONE
-    chance: 20
-    display: '&8Azar'
-    icon:
-      material: WEB
-      display: '&8Azar'
-      lore:
-      - '&7Não foi dessa vez.'
-
-  # ── ARMADURA TIER I ───────────────────────────────────────────── 19%
+  # ── ARMADURA TIER I ───────────────────────────────────────────── 24%
   armadura-i-capacete:
     type: COMMAND
-    chance: 4.75
+    chance: 6
     display: '&7Capacete Mineração &7[Tier &lI&7]'
-    command: mina givearmor {player} tier-i_helmet
+    command: mina givearmor {player} tier-i_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -80,9 +75,9 @@ rewards:
 
   armadura-i-peitoral:
     type: COMMAND
-    chance: 4.75
+    chance: 6
     display: '&7Peitoral Mineração &7[Tier &lI&7]'
-    command: mina givearmor {player} tier-i_chestplate
+    command: mina givearmor {player} tier-i_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -99,9 +94,9 @@ rewards:
 
   armadura-i-calca:
     type: COMMAND
-    chance: 4.75
+    chance: 6
     display: '&7Calça Mineração &7[Tier &lI&7]'
-    command: mina givearmor {player} tier-i_leggings
+    command: mina givearmor {player} tier-i_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -118,9 +113,9 @@ rewards:
 
   armadura-i-bota:
     type: COMMAND
-    chance: 4.75
+    chance: 6
     display: '&7Bota Mineração &7[Tier &lI&7]'
-    command: mina givearmor {player} tier-i_boots
+    command: mina givearmor {player} tier-i_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -135,12 +130,12 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER II ──────────────────────────────────────────── 15%
+  # ── ARMADURA TIER II ──────────────────────────────────────────── 19%
   armadura-ii-capacete:
     type: COMMAND
-    chance: 3.75
+    chance: 4.75
     display: '&aCapacete Mineração &a[Tier &lII&a]'
-    command: mina givearmor {player} tier-ii_helmet
+    command: mina givearmor {player} tier-ii_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -157,9 +152,9 @@ rewards:
 
   armadura-ii-peitoral:
     type: COMMAND
-    chance: 3.75
+    chance: 4.75
     display: '&aPeitoral Mineração &a[Tier &lII&a]'
-    command: mina givearmor {player} tier-ii_chestplate
+    command: mina givearmor {player} tier-ii_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -176,9 +171,9 @@ rewards:
 
   armadura-ii-calca:
     type: COMMAND
-    chance: 3.75
+    chance: 4.75
     display: '&aCalça Mineração &a[Tier &lII&a]'
-    command: mina givearmor {player} tier-ii_leggings
+    command: mina givearmor {player} tier-ii_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -195,9 +190,9 @@ rewards:
 
   armadura-ii-bota:
     type: COMMAND
-    chance: 3.75
+    chance: 4.75
     display: '&aBota Mineração &a[Tier &lII&a]'
-    command: mina givearmor {player} tier-ii_boots
+    command: mina givearmor {player} tier-ii_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -212,12 +207,12 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER III ─────────────────────────────────────────── 10%
+  # ── ARMADURA TIER III ─────────────────────────────────────────── 12%
   armadura-iii-capacete:
     type: COMMAND
-    chance: 2.5
+    chance: 3
     display: '&bCapacete Mineração &b[Tier &lIII&b]'
-    command: mina givearmor {player} tier-iii_helmet
+    command: mina givearmor {player} tier-iii_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -234,9 +229,9 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND
-    chance: 2.5
+    chance: 3
     display: '&bPeitoral Mineração &b[Tier &lIII&b]'
-    command: mina givearmor {player} tier-iii_chestplate
+    command: mina givearmor {player} tier-iii_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -253,9 +248,9 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND
-    chance: 2.5
+    chance: 3
     display: '&bCalça Mineração &b[Tier &lIII&b]'
-    command: mina givearmor {player} tier-iii_leggings
+    command: mina givearmor {player} tier-iii_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -272,9 +267,9 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND
-    chance: 2.5
+    chance: 3
     display: '&bBota Mineração &b[Tier &lIII&b]'
-    command: mina givearmor {player} tier-iii_boots
+    command: mina givearmor {player} tier-iii_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -289,12 +284,12 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── SKINS ─────────────────────────────────────────────────────── 12%
+  # ── SKINS ─────────────────────────────────────────────────────── 15%
   skin-pedra:
     type: COMMAND
-    chance: 4.5
+    chance: 5.5
     display: '&7Skin de Pedra'
-    command: mina giveskin {player} pedra
+    command: mina giveskin {player} pedra {amount}
     amount: 1
     icon:
       material: STONE_PICKAXE
@@ -309,9 +304,9 @@ rewards:
 
   skin-ferro:
     type: COMMAND
-    chance: 3.5
+    chance: 4.5
     display: '&fSkin de Ferro'
-    command: mina giveskin {player} ferro
+    command: mina giveskin {player} ferro {amount}
     amount: 1
     icon:
       material: IRON_PICKAXE
@@ -326,9 +321,9 @@ rewards:
 
   skin-ouro:
     type: COMMAND
-    chance: 2.5
+    chance: 3
     display: '&6Skin de Ouro'
-    command: mina giveskin {player} ouro
+    command: mina giveskin {player} ouro {amount}
     amount: 1
     icon:
       material: GOLD_PICKAXE
@@ -343,9 +338,9 @@ rewards:
 
   skin-diamante:
     type: COMMAND
-    chance: 1.5
+    chance: 2
     display: '&bSkin de Diamante'
-    command: mina giveskin {player} diamante
+    command: mina giveskin {player} diamante {amount}
     amount: 1
     icon:
       material: DIAMOND_PICKAXE
@@ -360,7 +355,7 @@ rewards:
 
   forja:
     type: COMMAND
-    chance: 7
+    chance: 8.5
     display: '&6Forja de Skins'
     command: mina giveforge {player} 1
     amount: 1
@@ -375,7 +370,7 @@ rewards:
 
   secundaria:
     type: CURRENCY
-    chance: 4
+    chance: 5
     currency-id: gemas
     amount: '1000'
     icon:
@@ -384,7 +379,7 @@ rewards:
 
   bomba-2x2:
     type: COMMAND
-    chance: 6
+    chance: 7.5
     display: '&4Explosivo &4[&l2x2&4]'
     command: mina givebomb {player} 2x2 {amount}
     amount: 1
@@ -396,7 +391,7 @@ rewards:
 
   bomba-4x4:
     type: COMMAND
-    chance: 3
+    chance: 3.5
     display: '&4Explosivo &4[&l4x4&4]'
     command: mina givebomb {player} 4x4 {amount}
     amount: 1
@@ -408,7 +403,7 @@ rewards:
 
   britadeira:
     type: COMMAND
-    chance: 2
+    chance: 2.5
     display: '&cBritadeira'
     command: mina givedrill {player} {amount}
     amount: 1
@@ -421,7 +416,7 @@ rewards:
 
   booster:
     type: COMMAND
-    chance: 2
+    chance: 2.5
     display: '&aBooster 2x &7(15min)'
     command: mina givebooster {player} coins 2 15m
     amount: 1

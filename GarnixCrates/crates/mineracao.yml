@@ -38,7 +38,7 @@ key-item:
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
 # FAIXAS desta crate:
-#   comum 85% · comum plus 12% · mediana 2,5% ·
+#   comum 83% · comum plus 12% · armadura 2% · mediana 2,5% ·
 #   rara 0,4% · raro plus 0,099% · jackpot 0,001%
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
@@ -55,12 +55,21 @@ key-item:
 # ⚠️ Os quatro explosivos se chamam "Explosivo" no item real, os quatro. O
 # `[2x2]` do display existe so para o broadcast e o preview dizerem QUAL
 # saiu — sem ele os quatro premios ficam com o mesmo nome.
+#
+# ⚠️ A faixa ARMADURA e a T-I INTEIRA — as quatro pecas, peso igual. E o
+# tier mais fraco de todos (+1,5% coins, +1% gemas e +1% XP por peca),
+# entao ele pode viver na crate, que nao tem gate: no dia 1 e um empurrao,
+# no dia 20 e ruido. Os tiers II a V continuam so nas caixas misteriosas.
+#
+# ⚠️ Peca INDIVIDUAL, nunca a colecao: `givearmor tier-i` sem o sufixo de
+# slot entrega o set inteiro num drop so. O `{amount}` no fim e o padrao de
+# todo item fisico do servidor — skin e armadura passam a quantia sorteada.
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 85%
+  # ── COMUM ────────────────────────────────────────────────────────── 83%
   coins:
     type: CURRENCY
-    chance: 41
+    chance: 39
     currency-id: coins
     amount: '250'
     icon:
@@ -202,6 +211,83 @@ rewards:
       - '&7abrindo essa chave.'
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
+
+  # ── ARMADURA ───────────────────────────────────────────────────────── 2%
+  armadura-i-capacete:
+    type: COMMAND
+    chance: 0.5
+    display: '&7Capacete Mineração &7[Tier &lI&7]'
+    command: mina givearmor {player} tier-i_helmet {amount}
+    amount: 1
+    icon:
+      material: LEATHER_HELMET
+      color: '#AAAAAA'
+      display: '&7Capacete Mineração &7[Tier &lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &dGemas '
+      - '&8 ▪ &a+&l1&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-i-peitoral:
+    type: COMMAND
+    chance: 0.5
+    display: '&7Peitoral Mineração &7[Tier &lI&7]'
+    command: mina givearmor {player} tier-i_chestplate {amount}
+    amount: 1
+    icon:
+      material: LEATHER_CHESTPLATE
+      color: '#AAAAAA'
+      display: '&7Peitoral Mineração &7[Tier &lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &dGemas '
+      - '&8 ▪ &a+&l1&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-i-calca:
+    type: COMMAND
+    chance: 0.5
+    display: '&7Calça Mineração &7[Tier &lI&7]'
+    command: mina givearmor {player} tier-i_leggings {amount}
+    amount: 1
+    icon:
+      material: LEATHER_LEGGINGS
+      color: '#AAAAAA'
+      display: '&7Calça Mineração &7[Tier &lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &dGemas '
+      - '&8 ▪ &a+&l1&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
+
+  armadura-i-bota:
+    type: COMMAND
+    chance: 0.5
+    display: '&7Bota Mineração &7[Tier &lI&7]'
+    command: mina givearmor {player} tier-i_boots {amount}
+    amount: 1
+    icon:
+      material: LEATHER_BOOTS
+      color: '#AAAAAA'
+      display: '&7Bota Mineração &7[Tier &lI&7]'
+      lore:
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &a+&l1.5&a% &aCoins '
+      - '&8 ▪ &a+&l1&a% &dGemas '
+      - '&8 ▪ &a+&l1&a% &bXP '
+      flags:
+      - HIDE_ATTRIBUTES
 
   # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
   booster-gemas-2x:

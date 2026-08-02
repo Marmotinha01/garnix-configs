@@ -21,6 +21,11 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
+# ⚠️ Esta caixa nao tem `azar`: toda abertura devolve premio. Azar so existe
+# nas crates e nos bosses. Os 3 pontos que o azar tinha foram devolvidos
+# para os premios na mesma proporcao — nenhuma recompensa mudou de posicao
+# na tabela.
+#
 # ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
 # sufixo de slot entrega o set inteiro (+48%) num drop só.
 #
@@ -40,22 +45,12 @@ box-item:
 # linha, sem nenhuma linha extra.
 rewards:
 
-  azar:
-    type: NONE
-    chance: 3
-    display: '&8Azar'
-    icon:
-      material: WEB
-      display: '&8Azar'
-      lore:
-      - '&7Não foi dessa vez.'
-
-  # ── ARMADURA TIER III ─────────────────────────────────────────── 20%
+  # ── ARMADURA TIER III ─────────────────────────────────────────── 21%
   armadura-iii-capacete:
     type: COMMAND
-    chance: 5
+    chance: 5.25
     display: '&bCapacete Pesca &b[Tier &lIII&b]'
-    command: pesca givearmor {player} tier-iii_helmet
+    command: pesca givearmor {player} tier-iii_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -71,9 +66,9 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND
-    chance: 5
+    chance: 5.25
     display: '&bPeitoral Pesca &b[Tier &lIII&b]'
-    command: pesca givearmor {player} tier-iii_chestplate
+    command: pesca givearmor {player} tier-iii_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -89,9 +84,9 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND
-    chance: 5
+    chance: 5.25
     display: '&bCalça Pesca &b[Tier &lIII&b]'
-    command: pesca givearmor {player} tier-iii_leggings
+    command: pesca givearmor {player} tier-iii_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -107,9 +102,9 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND
-    chance: 5
+    chance: 5.25
     display: '&bBota Pesca &b[Tier &lIII&b]'
-    command: pesca givearmor {player} tier-iii_boots
+    command: pesca givearmor {player} tier-iii_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -123,12 +118,12 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER IV ──────────────────────────────────────────── 15%
+  # ── ARMADURA TIER IV ──────────────────────────────────────────── 16%
   armadura-iv-capacete:
     type: COMMAND
-    chance: 3.75
+    chance: 4
     display: '&dCapacete Pesca &d[Tier &lIV&d]'
-    command: pesca givearmor {player} tier-iv_helmet
+    command: pesca givearmor {player} tier-iv_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -144,9 +139,9 @@ rewards:
 
   armadura-iv-peitoral:
     type: COMMAND
-    chance: 3.75
+    chance: 4
     display: '&dPeitoral Pesca &d[Tier &lIV&d]'
-    command: pesca givearmor {player} tier-iv_chestplate
+    command: pesca givearmor {player} tier-iv_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -162,9 +157,9 @@ rewards:
 
   armadura-iv-calca:
     type: COMMAND
-    chance: 3.75
+    chance: 4
     display: '&dCalça Pesca &d[Tier &lIV&d]'
-    command: pesca givearmor {player} tier-iv_leggings
+    command: pesca givearmor {player} tier-iv_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -180,9 +175,9 @@ rewards:
 
   armadura-iv-bota:
     type: COMMAND
-    chance: 3.75
+    chance: 4
     display: '&dBota Pesca &d[Tier &lIV&d]'
-    command: pesca givearmor {player} tier-iv_boots
+    command: pesca givearmor {player} tier-iv_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -201,7 +196,7 @@ rewards:
     type: COMMAND
     chance: 2.75
     display: '&6Capacete Pesca &6[Tier &lV&6]'
-    command: pesca givearmor {player} tier-v_helmet
+    command: pesca givearmor {player} tier-v_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -219,7 +214,7 @@ rewards:
     type: COMMAND
     chance: 2.75
     display: '&6Peitoral Pesca &6[Tier &lV&6]'
-    command: pesca givearmor {player} tier-v_chestplate
+    command: pesca givearmor {player} tier-v_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -237,7 +232,7 @@ rewards:
     type: COMMAND
     chance: 2.75
     display: '&6Calça Pesca &6[Tier &lV&6]'
-    command: pesca givearmor {player} tier-v_leggings
+    command: pesca givearmor {player} tier-v_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -255,7 +250,7 @@ rewards:
     type: COMMAND
     chance: 2.75
     display: '&6Bota Pesca &6[Tier &lV&6]'
-    command: pesca givearmor {player} tier-v_boots
+    command: pesca givearmor {player} tier-v_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -269,12 +264,12 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── SKINS ─────────────────────────────────────────────────────── 27%
+  # ── SKINS ─────────────────────────────────────────────────────── 28%
   skin-abissita:
     type: COMMAND
-    chance: 9
+    chance: 9.5
     display: '&aSkin de Abissita'
-    command: pesca giveskin {player} abissita
+    command: pesca giveskin {player} abissita {amount}
     amount: 1
     icon:
       material: FISHING_ROD
@@ -290,7 +285,7 @@ rewards:
     type: COMMAND
     chance: 7
     display: '&5Skin de Serenita'
-    command: pesca giveskin {player} serenita
+    command: pesca giveskin {player} serenita {amount}
     amount: 1
     icon:
       material: FISHING_ROD
@@ -306,7 +301,7 @@ rewards:
     type: COMMAND
     chance: 5
     display: '&1Skin de Oceanita'
-    command: pesca giveskin {player} oceanita
+    command: pesca giveskin {player} oceanita {amount}
     amount: 1
     icon:
       material: FISHING_ROD
@@ -322,7 +317,7 @@ rewards:
     type: COMMAND
     chance: 4
     display: '&9Skin de Pérola'
-    command: pesca giveskin {player} perola
+    command: pesca giveskin {player} perola {amount}
     amount: 1
     icon:
       material: FISHING_ROD
@@ -336,9 +331,9 @@ rewards:
 
   skin-tempestita:
     type: COMMAND
-    chance: 2
+    chance: 2.5
     display: '&dSkin de Tempestita'
-    command: pesca giveskin {player} tempestita
+    command: pesca giveskin {player} tempestita {amount}
     amount: 1
     icon:
       material: FISHING_ROD

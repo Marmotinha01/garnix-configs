@@ -197,7 +197,7 @@ rewards:
     type: COMMAND
     chance: 2.5
     display: '&d&lSkin de Tempestita'
-    command: pesca giveskin {player} tempestita
+    command: pesca giveskin {player} tempestita {amount}
     amount: 1
     icon:
       material: FISHING_ROD
@@ -258,7 +258,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&4&lSkin de Mithril'
-    command: mina giveskin {player} mithril
+    command: mina giveskin {player} mithril {amount}
     amount: 1
     icon:
       material: DIAMOND_PICKAXE
@@ -276,7 +276,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&f&lSkin de Marfim'
-    command: fazenda giveskin {player} marfim
+    command: fazenda giveskin {player} marfim {amount}
     amount: 1
     icon:
       material: DIAMOND_HOE

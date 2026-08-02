@@ -21,6 +21,11 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
+# ⚠️ Esta caixa nao tem `azar`: toda abertura devolve premio. Azar so existe
+# nas crates e nos bosses. Os 20 pontos que o azar tinha foram devolvidos
+# para os premios na mesma proporcao — nenhuma recompensa mudou de posicao
+# na tabela, todas ficaram ~1,24x mais provaveis.
+#
 # ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
 # sufixo de slot entrega o set inteiro (+48%) num drop só.
 #
@@ -40,22 +45,12 @@ box-item:
 # linha, sem nenhuma linha extra.
 rewards:
 
-  azar:
-    type: NONE
-    chance: 20
-    display: '&8Azar'
-    icon:
-      material: WEB
-      display: '&8Azar'
-      lore:
-      - '&7Não foi dessa vez.'
-
-  # ── ARMADURA TIER I ───────────────────────────────────────────── 24%
+  # ── ARMADURA TIER I ───────────────────────────────────────────── 30%
   armadura-i-capacete:
     type: COMMAND
-    chance: 6
+    chance: 7.5
     display: '&7Capacete Farm &7[Tier &lI&7]'
-    command: fazenda givearmor {player} tier-i_helmet
+    command: fazenda givearmor {player} tier-i_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -72,9 +67,9 @@ rewards:
 
   armadura-i-peitoral:
     type: COMMAND
-    chance: 6
+    chance: 7.5
     display: '&7Peitoral Farm &7[Tier &lI&7]'
-    command: fazenda givearmor {player} tier-i_chestplate
+    command: fazenda givearmor {player} tier-i_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -91,9 +86,9 @@ rewards:
 
   armadura-i-calca:
     type: COMMAND
-    chance: 6
+    chance: 7.5
     display: '&7Calça Farm &7[Tier &lI&7]'
-    command: fazenda givearmor {player} tier-i_leggings
+    command: fazenda givearmor {player} tier-i_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -110,9 +105,9 @@ rewards:
 
   armadura-i-bota:
     type: COMMAND
-    chance: 6
+    chance: 7.5
     display: '&7Bota Farm &7[Tier &lI&7]'
-    command: fazenda givearmor {player} tier-i_boots
+    command: fazenda givearmor {player} tier-i_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -127,12 +122,12 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER II ──────────────────────────────────────────── 18%
+  # ── ARMADURA TIER II ──────────────────────────────────────────── 22%
   armadura-ii-capacete:
     type: COMMAND
-    chance: 4.5
+    chance: 5.5
     display: '&aCapacete Farm &a[Tier &lII&a]'
-    command: fazenda givearmor {player} tier-ii_helmet
+    command: fazenda givearmor {player} tier-ii_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -149,9 +144,9 @@ rewards:
 
   armadura-ii-peitoral:
     type: COMMAND
-    chance: 4.5
+    chance: 5.5
     display: '&aPeitoral Farm &a[Tier &lII&a]'
-    command: fazenda givearmor {player} tier-ii_chestplate
+    command: fazenda givearmor {player} tier-ii_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -168,9 +163,9 @@ rewards:
 
   armadura-ii-calca:
     type: COMMAND
-    chance: 4.5
+    chance: 5.5
     display: '&aCalça Farm &a[Tier &lII&a]'
-    command: fazenda givearmor {player} tier-ii_leggings
+    command: fazenda givearmor {player} tier-ii_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -187,9 +182,9 @@ rewards:
 
   armadura-ii-bota:
     type: COMMAND
-    chance: 4.5
+    chance: 5.5
     display: '&aBota Farm &a[Tier &lII&a]'
-    command: fazenda givearmor {player} tier-ii_boots
+    command: fazenda givearmor {player} tier-ii_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -204,12 +199,12 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER III ─────────────────────────────────────────── 11%
+  # ── ARMADURA TIER III ─────────────────────────────────────────── 14%
   armadura-iii-capacete:
     type: COMMAND
-    chance: 2.75
+    chance: 3.5
     display: '&bCapacete Farm &b[Tier &lIII&b]'
-    command: fazenda givearmor {player} tier-iii_helmet
+    command: fazenda givearmor {player} tier-iii_helmet {amount}
     amount: 1
     icon:
       material: LEATHER_HELMET
@@ -226,9 +221,9 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND
-    chance: 2.75
+    chance: 3.5
     display: '&bPeitoral Farm &b[Tier &lIII&b]'
-    command: fazenda givearmor {player} tier-iii_chestplate
+    command: fazenda givearmor {player} tier-iii_chestplate {amount}
     amount: 1
     icon:
       material: LEATHER_CHESTPLATE
@@ -245,9 +240,9 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND
-    chance: 2.75
+    chance: 3.5
     display: '&bCalça Farm &b[Tier &lIII&b]'
-    command: fazenda givearmor {player} tier-iii_leggings
+    command: fazenda givearmor {player} tier-iii_leggings {amount}
     amount: 1
     icon:
       material: LEATHER_LEGGINGS
@@ -264,9 +259,9 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND
-    chance: 2.75
+    chance: 3.5
     display: '&bBota Farm &b[Tier &lIII&b]'
-    command: fazenda givearmor {player} tier-iii_boots
+    command: fazenda givearmor {player} tier-iii_boots {amount}
     amount: 1
     icon:
       material: LEATHER_BOOTS
@@ -281,12 +276,12 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── SKINS ─────────────────────────────────────────────────────── 12%
+  # ── SKINS ─────────────────────────────────────────────────────── 15%
   skin-pedra:
     type: COMMAND
-    chance: 4.5
+    chance: 5.5
     display: '&7Skin de Pedra'
-    command: fazenda giveskin {player} pedra
+    command: fazenda giveskin {player} pedra {amount}
     amount: 1
     icon:
       material: STONE_HOE
@@ -301,9 +296,9 @@ rewards:
 
   skin-ferro:
     type: COMMAND
-    chance: 3.5
+    chance: 4.5
     display: '&fSkin de Ferro'
-    command: fazenda giveskin {player} ferro
+    command: fazenda giveskin {player} ferro {amount}
     amount: 1
     icon:
       material: IRON_HOE
@@ -318,9 +313,9 @@ rewards:
 
   skin-ouro:
     type: COMMAND
-    chance: 2.5
+    chance: 3
     display: '&6Skin de Ouro'
-    command: fazenda giveskin {player} ouro
+    command: fazenda giveskin {player} ouro {amount}
     amount: 1
     icon:
       material: GOLD_HOE
@@ -335,9 +330,9 @@ rewards:
 
   skin-diamante:
     type: COMMAND
-    chance: 1.5
+    chance: 2
     display: '&bSkin de Diamante'
-    command: fazenda giveskin {player} diamante
+    command: fazenda giveskin {player} diamante {amount}
     amount: 1
     icon:
       material: DIAMOND_HOE
@@ -352,7 +347,7 @@ rewards:
 
   forja:
     type: COMMAND
-    chance: 8
+    chance: 10
     display: '&eForja de Skins'
     command: fazenda giveforge {player} 1
     amount: 1
@@ -367,7 +362,7 @@ rewards:
 
   secundaria:
     type: CURRENCY
-    chance: 5
+    chance: 6
     currency-id: sementes
     amount: '1000'
     icon:
@@ -375,7 +370,7 @@ rewards:
       - '&fValor: &5❋{amount}'
   booster:
     type: COMMAND
-    chance: 2
+    chance: 2.5
     display: '&aBooster 2x &7(15min)'
     command: fazenda givebooster {player} coins 2 15m
     amount: 1
