@@ -13,7 +13,7 @@ multiplier-provider: "coins"
 
 icon:
   slot: 11
-  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  texture: "c2d41b2279abce5fd626923b61e3ab98dce4972417289ee2b73214c0aaba841e"
   display: "&a{display}"
   lore:
     - "&7Receba mais coins"

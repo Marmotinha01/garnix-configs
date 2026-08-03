@@ -33,7 +33,7 @@ subtitle: "&f{blocks} blocos destruídos"
 
 icon:
   slot: 29
-  texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
+  texture: "a2680a28962e9ad2d4872d06fba2cc60824fbb2d0824e42d958575b7563884aa"
   display: "&6{display}"
   lore:
     - "&7Tenha a chance de invocar blazes"
