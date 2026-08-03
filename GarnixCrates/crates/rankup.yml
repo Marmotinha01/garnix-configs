@@ -159,9 +159,15 @@ rewards:
       - '&7pronta no seu terreno.'
 
   # ── MEDIANA PLUS ──────────────────────────────────────────────────── 2%
+  #
+  # ⚠️ Os 2% da faixa eram TODOS do chaves-boss-10 — a caixa chaves entrou aqui
+  # tirando 0,6 dele (2 → 1,4 + 0,6), entao a faixa segue valendo 2% e o arquivo
+  # segue somando 100. A caixa e a mais rara das duas de proposito: ela devolve
+  # ~6,5 chaves de UMA das seis crates (`GarnixMysteryBoxes/boxes/chaves.yml`),
+  # e sortear rankup ou vip ali vale mais que 10 chaves de boss.
   chaves-boss-10:
     type: COMMAND
-    chance: 2
+    chance: 1.4
     display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
     amount: 10
@@ -174,6 +180,19 @@ rewards:
       - '&7abrindo essa chave.'
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
+
+  caixa-chaves:
+    type: COMMAND
+    chance: 0.6
+    display: '&9Caixa Chaves'
+    command: caixas give chaves {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&9Caixa Chaves'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
   # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,95%
   cash:

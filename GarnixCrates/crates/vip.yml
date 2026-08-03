@@ -213,9 +213,14 @@ rewards:
       - ' &a+&l15&a% &fsobre a chance deles.'
 
   # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,099%
+  #
+  # ⚠️ A caixa chaves entrou nesta faixa sem aumenta-la: os 0,016 dela saíram de
+  # dentro dos 0,099 que ja existiam, cada uma das outras seis cedendo um pouco.
+  # A faixa continua 0,099% e o arquivo continua somando 100 — nao "arredonde"
+  # nenhum destes numeros de volta sem refazer a conta das sete.
   caixa-boosters:
     type: COMMAND
-    chance: 0.024
+    chance: 0.02
     display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
     amount: 1
@@ -228,7 +233,7 @@ rewards:
 
   caixa-caixas:
     type: COMMAND
-    chance: 0.012
+    chance: 0.01
     display: '&dCaixa Caixas'
     command: caixas give caixas {player} {amount}
     amount: 1
@@ -239,9 +244,22 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
+  caixa-chaves:
+    type: COMMAND
+    chance: 0.016
+    display: '&9Caixa Chaves'
+    command: caixas give chaves {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&9Caixa Chaves'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
   caixa-recursos:
     type: COMMAND
-    chance: 0.018
+    chance: 0.015
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 1
@@ -254,7 +272,7 @@ rewards:
 
   caixa-runas:
     type: COMMAND
-    chance: 0.02
+    chance: 0.017
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 1
@@ -267,7 +285,7 @@ rewards:
 
   caixa-skins-i:
     type: COMMAND
-    chance: 0.015
+    chance: 0.013
     display: '&eCaixa Skins &e[Tier &lI&e]'
     command: caixas give skins-i {player} {amount}
     amount: 1
@@ -280,7 +298,7 @@ rewards:
 
   caixa-skins-ii:
     type: COMMAND
-    chance: 0.01
+    chance: 0.008
     display: '&eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 1
