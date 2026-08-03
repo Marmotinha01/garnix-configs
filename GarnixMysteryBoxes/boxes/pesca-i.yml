@@ -45,10 +45,10 @@ box-item:
 # linha, sem nenhuma linha extra.
 rewards:
 
-  # ── ARMADURA TIER I ───────────────────────────────────────────── 26%
+  # ── ARMADURA TIER I ───────────────────────────────────────────── 24%
   armadura-i-capacete:
     type: COMMAND
-    chance: 6.5
+    chance: 6
     display: '&7Capacete Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_helmet {amount}
     amount: 1
@@ -66,7 +66,7 @@ rewards:
 
   armadura-i-peitoral:
     type: COMMAND
-    chance: 6.5
+    chance: 6
     display: '&7Peitoral Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_chestplate {amount}
     amount: 1
@@ -84,7 +84,7 @@ rewards:
 
   armadura-i-calca:
     type: COMMAND
-    chance: 6.5
+    chance: 6
     display: '&7Calça Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_leggings {amount}
     amount: 1
@@ -102,7 +102,7 @@ rewards:
 
   armadura-i-bota:
     type: COMMAND
-    chance: 6.5
+    chance: 6
     display: '&7Bota Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_boots {amount}
     amount: 1
@@ -118,10 +118,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER II ──────────────────────────────────────────── 23%
+  # ── ARMADURA TIER II ──────────────────────────────────────────── 21%
   armadura-ii-capacete:
     type: COMMAND
-    chance: 5.75
+    chance: 5.25
     display: '&aCapacete Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_helmet {amount}
     amount: 1
@@ -139,7 +139,7 @@ rewards:
 
   armadura-ii-peitoral:
     type: COMMAND
-    chance: 5.75
+    chance: 5.25
     display: '&aPeitoral Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_chestplate {amount}
     amount: 1
@@ -157,7 +157,7 @@ rewards:
 
   armadura-ii-calca:
     type: COMMAND
-    chance: 5.75
+    chance: 5.25
     display: '&aCalça Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_leggings {amount}
     amount: 1
@@ -175,7 +175,7 @@ rewards:
 
   armadura-ii-bota:
     type: COMMAND
-    chance: 5.75
+    chance: 5.25
     display: '&aBota Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_boots {amount}
     amount: 1
@@ -191,10 +191,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER III ─────────────────────────────────────────── 13%
+  # ── ARMADURA TIER III ─────────────────────────────────────────── 12%
   armadura-iii-capacete:
     type: COMMAND
-    chance: 3.25
+    chance: 3
     display: '&bCapacete Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_helmet {amount}
     amount: 1
@@ -212,7 +212,7 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND
-    chance: 3.25
+    chance: 3
     display: '&bPeitoral Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_chestplate {amount}
     amount: 1
@@ -230,7 +230,7 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND
-    chance: 3.25
+    chance: 3
     display: '&bCalça Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_leggings {amount}
     amount: 1
@@ -248,7 +248,7 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND
-    chance: 3.25
+    chance: 3
     display: '&bBota Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_boots {amount}
     amount: 1
@@ -264,10 +264,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── SKINS ─────────────────────────────────────────────────────── 16,5%
+  # ── SKINS ─────────────────────────────────────────────────────── 15%
   skin-coral:
     type: COMMAND
-    chance: 6
+    chance: 5.5
     display: '&3Skin de Coral'
     command: pesca giveskin {player} coral {amount}
     amount: 1
@@ -283,7 +283,7 @@ rewards:
 
   skin-escama:
     type: COMMAND
-    chance: 5
+    chance: 4.5
     display: '&6Skin de Escama'
     command: pesca giveskin {player} escama {amount}
     amount: 1
@@ -299,7 +299,7 @@ rewards:
 
   skin-prata:
     type: COMMAND
-    chance: 3.5
+    chance: 3
     display: '&fSkin de Prata'
     command: pesca giveskin {player} prata {amount}
     amount: 1
@@ -331,7 +331,7 @@ rewards:
 
   forja:
     type: COMMAND
-    chance: 10
+    chance: 9
     display: '&bForja de Skins'
     command: pesca giveforge {player} 1
     amount: 1
@@ -346,17 +346,17 @@ rewards:
 
   secundaria:
     type: CURRENCY
-    chance: 6
+    chance: 5.5
     currency-id: corais
     amount: '1000'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
-  # ── BOOSTERS ───────────────────────────────────────────────────── 5%
+  # ── BOOSTERS ───────────────────────────────────────────────────── 4%
   booster-2x-5m:
     type: COMMAND
-    chance: 3
+    chance: 2.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 2 5m {amount}
     amount: 1
@@ -377,7 +377,7 @@ rewards:
 
   booster-2x-10m:
     type: COMMAND
-    chance: 2
+    chance: 1.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 2 10m {amount}
     amount: 1
@@ -395,6 +395,58 @@ rewards:
       - ' &8▪ &fDuração: &710m '
       flags:
       - HIDE_POTION_EFFECTS
+
+  # ── LIVROS ─────────────────────────────────────────────────────── 9%
+  livro-fartura:
+    type: COMMAND
+    chance: 3
+    display: '&dLivro de Fartura'
+    command: pesca givebook {player} double 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&dLivro de Fartura'
+      lore:
+      - '&7Chance de fisgar mais de'
+      - '&7uma recompensa por vez.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+
+  livro-faro:
+    type: COMMAND
+    chance: 3
+    display: '&aLivro de Faro Aguçado'
+    command: pesca givebook {player} luck 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&aLivro de Faro Aguçado'
+      lore:
+      - '&7Aumenta a chance de vir'
+      - '&7recompensa melhor.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+
+  livro-correnteza:
+    type: COMMAND
+    chance: 3
+    display: '&bLivro de Correnteza'
+    command: pesca givebook {player} speed 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&bLivro de Correnteza'
+      lore:
+      - '&7Puxa o peixe mais rápido'
+      - '&7para a sua vara.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
 
   # ── O DEGRAU PARA A TIER II
   caixa-pesca-ii:

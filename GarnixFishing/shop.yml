@@ -291,7 +291,7 @@ products:
     command: caixas give boosters {player} 1
     icon:
       material: CHEST
-      display: '&aCaixa Booster'
+      display: '&aCaixa Boosters'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

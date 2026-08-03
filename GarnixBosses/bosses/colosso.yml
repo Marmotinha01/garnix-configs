@@ -206,12 +206,12 @@ rewards:
   caixa-boosters:
     type: COMMAND
     chance: 0.006
-    display: '&aCaixa Booster'
+    display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
       material: CHEST
-      display: '&aCaixa Booster'
+      display: '&aCaixa Boosters'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

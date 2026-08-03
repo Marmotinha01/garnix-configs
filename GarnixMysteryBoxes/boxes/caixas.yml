@@ -346,13 +346,13 @@ rewards:
   boosters:
     type: COMMAND
     chance: 3.5
-    display: '&aCaixa Booster'
+    display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
       material: CHEST
       amount: 1
-      display: '&aCaixa Booster'
+      display: '&aCaixa Boosters'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -360,13 +360,13 @@ rewards:
   boosters-x2:
     type: COMMAND
     chance: 1.5
-    display: '&aCaixa Booster'
+    display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
     amount: 2
     icon:
       material: CHEST
       amount: 2
-      display: '&aCaixa Booster'
+      display: '&aCaixa Boosters'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'

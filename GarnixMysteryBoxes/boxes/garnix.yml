@@ -21,25 +21,27 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
-# ⚠️ Esta caixa NAO tem `azar`: toda abertura devolve premio. Os 19 pesos
+# ⚠️ Esta caixa NAO tem `azar`: toda abertura devolve premio. Os 20 pesos
 # somam 100 de proposito — aqui peso e porcentagem, e a leitura fica direta.
 #
 # ⚠️ As seis faixas, do recheio ao topo:
-#   COMUM          19,5% x2  as duas maquinas de limite, 5 de cada
+#   COMUM         19,25% x2  as duas maquinas de limite, 5 de cada
 #   COMUM PLUS    16,25%     maquina de cash, 3 de uma vez
 #   RARO            9% x3    vaga de visitante · robo lendario · torre 15
 #   RARISSIMO     2,5% x6    25 caixas · 15 skins II · tempestita · torre 30 ·
 #                            3 livros de kill-stack · papel imortal 3d
-#   RARISSIMO+    0,5% x4    mithril · marfim · robo mitico · papel supremo 2d
+#   RARISSIMO+    0,5% x5    VENDA AUTOMATICA · mithril · marfim ·
+#                            robo mitico · papel supremo 2d
 #   JACKPOT      0,25% x3    combustivel infinito · matadora hit-kill ·
 #                            papel garnix 1d
 #
-# ⚠️ As 4 entradas novas (livro + 3 papeis) valem 5,75 no total, e esse peso
-# saiu das tres faixas de recheio (21,5 → 19,5 nas duas de limite, 18 → 16,25
-# na de cash), na mesma proporcao de antes. Nenhuma faixa rara foi diluida.
+# ⚠️ A venda automatica e o unico jeito de conseguir o item fora do site (ele
+# custa 250 de cash na loja). Os 0,5 dela sairam das duas faixas de recheio,
+# 0,25 de cada (19,5 → 19,25) — nenhuma faixa rara foi diluida, mesmo criterio
+# usado quando o livro e os 3 papeis entraram.
 #
-# ⚠️ Com 19 premios o preview passou a ter 2 paginas (o menu mostra 15 por
-# pagina, `menus/preview.yml`) — as setas ja existem na `shape`.
+# ⚠️ Com 20 premios o preview tem 2 paginas (o menu mostra 15 por pagina,
+# `menus/preview.yml`) — as setas ja existem na `shape`.
 #
 # ⚠️ `/boss give killstack <jogador> <nivel> [quantia]`: o NIVEL vem primeiro e
 # a quantia depois. Aqui e nivel 1 e `{amount}` 3 — tres livros de +1, que o
@@ -66,9 +68,10 @@ box-item:
 # ⚠️ `{amount}` no display, na lore e no icone sai do `amount:` da recompensa —
 # o mesmo numero que o comando recebe. Escreva a quantia UMA vez, no `amount:`.
 #
-# ⚠️ Icone de cabeca (`texture`) ignora `amount` (SpigotConfig:497 so aplica
-# amount no ramo de `material`). Por isso a quantia das maquinas vive na lore, e
-# so as duas caixas — que sao CHEST/ENDER_CHEST — empilham no proprio icone.
+# ⚠️ Icone de cabeca (`texture`) TAMBEM empilha desde que o `setAmount` saiu do
+# ramo do `material` e foi para os atributos comuns (SpigotConfig). Antes so
+# CHEST/ENDER_CHEST mostravam a pilha, e por isso a quantia das maquinas foi
+# escrita na lore — ela pode continuar la, agora e reforco e nao remendo.
 #
 # ⚠️ O combustivel infinito estava sem `material` e o BoxManager descarta a
 # recompensa quando `getItemStack` devolve null: o jackpot da caixa mais rara do
@@ -77,7 +80,7 @@ rewards:
 
   maquina-limite-spawners:
     type: COMMAND
-    chance: 19.5
+    chance: 19.25
     display: '&b&l{amount}x Máquina de L. de Spawners'
     command: maquina give {player} limite-spawners {amount} 1
     amount: 5
@@ -92,7 +95,7 @@ rewards:
 
   maquina-limite-maquinas:
     type: COMMAND
-    chance: 19.5
+    chance: 19.25
     display: '&9&l{amount}x Máquina de L. de Máquinas'
     command: maquina give {player} limite-maquinas {amount} 1
     amount: 5
@@ -253,6 +256,24 @@ rewards:
       - '&7as vantagens do VIP.'
       - ''
       - '&8 ▪ &fDuração: &b3d '
+
+  venda-automatica:
+    type: COMMAND
+    chance: 0.5
+    display: '&6&lVenda Automática'
+    command: armazem giveautosell {player} {amount}
+    amount: 1
+    icon:
+      material: DIODE
+      data: 0
+      glow: true
+      display: '&6Venda Automática'
+      lore:
+      - '&7Venda os cactos guardados'
+      - '&7no armazém automaticamente.'
+      - ''
+      - '&8 ▪ &cFunciona apenas '
+      - '&8 ▪ &cem seus terrenos. '
 
   skin-mithril:
     type: COMMAND

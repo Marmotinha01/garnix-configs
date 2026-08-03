@@ -45,10 +45,10 @@ box-item:
 # linha, sem nenhuma linha extra.
 rewards:
 
-  # ── ARMADURA TIER I ───────────────────────────────────────────── 30%
+  # ── ARMADURA TIER I ───────────────────────────────────────────── 27%
   armadura-i-capacete:
     type: COMMAND
-    chance: 7.5
+    chance: 6.75
     display: '&7Capacete Farm &7[Tier &lI&7]'
     command: fazenda givearmor {player} tier-i_helmet {amount}
     amount: 1
@@ -67,7 +67,7 @@ rewards:
 
   armadura-i-peitoral:
     type: COMMAND
-    chance: 7.5
+    chance: 6.75
     display: '&7Peitoral Farm &7[Tier &lI&7]'
     command: fazenda givearmor {player} tier-i_chestplate {amount}
     amount: 1
@@ -86,7 +86,7 @@ rewards:
 
   armadura-i-calca:
     type: COMMAND
-    chance: 7.5
+    chance: 6.75
     display: '&7Calça Farm &7[Tier &lI&7]'
     command: fazenda givearmor {player} tier-i_leggings {amount}
     amount: 1
@@ -105,7 +105,7 @@ rewards:
 
   armadura-i-bota:
     type: COMMAND
-    chance: 7.5
+    chance: 6.75
     display: '&7Bota Farm &7[Tier &lI&7]'
     command: fazenda givearmor {player} tier-i_boots {amount}
     amount: 1
@@ -122,10 +122,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER II ──────────────────────────────────────────── 22%
+  # ── ARMADURA TIER II ──────────────────────────────────────────── 20%
   armadura-ii-capacete:
     type: COMMAND
-    chance: 5.5
+    chance: 5
     display: '&aCapacete Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_helmet {amount}
     amount: 1
@@ -144,7 +144,7 @@ rewards:
 
   armadura-ii-peitoral:
     type: COMMAND
-    chance: 5.5
+    chance: 5
     display: '&aPeitoral Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_chestplate {amount}
     amount: 1
@@ -163,7 +163,7 @@ rewards:
 
   armadura-ii-calca:
     type: COMMAND
-    chance: 5.5
+    chance: 5
     display: '&aCalça Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_leggings {amount}
     amount: 1
@@ -182,7 +182,7 @@ rewards:
 
   armadura-ii-bota:
     type: COMMAND
-    chance: 5.5
+    chance: 5
     display: '&aBota Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_boots {amount}
     amount: 1
@@ -199,10 +199,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER III ─────────────────────────────────────────── 14%
+  # ── ARMADURA TIER III ─────────────────────────────────────────── 13%
   armadura-iii-capacete:
     type: COMMAND
-    chance: 3.5
+    chance: 3.25
     display: '&bCapacete Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_helmet {amount}
     amount: 1
@@ -221,7 +221,7 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND
-    chance: 3.5
+    chance: 3.25
     display: '&bPeitoral Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_chestplate {amount}
     amount: 1
@@ -240,7 +240,7 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND
-    chance: 3.5
+    chance: 3.25
     display: '&bCalça Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_leggings {amount}
     amount: 1
@@ -259,7 +259,7 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND
-    chance: 3.5
+    chance: 3.25
     display: '&bBota Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_boots {amount}
     amount: 1
@@ -276,10 +276,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── SKINS ─────────────────────────────────────────────────────── 15%
+  # ── SKINS ─────────────────────────────────────────────────────── 14%
   skin-pedra:
     type: COMMAND
-    chance: 5.5
+    chance: 5
     display: '&7Skin de Pedra'
     command: fazenda giveskin {player} pedra {amount}
     amount: 1
@@ -296,7 +296,7 @@ rewards:
 
   skin-ferro:
     type: COMMAND
-    chance: 4.5
+    chance: 4
     display: '&fSkin de Ferro'
     command: fazenda giveskin {player} ferro {amount}
     amount: 1
@@ -347,7 +347,7 @@ rewards:
 
   forja:
     type: COMMAND
-    chance: 10
+    chance: 9.5
     display: '&eForja de Skins'
     command: fazenda giveforge {player} 1
     amount: 1
@@ -411,6 +411,58 @@ rewards:
       - ' &8▪ &fDuração: &710m '
       flags:
       - HIDE_POTION_EFFECTS
+
+  # ── LIVROS ───────────────────────────────────────────────────── 7,5%
+  livro-ceifador:
+    type: COMMAND
+    chance: 2.5
+    display: '&dLivro de Ceifador'
+    command: lamina givebook {player} ceifador 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&dLivro de Ceifador'
+      lore:
+      - '&7Chance de dobrar as'
+      - '&7cabeças que o mob solta.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &cLâmina '
+
+  livro-massacre:
+    type: COMMAND
+    chance: 2.5
+    display: '&4Livro de Massacre'
+    command: lamina givebook {player} massacre 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&4Livro de Massacre'
+      lore:
+      - '&7Quantos mobs a sua lâmina'
+      - '&7abate em um único golpe.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &cLâmina '
+
+  livro-pilhagem:
+    type: COMMAND
+    chance: 2.5
+    display: '&aLivro de Pilhagem'
+    command: lamina givebook {player} pilhagem 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&aLivro de Pilhagem'
+      lore:
+      - '&7Aumenta os drops que os'
+      - '&7mobs deixam ao morrer.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &cLâmina '
 
   # ── O DEGRAU PARA A TIER II
   caixa-farm-ii:

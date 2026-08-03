@@ -38,7 +38,7 @@ key-item:
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
 # FAIXAS desta crate:
-#   comum 84% · comum plus 12% · mediana 2,5% · mediana plus 1% ·
+#   comum 81% · comum plus 15% · mediana 2,5% · mediana plus 1% ·
 #   rara 0,4% · raríssima 0,099% · jackpot 0,001%
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
@@ -53,10 +53,10 @@ key-item:
 # totalChance. Somar 100 e so legibilidade (o azar entra por cima, ver no fim).
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 84%
+  # ── COMUM ────────────────────────────────────────────────────────── 81%
   coins:
     type: CURRENCY
-    chance: 44
+    chance: 42
     currency-id: coins
     amount: '250'
     icon:
@@ -65,14 +65,26 @@ rewards:
 
   dracmas:
     type: CURRENCY
-    chance: 40
+    chance: 39
     currency-id: dracmas
     amount: '25'
     icon:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
+  # ── COMUM PLUS ───────────────────────────────────────────────────── 15%
+  combustivel:
+    type: COMMAND
+    chance: 3
+    display: '&eCombustível'
+    command: maquina givefuel {player} default {amount}
+    amount: 500
+    icon:
+      material: COAL
+      display: '&eCombustível'
+      lore:
+      - '&fLitros: &7{amount}L'
+
   lim-armazem:
     type: COMMAND
     chance: 5
@@ -188,20 +200,20 @@ rewards:
   # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,099%
   caixa-boosters:
     type: COMMAND
-    chance: 0.03
-    display: '&aCaixa Booster'
+    chance: 0.024
+    display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
       material: CHEST
-      display: '&aCaixa Booster'
+      display: '&aCaixa Boosters'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
   caixa-caixas:
     type: COMMAND
-    chance: 0.025
+    chance: 0.012
     display: '&dCaixa Caixas'
     command: caixas give caixas {player} {amount}
     amount: 1
@@ -214,13 +226,52 @@ rewards:
 
   caixa-recursos:
     type: COMMAND
-    chance: 0.02
+    chance: 0.018
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 1
     icon:
       material: CHEST
       display: '&2Caixa Recursos'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-runas:
+    type: COMMAND
+    chance: 0.02
+    display: '&5Caixa Runas'
+    command: caixas give runas {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&5Caixa Runas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-skins-i:
+    type: COMMAND
+    chance: 0.015
+    display: '&eCaixa Skins &e[Tier &lI&e]'
+    command: caixas give skins-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&eCaixa Skins &e[Tier &lI&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-skins-ii:
+    type: COMMAND
+    chance: 0.01
+    display: '&eCaixa Skins &e[Tier &lII&e]'
+    command: caixas give skins-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&eCaixa Skins &e[Tier &lII&e]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -243,7 +294,7 @@ rewards:
   #
   # Peso 33,3333 sobre os 100 dos premios: 33,3333/133,3333 = 25% das
   # aberturas, ou 250 a cada 1.000. Os pesos acima ficaram intactos — o
-  # que muda e que cada um agora vale 0,75x do que valia (44 = 33%).
+  # que muda e que cada um agora vale 0,75x do que valia (42 = 31,5%).
   azar:
     type: NONE
     chance: 33.3333
