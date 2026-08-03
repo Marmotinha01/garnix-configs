@@ -5,7 +5,12 @@
 #   double : % chance to catch twice at once
 #
 # Each enchant defines its own book item under "book" (material/display/lore),
-# with the {enchant} (enchant display) and {level} placeholders.
+# with the {enchant} (enchant display), {level} and {value} placeholders.
+#
+# {value} e o EFEITO REAL do nivel — os segundos que a Correnteza tira, a % da
+# Mare, a % da Cobica. A lore antiga so tinha {level}, e "Nivel: 3" nao informa
+# nada: o jogador nao tinha como saber o que o 3 valia. Toda lore daqui usa o
+# numero, e a unidade vem escrita ao lado porque ela muda de um para o outro.
 
 enchantments:
   
@@ -15,11 +20,12 @@ enchantments:
       material: ENCHANTED_BOOK
       display: '&bLivro de Correnteza'
       lore:
-      - '&7Puxa o peixe mais rápido'
-      - '&7para a sua vara.'
+      - '&7Diminui o tempo de espera'
+      - '&7entre uma fisgada e outra.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fEfeito: &b-{value}s &fpor fisgada '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
       - '&7Arraste sobre a vara'
@@ -37,17 +43,21 @@ enchantments:
         value: 5
   
   luck:
-    display: '&aFaro Aguçado'
+    display: '&aMaré'
     book:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado'
+      display: '&aLivro de Maré'
       lore:
-      - '&7Aumenta a chance de vir'
-      - '&7recompensa melhor.'
+      - '&7Deixa os peixes raros mais'
+      - '&7fáceis de cair no anzol.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fEfeito: &a+{value}% &fnos raros '
       - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+      - '&7Só vale para o que já dá'
+      - '&7para pescar no seu nível.'
       - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
@@ -64,16 +74,18 @@ enchantments:
         value: 100
   
   double:
-    display: '&dFartura'
+    display: '&dCobiça'
     book:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Fartura'
+      display: '&dLivro de Cobiça'
       lore:
-      - '&7Chance de fisgar mais de'
-      - '&7uma recompensa por vez.'
+      - '&7Chance de a fisgada valer'
+      - '&7dobrado, e não só o item:'
+      - '&7corais e XP dobram junto.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
+      - '&8 ▪ &fEfeito: &d{value}% &fde dobrar '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
       - '&7Arraste sobre a vara'

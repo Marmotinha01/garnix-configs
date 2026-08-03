@@ -400,36 +400,48 @@ rewards:
   livro-fartura:
     type: COMMAND
     chance: 3
-    display: '&dLivro de Fartura'
+    display: '&dLivro de Cobiça'
     command: pesca givebook {player} double 1 {amount}
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Fartura'
+      display: '&dLivro de Cobiça'
       lore:
-      - '&7Chance de fisgar mais de'
-      - '&7uma recompensa por vez.'
+      - '&7Chance de a fisgada valer'
+      - '&7dobrado, e não só o item:'
+      - '&7corais e XP dobram junto.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fEfeito: &d5% &fde dobrar '
       - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   livro-faro:
     type: COMMAND
     chance: 3
-    display: '&aLivro de Faro Aguçado'
+    display: '&aLivro de Maré'
     command: pesca givebook {player} luck 1 {amount}
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Faro Aguçado'
+      display: '&aLivro de Maré'
       lore:
-      - '&7Aumenta a chance de vir'
-      - '&7recompensa melhor.'
+      - '&7Deixa os peixes raros mais'
+      - '&7fáceis de cair no anzol.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fEfeito: &a+15% &fnos raros '
       - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+      - '&7Só vale para o que já dá'
+      - '&7para pescar no seu nível.'
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   livro-correnteza:
     type: COMMAND
@@ -441,12 +453,16 @@ rewards:
       material: ENCHANTED_BOOK
       display: '&bLivro de Correnteza'
       lore:
-      - '&7Puxa o peixe mais rápido'
-      - '&7para a sua vara.'
+      - '&7Diminui o tempo de espera'
+      - '&7entre uma fisgada e outra.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fEfeito: &b-1s &fpor fisgada '
       - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+      - '&7Arraste sobre a vara'
+      - '&7para aplicar o livro.'
 
   # ── O DEGRAU PARA A TIER II
   caixa-pesca-ii:
