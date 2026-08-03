@@ -36,6 +36,8 @@ player-not-found: '&cJogador não encontrado.'
 admin:
   give-all: '&6Você deu &ex{amount} &f{box} &6para &eTODOS ONLINE&6.'
   give-player: '&6Você deu &ex{amount} &f{box} &6para &f{player}&6.'
+  # Clique direito no hub /caixas, so para quem tem `caixas.admin`.
+  give-self: '&6Você pegou &ex{amount} &f{box}&6.'
 
 help:
 - ''

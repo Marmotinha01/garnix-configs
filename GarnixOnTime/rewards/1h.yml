@@ -22,7 +22,7 @@ rewards:
     command: 'caixas give boosters {player} {amount}'
     amount: 1
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       display: '&aCaixa Boosters'
       lore:
       - '&7Abra e descubra o que a sorte'

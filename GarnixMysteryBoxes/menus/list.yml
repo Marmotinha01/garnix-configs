@@ -5,8 +5,9 @@ title: Caixas Misteriosas
 # ultimo (as melhores). Caixa sem `weight` nao aparece nesta lista.
 #
 # '<' e '>' sao os botoes de pagina anterior/proxima; so aparecem quando ha
-# mais de uma pagina. Com 15 slots livres e 15 caixas, hoje e uma pagina so —
-# a proxima caixa criada ja abre a segunda pagina.
+# mais de uma pagina. Sao 15 slots livres por pagina e 18 caixas hoje, entao a
+# lista ocupa 2 paginas: as 15 mais comuns na primeira e as 3 mais raras
+# (boosters, maquinas e robos vem antes de caixas e garnix) na segunda.
 shape:
 - XXXXXXXXX
 - XX.....XX
@@ -19,3 +20,11 @@ box-lore:
 - '&8 ▪ &fRecompensas: &a{rewards} '
 - ''
 - '&aClique para acessar.'
+
+# Linhas extras que SO aparecem para quem tem a permissao `caixas.admin`. O
+# jogador comum nunca ve estas linhas, e para ele o botao direito continua
+# abrindo o preview — o hub nao muda em nada.
+box-lore-staff:
+- ''
+- '&cStaff:'
+- '&fBotão direito &8➟ &7Pegar a caixa'

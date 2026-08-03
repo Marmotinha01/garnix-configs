@@ -3,7 +3,7 @@
 
 # Raridade desta caixa, usada para ordenar o menu /caixas: quanto MAIOR o peso,
 # mais rara e mais tarde ela aparece na lista (omita para não aparecer nela).
-weight: 108
+weight: 130
 
 box-item:
   material: ENDER_CHEST

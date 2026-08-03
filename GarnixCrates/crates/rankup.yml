@@ -38,7 +38,7 @@ key-item:
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
 # FAIXAS desta crate (DESLOCADAS PARA CIMA de proposito):
-#   comum 60% · comum plus 30% · mediana 7% · mediana plus 2% ·
+#   comum 60% · comum plus 28% · mediana 9% · mediana plus 2% ·
 #   raríssima 0,95% · jackpot 0,05%
 #
 # ⚠️ A rankup e a EXCECAO do servidor e tem que ser. O volume dela e ~20 chaves
@@ -72,10 +72,10 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 30%
+  # ── COMUM PLUS ───────────────────────────────────────────────────── 28%
   lim-armazem:
     type: COMMAND
-    chance: 12
+    chance: 11
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 500
@@ -89,7 +89,7 @@ rewards:
 
   lim-maquina:
     type: COMMAND
-    chance: 10
+    chance: 9
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 1
@@ -115,7 +115,7 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  # ── MEDIANA ───────────────────────────────────────────────────────── 7%
+  # ── MEDIANA ───────────────────────────────────────────────────────── 9%
   chaves-boss-5:
     type: COMMAND
     chance: 4
@@ -144,6 +144,19 @@ rewards:
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
+
+  torre-cacto-5:
+    type: COMMAND
+    chance: 2
+    display: '&aTorre de Cacto &8[5 Andares]'
+    command: cactustower give {player} 5 1
+    amount: 1
+    icon:
+      material: CACTUS
+      display: '&aTorre de Cacto &8[5 Andares]'
+      lore:
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
 
   # ── MEDIANA PLUS ──────────────────────────────────────────────────── 2%
   chaves-boss-10:
@@ -179,7 +192,7 @@ rewards:
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       display: '&aCaixa Boosters'
       lore:
       - '&7Abra e descubra o que a sorte'
@@ -205,7 +218,7 @@ rewards:
     command: caixas give robos {player} {amount}
     amount: 1
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       display: '&cCaixa Robôs'
       lore:
       - '&7Abra e descubra o que a sorte'

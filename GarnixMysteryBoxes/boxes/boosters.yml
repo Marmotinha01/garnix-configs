@@ -3,10 +3,10 @@
 
 # Raridade desta caixa, usada para ordenar o menu /caixas: quanto MAIOR o peso,
 # mais rara e mais tarde ela aparece na lista (omita para não aparecer nela).
-weight: 10
+weight: 140
 
 box-item:
-  material: CHEST
+  material: ENDER_CHEST
   display: '&aCaixa Boosters'
   lore:
   - '&7Abra e descubra o que a sorte'

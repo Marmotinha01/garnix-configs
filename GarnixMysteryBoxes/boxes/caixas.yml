@@ -3,7 +3,7 @@
 
 # Raridade desta caixa, usada para ordenar o menu /caixas: quanto MAIOR o peso,
 # mais rara e mais tarde ela aparece na lista (omita para não aparecer nela).
-weight: 110
+weight: 170
 
 box-item:
   material: ENDER_CHEST
@@ -322,7 +322,7 @@ rewards:
     command: caixas give maquinas {player} {amount}
     amount: 1
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       amount: 1
       display: '&bCaixa Máquinas'
       lore:
@@ -336,7 +336,7 @@ rewards:
     command: caixas give maquinas {player} {amount}
     amount: 2
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       amount: 2
       display: '&bCaixa Máquinas'
       lore:
@@ -350,7 +350,7 @@ rewards:
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       amount: 1
       display: '&aCaixa Boosters'
       lore:
@@ -364,7 +364,7 @@ rewards:
     command: caixas give boosters {player} {amount}
     amount: 2
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       amount: 2
       display: '&aCaixa Boosters'
       lore:

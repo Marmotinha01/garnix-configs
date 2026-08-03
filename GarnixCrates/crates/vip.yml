@@ -38,7 +38,7 @@ key-item:
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
 # FAIXAS desta crate:
-#   comum 81% · comum plus 15% · mediana 2,5% · mediana plus 1% ·
+#   comum 79% · comum plus 17% · mediana 2,5% · mediana plus 1% ·
 #   rara 0,4% · raríssima 0,099% · jackpot 0,001%
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
@@ -53,10 +53,10 @@ key-item:
 # totalChance. Somar 100 e so legibilidade (o azar entra por cima, ver no fim).
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 81%
+  # ── COMUM ────────────────────────────────────────────────────────── 79%
   coins:
     type: CURRENCY
-    chance: 42
+    chance: 41
     currency-id: coins
     amount: '250'
     icon:
@@ -65,14 +65,29 @@ rewards:
 
   dracmas:
     type: CURRENCY
-    chance: 39
+    chance: 38
     currency-id: dracmas
     amount: '25'
     icon:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 15%
+  # ── COMUM PLUS ───────────────────────────────────────────────────── 17%
+  #
+  # ⚠️ O cacto e `type: ITEM` e vai SEM display e SEM lore, igual ao produto da
+  # loja de coins (`GarnixServerShops/coins-shop/farm.yml`). Nome ou lore
+  # customizada muda o NBT e o item deixa de empilhar com o cacto que o jogador
+  # ja tem no armazem e no plot — 1 cacto que nao empilha nao serve para nada.
+  cacto:
+    type: ITEM
+    chance: 2
+    display: '&aCacto'
+    amount: 1
+    item:
+      material: CACTUS
+      data: 0
+      amount: 1
+
   combustivel:
     type: COMMAND
     chance: 3
@@ -205,7 +220,7 @@ rewards:
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
-      material: CHEST
+      material: ENDER_CHEST
       display: '&aCaixa Boosters'
       lore:
       - '&7Abra e descubra o que a sorte'

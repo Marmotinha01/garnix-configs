@@ -1,0 +1,509 @@
+# O id da caixa é o nome do arquivo. A caixa É o item físico: o jogador
+# segura e clica com o botão direito para abrir (esquerdo para ver os prêmios).
+
+# Raridade desta caixa, usada para ordenar o menu /caixas: quanto MAIOR o peso,
+# mais rara e mais tarde ela aparece na lista (omita para não aparecer nela).
+weight: 80
+
+box-item:
+  material: CHEST
+  display: '&9Caixa Chaves'
+  lore:
+  - '&7Abra e descubra o que a sorte'
+  - '&7guardou para você lá dentro.'
+  - ''
+  - '&9Opções de uso:'
+  - '&fBotão esquerdo &8➟ &7Preview'
+  - '&fBotão direito &8➟ &7Abrir x1'
+  - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
+
+# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
+# 'chance' é o peso do sorteio (não precisa somar 100).
+#
+# ⚠️ Esta caixa só sorteia CHAVE — ela não tem `azar`. Abrir sempre devolve
+# chave, e o que varia é de qual crate e quantas.
+#
+# ⚠️ AS SEIS CHAVES DO SERVIDOR, todas aqui: mineração · farm · pesca ·
+# bosses · rankup · vip. Cada uma soma 100 de peso, então abrir é 1/6 para
+# cada crate — nenhuma via é favorecida. O total do arquivo é 600 de
+# propósito, mesmo desenho da caixa `skins-i`.
+#
+# ⚠️ A ESCADA DE QUANTIDADE é igual nas seis: 3x (45) · 5x (27) · 10x (16) ·
+# 15x (9) · 30x (3). O 30x é ~3% do peso da via, ou 0,5% da caixa inteira.
+#
+# ⚠️ `/crate givekey <crate> <jogador> <quantidade>`: o ID DA CRATE vem
+# PRIMEIRO, antes do jogador — é a ordem inversa da maioria dos outros give*
+# do servidor. Trocar os dois faz o comando falhar em silêncio.
+#
+# ⚠️ Quem mostra quantas chaves saíram é a pilha do próprio ícone (`amount:`)
+# e o `{amount}x` do display. TRIPWIRE_HOOK empilha, então o ícone renderiza
+# o número sozinho — sem linha de "Quantia" na lore.
+#
+# ⚠️ A lore de cada ícone espelha o `key-item` real da crate correspondente
+# (`GarnixCrates/crates/*.yml`) — preview e item recebido têm que bater linha
+# a linha. Por isso a rankup e a vip têm as duas primeiras linhas diferentes
+# das outras quatro: a chave delas não se consegue jogando a via.
+rewards:
+
+  # ── CHAVE MINERAÇÃO ─────────────────────────────────────────── 1/6
+
+  mineracao-x3:
+    type: COMMAND
+    chance: 45
+    display: '&e&l{amount}x Chave Mineração'
+    command: crate givekey mineracao {player} {amount}
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 3
+      glow: true
+      display: '&eChave Mineração'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  mineracao-x5:
+    type: COMMAND
+    chance: 27
+    display: '&e&l{amount}x Chave Mineração'
+    command: crate givekey mineracao {player} {amount}
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 5
+      glow: true
+      display: '&eChave Mineração'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  mineracao-x10:
+    type: COMMAND
+    chance: 16
+    display: '&e&l{amount}x Chave Mineração'
+    command: crate givekey mineracao {player} {amount}
+    amount: 10
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 10
+      glow: true
+      display: '&eChave Mineração'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  mineracao-x15:
+    type: COMMAND
+    chance: 9
+    display: '&e&l{amount}x Chave Mineração'
+    command: crate givekey mineracao {player} {amount}
+    amount: 15
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 15
+      glow: true
+      display: '&eChave Mineração'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  mineracao-x30:
+    type: COMMAND
+    chance: 3
+    display: '&e&l{amount}x Chave Mineração'
+    command: crate givekey mineracao {player} {amount}
+    amount: 30
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 30
+      glow: true
+      display: '&eChave Mineração'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  # ── CHAVE FARM ──────────────────────────────────────────────── 1/6
+
+  farm-x3:
+    type: COMMAND
+    chance: 45
+    display: '&a&l{amount}x Chave Farm'
+    command: crate givekey farm {player} {amount}
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 3
+      glow: true
+      display: '&aChave Farm'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  farm-x5:
+    type: COMMAND
+    chance: 27
+    display: '&a&l{amount}x Chave Farm'
+    command: crate givekey farm {player} {amount}
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 5
+      glow: true
+      display: '&aChave Farm'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  farm-x10:
+    type: COMMAND
+    chance: 16
+    display: '&a&l{amount}x Chave Farm'
+    command: crate givekey farm {player} {amount}
+    amount: 10
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 10
+      glow: true
+      display: '&aChave Farm'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  farm-x15:
+    type: COMMAND
+    chance: 9
+    display: '&a&l{amount}x Chave Farm'
+    command: crate givekey farm {player} {amount}
+    amount: 15
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 15
+      glow: true
+      display: '&aChave Farm'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  farm-x30:
+    type: COMMAND
+    chance: 3
+    display: '&a&l{amount}x Chave Farm'
+    command: crate givekey farm {player} {amount}
+    amount: 30
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 30
+      glow: true
+      display: '&aChave Farm'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  # ── CHAVE PESCA ─────────────────────────────────────────────── 1/6
+
+  pesca-x3:
+    type: COMMAND
+    chance: 45
+    display: '&b&l{amount}x Chave Pesca'
+    command: crate givekey pesca {player} {amount}
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 3
+      glow: true
+      display: '&bChave Pesca'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  pesca-x5:
+    type: COMMAND
+    chance: 27
+    display: '&b&l{amount}x Chave Pesca'
+    command: crate givekey pesca {player} {amount}
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 5
+      glow: true
+      display: '&bChave Pesca'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  pesca-x10:
+    type: COMMAND
+    chance: 16
+    display: '&b&l{amount}x Chave Pesca'
+    command: crate givekey pesca {player} {amount}
+    amount: 10
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 10
+      glow: true
+      display: '&bChave Pesca'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  pesca-x15:
+    type: COMMAND
+    chance: 9
+    display: '&b&l{amount}x Chave Pesca'
+    command: crate givekey pesca {player} {amount}
+    amount: 15
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 15
+      glow: true
+      display: '&bChave Pesca'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  pesca-x30:
+    type: COMMAND
+    chance: 3
+    display: '&b&l{amount}x Chave Pesca'
+    command: crate givekey pesca {player} {amount}
+    amount: 30
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 30
+      glow: true
+      display: '&bChave Pesca'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  # ── CHAVE BOSSES ────────────────────────────────────────────── 1/6
+
+  bosses-x3:
+    type: COMMAND
+    chance: 45
+    display: '&4&l{amount}x Chave Bosses'
+    command: crate givekey bosses {player} {amount}
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 3
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  bosses-x5:
+    type: COMMAND
+    chance: 27
+    display: '&4&l{amount}x Chave Bosses'
+    command: crate givekey bosses {player} {amount}
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 5
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  bosses-x10:
+    type: COMMAND
+    chance: 16
+    display: '&4&l{amount}x Chave Bosses'
+    command: crate givekey bosses {player} {amount}
+    amount: 10
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 10
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  bosses-x15:
+    type: COMMAND
+    chance: 9
+    display: '&4&l{amount}x Chave Bosses'
+    command: crate givekey bosses {player} {amount}
+    amount: 15
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 15
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  bosses-x30:
+    type: COMMAND
+    chance: 3
+    display: '&4&l{amount}x Chave Bosses'
+    command: crate givekey bosses {player} {amount}
+    amount: 30
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 30
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  # ── CHAVE VIP ───────────────────────────────────────────────── 1/6
+
+  vip-x3:
+    type: COMMAND
+    chance: 45
+    display: '&d&l{amount}x Chave VIP'
+    command: crate givekey vip {player} {amount}
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 3
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga jogando bastante'
+      - '&7no servidor todo dia.'
+
+  vip-x5:
+    type: COMMAND
+    chance: 27
+    display: '&d&l{amount}x Chave VIP'
+    command: crate givekey vip {player} {amount}
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 5
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga jogando bastante'
+      - '&7no servidor todo dia.'
+
+  vip-x10:
+    type: COMMAND
+    chance: 16
+    display: '&d&l{amount}x Chave VIP'
+    command: crate givekey vip {player} {amount}
+    amount: 10
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 10
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga jogando bastante'
+      - '&7no servidor todo dia.'
+
+  vip-x15:
+    type: COMMAND
+    chance: 9
+    display: '&d&l{amount}x Chave VIP'
+    command: crate givekey vip {player} {amount}
+    amount: 15
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 15
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga jogando bastante'
+      - '&7no servidor todo dia.'
+
+  vip-x30:
+    type: COMMAND
+    chance: 3
+    display: '&d&l{amount}x Chave VIP'
+    command: crate givekey vip {player} {amount}
+    amount: 30
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 30
+      glow: true
+      display: '&dChave VIP'
+      lore:
+      - '&7Consiga jogando bastante'
+      - '&7no servidor todo dia.'
+
+  # ── CHAVE RANKUP ────────────────────────────────────────────── 1/6
+
+  rankup-x3:
+    type: COMMAND
+    chance: 45
+    display: '&6&l{amount}x Chave RankUP'
+    command: crate givekey rankup {player} {amount}
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 3
+      glow: true
+      display: '&6Chave RankUP'
+      lore:
+      - '&7Consiga subindo de rank'
+      - '&7ao longo da sua jornada.'
+
+  rankup-x5:
+    type: COMMAND
+    chance: 27
+    display: '&6&l{amount}x Chave RankUP'
+    command: crate givekey rankup {player} {amount}
+    amount: 5
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 5
+      glow: true
+      display: '&6Chave RankUP'
+      lore:
+      - '&7Consiga subindo de rank'
+      - '&7ao longo da sua jornada.'
+
+  rankup-x10:
+    type: COMMAND
+    chance: 16
+    display: '&6&l{amount}x Chave RankUP'
+    command: crate givekey rankup {player} {amount}
+    amount: 10
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 10
+      glow: true
+      display: '&6Chave RankUP'
+      lore:
+      - '&7Consiga subindo de rank'
+      - '&7ao longo da sua jornada.'
+
+  rankup-x15:
+    type: COMMAND
+    chance: 9
+    display: '&6&l{amount}x Chave RankUP'
+    command: crate givekey rankup {player} {amount}
+    amount: 15
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 15
+      glow: true
+      display: '&6Chave RankUP'
+      lore:
+      - '&7Consiga subindo de rank'
+      - '&7ao longo da sua jornada.'
+
+  rankup-x30:
+    type: COMMAND
+    chance: 3
+    display: '&6&l{amount}x Chave RankUP'
+    command: crate givekey rankup {player} {amount}
+    amount: 30
+    icon:
+      material: TRIPWIRE_HOOK
+      amount: 30
+      glow: true
+      display: '&6Chave RankUP'
+      lore:
+      - '&7Consiga subindo de rank'
+      - '&7ao longo da sua jornada.'
