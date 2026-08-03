@@ -30,7 +30,7 @@ repeat: 10s
 # bastante: nesse caso ele desiste depois de algumas tentativas e repete mesmo.
 #no-repeat: 10
 
-# ── Geração da conta ──────────────────────────────────────────────────
+# -- Geração da conta --------------------------------------------------
 math:
   # Faixa dos operandos.
   min: 1
@@ -50,7 +50,7 @@ rewards:
 - cash add {player} 10
 - crates givekey vip {player} 5
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #

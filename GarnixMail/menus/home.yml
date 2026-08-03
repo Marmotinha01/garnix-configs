@@ -68,7 +68,7 @@ send-package-icon:
   - ''
   - '&bClique para enviar.'
 
-# ── Leitura do {total} ─────────────────────────────────────────────────
+# -- Leitura do {total} -------------------------------------------------
 # O {total} e a quantia REAL que o correio entrega, somando todas as linhas
 # agrupadas naquele icone. Como o mesmo numero significa coisas diferentes,
 # o simbolo na frente dele muda:

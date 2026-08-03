@@ -12,7 +12,7 @@ increase-multiplier: 0.003968
 multiplier-provider: "gemas"
 
 icon:
-  slot: 23
+  slot: 12
   texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
   display: "&a{display}"
   lore:

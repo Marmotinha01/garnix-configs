@@ -32,7 +32,7 @@ title: "&6&lBLAZE!"
 subtitle: "&f{blocks} blocos destruídos"
 
 icon:
-  slot: 31
+  slot: 29
   texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
   display: "&6{display}"
   lore:

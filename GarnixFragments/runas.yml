@@ -1,7 +1,7 @@
 # Cada entrada e um tipo de runa. A chave (ex.: sagrada) e o id usado nos
 # comandos e no custo da loja. Campos: display, icon.
 #
-# ── UMA RUNA POR FONTE ──────────────────────────────────────────────────
+# -- UMA RUNA POR FONTE --------------------------------------------------
 #
 #   sagrada    bosses
 #   eterna     crates e caixas misteriosas

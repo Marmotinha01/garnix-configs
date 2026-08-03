@@ -2,7 +2,7 @@ debug: false
 
 # Ranking de crates abertas (reconstruído do banco neste intervalo, em minutos).
 ranking-refresh-minutes: 5
-# ── Placeholder de chaves guardadas ──
+# -- Placeholder de chaves guardadas --
 # Alimenta o %crates_stored_<crate>% usado nos hologramas das caixas. O texto e
 # escolhido pela quantia: has-keys quando ele tem chave daquela crate, no-keys
 # quando nao tem. Tokens: {amount} = quantas ele tem · {keys-plural} = chave/chaves.

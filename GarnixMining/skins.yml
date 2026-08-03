@@ -1,6 +1,6 @@
-# ─────────────────────────────────────────────────────────────────────
+# ---------------------------------------------------------------------
 # Pickaxe skins
-# ─────────────────────────────────────────────────────────────────────
+# ---------------------------------------------------------------------
 # Each skin can declare:
 #   display   — colored display name
 #   material  — visual pickaxe material inside the mine
@@ -17,7 +17,7 @@
 # Skins are unlocked via items (created with /mina giveskin).
 # Players can remove unlocked skins back to item form to trade them.
 #
-# ── LADDER DA TEMPORADA ──────────────────────────────────────────────
+# -- LADDER DA TEMPORADA ----------------------------------------------
 # Ordem de raridade (a ordem DESTE arquivo é a ordem da forja):
 #   Madeira · Pedra · Ferro · Ouro · Diamante · Rubi · Quartzo · Jade ·
 #   Safira · Mithril
@@ -25,7 +25,7 @@
 # A forja (7 skins iguais) sobe de Pedra até Quartzo. Quartzo, Jade,
 # Safira e Mithril têm forgeable: false — Jade, Safira e Mithril só saem
 # de caixa (marcadas com glow no menu) e Quartzo é o topo da forja.
-# ─────────────────────────────────────────────────────────────────────
+# ---------------------------------------------------------------------
 
 unlock-lore:
 - ''

@@ -33,7 +33,7 @@ title: "&8&lWITHER!"
 subtitle: "&f{blocks} blocos destruídos"
 
 icon:
-  slot: 32
+  slot: 30
   texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
   display: "&8{display}"
   lore:

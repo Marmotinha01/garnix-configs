@@ -17,7 +17,7 @@ box-item:
   - '&fBotão direito &8➟ &7Abrir x1'
   - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
-# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# -- RECOMPENSAS -------------------------------------------------------
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
@@ -34,7 +34,7 @@ box-item:
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve um booster.
 rewards:
 
-  # ── Booster de Mineração — Coins
+  # -- Booster de Mineração — Coins
   mina-coins-2x-15m:
     type: COMMAND
     chance: 2
@@ -141,7 +141,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Mineração — Gemas
+  # -- Booster de Mineração — Gemas
   mina-gemas-2x-15m:
     type: COMMAND
     chance: 2
@@ -248,7 +248,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Mineração — XP
+  # -- Booster de Mineração — XP
   mina-xp-2x-15m:
     type: COMMAND
     chance: 2
@@ -355,7 +355,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Mineração — XP + Coins + Gemas
+  # -- Booster de Mineração — XP + Coins + Gemas
   mina-both-2x-15m:
     type: COMMAND
     chance: 2
@@ -462,7 +462,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Fazenda — Coins
+  # -- Booster de Fazenda — Coins
   fazenda-coins-2x-15m:
     type: COMMAND
     chance: 2
@@ -569,7 +569,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Fazenda — Sementes
+  # -- Booster de Fazenda — Sementes
   fazenda-sementes-2x-15m:
     type: COMMAND
     chance: 2
@@ -676,7 +676,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Fazenda — XP
+  # -- Booster de Fazenda — XP
   fazenda-xp-2x-15m:
     type: COMMAND
     chance: 2
@@ -783,7 +783,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Fazenda — XP + Coins + Sementes
+  # -- Booster de Fazenda — XP + Coins + Sementes
   fazenda-both-2x-15m:
     type: COMMAND
     chance: 2
@@ -890,7 +890,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Pesca — Corais
+  # -- Booster de Pesca — Corais
   pesca-corais-2x-15m:
     type: COMMAND
     chance: 2
@@ -997,7 +997,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Pesca — XP
+  # -- Booster de Pesca — XP
   pesca-xp-2x-15m:
     type: COMMAND
     chance: 2
@@ -1104,7 +1104,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Pesca — XP + Corais
+  # -- Booster de Pesca — XP + Corais
   pesca-both-2x-15m:
     type: COMMAND
     chance: 2
@@ -1211,7 +1211,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Máquina — Drops
+  # -- Booster de Máquina — Drops
   maquina-drops-2x-15m:
     type: COMMAND
     chance: 2
@@ -1318,7 +1318,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Spawner — Drops
+  # -- Booster de Spawner — Drops
   spawner-drops-2x-15m:
     type: COMMAND
     chance: 2
@@ -1425,7 +1425,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Spawner — Heads
+  # -- Booster de Spawner — Heads
   spawner-heads-2x-15m:
     type: COMMAND
     chance: 2
@@ -1532,7 +1532,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
 
-  # ── Booster de Armazém — Venda de Cactos
+  # -- Booster de Armazém — Venda de Cactos
   armazem-venda-2x-15m:
     type: COMMAND
     chance: 2

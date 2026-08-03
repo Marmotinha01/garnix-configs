@@ -5,7 +5,7 @@
 # do cacto, e a via do cacto é reinvestimento composto. Preço errado aqui não deixa a
 # loja barata: deixa a VIA inteira sem rampa.
 #
-# ── Por que a areia é o número que importa ───────────────────────────────────
+# -- Por que a areia é o número que importa -----------------------------------
 #
 # Varri o repo: SAND e CACTUS não existem em nenhuma outra categoria, não caem da mina
 # (`GarnixMining/levels.yml`) e não saem de crate, caixa ou boss (as tabelas de loot não
@@ -21,7 +21,7 @@
 # Ou seja: a areia é o único sink em coins da via do cacto, e ele é linear no tamanho
 # do plot. É o freio nº 3 dos 4 de 11-CACTO.md ("espaço do plot") virando preço.
 #
-# ── A âncora ─────────────────────────────────────────────────────────────────
+# -- A âncora -----------------------------------------------------------------
 #
 #   plot cheio = 30.000 cactos (número do dono) em colunas de 3 = 10.000 colunas
 #   1 coluna   = 1 areia + 1 cacto-semente = 5.000 + 6.000 = 11.000 coins

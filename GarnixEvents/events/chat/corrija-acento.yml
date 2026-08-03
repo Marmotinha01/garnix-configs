@@ -30,7 +30,7 @@ repeat: 15s
 # aleatório (que pode repetir na rodada seguinte).
 #no-repeat: 40
 
-# ── Rigor da comparação ───────────────────────────────────────────────
+# -- Rigor da comparação -----------------------------------------------
 #
 # As duas chaves são independentes: cada uma aperta um lado, e o que vale aqui
 # não mexe em nenhum outro evento. Sem a chave, vale false (o perdão). Espaço
@@ -42,7 +42,7 @@ accent-sensitive: true
 # acento, não o Shift; ponha true só se quiser cobrar a maiúscula também.
 case-sensitive: false
 
-# ── Banco de palavras ─────────────────────────────────────────────────
+# -- Banco de palavras -------------------------------------------------
 #
 # Formato "sem acento|com acento". O lado esquerdo é o que aparece (o desafio);
 # o direito é a forma correta a digitar (e a que é revelada no fim).
@@ -50,8 +50,8 @@ case-sensitive: false
 # Evite palavras com duas leituras possíveis ("pais" pode virar "país" ou continuar
 # "pais"): o jogador não tem como adivinhar qual das duas o evento quer.
 palavras:
-  # ── Til e cedilha ──
-  # ── Agudo e circunflexo ──
+  # -- Til e cedilha --
+  # -- Agudo e circunflexo --
   - nao|não
   - mae|mãe
   - irmao|irmão
@@ -145,7 +145,7 @@ rewards:
 - cash add {player} 10
 - crates givekey vip {player} 5
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #

@@ -27,7 +27,7 @@ repeat: 10s
 # aleatório (que pode repetir na rodada seguinte).
 #no-repeat: 30
 
-# ── Rigor da comparação ───────────────────────────────────────────────
+# -- Rigor da comparação -----------------------------------------------
 #
 # As duas chaves são independentes: cada uma aperta um lado, e o que vale aqui
 # não mexe em nenhum outro evento. Sem a chave, vale false (o perdão). Espaço
@@ -42,13 +42,13 @@ accent-sensitive: true
 # Ponha false se preferir perdoar o Shift/Caps sem abrir mão do acento.
 case-sensitive: true
 
-# ── Banco de frases ───────────────────────────────────────────────────
+# -- Banco de frases ---------------------------------------------------
 #
 # Uma frase por linha. A frase mostrada É a resposta a digitar (não use "|").
 frases:
-  # ── Curtas ──
-  # ── Médias ──
-  # ── Trava-línguas ──
+  # -- Curtas --
+  # -- Médias --
+  # -- Trava-línguas --
   - velocidade é tudo
   - trabalho em equipe
   - quem digita mais rápido vence
@@ -113,7 +113,7 @@ rewards:
 - cash add {player} 10
 - crates givekey vip {player} 5
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #

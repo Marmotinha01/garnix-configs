@@ -24,7 +24,7 @@ duration: 20s
 # Vazio ("") ou "0s" = manda só uma vez, no começo.
 repeat: 10s
 
-# ── Grade ─────────────────────────────────────────────────────────────
+# -- Grade -------------------------------------------------------------
 grid:
   rows: 5
   cols: 8
@@ -47,7 +47,7 @@ rewards:
 - cash add {player} 10
 - crates givekey vip {player} 5
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #

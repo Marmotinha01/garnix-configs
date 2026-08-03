@@ -10,7 +10,7 @@ enabled: true
 # legítimo. Trocar para `enforce` sem calibrar traz os falsos positivos de volta.
 mode: observe
 
-# ── Sinal primário: taxa instantânea (blocos-por-segundo) ────────────
+# -- Sinal primário: taxa instantânea (blocos-por-segundo) ------------
 # Blocos-por-segundo considerado suspeito. 24 dá margem sobre o colhedor denso
 # legítimo (~14-18 bps) e sobre rajada de rede; o médio/fraco fica com os sinais
 # independentes de taxa abaixo (envelope/farm-y), não com este.
@@ -26,7 +26,7 @@ strike-expire-seconds: 180
 
 inspect-command: '/fazenda inspect {player}'  # Comando para inspecionar o suspeito (placeholder: {player}).
 
-# ── Camada de corroboração (sinais secundários) ──────────────────────
+# -- Camada de corroboração (sinais secundários) ----------------------
 # Pega o cheater sutil (abaixo do blocks-per-second) SEM aumentar falso-positivo:
 # só flagra quando pelo menos `min-signals` sinais independentes concordam ao
 # mesmo tempo. Deixe enabled:false para voltar ao detector puro de taxa.
@@ -44,7 +44,7 @@ corroboration:
   # Tick do servidor (ms) — usado pelo `cadence` (desligado aqui, ver abaixo).
   tick-period-ms: 50
 
-  # ── Fusão ponderada ────────────────────────────────────────────────
+  # -- Fusão ponderada ------------------------------------------------
   # Cada sinal secundário tem um peso; flagra quando a soma >= score-threshold.
   # Na fazenda o envelope-XZ e o farm-y são corroboradores (não flagram sozinhos):
   # 0.6 + 0.6 = 1.2 >= 1.0, então é preciso os DOIS (alcance de área E dispersão
@@ -78,7 +78,7 @@ corroboration:
     sample-size: 16
     max-span: 12
 
-  # ── Sinais NOVOS (independentes de taxa) ─────────────────────────────
+  # -- Sinais NOVOS (independentes de taxa) -----------------------------
   # S5 — CADENCE: DESLIGADO na fazenda. Crops quebram instantâneo, então a colheita
   # é ritmada pelo MOVIMENTO (segurar-atacar correndo) — pode ser regular E off-grid
   # ao mesmo tempo sem ser cheat. Ligar aqui traria falso positivo.
@@ -109,7 +109,7 @@ corroboration:
 evidence:
   size: 10
 
-# ── Bypass / permissões ──────────────────────────────────────────────
+# -- Bypass / permissões ----------------------------------------------
 # Permite bypass para quem tem a permissão de bypass abaixo.
 bypass-enabled: false
 # Quem recebe os alertas de anti-nuker em jogo.
@@ -117,7 +117,7 @@ staff-permission: farm.staff.antinuker
 # Quem ignora a detecção (só se bypass-enabled estiver true).
 bypass-permission: farm.antinuker.bypass
 
-# ── Punições ─────────────────────────────────────────────────────────
+# -- Punições ---------------------------------------------------------
 punishments-enabled: true
 # Comando executado pela ação EJECT (o {player} é executor). Padrão: spawn.
 eject-command: spawn
@@ -133,7 +133,7 @@ actions:
 # Reative só depois de calibrar, e de preferência num strike bem alto:
 #  '60': COMMAND:banip -s {player} 30m Colheita suspeita
 
-# ── Alerta da staff ──────────────────────────────────────────────────
+# -- Alerta da staff --------------------------------------------------
 # Placeholders (valem na linha e no hover):
 #   {player}, {bps}, {peak_bps}, {sustained}, {cv}, {span}, {location},
 #   {strikes}, {reasons}, {mode}, {ping}, {tps}, {brand}, {version}

@@ -15,7 +15,7 @@ formula:
   base: 11992.1
   growth: 1.02216
 
-# ── Escada de valor por nível (C2) ───────────────────────────────────────────
+# -- Escada de valor por nível (C2) -------------------------------------------
 # Multiplicador aplicado ao pagamento da colheita, sobre `currencies.primary` de
 # farms.yml. A chave é o NÍVEL em que o degrau passa a valer, e ele vale até o
 # próximo declarado. Seção ausente = 1.0 sempre.

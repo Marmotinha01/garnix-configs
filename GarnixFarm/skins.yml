@@ -7,14 +7,14 @@
 #   icon      — ícone do menu
 #   bonuses   — bônus por provider (value + percent)
 #
-# ── LADDER DA TEMPORADA ──────────────────────────────────────────────
+# -- LADDER DA TEMPORADA ----------------------------------------------
 # Ordem de raridade (a ordem DESTE arquivo é a ordem da forja):
 #   Madeira · Pedra · Ferro · Ouro · Diamante · Âmbar · Esmeralda ·
 #   Cristal · Marfim
 #
 # A forja (7 skins iguais) sobe de Pedra até Esmeralda. Cristal e Marfim
 # têm forgeable: false e só saem de caixa (marcadas com glow no menu).
-# ─────────────────────────────────────────────────────────────────────
+# ---------------------------------------------------------------------
 
 unlock-lore:
 - ''

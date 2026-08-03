@@ -1,4 +1,4 @@
-# ── Comandos ──
+# -- Comandos --
 command:
   reload-success: '&aConfigurações recarregadas com sucesso.'
   
@@ -13,7 +13,7 @@ command:
 category:
   no-permission: '&cVocê não tem permissão.'
 
-# ── Compras ──
+# -- Compras --
 # Moeda: {value} {symbol} {symbol_color} {primary_color} {secondary_color} {currency}
 # Sucesso: {amount} {item}
 purchase:

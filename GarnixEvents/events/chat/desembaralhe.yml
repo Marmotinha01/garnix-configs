@@ -27,7 +27,7 @@ repeat: 15s
 # aleatório (que pode repetir na rodada seguinte).
 #no-repeat: 5
 
-# ── Rigor da comparação ───────────────────────────────────────────────
+# -- Rigor da comparação -----------------------------------------------
 #
 # As duas chaves são independentes: cada uma aperta um lado, e o que vale aqui
 # não mexe em nenhum outro evento. Sem a chave, vale false (o perdão). Espaço
@@ -39,7 +39,7 @@ accent-sensitive: false
 # maiúsculo, e ninguém deve perder por remontá-las em minúsculo.
 case-sensitive: false
 
-# ── Banco de palavras ─────────────────────────────────────────────────
+# -- Banco de palavras -------------------------------------------------
 #
 # Uma palavra por linha. Use apenas UMA palavra (sem espaços) — o embaralhamento
 # é de letras. Para aceitar grafias alternativas: "coração|coracao".
@@ -61,7 +61,7 @@ rewards:
 - cash add {player} 10
 - crates givekey vip {player} 5
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #

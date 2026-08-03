@@ -28,7 +28,7 @@ min-players: 2
 # 0 = sem limite de participantes.
 max-players: 0
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #
@@ -78,7 +78,7 @@ messages:
       &8▪ &fTaxa de entrada: {symbol_color}{symbol}{fee}
       &8▪ &fEntradas fecham em: &7{seconds}s
       &r
-# ── Entrada e saída do dinheiro ─────────────────────────────────────
+# -- Entrada e saída do dinheiro -------------------------------------
 # Linha única e sem a barra lateral: são avisos soltos, não blocos.
 # {count} quantos já entraram
   paid: '&aVocê entrou no bolão. Pote: {symbol_color}{symbol}{pot} {primary_color}{currency}&a. &f({count} participantes)'
@@ -117,7 +117,7 @@ messages:
       &8▪ &fMotivo: &7Participantes insuficientes — &f{count}&7 de &f{min}
       &8▪ &fAs entradas foram devolvidas.
       &r
-# ── Recusas do /bolao iniciar (só a staff vê) ───────────────────────
+# -- Recusas do /bolao iniciar (só a staff vê) -----------------------
   unknown-currency: '&cMoeda inválida. Verifique o ID da moeda.'
   invalid-fee: '&cValor inválido. Use um número maior que zero.'
   currency-unavailable: '&cO sistema de economia está indisponível no momento.'

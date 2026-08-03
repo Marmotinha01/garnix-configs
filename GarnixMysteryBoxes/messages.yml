@@ -48,7 +48,7 @@ help:
 - '  &c/caixas reload'
 - ''
 
-# ── Entrega de itens ───────────────────────────────────────────────────
+# -- Entrega de itens ---------------------------------------------------
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.

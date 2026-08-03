@@ -33,7 +33,7 @@ duration: 30m
 min-players: 2
 max-players: 0
 
-# ── Times ─────────────────────────────────────────────────────────────
+# -- Times -------------------------------------------------------------
 # Cada lado tem sua armadura e sua hotbar. A armadura de couro é tingida com a cor
 # do time (color aceita hex '#RRGGBB' ou nome de cor).
 teams:
@@ -155,7 +155,7 @@ titles:
     title: '&3&lATIREM!'
     subtitle: '&9Azul &7vs &cVermelho'
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #
@@ -259,14 +259,14 @@ messages:
       &8▪ &fPrêmios: &2Tag [Arqueiro] &8+ &6❂25 cash &8+ &dx&l15 &dChaves VIP
       &r
 
-  # ── Eliminações ─────────────────────────────────────────────────────
+  # -- Eliminações -----------------------------------------------------
   # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
   # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
   eliminated: '&7{player} &ffoi eliminado. &8({remaining} restantes)'
   eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f. &8({remaining} restantes)'
   eliminated-self: '&cVocê foi eliminado do evento.'
   
-  # ── Fim sem vencedor ────────────────────────────────────────────────
+  # -- Fim sem vencedor ------------------------------------------------
   no-winner: |2
 
       &8▎ {c}Evento {c}&lArqueiros {c}encerrado.
@@ -286,12 +286,12 @@ messages:
       &r
       &8▪ &fMotivo: &7Jogadores insuficientes.
       &r
-# ── Actionbar ───────────────────────────────────────────────────────
+# -- Actionbar -------------------------------------------------------
 # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
   player-joined-actionbar: '&7{player} &fentrou no &7{event} &8▪ &a{count} &fparticipantes'
   player-left-actionbar: '&7{player} &fsaiu do &7{event} &8▪ &a{count} &fparticipantes'
   
-  # ── Times ───────────────────────────────────────────────────────────
+  # -- Times -----------------------------------------------------------
   # {blue}/{red} quantos de cada lado · {team} o time · {player}/{kills} o destaque
   team-assigned-blue: '&fVocê entrou para o time &9&lAZUL&f.'
   team-assigned-red: '&fVocê entrou para o time &c&lVERMELHO&f.'

@@ -8,14 +8,14 @@
 #   currency-bonus — % somado aos corais por fisgada
 #   max-weight     — maior peso de recompensa que esta vara alcança
 #
-# ── LADDER DA TEMPORADA ──────────────────────────────────────────────
+# -- LADDER DA TEMPORADA ----------------------------------------------
 # Ordem de raridade (a ordem DESTE arquivo é a ordem da forja):
 #   Madeira · Coral · Escama · Prata · Turquesa · Abissita · Serenita ·
 #   Oceanita · Pérola · Tempestita
 #
 # A forja (7 skins iguais) sobe de Coral até Serenita. Oceanita, Pérola e
 # Tempestita têm forgeable: false e só saem de caixa (glow no menu).
-# ─────────────────────────────────────────────────────────────────────
+# ---------------------------------------------------------------------
 
 unlock-lore:
 - ''

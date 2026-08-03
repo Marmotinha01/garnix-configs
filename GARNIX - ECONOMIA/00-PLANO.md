@@ -510,24 +510,24 @@ Todo o material de economia vive em **`GARNIX - ECONOMIA/`**, dentro do repo. É
 
 ```
 GARNIX - ECONOMIA/
-├── 00-PLANO.md              este plano, vivo — atualizado a cada decisão nova
-├── 01-ECONOMIA.md           documento mestre (fonte da verdade)
-├── 02-TIERS.md              tabela T1–T20 completa e expandida
-├── 03-RANKING-APELOES.md    ranking de itens/vantagens + canal de aquisição de cada um
-├── 04-PARIDADE-SITE.md      cada produto do site ↔ sua rota in-game e o custo em horas
-├── 05-MULTIPLICADORES.md    orçamento de 100× detalhado por via
-├── 06-ENCANTES.md           classes A–E de custo de infra, chances, custos, travas
-├── 07-LIVROS.md             os 3 sistemas de livro e as tabelas de loot de cada nível
-├── 08-CASH.md               orçamento de cash: faucets, sinks, faixas de preço
-├── 09-VERIFICACAO.md        protocolo de testes V1–V8 + resultados medidos
-├── 10-ITENS.md              os ~212 itens ativáveis: força, rota, preço, tier, raridade
-├── 11-CACTO.md              a via do cacto: reinvestimento, freios, paridade
-├── metrics.csv              metas de cronometragem por tier vs medido in-game
-└── sim/                     simulador (JavaScript)
-    ├── sim.js               motor da simulação
-    ├── params.js            perfis de jogador, modelo de 3 contas, parâmetros
-    ├── index.html           roda no navegador, zero instalação
-    └── README.md
+├-- 00-PLANO.md              este plano, vivo — atualizado a cada decisão nova
+├-- 01-ECONOMIA.md           documento mestre (fonte da verdade)
+├-- 02-TIERS.md              tabela T1–T20 completa e expandida
+├-- 03-RANKING-APELOES.md    ranking de itens/vantagens + canal de aquisição de cada um
+├-- 04-PARIDADE-SITE.md      cada produto do site ↔ sua rota in-game e o custo em horas
+├-- 05-MULTIPLICADORES.md    orçamento de 100× detalhado por via
+├-- 06-ENCANTES.md           classes A–E de custo de infra, chances, custos, travas
+├-- 07-LIVROS.md             os 3 sistemas de livro e as tabelas de loot de cada nível
+├-- 08-CASH.md               orçamento de cash: faucets, sinks, faixas de preço
+├-- 09-VERIFICACAO.md        protocolo de testes V1–V8 + resultados medidos
+├-- 10-ITENS.md              os ~212 itens ativáveis: força, rota, preço, tier, raridade
+├-- 11-CACTO.md              a via do cacto: reinvestimento, freios, paridade
+├-- metrics.csv              metas de cronometragem por tier vs medido in-game
+└-- sim/                     simulador (JavaScript)
+    ├-- sim.js               motor da simulação
+    ├-- params.js            perfis de jogador, modelo de 3 contas, parâmetros
+    ├-- index.html           roda no navegador, zero instalação
+    └-- README.md
 ```
 
 Os três entregáveis de controle. Nada de YAML muda antes deles.

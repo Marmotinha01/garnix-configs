@@ -29,7 +29,7 @@ duration: 60s
 # reiniciar o servidor zera; o /eventos reload não.
 #no-repeat: 40
 
-# ── Rigor da comparação ───────────────────────────────────────────────
+# -- Rigor da comparação -----------------------------------------------
 #
 # As duas chaves são independentes: cada uma aperta um lado, e o que vale aqui
 # não mexe em nenhum outro evento. Sem a chave, vale false (o perdão). Espaço
@@ -41,7 +41,7 @@ accent-sensitive: false
 # não tem como saber a grafia exata, então o padrão aqui é perdoar as duas.
 case-sensitive: false
 
-# ── Revelação das dicas ───────────────────────────────────────────────
+# -- Revelação das dicas -----------------------------------------------
 reveal:
   # Caractere que esconde uma letra ainda não revelada.
   mask-char: _
@@ -53,7 +53,7 @@ reveal:
   # Quantas letras nunca são reveladas (para não entregar a palavra de graça).
   keep-hidden: 2
 
-# ── Banco de palavras ─────────────────────────────────────────────────
+# -- Banco de palavras -------------------------------------------------
 #
 # Uma palavra (ou expressão) por linha. Grafias alternativas: "coração|coracao".
 #
@@ -62,11 +62,11 @@ reveal:
 #
 # Evite palavras muito longas: cada letra a mais é uma dica a mais até alguém acertar.
 palavras:
-  # ── Comida ──
-  # ── Bichos ──
-  # ── Natureza ──
-  # ── Objetos ──
-  # ── Lugares e ideias ──
+  # -- Comida --
+  # -- Bichos --
+  # -- Natureza --
+  # -- Objetos --
+  # -- Lugares e ideias --
   - banana>2
   - abacaxi>2
   - morango>2
@@ -137,7 +137,7 @@ rewards:
 - cash add {player} 10
 - crates givekey vip {player} 5
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #

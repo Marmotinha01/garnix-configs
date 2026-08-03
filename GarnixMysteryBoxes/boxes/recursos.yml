@@ -17,7 +17,7 @@ box-item:
   - '&fBotão direito &8➟ &7Abrir x1'
   - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
-# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# -- RECOMPENSAS -------------------------------------------------------
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
@@ -57,7 +57,7 @@ box-item:
 # a quantia UMA vez, no `amount:`.
 rewards:
 
-  # ── Gemas
+  # -- Gemas
   gemas-25:
     type: CURRENCY
     chance: 3.5
@@ -85,7 +85,7 @@ rewards:
       lore:
       - '&fValor: &d۞{amount}'
 
-  # ── Sementes
+  # -- Sementes
   sementes-25:
     type: CURRENCY
     chance: 3.5
@@ -113,7 +113,7 @@ rewards:
       lore:
       - '&fValor: &5❋{amount}'
 
-  # ── Corais
+  # -- Corais
   corais-25:
     type: CURRENCY
     chance: 3.5
@@ -141,7 +141,7 @@ rewards:
       lore:
       - '&fValor: &3✶{amount}'
 
-  # ── Dracmas
+  # -- Dracmas
   dracmas-25:
     type: CURRENCY
     chance: 3.5
@@ -169,7 +169,7 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── Runa Sagrada
+  # -- Runa Sagrada
   sagrada-25:
     type: COMMAND
     chance: 3
@@ -194,7 +194,7 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  # ── Runa Eterna
+  # -- Runa Eterna
   eterna-25:
     type: COMMAND
     chance: 3
@@ -225,7 +225,7 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &2x{amount} '
 
-  # ── Runa Divina
+  # -- Runa Divina
   divina-25:
     type: COMMAND
     chance: 3
@@ -250,7 +250,7 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  # ── Runa Primal
+  # -- Runa Primal
   primal-25:
     type: COMMAND
     chance: 3
@@ -275,7 +275,7 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  # ── Coins
+  # -- Coins
   coins-25:
     type: CURRENCY
     chance: 5.5
@@ -303,7 +303,7 @@ rewards:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  # ── Combustível
+  # -- Combustível
   combustivel-25:
     type: COMMAND
     chance: 6
@@ -343,7 +343,7 @@ rewards:
       lore:
       - '&fLitros: &7{amount}L'
 
-  # ── Limite de Armazém
+  # -- Limite de Armazém
   lim-armazem-25:
     type: COMMAND
     chance: 5
@@ -386,7 +386,7 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  # ── Ativador de Baú
+  # -- Ativador de Baú
   ativador-bau:
     type: COMMAND
     chance: 5
@@ -400,7 +400,7 @@ rewards:
       - '&7Libera mais um baú na'
       - '&7sua lista de baús.'
 
-  # ── Limpador de Terreno
+  # -- Limpador de Terreno
   limpador-terreno:
     type: COMMAND
     chance: 5
@@ -418,7 +418,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── Limite de Máquinas
+  # -- Limite de Máquinas
   lim-maquina-25:
     type: COMMAND
     chance: 2.5
@@ -461,7 +461,7 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  # ── Limite de Spawners
+  # -- Limite de Spawners
   lim-spawner-25:
     type: COMMAND
     chance: 2.5
@@ -504,7 +504,7 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  # ── Caixa Runas
+  # -- Caixa Runas
   caixa-runas:
     type: COMMAND
     chance: 2.5
@@ -519,7 +519,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── Reset de KDR
+  # -- Reset de KDR
   reset-kdr:
     type: COMMAND
     chance: 2.5

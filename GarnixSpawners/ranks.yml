@@ -81,13 +81,13 @@ streamer:
   tag: '&b&lSTREAMER'
   permission: vip.streamer
 
-# ── Ranks — so ganho, NUNCA desconto ──────────────────────────────────────
+# -- Ranks — so ganho, NUNCA desconto --------------------------------------
 # +1% por rank, linear e chato de proposito: previsivel, sempre visivel, e
 # nunca e a razao de alguem disparar ou travar. NAO tierar — se crescesse
 # geometricamente dobraria o exponencial que ja esta no valor-base.
 # O no e concedido em GarnixRankUP/ranks/<rank>.yml -> commands.
 
-# ── A escada comeca no rank 2, de proposito ───────────────────────────────
+# -- A escada comeca no rank 2, de proposito -------------------------------
 #
 # O rank 1 e o inicial: ninguem "sobe" para ele, entao a lista de comandos do
 # coelho.yml nunca roda. O no rank.coelho existe (vive no grupo default do

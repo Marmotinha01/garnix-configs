@@ -88,7 +88,7 @@ titles:
     title: '&a&lVALENDO!'
     subtitle: '&7Boa sorte!'
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #
@@ -167,14 +167,14 @@ messages:
       &8▪ &fMotivo: &7Os demais participantes saíram.
       &r
 
-# ── Eliminações ─────────────────────────────────────────────────────
+# -- Eliminações -----------------------------------------------------
 # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
 # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
   eliminated: '&7{player} &ffoi eliminado. &8({remaining} restantes)'
   eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f. &8({remaining} restantes)'
   eliminated-self: '&cVocê foi eliminado do evento.'
   
-  # ── Fim sem vencedor ────────────────────────────────────────────────
+  # -- Fim sem vencedor ------------------------------------------------
   no-winner: |2
 
       &8▎ {c}Evento {c}&lSniper {c}encerrado.
@@ -194,12 +194,12 @@ messages:
       &r
       &8▪ &fMotivo: &7Jogadores insuficientes.
       &r
-# ── Actionbar ───────────────────────────────────────────────────────
+# -- Actionbar -------------------------------------------------------
 # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
   player-joined-actionbar: '&7{player} &fentrou no &7{event} &8▪ &a{count} &fparticipantes'
   player-left-actionbar: '&7{player} &fsaiu do &7{event} &8▪ &a{count} &fparticipantes'
   
-  # ── Tiro ────────────────────────────────────────────────────────────
+  # -- Tiro ------------------------------------------------------------
   # {attacker}/{victim} · {lives} corações que sobraram
   hit-taken: '&cVocê levou um tiro de &7{attacker}&c. &f({lives} corações)'
   hit-dealt: '&aVocê acertou &7{victim}&a. &f({lives} corações)'

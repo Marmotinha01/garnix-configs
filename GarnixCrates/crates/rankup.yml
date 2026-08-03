@@ -53,7 +53,7 @@ key-item:
 # totalChance. Somar 100 e so legibilidade (o azar entra por cima, ver no fim).
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 60%
+  # -- COMUM ---------------------------------------------------------- 60%
   coins:
     type: CURRENCY
     chance: 32
@@ -72,7 +72,7 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 28%
+  # -- COMUM PLUS ----------------------------------------------------- 28%
   lim-armazem:
     type: COMMAND
     chance: 11
@@ -115,7 +115,7 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  # ── MEDIANA ───────────────────────────────────────────────────────── 9%
+  # -- MEDIANA --------------------------------------------------------- 9%
   chaves-boss-5:
     type: COMMAND
     chance: 4
@@ -158,7 +158,7 @@ rewards:
       - '&7Levanta uma torre de cacto'
       - '&7pronta no seu terreno.'
 
-  # ── MEDIANA PLUS ──────────────────────────────────────────────────── 2%
+  # -- MEDIANA PLUS ---------------------------------------------------- 2%
   #
   # ⚠️ Os 2% da faixa eram TODOS do chaves-boss-10 — a caixa chaves entrou aqui
   # tirando 0,6 dele (2 → 1,4 + 0,6), entao a faixa segue valendo 2% e o arquivo
@@ -194,7 +194,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,95%
+  # -- RARÍSSIMA ----------------------------------------------------- 0,95%
   cash:
     type: CURRENCY
     chance: 0.3
@@ -243,12 +243,12 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── JACKPOT ──────────────────────────────────────────────────────── 0,05%
+  # -- JACKPOT -------------------------------------------------------- 0,05%
   # ⚠️ VAGO. A Caixa Garnix saiu daqui por decisão do dono (ago/2026) — ela é o
   # item de 15.000 de cash do site e não pode cair de uma crate sem gate. Esta
   # crate está sem jackpot até a faixa ser preenchida.
 
-  # ── AZAR ────────────────────────────────────────────────────────── 25%
+  # -- AZAR ---------------------------------------------------------- 25%
   # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
   # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
   # recebe absolutamente nada. Aparece no preview, some do /crates manage

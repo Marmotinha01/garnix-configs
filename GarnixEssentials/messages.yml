@@ -400,7 +400,7 @@ nick:
   invalid-chars: '&cO nick só pode conter letras, números, espaço e códigos de cores.'
   too-short: '&cO nick precisa ter no mínimo &f{min} &ccaracteres.'
   too-long: '&cO nick pode ter no máximo &f{max} &ccaracteres.'
-# ── Entrega de itens ───────────────────────────────────────────────────
+# -- Entrega de itens ---------------------------------------------------
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.

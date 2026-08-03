@@ -7,7 +7,7 @@ rows: 3
 # depois alterna as cabeças dos dois participantes.
 head-slot: 13
 
-# ── Contagem regressiva ─────────────────────────────────────────────
+# -- Contagem regressiva ---------------------------------------------
 # Roda antes do sorteio, dando tempo do criador clicar em [ASSISTIR].
 # A duração vem de start-delay no config.yml (200 ticks = 10 segundos).
 countdown:
@@ -39,7 +39,7 @@ countdown:
     '2': b3d93e8b5fb0b5d50abd4ef88532f46874b9924f668ddb01091468e4e61b9c83
     '1': 21d859e8b14f62646859cf3804a64f1060d6879341b4c3385b46a0ec40faf73c
 
-# ── Sorteio ─────────────────────────────────────────────────────────
+# -- Sorteio ---------------------------------------------------------
 spinning-display: '&e&l{player}'
 lore:
 - ''
@@ -68,7 +68,7 @@ win-volume: 1.0
 lose-sound: NOTE_BASS
 lose-volume: 1.0
 
-# ── Fogos do vencedor ───────────────────────────────────────────────
+# -- Fogos do vencedor -----------------------------------------------
 # Enviado por packet: só o vencedor vê e ouve. A entidade nunca entra no
 # mundo, então ninguém mais é afetado.
 winner-firework:

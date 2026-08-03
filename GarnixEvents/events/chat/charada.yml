@@ -29,7 +29,7 @@ repeat: 20s
 # aleatório (que pode repetir na rodada seguinte).
 #no-repeat: 20
 
-# ── Rigor da comparação ───────────────────────────────────────────────
+# -- Rigor da comparação -----------------------------------------------
 #
 # As duas chaves são independentes: cada uma aperta um lado, e o que vale aqui
 # não mexe em nenhum outro evento. Sem a chave, vale false (o perdão). Espaço
@@ -41,7 +41,7 @@ accent-sensitive: false
 # como saber a grafia exata, então o padrão aqui é perdoar as duas.
 case-sensitive: false
 
-# ── Banco de charadas ─────────────────────────────────────────────────
+# -- Banco de charadas -------------------------------------------------
 #
 # Uma charada por linha, no formato "Charada|resposta1|resposta2|...".
 # A PRIMEIRA resposta é a revelada no fim; as demais são formas aceitas.
@@ -49,9 +49,9 @@ case-sensitive: false
 #
 # As últimas cinco são as difíceis — ainda decifráveis, mas pedem um tempo a mais.
 charadas:
-  # ── Fáceis ──
-  # ── Médias ──
-  # ── Difíceis (mas decifráveis) ──
+  # -- Fáceis --
+  # -- Médias --
+  # -- Difíceis (mas decifráveis) --
   - 'O que é, o que é: quanto mais se tira, maior fica?|buraco|o buraco'
   - 'O que é, o que é: tem dentes mas não morde?|pente|o pente'
   - 'O que é, o que é: cai em pé e corre deitado?|chuva|a chuva'
@@ -97,7 +97,7 @@ rewards:
 - cash add {player} 10
 - crates givekey vip {player} 5
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #

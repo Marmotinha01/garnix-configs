@@ -20,7 +20,7 @@ item-snapshot-ttl-seconds: 120
 # Quantidade de linhas em branco enviadas pelo /chat clear.
 clear-lines: 100
 
-# ── Menção (@nick) ──
+# -- Menção (@nick) --
 # Quando um jogador escreve @nick no chat, o mencionado recebe title, subtitle,
 # som e uma mensagem no chat. Só notifica quem RECEBE a mensagem naquele canal
 # (no Local, apenas quem está no raio) e nunca quem está ignorando quem mencionou.
@@ -50,7 +50,7 @@ mention:
     volume: 1.0
     pitch: 1.0
 
-# ── Anti-divulgação ──
+# -- Anti-divulgação --
 # Detecta links/domínios/IPs e, para quem NÃO tem 'chat.ad.bypass', faz um shadow-drop:
 # o remetente vê a própria mensagem normalmente (achando que todos viram), mas NINGUÉM
 # mais recebe, e o staff com 'chat.ad.notify' é avisado (sem punição). Textos no messages.yml.
@@ -132,7 +132,7 @@ anti-advertisement:
   - servidorconcorrente
   - exemplocraft
 
-# ── Anti-capslock ──
+# -- Anti-capslock --
 # Para mensagens com pelo menos 'min-length' caracteres, se a porcentagem de letras MAIÚSCULAS passar
 # de 'percentage', a mensagem é "des-gritada" (vira minúsculo) — exceto as 'skip-words'. Jogadores com
 # 'chat.caps.bypass' não são afetados. A porcentagem é medida só sobre LETRAS (números/símbolos não
@@ -168,7 +168,7 @@ capslock:
   skip-words:
   - '[CI]GARNIX'
 
-# ── Formatação/beautify (cosmético) ──
+# -- Formatação/beautify (cosmético) --
 # Ajustes aplicados DEPOIS do anti-capslock. Jogadores com 'chat.caps.bypass' não são afetados.
 formatting:
   # Colapsa repetição excessiva do MESMO caractere (anti-flood): "AAAA"->"AAA", "kkkkk"->"kkk",
@@ -200,9 +200,9 @@ replace-messages:
   # - Vale no chat local, global e nas mensagens privadas (/tell e /r).
   # - Lista de símbolos compatíveis (1.8): https://hypixel.net/threads/%E3%83%84symbols%E2%98%BB.787483/
   replacers:
-    # ── Correção de escrita / abreviações ──
+    # -- Correção de escrita / abreviações --
 
-    # ── Filtro de palavras (troca o xingamento por algo gentil) ──
+    # -- Filtro de palavras (troca o xingamento por algo gentil) --
     # As variações incluem erros de escrita e "leetspeak" (v14do, macac0) para dificultar
     # a evasão. Para jogadores normais o filtro roda DEPOIS de remover os códigos de cor, então
     # "ma&0caco" também é pego. Alongar a vogal final também é pego automaticamente em chaves de

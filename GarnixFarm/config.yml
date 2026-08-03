@@ -3,7 +3,7 @@
 # Minutos entre cada rebuild do ranking (top-10).
 ranking-refresh-minutes: 5
 
-# ── Scan ──
+# -- Scan --
 # /fazenda scan <tipo> <raio> detecta a cultura madura do tipo (trigo/cenoura/
 # batata/fungo) sobre terra arada (SOIL). Cada tipo é uma região física própria.
 scan:
@@ -13,7 +13,7 @@ scan:
   chunks-per-tick: 8 # chunks processados por tick (evita travar a TPS)
   require-grown: true # só registra a cultura totalmente crescida
 
-# ── Colheita ──
+# -- Colheita --
 regrow-delay-seconds: 20 # segundos até uma plantação colhida voltar
 
 harvest:
@@ -50,14 +50,14 @@ progress-bar:
 # Expansão do token {bonus} nas lores de skin/armadura.
 bonus-lore-format: "&8 ▪ &a+&l{value}&a{unit} {primary_color}{Display} "
 
-# ── Encantamentos ──
+# -- Encantamentos --
 enchant-currency: sementes # currency usada pra comprar/desencantar níveis
 enchant-refund-percentage: 40.0 # % do custo devolvido ao desencantar
 # Teto global de animações-companheiro simultâneas (swarm/scarecrow) no servidor.
 # Ao estourar, o proc ainda paga a colheita mas pula o visual. 0 = ilimitado.
 enchant-max-simultaneous-global: 80
 
-# ── Enxada dada dentro da fazenda (mesmo game design da picareta da mina) ──
+# -- Enxada dada dentro da fazenda (mesmo game design da picareta da mina) --
 # {crops} = total colhido; {skin} = nome da skin equipada; {enchants} = encantamentos possuídos.
 hoe-item:
   hotbar-slot: 4
@@ -142,7 +142,7 @@ allowed-commands:
 - tell
 - r
 
-# ── Tasks (segundos) ──
+# -- Tasks (segundos) --
 tasks:
   hoe-display-seconds: 5 # intervalo do refresh do contador {crops} na enxada
   booster-expiry-seconds: 60

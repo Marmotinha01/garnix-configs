@@ -35,7 +35,7 @@ repeat: 15s
 # reiniciar o servidor zera; o /eventos reload não.
 #no-repeat: 20
 
-# ── Rigor da comparação ───────────────────────────────────────────────
+# -- Rigor da comparação -----------------------------------------------
 #
 # As duas chaves são independentes: cada uma aperta um lado, e o que vale aqui
 # não mexe em nenhum outro evento. Sem a chave, vale false (o perdão). Espaço
@@ -48,14 +48,14 @@ accent-sensitive: false
 # quiz por não ter apertado Shift no nome próprio.
 case-sensitive: false
 
-# ── Banco de perguntas ────────────────────────────────────────────────
+# -- Banco de perguntas ------------------------------------------------
 #
 # Uma pergunta por linha, no formato "Pergunta|resposta1|resposta2|...".
 # A PRIMEIRA resposta é a que aparece quando o evento revela a solução; as demais
 # são apenas formas aceitas (apelidos, grafias). Não use "|" dentro da pergunta.
 perguntas:
-  # ── Minecraft ──
-  # ── Conhecimentos gerais ──
+  # -- Minecraft --
+  # -- Conhecimentos gerais --
   - No Minecraft, qual item acende o portal do Nether?|isqueiro|flint and steel
   - No Minecraft, qual mob explode quando chega perto de você?|creeper|o creeper
   - No Minecraft, qual mob dropa pérola do End?|enderman|o enderman
@@ -98,7 +98,7 @@ rewards:
 - cash add {player} 10
 - crates givekey vip {player} 5
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #

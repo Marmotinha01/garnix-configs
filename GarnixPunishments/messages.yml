@@ -78,7 +78,7 @@ type-names:
   warn: Aviso
   ipban: Banimento de IP
 
-# ── Kick screens (shown to the punished player on ban) ──────────────────
+# -- Kick screens (shown to the punished player on ban) ------------------
 # A linha em branco é '&f' e não '': o cliente colapsa string vazia na tela de
 # kick, e o &f garante o respiro entre os blocos.
 screens:
@@ -112,7 +112,7 @@ screens:
   - '&f'
   - '&cID &e#{code} &cpara criar uma revisão em &r&ndiscord.gg/redegarnix&r&c.'
 
-# ── In-chat notices ────────────────────────────────────────────────────
+# -- In-chat notices ----------------------------------------------------
 # Mesma estrutura das telas de kick. Lembre que o MuteChatListener reenvia este
 # bloco a CADA tentativa de falar, sem cooldown — cada linha a mais se multiplica
 # no chat de quem está tentando conversar.
@@ -176,7 +176,7 @@ warn-limit-reached:
 - '  &7Seus avisos foram zerados.'
 - ''
 
-# ── Public broadcast per punishment type ───────────────────────────────
+# -- Public broadcast per punishment type -------------------------------
 # Todos os tipos seguem a mesma moldura: linha em branco, cabeçalho colorido pelo
 # tipo, o que aconteceu, e os detalhes em '&8▪'. Sem barras de traço.
 broadcast-messages:
@@ -235,7 +235,7 @@ broadcast-messages:
   - '  &8▪ &fProva: &7{proof}'
   - ''
 
-# ── Revoke broadcast (per punishment type, plus the full pardon) ────────
+# -- Revoke broadcast (per punishment type, plus the full pardon) --------
 # Mesma moldura do broadcast-messages: cabeçalho, o que aconteceu, detalhes em '&8▪'.
 # O cabeçalho é verde porque a punição saiu; o tipo vai na linha 'Punição', com os
 # mesmos nomes do bloco type-names. Aqui {staff} é quem REVOGOU, não quem aplicou.
@@ -298,7 +298,7 @@ revoke-messages:
   - '  &8▪ &fStaff: &7{staff}'
   - ''
 
-# ── /dupeip <jogador/ip> — contas no mesmo IP com marcadores de status ──
+# -- /dupeip <jogador/ip> — contas no mesmo IP com marcadores de status --
 # Nome verde = online, cinza = offline. Marcadores '*' empilham ANTES do nick, na ordem fixa
 # ipban → ban/tempban → mute/tempmute → warn (um único '*' de warn, mesmo com várias).
 # Placeholders: header/footer → {player} {ip} {count}; line → {markers} {name} {seen}.

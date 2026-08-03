@@ -72,7 +72,7 @@ title: "&3&lKRAKEN!"
 subtitle: "&f{blocks} blocos destruídos"
 
 icon:
-  slot: 33
+  slot: 31
   texture: "f3fe935048624881cac3479bf83ef1d4b40e8d277bad1df25b454a38cc07d95a"
   display: "&3{display}"
   lore:

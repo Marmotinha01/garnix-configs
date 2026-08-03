@@ -1,4 +1,4 @@
-# ── Prestige ──
+# -- Prestige --
 prestige:
   # Cost increase per prestige level (percent). E.g. 10 = +10% per level.
   # LINEAR: custo = base × (1 + prestigio × percent/100). Confirmado no V8.
@@ -22,7 +22,7 @@ prestige:
   # seria caro.)
   commands:
   - 'crate givevirtualkey rankup {player} 1'
-  # ── Os 20 kits de rank voltam à estaca zero ────────────────────────────────
+  # -- Os 20 kits de rank voltam à estaca zero --------------------------------
   #
   # É o ÚNICO custo real do prestígio, e é de propósito que seja este. Tudo o mais
   # que o jogador acumulou é PATRIMÔNIO — cabeças, dracmas, equipamento, spawners
@@ -58,7 +58,7 @@ prestige:
   # O `rank.coelho` NAO entra aqui: fica no grupo default do LuckPerms, por
   # decisao do dono. Assim ele vale para quem esta comecando e para quem
   # prestigiou, sem precisar de comando nenhum.
-  # ── As escadas de bonus voltam a estaca zero ───────────────────────────────
+  # -- As escadas de bonus voltam a estaca zero -------------------------------
   #
   # Sem isto, quem prestigia fica no rank 1 carregando o bonus do rank 20 para
   # SEMPRE — o prestigio deixaria de custar o bonus e a escada de rank viraria
@@ -96,7 +96,7 @@ prestige:
   - 'lp user {player} permission unset warehouse.sellmult.67420'
 
 
-  # ── Marcos de prestígio (C6) ────────────────────────────────────────────────
+  # -- Marcos de prestígio (C6) ------------------------------------------------
   # Níveis sem entrada são permitidos e não fazem nada, então só aparece aqui o
   # que de fato recompensa. Roda DEPOIS de `commands`.
   #
@@ -192,7 +192,7 @@ prestige:
 # Ranking refresh interval (minutes). Top size is fixed at 10.
 ranking-refresh-minutes: 5
 
-# ── Confirmation menu titles ──
+# -- Confirmation menu titles --
 confirm:
   rankup-title: Evoluir de Rank
   prestige-title: Evoluir Prestígio
@@ -207,7 +207,7 @@ placeholders:
     - 'gerente'
     - 'admin'
   
-# ── Progress bar ──
+# -- Progress bar --
 # Look of %rankup_progress_bar%.
 progress-bar:
   # Number of characters in the bar.

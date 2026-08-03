@@ -49,7 +49,7 @@ key-item:
 # totalChance. Somar 100 e so legibilidade.
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 87,5%
+  # -- COMUM ---------------------------------------------------------- 87,5%
   boss-colosso:
     type: COMMAND
     chance: 87.5
@@ -62,7 +62,7 @@ rewards:
       lore:
       - '&fVida: &4❤25.000'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
+  # -- COMUM PLUS ----------------------------------------------------- 12%
   boss-inferno:
     type: COMMAND
     chance: 12
@@ -75,7 +75,7 @@ rewards:
       lore:
       - '&fVida: &4❤50.000'
 
-  # ── RARA ────────────────────────────────────────────────────────── 0,4%
+  # -- RARA ---------------------------------------------------------- 0,4%
   boss-arauto:
     type: COMMAND
     chance: 0.3
@@ -115,7 +115,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── RARO PLUS ──────────────────────────────────────────────────── 0,09%
+  # -- RARO PLUS ---------------------------------------------------- 0,09%
   boss-tita:
     type: COMMAND
     chance: 0.09
@@ -141,7 +141,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── RARÍSSIMA ─────────────────────────────────────────────────── 0,009%
+  # -- RARÍSSIMA --------------------------------------------------- 0,009%
   boss-devorador:
     type: COMMAND
     chance: 0.009
@@ -154,7 +154,7 @@ rewards:
       lore:
       - '&fVida: &4❤300.000'
 
-  # ── JACKPOT ─────────────────────────────────────────────────────── 0,001%
+  # -- JACKPOT ------------------------------------------------------- 0,001%
   jackpot:
     type: COMMAND
     chance: 0.001
@@ -169,7 +169,7 @@ rewards:
       - '&fDano: &c750'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
-  # ── AZAR ────────────────────────────────────────────────────────── 25%
+  # -- AZAR ---------------------------------------------------------- 25%
   # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
   # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
   # recebe absolutamente nada. Aparece no preview, some do /crates manage

@@ -17,7 +17,7 @@ box-item:
   - '&fBotão direito &8➟ &7Abrir x1'
   - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
-# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# -- RECOMPENSAS -------------------------------------------------------
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
@@ -33,7 +33,7 @@ box-item:
 # ⚠️ `/boss give killstack <jogador> <nivel> [quantia]`: o NÍVEL vem primeiro.
 rewards:
 
-  # ── ARAUTO — o recheio desta tabela
+  # -- ARAUTO — o recheio desta tabela
   boss-arauto:
     type: COMMAND
     chance: 20
@@ -73,7 +73,7 @@ rewards:
       lore:
       - '&fVida: &4❤75.000'
 
-  # ── TITÃ
+  # -- TITÃ
   boss-tita:
     type: COMMAND
     chance: 14
@@ -113,7 +113,7 @@ rewards:
       lore:
       - '&fVida: &4❤150.000'
 
-  # ── DEVORADOR
+  # -- DEVORADOR
   boss-devorador:
     type: COMMAND
     chance: 9
@@ -153,7 +153,7 @@ rewards:
       lore:
       - '&fVida: &4❤300.000'
 
-  # ── LIVROS
+  # -- LIVROS
   livro-killstack:
     type: COMMAND
     chance: 8
@@ -190,7 +190,7 @@ rewards:
       - '&8 ▪ &fNível: &c1 '
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
-  # ── MATADORAS
+  # -- MATADORAS
   matadora-sombria:
     type: COMMAND
     chance: 6

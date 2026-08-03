@@ -36,7 +36,7 @@ admin:
   kill-stack-given: '&6Kill-Stack &e+{level} &6enviado para &f{player}&6.'
   reloaded: '&aConfigurações recarregadas com sucesso.'
   bosses-killed: '&7Bosses removidos do mundo: &f{count}&7.'
-# ── Entrega de itens ───────────────────────────────────────────────────
+# -- Entrega de itens ---------------------------------------------------
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.

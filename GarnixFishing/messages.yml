@@ -104,7 +104,7 @@ admin:
   duration-invalid: '&cDuração inválida: &f{value}&c. Ex.: &f1d&c, &f12h&c, &f30m&c.'
   booster-given: '&aBooster de {type} &f{bonus} &aentregue para &f{player}&a. &7(x{quantity})'
 
-# ── Entrega de itens ───────────────────────────────────────────────────
+# -- Entrega de itens ---------------------------------------------------
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.

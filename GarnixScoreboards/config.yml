@@ -13,7 +13,7 @@ idle-recheck-ticks: 20
 default-animation-interval: 4
 
 
-# ── Exibição ──────────────────────────────────────────────────────────────
+# -- Exibição --------------------------------------------------------------
 
 # true  = linhas que resolvem para vazio somem (as de baixo sobem).
 # false = a linha vazia é renderizada como espaço em branco.

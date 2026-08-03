@@ -17,7 +17,7 @@ box-item:
   - '&fBotão direito &8➟ &7Abrir x1'
   - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
-# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# -- RECOMPENSAS -------------------------------------------------------
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
@@ -56,7 +56,7 @@ box-item:
 # empilha, entao o icone renderiza o numero sozinho.
 rewards:
 
-  # ── ARMADURA TIER III ─────────────────────────────────────────── 23%
+  # -- ARMADURA TIER III ------------------------------------------- 23%
   armadura-iii-capacete:
     type: COMMAND
     chance: 5.75
@@ -133,7 +133,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER IV ──────────────────────────────────────────── 18%
+  # -- ARMADURA TIER IV -------------------------------------------- 18%
   armadura-iv-capacete:
     type: COMMAND
     chance: 4.5
@@ -210,7 +210,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER V ───────────────────────────────────────────── 12%
+  # -- ARMADURA TIER V --------------------------------------------- 12%
   armadura-v-capacete:
     type: COMMAND
     chance: 3
@@ -287,7 +287,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── SKINS ─────────────────────────────────────────────────────── 23,5%
+  # -- SKINS ------------------------------------------------------- 23,5%
   skin-rubi:
     type: COMMAND
     chance: 8
@@ -414,7 +414,7 @@ rewards:
       lore:
       - '&fÁrea: &c3x3'
 
-  # ── BOOSTERS ───────────────────────────────────────────────────── 5%
+  # -- BOOSTERS ----------------------------------------------------- 5%
   booster-2x-15m:
     type: COMMAND
     chance: 3
@@ -457,7 +457,7 @@ rewards:
       flags:
       - HIDE_POTION_EFFECTS
 
-  # ── LIVROS ─────────────────────────────────────────────────────── 9%
+  # -- LIVROS ------------------------------------------------------- 9%
   livro-ceifador:
     type: COMMAND
     chance: 3

@@ -51,7 +51,7 @@ boss-icon:
 # rolls no mesmo boss viram um item x2, nao dois itens soltos.
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 85%
+  # -- COMUM ---------------------------------------------------------- 85%
   azar:
     type: NONE
     chance: 25
@@ -89,7 +89,7 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
+  # -- COMUM PLUS ----------------------------------------------------- 12%
   lim-armazem:
     type: COMMAND
     chance: 4
@@ -148,7 +148,7 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # ── SEMI RARO ─────────────────────────────────────────────────────── 2%
+  # -- SEMI RARO ------------------------------------------------------- 2%
   boss-tita:
     type: COMMAND
     chance: 2
@@ -161,7 +161,7 @@ rewards:
       lore:
       - '&fVida: &4❤150K'
 
-  # ── RARO ────────────────────────────────────────────────────────── 0,7%
+  # -- RARO ---------------------------------------------------------- 0,7%
   boss-devorador:
     type: COMMAND
     chance: 0.45
@@ -187,7 +187,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── RARO PLUS ──────────────────────────────────────────────────── 0,28%
+  # -- RARO PLUS ---------------------------------------------------- 0,28%
   chaves-boss-15:
     type: COMMAND
     chance: 0.12
@@ -243,7 +243,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── JACKPOT ─────────────────────────────────────────────────────── 0,02%
+  # -- JACKPOT ------------------------------------------------------- 0,02%
   cash:
     type: CURRENCY
     chance: 0.02

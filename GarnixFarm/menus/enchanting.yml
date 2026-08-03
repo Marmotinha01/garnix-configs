@@ -4,7 +4,7 @@ title: Encantar
 rows: 4
 rows-chanceable: 6
 
-# ── Opção +1 ──────────────────────────────────────────────────────
+# -- Opção +1 ------------------------------------------------------
 option-1:
   slot: 11
   material: SLIME_BALL
@@ -14,12 +14,12 @@ option-1:
   - '&7Sobe o encantamento em'
   - '&71 nível de uma só vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &a{target} '
   - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&aClique para evoluir.'
 
-# ── Opção +10 ─────────────────────────────────────────────────────
+# -- Opção +10 -----------------------------------------------------
 option-10:
   slot: 12
   material: SLIME_BALL
@@ -29,12 +29,12 @@ option-10:
   - '&7Sobe o encantamento em'
   - '&710 níveis de uma só vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &a{target} '
   - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&aClique para evoluir.'
 
-# ── Opção +25 ─────────────────────────────────────────────────────
+# -- Opção +25 -----------------------------------------------------
 option-25:
   slot: 13
   material: SLIME_BALL
@@ -44,12 +44,12 @@ option-25:
   - '&7Sobe o encantamento em'
   - '&725 níveis de uma só vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &a{target} '
   - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&aClique para evoluir.'
 
-# ── Opção +50 ─────────────────────────────────────────────────────
+# -- Opção +50 -----------------------------------------------------
 option-50:
   slot: 14
   material: SLIME_BALL
@@ -59,12 +59,12 @@ option-50:
   - '&7Sobe o encantamento em'
   - '&750 níveis de uma só vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &a{target} '
   - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&aClique para evoluir.'
 
-# ── Evoluir ao máximo ─────────────────────────────────────────────
+# -- Evoluir ao máximo ---------------------------------------------
 option-max:
   slot: 15
   material: ENCHANTMENT_TABLE
@@ -73,12 +73,12 @@ option-max:
   - '&7Sobe o encantamento até'
   - '&7o nível máximo possível.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &2{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &2{target} '
   - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&2Clique para evoluir.'
 
-# ── Nível máximo atingido ─────────────────────────────────────────
+# -- Nível máximo atingido -----------------------------------------
 maxed-icon:
   material: BLAZE_POWDER
   display: '&8Nível Máximo'
@@ -86,7 +86,7 @@ maxed-icon:
   - '&7Este encantamento já está'
   - '&7no nível máximo possível.'
 
-# ── Sementes insuficientes ────────────────────────────────────────
+# -- Sementes insuficientes ----------------------------------------
 cant-afford:
   material: STAINED_GLASS_PANE
   data: 14
@@ -95,13 +95,13 @@ cant-afford:
   - '&7Faltam sementes no saldo'
   - '&7para evoluir este nível.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &a{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &a{target} '
   - '&8 ▪ &fCusto: {symbol_color}{symbol}{primary_color}{cost} {currency} '
   - ''
   - '&8 ▾ &cSaldo insuficiente. '
   - ''
 
-# ── Excede o máximo ───────────────────────────────────────────────
+# -- Excede o máximo -----------------------------------------------
 option-exceeded:
   material: STAINED_GLASS_PANE
   data: 14

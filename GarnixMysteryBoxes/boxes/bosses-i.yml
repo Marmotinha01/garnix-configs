@@ -17,7 +17,7 @@ box-item:
   - '&fBotão direito &8➟ &7Abrir x1'
   - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
-# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# -- RECOMPENSAS -------------------------------------------------------
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
@@ -38,7 +38,7 @@ box-item:
 # mostra quantos são é a pilha (`amount:`) e o `{amount}x` do display.
 rewards:
 
-  # ── COLOSSO — o recheio da tabela
+  # -- COLOSSO — o recheio da tabela
   boss-colosso:
     type: COMMAND
     chance: 18
@@ -78,7 +78,7 @@ rewards:
       lore:
       - '&fVida: &4❤25.000'
 
-  # ── INFERNO
+  # -- INFERNO
   boss-inferno:
     type: COMMAND
     chance: 14
@@ -118,7 +118,7 @@ rewards:
       lore:
       - '&fVida: &4❤50.000'
 
-  # ── ARAUTO
+  # -- ARAUTO
   boss-arauto:
     type: COMMAND
     chance: 10
@@ -158,7 +158,7 @@ rewards:
       lore:
       - '&fVida: &4❤75.000'
 
-  # ── TITÃ
+  # -- TITÃ
   boss-tita:
     type: COMMAND
     chance: 6
@@ -198,7 +198,7 @@ rewards:
       lore:
       - '&fVida: &4❤150.000'
 
-  # ── DEVORADOR
+  # -- DEVORADOR
   boss-devorador:
     type: COMMAND
     chance: 3
@@ -238,7 +238,7 @@ rewards:
       lore:
       - '&fVida: &4❤300.000'
 
-  # ── MATADORAS
+  # -- MATADORAS
   matadora-bruta:
     type: COMMAND
     chance: 3
@@ -281,7 +281,7 @@ rewards:
       - '&fDano: &c1.500'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
-  # ── LIVRO
+  # -- LIVRO
   livro-killstack:
     type: COMMAND
     chance: 2
@@ -300,7 +300,7 @@ rewards:
       - '&8 ▪ &fNível: &c1 '
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
-  # ── O DEGRAU PARA A TIER II
+  # -- O DEGRAU PARA A TIER II
   caixa-bosses-ii:
     type: COMMAND
     chance: 0.5

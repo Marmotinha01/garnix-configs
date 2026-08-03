@@ -17,7 +17,7 @@ box-item:
   - '&fBotão direito &8➟ &7Abrir x1'
   - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
-# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# -- RECOMPENSAS -------------------------------------------------------
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
@@ -42,7 +42,7 @@ box-item:
 # x enxada) e o sufixo do `display` da recompensa.
 rewards:
 
-  # ── MINERAÇÃO ─────────────────────────────────────────────────── 1/3
+  # -- MINERAÇÃO --------------------------------------------------- 1/3
   mineracao-pedra:
     type: COMMAND
     chance: 30
@@ -128,7 +128,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── FAZENDA ───────────────────────────────────────────────────── 1/3
+  # -- FAZENDA ----------------------------------------------------- 1/3
   farm-pedra:
     type: COMMAND
     chance: 30
@@ -214,7 +214,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── PESCA ─────────────────────────────────────────────────────── 1/3
+  # -- PESCA ------------------------------------------------------- 1/3
   pesca-coral:
     type: COMMAND
     chance: 30
@@ -295,7 +295,7 @@ rewards:
       - '&8 ▪ &a+&l20% &3Corais '
       - '&8 ▪ &cPeso até &l32&ckg '
 
-  # ── O DEGRAU PARA A TIER II
+  # -- O DEGRAU PARA A TIER II
   caixa-skins-ii:
     type: COMMAND
     chance: 1.5

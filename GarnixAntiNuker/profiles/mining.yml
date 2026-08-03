@@ -15,7 +15,7 @@ enabled: true
 # minerador honesto só com posição/tempo — fica como piso aceito, revisado pela staff.
 mode: observe
 
-# ── Sinal primário: taxa instantânea (blocos-por-segundo) ────────────
+# -- Sinal primário: taxa instantânea (blocos-por-segundo) ------------
 # Blocos-por-segundo considerado suspeito. 30 pega o nuker forte; o médio/fraco
 # fica com os sinais independentes de taxa abaixo (cadence/envelope), não com este.
 blocks-per-second: 30
@@ -30,7 +30,7 @@ strike-expire-seconds: 180
 
 inspect-command: '/mina inspect {player}'  # Comando para inspecionar o suspeito (placeholder: {player}).
 
-# ── Camada de corroboração (sinais secundários) ──────────────────────
+# -- Camada de corroboração (sinais secundários) ----------------------
 # Pega o cheater sutil (abaixo do blocks-per-second) SEM aumentar falso-positivo:
 # só flagra quando pelo menos `min-signals` sinais independentes concordam ao
 # mesmo tempo. Deixe enabled:false para voltar ao detector puro de taxa.
@@ -54,7 +54,7 @@ corroboration:
   # do tick — se o seu servidor roda cronicamente abaixo de 20 TPS, ajuste aqui.
   tick-period-ms: 50
 
-  # ── Fusão ponderada ────────────────────────────────────────────────
+  # -- Fusão ponderada ------------------------------------------------
   # Em vez de "N sinais precisam concordar" (que deixava o nuker médio invisível),
   # cada sinal secundário tem um PESO e flagra quando a soma >= score-threshold.
   # Assim um sinal forte não precisa esperar dois fracos concordarem. Deixe
@@ -89,7 +89,7 @@ corroboration:
     sample-size: 16
     max-span: 14
 
-  # ── Sinais NOVOS (independentes de taxa — pegam o nuker médio/fraco) ──
+  # -- Sinais NOVOS (independentes de taxa — pegam o nuker médio/fraco) --
   # S5 — CADENCE: ritmo robótico E fora do grid do tick. O servidor completa quebras
   # no tick (~50ms), então o intervalo de um jogador legítimo cai em múltiplos de
   # 50ms; um delay-nuker dorme um valor fixo (ex. 120/175ms) que fica ENTRE as linhas
@@ -123,7 +123,7 @@ corroboration:
     min-span-ms: 300
     min-consecutive-breaks: 10
     min-consecutive-millis: 500
-  # ── Sinais FÍSICOS (computados pelo GarnixMining, que é dono do estado da mina) ──
+  # -- Sinais FÍSICOS (computados pelo GarnixMining, que é dono do estado da mina) --
   # Pegam o nuker "legit-mode" e o de área (esfera) que ficam no piso dos sinais de
   # tempo/posição: eles são fisicamente impossíveis pra jogador honesto. Contagem em
   # janela (não streak) porque o nuker intercala quebra exposta e enterrada.
@@ -149,7 +149,7 @@ corroboration:
 evidence:
   size: 10
 
-# ── Bypass / permissões ──────────────────────────────────────────────
+# -- Bypass / permissões ----------------------------------------------
 # Permite bypass para quem tem a permissão de bypass abaixo.
 bypass-enabled: false
 # Quem recebe os alertas de anti-nuker em jogo.
@@ -157,7 +157,7 @@ staff-permission: mining.staff.antinuker
 # Quem ignora a detecção (só se bypass-enabled estiver true).
 bypass-permission: mining.antinuker.bypass
 
-# ── Punições ─────────────────────────────────────────────────────────
+# -- Punições ---------------------------------------------------------
 punishments-enabled: true
 # Comando executado pela ação EJECT (o {player} é executor). Padrão: spawn.
 eject-command: spawn
@@ -173,7 +173,7 @@ actions:
   '25': EJECT
 # Reative só depois de calibrar, e de preferência num strike bem alto:
 #  '60': COMMAND:banip -s {player} 30m Mineração suspeita
-# ── Alerta da staff ──────────────────────────────────────────────────
+# -- Alerta da staff --------------------------------------------------
 # Placeholders (valem na linha e no hover):
 #   {player}, {bps}, {peak_bps}, {sustained}, {cv}, {span}, {location},
 #   {strikes}, {reasons}, {mode}, {ping}, {tps}, {brand}, {version}

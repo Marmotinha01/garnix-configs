@@ -52,7 +52,7 @@ boss:
   # para não caçar o mesmo azarado a luta inteira.
   retarget-interval: 8s
   
-  # ── Partículas da morte do chefe ─────────────────────────────────────
+  # -- Partículas da morte do chefe -------------------------------------
   #
   # O que aparece quando o chefe cai. Os mini zumbis têm a seção igualzinha a esta
   # em 'minions.death-particles' logo abaixo — as duas aceitam exatamente as mesmas
@@ -226,7 +226,7 @@ titles:
     title: '&a&lVALENDO!'
     subtitle: '&7Boa sorte!'
 
-# ── COMO ESCREVER AS MENSAGENS ────────────────────────────────────────
+# -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #
 # As mensagens longas usam bloco '|2': escreva as linhas como o jogador vai ler.
 #
@@ -293,14 +293,14 @@ messages:
       &r
       &8▪ &fPrêmios: &2Tag [General] &8+ &6❂40 cash &8+ &dx&l25 &dChaves VIP
       &r
-  # ── Eliminações ─────────────────────────────────────────────────────
+  # -- Eliminações -----------------------------------------------------
   # Linha única e sem a barra lateral: são avisos soltos no meio do jogo, não blocos.
   # {player} quem saiu · {killer} quem tirou · {remaining} ainda em jogo
   eliminated: '&7{player} &ffoi eliminado. &8({remaining} restantes)'
   eliminated-by: '&7{player} &ffoi eliminado por &7{killer}&f. &8({remaining} restantes)'
   eliminated-self: '&cVocê foi eliminado do evento.'
   
-  # ── Fim sem vencedor ────────────────────────────────────────────────
+  # -- Fim sem vencedor ------------------------------------------------
   no-winner: |2
 
       &8▎ {c}Evento {c}&lMVP {c}encerrado.
@@ -320,12 +320,12 @@ messages:
       &r
       &8▪ &fMotivo: &7Jogadores insuficientes.
       &r
-  # ── Actionbar ───────────────────────────────────────────────────────
+  # -- Actionbar -------------------------------------------------------
   # Enviada a TODOS do servidor quando alguém entra ou sai. Não aceita clique.
   player-joined-actionbar: '&7{player} &fentrou no &7{event} &8▪ &a{count} &fparticipantes'
   player-left-actionbar: '&7{player} &fsaiu do &7{event} &8▪ &a{count} &fparticipantes'
   
-  # ── Chefe ───────────────────────────────────────────────────────────
+  # -- Chefe -----------------------------------------------------------
   boss-spawned: '{c}&lO ZUMBI GIGANTE APARECEU. &fAtaquem.'
   # Actionbar da luta. Não aceita clique.
   # {health} vida atual · {max} vida total · {minions} mini zumbis vivos

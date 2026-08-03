@@ -25,7 +25,7 @@
 
 rewards:
   
-  # ── NONE — bad luck (stores/gives nothing; weight 1 so every rod can "miss") ─
+  # -- NONE — bad luck (stores/gives nothing; weight 1 so every rod can "miss") -
   bad_luck:
     required-level: 0
     chance: 25
@@ -40,7 +40,7 @@ rewards:
       lore:
       - '&7Nada dessa vez...'
   
-  # ── ITEM — physical item delivered to the inventory on collect ─────
+  # -- ITEM — physical item delivered to the inventory on collect -----
   fish:
     required-level: 0
     chance: 50
@@ -55,7 +55,7 @@ rewards:
       lore:
       - '&7Um peixe comum.'
   
-  # ── CURRENCY — deposits coins on collect (default rod, weight 2) ───
+  # -- CURRENCY — deposits coins on collect (default rod, weight 2) ---
   coins:
     required-level: 2
     chance: 15
@@ -71,7 +71,7 @@ rewards:
       lore:
       - '&7Vale &f250 &7corais ao sacar.'
   
-  # ── COMMAND_ITEM — command that gives a physical item (Reinforced rod, weight 4) ─
+  # -- COMMAND_ITEM — command that gives a physical item (Reinforced rod, weight 4) -
   diamonds:
     required-level: 6
     chance: 8
@@ -87,7 +87,7 @@ rewards:
       lore:
       - '&7Dá &b2 diamantes &7ao sacar.'
   
-  # ── COMMAND — virtual command (crate key), rare, Golden rod (weight 8) ─
+  # -- COMMAND — virtual command (crate key), rare, Golden rod (weight 8) -
   treasure:
     required-level: 12
     chance: 2
@@ -105,7 +105,7 @@ rewards:
       lore:
       - '&7Uma chave de caixa exclusiva!'
 
-  # ── AS 20 RECOMPENSAS DE COINS ──────────────────────────────────────────────
+  # -- AS 20 RECOMPENSAS DE COINS ----------------------------------------------
   # Gate 2D: `required-level` (a escada de 20 niveis) x `weight` (a skin da vara).
   # A recompensa do nivel N usa o peso da skin ceil(N/2), entao a skin ANTERIOR
   # nao a alcanca — o equipamento compra ACESSO, nao multiplicador.

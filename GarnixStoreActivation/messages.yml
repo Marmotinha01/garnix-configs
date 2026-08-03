@@ -1,7 +1,7 @@
-# ┌──────────────────────────────────────────────────────────────────────┐
+# ┌----------------------------------------------------------------------┐
 # │ Mensagens do GarnixStoreActivation                                   │
 # │ Qualquer lista vazia ([]) silencia a mensagem correspondente.        │
-# └──────────────────────────────────────────────────────────────────────┘
+# └----------------------------------------------------------------------┘
 
 activation:
   # Nome usado quando a loja não informa o produto.
@@ -11,7 +11,7 @@ activation:
   received:
   - '&6[Ativação] &fParabéns. Você ativou o produto &a{product}&f.'
 
-# ── Anúncios ──────────────────────────────────────────────────────────
+# -- Anúncios ----------------------------------------------------------
 # Só são exibidos se a opção 'Anunciar ativação no jogo' estiver marcada
 # no produto, dentro do painel da loja.
 #
@@ -51,7 +51,7 @@ announcements:
       - "    &7Adquira você também em &6&nhttps://redegarnix.com&7."
       - ""
 
-# ── Comando /ativacoes ────────────────────────────────────────────────
+# -- Comando /ativacoes ------------------------------------------------
 command:
   usage: '&cUse: /ativacoes <status|check|bloqueadas|liberar|reload>'
   reload: '&aConfigurações recarregadas com sucesso.'
@@ -65,7 +65,7 @@ command:
   never: '&cNunca'
   no-error: '&cNenhum'
   time-ago: '&eHá {time}'
-  # ── Entregas bloqueadas ────────────────────────────────────────────
+  # -- Entregas bloqueadas --------------------------------------------
   # Produtos que chegaram ao jogador mas que a loja nunca confirmou.
   # 'liberar' reenvia a confirmação; como o endpoint é idempotente, não
   # há risco de entregar o produto de novo.

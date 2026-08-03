@@ -48,7 +48,7 @@ boss-icon:
 # menu /boss > recompensas, que mostra o valor por roll.
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 87%
+  # -- COMUM ---------------------------------------------------------- 87%
   azar:
     type: NONE
     chance: 25
@@ -86,7 +86,7 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 10%
+  # -- COMUM PLUS ----------------------------------------------------- 10%
   lim-armazem:
     type: COMMAND
     chance: 4
@@ -129,7 +129,7 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  # ── INCOMUM ───────────────────────────────────────────────────────── 2%
+  # -- INCOMUM --------------------------------------------------------- 2%
   chaves-boss-5:
     type: COMMAND
     chance: 2
@@ -146,7 +146,7 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # ── SEMI RARO ───────────────────────────────────────────────────── 0,6%
+  # -- SEMI RARO ----------------------------------------------------- 0,6%
   boss-inferno:
     type: COMMAND
     chance: 0.6
@@ -159,7 +159,7 @@ rewards:
       lore:
       - '&fVida: &4❤50K'
 
-  # ── RARO ────────────────────────────────────────────────────────── 0,3%
+  # -- RARO ---------------------------------------------------------- 0,3%
   boss-arauto:
     type: COMMAND
     chance: 0.2
@@ -185,7 +185,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── RARO PLUS ──────────────────────────────────────────────────── 0,09%
+  # -- RARO PLUS ---------------------------------------------------- 0,09%
   chaves-boss-10:
     type: COMMAND
     chance: 0.09
@@ -202,7 +202,7 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # ── JACKPOT ─────────────────────────────────────────────────────── 0,01%
+  # -- JACKPOT ------------------------------------------------------- 0,01%
   caixa-boosters:
     type: COMMAND
     chance: 0.006

@@ -5,7 +5,7 @@
 # Habilita logs de debug detalhados no console
 debug: false
 
-# ── Database ───────────────────────────────────────────────────────────
+# -- Database -----------------------------------------------------------
 # MySQL e MongoDB são centralizados no core.
 # Todos os plugins usam a mesma conexão.
 # SQLite é por plugin (não precisa configurar aqui).
@@ -14,7 +14,7 @@ database:
   # Número de threads dedicadas para operações async de banco.
   threads: 4
   
-  # ── MySQL (HikariCP) ─────────────────────────────────────────────────
+  # -- MySQL (HikariCP) -------------------------------------------------
   mysql:
     enabled: true
     address: 45.154.159.247:3306
@@ -34,7 +34,7 @@ database:
       keepalive: 120000
       leak-detection-threshold: 0
   
-  # ── MongoDB ──────────────────────────────────────────────────────────
+  # -- MongoDB ----------------------------------------------------------
   mongodb:
     enabled: false
     address: 45.154.159.247:27017
@@ -42,7 +42,7 @@ database:
     username: 'admin'
     password: 'Gm$CFi_ES5O=7PO)X03'
 
-# ── Redis ──────────────────────────────────────────────────────────────
+# -- Redis --------------------------------------------------------------
 # Centralizado no core. Todos os plugins compartilham a mesma conexão.
 # Usado para cache e pub/sub entre servidores.
 
@@ -55,13 +55,13 @@ redis:
   max-idle: 8
   min-idle: 1
 
-# ── Geo (ipinfo.io) ────────────────────────────────────────────────────
+# -- Geo (ipinfo.io) ----------------------------------------------------
 # Token do ipinfo.io para consultas geográficas.
 # Crie uma conta gratuita em https://ipinfo.io para obter seu token.
 
 geo-token: 977091f764302d
 
-# ── Menu (ícones padrão) ───────────────────────────────────────────────
+# -- Menu (ícones padrão) -----------------------------------------------
 # Ícones padrão usados pelo MenuDefaults para navegação de menus paginados.
 # Os plugins podem usar MenuDefaults.previousPageItem() e nextPageItem()
 # para automaticamente pegar esses ícones sem precisar redefinir.
@@ -87,7 +87,7 @@ menu:
     material: WEB
     display: '&cNenhum item encontrado'
 
-# ── Captcha ────────────────────────────────────────────────────────────
+# -- Captcha ------------------------------------------------------------
 # Sistema anti-bot reutilizável. Cada plugin instancia seu próprio Captcha
 # com caches independentes — a config dos itens é compartilhada aqui.
 
@@ -210,7 +210,7 @@ captcha:
       data: 0
       display: Creme de Magma
 
-# ── Confirm ────────────────────────────────────────────────────────────
+# -- Confirm ------------------------------------------------------------
 # Menu de confirmação (Sim/Não) reutilizável.
 # Plugins chamam: Confirm.open(player, "Título", onConfirm, onCancel);
 

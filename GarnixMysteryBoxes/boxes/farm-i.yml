@@ -17,7 +17,7 @@ box-item:
   - '&fBotão direito &8➟ &7Abrir x1'
   - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
-# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# -- RECOMPENSAS -------------------------------------------------------
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
@@ -45,7 +45,7 @@ box-item:
 # linha, sem nenhuma linha extra.
 rewards:
 
-  # ── ARMADURA TIER I ───────────────────────────────────────────── 27%
+  # -- ARMADURA TIER I --------------------------------------------- 27%
   armadura-i-capacete:
     type: COMMAND
     chance: 6.75
@@ -122,7 +122,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER II ──────────────────────────────────────────── 20%
+  # -- ARMADURA TIER II -------------------------------------------- 20%
   armadura-ii-capacete:
     type: COMMAND
     chance: 5
@@ -199,7 +199,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── ARMADURA TIER III ─────────────────────────────────────────── 13%
+  # -- ARMADURA TIER III ------------------------------------------- 13%
   armadura-iii-capacete:
     type: COMMAND
     chance: 3.25
@@ -276,7 +276,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── SKINS ─────────────────────────────────────────────────────── 14%
+  # -- SKINS ------------------------------------------------------- 14%
   skin-pedra:
     type: COMMAND
     chance: 5
@@ -369,7 +369,7 @@ rewards:
       lore:
       - '&fValor: &5❋{amount}'
 
-  # ── BOOSTERS ─────────────────────────────────────────────────── 2,5%
+  # -- BOOSTERS --------------------------------------------------- 2,5%
   booster-2x-5m:
     type: COMMAND
     chance: 1.5
@@ -412,7 +412,7 @@ rewards:
       flags:
       - HIDE_POTION_EFFECTS
 
-  # ── LIVROS ───────────────────────────────────────────────────── 7,5%
+  # -- LIVROS ----------------------------------------------------- 7,5%
   livro-ceifador:
     type: COMMAND
     chance: 2.5
@@ -464,7 +464,7 @@ rewards:
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
 
-  # ── O DEGRAU PARA A TIER II
+  # -- O DEGRAU PARA A TIER II
   caixa-farm-ii:
     type: COMMAND
     chance: 0.5

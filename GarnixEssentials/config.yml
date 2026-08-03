@@ -65,7 +65,7 @@ auto-click:
 # Commands executed on first join (use {player} placeholder)
 first-join-commands: []
 
-# ── Limite de homes ──
+# -- Limite de homes --
 # Todo jogador tem 'default-homes-limit'. Para dar mais, conceda a permissão
 # "essentials.homes.limit.<N>" — o N é o limite (ex: essentials.homes.limit.5
 # = 5 homes). As faixas NÃO somam: vale sempre a MAIOR que o jogador tiver, e

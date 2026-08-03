@@ -53,7 +53,7 @@ key-item:
 # totalChance. Somar 100 e so legibilidade (o azar entra por cima, ver no fim).
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 79%
+  # -- COMUM ---------------------------------------------------------- 79%
   coins:
     type: CURRENCY
     chance: 41
@@ -72,7 +72,7 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 17%
+  # -- COMUM PLUS ----------------------------------------------------- 17%
   #
   # ⚠️ O cacto e `type: ITEM` e vai SEM display e SEM lore, igual ao produto da
   # loja de coins (`GarnixServerShops/coins-shop/farm.yml`). Nome ou lore
@@ -142,7 +142,7 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
+  # -- MEDIANA ------------------------------------------------------- 2,5%
   chaves-boss-3:
     type: COMMAND
     chance: 2.5
@@ -159,7 +159,7 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # ── MEDIANA PLUS ──────────────────────────────────────────────────── 1%
+  # -- MEDIANA PLUS ---------------------------------------------------- 1%
   chaves-boss-5:
     type: COMMAND
     chance: 0.6
@@ -192,7 +192,7 @@ rewards:
       - ' &8Informações: '
       - ' &8▪ &fAbre chaves a cada &a&l20&as&f. '
 
-  # ── RARA ────────────────────────────────────────────────────────── 0,4%
+  # -- RARA ---------------------------------------------------------- 0,4%
   robo-raro:
     type: COMMAND
     chance: 0.4
@@ -212,7 +212,7 @@ rewards:
       - ' &fPrêmios abaixo de &c&l2&c% &fganham'
       - ' &a+&l15&a% &fsobre a chance deles.'
 
-  # ── RARÍSSIMA ───────────────────────────────────────────────────── 0,099%
+  # -- RARÍSSIMA ----------------------------------------------------- 0,099%
   #
   # ⚠️ A caixa chaves entrou nesta faixa sem aumenta-la: os 0,016 dela saíram de
   # dentro dos 0,099 que ja existiam, cada uma das outras seis cedendo um pouco.
@@ -309,7 +309,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── JACKPOT ─────────────────────────────────────────────────────── 0,001%
+  # -- JACKPOT ------------------------------------------------------- 0,001%
   jackpot:
     type: CURRENCY
     chance: 0.001
@@ -319,7 +319,7 @@ rewards:
       lore:
       - '&fValor: &6❂{amount}'
 
-  # ── AZAR ────────────────────────────────────────────────────────── 25%
+  # -- AZAR ---------------------------------------------------------- 25%
   # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
   # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
   # recebe absolutamente nada. Aparece no preview, some do /crates manage

@@ -10,7 +10,7 @@ general:
   only-players: '&cApenas jogadores podem usar este comando.'
   reloaded: '&aConfigurações recarregadas com sucesso.'
 
-# ── Entrada e saída (todos os eventos) ────────────────────────────────
+# -- Entrada e saída (todos os eventos) --------------------------------
 # {event} = nome do evento em que a mensagem aconteceu.
 event:
   joined: '&aVocê entrou no evento &f{event}&a. &7({count} participantes)'
@@ -31,7 +31,7 @@ event:
   unknown-event: '&cEsse evento não existe.'
   command-blocked: '&cVocê não pode usar comandos durante o evento.'
   
-  # ── Camarote ──
+  # -- Camarote --
   # Quem não está participando pode assistir ao evento de perto, só enquanto ele
   # está em andamento. Ao terminar, todos são enviados para a saída.
   cabin-joined: '&aVocê foi para o camarote do &f{event}&a. Use &f/{command} sair &apara voltar.'
@@ -42,7 +42,7 @@ event:
   cabin-participating: '&cVocê está participando do evento: não dá para assistir do camarote.'
   cabin-unset: '&cEste evento não tem camarote.'
 
-# ── Setup (staff) ─────────────────────────────────────────────────────
+# -- Setup (staff) -----------------------------------------------------
 setup:
   location-set: '&aLocal &f{anchor} &ado evento &f{event} &adefinido em &f{x}, {y}, {z}&a.'
   unknown-anchor: '&cLocal inválido. Disponíveis: &f{anchors}&c.'
@@ -92,7 +92,7 @@ setup:
   
   kick-not-participating: '&f{player} &cnão está participando do evento &f{event}&c.'
 
-# ── Graveto de seleção ────────────────────────────────────────────────
+# -- Graveto de seleção ------------------------------------------------
 wand:
   given-cuboid:
   - ''
@@ -124,7 +124,7 @@ wand:
   other-world: '&cEsse ponto está em outro mundo. Recomece a seleção.'
   looks-round: '&eSeus pontos formam um círculo. &7Use &f/eventos wand circulo &7para a área sair redonda.'
 
-# ── Ajuda ─────────────────────────────────────────────────────────────
+# -- Ajuda -------------------------------------------------------------
 # Mostrada por /{evento} sem argumentos. {event} = nome, {command} = comando.
 # A linha do camarote só aparece nos eventos que têm o cabin definido no data.yml
 # — nos demais ela é omitida automaticamente. Se renomear o subcomando, ajuste

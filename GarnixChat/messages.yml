@@ -1,4 +1,4 @@
-# ── Tags do chat ──
+# -- Tags do chat --
 # Cada chave abaixo (menos "message") vira um token {chave} que você pode usar nos formatos dos
 # canais (global.format / local.format). Cada tag vira um pedaço com hover (e clique opcional):
 #   text:    placeholder (PlaceholderAPI) mostrado como a tag. Resolvido para o AUTOR da mensagem,
@@ -150,7 +150,7 @@ tags:
   message:
     hover: '&fData de Envio: &7{data}'
 
-# ── Formato dos canais ── tokens: {player}, {message}, {lp_prefix}, {lp_suffix}, %papi%
+# -- Formato dos canais -- tokens: {player}, {message}, {lp_prefix}, {lp_suffix}, %papi%
 global:
   format: '&8[&7&lG&8] {clan} {lp_suffix} {prestige} {rank} {cash} {myth} {coins} {dracmas} {gemas} {sementes} {corais} {slimite} {mlimite} {sumo} {fight} {parkour} {corrida} {spleef} {splegg} {killer} {destemido} {mvp} {tnt-run} {sniper} {paintball} {arqueiros} {batata-quente} &f{nick}&7: &7{message}'
 
@@ -160,20 +160,20 @@ local:
   # Enviado quando não há nenhum outro jogador válido no raio.
   alone: '&cVocê está sozinho... ninguém por perto para conversar.'
 
-# ── Foco de canal (/g e /l sem mensagem)
+# -- Foco de canal (/g e /l sem mensagem)
 focus:
   global: '&aVocê agora está focado no canal &fGlobal&a.'
   local: '&aVocê agora está focado no canal &fLocal&a.'
 
-# ── Chat mutado
+# -- Chat mutado
 muted:
   global: '&cO chat global está mutado no momento.'
   local: '&cO chat local está mutado no momento.'
 
-# ── Delay ── token: {time}
+# -- Delay -- token: {time}
 delay: '&cAguarde &e{time} &cpara enviar outra mensagem.'
 
-# ── [item] ── tokens: {player}
+# -- [item] -- tokens: {player}
 item:
   label: '&b[item]'
   hover: '&eClique para ver o item.'
@@ -181,12 +181,12 @@ item:
   preview-title: Preview Item de {player}
   expired: '&cEste item não está mais disponível para visualização.'
 
-# ── Cor pré-definida (/cor) ── tokens: {color}
+# -- Cor pré-definida (/cor) -- tokens: {color}
 color:
   set: '&aCor definida com sucesso.'
   reset: '&cCor removida com sucesso.'
 
-# ── Mensagens privadas (/tell e /r) ── tokens: {sender}, {target}, {message}
+# -- Mensagens privadas (/tell e /r) -- tokens: {sender}, {target}, {message}
 tell:
   format-sender: '&7[&aVocê &8➟ &a{target}&7] &f{message}'
   format-receiver: '&7[&e{sender} &8➟ &eVocê&7] &f{message}'
@@ -196,7 +196,7 @@ reply:
   none: '&cNão há mensagem para responder.'
   offline: '&cO jogador não está mais online.'
 
-# ── Menção (@nick) ── tokens: {player} (quem mencionou), {channel}
+# -- Menção (@nick) -- tokens: {player} (quem mencionou), {channel}
 mention:
   # Title/subtitle exibidos na tela de quem foi mencionado.
   title: '&e&lMENÇAO'
@@ -212,7 +212,7 @@ mention:
     global: '&7Global'
     local: '&eLocal'
 
-# ── Ignorar (/ignore) ── tokens: {player}, {list}
+# -- Ignorar (/ignore) -- tokens: {player}, {list}
 ignore:
   added: '&aVocê passou a ignorar &f{player}&a.'
   removed: '&aVocê deixou de ignorar &f{player}&a.'
@@ -220,7 +220,7 @@ ignore:
   self: '&cVocê não pode ignorar a si mesmo.'
   list: '&fJogadores ignorados: &c{list}'
 
-# ── Spy (/spy) ── tokens: {player}, {from}, {to}, {message}
+# -- Spy (/spy) -- tokens: {player}, {from}, {to}, {message}
 spy:
   format: '&8[&cSPY&8] &7{from} &8➟ &7{to}&8: &f{message}'
   enabled-global: '&aModo espião ativado com sucesso.'
@@ -228,7 +228,7 @@ spy:
   target-on: '&aVocê agora está espionando &f{player}&a.'
   target-off: '&cVocê parou de espionar &f{player}&c.'
 
-# ── Anti-divulgação ── tokens: {player}, {channel}, {link}, {message}
+# -- Anti-divulgação -- tokens: {player}, {channel}, {link}, {message}
 # Aviso NEUTRO para quem tem 'chat.ad.notify'. A mensagem foi ocultada apenas do restante
 # do chat (o remetente ainda a viu). Como pode ser falso positivo, o texto NÃO acusa: a
 # ideia é o staff conferir com calma, nunca punir de forma automática.
@@ -244,7 +244,7 @@ anti-ad-alert:
 - '  &eOcultada automaticamente. Pode ser engano, confira antes.'
 - ''
 
-# ── Administração (/chat) ── tokens: {channel}, {player}
+# -- Administração (/chat) -- tokens: {channel}, {player}
 admin:
   muted: '&aCanal &f{channel} &amutado.'
   unmuted: '&aCanal &f{channel} &adesmutado.'

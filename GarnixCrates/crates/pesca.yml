@@ -58,7 +58,7 @@ key-item:
 # todo item fisico do servidor — skin e armadura passam a quantia sorteada.
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 83%
+  # -- COMUM ---------------------------------------------------------- 83%
   coins:
     type: CURRENCY
     chance: 45
@@ -89,7 +89,7 @@ rewards:
       lore:
       - '&fLitros: &7{amount}L'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
+  # -- COMUM PLUS ----------------------------------------------------- 12%
   lim-armazem:
     type: COMMAND
     chance: 3
@@ -180,7 +180,7 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # ── ARMADURA ───────────────────────────────────────────────────────── 2%
+  # -- ARMADURA --------------------------------------------------------- 2%
   armadura-i-capacete:
     type: COMMAND
     chance: 0.5
@@ -253,7 +253,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── MEDIANA ─────────────────────────────────────────────────────── 2,5%
+  # -- MEDIANA ------------------------------------------------------- 2,5%
   booster-xp-2x:
     type: COMMAND
     chance: 1.5
@@ -296,7 +296,7 @@ rewards:
       flags:
       - HIDE_POTION_EFFECTS
 
-  # ── RARA ────────────────────────────────────────────────────────── 0,4%
+  # -- RARA ---------------------------------------------------------- 0,4%
   caixa-pesca-i:
     type: COMMAND
     chance: 0.25
@@ -323,7 +323,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── RARO PLUS ─────────────────────────────────────────────────── 0,099%
+  # -- RARO PLUS --------------------------------------------------- 0,099%
   skin-coral:
     type: COMMAND
     chance: 0.06
@@ -356,7 +356,7 @@ rewards:
       - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &cPeso até &l10&ckg '
 
-  # ── JACKPOT ─────────────────────────────────────────────────────── 0,001%
+  # -- JACKPOT ------------------------------------------------------- 0,001%
   jackpot:
     type: COMMAND
     chance: 0.001
@@ -370,7 +370,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── AZAR ────────────────────────────────────────────────────────── 25%
+  # -- AZAR ---------------------------------------------------------- 25%
   # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
   # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
   # recebe absolutamente nada. Aparece no preview, some do /crates manage

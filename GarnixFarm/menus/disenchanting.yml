@@ -3,7 +3,7 @@
 title: Desencantar
 rows: 4
 
-# ── Opção -1 ──────────────────────────────────────────────────────
+# -- Opção -1 ------------------------------------------------------
 option-1:
   slot: 11
   material: INK_SACK
@@ -13,12 +13,12 @@ option-1:
   - '&7Reduz o encantamento em'
   - '&71 nível de uma só vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &c{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &c{target} '
   - '&8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%) '
   - ''
   - '&cClique para desencantar.'
 
-# ── Opção -10 ─────────────────────────────────────────────────────
+# -- Opção -10 -----------------------------------------------------
 option-10:
   slot: 12
   material: INK_SACK
@@ -28,12 +28,12 @@ option-10:
   - '&7Reduz o encantamento em'
   - '&710 níveis de uma só vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &c{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &c{target} '
   - '&8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%) '
   - ''
   - '&cClique para desencantar.'
 
-# ── Opção -25 ─────────────────────────────────────────────────────
+# -- Opção -25 -----------------------------------------------------
 option-25:
   slot: 13
   material: INK_SACK
@@ -43,12 +43,12 @@ option-25:
   - '&7Reduz o encantamento em'
   - '&725 níveis de uma só vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &c{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &c{target} '
   - '&8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%) '
   - ''
   - '&cClique para desencantar.'
 
-# ── Opção -50 ─────────────────────────────────────────────────────
+# -- Opção -50 -----------------------------------------------------
 option-50:
   slot: 14
   material: INK_SACK
@@ -58,12 +58,12 @@ option-50:
   - '&7Reduz o encantamento em'
   - '&750 níveis de uma só vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &c{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &c{target} '
   - '&8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%) '
   - ''
   - '&cClique para desencantar.'
 
-# ── Desencantar tudo ──────────────────────────────────────────────
+# -- Desencantar tudo ----------------------------------------------
 option-all:
   slot: 15
   material: EXPLOSIVE_MINECART
@@ -72,12 +72,12 @@ option-all:
   - '&7Remove todos os níveis do'
   - '&7encantamento de uma vez.'
   - ''
-  - '&8 ▪ &fNível: &7{current} &8─ &4{target} '
+  - '&8 ▪ &fNível: &7{current} &8- &4{target} '
   - '&8 ▪ &fReembolso: {symbol_color}{symbol}{primary_color}{refund} {currency} &c({refund-percentage}%) '
   - ''
   - '&4Clique para desencantar.'
 
-# ── Ícone: nada para desencantar ──────────────────────────────────
+# -- Ícone: nada para desencantar ----------------------------------
 empty:
   material: STAINED_GLASS_PANE
   data: 14
@@ -86,7 +86,7 @@ empty:
   - '&7Este encantamento não tem'
   - '&7níveis para desencantar.'
 
-# ── Ícone: excede os níveis ───────────────────────────────────────
+# -- Ícone: excede os níveis ---------------------------------------
 option-exceeded:
   material: STAINED_GLASS_PANE
   data: 14

@@ -137,7 +137,7 @@ levelup:
   - '  &6&lGG. &7Você chegou ao nível máximo &c&l{level}&7 de fazenda.'
   - ''
 
-# ── Entrega de itens ───────────────────────────────────────────────────
+# -- Entrega de itens ---------------------------------------------------
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.

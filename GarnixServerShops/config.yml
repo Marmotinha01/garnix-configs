@@ -3,19 +3,19 @@ debug: false
 
 # Permissão admin (reload, additens): servershops.admin
 
-# ── Cash Shop ──
+# -- Cash Shop --
 cash-shop:
   command: shop
   aliases: []
   currency: cash
 
-# ── Coins Shop ──
+# -- Coins Shop --
 coins-shop:
   command: loja
   aliases: []
   currency: coins
 
-# ── Menu de categorias ──
+# -- Menu de categorias --
 categories-menu:
   cash:
     title: SHOP
@@ -24,7 +24,7 @@ categories-menu:
     title: Loja
     rows: 5
 
-# ── Aparência das categorias ──
+# -- Aparência das categorias --
 # Moeda: {value} {symbol} {symbol_color} {primary_color} {secondary_color} {currency}
 # Outros: {amount} {discount} {purchase-hint} {right-click-hint} {name} {release-date}
 ui:

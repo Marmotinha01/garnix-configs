@@ -12,7 +12,7 @@ increase-multiplier: 0.02778
 multiplier-provider: "coins"
 
 icon:
-  slot: 22
+  slot: 11
   texture: "5c4690ab7de9bba1aeb46075e3fae971026f37792fcf2c8b3bdaded541f9e3f6"
   display: "&a{display}"
   lore:

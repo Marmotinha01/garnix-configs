@@ -17,7 +17,7 @@ min-price: '1'
 # Dias até anúncios já encerrados serem removidos do banco e da memória.
 purge-after-days: 7
 
-# ── Limite de anúncios simultâneos ──
+# -- Limite de anúncios simultâneos --
 # Todo jogador tem 'default-market-limit'. Para dar mais, conceda a permissão
 # "market.limit.<N>" — o N é o limite (ex: market.limit.8 = 8 anúncios).
 # As faixas NÃO somam: vale sempre a MAIOR que o jogador tiver, e nunca menos

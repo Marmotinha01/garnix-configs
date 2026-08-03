@@ -103,7 +103,7 @@ const PARAMS = {
       frenzyUptimeReal: 1.5,   // nominal 2,0 x ~50% de uptime
     },
     teto: 100,
-    // ─── PICO vs SUSTENTADO ─────────────────────────────────────────────────
+    // --- PICO vs SUSTENTADO -------------------------------------------------
     // O `teto: 100` acima e o PICO — com o booster ligado. Mas a escada de valor
     // de cada via NAO e calibrada no pico, e sim no SUSTENTADO: tudo que o
     // jogador tem permanentemente, SEM o booster.

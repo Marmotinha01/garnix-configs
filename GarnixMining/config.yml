@@ -23,7 +23,7 @@ enchant-currency: gemas
 # Refund percentage applied when disenchanting (40 = 40% of the paid cost).
 enchant-refund-percentage: 40.0
 
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 # ORÇAMENTO DAS ANIMAÇÕES DE ENCANTAMENTO (blaze / snake / wither / kraken /
 # meteor), somando TODOS os jogadores do servidor.
 #
@@ -31,7 +31,7 @@ enchant-refund-percentage: 40.0
 # cada 50 ms para animar os efeitos. Quando o orçamento acaba, os próximos procs
 # são recusados até algum efeito em andamento terminar.
 #
-# ── POR QUE ESTÁ EM 0 ────────────────────────────────────────────────────────
+# -- POR QUE ESTÁ EM 0 --------------------------------------------------------
 # 0 = ilimitado, e é o padrão de propósito.
 #
 # Os limites por jogador já seguram a carga no dia a dia: cada um pode ter no
@@ -41,7 +41,7 @@ enchant-refund-percentage: 40.0
 # disparar sem necessidade, e o jogador sente como se o item tivesse quebrado.
 # Então ele fica desligado até o servidor mostrar que precisa.
 #
-# ── QUANTO CADA EFEITO CUSTA ─────────────────────────────────────────────────
+# -- QUANTO CADA EFEITO CUSTA -------------------------------------------------
 #   kraken 185   wither 21   blaze 18   meteor 9   snake 4
 #
 # O orçamento conta TRABALHO e não quantidade, porque os efeitos não são nem de
@@ -51,23 +51,23 @@ enchant-refund-percentage: 40.0
 # O custo do kraken sai de 'tentacles' x 'tentacle-length' do kraken.yml, então
 # diminuir esses valores barateia cada kraken aqui também, automaticamente.
 #
-# ── QUANDO AUMENTAR ──────────────────────────────────────────────────────────
+# -- QUANDO AUMENTAR ----------------------------------------------------------
 # Se você ligou o orçamento e os jogadores estão reclamando que os encantamentos
 # "não pegam", mas o TPS está estável em 20. Nesse caso sobra folga na main
 # thread e o orçamento está apertado demais. Suba aos poucos (por exemplo de
 # 10000 para 15000) e observe o TPS depois de cada mudança.
 #
-# ── QUANDO DIMINUIR ──────────────────────────────────────────────────────────
+# -- QUANDO DIMINUIR ----------------------------------------------------------
 # Se o TPS cai nos horários de pico e o /timings aponta as tasks de animação.
 # Cada corte no orçamento reduz proporcionalmente o trabalho por tick.
 #
-# ── NÚMEROS DE REFERÊNCIA (simulados: 500 jogadores, tudo nível 100) ─────────
+# -- NÚMEROS DE REFERÊNCIA (simulados: 500 jogadores, tudo nível 100) ---------
 #   ilimitado -> 77000 packets/tick   (a main thread não dá conta: 3-5 TPS)
 #      20000  -> 20000 packets/tick   (67% dos procs recusados)
 #      10000  -> 10000 packets/tick   (79% recusados) <- pesado mas sustentável
 #       5000  ->  5000 packets/tick   (89% recusados)
 #
-# ── O DETALHE IMPORTANTE ─────────────────────────────────────────────────────
+# -- O DETALHE IMPORTANTE -----------------------------------------------------
 # O orçamento NÃO deixa os efeitos mais baratos, ele só decide quem ganha um.
 # Com 500 jogadores maxados a demanda é 77000 e o teto seguro é ~10000, então a
 # maioria dos procs vai ser recusada — isso é matemática, não configuração.
@@ -76,7 +76,7 @@ enchant-refund-percentage: 40.0
 # servidor trava de novo) e sim baratear cada efeito: baixar 'tentacle-length' do
 # kraken.yml de 20 para 12 leva o kraken de 185 para 137, e cabe um quarto a mais
 # de krakens no mesmo orçamento. É trocar aparência por quantidade.
-# ─────────────────────────────────────────────────────────────────────────────
+# -----------------------------------------------------------------------------
 enchant-animation-budget: 10000
 
 # Auto-generated bonus lines for pickaxe skins (skins.yml) and armor pieces
@@ -260,7 +260,7 @@ drill:
   middle-block: IRON_BLOCK
   bottom-block: HOPPER
   
-# ── Progress bar ──
+# -- Progress bar --
 progress-bar:
   # Number of characters in the bar.
   length: 5
@@ -271,7 +271,7 @@ progress-bar:
   # Color of incomplete segments.
   incomplete-color: '&7'
 
-# ── Frenzy (infinite mission) ──
+# -- Frenzy (infinite mission) --
 # Mining manual blocks fills a meter; once full, a timed window opens during which
 # ALL of that player's mining gains are multiplied. The active window lives only in
 # memory: it survives a quit/reconnect but is lost on a full server restart.

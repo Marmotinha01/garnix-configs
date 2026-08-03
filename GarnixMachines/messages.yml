@@ -154,7 +154,7 @@ booster:
   use-on-machine: '&cUse este booster clicando em uma &fmáquina&c.'
   merge-none: '&cNão há outros boosters iguais para juntar.'
   merged: '&aVocê juntou &fx{amount} &aboosters de &fDrops &a{bonus} &aem um só.'
-# ── Entrega de itens ───────────────────────────────────────────────────
+# -- Entrega de itens ---------------------------------------------------
 # Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
 # leftover: inventário cheio — só a sobra foi ao correio.

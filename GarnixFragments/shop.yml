@@ -6,7 +6,7 @@
 #   cost     — runas exigidas: <id>: <quantia> (aceita sufixos: 1.5K)
 #   commands — comandos executados no console ao comprar ({player} = comprador)
 #
-# ── POR QUE ELA EXISTE ──────────────────────────────────────────────────────
+# -- POR QUE ELA EXISTE ------------------------------------------------------
 #
 # Coins são exponenciais: qualquer preço em coins fica trivial dois dias depois.
 # Runa é CONTAGEM — 500 são 500 no dia 3 e no dia 20. É a única coisa no
@@ -15,7 +15,7 @@
 # Por isso esta loja não vende conveniência barata: ela é onde o jogador que NÃO
 # paga chega nos itens do cash-shop, por um caminho deliberadamente mais longo.
 #
-# ── A GRADE ─────────────────────────────────────────────────────────────────
+# -- A GRADE -----------------------------------------------------------------
 #
 # Dois trios por linha, e as seções abaixo seguem a ordem de leitura do menu:
 #
@@ -26,7 +26,7 @@
 # Trocar um item de lugar é mexer só no `slot` — a ordem das seções aqui é para
 # quem lê o arquivo, o menu não depende dela.
 #
-# ── A REGRA DO CUSTO ────────────────────────────────────────────────────────
+# -- A REGRA DO CUSTO --------------------------------------------------------
 #
 # Todo item caro custa MAIS DE UM TIPO de runa, e os tipos vêm de fontes
 # diferentes (sagrada=boss · eterna=crate/caixa · divina=? · primal=?). É o
@@ -53,7 +53,7 @@
 
 items:
 
-  # ── Linha 2, trio da esquerda: caixas que não são de via ───────────────────
+  # -- Linha 2, trio da esquerda: caixas que não são de via -------------------
   caixa-recursos:
     slot: 10
     icon:
@@ -96,7 +96,7 @@ items:
     commands:
     - 'caixas give skins-i {player} 1'
 
-  # ── Linha 2, trio da direita: as três vias ─────────────────────────────────
+  # -- Linha 2, trio da direita: as três vias ---------------------------------
   caixa-mineracao-i:
     slot: 14
     icon:
@@ -139,7 +139,7 @@ items:
     commands:
     - 'caixas give pesca-i {player} 1'
 
-  # ── Linha 3, trio da esquerda: utilitários (faixa de entrada, um tipo só) ──
+  # -- Linha 3, trio da esquerda: utilitários (faixa de entrada, um tipo só) --
   limpador-terreno:
     slot: 19
     icon:
@@ -184,7 +184,7 @@ items:
     commands:
     - 'clan giveresetkdr {player} 1'
 
-  # ── Linha 3, trio da direita: throughput da mina ───────────────────────────
+  # -- Linha 3, trio da direita: throughput da mina ---------------------------
   bomba-2x2:
     slot: 23
     icon:
@@ -235,7 +235,7 @@ items:
     commands:
     - 'mina givedrill {player} 1'
 
-  # ── Linha 4, trio da esquerda: forjas (as três pelo mesmo preço) ───────────
+  # -- Linha 4, trio da esquerda: forjas (as três pelo mesmo preço) -----------
   forja-mineracao:
     slot: 28
     icon:
@@ -293,7 +293,7 @@ items:
     commands:
     - 'pesca giveforge {player} 1'
 
-  # ── Linha 4, trio da direita: torres de cacto ──────────────────────────────
+  # -- Linha 4, trio da direita: torres de cacto ------------------------------
   torre-cacto-5:
     slot: 32
     icon:

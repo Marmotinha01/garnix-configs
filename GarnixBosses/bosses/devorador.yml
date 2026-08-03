@@ -55,7 +55,7 @@ boss-icon:
 # aqui e UM item com stack 3, nao tres itens soltos.
 rewards:
 
-  # ── COMUM ────────────────────────────────────────────────────────── 82%
+  # -- COMUM ---------------------------------------------------------- 82%
   azar:
     type: NONE
     chance: 25
@@ -93,7 +93,7 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # ── COMUM PLUS ───────────────────────────────────────────────────── 12%
+  # -- COMUM PLUS ----------------------------------------------------- 12%
   lim-armazem:
     type: COMMAND
     chance: 4
@@ -152,7 +152,7 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # ── RARO ────────────────────────────────────────────────────────── 4,5%
+  # -- RARO ---------------------------------------------------------- 4,5%
   boss-devorador-3:
     type: COMMAND
     chance: 3
@@ -179,7 +179,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── RARO PLUS ───────────────────────────────────────────────────── 1,4%
+  # -- RARO PLUS ----------------------------------------------------- 1,4%
   chaves-boss-75:
     type: COMMAND
     chance: 0.5
@@ -261,7 +261,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # ── JACKPOT ──────────────────────────────────────────────────────── 0,1%
+  # -- JACKPOT -------------------------------------------------------- 0,1%
   cash:
     type: CURRENCY
     chance: 0.1

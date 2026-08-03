@@ -17,7 +17,7 @@ box-item:
   - '&fBotão direito &8➟ &7Abrir x1'
   - '&fBotão dir. + SHIFT &8➟ &7Abrir x4'
 
-# ── RECOMPENSAS ───────────────────────────────────────────────────────
+# -- RECOMPENSAS -------------------------------------------------------
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
@@ -36,7 +36,7 @@ box-item:
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve runa.
 rewards:
 
-  # ── Runa Sagrada
+  # -- Runa Sagrada
   sagrada-25:
     type: COMMAND
     chance: 12
@@ -98,7 +98,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
 
-  # ── Runa Eterna
+  # -- Runa Eterna
   eterna-25:
     type: COMMAND
     chance: 12
@@ -160,7 +160,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
 
-  # ── Runa Divina
+  # -- Runa Divina
   divina-25:
     type: COMMAND
     chance: 12
@@ -222,7 +222,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
 
-  # ── Runa Primal
+  # -- Runa Primal
   primal-25:
     type: COMMAND
     chance: 12
