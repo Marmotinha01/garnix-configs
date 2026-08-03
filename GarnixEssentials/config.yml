@@ -24,12 +24,15 @@ blacklisted-worlds:
   - eventos
   fly:
   - eventos
+  - arenas
   clear-lag:
   - eventos
   combat-log:
   - eventos
-  - batalha
-  - nether
+  - world
+  - plotworld
+  - mina
+  - fazenda
   death-messages:
   - eventos
 
@@ -37,6 +40,7 @@ blacklisted-worlds:
 blocked-crafts:
 - TNT
 - ARMOR_STAND
+- WRITTEN_BOOK
 
 # Temporary Fly Item
 temporary-fly-item:
@@ -58,8 +62,29 @@ auto-click:
   interval: 20
   allowed-worlds:
   - plotworld
+  # Toda entidade dos spawners (GarnixSpawners/spawners/*.yml) mais a de cada boss
+  # (GarnixBosses/bosses/*.yml). As dos bosses — ENDERMITE, MAGMA_CUBE, WITHER,
+  # BLAZE, IRON_GOLEM — já existem como spawner, então a lista não as repete.
   allowed-entities:
+  - BAT
+  - BLAZE
+  - COW
+  - ENDERMITE
+  - GHAST
+  - GUARDIAN
+  - IRON_GOLEM
+  - MAGMA_CUBE
+  - OCELOT
   - PIG
+  - PIG_ZOMBIE
+  - RABBIT
+  - SHEEP
+  - SKELETON
+  - SLIME
+  - SPIDER
+  - WITCH
+  - WITHER
+  - WOLF
   - ZOMBIE
 
 # Commands executed on first join (use {player} placeholder)
@@ -122,15 +147,33 @@ kit-preview-menu:
 combat:
   time: 15
   allowed-commands:
-  - /g
-  - /tell
-  - /r
-  - /lobby
+  - g
+  - global
+  - tell
+  - r
+  - lobby
+  - clan
+  - .
+  - c
+  - a
+  - ally
+  - coins
+  - money
+  - sementes
+  - semente
+  - cash
+  - corais
+  - gemas
+  - dracmas
+  - mlimite
+  - slimite
 
 # Death Messages
-# Regiões WorldGuard onde a mensagem de kill (PvP) não é anunciada.
+# Blacklisted worlds: blacklisted-worlds.death-messages
+# Regiões WorldGuard onde a mensagem de kill (PvP) não é anunciada. A lista de
+# mundos acima cala os dois avisos (kill e combat log); esta aqui vale só para o
+# de kill — um combat log é sempre anunciado, em qualquer região.
 death-messages-blacklisted-regions:
-- spawn
 - arena
 
 # Clear Lag
@@ -169,7 +212,7 @@ clearlag:
 #  Bypass do tab: essentials.protect.tabcomplete
 # ------------------------------------------------------------
 command-protect:
-  plugins-message: '&fPlugins (1): &aGarnixPlugins'
+  plugins-message: '&cComando desconhecido.'
   unknown-message: '&cComando desconhecido.'
   blocked:
     - '/ver'
@@ -223,8 +266,6 @@ command-protect:
     - '/stack'
     - '/stop'
     - '/stopfire'
-    - '/save'
-    - '/save-all'
     - '/save-off'
     - '/save-on'
     - '/setblock'
@@ -237,7 +278,24 @@ command-protect:
 # Ao entrar, o jogador é forçado para o modo survival e continua nele ao sair.
 # Comandos liberados dentro da arena. Quem tem essentials.chain.bypass ignora a lista.
 chain-allowed-commands:
-- /chain
-- /tell
-- /r
-- /g
+  - chain
+  - g
+  - global
+  - tell
+  - r
+  - lobby
+  - clan
+  - .
+  - c
+  - a
+  - ally
+  - coins
+  - money
+  - sementes
+  - semente
+  - cash
+  - corais
+  - gemas
+  - dracmas
+  - mlimite
+  - slimite

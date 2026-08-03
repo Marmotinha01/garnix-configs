@@ -45,6 +45,26 @@ duel:
   - duel
   - duelos
   - duels
+  - g
+  - global
+  - tell
+  - r
+  - lobby
+  - clan
+  - .
+  - c
+  - a
+  - ally
+  - coins
+  - money
+  - sementes
+  - semente
+  - cash
+  - corais
+  - gemas
+  - dracmas
+  - mlimite
+  - slimite
 
 # Kit do modo "Kit Setado" (removido no fim do duelo; nada cai no chão).
 # Pode ser montado em jogo: equipe o loadout e rode /x1 setkit (reescreve armor e items).

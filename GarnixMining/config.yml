@@ -90,25 +90,58 @@ bonus-lore-format: "&8 ▪ &a+&l{value}&a{unit} {primary_color}{Display} "
 
 # Commands allowed inside the mine for players without mining.bypass.commands.
 mine-command-whitelist:
-- mina
+- fazenda
+- farm
 - g
-- .
+- global
+- tell
+- r
+- lobby
+- arqueiros
+- sumo
+- fight
+- parkour
+- corrida
+- spleef
+- splegg
+- killer
+- destemido
+- mvp
+- tntrun
+- tnt-run
+- sniper
+- paintball
+- batata
+- batata-quente
+- batataquente
+- coinflip
+- mercado
+- ah
+- leilao
+- leiloes
+- correio
+- mina
+- plot
 - fly
 - voar
 - clan
-- plot
+- .
+- c
+- a
+- ally
 - spawn
+- warps
+- warp
 - coins
 - money
-- gemas
-- gema
-- aura
-- dracma
-- dracmas
+- sementes
+- semente
 - cash
-- msg
-- r
-- tell
+- corais
+- gemas
+- dracmas
+- mlimite
+- slimite
 
 # Min/max mine tax (percentage). The owner cannot set a rate outside this range.
 tax:
