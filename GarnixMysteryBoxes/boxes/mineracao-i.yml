@@ -468,8 +468,8 @@ rewards:
       material: ENCHANTED_BOOK
       display: '&dLivro de Ceifador'
       lore:
-      - '&7Chance de dobrar as'
-      - '&7cabeças que o mob solta.'
+      - '&7Chance de o abate soltar'
+      - '&7o dobro de cabeças.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
@@ -485,8 +485,8 @@ rewards:
       material: ENCHANTED_BOOK
       display: '&4Livro de Massacre'
       lore:
-      - '&7Quantos mobs a sua lâmina'
-      - '&7abate em um único golpe.'
+      - '&7Mobs empilhados morrem'
+      - '&7juntos no mesmo golpe.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
@@ -502,8 +502,8 @@ rewards:
       material: ENCHANTED_BOOK
       display: '&aLivro de Pilhagem'
       lore:
-      - '&7Aumenta os drops que os'
-      - '&7mobs deixam ao morrer.'
+      - '&7Multiplica os drops que'
+      - '&7os mobs deixam ao morrer.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '

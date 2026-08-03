@@ -5,17 +5,20 @@
 #   double : % chance to catch twice at once
 #
 # Each enchant defines its own book item under "book" (material/display/lore),
-# with the {enchant} (enchant display), {level} and {value} placeholders.
+# with the {enchant} (enchant display) and {level} placeholders.
 #
-# {value} e o EFEITO REAL do nivel — os segundos que a Correnteza tira, a % da
-# Mare, a % da Cobica. A lore antiga so tinha {level}, e "Nivel: 3" nao informa
-# nada: o jogador nao tinha como saber o que o 3 valia. Toda lore daqui usa o
-# numero, e a unidade vem escrita ao lado porque ela muda de um para o outro.
+# O efeito de cada nivel NAO aparece no livro: la o {level} e quantos niveis o
+# livro aplica, e nao o nivel final — um livro de 1 numa vara que ja esta em
+# Correnteza 4 entrega a Correnteza 5, entao o livro estaria mostrando o efeito
+# do 1 e o jogador ficaria com o do 5. Quem mostra efeito e a vara, na linha
+# "rod.enchant-entry" do config.yml, onde o nivel e o de verdade. O "value-format"
+# de cada encantamento e a moldura desse numero (sinal, unidade, cor).
 
 enchantments:
   
   speed:
     display: '&bCorrenteza'
+    value-format: '&c-&l{value}&cs'
     book:
       material: ENCHANTED_BOOK
       display: '&bLivro de Correnteza'
@@ -25,7 +28,6 @@ enchantments:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
-      - '&8 ▪ &fEfeito: &b-{value}s &fpor fisgada '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
       - '&7Arraste sobre a vara'
@@ -44,6 +46,7 @@ enchantments:
   
   luck:
     display: '&aMaré'
+    value-format: '&a+&l{value}&a%'
     book:
       material: ENCHANTED_BOOK
       display: '&aLivro de Maré'
@@ -53,7 +56,6 @@ enchantments:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
-      - '&8 ▪ &fEfeito: &a+{value}% &fnos raros '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
       - '&7Só vale para o que já dá'
@@ -75,6 +77,7 @@ enchantments:
   
   double:
     display: '&dCobiça'
+    value-format: '&a+&l{value}&a%'
     book:
       material: ENCHANTED_BOOK
       display: '&dLivro de Cobiça'
@@ -85,7 +88,6 @@ enchantments:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
-      - '&8 ▪ &fEfeito: &d{value}% &fde dobrar '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
       - '&7Arraste sobre a vara'

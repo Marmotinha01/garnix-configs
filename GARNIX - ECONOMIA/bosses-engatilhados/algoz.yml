@@ -89,10 +89,7 @@ rewards:
       material: ENCHANTED_BOOK
       display: '&4Livro de Massacre &7II'
       lore:
-      - '&7Quantos mobs a sua lâmina'
-      - '&7abate em um único golpe.'
+      - '&7Mobs empilhados morrem'
+      - '&7juntos no mesmo golpe.'
       - ''
       - '&8 ▪ &fMassacre: &4II '
-      - ''
-      - '&7Arraste sobre a lâmina'
-      - '&7para aplicar o livro.'

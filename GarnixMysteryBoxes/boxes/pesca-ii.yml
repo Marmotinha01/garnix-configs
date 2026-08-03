@@ -405,11 +405,7 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
-      - '&8 ▪ &fEfeito: &d5% &fde dobrar '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
-      - '&7Arraste sobre a vara'
-      - '&7para aplicar o livro.'
 
   livro-faro:
     type: COMMAND
@@ -426,14 +422,7 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
-      - '&8 ▪ &fEfeito: &a+15% &fnos raros '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
-      - '&7Só vale para o que já dá'
-      - '&7para pescar no seu nível.'
-      - ''
-      - '&7Arraste sobre a vara'
-      - '&7para aplicar o livro.'
 
   livro-correnteza:
     type: COMMAND
@@ -450,8 +439,4 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
-      - '&8 ▪ &fEfeito: &b-1s &fpor fisgada '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
-      - '&7Arraste sobre a vara'
-      - '&7para aplicar o livro.'

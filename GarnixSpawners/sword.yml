@@ -13,14 +13,21 @@ lore:
 
 glow: true
 
-enchant-line: ' &8◗ &7{display} {level} '
+# O {value} e o efeito do nivel que a lamina TEM: "Massacre 5 (x∞)". Ele so pode
+# viver aqui. No livro ele seria mentira, porque la o {level} e quantos niveis o
+# livro aplica, e nao o nivel final — um livro de 1 numa lamina em Massacre 4
+# entrega o Massacre 5, entao o livro mostraria o efeito do 1 e o jogador ficaria
+# com o do 5. A moldura do numero (sinal, unidade, cor) e o "value-format" de cada
+# encantamento.
+enchant-line: ' &8◗ &7{display} {level} &8({value}&8) '
 no-enchants: ' &8◗ &cNenhum encantamento '
 
 # Os encantamentos são elevados aplicando livros na lâmina (arraste o livro sobre
 # ela no inventário). Cada encantamento define seu próprio livro em "book"
 # (material/display/lore), com os placeholders {enchant} e {level}. O teto de cada
 # encantamento é o maior nível configurado em "levels"; "value"/"chance" por nível
-# definem o efeito no combate.
+# definem o efeito no combate, e o nível pode declarar "value-display" quando o
+# número não se explica sozinho (o Massacre 5 é -1, que na lore vira "∞").
 enchantments:
   # Quantos mobs do empilhamento morrem por golpe (MobManager:618-624).
   # -1 abate a pilha inteira.
@@ -35,16 +42,20 @@ enchantments:
   #                    esta ilimitado e a pilha cresceu enquanto voce estava fora.
   massacre:
     display: '&4Massacre'
+    value-format: '&4x&l{value}'
     book:
       material: ENCHANTED_BOOK
       display: '&4Livro de Massacre'
       lore:
-      - '&7Quantos mobs a sua lâmina'
-      - '&7abate em um único golpe.'
+      - '&7Mobs empilhados morrem'
+      - '&7juntos no mesmo golpe.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
       - '&8 ▪ &fTipo: &cLâmina '
+      - ''
+      - '&7Segurando SHIFT você abate'
+      - '&7um por vez, sem o efeito.'
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -59,6 +70,9 @@ enchantments:
         value: 256
       '5':
         value: -1
+        # O "x" do value-format cola no numero, entao aqui nao cabe frase: "-1"
+        # sairia errado e "a pilha inteira" viraria "xa pilha inteira".
+        value-display: '∞'
   # Multiplicador direto sobre os drops (MobManager:715-717). E o encantamento
   # mais apeloes do servidor: multiplica a unica via sem teto fisico.
   # 2,0 no maximo — ja e o valor que o orcamento de 8,10x da via passiva assume
@@ -66,16 +80,20 @@ enchantments:
   # recalcular `drops.coins.amount` dos 20 spawners.
   pilhagem:
     display: '&aPilhagem'
+    value-format: '&ax&l{value}'
     book:
       material: ENCHANTED_BOOK
       display: '&aLivro de Pilhagem'
       lore:
-      - '&7Aumenta os drops que os'
-      - '&7mobs deixam ao morrer.'
+      - '&7Multiplica os drops que'
+      - '&7os mobs deixam ao morrer.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
       - '&8 ▪ &fTipo: &cLâmina '
+      - ''
+      - '&7Só multiplica os drops. As'
+      - '&7cabeças são do Ceifador.'
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -94,16 +112,20 @@ enchantments:
   # Fase 3a assumiu (fator esperado 1,00 -> 1,75).
   ceifador:
     display: '&dCeifador'
+    value-format: '&a+&l{value}&a%'
     book:
       material: ENCHANTED_BOOK
       display: '&dLivro de Ceifador'
       lore:
-      - '&7Chance de dobrar as'
-      - '&7cabeças que o mob solta.'
+      - '&7Chance de o abate soltar'
+      - '&7o dobro de cabeças.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
       - '&8 ▪ &fTipo: &cLâmina '
+      - ''
+      - '&7Rola uma vez por golpe e'
+      - '&7dobra o abate inteiro.'
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'

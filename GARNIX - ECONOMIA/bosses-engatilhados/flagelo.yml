@@ -89,13 +89,10 @@ rewards:
       material: ENCHANTED_BOOK
       display: '&dLivro de Ceifador &7II'
       lore:
-      - '&7Chance de dobrar as'
-      - '&7cabeças que o mob solta.'
+      - '&7Chance de o abate soltar'
+      - '&7o dobro de cabeças.'
       - ''
       - '&8 ▪ &fCeifador: &dII '
-      - ''
-      - '&7Arraste sobre a lâmina'
-      - '&7para aplicar o livro.'
 
   matadora:
     type: COMMAND

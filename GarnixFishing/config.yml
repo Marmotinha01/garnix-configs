@@ -60,7 +60,13 @@ rod:
   - '' 
   - '&bOpções de uso:'
   - '&fBotão dir. + SHIFT &8➟ &7Gerenciar'
-  enchant-entry: ' &8◗ &7{enchant} {level} '
+  # O {value} é o efeito do nível que a vara TEM: "Correnteza 3 (-3s)". Ele só
+  # pode viver aqui. No livro seria mentira, porque lá o {level} é quantos níveis
+  # o livro aplica, e não o nível final — um livro de 1 numa vara em Correnteza 4
+  # entrega a Correnteza 5, então o livro mostraria o efeito do 1 e o jogador
+  # ficaria com o do 5. A moldura do número (sinal, unidade, cor) é o
+  # "value-format" de cada encantamento, em enchants.yml.
+  enchant-entry: ' &8◗ &7{enchant} {level} &8({value}&8) '
   no-enchants: ' &8◗ &cNenhum encantamento '
 
 # Skin forge item (consumed on use).
