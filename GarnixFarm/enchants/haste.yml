@@ -6,8 +6,8 @@ increase-cost: 780.6
 # PASSIVE flavour (sem chance): tendo nível ≥ 1, o jogador ganha velocidade
 # infinita ao entrar na fazenda (amplificador = nível - 1), até sair ou desencantar.
 icon:
-  slot: 16
-  material: SUGAR
+  slot: 13
+  texture: "32ea85c85fe0484af6c815efb655d2b21e109863c96333b9280b59b80d6ac98f"
   display: "&e{display}"
   lore:
     - "&7Colha mais rápido com"

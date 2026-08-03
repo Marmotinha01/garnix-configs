@@ -14,8 +14,8 @@ messages:
   - "&a&lCEIFA! &7Colheu &f{crops}&7 plantações ao seu redor."
 
 icon:
-  slot: 13
-  material: IRON_HOE
+  slot: 15
+  texture: "32ea85c85fe0484af6c815efb655d2b21e109863c96333b9280b59b80d6ac98f"
   display: "&2{display}"
   lore:
     - "&7Chance de ceifar todas as"

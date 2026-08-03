@@ -21,8 +21,8 @@ title: "&a&lTREVO!"
 subtitle: "&fx{count} chave(s) encontrada(s)"
 
 icon:
-  slot: 17
-  material: DOUBLE_PLANT
+  slot: 22
+  texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&a{display}"
   lore:
     - "&7Chance de encontrar chaves de"

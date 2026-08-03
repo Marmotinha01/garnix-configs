@@ -23,8 +23,8 @@ activate-message: "&6&lESPANTALHO! &7Um espantalho surgiu e vai colher por você
 end-message: "&6&lESPANTALHO! &7O espantalho foi embora."
 
 icon:
-  slot: 19
-  material: PUMPKIN
+  slot: 24
+  texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&6{display}"
   lore:
     - "&7Chance de invocar um espantalho que"

@@ -22,8 +22,8 @@ activate-message: "&e&lENXAME! &7As abelhas chegaram: &a+{bonus}%&7 de ganhos po
 end-message: "&e&lENXAME! &7As abelhas foram embora."
 
 icon:
-  slot: 18
-  material: BLAZE_POWDER
+  slot: 23
+  texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&e{display}"
   lore:
     - "&7Chance de invocar um enxame que"

@@ -1,11 +1,11 @@
 # Menu — Gerenciar Enxada (abre com Shift + Botão-direito na enxada)
 
 title: Gerenciar Enxada
-rows: 6
+rows: 5
 
 # Ícone de skins (animado pelos materiais da enxada) — abre a galeria de skins.
 skins-icon:
-  slot: 48
+  slot: 39
   materials:
   - WOOD_HOE
   - STONE_HOE
@@ -24,7 +24,7 @@ skins-icon:
 
 # Cabeça do jogador com o saldo e o total colhido.
 info-icon:
-  slot: 50
+  slot: 41
   display: '&aSuas Informações'
   lore:
   - '&7Seu saldo e o total de'

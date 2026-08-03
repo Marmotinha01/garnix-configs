@@ -9,8 +9,8 @@ increase-multiplier: 0.03241
 multiplier-provider: "coins"
 
 icon:
-  slot: 10
-  material: GOLD_INGOT
+  slot: 11
+  texture: "32ea85c85fe0484af6c815efb655d2b21e109863c96333b9280b59b80d6ac98f"
   display: "&6{display}"
   lore:
     - "&7Aumenta o &fmultiplicador de dinheiro"

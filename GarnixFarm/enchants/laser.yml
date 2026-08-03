@@ -14,8 +14,8 @@ messages:
   - "&a&lLASER! &7Colheu &f{crops}&7 plantações em linha."
 
 icon:
-  slot: 14
-  material: BLAZE_ROD
+  slot: 20
+  texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&b{display}"
   lore:
     - "&7Chance de disparar um laser e"

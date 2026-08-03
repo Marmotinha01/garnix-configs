@@ -9,8 +9,8 @@ increase-multiplier: 0.003968
 multiplier-provider: "sementes"
 
 icon:
-  slot: 11
-  material: EMERALD
+  slot: 12
+  texture: "32ea85c85fe0484af6c815efb655d2b21e109863c96333b9280b59b80d6ac98f"
   display: "&a{display}"
   lore:
     - "&7Aumenta o &fmultiplicador de sementes"

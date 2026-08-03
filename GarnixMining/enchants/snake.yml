@@ -37,7 +37,7 @@ subtitle: "&f{blocks} blocos destruídos"
 
 icon:
   slot: 24
-  texture: "42024901024636f1c074e6562285f4cc9fd3da2885d4010cee52cc0696d2f96a"
+  texture: "d53fa1b57e4f784d16e5a2daa2f746b2ecfe624ccd74a4d4acc6a2e6a083f54e"
   display: "&2{display}"
   lore:
     - "&7Tenha a chance de invocar uma cobra"

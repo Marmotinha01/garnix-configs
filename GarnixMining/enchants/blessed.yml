@@ -21,7 +21,7 @@ subtitle: "&fx{count} chaves encontradas"
 
 icon:
   slot: 14
-  texture: "c2d41b2279abce5fd626923b61e3ab98dce4972417289ee2b73214c0aaba841e"
+  texture: "1c030cc35fde0218ded5ba5d557cca9e03dcbc84f9e672911da54fe07c5fdbbb"
   display: "&a{display}"
   lore:
     - "&7Tenha a chance de ganhar"

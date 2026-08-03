@@ -14,8 +14,8 @@ messages:
   - "&a&lCATACLISMO! &7Colheu &f{crops}&7 plantações extras."
 
 icon:
-  slot: 12
-  material: TNT
+  slot: 14
+  texture: "32ea85c85fe0484af6c815efb655d2b21e109863c96333b9280b59b80d6ac98f"
   display: "&c{display}"
   lore:
     - "&7Chance de explodir e colher"
