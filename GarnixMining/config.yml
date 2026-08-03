@@ -90,30 +90,11 @@ bonus-lore-format: "&8 ▪ &a+&l{value}&a{unit} {primary_color}{Display} "
 
 # Commands allowed inside the mine for players without mining.bypass.commands.
 mine-command-whitelist:
-- fazenda
-- farm
 - g
 - global
 - tell
 - r
 - lobby
-- arqueiros
-- sumo
-- fight
-- parkour
-- corrida
-- spleef
-- splegg
-- killer
-- destemido
-- mvp
-- tntrun
-- tnt-run
-- sniper
-- paintball
-- batata
-- batata-quente
-- batataquente
 - coinflip
 - mercado
 - ah
