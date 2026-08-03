@@ -45,7 +45,7 @@ rewards:
       amount: 1
       display: '&dBoss Arauto'
       lore:
-      - '&fVida: &4❤75K'
+      - '&fVida: &4❤75.000'
 
   boss-arauto-x3:
     type: COMMAND
@@ -58,7 +58,7 @@ rewards:
       amount: 3
       display: '&dBoss Arauto'
       lore:
-      - '&fVida: &4❤75K'
+      - '&fVida: &4❤75.000'
 
   boss-arauto-x5:
     type: COMMAND
@@ -71,7 +71,7 @@ rewards:
       amount: 5
       display: '&dBoss Arauto'
       lore:
-      - '&fVida: &4❤75K'
+      - '&fVida: &4❤75.000'
 
   # ── TITÃ
   boss-tita:
@@ -85,7 +85,7 @@ rewards:
       amount: 1
       display: '&5Boss Titã'
       lore:
-      - '&fVida: &4❤150K'
+      - '&fVida: &4❤150.000'
 
   boss-tita-x3:
     type: COMMAND
@@ -98,7 +98,7 @@ rewards:
       amount: 3
       display: '&5Boss Titã'
       lore:
-      - '&fVida: &4❤150K'
+      - '&fVida: &4❤150.000'
 
   boss-tita-x5:
     type: COMMAND
@@ -111,7 +111,7 @@ rewards:
       amount: 5
       display: '&5Boss Titã'
       lore:
-      - '&fVida: &4❤150K'
+      - '&fVida: &4❤150.000'
 
   # ── DEVORADOR
   boss-devorador:
@@ -125,7 +125,7 @@ rewards:
       amount: 1
       display: '&4Boss Devorador'
       lore:
-      - '&fVida: &4❤300K'
+      - '&fVida: &4❤300.000'
 
   boss-devorador-x3:
     type: COMMAND
@@ -138,7 +138,7 @@ rewards:
       amount: 3
       display: '&4Boss Devorador'
       lore:
-      - '&fVida: &4❤300K'
+      - '&fVida: &4❤300.000'
 
   boss-devorador-x5:
     type: COMMAND
@@ -151,7 +151,7 @@ rewards:
       amount: 5
       display: '&4Boss Devorador'
       lore:
-      - '&fVida: &4❤300K'
+      - '&fVida: &4❤300.000'
 
   # ── LIVROS
   livro-killstack:
@@ -216,7 +216,7 @@ rewards:
       glow: true
       display: '&bMatadora Ancestral'
       lore:
-      - '&fDano: &c1500'
+      - '&fDano: &c1.500'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
   matadora-runica:
@@ -230,7 +230,7 @@ rewards:
       glow: true
       display: '&6Matadora Rúnica'
       lore:
-      - '&fDano: &c4000'
+      - '&fDano: &c4.000'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
   matadora-abissal:
@@ -244,5 +244,5 @@ rewards:
       glow: true
       display: '&3Matadora Abissal'
       lore:
-      - '&fDano: &c9000'
+      - '&fDano: &c9.000'
       flags: [ 'HIDE_ATTRIBUTES' ]
