@@ -39,7 +39,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} coins 2 15m
+    command: mina givebooster {player} coins 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -60,7 +60,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} coins 2 30m
+    command: mina givebooster {player} coins 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -81,7 +81,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} coins 2 1h
+    command: mina givebooster {player} coins 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -102,7 +102,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} coins 3 5m
+    command: mina givebooster {player} coins 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -123,7 +123,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} coins 3 10m
+    command: mina givebooster {player} coins 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -146,7 +146,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} gemas 2 15m
+    command: mina givebooster {player} gemas 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -167,7 +167,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} gemas 2 30m
+    command: mina givebooster {player} gemas 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -188,7 +188,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} gemas 2 1h
+    command: mina givebooster {player} gemas 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -209,7 +209,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} gemas 3 5m
+    command: mina givebooster {player} gemas 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -230,7 +230,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} gemas 3 10m
+    command: mina givebooster {player} gemas 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -253,7 +253,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} xp 2 15m
+    command: mina givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -274,7 +274,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} xp 2 30m
+    command: mina givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -295,7 +295,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} xp 2 1h
+    command: mina givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -316,7 +316,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} xp 3 5m
+    command: mina givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -337,7 +337,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} xp 3 10m
+    command: mina givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -360,7 +360,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} both 2 15m
+    command: mina givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -381,7 +381,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} both 2 30m
+    command: mina givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -402,7 +402,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} both 2 1h
+    command: mina givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -423,7 +423,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} both 3 5m
+    command: mina givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -444,7 +444,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&6Booster de Mineração'
-    command: mina givebooster {player} both 3 10m
+    command: mina givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -467,7 +467,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} coins 2 15m
+    command: fazenda givebooster {player} coins 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -488,7 +488,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} coins 2 30m
+    command: fazenda givebooster {player} coins 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -509,7 +509,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} coins 2 1h
+    command: fazenda givebooster {player} coins 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -530,7 +530,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} coins 3 5m
+    command: fazenda givebooster {player} coins 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -551,7 +551,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} coins 3 10m
+    command: fazenda givebooster {player} coins 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -574,7 +574,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} sementes 2 15m
+    command: fazenda givebooster {player} sementes 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -595,7 +595,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} sementes 2 30m
+    command: fazenda givebooster {player} sementes 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -616,7 +616,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} sementes 2 1h
+    command: fazenda givebooster {player} sementes 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -637,7 +637,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} sementes 3 5m
+    command: fazenda givebooster {player} sementes 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -658,7 +658,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} sementes 3 10m
+    command: fazenda givebooster {player} sementes 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -681,7 +681,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} xp 2 15m
+    command: fazenda givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -702,7 +702,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} xp 2 30m
+    command: fazenda givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -723,7 +723,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} xp 2 1h
+    command: fazenda givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -744,7 +744,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} xp 3 5m
+    command: fazenda givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -765,7 +765,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} xp 3 10m
+    command: fazenda givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -788,7 +788,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} both 2 15m
+    command: fazenda givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -809,7 +809,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} both 2 30m
+    command: fazenda givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -830,7 +830,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} both 2 1h
+    command: fazenda givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -851,7 +851,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} both 3 5m
+    command: fazenda givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -872,7 +872,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&eBooster de Fazenda'
-    command: fazenda givebooster {player} both 3 10m
+    command: fazenda givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -895,7 +895,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} corais 2 15m
+    command: pesca givebooster {player} corais 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -916,7 +916,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} corais 2 30m
+    command: pesca givebooster {player} corais 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -937,7 +937,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} corais 2 1h
+    command: pesca givebooster {player} corais 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -958,7 +958,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} corais 3 5m
+    command: pesca givebooster {player} corais 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -979,7 +979,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} corais 3 10m
+    command: pesca givebooster {player} corais 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1002,7 +1002,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} xp 2 15m
+    command: pesca givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1023,7 +1023,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} xp 2 30m
+    command: pesca givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1044,7 +1044,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} xp 2 1h
+    command: pesca givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -1065,7 +1065,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} xp 3 5m
+    command: pesca givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1086,7 +1086,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} xp 3 10m
+    command: pesca givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1109,7 +1109,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} both 2 15m
+    command: pesca givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1130,7 +1130,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} both 2 30m
+    command: pesca givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1151,7 +1151,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} both 2 1h
+    command: pesca givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -1172,7 +1172,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} both 3 5m
+    command: pesca givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1193,7 +1193,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&bBooster de Pesca'
-    command: pesca givebooster {player} both 3 10m
+    command: pesca givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1216,7 +1216,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&aBooster de Máquina'
-    command: maquina givebooster {player} 2 15m
+    command: maquina givebooster {player} 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1237,7 +1237,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&aBooster de Máquina'
-    command: maquina givebooster {player} 2 30m
+    command: maquina givebooster {player} 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1258,7 +1258,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&aBooster de Máquina'
-    command: maquina givebooster {player} 2 1h
+    command: maquina givebooster {player} 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -1279,7 +1279,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&aBooster de Máquina'
-    command: maquina givebooster {player} 3 5m
+    command: maquina givebooster {player} 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1300,7 +1300,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&aBooster de Máquina'
-    command: maquina givebooster {player} 3 10m
+    command: maquina givebooster {player} 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1323,7 +1323,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} drops 2 15m
+    command: spawner givebooster {player} drops 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1344,7 +1344,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} drops 2 30m
+    command: spawner givebooster {player} drops 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1365,7 +1365,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} drops 2 1h
+    command: spawner givebooster {player} drops 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -1386,7 +1386,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} drops 3 5m
+    command: spawner givebooster {player} drops 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1407,7 +1407,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} drops 3 10m
+    command: spawner givebooster {player} drops 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1430,7 +1430,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} heads 2 15m
+    command: spawner givebooster {player} heads 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1451,7 +1451,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} heads 2 30m
+    command: spawner givebooster {player} heads 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1472,7 +1472,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} heads 2 1h
+    command: spawner givebooster {player} heads 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -1493,7 +1493,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} heads 3 5m
+    command: spawner givebooster {player} heads 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1514,7 +1514,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&aBooster de Spawner'
-    command: spawner givebooster {player} heads 3 10m
+    command: spawner givebooster {player} heads 3 10m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1537,7 +1537,7 @@ rewards:
     type: COMMAND
     chance: 2
     display: '&aBooster de Armazém'
-    command: armazem givebooster {player} 2 15m
+    command: armazem givebooster {player} 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1558,7 +1558,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&aBooster de Armazém'
-    command: armazem givebooster {player} 2 30m
+    command: armazem givebooster {player} 2 30m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1579,7 +1579,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&aBooster de Armazém'
-    command: armazem givebooster {player} 2 1h
+    command: armazem givebooster {player} 2 1h {amount}
     amount: 1
     icon:
       material: POTION
@@ -1600,7 +1600,7 @@ rewards:
     type: COMMAND
     chance: 1
     display: '&aBooster de Armazém'
-    command: armazem givebooster {player} 3 5m
+    command: armazem givebooster {player} 3 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -1621,7 +1621,7 @@ rewards:
     type: COMMAND
     chance: 0.5
     display: '&aBooster de Armazém'
-    command: armazem givebooster {player} 3 10m
+    command: armazem givebooster {player} 3 10m {amount}
     amount: 1
     icon:
       material: POTION

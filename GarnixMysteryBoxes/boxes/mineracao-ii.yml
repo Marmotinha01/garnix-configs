@@ -56,10 +56,10 @@ box-item:
 # empilha, entao o icone renderiza o numero sozinho.
 rewards:
 
-  # ── ARMADURA TIER III ─────────────────────────────────────────── 25%
+  # ── ARMADURA TIER III ─────────────────────────────────────────── 26%
   armadura-iii-capacete:
     type: COMMAND
-    chance: 6.25
+    chance: 6.5
     display: '&bCapacete Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_helmet {amount}
     amount: 1
@@ -78,7 +78,7 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND
-    chance: 6.25
+    chance: 6.5
     display: '&bPeitoral Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_chestplate {amount}
     amount: 1
@@ -97,7 +97,7 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND
-    chance: 6.25
+    chance: 6.5
     display: '&bCalça Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_leggings {amount}
     amount: 1
@@ -116,7 +116,7 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND
-    chance: 6.25
+    chance: 6.5
     display: '&bBota Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_boots {amount}
     amount: 1
@@ -287,10 +287,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # ── SKINS ─────────────────────────────────────────────────────── 24%
+  # ── SKINS ─────────────────────────────────────────────────────── 26%
   skin-rubi:
     type: COMMAND
-    chance: 8.5
+    chance: 9
     display: '&cSkin de Rubi'
     command: mina giveskin {player} rubi {amount}
     amount: 1
@@ -307,7 +307,7 @@ rewards:
 
   skin-quartzo:
     type: COMMAND
-    chance: 6
+    chance: 6.5
     display: '&fSkin de Quartzo'
     command: mina giveskin {player} quartzo {amount}
     amount: 1
@@ -324,7 +324,7 @@ rewards:
 
   skin-jade:
     type: COMMAND
-    chance: 4
+    chance: 4.5
     display: '&aSkin de Jade'
     command: mina giveskin {player} jade {amount}
     amount: 1
@@ -342,7 +342,7 @@ rewards:
 
   skin-safira:
     type: COMMAND
-    chance: 3
+    chance: 3.5
     display: '&9Skin de Safira'
     command: mina giveskin {player} safira {amount}
     amount: 1
@@ -375,24 +375,6 @@ rewards:
       - '&8 ▪ &a+&l45&a% &dGemas '
       flags:
       - HIDE_ATTRIBUTES
-
-  livro:
-    type: COMMAND
-    chance: 6
-    display: '&aLivro de Pilhagem 2'
-    command: lamina givebook {player} pilhagem 2
-    amount: 1
-    icon:
-      material: ENCHANTED_BOOK
-      display: '&aLivro de Pilhagem &7II'
-      lore:
-      - '&7Aumenta os drops que os'
-      - '&7mobs deixam ao morrer.'
-      - ''
-      - '&8 ▪ &fPilhagem: &aII '
-      - ''
-      - '&7Arraste sobre a lâmina'
-      - '&7para aplicar o livro.'
 
   bomba-6x6:
     type: COMMAND
@@ -432,11 +414,12 @@ rewards:
       lore:
       - '&fÁrea: &c3x3'
 
-  booster:
+  # ── BOOSTERS ───────────────────────────────────────────────────── 5%
+  booster-2x-15m:
     type: COMMAND
-    chance: 2
-    display: '&d&lBooster 3x &7(10min)'
-    command: mina givebooster {player} coins 3 10m
+    chance: 3
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
       material: POTION
@@ -447,8 +430,29 @@ rewards:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: &aCoins '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &710m '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &715m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  booster-2x-30m:
+    type: COMMAND
+    chance: 2
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 2 30m {amount}
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
       flags:
       - HIDE_POTION_EFFECTS

@@ -414,11 +414,12 @@ rewards:
       lore:
       - '&fÁrea: &c3x3'
 
-  booster:
+  # ── BOOSTERS ─────────────────────────────────────────────────── 2,5%
+  booster-2x-5m:
     type: COMMAND
-    chance: 2.5
-    display: '&aBooster 2x &7(15min)'
-    command: mina givebooster {player} coins 2 15m
+    chance: 1.5
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 2 5m {amount}
     amount: 1
     icon:
       material: POTION
@@ -429,9 +430,30 @@ rewards:
       - '&7seus ganhos aumentados.'
       - ''
       - ' &8Informações: '
-      - ' &8▪ &fTipo: &aCoins '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
-      - ' &8▪ &fDuração: &715m '
+      - ' &8▪ &fDuração: &75m '
+      flags:
+      - HIDE_POTION_EFFECTS
+
+  booster-2x-10m:
+    type: COMMAND
+    chance: 1
+    display: '&6Booster de Mineração'
+    command: mina givebooster {player} both 2 10m {amount}
+    amount: 1
+    icon:
+      material: POTION
+      data: 8201
+      display: '&6Booster de Mineração'
+      lore:
+      - '&7Use este booster para ter'
+      - '&7seus ganhos aumentados.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &710m '
       flags:
       - HIDE_POTION_EFFECTS
 

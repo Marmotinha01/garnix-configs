@@ -162,6 +162,7 @@ rewards:
     amount: 1
     icon:
       material: BOOK
+      amount: 1
       glow: true
       display: '&4Livro de Kill-Stack'
       lore:
@@ -169,7 +170,6 @@ rewards:
       - '&7ao abater apenas um.'
       - ''
       - '&8 ▪ &fNível: &c1 '
-      - '&8 ▪ &fQuantia: &c{amount} '
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
   livro-killstack-x2:
@@ -180,6 +180,7 @@ rewards:
     amount: 2
     icon:
       material: BOOK
+      amount: 2
       glow: true
       display: '&4Livro de Kill-Stack'
       lore:
@@ -187,7 +188,6 @@ rewards:
       - '&7ao abater apenas um.'
       - ''
       - '&8 ▪ &fNível: &c1 '
-      - '&8 ▪ &fQuantia: &c{amount} '
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
   # ── MATADORAS
