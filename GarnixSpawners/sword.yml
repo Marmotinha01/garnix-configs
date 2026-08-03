@@ -54,9 +54,6 @@ enchantments:
       - '&8 ▪ &fNível: &7{level} '
       - '&8 ▪ &fTipo: &cLâmina '
       - ''
-      - '&7Segurando SHIFT você abate'
-      - '&7um por vez, sem o efeito.'
-      - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
     levels:
@@ -80,7 +77,7 @@ enchantments:
   # recalcular `drops.coins.amount` dos 20 spawners.
   pilhagem:
     display: '&aPilhagem'
-    value-format: '&ax&l{value}'
+    value-format: '&a&l{value}&ax'
     book:
       material: ENCHANTED_BOOK
       display: '&aLivro de Pilhagem'
@@ -91,9 +88,6 @@ enchantments:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
-      - '&7Só multiplica os drops. As'
-      - '&7cabeças são do Ceifador.'
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
@@ -123,9 +117,6 @@ enchantments:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
-      - '&7Rola uma vez por golpe e'
-      - '&7dobra o abate inteiro.'
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'

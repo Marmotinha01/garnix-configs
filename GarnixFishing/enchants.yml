@@ -58,9 +58,6 @@ enchantments:
       - '&8 ▪ &fNível: &7{level} '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
-      - '&7Só vale para o que já dá'
-      - '&7para pescar no seu nível.'
-      - ''
       - '&7Arraste sobre a vara'
       - '&7para aplicar o livro.'
     levels:
