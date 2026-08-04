@@ -220,9 +220,11 @@ actionbar:
 # Currency placeholders + {value}.
 enchant-reward-entry: '{symbol_color}{symbol}{primary_color}{value} {currency}'
 
-# Pickaxe item shown while mining.
+# Pickaxe item shown while mining. O slot faz parte do layout do hotbar.yml
+# (0 relatório · 2 resetar · 4 picareta · 6 chaves · 8 sair) e é o slot em que o
+# jogador é posicionado ao entrar na mina.
 pickaxe-icon:
-  slot: 3
+  slot: 4
   display: '&6Picareta &7[{blocks}]'
   lore:
   - ''

@@ -79,7 +79,8 @@ enchant-max-simultaneous-global: 80
 # -- Enxada dada dentro da fazenda (mesmo game design da picareta da mina) --
 # {crops} = total colhido; {skin} = nome da skin equipada; {enchants} = encantamentos possuídos.
 hoe-item:
-  hotbar-slot: 4
+  # Faz parte do layout do hotbar.yml (1 relatório · 3 enxada · 5 chaves · 7 sair).
+  hotbar-slot: 3
   display-name: '&eEnxada &7[{crops}]'
   lore:
   - ''

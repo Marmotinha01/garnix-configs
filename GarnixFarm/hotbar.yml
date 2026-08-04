@@ -1,4 +1,27 @@
 # Botões do hotbar dentro da fazenda (slot = índice 0-8).
+#
+# Layout: 1 relatório · 3 enxada · 5 chaves · 7 sair.
+# A enxada não fica aqui — o slot dela é o 'hoe-item.hotbar-slot' do config.yml.
+
+# Chaves de fazenda guardadas. O tamanho da pilha acompanha a contagem e o item
+# brilha enquanto houver pelo menos uma chave, então dá para ler o progresso sem
+# abrir nada. Clique com o botão direito abre o menu da caixa (/crates), com abrir,
+# retirar e o preview das recompensas.
+#
+# {keys} = a contagem REAL, e é ela que vale: a pilha satura em 64, então acima
+# disso só o texto está certo. Com zero chaves a pilha fica em 0 mesmo — o cliente
+# 1.8 desenha o item normalmente e ele continua clicável.
+#
+# A caixa aberta é a do 'key-id' do Trevo (enchants/clover.yml). Sem esse
+# encantamento configurado o botão não aparece.
+keys-icon:
+  slot: 5
+  material: TRIPWIRE_HOOK
+  display: '&aChaves Farm'
+  lore:
+  - '&8▪ &b{keys} chaves guardadas'
+  - ''
+  - '&aClique para gerenciar.'
 
 # Toggle do relatório periódico (dois estados no mesmo slot).
 report-enabled-icon:

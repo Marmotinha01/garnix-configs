@@ -1,6 +1,31 @@
-# Hotbar buttons inside the mine.
+# Hotbar buttons inside the mine (slot = índice 0-8).
+#
+# Layout: 0 relatório · 2 resetar · 4 picareta · 6 chaves · 8 sair.
+# A picareta não fica aqui — o slot dela é o 'pickaxe-icon.slot' do config.yml, e
+# é para ele que o jogador é jogado ao entrar na mina.
+
+# Chaves de mineração guardadas. O tamanho da pilha acompanha a contagem e o item
+# brilha enquanto houver pelo menos uma chave, então dá para ler o progresso sem
+# abrir nada. Clique com o botão direito abre o menu da caixa (/crates), com abrir,
+# retirar e o preview das recompensas.
+#
+# {keys} = a contagem REAL, e é ela que vale: a pilha satura em 64, então acima
+# disso só o texto está certo. Com zero chaves a pilha fica em 0 mesmo — o cliente
+# 1.8 desenha o item normalmente e ele continua clicável.
+#
+# A caixa aberta é a do 'key-id' do Abençoado (enchants/blessed.yml). Sem esse
+# encantamento configurado o botão não aparece.
+keys-icon:
+  slot: 6
+  material: TRIPWIRE_HOOK
+  display: '&eChaves Mineração'
+  lore:
+  - '&8▪ &b{keys} chaves guardadas'
+  - ''
+  - '&eClique para gerenciar.'
+
 report-enabled-icon:
-  slot: 1
+  slot: 0
   material: INK_SACK
   data: 10
   display: '&aRelatório Ativado'
@@ -8,7 +33,7 @@ report-enabled-icon:
   - '&7Clique para desativar.'
 
 report-disabled-icon:
-  slot: 1
+  slot: 0
   material: INK_SACK
   data: 8
   display: '&cRelatório Desativado'
@@ -16,14 +41,14 @@ report-disabled-icon:
   - '&7Clique para ativar.'
 
 reset-icon:
-  slot: 5
+  slot: 2
   material: WATCH
   display: '&cResetar Mina'
   lore:
   - '&7Clique para resetar.'
 
 exit-icon:
-  slot: 7
+  slot: 8
   material: INK_SACK
   data: 1
   display: '&cSair da Mina'
