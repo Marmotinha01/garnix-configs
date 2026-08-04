@@ -9,18 +9,26 @@ max-level: 500
 base-cost: 1000
 increase-cost: 18.75
 
-# 0.1% por bloco no nível 1 e 2% no nível 500.
+# 0,02% por bloco no nível 1 e 10,00% no nível 500, andando 0,02 por nível.
+#
+# O passo é 0.02 e não um número calculado para dar uma chance final "bonita" porque
+# o pedido foi que todo nível caísse numa casa decimal limpa: 0,02 → 0,04 → 0,06, e
+# não 0,1038076. Com passo de duas casas o valor final é o que ele for — e 0.02/0.02
+# é o único par que fecha exatamente em 10,00% ao longo dos 500 níveis (com passo
+# 0.01 a base teria que ser 5,01%, alto demais para o nível 1).
 #
 # As chaves são roladas em TODO bloco quebrado, inclusive os que os encantamentos
 # de área derrubam — então esta chance NÃO se lê sozinha: o ritmo real de chave é
 # ela vezes quantos blocos a picareta derruba por minuto. Quando as chances dos
-# encantamentos de área mudam, o ritmo de chave muda junto, mesmo sem ninguém
-# tocar aqui. Foi o que aconteceu: os valores antigos (0.05% / 1%) foram
-# calibrados contra o ritmo de blocos ANTERIOR ao reequilíbrio que deixou
-# Explosivo e Raio mais raros nos níveis baixos, e na prática saíram
-# ~3x mais lentos do que o pretendido. Estes são o dobro daqueles.
-base-chance: 0.1
-increase-chance: 0.0038076
+# encantamentos de área mudam, o ritmo de chave muda junto, mesmo sem ninguém tocar
+# aqui. Com tudo maxado a picareta derruba ~112 blocos por quebra manual, então
+# 10% viram ~11.200 chaves a cada 1.000 quebras.
+#
+# O Trevo do GarnixFarm usa os mesmos dois números de propósito: a chave tem que ser
+# igualmente fácil nos dois modos, senão um deles vira o único caminho de caixa que
+# vale a pena. Mexeu aqui, mexa lá.
+base-chance: 0.02
+increase-chance: 0.02
 
 # As chaves caem direto nas chaves virtuais do /crates, não no correio, e são
 # creditadas em lote a cada tique do relatório.

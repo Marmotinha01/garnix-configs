@@ -8,11 +8,17 @@ base-cost: 1000
 increase-cost: 18.75
 
 # CHANCE flavour (percent)
-# 0,1% no nível 1 e 2,0% no 500 — os mesmos números do Abençoado. Rola em TODA planta
-# colhida, inclusive as de área, então o ritmo real é este vezes quantas plantas os
-# encantamentos derrubam por minuto.
-base-chance: 0.1
-increase-chance: 0.0038076
+# 0,02% no nível 1 e 10,00% no 500, andando 0,02 por nível — os mesmos dois números do
+# Abençoado do Mining, de propósito. O passo de duas casas é o pedido: todo nível cai
+# numa decimal limpa (0,02 → 0,04 → 0,06) em vez de 0,1038076.
+#
+# Rola em TODA planta colhida, inclusive as de área, então o ritmo real é este vezes
+# quantas plantas os encantamentos derrubam por minuto. Com tudo maxado a enxada colhe
+# ~64 plantas por colheita manual, então 10% viram ~6.400 chaves a cada 1.000 colheitas.
+#
+# Mexeu aqui, mexa no blessed.yml do GarnixMining junto.
+base-chance: 0.02
+increase-chance: 0.02
 # ⚠️ `farm`, nao `fazenda`. O CrateManager tira o id da crate do NOME DO ARQUIVO
 # (`CrateManager:156`), e o arquivo e `GarnixCrates/crates/farm.yml`. Apontando para
 # "fazenda" o encante rodava e nao entregava chave nenhuma, em silencio — e o clover
