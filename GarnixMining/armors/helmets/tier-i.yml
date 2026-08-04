@@ -14,8 +14,8 @@ bonuses:
     value: 1.5
     percent: true
   gemas:
-    value: 1.0
+    value: 1.5
     percent: true
   xp:
-    value: 1.0
+    value: 1.5
     percent: true

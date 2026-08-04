@@ -1,12 +1,22 @@
-# GarnixFishing — Skins da vara. A skin define o bônus de corais e o PESO máximo
+# GarnixFishing — Skins da vara. A skin define os bônus da fisgada e o PESO máximo
 # que a vara consegue fisgar (rewards.yml → weight <= max-weight).
 #
 # Cada skin declara:
 #   display        — nome colorido
 #   material       — material visual da vara
 #   forgeable      — true = 7 desta skin forjam a PRÓXIMA declarada abaixo
-#   currency-bonus — % somado aos corais por fisgada
+#   bonuses        — bônus por provider (value + percent), igual às armaduras
 #   max-weight     — maior peso de recompensa que esta vara alcança
+#
+# Ponha {bonus} numa linha da lore e ela vira uma linha por entrada de 'bonuses'
+# (cor e nome saem da moeda; o xp usa o xp-display do config.yml), então o
+# percentual é escrito UMA vez — em 'bonuses' — e não à mão. O layout da linha é o
+# 'bonus-lore-format' do config.yml.
+#
+# -- MESMO PERCENTUAL PARA TODA MOEDA ---------------------------------
+# Toda skin dá o MESMO percentual em corais e XP, igual às skins de Mining e Farm.
+# É o que permite anunciar um número só de bônus e ele fechar com o que está
+# escrito aqui. A ladder é 2 · 5 · 9 · 14 · 20 · 28 · 38 · 50 · 65.
 #
 # -- LADDER DA TEMPORADA ----------------------------------------------
 # Ordem de raridade (a ordem DESTE arquivo é a ordem da forja):
@@ -27,22 +37,22 @@ rod-skins:
     display: '&eMadeira'
     material: FISHING_ROD
     forgeable: false
-    currency-bonus: 0
     max-weight: 3
     icon:
       material: FISHING_ROD
       display: '&eSkin de Madeira'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+      - '&8 ▾ &cSem bônus. '
+      - ''
 
   coral:
     display: '&3Coral'
     material: FISHING_ROD
     forgeable: true
-    currency-bonus: 2
     max-weight: 6
     icon:
       glow: true
@@ -50,15 +60,22 @@ rod-skins:
       display: '&3Skin de Coral'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 2.0
+        percent: true
+      xp:
+        value: 2.0
+        percent: true
 
   escama:
     display: '&6Escama'
     material: FISHING_ROD
     forgeable: true
-    currency-bonus: 5
     max-weight: 10
     icon:
       glow: true
@@ -66,15 +83,22 @@ rod-skins:
       display: '&6Skin de Escama'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 5.0
+        percent: true
+      xp:
+        value: 5.0
+        percent: true
 
   prata:
     display: '&fPrata'
     material: FISHING_ROD
     forgeable: true
-    currency-bonus: 9
     max-weight: 15
     icon:
       glow: true
@@ -82,15 +106,22 @@ rod-skins:
       display: '&fSkin de Prata'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 9.0
+        percent: true
+      xp:
+        value: 9.0
+        percent: true
 
   turquesa:
     display: '&bTurquesa'
     material: FISHING_ROD
     forgeable: true
-    currency-bonus: 14
     max-weight: 22
     icon:
       glow: true
@@ -98,15 +129,22 @@ rod-skins:
       display: '&bSkin de Turquesa'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 14.0
+        percent: true
+      xp:
+        value: 14.0
+        percent: true
 
   abissita:
     display: '&aAbissita'
     material: FISHING_ROD
     forgeable: true
-    currency-bonus: 20
     max-weight: 32
     icon:
       glow: true
@@ -114,15 +152,22 @@ rod-skins:
       display: '&aSkin de Abissita'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 20.0
+        percent: true
+      xp:
+        value: 20.0
+        percent: true
 
   serenita:
     display: '&5Serenita'
     material: FISHING_ROD
     forgeable: false
-    currency-bonus: 28
     max-weight: 45
     icon:
       glow: true
@@ -130,15 +175,22 @@ rod-skins:
       display: '&5Skin de Serenita'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 28.0
+        percent: true
+      xp:
+        value: 28.0
+        percent: true
 
   oceanita:
     display: '&1Oceanita'
     material: FISHING_ROD
     forgeable: false
-    currency-bonus: 38
     max-weight: 65
     icon:
       glow: true
@@ -146,15 +198,22 @@ rod-skins:
       display: '&1Skin de Oceanita'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 38.0
+        percent: true
+      xp:
+        value: 38.0
+        percent: true
 
   perola:
     display: '&9Pérola'
     material: FISHING_ROD
     forgeable: false
-    currency-bonus: 50
     max-weight: 90
     icon:
       glow: true
@@ -162,15 +221,22 @@ rod-skins:
       display: '&9Skin de Pérola'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 50.0
+        percent: true
+      xp:
+        value: 50.0
+        percent: true
 
   tempestita:
     display: '&dTempestita'
     material: FISHING_ROD
     forgeable: false
-    currency-bonus: 65
     max-weight: 130
     icon:
       glow: true
@@ -178,6 +244,14 @@ rod-skins:
       display: '&dSkin de Tempestita'
       lore:
       - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l{bonus}&a% &3Corais '
+      - ' &8Especificações: '
+      - '{bonus}'
       - '&8 ▪ &cPeso até &l{max_weight}&ckg '
+      - ''
+    bonuses:
+      corais:
+        value: 65.0
+        percent: true
+      xp:
+        value: 65.0
+        percent: true

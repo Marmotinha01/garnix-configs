@@ -34,10 +34,24 @@ economies:
 #   juntado pelo separator (economia com ganho 0 é omitida).
 # provider-display (por moeda): {symbol_color}{symbol}{primary_color}{value} {currency}
 #   (currency = nome no singular/plural pelo valor).
+# Moeda que o bônus somado reporta — o {bonus} da actionbar e o %farm_bonus% da
+# scoreboard. Os dois leem daqui para nunca mostrarem números diferentes.
+#
+# O bônus soma booster + skin + armadura + cargo, que é o que "bônus" significa nas
+# lores das skins e das armaduras — então o número da tela fecha com o que está
+# escrito nelas. O multiplicador dos encantamentos NÃO entra: ele é multiplicativo,
+# não soma percentual.
+#
+# Na prática a moeda escolhida tanto faz, porque skins e armaduras usam o mesmo
+# percentual para todas as moedas. A chave existe para o dia em que deixarem de usar.
+bonus-display-provider: coins
+
+# {bonus} = bônus somado em percentual, da moeda em 'bonus-display-provider' acima.
+# Vem sem o '%', então escreva o símbolo na linha.
 actionbar:
   separator: ' &8■ '
   provider-display: '{primary_color}&l+&r {symbol_color}{symbol}{primary_color}{value} &7{currency}'
-  message: '{providers}{separator}&7Nível &a{level}&7/&a{max_level}{separator}&7XP &a{xp}&8/&c{xp_needed}'
+  message: '{providers}{separator}&7Bônus &a&l{bonus}&a%{separator}&7Nível &a{level}&7/&a{max_level}{separator}&7XP &a{xp}&8/&c{xp_needed}'
 
 # Barra de progresso do XP (actionbar + placeholder %farm_level_bar%).
 progress-bar:

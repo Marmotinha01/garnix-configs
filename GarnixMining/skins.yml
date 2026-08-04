@@ -13,6 +13,14 @@
 # percentage is written once — in 'bonuses' — instead of by hand. The line
 # layout is 'bonus-format' below (overrides config.yml's bonus-lore-format).
 #
+# -- MESMO PERCENTUAL PARA TODA MOEDA ---------------------------------
+# Toda skin dá o MESMO percentual em coins, gemas e XP. É o que permite a
+# actionbar e a scoreboard mostrarem um número só de bônus ({bonus} e
+# %mining_bonus%) que fecha com o que está escrito aqui. Se um dia as moedas
+# forem diferenciadas, esse número passa a ser só o da moeda escolhida em
+# config.yml → bonus-display-provider, e a conta deixa de fechar para as outras.
+# A ladder é 2 · 5 · 9 · 14 · 20 · 28 · 38 · 50 · 65, igual à de Farm e Pesca.
+#
 # The "default" skin is given to new players.
 # Skins are unlocked via items (created with /mina giveskin).
 # Players can remove unlocked skins back to item form to trade them.
@@ -59,6 +67,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -66,7 +75,10 @@ skins:
         value: 2.0
         percent: true
       gemas:
-        value: 1.0
+        value: 2.0
+        percent: true
+      xp:
+        value: 2.0
         percent: true
 
   ferro:
@@ -80,6 +92,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -87,7 +100,10 @@ skins:
         value: 5.0
         percent: true
       gemas:
-        value: 3.0
+        value: 5.0
+        percent: true
+      xp:
+        value: 5.0
         percent: true
 
   ouro:
@@ -101,6 +117,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -108,7 +125,10 @@ skins:
         value: 9.0
         percent: true
       gemas:
-        value: 5.0
+        value: 9.0
+        percent: true
+      xp:
+        value: 9.0
         percent: true
 
   diamante:
@@ -122,6 +142,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -129,7 +150,10 @@ skins:
         value: 14.0
         percent: true
       gemas:
-        value: 8.0
+        value: 14.0
+        percent: true
+      xp:
+        value: 14.0
         percent: true
 
   rubi:
@@ -143,6 +167,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -150,7 +175,10 @@ skins:
         value: 20.0
         percent: true
       gemas:
-        value: 12.0
+        value: 20.0
+        percent: true
+      xp:
+        value: 20.0
         percent: true
 
   quartzo:
@@ -164,6 +192,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -171,7 +200,10 @@ skins:
         value: 28.0
         percent: true
       gemas:
-        value: 17.0
+        value: 28.0
+        percent: true
+      xp:
+        value: 28.0
         percent: true
 
   jade:
@@ -186,6 +218,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -193,7 +226,10 @@ skins:
         value: 38.0
         percent: true
       gemas:
-        value: 25.0
+        value: 38.0
+        percent: true
+      xp:
+        value: 38.0
         percent: true
 
   safira:
@@ -208,6 +244,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -215,7 +252,10 @@ skins:
         value: 50.0
         percent: true
       gemas:
-        value: 34.0
+        value: 50.0
+        percent: true
+      xp:
+        value: 50.0
         percent: true
 
   mithril:
@@ -230,6 +270,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -237,5 +278,8 @@ skins:
         value: 65.0
         percent: true
       gemas:
-        value: 45.0
+        value: 65.0
+        percent: true
+      xp:
+        value: 65.0
         percent: true

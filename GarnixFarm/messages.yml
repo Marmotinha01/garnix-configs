@@ -110,31 +110,54 @@ report:
   disabled: '&cRelatório da fazenda desativado.'
 
 # Relatório periódico. Tokens da mensagem: {crops} {currencies} {enchants}
+#
+# O relatório só sai depois de um minuto INTEIRO colhendo: o contador começa na
+# primeira plantação, então quem acabou de entrar na fazenda não recebe um resumo
+# de cinco segundos.
+#
+# São dois layouts. O 'messages-no-enchants' entra quando nenhum encantamento
+# ativou no minuto: o bloco inteiro de encantamentos some, em vez de gastar duas
+# linhas para anunciar que não houve nenhum.
+#
+# Cor: o cinza fica nos RÓTULOS e o claro nos NÚMEROS. Antes era o contrário — o
+# rótulo em &f e o valor em &7 — e o olho batia na palavra em vez do dado, o que
+# deixava o bloco inteiro com cara de cinza. A nota do minuto usa &8 por ser
+# secundária, e as moedas já vêm coloridas pela própria moeda.
 farm-report:
   messages:
   - ''
-  - '  &a&lWOW. &7Aqui está seu progresso na fazenda.'
-  - '  &7(Progresso após 1 minuto colhendo)'
+  - '  &a&lNICE! &fAqui está seu progresso na fazenda.'
+  - '  &8Somado no último minuto colhendo.'
   - ''
-  - '  &fPlantações colhidas: &7{crops}'
+  - '  &8▶ &7Plantações colhidas: &f{crops}'
   - '{currencies}'
   - ''
   - '  &fEncantamentos ativados:'
   - '{enchants}'
   - ''
-  currency-entry: '   &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
-  enchant-entry: '   &e{display} &7x{count}'
-  no-enchants: '   &7Nenhum encantamento ativado.'
+  messages-no-enchants:
+  - ''
+  - '  &a&lNICE! &fAqui está seu progresso na fazenda.'
+  - '  &8Somado no último minuto colhendo.'
+  - ''
+  - '  &8▶ &7Plantações colhidas: &f{crops}'
+  - '{currencies}'
+  - ''
+  currency-entry: '  &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  # {display} já vem colorido com a cor do próprio encantamento (a mesma do ícone),
+  # então não leva cor aqui — qualquer código antes dele seria descartado.
+  enchant-entry: '  &8▶ {display} &fx{count}'
 
 # Subida de nível de fazenda. Tokens: {level} {max_level} {old_level}
+# A cor do nível acompanha a cor do GG! em cada caso.
 levelup:
   up:
   - ''
-  - '  &a&lGG. &7Você subiu para o nível &a&l{level}&7 de fazenda.'
+  - '  &a&lGG! &7Você subiu para o nível &a&l{level}&7 de fazenda.'
   - ''
   max-level:
   - ''
-  - '  &6&lGG. &7Você chegou ao nível máximo &c&l{level}&7 de fazenda.'
+  - '  &6&lGG! &7Você chegou ao nível máximo &6&l{level}&7 de fazenda.'
   - ''
 
 # -- Entrega de itens ---------------------------------------------------

@@ -7,6 +7,14 @@
 #   icon      — ícone do menu
 #   bonuses   — bônus por provider (value + percent)
 #
+# -- MESMO PERCENTUAL PARA TODA MOEDA ---------------------------------
+# Toda skin dá o MESMO percentual em coins, sementes e XP. É o que permite a
+# actionbar e a scoreboard mostrarem um número só de bônus ({bonus} e
+# %farm_bonus%) que fecha com o que está escrito aqui. Se um dia as moedas forem
+# diferenciadas, esse número passa a ser só o da moeda escolhida em
+# config.yml → bonus-display-provider, e a conta deixa de fechar para as outras.
+# A ladder é 2 · 5 · 9 · 14 · 20 · 28 · 38 · 50 · 65, igual à de Mining e Pesca.
+#
 # -- LADDER DA TEMPORADA ----------------------------------------------
 # Ordem de raridade (a ordem DESTE arquivo é a ordem da forja):
 #   Madeira · Pedra · Ferro · Ouro · Diamante · Âmbar · Esmeralda ·
@@ -47,6 +55,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -54,7 +63,10 @@ skins:
         value: 2.0
         percent: true
       sementes:
-        value: 1.0
+        value: 2.0
+        percent: true
+      xp:
+        value: 2.0
         percent: true
 
   ferro:
@@ -68,6 +80,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -75,7 +88,10 @@ skins:
         value: 5.0
         percent: true
       sementes:
-        value: 3.0
+        value: 5.0
+        percent: true
+      xp:
+        value: 5.0
         percent: true
 
   ouro:
@@ -89,6 +105,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -96,7 +113,10 @@ skins:
         value: 9.0
         percent: true
       sementes:
-        value: 5.0
+        value: 9.0
+        percent: true
+      xp:
+        value: 9.0
         percent: true
 
   diamante:
@@ -110,6 +130,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -117,7 +138,10 @@ skins:
         value: 14.0
         percent: true
       sementes:
-        value: 8.0
+        value: 14.0
+        percent: true
+      xp:
+        value: 14.0
         percent: true
 
   ambar:
@@ -131,6 +155,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -138,7 +163,10 @@ skins:
         value: 20.0
         percent: true
       sementes:
-        value: 12.0
+        value: 20.0
+        percent: true
+      xp:
+        value: 20.0
         percent: true
 
   esmeralda:
@@ -152,6 +180,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -159,7 +188,10 @@ skins:
         value: 28.0
         percent: true
       sementes:
-        value: 17.0
+        value: 28.0
+        percent: true
+      xp:
+        value: 28.0
         percent: true
 
   # ⚠️ SKIN NOVA — a 10ª da fazenda, criada para fechar a assimetria com as
@@ -189,6 +221,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -196,7 +229,10 @@ skins:
         value: 38.0
         percent: true
       sementes:
-        value: 25.0
+        value: 38.0
+        percent: true
+      xp:
+        value: 38.0
         percent: true
 
   cristal:
@@ -211,6 +247,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -218,7 +255,10 @@ skins:
         value: 50.0
         percent: true
       sementes:
-        value: 34.0
+        value: 50.0
+        percent: true
+      xp:
+        value: 50.0
         percent: true
 
   marfim:
@@ -233,6 +273,7 @@ skins:
       - ''
       - ' &8Especificações: '
       - '{bonus}'
+      - ''
       flags:
       - HIDE_ATTRIBUTES
     bonuses:
@@ -240,5 +281,8 @@ skins:
         value: 65.0
         percent: true
       sementes:
-        value: 45.0
+        value: 65.0
+        percent: true
+      xp:
+        value: 65.0
         percent: true

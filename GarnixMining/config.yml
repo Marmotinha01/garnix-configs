@@ -20,6 +20,18 @@ both-display:
 # Currency used to buy/refund enchant levels. Must be a GarnixCurrencies id.
 enchant-currency: gemas
 
+# Moeda que o bônus somado reporta — o {bonus} da actionbar e o %mining_bonus% da
+# scoreboard. Os dois leem daqui para nunca mostrarem números diferentes.
+#
+# O bônus soma booster + skin + armadura + cargo, que é o que "bônus" significa nas
+# lores das skins e das armaduras — então o número da tela fecha com o que está
+# escrito nelas. O multiplicador dos encantamentos (Afortunado/Gemado) e o Frenesi
+# NÃO entram: eles são multiplicativos, não somam percentual.
+#
+# Na prática a moeda escolhida tanto faz, porque skins e armaduras usam o mesmo
+# percentual para todas as moedas. A chave existe para o dia em que deixarem de usar.
+bonus-display-provider: coins
+
 # Refund percentage applied when disenchanting (40 = 40% of the paid cost).
 enchant-refund-percentage: 40.0
 
@@ -187,14 +199,17 @@ booster-icon:
   - '&fBotão direito &8➟ &7Ativar'
   - '&fBotão dir. + SHIFT &8➟ &7Juntar'
 
-# Action bar shown while mining. Placeholders: {providers} {separator}
+# Action bar shown while mining. Placeholders: {providers} {separator} {bonus}
 # {mine_level} {max_level} {mine_exp} {mine_need_exp}.
 # "provider-display" is per-currency: currency placeholders + {value}.
+#
+# {bonus} = bônus somado em percentual (booster + skin + armadura + cargo), da moeda
+# em 'bonus-display-provider' acima. Vem sem o '%', então escreva o símbolo na linha.
 actionbar:
   separator: ' &8■ '
   tax-display: '&fTaxa &c&l{tax}&c%'
   provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value} {currency}'
-  message: '{providers}{separator}&7Nível &a{mine_level}&7/&a{max_level}{separator}&7XP &a{mine_exp}&8/&c{mine_need_exp}'
+  message: '{providers}{separator}&7Bônus &a&l{bonus}&a%{separator}&7Nível &a{mine_level}&7/&a{max_level}{separator}&7XP &a{mine_exp}&8/&c{mine_need_exp}'
 
 # Per-currency entry for the {rewards} placeholder of enchant messages/titles.
 # Currency placeholders + {value}.

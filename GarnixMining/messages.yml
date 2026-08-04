@@ -222,37 +222,56 @@ admin:
 # O relatório só é enviado depois de um minuto INTEIRO minerando: o contador
 # começa no primeiro bloco quebrado, então quem acabou de entrar na mina não
 # recebe um resumo de cinco segundos.
+#
+# São dois layouts. O 'messages-no-enchants' entra quando nenhum encantamento
+# ativou no minuto: o bloco inteiro de encantamentos some, em vez de gastar duas
+# linhas para anunciar que não houve nenhum.
+# Cor: o cinza fica nos RÓTULOS e o claro nos NÚMEROS. Antes era o contrário — o
+# rótulo em &f e o valor em &7 — e o olho batia na palavra em vez do dado, o que
+# deixava o bloco inteiro com cara de cinza. A nota do minuto usa &8 por ser
+# secundária, e as moedas já vêm coloridas pela própria moeda.
 mining-report:
   messages:
   - ''
-  - '  &a&lWOW. &7Aqui está seu progresso na mineração.'
-  - '  &7(Somado no último minuto minerado)'
+  - '  &a&lNICE! &fAqui está seu progresso na mineração.'
+  - '  &8Somado no último minuto minerado.'
   - ''
-  - '  &fBlocos quebrados: &7{blocks}'
+  - '  &8▶ &7Blocos quebrados: &f{blocks}'
   - '{currencies}'
   - ''
   - '  &fEncantamentos ativados:'
   - '{enchants}'
   - ''
-  currency-entry: '   &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
-  enchant-entry: '   &8▶ &f{display} &7x{count}'
-  no-enchants: '   &8▶ &7Nenhum encantamento ativado.'
+  messages-no-enchants:
+  - ''
+  - '  &a&lNICE! &fAqui está seu progresso na mineração.'
+  - '  &8Somado no último minuto minerado.'
+  - ''
+  - '  &8▶ &7Blocos quebrados: &f{blocks}'
+  - '{currencies}'
+  - ''
+  currency-entry: '  &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  # {display} já vem colorido com a cor do próprio encantamento (a mesma do ícone),
+  # então não leva cor aqui — qualquer código antes dele seria descartado.
+  enchant-entry: '  &8▶ {display} &fx{count}'
 
+# A cor do nível acompanha a cor do GG! em cada caso, e a segunda linha diz o que
+# mudou de fato. Os três blocos têm comprimento parecido de propósito.
 levelup:
   xp-gate:
   - ''
-  - '  &a&lGG. &7A mina de &f{owner} &7subiu para o nível &a&l{level}&7.'
-  - '  &7Próximo upgrade de blocos em &c{levels-until} &7níveis.'
+  - '  &a&lGG! &7A mina de &f{owner} &7subiu para o nível &a&l{level}&7.'
+  - '  &7Faltam &c{levels-until} &7níveis para os próximos blocos.'
   - ''
   blocks-changed:
   - ''
-  - '  &e&lGG. &7A mina de &f{owner} &7subiu para o nível &e&l{level}&7.'
-  - '  &7Novos blocos desbloqueados. A mina foi regenerada.'
+  - '  &e&lGG! &7A mina de &f{owner} &7subiu para o nível &e&l{level}&7.'
+  - '  &7Novos blocos liberados. A mina foi regenerada.'
   - ''
   max-level:
   - ''
-  - '  &6&lGG. &7A mina de &f{owner} &7chegou ao nível &c&l{level}&7.'
-  - '  &7Parabéns. A mina atingiu o último nível.'
+  - '  &6&lGG! &7A mina de &f{owner} &7chegou ao nível &6&l{level}&7.'
+  - '  &7Esse é o último nível possível da mina.'
   - ''
 
 # -- Entrega de itens ---------------------------------------------------
