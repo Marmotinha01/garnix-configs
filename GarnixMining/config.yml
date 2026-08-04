@@ -76,9 +76,9 @@ enchant-refund-percentage: 40.0
 # 0 = ilimitado, e é o padrão de propósito.
 #
 # Os limites por jogador já seguram a carga no dia a dia: cada um pode ter no
-# máximo 1 kraken, 1 blaze, 1 wither, 1 meteoro e 3 cobras ao mesmo tempo. Só um
-# servidor com MUITOS jogadores de nível alto minerando junto chega perto do teto
-# da main thread. Ligar o orçamento antes disso só faz encantamento deixar de
+# máximo 1 kraken, 1 blaze, 1 wither, 1 meteoro e 3 serpentes ao mesmo tempo. Só
+# um servidor com MUITOS jogadores de nível alto minerando junto chega perto do
+# teto da main thread. Ligar o orçamento antes disso só faz encantamento deixar de
 # disparar sem necessidade, e o jogador sente como se o item tivesse quebrado.
 # Então ele fica desligado até o servidor mostrar que precisa.
 #
@@ -86,8 +86,8 @@ enchant-refund-percentage: 40.0
 #   kraken 185   wither 21   blaze 18   meteor 9   snake 4
 #
 # O orçamento conta TRABALHO e não quantidade, porque os efeitos não são nem de
-# longe equivalentes: "50 efeitos" são 200 packets/tick se forem cobras e 9250 se
-# forem krakens. Um kraken sozinho custa o mesmo que 46 cobras.
+# longe equivalentes: "50 efeitos" são 200 packets/tick se forem serpentes e 9250
+# se forem krakens. Um kraken sozinho custa o mesmo que 46 serpentes.
 #
 # O custo do kraken sai de 'tentacles' x 'tentacle-length' do kraken.yml, então
 # diminuir esses valores barateia cada kraken aqui também, automaticamente.
