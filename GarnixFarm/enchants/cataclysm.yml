@@ -11,7 +11,9 @@ explosion-radius: 2
 title: "&c&lCATACLISMO"
 subtitle: "&7+{crops} plantações"
 messages:
+  - ""
   - "&a&lCATACLISMO! &7Colheu &f{crops}&7 plantações extras."
+  - ""
 
 icon:
   slot: 14
@@ -19,7 +21,7 @@ icon:
   display: "&c{display}"
   lore:
     - "&7Chance de explodir e colher"
-    - "&7plantações num raio ao redor."
+    - "&7um quadrado de plantações."
     - ""
     - "&fNível: &a{level}&8/&c{max-level}"
     - "&fChance: &7{chance}%"

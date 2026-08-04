@@ -11,7 +11,9 @@ base-chance: 0.194
 increase-chance: 0.0073763
 
 messages:
+  - ""
   - "  &a&lDEMOLIÇAO &8▶ &7{blocks} blocos &8▪ {rewards}"
+  - ""
 
 title: "&a&lDEMOLIÇAO!"
 subtitle: "&f{blocks} blocos destruídos"
@@ -21,8 +23,8 @@ icon:
   texture: "d53fa1b57e4f784d16e5a2daa2f746b2ecfe624ccd74a4d4acc6a2e6a083f54e"
   display: "&a{display}"
   lore:
-    - "&7Tenha a chance de quebrar"
-    - "&7uma linha de 8 direções na mina!"
+    - "&7Chance de quebrar linhas em"
+    - "&7estrela para todos os lados."
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
     - " &fChance: &c{chance}%"

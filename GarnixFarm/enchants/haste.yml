@@ -10,7 +10,7 @@ icon:
   texture: "32ea85c85fe0484af6c815efb655d2b21e109863c96333b9280b59b80d6ac98f"
   display: "&e{display}"
   lore:
-    - "&7Colha mais rápido com"
-    - "&7efeito de velocidade permanente."
+    - "&7Dá efeito de velocidade fixo"
+    - "&7enquanto você está na fazenda."
     - ""
     - "&fNível: &a{level}&8/&c{max-level}"

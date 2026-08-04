@@ -11,7 +11,9 @@ base-chance: 0.0345
 increase-chance: 0.0013124
 
 messages:
+  - ""
   - "  &a&lANIQUILAÇAO &8▶ &7{blocks} blocos &8▪ {rewards}"
+  - ""
 
 title: "&a&lANIQUILAÇAO!"
 subtitle: "&f{blocks} blocos destruídos"
@@ -21,8 +23,8 @@ icon:
   texture: "93a69c3caa31304e9952328c72cee0b57b2a2bd46ce9c5cb88c07d1266277d6a"
   display: "&a{display}"
   lore:
-    - "&7Tenha a chance de quebrar"
-    - "&7uma camada inteira na mina!"
+    - "&7Chance de aniquilar a camada"
+    - "&7inteira em que você minera."
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
     - " &fChance: &c{chance}%"

@@ -20,9 +20,9 @@ keys-icon:
   material: TRIPWIRE_HOOK
   display: '&aChaves Farm'
   lore:
-  - '&8▪ &b{keys} chaves guardadas'
+  - '&fQuantia: &ax&l{keys}'
   - ''
-  - '&aClique para gerenciar.'
+  - '&7Clique para gerenciar.'
 
 # Toggle do relatório periódico (dois estados no mesmo slot).
 report-enabled-icon:

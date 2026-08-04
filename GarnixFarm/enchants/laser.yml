@@ -11,15 +11,17 @@ max-line-radius: 6
 title: "&b&lLASER"
 subtitle: "&7+{crops} plantações"
 messages:
+  - ""
   - "&a&lLASER! &7Colheu &f{crops}&7 plantações em linha."
+  - ""
 
 icon:
   slot: 20
   texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&b{display}"
   lore:
-    - "&7Chance de disparar um laser e"
-    - "&7colher plantações em linha reta."
+    - "&7Chance de disparar lasers e"
+    - "&7colher nas quatro direções."
     - ""
     - "&fNível: &a{level}&8/&c{max-level}"
     - "&fChance: &7{chance}%"

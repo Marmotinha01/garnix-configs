@@ -24,8 +24,8 @@ icon:
   texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&a{display}"
   lore:
-    - "&7Chance de encontrar chaves de"
-    - "&7fazenda enquanto colhe."
+    - "&7Chance de achar chaves de"
+    - "&7fazenda enquanto você colhe."
     - ""
     - "&fNível: &a{level}&8/&c{max-level}"
     - "&fChance: &7{chance}%"

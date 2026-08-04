@@ -64,7 +64,9 @@ tentacle-texture: "4bf58283ffca8bdc59436e83d94e9f134426316b99bab5b9af90dffdb082a
 tip-texture: "4ba74e76b3a99f146db628ede6be2f3c3720daa8f6829ccc1251d9db42bc2d63"
 
 messages:
+  - ""
   - "  &3&lKRAKEN &8▶ &7{blocks} blocos &8▪ {rewards}"
+  - ""
 
 title: "&3&lKRAKEN!"
 subtitle: "&f{blocks} blocos destruídos"
@@ -74,8 +76,8 @@ icon:
   texture: "93a69c3caa31304e9952328c72cee0b57b2a2bd46ce9c5cb88c07d1266277d6a"
   display: "&3{display}"
   lore:
-    - "&7Tenha a chance de invocar um kraken"
-    - "&7que devora a mina com tentáculos!"
+    - "&7Chance de invocar um kraken"
+    - "&7que cava com os tentáculos."
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
     - " &fChance: &c{chance}%"

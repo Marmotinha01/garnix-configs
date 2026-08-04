@@ -34,8 +34,8 @@ icon:
   texture: "1c030cc35fde0218ded5ba5d557cca9e03dcbc84f9e672911da54fe07c5fdbbb"
   display: "&a{display}"
   lore:
-    - "&7Tenha a chance de ganhar"
-    - "&7chaves de mineração!"
+    - "&7Chance de achar chaves de"
+    - "&7mineração enquanto minera."
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
     - " &fChance: &c{chance}%"

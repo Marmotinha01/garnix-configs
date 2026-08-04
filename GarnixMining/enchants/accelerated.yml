@@ -12,8 +12,8 @@ icon:
   texture: "1c030cc35fde0218ded5ba5d557cca9e03dcbc84f9e672911da54fe07c5fdbbb"
   display: "&a{display}"
   lore:
-  - "&7Minere mais rápido com"
-  - "&7efeito de velocidade."
+  - "&7Dá efeito de velocidade fixo"
+  - "&7enquanto você está na mina."
   - ""
   - " &fNível: &a{level}&8/&c{max-level}"
   - ""

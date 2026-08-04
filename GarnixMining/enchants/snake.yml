@@ -28,7 +28,9 @@ area-radius: 1
 max-simultaneous: 3
 
 messages:
+  - ""
   - "  &2&lCOBRA &8▶ &7{blocks} blocos &8▪ {rewards}"
+  - ""
 
 title: "&2&lCOBRA!"
 subtitle: "&f{blocks} blocos destruídos"
@@ -38,8 +40,8 @@ icon:
   texture: "d53fa1b57e4f784d16e5a2daa2f746b2ecfe624ccd74a4d4acc6a2e6a083f54e"
   display: "&2{display}"
   lore:
-    - "&7Tenha a chance de invocar uma cobra"
-    - "&7de slimes que devora um caminho!"
+    - "&7Chance de invocar uma cobra"
+    - "&7que cava um túnel pela mina."
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
     - " &fChance: &c{chance}%"

@@ -25,7 +25,9 @@ skull-duration-ticks: 60
 skull-interval-ticks: 4
 
 messages:
+  - ""
   - "  &8&lWITHER &8▶ &7{blocks} blocos &8▪ {rewards}"
+  - ""
 
 title: "&8&lWITHER!"
 subtitle: "&f{blocks} blocos destruídos"
@@ -35,8 +37,8 @@ icon:
   texture: "93a69c3caa31304e9952328c72cee0b57b2a2bd46ce9c5cb88c07d1266277d6a"
   display: "&8{display}"
   lore:
-    - "&7Tenha a chance de invocar um Wither"
-    - "&7que gira e destrói tudo ao redor!"
+    - "&7Chance de invocar um Wither"
+    - "&7que lança crânios na mina."
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
     - " &fChance: &c{chance}%"

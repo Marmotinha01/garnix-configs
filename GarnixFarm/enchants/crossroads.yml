@@ -11,15 +11,17 @@ max-line-radius: 6
 title: "&d&lENCRUZILHADA"
 subtitle: "&7+{crops} plantações"
 messages:
+  - ""
   - "&a&lENCRUZILHADA! &7Colheu &f{crops}&7 plantações na diagonal."
+  - ""
 
 icon:
   slot: 21
   texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&d{display}"
   lore:
-    - "&7Chance de colher plantações"
-    - "&7nas quatro diagonais."
+    - "&7Chance de rasgar a terra e"
+    - "&7colher nas quatro diagonais."
     - ""
     - "&fNível: &a{level}&8/&c{max-level}"
     - "&fChance: &7{chance}%"

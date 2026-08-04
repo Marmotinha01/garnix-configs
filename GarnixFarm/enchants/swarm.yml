@@ -26,8 +26,8 @@ icon:
   texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&e{display}"
   lore:
-    - "&7Chance de invocar um enxame que"
-    - "&7dá bônus de ganhos enquanto ativo."
+    - "&7Chance de invocar um enxame"
+    - "&7que dá um bônus de ganhos."
     - ""
     - "&fNível: &a{level}&8/&c{max-level}"
     - "&fChance: &7{chance}%"

@@ -23,7 +23,7 @@ level-icon:
   - '&7O que a sua mina gera ao'
   - '&7alcançar este nível.'
   - ''
-  - '&8 ▪ &fXP necessário: &7{xp} '
+  - '&8 ▪ &fXP: &c{xp} '
   - ''
   - ' &8Composição da mina: '
   - '{block_list}'

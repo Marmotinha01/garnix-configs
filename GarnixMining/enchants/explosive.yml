@@ -13,7 +13,9 @@ increase-chance: 0.028258
 effect-radius: 1
 
 messages:
+  - ""
   - "  &a&lEXPLOSIVO &8▶ &7{blocks} blocos &8▪ {rewards}"
+  - ""
 
 title: "&a&lEXPLOSIVO!"
 subtitle: "&f{blocks} blocos destruídos"
@@ -23,8 +25,8 @@ icon:
   texture: "1c030cc35fde0218ded5ba5d557cca9e03dcbc84f9e672911da54fe07c5fdbbb"
   display: "&a{display}"
   lore:
-    - "&7Tenha a chance de explodir"
-    - "&7um cubo na mina!"
+    - "&7Chance de explodir um cubo"
+    - "&7de blocos onde você minera."
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
     - " &fChance: &c{chance}%"

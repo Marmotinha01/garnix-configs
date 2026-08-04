@@ -21,9 +21,9 @@ keys-icon:
   material: TRIPWIRE_HOOK
   display: '&eChaves Mineração'
   lore:
-  - '&8▪ &b{keys} chaves guardadas'
+  - '&fQuantia: &ax&l{keys}'
   - ''
-  - '&eClique para gerenciar.'
+  - '&7Clique para gerenciar.'
 
 report-enabled-icon:
   slot: 0
