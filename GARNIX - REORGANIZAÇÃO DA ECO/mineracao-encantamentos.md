@@ -267,7 +267,9 @@ No Explosivo, comprar do nível 383 ao 417 custava **1.614.812,5 gemas** sem que
 + 0,0265%    (Wither nv 1, quatro casas fixas)
 ```
 
-Os zeros à direita **não** são removidos de propósito: largura fixa impede a lore de tremer conforme o número cresce. A composição de blocos dos menus (`levels-info.yml`, `mine.yml`) continua no `ChanceFormatter`, que é o certo para "50%".
+Os zeros à direita **não** são removidos de propósito: largura fixa impede a lore de tremer conforme o número cresce. A única exceção é o **nível 0**, que sai como `0%` e não como `0,0000%` — quem não tem o encantamento não tem chance nenhuma para escrever em quatro casas, e o número cheio de zeros lê como valor arredondado para baixo em vez de "você ainda não tem isto".
+
+A composição de blocos dos menus (`levels-info.yml`, `mine.yml`) continua no `ChanceFormatter`, que é o certo para "50%".
 
 ---
 
