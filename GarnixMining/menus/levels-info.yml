@@ -25,10 +25,10 @@ level-icon:
   - ''
   - '&8 ▪ &fXP necessário: &7{xp} '
   - ''
-  - ' &8Composição da mina:'
+  - ' &8Composição da mina: '
   - '{block_list}'
   - ''
 
 block-entry: '&8 ▪ &f{block_name} &e{chance} '
 reward-separator: ''
-reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '
+reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} '

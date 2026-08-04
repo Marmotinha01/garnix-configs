@@ -51,7 +51,7 @@ mine-icon:
   - ''
   - '&8 ▪ &fNível: &7{level} '
   - ''
-  - ' &8Composição da mina:'
+  - ' &8Composição da mina: '
   - '{block_list}'
   - ''
   - '&6Clique para entrar.'
@@ -59,7 +59,7 @@ mine-icon:
   - HIDE_ATTRIBUTES
   block-entry: '&8 ▪ &f{block_name} &e{chance} '
   reward-separator: ''
-  reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '
+  reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} '
 
 leave-mine-icon:
   slot: 13
