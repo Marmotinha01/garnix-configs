@@ -2,7 +2,6 @@
 
 > Escopo: `GarnixMining/enchants/*.yml` — 15 encantamentos. Farm fica para outro `.md`.
 > Conferido contra `Enchant.java`, `EnchantHandler.java`, `EnchantEffects.java`, `SnakeEffect.java`, `KrakenEffect.java`, `WitherEffect.java`, `BlazeEffect.java`, `MeteorEffect.java` e `PickaxeMenu.java`.
-> **Este documento já reflete as mudanças aplicadas.** O que mudou e por quê está na seção 4.
 
 ## Como os números saem do YML
 
@@ -139,149 +138,15 @@ Todos os encantamentos de chance ficam em **~62,4** no custo e **~26,2** na chan
 
 ---
 
-## 4. Mudanças aplicadas
+## 4. Decisões de design que parecem erro e não são
 
-### 4.1 · Afortunado — custo alinhado ao Gemado
-
-```diff
-  fortunate.yml
-- increase-cost: 18.75
-+ increase-cost: 145
-```
-
-| | Antes | Depois |
-|---|---:|---:|
-| Custo nv 500 | 10.606,25 | 73.605 |
-| Custo total 1→500 | 2.964.062,5 | **18.713.750** |
-| % do custo de maxar tudo | 0,06% | 0,37% |
-
-O Afortunado dá quase 15x em **coins** — a moeda principal, que no nível 300 da mina paga 1,76 trilhão por bloco — e era o terceiro encantamento mais barato do jogo. O `increase-cost` dele era literalmente o mesmo do Abençoado, que é um encantamento de chave. O Gemado já tinha a justificativa escrita no próprio arquivo (o custo tem que acompanhar o ganho); agora os dois seguem a mesma regra.
-
-### 4.2 · Afortunado — multiplicador fecha em 15x exatos
-
-```diff
-  fortunate.yml
-- increase-multiplier: 0.02778
-+ increase-multiplier: 0.02795591
-```
-
-Passa de **14,9122x** para **15,0000x** no nível 500. O Gemado fecha em 21x e o Abençoado em 10%; o Afortunado era o único que parava num número que não era alvo de ninguém. O passo é `(15 - 1.05) / 499`.
-
-### 4.3 · Kraken — raridade proporcional ao que ele derruba
-
-```diff
-  kraken.yml
-- base-chance: 0.0833
-- increase-chance: 0.0031784
-+ base-chance: 0.0265
-+ increase-chance: 0.0010104
-```
-
-| | Serpente | Kraken (antes) | Kraken (depois) |
-|---|---:|---:|---:|
-| Desbloqueio | 75 | 165 | 165 |
-| Custo total | 373.307.812,5 | 779.687.500 | 779.687.500 |
-| Chance nv 500 | 1,6693% | 1,6693% | **0,5307%** |
-| Blocos por proc | 546,8 | 2.304 | 2.304 |
-| Eficiência | 24,5 | **49,3** | **15,7** |
-
-Os dois arquivos tinham `base-chance: 0.0833` e `increase-chance: 0.0031784` idênticos — cara de copiar e colar. Só que o Kraken derruba **4,2x mais blocos** que a Serpente, então com a mesma chance ele rendia 3x mais que qualquer outro encantamento do tier alto, apesar de a Serpente ainda ser a única que empilha 3 simultâneas.
-
-A correção foi na raridade e não no efeito de propósito: mexer em `area-radius` ou `reach` chegaria no mesmo número, mas encolheria o kraken na tela. O espetáculo é o que vende o encantamento — ele continua idêntico, só aparece 3x menos.
-
-### 4.4 · Chuva de Meteoro — cratera maior
-
-```diff
-  meteor.yml
-- meteor-explosion-radius: 2
-+ meteor-explosion-radius: 3
-```
-
-| | Antes | Depois |
-|---|---:|---:|
-| Células por cratera | 33 | 123 |
-| Blocos por proc | 888 | **2.872** |
-| Eficiência | **6,4** | **20,6** |
-
-Era o pior negócio do plugin: custava **50% mais que o Wither** (935M contra 623M) para entregar **26% menos blocos**. Como os 40 meteoros caem em colunas sorteadas da mina inteira e quase não se sobrepõem, o raio da cratera vira ganho quase direto — foi o ajuste de um número só. A chance não foi tocada.
-
-### 4.5 · Ruptura — chance x1,55
-
-```diff
-  rupture.yml
-- base-chance: 0.34
-- increase-chance: 0.012914
-+ base-chance: 0.527
-+ increase-chance: 0.020016
-```
-
-| Desbl. | Encantamento | Eficiência antes | Eficiência depois |
-|---:|---|---:|---:|
-| 5 | Explosivo | 246,5 | 246,5 |
-| 10 | Raio | 160,4 | 160,4 |
-| 15 | **Ruptura** | **87,3** | **135,4** |
-| 25 | Demolição | 119,7 | 119,7 |
-| 45 | Colapso | 97,9 | 97,9 |
-
-A Ruptura racha uma linha de 1 bloco de espessura — 48 blocos por proc, contra 193 da Demolição e 115 do Colapso, que desbloqueiam depois. Era o único encantamento do começo que ficava atrás de dois mais avançados. Agora a curva do tier baixo desce limpa na ordem de desbloqueio.
-
-### 4.6 · Acelerado — 2 níveis, preço de verdade
-
-```diff
-  accelerated.yml
-- max-level: 3
-- base-cost: 625
-- increase-cost: 1250
-+ max-level: 2
-+ base-cost: 3000
-+ increase-cost: 7000
-```
-
-| Nível | Antes | Depois | Efeito |
-|---:|---:|---:|---|
-| 1 | 625 | **3.000** | Speed I |
-| 2 | 1.875 | **10.000** | Speed II |
-| 3 | 3.125 | — | *removido* |
-| **Total** | **5.625** | **13.000** | |
-
-Speed III permanente saía por 5.625 gemas, o equivalente a ~4.500 blocos no nível 0 da mina e menos que **um único nível** do Explosivo. Era também o único encantamento com `base-cost` menor que o `increase-cost`, invertendo a razão usada em todo o resto do plugin. Agora são 2 níveis com preço redondo e curva crescente.
-
-### 4.7 · Java — a lore da chance passou a mexer em todo nível
-
-`PickaxeMenu.java` ganhou um `formatChance()` de **4 casas fixas**, substituindo o `ChanceFormatter` no `{chance}` dos ícones de encantamento.
-
-O `ChanceFormatter` arredonda para dois dígitos **significativos**. Com o passo por nível sendo pequeno, isso congelava o número exibido por dezenas de níveis seguidos:
-
-| Encantamento | Níveis que repetiam o texto anterior | Pior sequência |
-|---|---:|---|
-| Explosivo | 394 de 499 (79,0%) | 36 níveis iguais, do 382 ao 417 |
-| Kraken | 396 de 499 (79,4%) | 32 níveis iguais |
-| Serpente | 396 de 499 (79,4%) | 32 níveis iguais |
-| Aniquilação | 390 de 499 (78,2%) | 8 níveis iguais |
-| Wither | 383 de 499 (76,8%) | 10 níveis iguais |
-
-No Explosivo, comprar do nível 383 ao 417 custava **1.614.812,5 gemas** sem que um único dígito mudasse na picareta. Este mesmo problema já tinha sido resolvido para o multiplicador — o `formatMultiplier` existe exatamente porque o `ChanceFormatter` *"colapsa 1.04 para 1 e faz todo nível inicial parecer idêntico"*, nas palavras do comentário do código. A chance tinha ficado de fora.
-
-```diff
-- 0,027%     (Wither nv 1, dois dígitos significativos)
-+ 0,0265%    (Wither nv 1, quatro casas fixas)
-```
-
-Os zeros à direita **não** são removidos de propósito: largura fixa impede a lore de tremer conforme o número cresce. A única exceção é o **nível 0**, que sai como `0%` e não como `0,0000%` — quem não tem o encantamento não tem chance nenhuma para escrever em quatro casas, e o número cheio de zeros lê como valor arredondado para baixo em vez de "você ainda não tem isto".
-
-A composição de blocos dos menus (`levels-info.yml`, `mine.yml`) continua no `ChanceFormatter`, que é o certo para "50%".
-
----
-
-## 5. Revisado e mantido como estava
-
-Pontos que a revisão levantou e a simulação inocentou, ou que foram decisão consciente de não mexer.
+Pontos que a simulação inocenta — leia antes de "consertar" qualquer um deles.
 
 **Colapso mais comum que Demolição e Ruptura.** Parecia quebra de curva pela ordem de desbloqueio, mas a Demolição derruba 193 blocos contra 115 do Colapso — a raridade está seguindo o poder, que é o critério certo. Efic. Demolição 119,7 contra Colapso 97,9, na ordem certa de desbloqueio.
 
 **Blaze mais comum que a Serpente.** Mesma coisa: Serpente 547 blocos contra 324 do Blaze, e a Serpente ainda empilha 3x. Efic. Serpente 24,5 contra Blaze 19,2, também na ordem certa.
 
-**Aniquilação continua sendo o proc mais comum do tier alto**, apesar de ser a mais cara. Depois das mudanças a eficiência dos quatro finais fechou em 12,9 / 15,7 / 20,6 / 15,4 — que é o que mede recurso entregue. A chance crua não seguir o custo é aceitável aqui porque a Aniquilação quebra uma camada que, na prática, muitas vezes já está meio minerada.
+**Aniquilação é o proc mais comum do tier alto**, apesar de ser a mais cara. A eficiência dos quatro finais fecha em 12,9 / 15,7 / 20,6 / 15,4 — que é o que mede recurso entregue. A chance crua não seguir o custo é aceitável aqui porque a Aniquilação quebra uma camada que, na prática, muitas vezes já está meio minerada.
 
 | Desbl. | Encantamento | Chance nv 1 | Blocos/proc | Eficiência |
 |---:|---|---:|---:|---:|
@@ -294,7 +159,7 @@ Pontos que a revisão levantou e a simulação inocentou, ou que foram decisão 
 
 ---
 
-## 6. Encantamento por encantamento (marcos)
+## 5. Encantamento por encantamento (marcos)
 
 ### Acelerado — `accelerated.yml`
 
@@ -742,9 +607,9 @@ Pontos que a revisão levantou e a simulação inocentou, ou que foram decisão 
 
 ---
 
-## 7. Anexo — tabelas completas, nível por nível
+## 6. Anexo — tabelas completas, nível por nível
 
-Todos os níveis de cada encantamento. `Custo do nível` é o preço daquele nível isolado; `Custo acumulado` é o que foi gasto do nível 1 até ali. `Exibido na lore` é o texto que a picareta mostra depois da mudança 4.7 — agora todo nível move um dígito.
+Todos os níveis de cada encantamento. `Custo do nível` é o preço daquele nível isolado; `Custo acumulado` é o que foi gasto do nível 1 até ali. `Exibido na lore` é o texto que a picareta mostra — todo nível move um dígito.
 
 ### Anexo — Acelerado
 

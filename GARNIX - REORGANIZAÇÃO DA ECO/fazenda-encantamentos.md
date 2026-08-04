@@ -1,6 +1,6 @@
-# GARNIX — Refatoração da Fazenda
+# GARNIX — Encantamentos da Fazenda
 
-> Escopo: `GarnixFarm/enchants/*.yml`, `levels.yml` e `farms.yml`. **Este documento já reflete as mudanças aplicadas.** O retrato de antes está em `fazenda-relatorio-atual.md`.
+> Escopo: `GarnixFarm/enchants/*.yml`, `levels.yml` e `farms.yml`.
 > Conferido contra `Enchant.java`, `FarmGameplay.java`, `ScarecrowEffect.java`, `SwarmEffect.java` e `EnchantsMenu.java`.
 > O equivalente do Mining está em `mineracao-encantamentos.md`, e a comparação entre os dois está na seção 4.
 
@@ -137,7 +137,7 @@ Quanto custa, em colheitas, atravessar cada faixa de nível:
 
 O `payout-multiplier` do `levels.yml` multiplica **só a moeda primária** (coins). Sementes ficam lineares de propósito, como as gemas na mineração.
 
-Ele agora declara os **301 níveis**, um a um: a escada anda ×4,0885 a cada 15 níveis e **+2% em cada nível intermediário**, exatamente como o `level-reward-growth` do Mining. Antes eram 21 degraus e 14 de cada 15 níveis não pagavam nada a mais.
+Ele declara os **301 níveis**, um a um: a escada anda ×4,0885 a cada 15 níveis e **+2% em cada nível intermediário**, exatamente como o `level-reward-growth` do Mining. Declarar nível a nível é o que impede o jogador de subir 14 níveis sem ver um coin a mais.
 
 O reset a 1 nos níveis 60, 150 e 240 acompanha a troca de plantação, e não é rebaixamento — o valor base da nova cultura dá o salto:
 
@@ -204,129 +204,7 @@ O mesmo raciocínio calibrou as sementes: valem 1,44x as gemas equivalentes, e �
 
 ---
 
-## 5. Mudanças aplicadas
-
-### 5.1 · A grade inteira foi trocada
-
-Antes: `base-chance == increase-chance` nos sete de chance (razão 1,0) e `base-cost / increase-cost` em ~2,5. A chance crescia **500x** e o custo **200x** do nível 1 ao 500.
-
-Agora os dez seguem a grade do Mining: **62,4** no custo e **26,2** na chance — custo ×9 e chance ×20 ao longo dos 500 níveis.
-
-| Encantamento | Chance nv 500 antes | Depois | Custo total antes | Depois |
-|---|---:|---:|---:|---:|
-| Cataclismo | 76,750% | **17,440%** | 49.177.825 | **50.245.703** |
-| Laser | 63,300% | **12,007%** | 73.821.625 | **80.053.918** |
-| Encruzilhada | 63,300% | **8,002%** | 73.821.625 | **111.459.073** |
-| Ceifa | 49,850% | **3,668%** | 61.548.525 | **982.185.480** |
-| Enxame | 12,800% | **0,531%** | 110.726.450 | **1.017.079.293** |
-| Espantalho | 9,350% | **0,692%** | 147.545.750 | **1.051.974.853** |
-| Trevo | 0,041% | **10,000%** | 98.355.850 | **2.839.063** |
-
-### 5.2 · Desbloqueio por nível (Java)
-
-`Enchant.java` ganhou `farmLevelUnlock` e `EnchantsMenu.java` passou a trocar o ícone por uma barreira enquanto o nível não chega — o mesmo desenho do `PickaxeMenu` do Mining. O `hoe.yml` recebeu o `locked-enchant-icon`.
-
-Antes os dez abriam no nível 0 e o único gate era o preço.
-
-### 5.3 · Raios muito maiores
-
-Num campo plano o raio é o que separa os tiers, então eles subiram bastante:
-
-| Encantamento | Antes | Depois | Plantas por proc |
-|---|---|---|---:|
-| Cataclismo | `explosion-radius: 2` | **4** | 22 → **71** |
-| Laser | `max-line-radius: 6` | **25** | 21 → **73** |
-| Encruzilhada | `max-line-radius: 6` | **40** | 21 → **84** |
-| Ceifa | `harvest-radius: 4` | **12** | 72 → **514** |
-| Espantalho | `harvest-radius: 3` | **20** | 26 → **992** por pulso |
-
-As linhas saturam: mesmo com alcance 40 a Encruzilhada só chega a 84, porque o campo tem 57% de densidade e a linha atravessa buracos. É por isso que os dois efeitos de linha ficam no meio da escada e não no topo.
-
-### 5.4 · Trevo copiado do Abençoado
-
-`base-cost: 1000` e `increase-cost: 18.75` — os números do Mining, dígito por dígito. O custo cai de 98 milhões para 2,8 milhões de sementes.
-
-A chance dos dois foi depois reescrita para `base-chance: 0.02` / `increase-chance: 0.02`, fechando em **10,00%** no nível 500. O passo de duas casas é o ponto: todo nível anda 0,02 limpo (0,02 → 0,04 → 0,06) em vez de 0,1038076. É o único par com duas casas que fecha redondo em 10% ao longo de 500 níveis.
-
-A chave tinha que ser igualmente fácil nos dois modos, senão um deles vira o único caminho de caixa que vale a pena.
-
-### 5.5 · Fertilidade e Prosperidade
-
-| | Antes | Depois |
-|---|---:|---:|
-| Prosperidade (coins) | 17,2226x | **15,0000x** (= Afortunado) |
-| Fertilidade (sementes) | 3,0300x | **21,0000x** (= Gemado) |
-
-A Fertilidade subiu **6,9x**. Ela mexe na moeda que compra encantamento e era o multiplicador mais fraco do plugin — no Mining a relação é a inversa, e agora nos dois a moeda que financia a progressão tem o multiplicador maior.
-
-### 5.6 · Ganho por nível entre as trocas de plantação
-
-O `payout-multiplier` passou de 21 degraus para **301 níveis declarados**, com +2% por nível entre as trocas — o mesmo efeito do `level-reward-growth` do Mining, sem tocar em Java (o `FarmLevels.payoutMultiplierFor` usa `floorEntry`, então aceita qualquer nível como chave).
-
-Antes o jogador subia 14 níveis sem ver um coin a mais e levava o salto de 292% inteiro no 15º.
-
-### 5.7 · Regeneração 3x mais lenta
-
-`regrow-delay-seconds` foi de **20 para 60**. Este número é o teto de renda do modo inteiro: o campo tem 22.735 plantações, então sustenta `22.735 / regrow` colheitas por segundo, por mais forte que fique o encantamento — 1.137/s antes, **379/s** agora.
-
-Subiu junto com os raios de propósito. Sem isso o campo passaria o tempo todo vazio e os efeitos novos não teriam o que colher, que é o pior dos dois mundos: efeito forte que não acha planta.
-
-### 5.8 · Agilidade
-
-`max-level: 2` já estava certo. Só o preço mudou, para **3.000 / 10.000**, igual ao Acelerado do Mining.
-
-### 5.9 · Comentário defasado removido
-
-O bloco do `payout-multiplier` avisava que a escada seria calibrada na "FASE 4" e citava `base: 100.0, growth: 2.2` — uma fórmula que não existe mais (hoje é `geometric` com `base: 11992.1`).
-
-### 5.10 · Os multiplicadores passaram a aparecer
-
-A Prosperidade e a Fertilidade nunca mostraram o próprio número: o token `{multiplier}` não
-existia em nenhuma config da fazenda fora do ícone de booster, e o `EnchantsMenu` não o
-substituiria mesmo se existisse — ele só trocava `{display}`, `{level}`, `{max-level}` e
-`{chance}`. A lore dos dois terminava no nível.
-
-Agora as duas trazem a linha, e o menu a preenche:
-
-```yaml
-lore:
-  - "&7Aumenta o multiplicador de"
-  - "&7coins ganhos na colheita."
-  - ""
-  - "&fNível: &a{level}&8/&c{max-level}"
-  - "&fMultiplicador: &7{multiplier}x"   # <- novo
-```
-
-| | Nível 1 | Nível 2 | Nível 250 | Nível 500 |
-|---|---:|---:|---:|---:|
-| Prosperidade | 1,05x | 1,08x | 7,99x | **15x** |
-| Fertilidade | 1,04x | 1,08x | 11,00x | **21x** |
-
-O `formatMultiplier` usa 2 casas fixas em vez dos 4 dígitos significativos do `formatChance`
-porque um multiplicador vive numa faixa estreita (abre em 1,04 e para em 21), então a escala
-fixa lê melhor e o passo por nível — 0,04 no máximo — sempre move a segunda casa.
-
-Segue a convenção que o `{chance}` do Farm já usava: no nível 0 o ícone mostra o que o nível 1
-daria, para anunciar o que se está comprando.
-
-### 5.11 · Slots reorganizados na ordem de desbloqueio
-
-O menu da enxada seguia uma ordem herdada, com o Trevo no fim da segunda fila e a Ceifa junto dos
-sempre-ativos. Agora ele lê como o menu da picareta: **dois multiplicadores, velocidade, chave** e
-depois os de área **na ordem em que abrem**.
-
-```
-11 Prosperidade   12 Fertilidade   13 Agilidade   14 Trevo   15 Cataclismo (5)
-20 Laser (30)     21 Encruzilhada (60)   22 Ceifa (105)   23 Enxame (165)   24 Espantalho (240)
-```
-
-Três arquivos mudaram de `icon.slot`: Trevo 22 → 14, Cataclismo 14 → 15 e Ceifa 15 → 22. As duas
-filas ocupam os mesmos slots das duas primeiras do Mining, então quem joga os dois modos encontra
-cada categoria no mesmo lugar.
-
----
-
-## 6. Encantamento por encantamento (marcos)
+## 5. Encantamento por encantamento (marcos)
 
 ### Prosperidade — `prosperity.yml`
 
@@ -620,7 +498,7 @@ Bônus de ganhos do Enxame por nível (`bonus-percentage: 10.0` + `increase-bonu
 
 ---
 
-## 7. Anexo — tabelas completas, nível por nível
+## 6. Anexo — tabelas completas, nível por nível
 
 `Exibido na lore` é o texto que o menu da enxada mostra: `EnchantsMenu.formatChance` (4 dígitos significativos) para as chances e `formatMultiplier` (2 casas) para os multiplicadores. Os dois foram feitos para que **todo nível comprado mova um dígito**.
 

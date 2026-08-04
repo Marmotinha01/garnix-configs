@@ -38,12 +38,41 @@ key-item:
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
 # FAIXAS desta crate:
-#   comum 83% · comum plus 12% · armadura 2% · mediana 2,5% ·
-#   rara 0,4% · raro plus 0,099% · jackpot 0,001%
+#   comum 83,5% · comum plus 12% · armadura 2% · mediana 1,4% ·
+#   mediana plus 0,7% (skins) · rara 0,399% (caixas) · jackpot 0,001%
+#
+# ⚠️ A faixa das SKINS agora e mais provavel que a das CAIXAS (0,7% contra
+# 0,399%) — e por isso ela se chama `mediana plus` e nao `raro plus`. Uma Caixa
+# Farm [Tier I] contem armadura ate T-III, skin ate diamante, forja, livros e
+# 1.000 sementes: ela vale MAIS que uma Skin de Pedra solta, entao tem que ser
+# mais rara. No arquivo a caixa vem antes da skin so por historico de edicao.
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
-# mesma tabela. Por isso o premio em coins e FIXO e pequeno: no dia 1 e um
-# empurrao real, no dia 5 vira ruido. O valor da crate sao os ITENS.
+# mesma tabela. Por isso o premio em coins e pequeno: no dia 1 e um empurrao
+# real, no dia 5 vira ruido. O valor da crate sao os ITENS.
+#
+# ⚠️ MOEDA E LIMITE SAO ESCADAS, com peso 60/30/10 dentro da familia. O peso da
+# FAMILIA nao mudou (coins 45, sementes 28, limites 7,5) — o que mudou e que ele
+# agora esta repartido. Se mexer num degrau, mexa nos outros: a soma da familia
+# e o que mantem o arquivo em 100.
+#
+#   coins     250 · 500 · 1.000   pesos 27,6 · 13,5 · 3,9
+#   sementes  150 · 300 ·   600   pesos 16,8 ·  8,4 · 2,8
+#
+# ⚠️ Os tres limites sao repartidos por VALOR, na razao 6:3:1 — o cash shop
+# cobra 800 (armazem), 1.500 (maquina) e 4.000 (spawner), entao o spawner tem
+# que ser ~5x mais raro que o armazem, nao 1,5x como era.
+#
+#   armazem  1 · 3 · 5   pesos 2,7  · 1,35 · 0,45   (familia 4,5)
+#   maquina  1 · 3 · 5   pesos 1,35 · 0,68 · 0,22   (familia 2,25)
+#   spawner  1 · 3 · 5   pesos 0,45 · 0,22 · 0,08   (familia 0,75)
+#
+# ⚠️ A escada 1·3·5 e a das crates BASICAS. VIP e RankUP usam 5·15·30·50, quatro
+# degraus, com peso 50/30/15/5. A escada 5·15·30 e a mesma da loja da /pesca.
+#
+# ⚠️ O degrau de cima de cada moeda fica ABAIXO de 3,999999 de proposito: esse
+# e o teto real do boost de robo (total 133,3333 x 3 / 100), e um peso 4 cravado
+# ficaria de fora do rate-up por 0,000001. Nao arredonde 3,9 para 4.
 #
 # ⚠️ `chance` e PESO, nao porcentagem — Crate.java:100-105 normaliza por
 # totalChance. Somar 100 e so legibilidade.
@@ -58,28 +87,64 @@ key-item:
 # todo item fisico do servidor — skin e armadura passam a quantia sorteada.
 rewards:
 
-  # -- COMUM ---------------------------------------------------------- 83%
-  coins:
+  # -- COMUM -------------------------------------------------------- 83,5%
+  coins-250:
     type: CURRENCY
-    chance: 45
+    chance: 27.6
     currency-id: coins
     amount: '250'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  secundaria:
+  coins-500:
     type: CURRENCY
-    chance: 28
+    chance: 13.5
+    currency-id: coins
+    amount: '500'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  coins-1000:
+    type: CURRENCY
+    chance: 3.9
+    currency-id: coins
+    amount: '1000'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  sementes-150:
+    type: CURRENCY
+    chance: 16.8
     currency-id: sementes
-    amount: '25'
+    amount: '150'
+    icon:
+      lore:
+      - '&fValor: &5❋{amount}'
+
+  sementes-300:
+    type: CURRENCY
+    chance: 8.4
+    currency-id: sementes
+    amount: '300'
+    icon:
+      lore:
+      - '&fValor: &5❋{amount}'
+
+  sementes-600:
+    type: CURRENCY
+    chance: 2.8
+    currency-id: sementes
+    amount: '600'
     icon:
       lore:
       - '&fValor: &5❋{amount}'
 
   combustivel:
     type: COMMAND
-    chance: 10
+    chance: 10.5
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
     amount: 500
@@ -90,12 +155,12 @@ rewards:
       - '&fLitros: &7{amount}L'
 
   # -- COMUM PLUS ----------------------------------------------------- 12%
-  lim-armazem:
+  lim-armazem-1:
     type: COMMAND
-    chance: 3
+    chance: 2.7
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
-    amount: 500
+    amount: 1
     icon:
       material: INK_SACK
       data: 2
@@ -104,9 +169,37 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  lim-maquina:
+  lim-armazem-3:
     type: COMMAND
-    chance: 2.5
+    chance: 1.35
+    display: '&2Limite de Armazém'
+    command: armazem givelimititem {player} {amount} 1
+    amount: 3
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&fValor: &2∞{amount}'
+
+  lim-armazem-5:
+    type: COMMAND
+    chance: 0.45
+    display: '&2Limite de Armazém'
+    command: armazem givelimititem {player} {amount} 1
+    amount: 5
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&fValor: &2∞{amount}'
+
+  lim-maquina-1:
+    type: COMMAND
+    chance: 1.35
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 1
@@ -118,9 +211,37 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner:
+  lim-maquina-3:
     type: COMMAND
-    chance: 2
+    chance: 0.68
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 3
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞{amount}'
+
+  lim-maquina-5:
+    type: COMMAND
+    chance: 0.22
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 5
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞{amount}'
+
+  lim-spawner-1:
+    type: COMMAND
+    chance: 0.45
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
     amount: 1
@@ -132,9 +253,37 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
+  lim-spawner-3:
+    type: COMMAND
+    chance: 0.22
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 3
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  lim-spawner-5:
+    type: COMMAND
+    chance: 0.08
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 5
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
   chave-vip:
     type: COMMAND
-    chance: 2
+    chance: 1.5
     display: '&dChave VIP'
     command: crate givekey vip {player} {amount}
     amount: 1
@@ -150,7 +299,7 @@ rewards:
 
   chave-boss:
     type: COMMAND
-    chance: 1.5
+    chance: 2
     display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
     amount: 1
@@ -257,10 +406,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- MEDIANA ------------------------------------------------------- 2,5%
+  # -- MEDIANA ------------------------------------------------------- 1,4%
   booster-sementes-2x:
     type: COMMAND
-    chance: 1.5
+    chance: 0.7
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 5m {amount}
     amount: 1
@@ -281,7 +430,7 @@ rewards:
 
   booster-coins-2x:
     type: COMMAND
-    chance: 1
+    chance: 0.7
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 5m {amount}
     amount: 1
@@ -300,10 +449,10 @@ rewards:
       flags:
       - HIDE_POTION_EFFECTS
 
-  # -- RARA ---------------------------------------------------------- 0,4%
+  # -- RARA (caixas) ----------------------------------------------- 0,399%
   caixa-farm-i:
     type: COMMAND
-    chance: 0.25
+    chance: 0.3
     display: '&aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
     amount: 1
@@ -316,7 +465,7 @@ rewards:
 
   caixa-recursos:
     type: COMMAND
-    chance: 0.15
+    chance: 0.099
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 1
@@ -327,10 +476,10 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # -- RARO PLUS --------------------------------------------------- 0,099%
+  # -- MEDIANA PLUS (skins) ------------------------------------------ 0,7%
   skin-pedra:
     type: COMMAND
-    chance: 0.06
+    chance: 0.4
     display: '&7Skin de Pedra'
     command: fazenda giveskin {player} pedra {amount}
     amount: 1
@@ -347,7 +496,7 @@ rewards:
 
   skin-ferro:
     type: COMMAND
-    chance: 0.039
+    chance: 0.3
     display: '&fSkin de Ferro'
     command: fazenda giveskin {player} ferro {amount}
     amount: 1
