@@ -1,18 +1,20 @@
 display: "Espantalho"
+farm-level-unlock: 240
+
 max-level: 500
-base-cost: 2927
-increase-cost: 1171
+base-cost: 420925
+increase-cost: 6745.59
 
 # CHANCE flavour (percent): ao colher, chance de invocar o espantalho.
-base-chance: 0.0187
-increase-chance: 0.0187
+base-chance: 0.0345
+increase-chance: 0.0013168
 
 # Companion: flutua acima do jogador por duration-ticks, seguindo-o, e a cada
 # harvest-interval-ticks colhe um disco de raio harvest-radius ao redor dele,
 # acompanhando o relevo (paga o jogador e rola Trevo por plantação, como um encanto
 # de área). Funciona voando, até harvest.max-height do config.yml acima da plantação.
 duration-ticks: 200
-harvest-radius: 3
+harvest-radius: 20
 harvest-interval-ticks: 2   # rápido: acompanha o jogador voando sem deixar buracos
 armor-color: "#00AA00"
 head-material: PUMPKIN

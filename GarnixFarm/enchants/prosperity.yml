@@ -1,11 +1,15 @@
 display: "Prosperidade"
+farm-level-unlock: 0
+
 max-level: 500
-base-cost: 195.2
-increase-cost: 97.58
+# Mesma curva do Afortunado do Mining.
+base-cost: 1250
+increase-cost: 145
 
 # MULTIPLIER flavour (coins)
+# Fecha em 15,0000x no nível 500, igual ao Afortunado.
 base-multiplier: 1.05
-increase-multiplier: 0.03241
+increase-multiplier: 0.02795591
 multiplier-provider: "coins"
 
 icon:
@@ -17,3 +21,4 @@ icon:
     - "&7coins ganhos na colheita."
     - ""
     - "&fNível: &a{level}&8/&c{max-level}"
+    - "&fMultiplicador: &7{multiplier}x"

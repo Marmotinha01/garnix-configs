@@ -1,12 +1,14 @@
 display: "Ceifa"
+farm-level-unlock: 105
+
 max-level: 500
-base-cost: 1366
-increase-cost: 487.9
+base-cost: 393000
+increase-cost: 6298.08
 
 # CHANCE flavour (percent)
-base-chance: 0.0997
-increase-chance: 0.0997
-harvest-radius: 4
+base-chance: 0.183
+increase-chance: 0.0069847
+harvest-radius: 12
 
 title: "&2&lCEIFA"
 subtitle: "&7+{crops} plantações"

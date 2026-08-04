@@ -1,11 +1,16 @@
 display: "Fertilidade"
+farm-level-unlock: 0
+
 max-level: 500
-base-cost: 292.7
-increase-cost: 117.1
+# Mesma curva do Gemado do Mining.
+base-cost: 1250
+increase-cost: 145
 
 # MULTIPLIER flavour (sementes — economia secundária)
-base-multiplier: 1.05
-increase-multiplier: 0.003968
+# Fecha em 21,0000x no nível 500, igual ao Gemado. Era 3,03x — o multiplicador mais
+# fraco do plugin, justamente na moeda que compra encantamento.
+base-multiplier: 1.04
+increase-multiplier: 0.04
 multiplier-provider: "sementes"
 
 icon:
@@ -17,3 +22,4 @@ icon:
     - "&7sementes ganhas na colheita."
     - ""
     - "&fNível: &a{level}&8/&c{max-level}"
+    - "&fMultiplicador: &7{multiplier}x"

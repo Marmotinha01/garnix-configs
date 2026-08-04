@@ -23,6 +23,27 @@
 #   permission-display: rótulo amigável na lore (ex. "&6VIP+"). Remova se não usar.
 #               Ex.: permission "grupo.vip" + permission-display "&6VIP+".
 #
+# -- De onde saem os valores de currencies (calibrado contra o GarnixMining) --------
+#
+# PRIMÁRIA (coins) = curva de coins da mina no nível de desbloqueio da plantação,
+# multiplicada por 2,1933. O fator parece alto e não é: o que importa é coins por
+# HORA, não por colheita, e a fazenda dispara 3x menos eventos por ação que a mina.
+#
+#   mina     2,64e13/bloco    x 112,2 blocos por quebra manual = 2,96e15 por ação
+#   fazenda  5,79e13/colheita x  63,9 plantas por colheita      = 3,70e15 por ação
+#
+# O campo é 2D: não existe coluna vertical nem camada para explodir, então nenhum
+# encantamento da fazenda chega perto da Aniquilação. Compensar isso no valor por
+# evento é o que mantém os dois modos equivalentes — com o x1,25 "óbvio" a fazenda
+# rendia 59% MENOS que a mina por hora, não 25% a mais.
+#
+# SECUNDÁRIA (sementes) = gemas da mina no mesmo nível, x1,4413. Mesma lógica: as
+# sementes compram encantamento, e o que precisa empatar é quantas ações manuais
+# custa maxar tudo. Com estes valores são 81.053 colheitas contra 81.053 quebras.
+#
+# A secundária NÃO leva o payout-multiplier do levels.yml (é linear por projeto,
+# como as gemas), então estes quatro números são o valor final antes da Fertilidade.
+#
 # Tokens de currency na lore do ícone (pagamento por colheita):
 #   {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}{primary_currency}
 #   {secondary_*} idem.  ({*_currency} = nome da moeda no plural.)
@@ -33,8 +54,8 @@ farms:
     crop: WHEAT
     exp: 1.0
     currencies:
-      primary: 0.5
-      secondary: 10.0
+      primary: 2.478
+      secondary: 1.80
     icon:
       slot: 11
       material: WHEAT
@@ -56,8 +77,8 @@ farms:
       crops: 1105000
       crop-type: trigo
     currencies:
-      primary: 119
-      secondary: 20.0
+      primary: 682.132
+      secondary: 9.01
     icon:
       slot: 12
       material: CARROT_ITEM
@@ -78,8 +99,8 @@ farms:
       crops: 5865000
       crop-type: cenoura
     currencies:
-      primary: 436000
-      secondary: 30.0
+      primary: 3092622
+      secondary: 19.82
     icon:
       slot: 13
       material: POTATO_ITEM
@@ -100,8 +121,8 @@ farms:
       crops: 22066000
       crop-type: batata
     currencies:
-      primary: 1600000000
-      secondary: 40.0
+      primary: 14103235067
+      secondary: 30.63
     icon:
       slot: 14
       material: NETHER_STALK

@@ -14,7 +14,15 @@ scan:
   require-grown: true # só registra a cultura totalmente crescida
 
 # -- Colheita --
-regrow-delay-seconds: 20 # segundos até uma plantação colhida voltar
+# Segundos até uma plantação colhida voltar.
+#
+# Este número é o TETO de renda da fazenda inteira, e não um detalhe de ritmo: o
+# campo tem 22.735 plantações, então ele sustenta no máximo 22.735/regrow colheitas
+# por segundo, por mais forte que fique o encantamento. A 20s eram 1.137/s; a 60s
+# são 379/s. Subiu para 60 junto com o aumento dos raios dos efeitos de área — sem
+# isso o campo passaria o tempo todo vazio e o encantamento novo não teria o que
+# colher, que é o pior dos dois mundos (efeito forte que não acha planta).
+regrow-delay-seconds: 60
 
 harvest:
   # Efeitos ancorados no jogador (Ceifa/Espantalho) colhem um disco que acompanha o

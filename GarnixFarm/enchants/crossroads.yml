@@ -1,12 +1,14 @@
 display: "Encruzilhada"
+farm-level-unlock: 60
+
 max-level: 500
-base-cost: 1561
-increase-cost: 585.5
+base-cost: 44598
+increase-cost: 714.71
 
 # CHANCE flavour (percent)
-base-chance: 0.1266
-increase-chance: 0.1266
-max-line-radius: 6
+base-chance: 0.3992
+increase-chance: 0.0152366
+max-line-radius: 40
 
 title: "&d&lENCRUZILHADA"
 subtitle: "&7+{crops} plantações"

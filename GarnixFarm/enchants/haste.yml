@@ -1,7 +1,10 @@
 display: "Agilidade"
+farm-level-unlock: 0
+
 max-level: 2
-base-cost: 780.6
-increase-cost: 780.6
+# 3.000 no nível 1 e 10.000 no nível 2, igual ao Acelerado do Mining.
+base-cost: 3000
+increase-cost: 7000
 
 # PASSIVE flavour (sem chance): tendo nível ≥ 1, o jogador ganha velocidade
 # infinita ao entrar na fazenda (amplificador = nível - 1), até sair ou desencantar.

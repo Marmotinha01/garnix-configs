@@ -1,12 +1,14 @@
 display: "Cataclismo"
+farm-level-unlock: 5
+
 max-level: 500
-base-cost: 975.8
-increase-cost: 390.3
+base-cost: 20105
+increase-cost: 322.19
 
 # CHANCE flavour (percent)
-base-chance: 0.1535
-increase-chance: 0.1535
-explosion-radius: 2
+base-chance: 0.87
+increase-chance: 0.0332061
+explosion-radius: 4
 
 title: "&c&lCATACLISMO"
 subtitle: "&7+{crops} plantações"

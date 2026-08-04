@@ -1,12 +1,14 @@
 display: "Laser"
+farm-level-unlock: 30
+
 max-level: 500
-base-cost: 1561
-increase-cost: 585.5
+base-cost: 32032
+increase-cost: 513.33
 
 # CHANCE flavour (percent)
-base-chance: 0.1266
-increase-chance: 0.1266
-max-line-radius: 6
+base-chance: 0.599
+increase-chance: 0.0228626
+max-line-radius: 25
 
 title: "&b&lLASER"
 subtitle: "&7+{crops} plantações"
