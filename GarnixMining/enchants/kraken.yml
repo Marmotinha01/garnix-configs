@@ -7,8 +7,13 @@ max-level: 500
 base-cost: 311875
 increase-cost: 5000
 
-base-chance: 0.0833
-increase-chance: 0.0031784
+# Os tentáculos giram 250° durante a animação e varrem um disco inteiro de raio
+# 10, então um kraken derruba ~2.300 blocos — 4x a Serpente, que tinha exatamente
+# esta mesma chance por copiar e colar. Com os dois iguais o Kraken rendia 3x mais
+# que qualquer outro encantamento do tier alto. A correção é na raridade e não no
+# efeito: o espetáculo continua idêntico, só aparece 3x menos.
+base-chance: 0.0265
+increase-chance: 0.0010104
 
 # --- Kraken shape --------------------------------------------------------------
 # A body hovers over the dig site and lashes out with tentacles that writhe

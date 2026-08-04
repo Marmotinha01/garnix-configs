@@ -4,11 +4,19 @@ mine-level-unlock: 0
 
 max-level: 500
 
+# Mesma curva de custo do Gemado, e pelo mesmo motivo: quem multiplica moeda
+# tem que pagar proporcional ao ganho. O increase-cost antigo era 18.75 — o
+# mesmo do Abençoado, que é um encantamento de chave — e deixava o Afortunado
+# custar 2,9M por quase 15x em coins, sendo o terceiro encantamento mais barato
+# do jogo. Agora maxar sai por 18.713.750, igual ao Gemado.
 base-cost: 1250
-increase-cost: 18.75
+increase-cost: 145
 
+# Passo calculado para fechar em 15,0000x exatos no nível 500 — (15 - 1.05)/499.
+# O valor antigo (0.02778) parava em 14,9122x, que não era alvo de ninguém; o
+# Gemado fecha em 21x e o Abençoado em 2%, então este também fecha redondo.
 base-multiplier: 1.05
-increase-multiplier: 0.02778
+increase-multiplier: 0.02795591
 multiplier-provider: "coins"
 
 icon:

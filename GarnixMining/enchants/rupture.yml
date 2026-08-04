@@ -7,8 +7,13 @@ max-level: 500
 base-cost: 15000
 increase-cost: 240
 
-base-chance: 0.34
-increase-chance: 0.012914
+# A Ruptura racha uma linha de 1 bloco de espessura, ~48 blocos por proc — pouco
+# perto da Demolição (8 linhas, ~193) e do Colapso (esfera, ~115), que desbloqueiam
+# depois. Com a chance antiga ela era o pior investimento do começo, atrás de dois
+# encantamentos mais avançados. Subindo 1,55x ela volta para o lugar que o
+# desbloqueio manda: entre o Raio e a Demolição.
+base-chance: 0.527
+increase-chance: 0.020016
 
 messages:
   - ""

@@ -16,8 +16,12 @@ increase-chance: 0.0012784
 # it blasts a SPHERE out of the virtual mine. A meteor falling down an already-
 # mined column just passes through and despawns — it never wastes a blast on air.
 
-# Sphere radius each meteor breaks on impact (in blocks).
-meteor-explosion-radius: 2
+# Sphere radius each meteor breaks on impact (in blocks). Raised from 2 to 3: the
+# 40 meteors land on RANDOM columns of the whole mine, so they barely overlap and
+# the crater size drives the payout almost one-for-one. At radius 2 a storm broke
+# ~890 blocks, which made this the worst deal in the plugin — 50% pricier than the
+# Wither for 26% fewer blocks. Radius 3 takes it to ~2.870.
+meteor-explosion-radius: 3
 
 # How long meteors keep raining, in ticks (20 ticks = 1 second).
 meteor-duration-ticks: 100
