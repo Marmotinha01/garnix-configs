@@ -208,6 +208,11 @@ booster-icon:
 actionbar:
   separator: ' &8■ '
   tax-display: '&fTaxa &c&l{tax}&c%'
+  # Segmento das chaves do Abençoado. Só entra na barra do bloco que soltou a chave,
+  # ao lado do que aquele bloco pagou — nas outras quebras não aparece nada. {keys} =
+  # quantas caíram nessa quebra (mais de uma quando um encantamento de área derruba
+  # vários blocos de uma vez). Deixe vazio para não mostrar.
+  key-display: '&e&l+{keys} &eChave Mineração'
   provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value} {currency}'
   message: '{providers}{separator}&7Bônus &a&l{bonus}&a%{separator}&7Nível &a{mine_level}&7/&a{max_level}{separator}&7XP &a{mine_exp}&8/&c{mine_need_exp}'
 
@@ -241,11 +246,12 @@ reset-cooldown: 30
 # mina agora minera o intervalo inteiro antes do primeiro resumo, em vez de receber
 # um relatório de cinco segundos porque o tique caiu logo depois.
 #
-# 'blessed-flush-seconds' é de quanto em quanto tempo as chaves do Abençoado são
-# creditadas em lote nas chaves virtuais do /crates (e a mensagem sai junto).
+# As chaves do Abençoado são creditadas no /crates junto do tique do relatório, que
+# roda de 5 em 5 segundos — não existe mais uma chave para isso, nem uma task só
+# para isso. O crédito é pagamento e roda para todo jogador online, mesmo para quem
+# desligou o relatório; quem ANUNCIA as chaves é o relatório.
 tasks:
   pickaxe-display-seconds: 5
-  blessed-flush-seconds: 30
   booster-expiry-seconds: 60
   mining-report-seconds: 60
 

@@ -12,13 +12,12 @@ increase-chance: 0.0000815
 # e o faucet de chave da fazenda inteira (~1.000/dia no orcamento da Fase 5).
 key-id: "farm"
 
-# Anunciado no flush em lote (a cada 30s), tokens {count} / {enchant}.
-stacked-messages:
-  - "&a&lTREVO! &fVocê encontrou &7x{count} &fchave(s) de fazenda!"
-  - "&7Chaves colhidas nos últimos 30s."
-
-title: "&a&lTREVO!"
-subtitle: "&fx{count} chave(s) encontrada(s)"
+# As chaves são creditadas em lote a cada tique do relatório.
+#
+# Este encantamento não tem 'messages', 'title' nem 'subtitle' de propósito: quem
+# anuncia as chaves é o relatório da fazenda, na linha de encantamentos ativados
+# (uma ativação = uma chave). Não recolocar — seria o mesmo aviso duas vezes, e o
+# título genérico formata {crops}/{coins}, então um {count} aqui sairia literal.
 
 icon:
   slot: 22

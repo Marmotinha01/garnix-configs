@@ -15,13 +15,12 @@ increase-cost: 18.75
 base-chance: 0.05
 increase-chance: 0.0019038
 
-# As chaves caem direto nas chaves virtuais do /crates, não no correio.
-stacked-messages:
-  - "  &a&lABENÇOADO &8▶ &7x{count} chaves de mineração"
-  - "  &7Guardadas no seu &f/crates&7."
-
-title: "&a&lABENÇOADO!"
-subtitle: "&fx{count} chaves encontradas"
+# As chaves caem direto nas chaves virtuais do /crates, não no correio, e são
+# creditadas em lote a cada tique do relatório.
+#
+# Este encantamento não tem 'messages', 'title' nem 'subtitle' de propósito: quem
+# anuncia as chaves é o relatório de mineração, na linha de encantamentos ativados
+# (uma ativação = uma chave). Não recolocar — seria o mesmo aviso duas vezes.
 
 icon:
   slot: 14
