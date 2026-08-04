@@ -9,9 +9,10 @@
 # abrir nada. Clique com o botão direito abre o menu da caixa (/crates), com abrir,
 # retirar e o preview das recompensas.
 #
-# {keys} = a contagem REAL, e é ela que vale: a pilha satura em 64, então acima
-# disso só o texto está certo. Com zero chaves a pilha fica em 0 mesmo — o cliente
-# 1.8 desenha o item normalmente e ele continua clicável.
+# {keys} = a contagem REAL, e é ela que vale. A pilha é só um indicador grosseiro:
+# satura em 64 e nunca desce abaixo de 1 (pilha de tamanho 0 não sobrevive no
+# servidor). Com zero chaves o item mostra 1 e SEM brilho — quem diz "tem chave" é
+# o brilho, não o número da pilha.
 #
 # A caixa aberta é a do 'key-id' do Abençoado (enchants/blessed.yml). Sem esse
 # encantamento configurado o botão não aparece.
