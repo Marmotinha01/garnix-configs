@@ -46,10 +46,16 @@ enchant-currency: gemas
 # Moeda que o bônus somado reporta — o {bonus} da actionbar e o %mining_bonus% da
 # scoreboard. Os dois leem daqui para nunca mostrarem números diferentes.
 #
-# O bônus soma booster + skin + armadura + cargo, que é o que "bônus" significa nas
-# lores das skins e das armaduras — então o número da tela fecha com o que está
-# escrito nelas. O multiplicador dos encantamentos (Afortunado/Gemado) e o Frenesi
-# NÃO entram: eles são multiplicativos, não somam percentual.
+# O bônus soma skin + armadura + cargo, que é o que "bônus" significa nas lores das
+# skins e das armaduras — então o número da tela fecha com o que está escrito nelas.
+# O multiplicador dos encantamentos (Afortunado/Gemado) e o Frenesi NÃO entram: eles
+# são multiplicativos, não somam percentual.
+#
+# O BOOSTER também não entra, e esse é o motivo: booster é por moeda (existe só de
+# coins, só de gemas, só de XP e o 'both'). Somado aqui, quem ativasse um de coins
+# veria o percentual subir e esperaria o mesmo ganho em gemas e XP. Quem avisa que há
+# booster ativo é a actionbar.message-boosted e o %mining_boosters%, que contam
+# quantos estão ativos. No pagamento o booster continua valendo normalmente.
 #
 # Na prática a moeda escolhida tanto faz, porque skins e armaduras usam o mesmo
 # percentual para todas as moedas. A chave existe para o dia em que deixarem de usar.
@@ -233,6 +239,14 @@ actionbar:
   tax-display: '&fTaxa &c&l{tax}&c%'
   provider-display: '{primary_color}+{symbol_color}{symbol}{primary_color}{value}'
   message: '{providers}{separator}&fBônus: &a&l{bonus}&a%{separator}&fNível: &a{mine_level}&8/&c{max_level}{separator}&fXP: &a{mine_exp}&8/&c{mine_need_exp}'
+  # Substitui a linha acima enquanto o jogador tiver QUALQUER booster ativo.
+  # {boosters} = quantos estão ativos.
+  #
+  # O {bonus} não conta booster de propósito: booster é por moeda (só coins, só gemas,
+  # só XP, ou 'both'), então entrar num número único faria quem ativou um de coins
+  # achar que ganhou bônus em tudo. Esta linha avisa que o booster existe sem prometer
+  # percentual em moeda que ele não boosta. Deixe vazia para nunca trocar de linha.
+  message-boosted: '{providers}{separator}&fBônus: &a&l{bonus}&a%{separator}&fNível: &a{mine_level}&8/&c{max_level}{separator}&fBoosters Ativos: &6{boosters}'
 
 # Per-currency entry for the {rewards} placeholder of enchant messages/titles.
 # Currency placeholders + {value}.

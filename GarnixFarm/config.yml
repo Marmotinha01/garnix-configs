@@ -37,10 +37,16 @@ economies:
 # Moeda que o bônus somado reporta — o {bonus} da actionbar e o %farm_bonus% da
 # scoreboard. Os dois leem daqui para nunca mostrarem números diferentes.
 #
-# O bônus soma booster + skin + armadura + cargo, que é o que "bônus" significa nas
-# lores das skins e das armaduras — então o número da tela fecha com o que está
-# escrito nelas. O multiplicador dos encantamentos NÃO entra: ele é multiplicativo,
-# não soma percentual.
+# O bônus soma skin + armadura + cargo, que é o que "bônus" significa nas lores das
+# skins e das armaduras — então o número da tela fecha com o que está escrito nelas.
+# O multiplicador dos encantamentos NÃO entra: ele é multiplicativo, não soma
+# percentual.
+#
+# O BOOSTER também não entra, e esse é o motivo: booster é por moeda (existe só da
+# primária, só da secundária, só de XP e o 'both'). Somado aqui, quem ativasse um de
+# coins veria o percentual subir e esperaria o mesmo ganho nas outras. Quem avisa que
+# há booster ativo é a actionbar.message-boosted e o %farm_boosters%, que contam
+# quantos estão ativos. No pagamento o booster continua valendo normalmente.
 #
 # Na prática a moeda escolhida tanto faz, porque skins e armaduras usam o mesmo
 # percentual para todas as moedas. A chave existe para o dia em que deixarem de usar.
@@ -52,6 +58,14 @@ actionbar:
   separator: ' &8▏ '
   provider-display: '{primary_color}{symbol_color}{symbol}{primary_color}{value}'
   message: '{providers}{separator}&fBônus: &a&l{bonus}&a%{separator}&fNível: &a{level}&8/&c{max_level}{separator}&fXP: &a{xp}&8/&c{xp_needed}'
+  # Substitui a linha acima enquanto o jogador tiver QUALQUER booster ativo.
+  # {boosters} = quantos estão ativos.
+  #
+  # O {bonus} não conta booster de propósito: booster é por moeda (só a moeda primária,
+  # só a secundária, só XP, ou 'both'), então entrar num número único faria quem ativou
+  # um de coins achar que ganhou bônus em tudo. Esta linha avisa que o booster existe
+  # sem prometer percentual em moeda que ele não boosta. Deixe vazia para nunca trocar.
+  message-boosted: '{providers}{separator}&fBônus: &a&l{bonus}&a%{separator}&fNível: &a{level}&8/&c{max_level}{separator}&fBoosters Ativos: &6{boosters}'
 
 # Barra de progresso do XP (actionbar + placeholder %farm_level_bar%).
 progress-bar:
