@@ -307,6 +307,21 @@ fixa lê melhor e o passo por nível — 0,04 no máximo — sempre move a segun
 Segue a convenção que o `{chance}` do Farm já usava: no nível 0 o ícone mostra o que o nível 1
 daria, para anunciar o que se está comprando.
 
+### 5.11 · Slots reorganizados na ordem de desbloqueio
+
+O menu da enxada seguia uma ordem herdada, com o Trevo no fim da segunda fila e a Ceifa junto dos
+sempre-ativos. Agora ele lê como o menu da picareta: **dois multiplicadores, velocidade, chave** e
+depois os de área **na ordem em que abrem**.
+
+```
+11 Prosperidade   12 Fertilidade   13 Agilidade   14 Trevo   15 Cataclismo (5)
+20 Laser (30)     21 Encruzilhada (60)   22 Ceifa (105)   23 Enxame (165)   24 Espantalho (240)
+```
+
+Três arquivos mudaram de `icon.slot`: Trevo 22 → 14, Cataclismo 14 → 15 e Ceifa 15 → 22. As duas
+filas ocupam os mesmos slots das duas primeiras do Mining, então quem joga os dois modos encontra
+cada categoria no mesmo lugar.
+
 ---
 
 ## 6. Encantamento por encantamento (marcos)

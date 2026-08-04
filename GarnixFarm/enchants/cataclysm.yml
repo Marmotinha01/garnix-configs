@@ -18,7 +18,7 @@ messages:
   - ""
 
 icon:
-  slot: 14
+  slot: 15
   texture: "32ea85c85fe0484af6c815efb655d2b21e109863c96333b9280b59b80d6ac98f"
   display: "&c{display}"
   lore:

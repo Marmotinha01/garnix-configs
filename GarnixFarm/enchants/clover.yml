@@ -27,7 +27,7 @@ key-id: "farm"
 # título genérico formata {crops}/{coins}, então um {count} aqui sairia literal.
 
 icon:
-  slot: 22
+  slot: 14
   texture: "ac92e5111ea7d7eb3f055833e1f35d651c0da55643c9383e0bce6c23696d58b9"
   display: "&a{display}"
   lore:
