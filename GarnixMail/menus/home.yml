@@ -71,11 +71,16 @@ send-package-icon:
 # -- Leitura do {total} -------------------------------------------------
 # O {total} e a quantia REAL que o correio entrega, somando todas as linhas
 # agrupadas naquele icone. Como o mesmo numero significa coisas diferentes,
-# o simbolo na frente dele muda:
+# muda o simbolo na frente dele E o jeito de escrever o numero:
 #
-#   chaves, itens  ▶  x165      (quantia de itens)
-#   moedas         ▶  $1.500    (valor — vem do proprio GarnixCurrencies)
-#   limites        ▶  ∞1.500    (valor — vem do command-totals abaixo)
+#   chaves, itens  ▶  x165      (quantia de itens, sempre por extenso)
+#   moedas         ▶  $1K       (valor — simbolo E formato vem da moeda)
+#   limites        ▶  ∞1.500    (valor — simbolo vem do command-totals abaixo)
+#
+# O formato do numero das MOEDAS sai do 'formatter' da moeda no GarnixCurrencies
+# (SUFFIX escreve 1K, DECIMAL escreve 1.000) — nao tem nada para configurar aqui.
+# Item e comando sao contagem, e contagem se le por extenso: 1.000 chaves, nunca
+# 1K chaves.
 
 # Usado quando nao e moeda e nao casa em nenhum command-totals.
 default-total:
