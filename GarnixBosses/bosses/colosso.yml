@@ -88,7 +88,7 @@ rewards:
 
   # -- COMUM PLUS ----------------------------------------------------- 10%
   lim-armazem:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 4
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -102,7 +102,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-maquina:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3.5
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -116,7 +116,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-spawner:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 2.5
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -131,10 +131,10 @@ rewards:
 
   # -- INCOMUM --------------------------------------------------------- 2%
   chaves-boss-5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 2
     display: '&cChave de Boss'
-    command: crate givekey bosses {player} {amount}
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
@@ -187,10 +187,10 @@ rewards:
 
   # -- RARO PLUS ---------------------------------------------------- 0,09%
   chaves-boss-10:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.09
     display: '&cChave de Boss'
-    command: crate givekey bosses {player} {amount}
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 10
     icon:
       material: TRIPWIRE_HOOK

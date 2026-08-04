@@ -18,8 +18,8 @@ reward-icon:
 
 rewards:
   chave:
-    type: COMMAND_ITEM
-    command: 'crates givekey pesca {player} {amount}'
+    type: COMMAND
+    command: crates givevirtualkey pesca {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK

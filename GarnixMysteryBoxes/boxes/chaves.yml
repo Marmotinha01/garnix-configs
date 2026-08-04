@@ -49,10 +49,10 @@ rewards:
   # ── CHAVE MINERAÇÃO ─────────────────────────────────────────── 1/6
 
   mineracao-x3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 45
     display: '&e&l{amount}x Chave Mineração'
-    command: crate givekey mineracao {player} {amount}
+    command: crates givevirtualkey mineracao {player} {amount}
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
@@ -64,10 +64,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   mineracao-x5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 27
     display: '&e&l{amount}x Chave Mineração'
-    command: crate givekey mineracao {player} {amount}
+    command: crates givevirtualkey mineracao {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
@@ -79,10 +79,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   mineracao-x10:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 16
     display: '&e&l{amount}x Chave Mineração'
-    command: crate givekey mineracao {player} {amount}
+    command: crates givevirtualkey mineracao {player} {amount}
     amount: 10
     icon:
       material: TRIPWIRE_HOOK
@@ -94,10 +94,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   mineracao-x15:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 9
     display: '&e&l{amount}x Chave Mineração'
-    command: crate givekey mineracao {player} {amount}
+    command: crates givevirtualkey mineracao {player} {amount}
     amount: 15
     icon:
       material: TRIPWIRE_HOOK
@@ -109,10 +109,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   mineracao-x30:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&e&l{amount}x Chave Mineração'
-    command: crate givekey mineracao {player} {amount}
+    command: crates givevirtualkey mineracao {player} {amount}
     amount: 30
     icon:
       material: TRIPWIRE_HOOK
@@ -126,10 +126,10 @@ rewards:
   # ── CHAVE FARM ──────────────────────────────────────────────── 1/6
 
   farm-x3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 45
     display: '&a&l{amount}x Chave Farm'
-    command: crate givekey farm {player} {amount}
+    command: crates givevirtualkey farm {player} {amount}
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
@@ -141,10 +141,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   farm-x5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 27
     display: '&a&l{amount}x Chave Farm'
-    command: crate givekey farm {player} {amount}
+    command: crates givevirtualkey farm {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
@@ -156,10 +156,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   farm-x10:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 16
     display: '&a&l{amount}x Chave Farm'
-    command: crate givekey farm {player} {amount}
+    command: crates givevirtualkey farm {player} {amount}
     amount: 10
     icon:
       material: TRIPWIRE_HOOK
@@ -171,10 +171,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   farm-x15:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 9
     display: '&a&l{amount}x Chave Farm'
-    command: crate givekey farm {player} {amount}
+    command: crates givevirtualkey farm {player} {amount}
     amount: 15
     icon:
       material: TRIPWIRE_HOOK
@@ -186,10 +186,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   farm-x30:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&a&l{amount}x Chave Farm'
-    command: crate givekey farm {player} {amount}
+    command: crates givevirtualkey farm {player} {amount}
     amount: 30
     icon:
       material: TRIPWIRE_HOOK
@@ -203,10 +203,10 @@ rewards:
   # ── CHAVE PESCA ─────────────────────────────────────────────── 1/6
 
   pesca-x3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 45
     display: '&b&l{amount}x Chave Pesca'
-    command: crate givekey pesca {player} {amount}
+    command: crates givevirtualkey pesca {player} {amount}
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
@@ -218,10 +218,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   pesca-x5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 27
     display: '&b&l{amount}x Chave Pesca'
-    command: crate givekey pesca {player} {amount}
+    command: crates givevirtualkey pesca {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
@@ -233,10 +233,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   pesca-x10:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 16
     display: '&b&l{amount}x Chave Pesca'
-    command: crate givekey pesca {player} {amount}
+    command: crates givevirtualkey pesca {player} {amount}
     amount: 10
     icon:
       material: TRIPWIRE_HOOK
@@ -248,10 +248,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   pesca-x15:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 9
     display: '&b&l{amount}x Chave Pesca'
-    command: crate givekey pesca {player} {amount}
+    command: crates givevirtualkey pesca {player} {amount}
     amount: 15
     icon:
       material: TRIPWIRE_HOOK
@@ -263,10 +263,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   pesca-x30:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&b&l{amount}x Chave Pesca'
-    command: crate givekey pesca {player} {amount}
+    command: crates givevirtualkey pesca {player} {amount}
     amount: 30
     icon:
       material: TRIPWIRE_HOOK
@@ -280,10 +280,10 @@ rewards:
   # ── CHAVE BOSSES ────────────────────────────────────────────── 1/6
 
   bosses-x3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 45
     display: '&4&l{amount}x Chave Bosses'
-    command: crate givekey bosses {player} {amount}
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
@@ -295,10 +295,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   bosses-x5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 27
     display: '&4&l{amount}x Chave Bosses'
-    command: crate givekey bosses {player} {amount}
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
@@ -310,10 +310,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   bosses-x10:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 16
     display: '&4&l{amount}x Chave Bosses'
-    command: crate givekey bosses {player} {amount}
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 10
     icon:
       material: TRIPWIRE_HOOK
@@ -325,10 +325,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   bosses-x15:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 9
     display: '&4&l{amount}x Chave Bosses'
-    command: crate givekey bosses {player} {amount}
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 15
     icon:
       material: TRIPWIRE_HOOK
@@ -340,10 +340,10 @@ rewards:
       - '&7abrindo essa chave.'
 
   bosses-x30:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&4&l{amount}x Chave Bosses'
-    command: crate givekey bosses {player} {amount}
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 30
     icon:
       material: TRIPWIRE_HOOK
@@ -357,10 +357,10 @@ rewards:
   # ── CHAVE VIP ───────────────────────────────────────────────── 1/6
 
   vip-x3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 45
     display: '&d&l{amount}x Chave VIP'
-    command: crate givekey vip {player} {amount}
+    command: crates givevirtualkey vip {player} {amount}
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
@@ -372,10 +372,10 @@ rewards:
       - '&7no servidor todo dia.'
 
   vip-x5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 27
     display: '&d&l{amount}x Chave VIP'
-    command: crate givekey vip {player} {amount}
+    command: crates givevirtualkey vip {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
@@ -387,10 +387,10 @@ rewards:
       - '&7no servidor todo dia.'
 
   vip-x10:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 16
     display: '&d&l{amount}x Chave VIP'
-    command: crate givekey vip {player} {amount}
+    command: crates givevirtualkey vip {player} {amount}
     amount: 10
     icon:
       material: TRIPWIRE_HOOK
@@ -402,10 +402,10 @@ rewards:
       - '&7no servidor todo dia.'
 
   vip-x15:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 9
     display: '&d&l{amount}x Chave VIP'
-    command: crate givekey vip {player} {amount}
+    command: crates givevirtualkey vip {player} {amount}
     amount: 15
     icon:
       material: TRIPWIRE_HOOK
@@ -417,10 +417,10 @@ rewards:
       - '&7no servidor todo dia.'
 
   vip-x30:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&d&l{amount}x Chave VIP'
-    command: crate givekey vip {player} {amount}
+    command: crates givevirtualkey vip {player} {amount}
     amount: 30
     icon:
       material: TRIPWIRE_HOOK
@@ -434,10 +434,10 @@ rewards:
   # ── CHAVE RANKUP ────────────────────────────────────────────── 1/6
 
   rankup-x3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 45
     display: '&6&l{amount}x Chave RankUP'
-    command: crate givekey rankup {player} {amount}
+    command: crates givevirtualkey rankup {player} {amount}
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
@@ -449,10 +449,10 @@ rewards:
       - '&7ao longo da sua jornada.'
 
   rankup-x5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 27
     display: '&6&l{amount}x Chave RankUP'
-    command: crate givekey rankup {player} {amount}
+    command: crates givevirtualkey rankup {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK
@@ -464,10 +464,10 @@ rewards:
       - '&7ao longo da sua jornada.'
 
   rankup-x10:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 16
     display: '&6&l{amount}x Chave RankUP'
-    command: crate givekey rankup {player} {amount}
+    command: crates givevirtualkey rankup {player} {amount}
     amount: 10
     icon:
       material: TRIPWIRE_HOOK
@@ -479,10 +479,10 @@ rewards:
       - '&7ao longo da sua jornada.'
 
   rankup-x15:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 9
     display: '&6&l{amount}x Chave RankUP'
-    command: crate givekey rankup {player} {amount}
+    command: crates givevirtualkey rankup {player} {amount}
     amount: 15
     icon:
       material: TRIPWIRE_HOOK
@@ -494,10 +494,10 @@ rewards:
       - '&7ao longo da sua jornada.'
 
   rankup-x30:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&6&l{amount}x Chave RankUP'
-    command: crate givekey rankup {player} {amount}
+    command: crates givevirtualkey rankup {player} {amount}
     amount: 30
     icon:
       material: TRIPWIRE_HOOK

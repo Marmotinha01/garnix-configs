@@ -171,7 +171,7 @@ rewards:
 
   # -- Runa Sagrada
   sagrada-25:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
@@ -183,7 +183,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   sagrada-50:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1.5
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
@@ -196,7 +196,7 @@ rewards:
 
   # -- Runa Eterna
   eterna-25:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
@@ -211,7 +211,7 @@ rewards:
       - '&8 ▪ &fQuantia: &2x{amount} '
 
   eterna-50:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1.5
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
@@ -227,7 +227,7 @@ rewards:
 
   # -- Runa Divina
   divina-25:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
@@ -239,7 +239,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   divina-50:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1.5
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
@@ -252,7 +252,7 @@ rewards:
 
   # -- Runa Primal
   primal-25:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
@@ -264,7 +264,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   primal-50:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1.5
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
@@ -305,7 +305,7 @@ rewards:
 
   # -- Combustível
   combustivel-25:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 6
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
@@ -318,7 +318,7 @@ rewards:
       - '&fLitros: &7{amount}L'
 
   combustivel-50:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 3
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
@@ -331,7 +331,7 @@ rewards:
       - '&fLitros: &7{amount}L'
 
   combustivel-100:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1.5
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
@@ -345,7 +345,7 @@ rewards:
 
   # -- Limite de Armazém
   lim-armazem-25:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 5
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -359,7 +359,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-50:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 2.5
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -373,7 +373,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-100:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -420,7 +420,7 @@ rewards:
 
   # -- Limite de Máquinas
   lim-maquina-25:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 2.5
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -434,7 +434,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-50:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -448,7 +448,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-100:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.5
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -463,7 +463,7 @@ rewards:
 
   # -- Limite de Spawners
   lim-spawner-25:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 2.5
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -477,7 +477,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-50:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -491,7 +491,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-100:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.5
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1

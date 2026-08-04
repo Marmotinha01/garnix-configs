@@ -29,8 +29,8 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   chave:
-    type: COMMAND_ITEM
-    command: 'crates givekey bosses {player} {amount}'
+    type: COMMAND
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 3
     icon:
       material: TRIPWIRE_HOOK

@@ -18,8 +18,8 @@ reward-icon:
 
 rewards:
   chave:
-    type: COMMAND_ITEM
-    command: 'crates givekey mineracao {player} {amount}'
+    type: COMMAND
+    command: crates givevirtualkey mineracao {player} {amount}
     amount: 5
     icon:
       material: TRIPWIRE_HOOK

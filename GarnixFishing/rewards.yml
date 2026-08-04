@@ -94,8 +94,8 @@ rewards:
     weight: 8
     rare: true
     xp: 50
-    type: COMMAND_ITEM
-    command: crates givekey pesca {player} {amount}
+    type: COMMAND
+    command: crates givevirtualkey pesca {player} {amount}
     amount: 1
     currency: '100'
     display: '&6&lTesouro do Mar'

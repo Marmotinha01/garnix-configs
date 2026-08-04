@@ -79,7 +79,7 @@ box-item:
 rewards:
 
   maquina-limite-spawners:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 19.25
     display: '&b&l{amount}x Máquina de L. de Spawners'
     command: maquina give {player} limite-spawners {amount} 1
@@ -94,7 +94,7 @@ rewards:
       - '&8 ▪ &fQuantia: &b{amount} '
 
   maquina-limite-maquinas:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 19.25
     display: '&9&l{amount}x Máquina de L. de Máquinas'
     command: maquina give {player} limite-maquinas {amount} 1
@@ -109,7 +109,7 @@ rewards:
       - '&8 ▪ &fQuantia: &9{amount} '
 
   maquina-cash:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 16.25
     display: '&6&l{amount}x Máquina de Cash'
     command: maquina give {player} cash {amount} 1

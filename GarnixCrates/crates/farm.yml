@@ -143,7 +143,7 @@ rewards:
       - '&fValor: &5❋{amount}'
 
   combustivel:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 10.5
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
@@ -156,7 +156,7 @@ rewards:
 
   # -- COMUM PLUS ----------------------------------------------------- 12%
   lim-armazem-1:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 2.7
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -170,7 +170,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1.35
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -184,7 +184,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.45
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -198,7 +198,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-maquina-1:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1.35
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -212,7 +212,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.68
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -226,7 +226,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.22
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -240,7 +240,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-spawner-1:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.45
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -254,7 +254,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-3:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.22
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -268,7 +268,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-5:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 0.08
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -282,10 +282,10 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   chave-vip:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1.5
     display: '&dChave VIP'
-    command: crate givekey vip {player} {amount}
+    command: crates givevirtualkey vip {player} {amount}
     amount: 1
     icon:
       material: TRIPWIRE_HOOK
@@ -298,10 +298,10 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   chave-boss:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 2
     display: '&cChave de Boss'
-    command: crate givekey bosses {player} {amount}
+    command: crates givevirtualkey bosses {player} {amount}
     amount: 1
     icon:
       material: TRIPWIRE_HOOK
@@ -314,10 +314,10 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   chave-rankup:
-    type: COMMAND_ITEM
+    type: COMMAND
     chance: 1
     display: '&6Chave RankUP'
-    command: crate givekey rankup {player} {amount}
+    command: crates givevirtualkey rankup {player} {amount}
     amount: 1
     icon:
       material: TRIPWIRE_HOOK

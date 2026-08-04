@@ -18,8 +18,8 @@ reward-icon:
 
 rewards:
   chave:
-    type: COMMAND_ITEM
-    command: 'crates givekey farm {player} {amount}'
+    type: COMMAND
+    command: crates givevirtualkey farm {player} {amount}
     amount: 3
     icon:
       material: TRIPWIRE_HOOK
