@@ -129,7 +129,7 @@ farm-report:
   - '  &a&lNICE! &fAqui está seu progresso na fazenda.'
   - '  &8Somado no último minuto colhendo.'
   - ''
-  - '  &8▶ &7Plantações colhidas: &f{crops}'
+  - '  &8▪ &b{crops} plantações colhidas'
   - '{currencies}'
   - ''
   - '  &fEncantamentos ativados:'
@@ -140,13 +140,13 @@ farm-report:
   - '  &a&lNICE! &fAqui está seu progresso na fazenda.'
   - '  &8Somado no último minuto colhendo.'
   - ''
-  - '  &8▶ &7Plantações colhidas: &f{crops}'
+  - '  &8▪ &b{crops} plantações colhidas'
   - '{currencies}'
   - ''
-  currency-entry: '  &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  currency-entry: '  &8▪ {symbol_color}{symbol}{primary_color}{amount} {currency}'
   # {display} já vem colorido com a cor do próprio encantamento (a mesma do ícone),
   # então não leva cor aqui — qualquer código antes dele seria descartado.
-  enchant-entry: '  &8▶ {display} &fx{count}'
+  enchant-entry: '  &8▪ {display} &7x{count}'
 
 # Subida de nível de fazenda. Tokens: {level} {max_level} {old_level}
 # A cor do nível acompanha a cor do GG! em cada caso.

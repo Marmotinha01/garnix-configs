@@ -236,7 +236,7 @@ mining-report:
   - '  &a&lNICE! &fAqui está seu progresso na mineração.'
   - '  &8Somado no último minuto minerado.'
   - ''
-  - '  &8▶ &7Blocos quebrados: &f{blocks}'
+  - '  &8▪ &b{blocks} blocos quebrados'
   - '{currencies}'
   - ''
   - '  &fEncantamentos ativados:'
@@ -247,13 +247,13 @@ mining-report:
   - '  &a&lNICE! &fAqui está seu progresso na mineração.'
   - '  &8Somado no último minuto minerado.'
   - ''
-  - '  &8▶ &7Blocos quebrados: &f{blocks}'
+  - '  &8▪ &b{blocks} blocos quebrados'
   - '{currencies}'
   - ''
-  currency-entry: '  &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
+  currency-entry: '  &8▪ {symbol_color}{symbol}{primary_color}{amount} {currency}'
   # {display} já vem colorido com a cor do próprio encantamento (a mesma do ícone),
   # então não leva cor aqui — qualquer código antes dele seria descartado.
-  enchant-entry: '  &8▶ {display} &fx{count}'
+  enchant-entry: '  &8▪ {display} &7x{count}'
 
 # A cor do nível acompanha a cor do GG! em cada caso, e a segunda linha diz o que
 # mudou de fato. Os três blocos têm comprimento parecido de propósito.

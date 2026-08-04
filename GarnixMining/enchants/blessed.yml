@@ -9,11 +9,18 @@ max-level: 500
 base-cost: 1000
 increase-cost: 18.75
 
-# 0.05% por bloco no nível 1 e 1% no nível 500 — vinte vezes a amplitude antiga.
+# 0.1% por bloco no nível 1 e 2% no nível 500.
+#
 # As chaves são roladas em TODO bloco quebrado, inclusive os que os encantamentos
-# de área derrubam, então o ritmo real acompanha o quanto a picareta quebra.
-base-chance: 0.05
-increase-chance: 0.0019038
+# de área derrubam — então esta chance NÃO se lê sozinha: o ritmo real de chave é
+# ela vezes quantos blocos a picareta derruba por minuto. Quando as chances dos
+# encantamentos de área mudam, o ritmo de chave muda junto, mesmo sem ninguém
+# tocar aqui. Foi o que aconteceu: os valores antigos (0.05% / 1%) foram
+# calibrados contra o ritmo de blocos ANTERIOR ao reequilíbrio que deixou
+# Explosivo e Raio mais raros nos níveis baixos, e na prática saíram
+# ~3x mais lentos do que o pretendido. Estes são o dobro daqueles.
+base-chance: 0.1
+increase-chance: 0.0038076
 
 # As chaves caem direto nas chaves virtuais do /crates, não no correio, e são
 # creditadas em lote a cada tique do relatório.
