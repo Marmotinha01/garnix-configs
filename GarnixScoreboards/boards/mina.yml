@@ -24,7 +24,7 @@ title:
 lines:
 - ''
 - ' &fNível: &a%mining_mine_level%'
-- ' %mining_level_bar%'
+- ' %mining_level_bar% &7%mining_xp_percentage%'
 - ''
 - ' &fCoins: &2$&a%currencies_coins%'
 - ' &fCash: &6❂%currencies_cash%'

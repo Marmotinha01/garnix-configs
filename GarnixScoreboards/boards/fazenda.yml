@@ -30,7 +30,7 @@ title:
 lines:
 - ''
 - ' &fNível: &a%farm_level%'
-- ' %farm_level_bar%'
+- ' %farm_level_bar% &7%farm_xp_percentage%'
 - ''
 - ' &fPlantação: %farm_type%'
 - ' &fColhidas: &7%farm_type_crops%'

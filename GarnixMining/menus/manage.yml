@@ -28,7 +28,7 @@ status-private-icon:
   - '&cClique para alterar.'
 
 status-locked-icon:
-  slot: 10
+  slot: 11
   material: STAINED_GLASS_PANE
   data: 14
   display: '&8Mina Pública'

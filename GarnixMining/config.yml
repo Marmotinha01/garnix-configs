@@ -348,7 +348,9 @@ frenzy:
     symbol: '▪'
     completed-color: '&a'
     incomplete-color: '&7'
-  inactive-entry: '{bar}'
+  # Tokens: {bar} {progress} {required} {percentage}.
+  # {percentage} vem SEM o '%' — o símbolo é escrito aqui na linha.
+  inactive-entry: '{bar} &7{percentage}%'
   # %mining_frenzy% text while the window is ACTIVE. {time} = remaining time.
   active-entry: '&7{time} restantes'
   # Feedback fired when the frenzy activates. {duration} = the configured duration.
