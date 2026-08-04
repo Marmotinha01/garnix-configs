@@ -79,7 +79,7 @@ box-item:
 rewards:
 
   maquina-limite-spawners:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 19.25
     display: '&b&l{amount}x Máquina de L. de Spawners'
     command: maquina give {player} limite-spawners {amount} 1
@@ -94,7 +94,7 @@ rewards:
       - '&8 ▪ &fQuantia: &b{amount} '
 
   maquina-limite-maquinas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 19.25
     display: '&9&l{amount}x Máquina de L. de Máquinas'
     command: maquina give {player} limite-maquinas {amount} 1
@@ -109,7 +109,7 @@ rewards:
       - '&8 ▪ &fQuantia: &9{amount} '
 
   maquina-cash:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 16.25
     display: '&6&l{amount}x Máquina de Cash'
     command: maquina give {player} cash {amount} 1
@@ -124,7 +124,7 @@ rewards:
       - '&8 ▪ &fQuantia: &6{amount} '
 
   vaga:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 9
     display: '&a&lVaga de Visitante'
     command: mina giveslot {player} 1
@@ -137,7 +137,7 @@ rewards:
       - '&7de visitante na sua mina.'
 
   robo-lendario:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 9
     display: '&4&lRobô Lendário'
     command: crates giverobot lendario {player} {amount}
@@ -156,7 +156,7 @@ rewards:
       - ' &a+&l75&a% &fsobre a chance deles.'
 
   torre-cacto-15:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 9
     display: '&a&lTorre de Cacto &8[15 Andares]'
     command: cactustower give {player} 15 1
@@ -169,7 +169,7 @@ rewards:
       - '&7pronta no seu terreno.'
 
   caixas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&d&l{amount}x Caixa Caixas'
     command: caixas give caixas {player} {amount}
@@ -183,7 +183,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   skins-ii:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&e&l{amount}x Caixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
@@ -197,7 +197,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   skin-tempestita:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&d&lSkin de Tempestita'
     command: pesca giveskin {player} tempestita {amount}
@@ -213,7 +213,7 @@ rewards:
       - '&8 ▪ &cPeso até &l130&ckg '
 
   torre-cacto-30:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&a&lTorre de Cacto &8[30 Andares]'
     command: cactustower give {player} 30 1
@@ -226,7 +226,7 @@ rewards:
       - '&7pronta no seu terreno.'
 
   livro-killstack:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&4&l{amount}x Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
@@ -243,7 +243,7 @@ rewards:
       - '&8 ▪ &fQuantia: &c{amount} '
 
   papel-imortal:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&b&lPapel VIP IMORTAL &8[3 Dias]'
     command: vip givepaper {player} imortal 3d {amount}
@@ -258,7 +258,7 @@ rewards:
       - '&8 ▪ &fDuração: &b3d '
 
   venda-automatica:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&6&lVenda Automática'
     command: armazem giveautosell {player} {amount}
@@ -276,7 +276,7 @@ rewards:
       - '&8 ▪ &cem seus terrenos. '
 
   skin-mithril:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&4&lSkin de Mithril'
     command: mina giveskin {player} mithril {amount}
@@ -294,7 +294,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-marfim:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&f&lSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
@@ -312,7 +312,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   robo-mitico:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&6&lRobô Mítico'
     command: crates giverobot mitico {player} {amount}
@@ -331,7 +331,7 @@ rewards:
       - ' &a+&l140&a% &fsobre a chance deles.'
 
   papel-supremo:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&4&lPapel VIP SUPREMO &8[2 Dias]'
     command: vip givepaper {player} supremo 2d {amount}
@@ -346,7 +346,7 @@ rewards:
       - '&8 ▪ &fDuração: &42d '
 
   papel-garnix:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.25
     display: '&6&lPapel VIP GARNIX &8[1 Dia]'
     command: vip givepaper {player} garnix 1d {amount}
@@ -361,7 +361,7 @@ rewards:
       - '&8 ▪ &fDuração: &61d '
 
   combustivel-inf:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.25
     display: '&b&lCombustível Infinito'
     command: maquina giveinfinitefuel {player}
@@ -376,7 +376,7 @@ rewards:
       - '&7fica sem combustível.'
 
   matadora-hk:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.25
     display: '&4&lMatadora Hit-Kill'
     command: boss give sword {player} hk

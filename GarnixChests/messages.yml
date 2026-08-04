@@ -30,8 +30,6 @@ give-max: '&c{player} já possui o número máximo de baús.'
 giveitem-success: '&aVocê deu &fx{amount} &aativador(es) de baú para &f{player}&a.'
 giveitem-received: '&aVocê recebeu um &fativador de baú&a. Use-o com o botão direito.'
 # Mostradas NO LUGAR de 'giveitem-received', nunca junto — uma mensagem por jogador.
-giveitem-mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-giveitem-leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
 player-offline: '&cO jogador &f{player} &cprecisa estar online para receber o item.'
 
 # Ativador (clique-direito)
@@ -63,10 +61,5 @@ icon-changed: '&aÍcone do baú atualizado.'
 # Admin: reload
 reload-success: '&aConfigurações recarregadas com sucesso.'
 
-# -- Entrega de itens ---------------------------------------------------
-# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
 # Usadas quando o tamanho do ender chest por permissão diminui e os itens
 # que não cabem mais são devolvidos ao jogador.
-delivery:
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

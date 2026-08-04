@@ -87,6 +87,38 @@ menu:
     material: WEB
     display: '&cNenhum item encontrado'
 
+# -- Entrega de itens ---------------------------------------------------
+# Toda entrega de item da rede passa pelo ItemDelivery do core: o que cabe vai
+# para o inventário, o que sobra vai para o correio (nunca para o chão).
+#
+# As duas linhas abaixo são DE PROPÓSITO genéricas. Antes cada plugin tinha a
+# sua própria cópia da mesma frase — quinze classes DeliveryLines e quinze
+# pares de chaves para manter em sincronia. O que o jogador precisa saber é o
+# mesmo venha o item de onde vier: não coube, está no correio.
+
+item-delivery:
+
+  # Desligue para nunca avisar nada. A entrega continua igual — o item vai para
+  # o correio do mesmo jeito, só o aviso some.
+  notify: true
+
+  # Teto de UM aviso por jogador nesta janela, em ticks (20 = 1 segundo).
+  #
+  # Resgatar um correio com mil entradas pendentes dispara mil entregas no mesmo
+  # tick, e cada uma encontra o inventário cheio — sem esta janela são mil linhas
+  # idênticas na tela. O correio é só a origem mais barulhenta, não a única: um
+  # giveall, um drop de boss e uma compra caindo juntos dão no mesmo.
+  #
+  # 0 desliga a janela e volta a avisar a cada entrega.
+  notify-cooldown-ticks: 20
+
+  # Jogador estava em evento ou em mundo de arena: NADA foi colocado no
+  # inventário, a entrega inteira foi para o correio.
+  mailed: '&eVocê está em um evento. &eSua entrega foi para o correio. &7(/correio)'
+
+  # Jogador estava em lugar seguro mas o inventário encheu: só a sobra foi.
+  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
+
 # -- Captcha ------------------------------------------------------------
 # Sistema anti-bot reutilizável. Cada plugin instancia seu próprio Captcha
 # com caches independentes — a config dos itens é compartilhada aqui.

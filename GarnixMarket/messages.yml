@@ -33,8 +33,6 @@ sell:
   - '&cO item não está mais na sua mão.'
   failed:
   - '&cNão foi possível anunciar o item. Ele continua com você.'
-  failed-mailed: '&cNão foi possível anunciar &f{item}&c. &eEm evento — foi para o correio. &7(/correio)'
-  failed-leftover: '&cNão foi possível anunciar &f{item}&c. &eInventário cheio — foi para o correio. &7(/correio)'
   success:
   - '&aVocê anunciou &f{item} &apor {currency_prefix}{price}&a.'
   sold:
@@ -56,8 +54,6 @@ buy:
   - '&cNão foi possível concluir a compra. Nada foi cobrado de você.'
   success:
   - '&aVocê comprou &f{item} &ade &f{seller} &apor {currency_prefix}{price}&a.'
-  received-mailed: '&aVocê comprou &f{item} &apor {currency_prefix}{price}&a. &eEm evento — foi para o correio. &7(/correio)'
-  received-leftover: '&aVocê comprou &f{item} &apor {currency_prefix}{price}&a. &eInventário cheio — foi para o correio. &7(/correio)'
 
 cancel:
   unavailable:
@@ -68,8 +64,6 @@ cancel:
   - '&cNão foi possível recuperar esse item. Avise a administração.'
   success:
   - '&aAnúncio cancelado. &f{item} &avoltou para você.'
-  mailed: '&aAnúncio de &f{item} &acancelado. &eEm evento — foi para o correio. &7(/correio)'
-  leftover: '&aAnúncio de &f{item} &acancelado. &eInventário cheio — foi para o correio. &7(/correio)'
 
 listing:
   expired:

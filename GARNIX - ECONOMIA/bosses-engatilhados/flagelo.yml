@@ -80,7 +80,7 @@ rewards:
       - '&7abrindo essa chave.'
 
   livro:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&5Livro de Ceifador 2'
     command: lamina givebook {player} ceifador 2
@@ -95,7 +95,7 @@ rewards:
       - '&8 ▪ &fCeifador: &dII '
 
   matadora:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&6Matadora Sombria'
     command: boss give sword {player} sombria

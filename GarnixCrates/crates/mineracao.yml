@@ -151,7 +151,7 @@ rewards:
       - '&fValor: &d۞{amount}'
 
   combustivel:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 9.8
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
@@ -163,7 +163,7 @@ rewards:
       - '&fLitros: &7{amount}L'
 
   bomba-2x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5
     display: '&4Explosivo'
     command: mina givebomb {player} 2x2 {amount}
@@ -175,7 +175,7 @@ rewards:
       - '&fÁrea: &42x2'
 
   bomba-4x4:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.5
     display: '&4Explosivo'
     command: mina givebomb {player} 4x4 {amount}
@@ -188,7 +188,7 @@ rewards:
 
   # -- COMUM PLUS ----------------------------------------------------- 12%
   lim-armazem-1:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.7
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -202,7 +202,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.35
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -216,7 +216,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.45
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -230,7 +230,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-maquina-1:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.35
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -244,7 +244,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.68
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -258,7 +258,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.22
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -272,7 +272,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-spawner-1:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.45
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -286,7 +286,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.22
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -300,7 +300,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.08
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -314,7 +314,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   chave-vip:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&dChave VIP'
     command: crate givekey vip {player} {amount}
@@ -330,7 +330,7 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   chave-boss:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
@@ -346,7 +346,7 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   chave-rankup:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Chave RankUP'
     command: crate givekey rankup {player} {amount}
@@ -363,7 +363,7 @@ rewards:
 
   # -- ARMADURA --------------------------------------------------------- 2%
   armadura-i-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&7Capacete Mineração &7[Tier &lI&7]'
     command: mina givearmor {player} tier-i_helmet {amount}
@@ -382,7 +382,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&7Peitoral Mineração &7[Tier &lI&7]'
     command: mina givearmor {player} tier-i_chestplate {amount}
@@ -401,7 +401,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&7Calça Mineração &7[Tier &lI&7]'
     command: mina givearmor {player} tier-i_leggings {amount}
@@ -420,7 +420,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&7Bota Mineração &7[Tier &lI&7]'
     command: mina givearmor {player} tier-i_boots {amount}
@@ -440,7 +440,7 @@ rewards:
 
   # -- MEDIANA ------------------------------------------------------- 2,6%
   booster-gemas-2x:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.7
     display: '&6Booster de Mineração'
     command: mina givebooster {player} gemas 2 5m {amount}
@@ -461,7 +461,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   booster-coins-2x:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.7
     display: '&6Booster de Mineração'
     command: mina givebooster {player} coins 2 5m {amount}
@@ -482,7 +482,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   britadeira:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.6
     display: '&cBritadeira'
     command: mina givedrill {player} {amount}
@@ -495,7 +495,7 @@ rewards:
       - '&fÁrea: &c3x3'
 
   bomba-6x6:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.45
     display: '&4Explosivo'
     command: mina givebomb {player} 6x6 {amount}
@@ -507,7 +507,7 @@ rewards:
       - '&fÁrea: &46x6'
 
   bomba-8x8:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.15
     display: '&4Explosivo'
     command: mina givebomb {player} 8x8 {amount}
@@ -520,7 +520,7 @@ rewards:
 
   # -- RARA (caixas) ----------------------------------------------- 0,399%
   caixa-mineracao-i:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.3
     display: '&6Caixa Mineração &6[Tier &lI&6]'
     command: caixas give mineracao-i {player} {amount}
@@ -533,7 +533,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   caixa-recursos:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.099
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
@@ -547,7 +547,7 @@ rewards:
 
   # -- MEDIANA PLUS (skins) ------------------------------------------ 0,7%
   skin-pedra:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.4
     display: '&7Skin de Pedra'
     command: mina giveskin {player} pedra {amount}
@@ -564,7 +564,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-ferro:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.3
     display: '&fSkin de Ferro'
     command: mina giveskin {player} ferro {amount}
@@ -582,7 +582,7 @@ rewards:
 
   # -- JACKPOT ------------------------------------------------------- 0,001%
   jackpot:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.001
     display: '&6Caixa Mineração &6[Tier &lII&6]'
     command: caixas give mineracao-ii {player} {amount}

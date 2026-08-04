@@ -46,7 +46,7 @@ rewards:
 
   # -- MINERAÇÃO --------------------------------------------------- 1/3
   mineracao-quartzo:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 48
     display: '&fSkin de Quartzo'
     command: mina giveskin {player} quartzo {amount}
@@ -63,7 +63,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   mineracao-jade:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 30
     display: '&aSkin de Jade'
     command: mina giveskin {player} jade {amount}
@@ -81,7 +81,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   mineracao-safira:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 16
     display: '&9Skin de Safira'
     command: mina giveskin {player} safira {amount}
@@ -99,7 +99,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   mineracao-mithril:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&4Skin de Mithril'
     command: mina giveskin {player} mithril {amount}
@@ -118,7 +118,7 @@ rewards:
 
   # -- FAZENDA ----------------------------------------------------- 1/3
   farm-esmeralda:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 48
     display: '&aSkin de Esmeralda'
     command: fazenda giveskin {player} esmeralda {amount}
@@ -137,7 +137,7 @@ rewards:
   # O id continua `ametista` (skins.yml da fazenda) — o nome do item é Opala e
   # ainda é provisório. Se o dono trocar o nome, troca aqui e no skins.yml.
   farm-ametista:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 30
     display: '&bSkin de Ametista'
     command: fazenda giveskin {player} ametista {amount}
@@ -155,7 +155,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   farm-cristal:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 16
     display: '&9Skin de Cristal'
     command: fazenda giveskin {player} cristal {amount}
@@ -173,7 +173,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   farm-marfim:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&fSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
@@ -192,7 +192,7 @@ rewards:
 
   # -- PESCA ------------------------------------------------------- 1/3
   pesca-serenita:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 48
     display: '&5Skin de Serenita'
     command: pesca giveskin {player} serenita {amount}
@@ -208,7 +208,7 @@ rewards:
       - '&8 ▪ &cPeso até &l45&ckg '
 
   pesca-oceanita:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 30
     display: '&1Skin de Oceanita'
     command: pesca giveskin {player} oceanita {amount}
@@ -224,7 +224,7 @@ rewards:
       - '&8 ▪ &cPeso até &l65&ckg '
 
   pesca-perola:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 16
     display: '&9Skin de Pérola'
     command: pesca giveskin {player} perola {amount}
@@ -240,7 +240,7 @@ rewards:
       - '&8 ▪ &cPeso até &l90&ckg '
 
   pesca-tempestita:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&dSkin de Tempestita'
     command: pesca giveskin {player} tempestita {amount}

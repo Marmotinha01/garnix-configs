@@ -109,10 +109,6 @@ give:
   # Mostradas NO LUGAR de 'received' — nunca junto, para o jogador receber
   # exatamente uma mensagem e ela ser verdadeira.
   #
-  # mailed:   estava em um evento, então NADA entrou no inventário.
-  # leftover: o inventário encheu; só o que sobrou foi para o correio.
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
 
 # Give All
 giveall-success: '&aVocê deu &ex{amount} &f{item} &apara todos os jogadores online.'
@@ -400,10 +396,3 @@ nick:
   invalid-chars: '&cO nick só pode conter letras, números, espaço e códigos de cores.'
   too-short: '&cO nick precisa ter no mínimo &f{min} &ccaracteres.'
   too-long: '&cO nick pode ter no máximo &f{max} &ccaracteres.'
-# -- Entrega de itens ---------------------------------------------------
-# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
-# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
-# leftover: inventário cheio — só a sobra foi ao correio.
-delivery:
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

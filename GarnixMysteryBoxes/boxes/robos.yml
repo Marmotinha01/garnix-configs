@@ -33,7 +33,7 @@ box-item:
 rewards:
 
   comum:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 45
     display: '&aRobô Comum'
     command: crates giverobot comum {player} {amount}
@@ -49,7 +49,7 @@ rewards:
       - ' &8▪ &fAbre chaves a cada &a&l20&as&f. '
 
   raro:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 30
     display: '&bRobô Raro'
     command: crates giverobot raro {player} {amount}
@@ -68,7 +68,7 @@ rewards:
       - ' &a+&l15&a% &fsobre a chance deles.'
 
   epico:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 18
     display: '&dRobô Épico'
     command: crates giverobot epico {player} {amount}
@@ -87,7 +87,7 @@ rewards:
       - ' &a+&l40&a% &fsobre a chance deles.'
 
   lendario:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&4Robô Lendário'
     command: crates giverobot lendario {player} {amount}
@@ -106,7 +106,7 @@ rewards:
       - ' &a+&l75&a% &fsobre a chance deles.'
 
   mitico:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Robô Mítico'
     command: crates giverobot mitico {player} {amount}

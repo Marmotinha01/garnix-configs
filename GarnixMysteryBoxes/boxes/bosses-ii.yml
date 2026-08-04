@@ -35,7 +35,7 @@ rewards:
 
   # -- ARAUTO — o recheio desta tabela
   boss-arauto:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 20
     display: '&d&l{amount}x Boss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
@@ -48,7 +48,7 @@ rewards:
       - '&fVida: &4❤75.000'
 
   boss-arauto-x3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 10
     display: '&d&l{amount}x Boss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
@@ -61,7 +61,7 @@ rewards:
       - '&fVida: &4❤75.000'
 
   boss-arauto-x5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5
     display: '&d&l{amount}x Boss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
@@ -75,7 +75,7 @@ rewards:
 
   # -- TITÃ
   boss-tita:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 14
     display: '&5&l{amount}x Boss Titã'
     command: boss give boss {player} TITA {amount} 1
@@ -88,7 +88,7 @@ rewards:
       - '&fVida: &4❤150.000'
 
   boss-tita-x3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 7
     display: '&5&l{amount}x Boss Titã'
     command: boss give boss {player} TITA {amount} 1
@@ -101,7 +101,7 @@ rewards:
       - '&fVida: &4❤150.000'
 
   boss-tita-x5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.5
     display: '&5&l{amount}x Boss Titã'
     command: boss give boss {player} TITA {amount} 1
@@ -115,7 +115,7 @@ rewards:
 
   # -- DEVORADOR
   boss-devorador:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 9
     display: '&4&l{amount}x Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
@@ -128,7 +128,7 @@ rewards:
       - '&fVida: &4❤300.000'
 
   boss-devorador-x3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4.5
     display: '&4&l{amount}x Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
@@ -141,7 +141,7 @@ rewards:
       - '&fVida: &4❤300.000'
 
   boss-devorador-x5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.25
     display: '&4&l{amount}x Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
@@ -155,7 +155,7 @@ rewards:
 
   # -- LIVROS
   livro-killstack:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 8
     display: '&4&l{amount}x Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
@@ -173,7 +173,7 @@ rewards:
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
   livro-killstack-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&4&l{amount}x Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
@@ -192,7 +192,7 @@ rewards:
 
   # -- MATADORAS
   matadora-sombria:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&5Matadora Sombria'
     command: boss give sword {player} sombria
@@ -206,7 +206,7 @@ rewards:
       flags: [ 'HIDE_ATTRIBUTES' ]
 
   matadora-ancestral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&bMatadora Ancestral'
     command: boss give sword {player} ancestral
@@ -220,7 +220,7 @@ rewards:
       flags: [ 'HIDE_ATTRIBUTES' ]
 
   matadora-runica:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&6Matadora Rúnica'
     command: boss give sword {player} runica
@@ -234,7 +234,7 @@ rewards:
       flags: [ 'HIDE_ATTRIBUTES' ]
 
   matadora-abissal:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&3Matadora Abissal'
     command: boss give sword {player} abissal

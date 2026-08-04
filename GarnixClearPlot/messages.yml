@@ -2,8 +2,6 @@ give:
   success: '&aVocê entregou &f{amount}x &aLimpador de Terreno para &f{player}&a.'
   received: '&aVocê recebeu &f{amount}x &aLimpador de Terreno&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
-  mailed: '&eVocê está em um evento! &f{amount}x &eLimpador de Terreno foi para o seu &6/correio&e.'
-  leftover: '&eSeu inventário encheu! Os Limpadores que sobraram foram para o seu &6/correio&e.'
 
 usage:
   not-on-plot: '&cVocê precisa estar dentro de um terreno para usar isto.'

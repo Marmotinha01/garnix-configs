@@ -47,7 +47,7 @@ rewards:
 
   # -- ARMADURA TIER I --------------------------------------------- 24%
   armadura-i-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&7Capacete Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_helmet {amount}
@@ -65,7 +65,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&7Peitoral Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_chestplate {amount}
@@ -83,7 +83,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&7Calça Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_leggings {amount}
@@ -101,7 +101,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&7Bota Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_boots {amount}
@@ -120,7 +120,7 @@ rewards:
 
   # -- ARMADURA TIER II -------------------------------------------- 21%
   armadura-ii-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.25
     display: '&aCapacete Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_helmet {amount}
@@ -138,7 +138,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-ii-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.25
     display: '&aPeitoral Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_chestplate {amount}
@@ -156,7 +156,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-ii-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.25
     display: '&aCalça Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_leggings {amount}
@@ -174,7 +174,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-ii-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.25
     display: '&aBota Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_boots {amount}
@@ -193,7 +193,7 @@ rewards:
 
   # -- ARMADURA TIER III ------------------------------------------- 12%
   armadura-iii-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&bCapacete Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_helmet {amount}
@@ -211,7 +211,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&bPeitoral Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_chestplate {amount}
@@ -229,7 +229,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&bCalça Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_leggings {amount}
@@ -247,7 +247,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&bBota Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_boots {amount}
@@ -266,7 +266,7 @@ rewards:
 
   # -- SKINS ------------------------------------------------------- 15%
   skin-coral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.5
     display: '&3Skin de Coral'
     command: pesca giveskin {player} coral {amount}
@@ -282,7 +282,7 @@ rewards:
       - '&8 ▪ &cPeso até &l6&ckg '
 
   skin-escama:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4.5
     display: '&6Skin de Escama'
     command: pesca giveskin {player} escama {amount}
@@ -298,7 +298,7 @@ rewards:
       - '&8 ▪ &cPeso até &l10&ckg '
 
   skin-prata:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&fSkin de Prata'
     command: pesca giveskin {player} prata {amount}
@@ -314,7 +314,7 @@ rewards:
       - '&8 ▪ &cPeso até &l15&ckg '
 
   skin-turquesa:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&bSkin de Turquesa'
     command: pesca giveskin {player} turquesa {amount}
@@ -330,7 +330,7 @@ rewards:
       - '&8 ▪ &cPeso até &l22&ckg '
 
   forja:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 9
     display: '&bForja de Skins'
     command: pesca giveforge {player} 1
@@ -355,7 +355,7 @@ rewards:
 
   # -- BOOSTERS ----------------------------------------------------- 4%
   booster-2x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 2 5m {amount}
@@ -376,7 +376,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   booster-2x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 2 10m {amount}
@@ -398,7 +398,7 @@ rewards:
 
   # -- LIVROS ------------------------------------------------------- 9%
   livro-fartura:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&dLivro de Cobiça'
     command: pesca givebook {player} double 1 {amount}
@@ -416,7 +416,7 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
 
   livro-faro:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&aLivro de Maré'
     command: pesca givebook {player} luck 1 {amount}
@@ -433,7 +433,7 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
 
   livro-correnteza:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&bLivro de Correnteza'
     command: pesca givebook {player} speed 1 {amount}
@@ -451,7 +451,7 @@ rewards:
 
   # -- O DEGRAU PARA A TIER II
   caixa-pesca-ii:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}

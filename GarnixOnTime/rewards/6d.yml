@@ -18,7 +18,7 @@ reward-icon:
 
 rewards:
   chave:
-    type: COMMAND
+    type: COMMAND_ITEM
     command: 'crates givekey vip {player} {amount}'
     amount: 8
     icon:
@@ -30,7 +30,7 @@ rewards:
       - '&7abrindo essa chave.'
 
   caixa:
-    type: COMMAND
+    type: COMMAND_ITEM
     command: 'caixas give farm-ii {player} {amount}'
     amount: 1
     icon:

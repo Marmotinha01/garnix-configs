@@ -58,7 +58,7 @@ rewards:
 
   # -- ARMADURA TIER III ------------------------------------------- 23%
   armadura-iii-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.75
     display: '&bCapacete Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_helmet {amount}
@@ -77,7 +77,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.75
     display: '&bPeitoral Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_chestplate {amount}
@@ -96,7 +96,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.75
     display: '&bCalça Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_leggings {amount}
@@ -115,7 +115,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.75
     display: '&bBota Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_boots {amount}
@@ -135,7 +135,7 @@ rewards:
 
   # -- ARMADURA TIER IV -------------------------------------------- 18%
   armadura-iv-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4.5
     display: '&dCapacete Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_helmet {amount}
@@ -154,7 +154,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iv-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4.5
     display: '&dPeitoral Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_chestplate {amount}
@@ -173,7 +173,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iv-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4.5
     display: '&dCalça Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_leggings {amount}
@@ -192,7 +192,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iv-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4.5
     display: '&dBota Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_boots {amount}
@@ -212,7 +212,7 @@ rewards:
 
   # -- ARMADURA TIER V --------------------------------------------- 12%
   armadura-v-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&6Capacete Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_helmet {amount}
@@ -231,7 +231,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-v-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&6Peitoral Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_chestplate {amount}
@@ -250,7 +250,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-v-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&6Calça Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_leggings {amount}
@@ -269,7 +269,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-v-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&6Bota Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_boots {amount}
@@ -289,7 +289,7 @@ rewards:
 
   # -- SKINS ------------------------------------------------------- 23,5%
   skin-rubi:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 8
     display: '&cSkin de Rubi'
     command: mina giveskin {player} rubi {amount}
@@ -306,7 +306,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-quartzo:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&fSkin de Quartzo'
     command: mina giveskin {player} quartzo {amount}
@@ -323,7 +323,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-jade:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&aSkin de Jade'
     command: mina giveskin {player} jade {amount}
@@ -341,7 +341,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-safira:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&9Skin de Safira'
     command: mina giveskin {player} safira {amount}
@@ -359,7 +359,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-mithril:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&4Skin de Mithril'
     command: mina giveskin {player} mithril {amount}
@@ -377,7 +377,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   bomba-6x6:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4.5
     display: '&4Explosivo'
     command: mina givebomb {player} 6x6 {amount}
@@ -389,7 +389,7 @@ rewards:
       - '&fÁrea: &46x6'
 
   bomba-8x8:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&4Explosivo'
     command: mina givebomb {player} 8x8 {amount}
@@ -401,7 +401,7 @@ rewards:
       - '&fÁrea: &48x8'
 
   britadeira:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&cBritadeira'
     command: mina givedrill {player} {amount}
@@ -416,7 +416,7 @@ rewards:
 
   # -- BOOSTERS ----------------------------------------------------- 5%
   booster-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 2 15m {amount}
@@ -437,7 +437,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   booster-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 2 30m {amount}
@@ -459,7 +459,7 @@ rewards:
 
   # -- LIVROS ------------------------------------------------------- 9%
   livro-ceifador:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&dLivro de Ceifador'
     command: lamina givebook {player} ceifador 1 {amount}
@@ -476,7 +476,7 @@ rewards:
       - '&8 ▪ &fTipo: &cLâmina '
 
   livro-massacre:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&4Livro de Massacre'
     command: lamina givebook {player} massacre 1 {amount}
@@ -493,7 +493,7 @@ rewards:
       - '&8 ▪ &fTipo: &cLâmina '
 
   livro-pilhagem:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&aLivro de Pilhagem'
     command: lamina givebook {player} pilhagem 1 {amount}

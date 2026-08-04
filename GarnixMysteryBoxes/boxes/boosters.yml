@@ -36,7 +36,7 @@ rewards:
 
   # -- Booster de Mineração — Coins
   mina-coins-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&6Booster de Mineração'
     command: mina givebooster {player} coins 2 15m {amount}
@@ -57,7 +57,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-coins-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&6Booster de Mineração'
     command: mina givebooster {player} coins 2 30m {amount}
@@ -78,7 +78,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-coins-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} coins 2 1h {amount}
@@ -99,7 +99,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-coins-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} coins 3 5m {amount}
@@ -120,7 +120,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-coins-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&6Booster de Mineração'
     command: mina givebooster {player} coins 3 10m {amount}
@@ -143,7 +143,7 @@ rewards:
 
   # -- Booster de Mineração — Gemas
   mina-gemas-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&6Booster de Mineração'
     command: mina givebooster {player} gemas 2 15m {amount}
@@ -164,7 +164,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-gemas-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&6Booster de Mineração'
     command: mina givebooster {player} gemas 2 30m {amount}
@@ -185,7 +185,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-gemas-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} gemas 2 1h {amount}
@@ -206,7 +206,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-gemas-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} gemas 3 5m {amount}
@@ -227,7 +227,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-gemas-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&6Booster de Mineração'
     command: mina givebooster {player} gemas 3 10m {amount}
@@ -250,7 +250,7 @@ rewards:
 
   # -- Booster de Mineração — XP
   mina-xp-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&6Booster de Mineração'
     command: mina givebooster {player} xp 2 15m {amount}
@@ -271,7 +271,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-xp-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&6Booster de Mineração'
     command: mina givebooster {player} xp 2 30m {amount}
@@ -292,7 +292,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-xp-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} xp 2 1h {amount}
@@ -313,7 +313,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-xp-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} xp 3 5m {amount}
@@ -334,7 +334,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-xp-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&6Booster de Mineração'
     command: mina givebooster {player} xp 3 10m {amount}
@@ -357,7 +357,7 @@ rewards:
 
   # -- Booster de Mineração — XP + Coins + Gemas
   mina-both-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 2 15m {amount}
@@ -378,7 +378,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-both-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 2 30m {amount}
@@ -399,7 +399,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-both-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 2 1h {amount}
@@ -420,7 +420,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-both-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 3 5m {amount}
@@ -441,7 +441,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   mina-both-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 3 10m {amount}
@@ -464,7 +464,7 @@ rewards:
 
   # -- Booster de Fazenda — Coins
   fazenda-coins-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 15m {amount}
@@ -485,7 +485,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-coins-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 30m {amount}
@@ -506,7 +506,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-coins-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 1h {amount}
@@ -527,7 +527,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-coins-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} coins 3 5m {amount}
@@ -548,7 +548,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-coins-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} coins 3 10m {amount}
@@ -571,7 +571,7 @@ rewards:
 
   # -- Booster de Fazenda — Sementes
   fazenda-sementes-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 15m {amount}
@@ -592,7 +592,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-sementes-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 30m {amount}
@@ -613,7 +613,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-sementes-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 1h {amount}
@@ -634,7 +634,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-sementes-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 3 5m {amount}
@@ -655,7 +655,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-sementes-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 3 10m {amount}
@@ -678,7 +678,7 @@ rewards:
 
   # -- Booster de Fazenda — XP
   fazenda-xp-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 15m {amount}
@@ -699,7 +699,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-xp-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 30m {amount}
@@ -720,7 +720,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-xp-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 1h {amount}
@@ -741,7 +741,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-xp-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} xp 3 5m {amount}
@@ -762,7 +762,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-xp-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} xp 3 10m {amount}
@@ -785,7 +785,7 @@ rewards:
 
   # -- Booster de Fazenda — XP + Coins + Sementes
   fazenda-both-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 15m {amount}
@@ -806,7 +806,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-both-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 30m {amount}
@@ -827,7 +827,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-both-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 1h {amount}
@@ -848,7 +848,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-both-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 3 5m {amount}
@@ -869,7 +869,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   fazenda-both-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 3 10m {amount}
@@ -892,7 +892,7 @@ rewards:
 
   # -- Booster de Pesca — Corais
   pesca-corais-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} corais 2 15m {amount}
@@ -913,7 +913,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-corais-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} corais 2 30m {amount}
@@ -934,7 +934,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-corais-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} corais 2 1h {amount}
@@ -955,7 +955,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-corais-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} corais 3 5m {amount}
@@ -976,7 +976,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-corais-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} corais 3 10m {amount}
@@ -999,7 +999,7 @@ rewards:
 
   # -- Booster de Pesca — XP
   pesca-xp-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} xp 2 15m {amount}
@@ -1020,7 +1020,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-xp-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} xp 2 30m {amount}
@@ -1041,7 +1041,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-xp-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} xp 2 1h {amount}
@@ -1062,7 +1062,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-xp-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} xp 3 5m {amount}
@@ -1083,7 +1083,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-xp-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} xp 3 10m {amount}
@@ -1106,7 +1106,7 @@ rewards:
 
   # -- Booster de Pesca — XP + Corais
   pesca-both-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 2 15m {amount}
@@ -1127,7 +1127,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-both-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 2 30m {amount}
@@ -1148,7 +1148,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-both-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 2 1h {amount}
@@ -1169,7 +1169,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-both-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 3 5m {amount}
@@ -1190,7 +1190,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   pesca-both-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} both 3 10m {amount}
@@ -1213,7 +1213,7 @@ rewards:
 
   # -- Booster de Máquina — Drops
   maquina-drops-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&aBooster de Máquina'
     command: maquina givebooster {player} 2 15m {amount}
@@ -1234,7 +1234,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   maquina-drops-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&aBooster de Máquina'
     command: maquina givebooster {player} 2 30m {amount}
@@ -1255,7 +1255,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   maquina-drops-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&aBooster de Máquina'
     command: maquina givebooster {player} 2 1h {amount}
@@ -1276,7 +1276,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   maquina-drops-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&aBooster de Máquina'
     command: maquina givebooster {player} 3 5m {amount}
@@ -1297,7 +1297,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   maquina-drops-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&aBooster de Máquina'
     command: maquina givebooster {player} 3 10m {amount}
@@ -1320,7 +1320,7 @@ rewards:
 
   # -- Booster de Spawner — Drops
   spawner-drops-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} drops 2 15m {amount}
@@ -1341,7 +1341,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   spawner-drops-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} drops 2 30m {amount}
@@ -1362,7 +1362,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   spawner-drops-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} drops 2 1h {amount}
@@ -1383,7 +1383,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   spawner-drops-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} drops 3 5m {amount}
@@ -1404,7 +1404,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   spawner-drops-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} drops 3 10m {amount}
@@ -1427,7 +1427,7 @@ rewards:
 
   # -- Booster de Spawner — Heads
   spawner-heads-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} heads 2 15m {amount}
@@ -1448,7 +1448,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   spawner-heads-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} heads 2 30m {amount}
@@ -1469,7 +1469,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   spawner-heads-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} heads 2 1h {amount}
@@ -1490,7 +1490,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   spawner-heads-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} heads 3 5m {amount}
@@ -1511,7 +1511,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   spawner-heads-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&aBooster de Spawner'
     command: spawner givebooster {player} heads 3 10m {amount}
@@ -1534,7 +1534,7 @@ rewards:
 
   # -- Booster de Armazém — Venda de Cactos
   armazem-venda-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&aBooster de Armazém'
     command: armazem givebooster {player} 2 15m {amount}
@@ -1555,7 +1555,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   armazem-venda-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&aBooster de Armazém'
     command: armazem givebooster {player} 2 30m {amount}
@@ -1576,7 +1576,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   armazem-venda-2x-1h:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&aBooster de Armazém'
     command: armazem givebooster {player} 2 1h {amount}
@@ -1597,7 +1597,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   armazem-venda-3x-5m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&aBooster de Armazém'
     command: armazem givebooster {player} 3 5m {amount}
@@ -1618,7 +1618,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   armazem-venda-3x-10m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&aBooster de Armazém'
     command: armazem givebooster {player} 3 10m {amount}

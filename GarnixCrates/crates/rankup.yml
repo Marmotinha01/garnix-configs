@@ -41,9 +41,8 @@ key-item:
 #   comum 60% · comum plus 28% · mediana 9% · mediana plus 2,3% ·
 #   raríssima 0,699% · jackpot 0,001%
 #
-# ⚠️ O JACKPOT DEIXOU DE SER VAGO: e o Cash 500, e agora vale 0,001 como o das
-# outras crates (a regra do servidor e "cash e sempre jackpot"). Antes a rankup
-# dava 100 de cash com peso 0,3 — 300x mais provavel que o cash da VIP.
+# ⚠️ O jackpot e o Cash 500, com peso 0,001 como o das outras crates — a regra do
+# servidor e "cash e sempre jackpot".
 #
 # ⚠️ As caixas da faixa RARÍSSIMA sao ordenadas pelo `weight` do menu /caixas,
 # que e a ordem de raridade oficial do servidor — quanto MAIOR o weight, mais
@@ -53,8 +52,8 @@ key-item:
 #
 # ⚠️ A rankup e a EXCECAO do servidor e tem que ser. O volume dela e ~20 chaves
 # por volta de prestigio, contra as ~18.000/dia da mineracao — e a unica cujo
-# topo pode ser generoso sem inflar nada. Por isso o jackpot dela e 50x mais
-# provavel que o das outras (0,05% contra 0,001%) e a faixa comum e so 60%.
+# topo pode ser generoso sem inflar nada. E por isso que a faixa comum dela e so
+# 60%, contra 82-83% das crates de profissao.
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
 # mesma tabela. Por isso o premio em coins e pequeno.
@@ -147,7 +146,7 @@ rewards:
 
   # -- COMUM PLUS ----------------------------------------------------- 28%
   lim-armazem-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 8.4
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -161,7 +160,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-15:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5.04
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -175,7 +174,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-30:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.52
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -189,7 +188,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-50:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.84
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -203,7 +202,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-maquina-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4.2
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -217,7 +216,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-15:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.52
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -231,7 +230,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-30:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.26
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -245,7 +244,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-50:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.42
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -259,7 +258,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-spawner-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.4
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -273,7 +272,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-15:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.84
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -287,7 +286,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-30:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.42
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -301,7 +300,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-50:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.14
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -316,7 +315,7 @@ rewards:
 
   # -- MEDIANA --------------------------------------------------------- 9%
   chaves-boss-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
@@ -332,7 +331,7 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   caixa-runas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
@@ -345,7 +344,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   torre-cacto-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&aTorre de Cacto &8[5 Andares]'
     command: cactustower give {player} 5 1
@@ -365,7 +364,7 @@ rewards:
   # ~6,5 chaves de UMA das seis crates (`GarnixMysteryBoxes/boxes/chaves.yml`),
   # e sortear rankup ou vip ali vale mais que 10 chaves de boss.
   chaves-boss-10:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.4
     display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
@@ -381,7 +380,7 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   caixa-chaves:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.9
     display: '&9Caixa Chaves'
     command: caixas give chaves {player} {amount}
@@ -395,7 +394,7 @@ rewards:
 
   # -- RARÍSSIMA ---------------------------------------------------- 0,699%
   caixa-boosters:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.4
     display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
@@ -408,7 +407,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   caixa-caixas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.099
     display: '&dCaixa Caixas'
     command: caixas give caixas {player} {amount}
@@ -421,7 +420,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   caixa-robos:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.2
     display: '&cCaixa Robôs'
     command: caixas give robos {player} {amount}

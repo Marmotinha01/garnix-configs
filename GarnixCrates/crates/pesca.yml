@@ -143,7 +143,7 @@ rewards:
       - '&fValor: &3✶{amount}'
 
   combustivel:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 10.5
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
@@ -156,7 +156,7 @@ rewards:
 
   # -- COMUM PLUS ----------------------------------------------------- 12%
   lim-armazem-1:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.7
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -170,7 +170,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.35
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -184,7 +184,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-armazem-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.45
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -198,7 +198,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-maquina-1:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.35
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -212,7 +212,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.68
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -226,7 +226,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-maquina-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.22
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -240,7 +240,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-spawner-1:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.45
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -254,7 +254,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-3:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.22
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -268,7 +268,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   lim-spawner-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.08
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -282,7 +282,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   chave-vip:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&dChave VIP'
     command: crate givekey vip {player} {amount}
@@ -298,7 +298,7 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   chave-boss:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
@@ -314,7 +314,7 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   chave-rankup:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Chave RankUP'
     command: crate givekey rankup {player} {amount}
@@ -331,7 +331,7 @@ rewards:
 
   # -- ARMADURA --------------------------------------------------------- 2%
   armadura-i-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&7Capacete Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_helmet {amount}
@@ -349,7 +349,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&7Peitoral Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_chestplate {amount}
@@ -367,7 +367,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&7Calça Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_leggings {amount}
@@ -385,7 +385,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-i-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&7Bota Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_boots {amount}
@@ -404,7 +404,7 @@ rewards:
 
   # -- MEDIANA ------------------------------------------------------- 1,4%
   booster-xp-2x:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.7
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} xp 2 5m {amount}
@@ -425,7 +425,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   booster-corais-2x:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.7
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} corais 2 5m {amount}
@@ -447,7 +447,7 @@ rewards:
 
   # -- RARA (caixas) ----------------------------------------------- 0,399%
   caixa-pesca-i:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.3
     display: '&bCaixa Pesca &b[Tier &lI&b]'
     command: caixas give pesca-i {player} {amount}
@@ -460,7 +460,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   caixa-recursos:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.099
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
@@ -474,7 +474,7 @@ rewards:
 
   # -- MEDIANA PLUS (skins) ------------------------------------------ 0,7%
   skin-coral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.4
     display: '&3Skin de Coral'
     command: pesca giveskin {player} coral {amount}
@@ -490,7 +490,7 @@ rewards:
       - '&8 ▪ &cPeso até &l6&ckg '
 
   skin-escama:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.3
     display: '&6Skin de Escama'
     command: pesca giveskin {player} escama {amount}
@@ -507,7 +507,7 @@ rewards:
 
   # -- JACKPOT ------------------------------------------------------- 0,001%
   jackpot:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.001
     display: '&bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}

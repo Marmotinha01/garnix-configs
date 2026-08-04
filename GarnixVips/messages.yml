@@ -71,10 +71,3 @@ givepaper:
   vip-not-found: '&cO VIP &f{vip} &cnão existe mais.'
   invalid-data: '&cO papel está corrompido. Dados inválidos.'
   paper-not-found: '&cO papel VIP não está mais na sua mão.'
-# -- Entrega de itens ---------------------------------------------------
-# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
-# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
-# leftover: inventário cheio — só a sobra foi ao correio.
-delivery:
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

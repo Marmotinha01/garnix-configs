@@ -46,7 +46,7 @@ rewards:
 
   # -- ARMADURA TIER III ------------------------------------------- 25%
   armadura-iii-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6.25
     display: '&bCapacete Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_helmet {amount}
@@ -65,7 +65,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6.25
     display: '&bPeitoral Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_chestplate {amount}
@@ -84,7 +84,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6.25
     display: '&bCalça Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_leggings {amount}
@@ -103,7 +103,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iii-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6.25
     display: '&bBota Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_boots {amount}
@@ -123,7 +123,7 @@ rewards:
 
   # -- ARMADURA TIER IV -------------------------------------------- 20%
   armadura-iv-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5
     display: '&dCapacete Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_helmet {amount}
@@ -142,7 +142,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iv-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5
     display: '&dPeitoral Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_chestplate {amount}
@@ -161,7 +161,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iv-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5
     display: '&dCalça Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_leggings {amount}
@@ -180,7 +180,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-iv-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5
     display: '&dBota Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_boots {amount}
@@ -200,7 +200,7 @@ rewards:
 
   # -- ARMADURA TIER V --------------------------------------------- 13%
   armadura-v-capacete:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.25
     display: '&6Capacete Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_helmet {amount}
@@ -219,7 +219,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-v-peitoral:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.25
     display: '&6Peitoral Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_chestplate {amount}
@@ -238,7 +238,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-v-calca:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.25
     display: '&6Calça Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_leggings {amount}
@@ -257,7 +257,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   armadura-v-bota:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.25
     display: '&6Bota Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_boots {amount}
@@ -277,7 +277,7 @@ rewards:
 
   # -- SKINS ------------------------------------------------------- 28%
   skin-ambar:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 9.5
     display: '&5Skin de Âmbar'
     command: fazenda giveskin {player} ambar {amount}
@@ -294,7 +294,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-esmeralda:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 7
     display: '&aSkin de Esmeralda'
     command: fazenda giveskin {player} esmeralda {amount}
@@ -311,7 +311,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-ametista:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 5
     display: '&bSkin de Ametista'
     command: fazenda giveskin {player} ametista {amount}
@@ -329,7 +329,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-cristal:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&9Skin de Cristal'
     command: fazenda giveskin {player} cristal {amount}
@@ -347,7 +347,7 @@ rewards:
       - HIDE_ATTRIBUTES
 
   skin-marfim:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&fSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
@@ -366,7 +366,7 @@ rewards:
 
   # -- BOOSTERS ----------------------------------------------------- 5%
   booster-2x-15m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 15m {amount}
@@ -387,7 +387,7 @@ rewards:
       - HIDE_POTION_EFFECTS
 
   booster-2x-30m:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 30m {amount}
@@ -409,7 +409,7 @@ rewards:
 
   # -- LIVROS ------------------------------------------------------- 9%
   livro-ceifador:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&dLivro de Ceifador'
     command: lamina givebook {player} ceifador 1 {amount}
@@ -426,7 +426,7 @@ rewards:
       - '&8 ▪ &fTipo: &cLâmina '
 
   livro-massacre:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&4Livro de Massacre'
     command: lamina givebook {player} massacre 1 {amount}
@@ -443,7 +443,7 @@ rewards:
       - '&8 ▪ &fTipo: &cLâmina '
 
   livro-pilhagem:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&aLivro de Pilhagem'
     command: lamina givebook {player} pilhagem 1 {amount}

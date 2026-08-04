@@ -36,7 +36,7 @@ box-item:
 rewards:
 
   mineracao-i:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&6Caixa Mineração &6[Tier &lI&6]'
     command: caixas give mineracao-i {player} {amount}
@@ -50,7 +50,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   mineracao-i-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&6Caixa Mineração &6[Tier &lI&6]'
     command: caixas give mineracao-i {player} {amount}
@@ -64,7 +64,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   farm-i:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
@@ -78,7 +78,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   farm-i-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
@@ -92,7 +92,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   pesca-i:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&bCaixa Pesca &b[Tier &lI&b]'
     command: caixas give pesca-i {player} {amount}
@@ -106,7 +106,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   pesca-i-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&bCaixa Pesca &b[Tier &lI&b]'
     command: caixas give pesca-i {player} {amount}
@@ -120,7 +120,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   skins-i:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&eCaixa Skins &e[Tier &lI&e]'
     command: caixas give skins-i {player} {amount}
@@ -134,7 +134,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   skins-i-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&eCaixa Skins &e[Tier &lI&e]'
     command: caixas give skins-i {player} {amount}
@@ -148,7 +148,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   bosses-i:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&4Caixa Bosses &4[Tier &lI&4]'
     command: caixas give bosses-i {player} {amount}
@@ -162,7 +162,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   bosses-i-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&4Caixa Bosses &4[Tier &lI&4]'
     command: caixas give bosses-i {player} {amount}
@@ -176,7 +176,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   mineracao-ii:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&6Caixa Mineração &6[Tier &lII&6]'
     command: caixas give mineracao-ii {player} {amount}
@@ -190,7 +190,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   mineracao-ii-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&6Caixa Mineração &6[Tier &lII&6]'
     command: caixas give mineracao-ii {player} {amount}
@@ -204,7 +204,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   farm-ii:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
@@ -218,7 +218,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   farm-ii-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
@@ -232,7 +232,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   pesca-ii:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}
@@ -246,7 +246,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   pesca-ii-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}
@@ -260,7 +260,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   skins-ii:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
@@ -274,7 +274,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   skins-ii-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
@@ -288,7 +288,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   bosses-ii:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 6
     display: '&4Caixa Bosses &4[Tier &lII&4]'
     command: caixas give bosses-ii {player} {amount}
@@ -302,7 +302,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   bosses-ii-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&4Caixa Bosses &4[Tier &lII&4]'
     command: caixas give bosses-ii {player} {amount}
@@ -316,7 +316,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   maquinas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.5
     display: '&bCaixa Máquinas'
     command: caixas give maquinas {player} {amount}
@@ -330,7 +330,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   maquinas-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&bCaixa Máquinas'
     command: caixas give maquinas {player} {amount}
@@ -344,7 +344,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   boosters:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.5
     display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
@@ -358,7 +358,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   boosters-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
@@ -372,7 +372,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   runas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.5
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
@@ -386,7 +386,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   runas-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
@@ -400,7 +400,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   recursos:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.5
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
@@ -414,7 +414,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   recursos-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
@@ -428,7 +428,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   garnix:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3
     display: '&6Caixa Garnix'
     command: caixas give garnix {player} {amount}
@@ -442,7 +442,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   garnix-x2:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1
     display: '&6Caixa Garnix'
     command: caixas give garnix {player} {amount}

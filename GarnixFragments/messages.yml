@@ -34,11 +34,3 @@ admin:
   give: '&aEntregue &ex{quantity} &7item(ns) de &f{display} &7(&e{amount} &7cada) a &f{player}&7.'
   give-virtual: '&aAdicionado &e{amount} &7de &f{display} &7ao armazenamento de &f{player}&7.'
 
-# -- Entrega de itens ---------------------------------------------------
-# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
-# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
-# leftover: inventário cheio — só a sobra foi ao correio.
-# Deixe "" para não avisar nada.
-delivery:
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

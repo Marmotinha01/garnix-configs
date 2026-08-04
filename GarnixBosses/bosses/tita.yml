@@ -92,7 +92,7 @@ rewards:
 
   # -- COMUM PLUS ----------------------------------------------------- 12%
   lim-armazem:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
@@ -106,7 +106,7 @@ rewards:
       - '&fValor: &2∞{amount}'
 
   lim-maquina:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.5
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
@@ -120,7 +120,7 @@ rewards:
       - '&fValor: &9∞{amount}'
 
   lim-spawner:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
@@ -134,7 +134,7 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   chaves-boss-25:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
@@ -151,7 +151,7 @@ rewards:
 
   # -- SEMI RARO ----------------------------------------------------- 3,5%
   boss-devorador:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 3.5
     display: '&4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
@@ -165,7 +165,7 @@ rewards:
 
   # -- RARO -------------------------------------------------------------- 1%
   boss-devorador-5:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.6
     display: '&4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
@@ -178,7 +178,7 @@ rewards:
       - '&fStacks: &7x{amount}'
 
   caixa-runas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.4
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
@@ -192,7 +192,7 @@ rewards:
 
   # -- RARO PLUS ---------------------------------------------------- 0,45%
   chaves-boss-50:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.2
     display: '&cChave de Boss'
     command: crate givekey bosses {player} {amount}
@@ -208,7 +208,7 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   caixa-boosters:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.1
     display: '&aCaixa Boosters'
     command: caixas give boosters {player} {amount}
@@ -221,7 +221,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   caixa-robos:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.08
     display: '&cCaixa Robôs'
     command: caixas give robos {player} {amount}
@@ -234,7 +234,7 @@ rewards:
       - '&7guardou para você lá dentro.'
 
   caixa-caixas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.07
     display: '&dCaixa Caixas'
     command: caixas give caixas {player} {amount}

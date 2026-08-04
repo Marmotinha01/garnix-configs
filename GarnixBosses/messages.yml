@@ -19,8 +19,6 @@ sword:
   required: '&cUse uma Matadora para atacar bosses. &7(/matadora)'
   received: '&aVocê recebeu uma &cMatadora&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
 
 kill-stack:
   applied: '&a&l+&a{level} &fKill-Stack &7aplicado. &8(&7{total}&8)'
@@ -36,10 +34,3 @@ admin:
   kill-stack-given: '&6Kill-Stack &e+{level} &6enviado para &f{player}&6.'
   reloaded: '&aConfigurações recarregadas com sucesso.'
   bosses-killed: '&7Bosses removidos do mundo: &f{count}&7.'
-# -- Entrega de itens ---------------------------------------------------
-# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
-# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
-# leftover: inventário cheio — só a sobra foi ao correio.
-delivery:
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

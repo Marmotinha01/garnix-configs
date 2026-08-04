@@ -32,7 +32,7 @@ box-item:
 rewards:
 
   sementes:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 20
     display: '&5Máquina de Sementes'
     command: maquina give {player} sementes
@@ -45,7 +45,7 @@ rewards:
       - '&7terreno, dia e noite.'
 
   corais:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 20
     display: '&3Máquina de Corais'
     command: maquina give {player} corais
@@ -58,7 +58,7 @@ rewards:
       - '&7terreno, dia e noite.'
 
   gemas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 20
     display: '&dMáquina de Gemas'
     command: maquina give {player} gemas
@@ -71,7 +71,7 @@ rewards:
       - '&7terreno, dia e noite.'
 
   dracmas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 15
     display: '&eMáquina de Dracmas'
     command: maquina give {player} dracmas
@@ -84,7 +84,7 @@ rewards:
       - '&7terreno, dia e noite.'
 
   combustivel:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&8Máquina de Combustível'
     command: maquina give {player} combustivel
@@ -97,7 +97,7 @@ rewards:
       - '&7terreno, dia e noite.'
 
   cash:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 8
     display: '&6Máquina de Cash'
     command: maquina give {player} cash
@@ -110,7 +110,7 @@ rewards:
       - '&7terreno, dia e noite.'
 
   limite-spawners:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&bMáquina de L. de Spawners'
     command: maquina give {player} limite-spawners
@@ -123,7 +123,7 @@ rewards:
       - '&7terreno, dia e noite.'
 
   limite-maquinas:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2.5
     display: '&9Máquina de L. de Máquinas'
     command: maquina give {player} limite-maquinas

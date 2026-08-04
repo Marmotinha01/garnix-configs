@@ -186,8 +186,6 @@ upgrades:
 sword:
   received: '&aVocê recebeu uma &cLâmina&a.'
   # Mostradas NO LUGAR de 'received', nunca junto — uma mensagem por jogador.
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'
   required: '&cUse uma Lâmina para matar mobs. &7(/lamina)'
   cooldown: '&cAguarde &f{time} &cpara pegar outra Lâmina.'
   ceifador-proc: '&dA Lâmina ceifou &fx{amount} &dheads extras.'
@@ -218,11 +216,3 @@ booster:
   merge-none: '&cNão há outros boosters iguais para juntar.'
   merged: '&aVocê juntou &fx{amount} &aboosters de &f{type} &a{bonus} &aem um só.'
 
-# -- Entrega de itens ---------------------------------------------------
-# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
-# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
-# leftover: inventário cheio — só a sobra foi ao correio.
-# Deixe "" para não avisar nada.
-delivery:
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

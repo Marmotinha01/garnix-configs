@@ -80,7 +80,7 @@ rewards:
       - '&7abrindo essa chave.'
 
   livro:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&cLivro de Massacre 3'
     command: lamina givebook {player} massacre 3
@@ -95,7 +95,7 @@ rewards:
       - '&8 ▪ &fMassacre: &4III '
 
   matadora:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 2
     display: '&6Matadora Ancestral'
     command: boss give sword {player} ancestral

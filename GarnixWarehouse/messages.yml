@@ -96,11 +96,3 @@ commands:
   set-limit: '&aLimite de &f{player} &adefinido para &f{amount} &8(&7{count} armazém(s)&8).'
   add-limit: '&a+{amount} &7de limite somado a &f{player} &8(&7{count} armazém(s)&8).'
   rem-limit: '&c-{amount} &7de limite removido de &f{player} &8(&7{count} armazém(s)&8).'
-# -- Entrega de itens ---------------------------------------------------
-# Mostradas pelo ItemDelivery quando o item não pode ir direto ao inventário.
-# mailed:   jogador em evento/mundo de eventos — NADA entrou no inventário.
-# leftover: inventário cheio — só a sobra foi ao correio.
-# Deixe "" para não avisar nada.
-delivery:
-  mailed: '&eVocê está em um evento. &eSeu item foi para o correio. &7(/correio)'
-  leftover: '&eSeu inventário está cheio. &eO que sobrou foi para o correio. &7(/correio)'

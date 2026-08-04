@@ -38,7 +38,7 @@ rewards:
 
   # -- Runa Sagrada
   sagrada-25:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
@@ -50,7 +50,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   sagrada-50:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 7
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
@@ -62,7 +62,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   sagrada-100:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
@@ -74,7 +74,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   sagrada-250:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
@@ -86,7 +86,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   sagrada-500:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
@@ -100,7 +100,7 @@ rewards:
 
   # -- Runa Eterna
   eterna-25:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
@@ -112,7 +112,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   eterna-50:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 7
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
@@ -124,7 +124,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   eterna-100:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
@@ -136,7 +136,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   eterna-250:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
@@ -148,7 +148,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   eterna-500:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
@@ -162,7 +162,7 @@ rewards:
 
   # -- Runa Divina
   divina-25:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
@@ -174,7 +174,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   divina-50:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 7
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
@@ -186,7 +186,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   divina-100:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
@@ -198,7 +198,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   divina-250:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
@@ -210,7 +210,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   divina-500:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
@@ -224,7 +224,7 @@ rewards:
 
   # -- Runa Primal
   primal-25:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 12
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
@@ -236,7 +236,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   primal-50:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 7
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
@@ -248,7 +248,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   primal-100:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 4
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
@@ -260,7 +260,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   primal-250:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 1.5
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
@@ -272,7 +272,7 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   primal-500:
-    type: COMMAND
+    type: COMMAND_ITEM
     chance: 0.5
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
