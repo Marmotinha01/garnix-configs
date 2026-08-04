@@ -31,4 +31,9 @@ level-icon:
 
 block-entry: '&8 ▪ &f{block_name} &e{chance} '
 reward-separator: ''
-reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} '
+# O espaço que separa as recompensas mora no início da entry: manter só um lado
+# evita o espaço dobrado quando o reward-separator é vazio.
+reward-entry: ' {symbol_color}{symbol}{primary_color}{amount}'
+# Formato só do XP (sempre a última recompensa da linha). Fica à parte para o
+# reward-entry poder voltar a mostrar o {currency} das moedas sem duplicar aqui.
+xp-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '
