@@ -208,7 +208,7 @@ booster-icon:
 actionbar:
   separator: ' &8▏ '
   tax-display: '&fTaxa &c&l{tax}&c%'
-  provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value}'
+  provider-display: '{primary_color}+{symbol_color}{symbol}{primary_color}{value}'
   message: '{providers}{separator}&fBônus: &a&l{bonus}&a%{separator}&fNível: &a{mine_level}&8/&c{max_level}{separator}&fXP: &a{mine_exp}&8/&c{mine_need_exp}'
 
 # Per-currency entry for the {rewards} placeholder of enchant messages/titles.

@@ -4,7 +4,7 @@ title: Mineração
 rows: 4
 
 booster-icon:
-  slot: 15
+  slot: 16
   amount: 1
   material: POTION
   data: 8201
@@ -18,7 +18,7 @@ booster-icon:
   - '&6Clique para gerenciar.'
 
 booster-none-icon:
-  slot: 15
+  slot: 16
   material: GLASS_BOTTLE
   amount: 0
   display: '&cBoosters'
@@ -73,7 +73,7 @@ leave-mine-icon:
   - '&cClique para sair.'
 
 manage-icon:
-  slot: 16
+  slot: 15
   material: REDSTONE_COMPARATOR
   display: '&4Gerenciar Mina'
   lore:

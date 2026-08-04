@@ -50,7 +50,7 @@ bonus-display-provider: coins
 # Vem sem o '%', então escreva o símbolo na linha.
 actionbar:
   separator: ' &8▏ '
-  provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value}'
+  provider-display: '{primary_color}{symbol_color}{symbol}{primary_color}{value}'
   message: '{providers}{separator}&fBônus: &a&l{bonus}&a%{separator}&fNível: &a{level}&8/&c{max_level}{separator}&fXP: &a{xp}&8/&c{xp_needed}'
 
 # Barra de progresso do XP (actionbar + placeholder %farm_level_bar%).
