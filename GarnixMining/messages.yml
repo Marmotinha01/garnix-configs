@@ -261,12 +261,19 @@ levelup:
   xp-gate:
   - ''
   - '  &a&lGG! &7A mina de &f{owner} &7subiu para o nível &a&l{level}&7.'
-  - '  &7Faltam &c{levels-until} &7níveis para os próximos blocos.'
+  - '  &7Faltam &c{levels-until} &7níveis para trocar a composição.'
+  - ''
+  # Enviada quando falta exatamente um nível para a troca — é o único caso em que
+  # a frase acima cairia no plural errado.
+  xp-gate-last:
+  - ''
+  - '  &a&lGG! &7A mina de &f{owner} &7subiu para o nível &a&l{level}&7.'
+  - '  &7Falta &c1 &7nível para trocar a composição da mina.'
   - ''
   blocks-changed:
   - ''
   - '  &e&lGG! &7A mina de &f{owner} &7subiu para o nível &e&l{level}&7.'
-  - '  &7Novos blocos liberados. A mina foi regenerada.'
+  - '  &7A composição da mina mudou. Ela foi regenerada.'
   - ''
   max-level:
   - ''

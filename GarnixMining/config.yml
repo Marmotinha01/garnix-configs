@@ -17,6 +17,29 @@ both-display:
   color: ""
   display: "&bXP &7+ &aCoins &7+ &dGemas"
 
+# -----------------------------------------------------------------------------
+# GANHO POR NÍVEL DENTRO DA MESMA COMPOSIÇÃO
+# -----------------------------------------------------------------------------
+# Só os níveis que trocam a composição declaram blocos no levels.yml. Cada nível
+# acima do último que declarou multiplica as moedas daquele bloco por esta %, uma
+# vez por nível, e a contagem zera na próxima troca — quando o valor base do
+# levels.yml volta a valer. Assim todo nível upado rende mais sem precisar
+# declarar bloco nível a nível (o que faria o jogo anunciar troca de composição
+# em todo nível).
+#
+# 'default' vale para toda moeda; uma chave com o id da moeda sobrescreve. Uma
+# moeda que sobe devagar entre tiers (gemas) precisa de uma % menor que coins.
+#
+# TETO: o acumulado no último nível antes da troca nunca pode passar o valor base
+# do próximo bloco, senão trocar de composição viraria rebaixamento. O plugin
+# calcula esse teto a partir do próprio levels.yml, trava a % que passar dele e
+# avisa no console qual valor passou a valer.
+#
+# O XP do bloco não é afetado: é ele que mede o avanço de nível.
+level-reward-growth:
+  default: 2.0
+  gemas: 0.3
+
 # Currency used to buy/refund enchant levels. Must be a GarnixCurrencies id.
 enchant-currency: gemas
 
