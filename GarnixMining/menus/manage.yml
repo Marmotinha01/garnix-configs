@@ -68,7 +68,7 @@ tax-icon:
   - '&fBotão direito &8➟ &cResetar'
 
 collect-tax-icon:
-  slot: 14
+  slot: 15
   material: STORAGE_MINECART
   display: '&aTaxas'
   lore:
@@ -82,7 +82,7 @@ collect-tax-icon:
   currency-format: '&8 ▪ {symbol_color}{symbol}{primary_color}{value} {currency} '
 
 collect-tax-empty-icon:
-  slot: 14
+  slot: 15
   material: MINECART
   display: '&cTaxas'
   lore:

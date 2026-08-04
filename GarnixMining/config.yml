@@ -208,12 +208,12 @@ booster-icon:
 actionbar:
   separator: ' &8▏ '
   tax-display: '&fTaxa &c&l{tax}&c%'
-  provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value} {currency}'
-  message: '{providers}{separator}&7Bônus &a&l{bonus}&a%{separator}&7Nível &a{mine_level}&7/&a{max_level}{separator}&7XP &a{mine_exp}&8/&c{mine_need_exp}'
+  provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value}'
+  message: '{providers}{separator}&fBônus: &a&l{bonus}&a%{separator}&fNível: &a{mine_level}&8/&c{max_level}{separator}&fXP: &a{mine_exp}&8/&c{mine_need_exp}'
 
 # Per-currency entry for the {rewards} placeholder of enchant messages/titles.
 # Currency placeholders + {value}.
-enchant-reward-entry: '{symbol_color}{symbol}{primary_color}{value} {currency}'
+enchant-reward-entry: '{symbol_color}{symbol}{primary_color}{value}'
 
 # Pickaxe item shown while mining. O slot faz parte do layout do hotbar.yml
 # (0 relatório · 2 resetar · 4 picareta · 6 chaves · 8 sair) e é o slot em que o
@@ -303,11 +303,11 @@ drill:
 # -- Progress bar --
 progress-bar:
   # Number of characters in the bar.
-  length: 5
+  length: 10
   # Character repeated for each segment.
   symbol: '▪'
   # Color of completed segments.
-  completed-color: '&e'
+  completed-color: '&a'
   # Color of incomplete segments.
   incomplete-color: '&7'
 
@@ -321,38 +321,38 @@ frenzy:
   # How the meter fills:
   #   volume — count manual blocks up to 'blocks-required' (simple, predictable).
   #   streak — the meter DECAYS when you stop mining, forcing sustained digging.
-  mode: volume
+  mode: streak
   # (volume) Manually mined blocks needed to trigger the frenzy. Enchants, drill and
   # bombs do NOT count — only blocks broken by hand.
   blocks-required: 3500
   # (streak) Only used when mode: streak.
   streak:
-    blocks-required: 5000
+    blocks-required: 3500
     # Meter units lost per second once you stop mining.
     decay-per-second: 20
     # Seconds of not mining before the decay starts.
     decay-grace-seconds: 2
   # Duration of the doubled-gains window. Accepts DurationFormatter syntax: "3m", "90s", "1m30s".
-  duration: "3m"
+  duration: "2m"
   # Multiplier applied to ALL mining gains while active (base block, enchants, drill, bombs).
   multiplier: 2.0
   # Also multiply the mine XP gained while active?
-  multiply-xp: false
+  multiply-xp: true
   # true  = multiply the gross reward BEFORE tax, so a mine owner receives doubled tax
   #         from a visitor in frenzy.
   # false = only the player's own net take is doubled; the owner's tax is unchanged.
   multiply-before-tax: false
   # Accumulation bar shown by %mining_frenzy% while filling the meter.
   bar:
-    length: 5
+    length: 10
     symbol: '▪'
-    completed-color: '&4'
+    completed-color: '&a'
     incomplete-color: '&7'
-  inactive-entry: '{bar} &a{progress}&8/&c{required}'
+  inactive-entry: '{bar}'
   # %mining_frenzy% text while the window is ACTIVE. {time} = remaining time.
-  active-entry: '&fDuração: &7{time}'
+  active-entry: '&7{time} restantes'
   # Feedback fired when the frenzy activates. {duration} = the configured duration.
   activation:
-    title: '&c&lFRENESI!'
-    subtitle: '&eGanhos dobrados por &c{duration}&e!'
+    title: '&4&lFRENESI!'
+    subtitle: '&fGanhos dobrados por &c{duration}&f!'
     sound: LEVEL_UP

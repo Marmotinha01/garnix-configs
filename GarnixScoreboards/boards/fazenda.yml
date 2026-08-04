@@ -29,8 +29,8 @@ title:
 
 lines:
 - ''
-- ' &fNível: &6%farm_level%'
-- ' %farm_level_bar_short% &a%farm_xp%&8/&c%farm_xp_needed%'
+- ' &fNível: &a%farm_level%'
+- ' %farm_level_bar%'
 - ''
 - ' &fPlantação: %farm_type%'
 - ' &fColhidas: &7%farm_type_crops%'

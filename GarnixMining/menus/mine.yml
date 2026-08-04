@@ -42,7 +42,7 @@ skins-icon:
   flags: ["HIDE_ATTRIBUTES"]
 
 mine-icon:
-  slot: 10
+  slot: 13
   material: WOOD_PICKAXE
   display: '&6Entrar na área'
   lore:
@@ -63,7 +63,7 @@ mine-icon:
   reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '
 
 leave-mine-icon:
-  slot: 10
+  slot: 13
   material: BARRIER
   display: '&cSair da Mina'
   lore:
@@ -74,7 +74,7 @@ leave-mine-icon:
 
 manage-icon:
   slot: 16
-  texture: 'dfc3c243fc0894aa4028d32b19a830a2fcadc293270b4cb32c1bae42c78c08be'
+  material: REDSTONE_COMPARATOR
   display: '&4Gerenciar Mina'
   lore:
   - '&7Gerencie todas as funções'
@@ -93,7 +93,7 @@ friend-mines-icon:
   - '&dClique para acessar.'
 
 public-mines-icon:
-  slot: 13
+  slot: 10
   material: WOOD_DOOR
   display: '&aMinas Públicas'
   lore:
