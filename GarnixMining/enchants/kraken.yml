@@ -4,11 +4,11 @@ mine-level-unlock: 165
 
 max-level: 500
 
-base-cost: 49900
-increase-cost: 800
+base-cost: 311875
+increase-cost: 5000
 
-base-chance: 0.333
-increase-chance: 0.002678
+base-chance: 0.0833
+increase-chance: 0.0031784
 
 # --- Kraken shape --------------------------------------------------------------
 # A body hovers over the dig site and lashes out with tentacles that writhe
@@ -64,9 +64,7 @@ tentacle-texture: "4bf58283ffca8bdc59436e83d94e9f134426316b99bab5b9af90dffdb082a
 tip-texture: "4ba74e76b3a99f146db628ede6be2f3c3720daa8f6829ccc1251d9db42bc2d63"
 
 messages:
-  - "&3&lKRAKEN! &fUm kraken emergiu e dilacerou a mina com seus tentáculos!"
-  - "&fBlocos quebrados: &7{blocks}"
-  - "&7Recompensas: {rewards}"
+  - "  &3&lKRAKEN &8▶ &7{blocks} blocos &8▪ {rewards}"
 
 title: "&3&lKRAKEN!"
 subtitle: "&f{blocks} blocos destruídos"

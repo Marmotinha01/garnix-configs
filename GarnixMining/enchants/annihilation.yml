@@ -4,16 +4,14 @@ mine-level-unlock: 240
 
 max-level: 500
 
-base-cost: 99800
-increase-cost: 1600
+base-cost: 623750
+increase-cost: 10000
 
-base-chance: 0.138
-increase-chance: 0.001105
+base-chance: 0.0345
+increase-chance: 0.0013124
 
 messages:
-  - "&a&lANIQUILAÇAO! &fVocê destruiu uma camada inteira!"
-  - "&fBlocos quebrados: &7{blocks}"
-  - "&7Recompensas: {rewards}"
+  - "  &a&lANIQUILAÇAO &8▶ &7{blocks} blocos &8▪ {rewards}"
 
 title: "&a&lANIQUILAÇAO!"
 subtitle: "&f{blocks} blocos destruídos"

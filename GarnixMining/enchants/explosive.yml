@@ -1,28 +1,26 @@
 display: "Explosivo"
 
-mine-level-unlock: 10
+mine-level-unlock: 5
 
 max-level: 500
 
-base-cost: 1600
-increase-cost: 25.6
+base-cost: 6237.5
+increase-cost: 100
 
-base-chance: 2.96
-increase-chance: 0.02381
+base-chance: 0.74
+increase-chance: 0.028258
 
 effect-radius: 1
 
 messages:
-  - "&a&lEXPLOSIVO! &fVocê criou uma explosão na mina!"
-  - "&fBlocos quebrados: &7{blocks}"
-  - "&7Recompensas: {rewards}"
+  - "  &a&lEXPLOSIVO &8▶ &7{blocks} blocos &8▪ {rewards}"
 
 title: "&a&lEXPLOSIVO!"
 subtitle: "&f{blocks} blocos destruídos"
 
 icon:
-  slot: 20
-  texture: "d53fa1b57e4f784d16e5a2daa2f746b2ecfe624ccd74a4d4acc6a2e6a083f54e"
+  slot: 15
+  texture: "1c030cc35fde0218ded5ba5d557cca9e03dcbc84f9e672911da54fe07c5fdbbb"
   display: "&a{display}"
   lore:
     - "&7Tenha a chance de explodir"

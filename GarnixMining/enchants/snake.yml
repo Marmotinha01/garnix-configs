@@ -4,11 +4,11 @@ mine-level-unlock: 75
 
 max-level: 500
 
-base-cost: 23900
-increase-cost: 383
+base-cost: 149375
+increase-cost: 2393.75
 
-base-chance: 0.333
-increase-chance: 0.002678
+base-chance: 0.0833
+increase-chance: 0.0031784
 
 # Max cells the snake crawls (each cell carves a tunnel section). It seeks blocks
 # and turns as it goes, so a larger value makes it wind through the mine for
@@ -28,9 +28,7 @@ area-radius: 1
 max-simultaneous: 3
 
 messages:
-  - "&2&lCOBRA! &fUma serpente de slimes rastejou pela mina!"
-  - "&fBlocos quebrados: &7{blocks}"
-  - "&7Recompensas: {rewards}"
+  - "  &2&lCOBRA &8▶ &7{blocks} blocos &8▪ {rewards}"
 
 title: "&2&lCOBRA!"
 subtitle: "&f{blocks} blocos destruídos"

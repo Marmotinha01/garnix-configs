@@ -219,11 +219,14 @@ admin:
   slots-set: '&aVagas de visitante de &f{player} &adefinidas para &f{slots}&a.'
   slots-range: '&cA quantidade de vagas deve estar entre &f0 &ce &f{max}&c.'
 
+# O relatório só é enviado depois de um minuto INTEIRO minerando: o contador
+# começa no primeiro bloco quebrado, então quem acabou de entrar na mina não
+# recebe um resumo de cinco segundos.
 mining-report:
   messages:
   - ''
   - '  &a&lWOW. &7Aqui está seu progresso na mineração.'
-  - '  &7(Progresso após 1 minuto minerado)'
+  - '  &7(Somado no último minuto minerado)'
   - ''
   - '  &fBlocos quebrados: &7{blocks}'
   - '{currencies}'
@@ -232,8 +235,8 @@ mining-report:
   - '{enchants}'
   - ''
   currency-entry: '   &8▶ {symbol_color}{symbol}{primary_color}{amount} {currency}'
-  enchant-entry: '   &e{display} &7x{count}'
-  no-enchants: '   &7Nenhum encantamento ativado.'
+  enchant-entry: '   &8▶ &f{display} &7x{count}'
+  no-enchants: '   &8▶ &7Nenhum encantamento ativado.'
 
 levelup:
   xp-gate:

@@ -1,26 +1,24 @@
 display: "Raio"
 
-mine-level-unlock: 5
+mine-level-unlock: 10
 
 max-level: 500
 
-base-cost: 998
-increase-cost: 16
+base-cost: 10000
+increase-cost: 160
 
-base-chance: 2.11
-increase-chance: 0.01688
+base-chance: 0.528
+increase-chance: 0.02005
 
 messages:
-  - "&a&lRAIO! &fVocê lançou um raio na mina!"
-  - "&fBlocos quebrados: &7{blocks}"
-  - "&7Recompensas: {rewards}"
+  - "  &a&lRAIO &8▶ &7{blocks} blocos &8▪ {rewards}"
 
 title: "&a&lRAIO!"
 subtitle: "&f{blocks} blocos destruídos"
 
 icon:
-  slot: 15
-  texture: "1c030cc35fde0218ded5ba5d557cca9e03dcbc84f9e672911da54fe07c5fdbbb"
+  slot: 20
+  texture: "d53fa1b57e4f784d16e5a2daa2f746b2ecfe624ccd74a4d4acc6a2e6a083f54e"
   display: "&a{display}"
   lore:
     - "&7Tenha a chance de lançar"

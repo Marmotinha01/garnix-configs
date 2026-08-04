@@ -4,8 +4,8 @@ mine-level-unlock: 0
 
 max-level: 3
 
-base-cost: 100
-increase-cost: 200
+base-cost: 625
+increase-cost: 1250
 
 icon:
   slot: 13

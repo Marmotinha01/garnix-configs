@@ -8,7 +8,7 @@ levels:
         exp: 3
         currencies:
         - coins 1.13
-        - gemas 0.2
+        - gemas 1.25
   '1':
     exp: 20
   '2':
@@ -47,7 +47,7 @@ levels:
         exp: 5
         currencies:
         - coins 4.62
-        - gemas 0.3
+        - gemas 1.88
   '16':
     exp: 63000
   '17':
@@ -86,7 +86,7 @@ levels:
         exp: 7
         currencies:
         - coins 18.8
-        - gemas 0.4
+        - gemas 2.5
   '31':
     exp: 168000
   '32':
@@ -125,7 +125,7 @@ levels:
         exp: 10
         currencies:
         - coins 76.2
-        - gemas 0.5
+        - gemas 3.12
   '46':
     exp: 260000
   '47':
@@ -164,7 +164,7 @@ levels:
         exp: 12
         currencies:
         - coins 293
-        - gemas 0.6
+        - gemas 3.75
       argila:
         material: STAINED_CLAY
         data: 4
@@ -172,7 +172,7 @@ levels:
         exp: 16
         currencies:
         - coins 334
-        - gemas 0.7
+        - gemas 4.38
   '61':
     exp: 401000
   '62':
@@ -211,7 +211,7 @@ levels:
         exp: 20
         currencies:
         - coins 1200
-        - gemas 0.8
+        - gemas 5
       argila_azul:
         material: STAINED_CLAY
         data: 11
@@ -219,7 +219,7 @@ levels:
         exp: 16
         currencies:
         - coins 1340
-        - gemas 0.9
+        - gemas 5.62
   '76':
     exp: 618000
   '77':
@@ -258,7 +258,7 @@ levels:
         exp: 21
         currencies:
         - coins 4950
-        - gemas 1
+        - gemas 6.25
       quartzo:
         material: QUARTZ_ORE
         data: 0
@@ -266,7 +266,7 @@ levels:
         exp: 26
         currencies:
         - coins 5410
-        - gemas 1.1
+        - gemas 6.88
   '91':
     exp: 953000
   '92':
@@ -305,7 +305,7 @@ levels:
         exp: 30
         currencies:
         - coins 20200
-        - gemas 1.2
+        - gemas 7.5
       quartzo2:
         material: QUARTZ_ORE
         data: 0
@@ -313,7 +313,7 @@ levels:
         exp: 26
         currencies:
         - coins 21700
-        - gemas 1.3
+        - gemas 8.12
   '106':
     exp: 1470000
   '107':
@@ -352,7 +352,7 @@ levels:
         exp: 37
         currencies:
         - coins 82500
-        - gemas 1.4
+        - gemas 8.75
       prismarinho:
         material: PRISMARINE
         data: 0
@@ -360,7 +360,7 @@ levels:
         exp: 31
         currencies:
         - coins 87600
-        - gemas 1.5
+        - gemas 9.38
   '121':
     exp: 2270000
   '122':
@@ -399,7 +399,7 @@ levels:
         exp: 44
         currencies:
         - coins 336000
-        - gemas 1.6
+        - gemas 10
       prismarinho_tijolo:
         material: PRISMARINE
         data: 1
@@ -407,7 +407,7 @@ levels:
         exp: 37
         currencies:
         - coins 355000
-        - gemas 1.7
+        - gemas 10.62
   '136':
     exp: 3490000
   '137':
@@ -446,7 +446,7 @@ levels:
         exp: 52
         currencies:
         - coins 1340000
-        - gemas 1.8
+        - gemas 11.25
       obsidiana:
         material: OBSIDIAN
         data: 0
@@ -454,7 +454,7 @@ levels:
         exp: 55
         currencies:
         - coins 1410000
-        - gemas 1.9
+        - gemas 11.88
       prismarinho_escuro:
         material: PRISMARINE
         data: 2
@@ -462,7 +462,7 @@ levels:
         exp: 42
         currencies:
         - coins 1490000
-        - gemas 2
+        - gemas 12.5
   '151':
     exp: 5390000
   '152':
@@ -501,7 +501,7 @@ levels:
         exp: 58
         currencies:
         - coins 5510000
-        - gemas 2.1
+        - gemas 13.12
       obsidiana2:
         material: OBSIDIAN
         data: 0
@@ -509,7 +509,7 @@ levels:
         exp: 54
         currencies:
         - coins 5760000
-        - gemas 2.2
+        - gemas 13.75
       prismarinho3:
         material: PRISMARINE
         data: 0
@@ -517,7 +517,7 @@ levels:
         exp: 50
         currencies:
         - coins 6020000
-        - gemas 2.3
+        - gemas 14.37
   '166':
     exp: 8310000
   '167':
@@ -556,7 +556,7 @@ levels:
         exp: 58
         currencies:
         - coins 22600000
-        - gemas 2.4
+        - gemas 15
       prismarinho_tijolo2:
         material: PRISMARINE
         data: 1
@@ -564,7 +564,7 @@ levels:
         exp: 68
         currencies:
         - coins 23500000
-        - gemas 2.5
+        - gemas 15.62
       obsidiana3:
         material: OBSIDIAN
         data: 0
@@ -572,7 +572,7 @@ levels:
         exp: 65
         currencies:
         - coins 24400000
-        - gemas 2.6
+        - gemas 16.25
   '181':
     exp: 12800000
   '182':
@@ -611,7 +611,7 @@ levels:
         exp: 74
         currencies:
         - coins 92000000
-        - gemas 2.7
+        - gemas 16.88
       esmeralda4:
         material: EMERALD_ORE
         data: 0
@@ -619,7 +619,7 @@ levels:
         exp: 78
         currencies:
         - coins 95100000
-        - gemas 2.8
+        - gemas 17.5
       quartzo3:
         material: QUARTZ_ORE
         data: 0
@@ -627,7 +627,7 @@ levels:
         exp: 64
         currencies:
         - coins 98300000
-        - gemas 2.9
+        - gemas 18.12
   '196':
     exp: 19800000
   '197':
@@ -666,7 +666,7 @@ levels:
         exp: 80
         currencies:
         - coins 387000000
-        - gemas 3
+        - gemas 18.75
   '211':
     exp: 30500000
   '212':
@@ -705,7 +705,7 @@ levels:
         exp: 90
         currencies:
         - coins 1570000000
-        - gemas 3.1
+        - gemas 19.38
   '226':
     exp: 47000000
   '227':
@@ -744,7 +744,7 @@ levels:
         exp: 100
         currencies:
         - coins 6430000000
-        - gemas 3.2
+        - gemas 20
   '241':
     exp: 72500000
   '242':
@@ -783,7 +783,7 @@ levels:
         exp: 115
         currencies:
         - coins 26100000000
-        - gemas 3.3
+        - gemas 20.62
   '256':
     exp: 112000000
   '257':
@@ -822,7 +822,7 @@ levels:
         exp: 130
         currencies:
         - coins 106000000000
-        - gemas 3.4
+        - gemas 21.25
   '271':
     exp: 172000000
   '272':
@@ -861,7 +861,7 @@ levels:
         exp: 150
         currencies:
         - coins 432000000000
-        - gemas 3.5
+        - gemas 21.88
   '286':
     exp: 266000000
   '287':
@@ -900,7 +900,7 @@ levels:
         exp: 190
         currencies:
         - coins 468000000000
-        - gemas 3.6
+        - gemas 22.5
       bloco_esmeralda_final:
         material: EMERALD_BLOCK
         data: 0
@@ -908,7 +908,7 @@ levels:
         exp: 180
         currencies:
         - coins 481000000000
-        - gemas 3.7
+        - gemas 23.12
       bloco_ouro_final:
         material: GOLD_BLOCK
         data: 0
@@ -916,4 +916,4 @@ levels:
         exp: 165
         currencies:
         - coins 507000000000
-        - gemas 3.8
+        - gemas 23.75

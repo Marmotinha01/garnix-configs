@@ -4,11 +4,16 @@ mine-level-unlock: 0
 
 max-level: 500
 
-base-cost: 200
-increase-cost: 3
+# O custo acompanha o ganho: cada nível sai por ~1000 blocos no começo e ~2800 no
+# nível 500, então o ritmo de evolução é o mesmo do início ao fim.
+base-cost: 1250
+increase-cost: 145
 
-base-multiplier: 1.05
-increase-multiplier: 0.003968
+# Passo de 0.04 por nível: com a base de 1.25 gemas/bloco do nível 0 da mina, o
+# jogador vê 1.25 → 1.30 → 1.35 → 1.40 ... até 26.25 no nível 500. O número sobe
+# em TODO nível, que é o ponto do encantamento.
+base-multiplier: 1.04
+increase-multiplier: 0.04
 multiplier-provider: "gemas"
 
 icon:
@@ -20,4 +25,5 @@ icon:
     - "&7ao minerar na mina!"
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fMultiplicador: &c{multiplier}x"
     - ""

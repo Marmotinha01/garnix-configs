@@ -4,8 +4,8 @@ mine-level-unlock: 0
 
 max-level: 500
 
-base-cost: 200
-increase-cost: 3
+base-cost: 1250
+increase-cost: 18.75
 
 base-multiplier: 1.05
 increase-multiplier: 0.02778
@@ -20,4 +20,5 @@ icon:
     - "&7ao minerar na mina!"
     - ""
     - " &fNível: &a{level}&8/&c{max-level}"
+    - " &fMultiplicador: &c{multiplier}x"
     - ""

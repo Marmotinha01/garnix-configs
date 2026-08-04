@@ -4,16 +4,14 @@ mine-level-unlock: 15
 
 max-level: 500
 
-base-cost: 2400
-increase-cost: 38.4
+base-cost: 15000
+increase-cost: 240
 
-base-chance: 1.36
-increase-chance: 0.01087
+base-chance: 0.34
+increase-chance: 0.012914
 
 messages:
-  - "&a&lRUPTURA! &fVocê quebrou uma linha inteira na mina!"
-  - "&fBlocos quebrados: &7{blocks}"
-  - "&7Recompensas: {rewards}"
+  - "  &a&lRUPTURA &8▶ &7{blocks} blocos &8▪ {rewards}"
 
 title: "&a&lRUPTURA!"
 subtitle: "&f{blocks} blocos destruídos"

@@ -220,6 +220,14 @@ pickaxe-icon:
 reset-cooldown: 30
 
 # Repeating-task intervals in seconds.
+#
+# 'mining-report-seconds' é a janela do relatório contada POR JOGADOR, a partir do
+# primeiro bloco que ele quebra — não é um tique global do servidor. Quem entra na
+# mina agora minera o intervalo inteiro antes do primeiro resumo, em vez de receber
+# um relatório de cinco segundos porque o tique caiu logo depois.
+#
+# 'blessed-flush-seconds' é de quanto em quanto tempo as chaves do Abençoado são
+# creditadas em lote nas chaves virtuais do /crates (e a mensagem sai junto).
 tasks:
   pickaxe-display-seconds: 5
   blessed-flush-seconds: 30

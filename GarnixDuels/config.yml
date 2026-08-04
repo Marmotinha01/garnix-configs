@@ -14,7 +14,7 @@ bet:
   # Teto de sanidade contra dedo errado, não de economia — quem aposta já precisa TER o
   # saldo. 10^24 é ~1.000x a fortuna do jogador dedicado no dia 20 (~10^21), ou seja
   # inalcançável de propósito. O 1.0E63 anterior não queria dizer nada.
-  max-amount: 1.0E24
+  max-amount: 1000000000000000000000000
 
 # Moedas que NÃO podem ser apostadas (ids do GarnixCurrencies).
 #

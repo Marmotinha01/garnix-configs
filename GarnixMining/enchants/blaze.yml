@@ -4,11 +4,11 @@ mine-level-unlock: 105
 
 max-level: 500
 
-base-cost: 29900
-increase-cost: 479
+base-cost: 186875
+increase-cost: 2993.75
 
-base-chance: 0.556
-increase-chance: 0.004444
+base-chance: 0.139
+increase-chance: 0.0052798
 
 # --- Fireball barrage ----------------------------------------------------------
 # Blazes hover over the dig site and lob fireballs at the mine; each fireball that
@@ -24,9 +24,7 @@ fireball-duration-ticks: 72
 fireball-interval-ticks: 6
 
 messages:
-  - "&6&lBLAZE! &fUma onda de blazes incendiou a mina!"
-  - "&fBlocos quebrados: &7{blocks}"
-  - "&7Recompensas: {rewards}"
+  - "  &6&lBLAZE &8▶ &7{blocks} blocos &8▪ {rewards}"
 
 title: "&6&lBLAZE!"
 subtitle: "&f{blocks} blocos destruídos"

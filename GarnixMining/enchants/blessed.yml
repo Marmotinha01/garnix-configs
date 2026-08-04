@@ -6,15 +6,19 @@ key-id: "mineracao"
 
 max-level: 500
 
-base-cost: 160
-increase-cost: 3
+base-cost: 1000
+increase-cost: 18.75
 
-base-chance: 0.019
-increase-chance: 1.524e-4
+# 0.05% por bloco no nível 1 e 1% no nível 500 — vinte vezes a amplitude antiga.
+# As chaves são roladas em TODO bloco quebrado, inclusive os que os encantamentos
+# de área derrubam, então o ritmo real acompanha o quanto a picareta quebra.
+base-chance: 0.05
+increase-chance: 0.0019038
 
+# As chaves caem direto nas chaves virtuais do /crates, não no correio.
 stacked-messages:
-  - "&a&lBENÇAO! &fVocê encontrou &7x{count} &fchaves!"
-  - "&7Chaves mineradas nos últimos 30s"
+  - "  &a&lABENÇOADO &8▶ &7x{count} chaves de mineração"
+  - "  &7Guardadas no seu &f/crates&7."
 
 title: "&a&lABENÇOADO!"
 subtitle: "&fx{count} chaves encontradas"

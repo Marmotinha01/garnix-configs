@@ -4,18 +4,16 @@ mine-level-unlock: 45
 
 max-level: 500
 
-base-cost: 5980
-increase-cost: 95.9
+base-cost: 37375
+increase-cost: 599.4
 
-base-chance: 1.59
-increase-chance: 0.01278
+base-chance: 0.398
+increase-chance: 0.015169
 
 effect-radius: 3
 
 messages:
-  - "&a&lCOLAPSO! &fVocê colapsou uma esfera na mina!"
-  - "&fBlocos quebrados: &7{blocks}"
-  - "&7Recompensas: {rewards}"
+  - "  &a&lCOLAPSO &8▶ &7{blocks} blocos &8▪ {rewards}"
 
 title: "&a&lCOLAPSO!"
 subtitle: "&f{blocks} blocos destruídos"
