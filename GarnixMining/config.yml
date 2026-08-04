@@ -206,13 +206,8 @@ booster-icon:
 # {bonus} = bônus somado em percentual (booster + skin + armadura + cargo), da moeda
 # em 'bonus-display-provider' acima. Vem sem o '%', então escreva o símbolo na linha.
 actionbar:
-  separator: ' &8■ '
+  separator: ' &8▏ '
   tax-display: '&fTaxa &c&l{tax}&c%'
-  # Segmento das chaves do Abençoado. Só entra na barra do bloco que soltou a chave,
-  # ao lado do que aquele bloco pagou — nas outras quebras não aparece nada. {keys} =
-  # quantas caíram nessa quebra (mais de uma quando um encantamento de área derruba
-  # vários blocos de uma vez). Deixe vazio para não mostrar.
-  key-display: '&e&l+{keys} &eChave Mineração'
   provider-display: '{primary_color}&l+&r{symbol_color}{symbol}{primary_color}{value} {currency}'
   message: '{providers}{separator}&7Bônus &a&l{bonus}&a%{separator}&7Nível &a{mine_level}&7/&a{max_level}{separator}&7XP &a{mine_exp}&8/&c{mine_need_exp}'
 

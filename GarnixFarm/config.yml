@@ -51,11 +51,6 @@ bonus-display-provider: coins
 actionbar:
   separator: ' &8■ '
   provider-display: '{primary_color}&l+&r {symbol_color}{symbol}{primary_color}{value} &7{currency}'
-  # Segmento das chaves do Trevo. Só entra na barra da colheita que soltou a chave, ao
-  # lado do que aquela colheita pagou — nas outras não aparece nada. {keys} = quantas
-  # caíram nessa colheita (mais de uma quando um encantamento de área derruba várias
-  # plantações de uma vez). Deixe vazio para não mostrar.
-  key-display: '&a&l+{keys} &aChave Farm'
   message: '{providers}{separator}&7Bônus &a&l{bonus}&a%{separator}&7Nível &a{level}&7/&a{max_level}{separator}&7XP &a{xp}&8/&c{xp_needed}'
 
 # Barra de progresso do XP (actionbar + placeholder %farm_level_bar%).
