@@ -17,8 +17,8 @@ empty-icon:
 
 level-icon:
   material: STAINED_GLASS_PANE
-  data: 4
-  display: '&eNível &l{level}'
+  data: 5
+  display: '&fNível &a&l{level}'
   lore:
   - '&7O que a sua mina gera ao'
   - '&7alcançar este nível.'
@@ -29,6 +29,6 @@ level-icon:
   - '{block_list}'
   - ''
 
-block-entry: ' &8 ▴ &f{block_name} &c{chance} '
-reward-separator: '&8▪'
+block-entry: '&8 ▪ &f{block_name} &e{chance} '
+reward-separator: ''
 reward-entry: ' {symbol_color}{symbol}{primary_color}{amount} {currency} '
