@@ -97,8 +97,7 @@ perguntas:
 # ⚠️ EVENTO DE CHAT NAO DA CASH, por decisao do dono. O cash fica com os eventos
 # presenciais, que pedem deslocamento e disputa de verdade. Aqui o premio e chave,
 # e so — este e o evento de menor atrito do servidor, entao ele tem o menor
-# premio tambem. O bolao e a unica excecao do grupo: la nao ha bloco 
-ewards:,
+# premio tambem. O bolao e a unica excecao do grupo: la nao ha bloco rewards,
 # a moeda e a taxa sao escolhidas pela staff ao iniciar e o vencedor leva o pote.
 #
 rewards:

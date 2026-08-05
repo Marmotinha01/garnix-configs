@@ -75,7 +75,7 @@ boss-icon:
 #
 # ⚠️ COINS RECEBE O TRATAMENTO DA CRATE, nao o da banda de tier. A escada antiga
 # era geometrica — 10.800 no Colosso ate 1,44x10^17 no Devorador, ~1.910x por
-# boss — porque o 15-LOOT.md assumia que cada boss e morto dentro da banda dele.
+# boss — porque o `15-LOOT.md` assumia que cada boss e morto dentro da banda dele.
 # So que BOSS NAO TEM GATE DE TIER: um T1 pega um Devorador da crate (0,4%), da
 # Caixa Bosses I (5,25%) ou de um Tita, mata com a Matadora Inicial, e leva a
 # renda inteira de um dia T17. E o mesmo problema que a crate tem, e a decisao e
