@@ -59,7 +59,7 @@ rewards:
   boss-colosso:
     type: COMMAND_ITEM
     chance: 18
-    display: '&c&lx&c{amount} &cBoss Colosso'
+    display: '&cx&l{amount} &cBoss Colosso'
     command: boss give boss {player} COLOSSO {amount} 1
     amount: 1
     icon:
@@ -72,7 +72,7 @@ rewards:
   boss-colosso-x3:
     type: COMMAND_ITEM
     chance: 9
-    display: '&c&lx&c{amount} &cBoss Colosso'
+    display: '&cx&l{amount} &cBoss Colosso'
     command: boss give boss {player} COLOSSO {amount} 1
     amount: 3
     icon:
@@ -85,7 +85,7 @@ rewards:
   boss-colosso-x5:
     type: COMMAND_ITEM
     chance: 4.5
-    display: '&c&lx&c{amount} &cBoss Colosso'
+    display: '&cx&l{amount} &cBoss Colosso'
     command: boss give boss {player} COLOSSO {amount} 1
     amount: 5
     icon:
@@ -99,7 +99,7 @@ rewards:
   boss-inferno:
     type: COMMAND_ITEM
     chance: 14
-    display: '&6&lx&6{amount} &6Boss Inferno'
+    display: '&6x&l{amount} &6Boss Inferno'
     command: boss give boss {player} INFERNO {amount} 1
     amount: 1
     icon:
@@ -112,7 +112,7 @@ rewards:
   boss-inferno-x3:
     type: COMMAND_ITEM
     chance: 7
-    display: '&6&lx&6{amount} &6Boss Inferno'
+    display: '&6x&l{amount} &6Boss Inferno'
     command: boss give boss {player} INFERNO {amount} 1
     amount: 3
     icon:
@@ -125,7 +125,7 @@ rewards:
   boss-inferno-x5:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&6&lx&6{amount} &6Boss Inferno'
+    display: '&6x&l{amount} &6Boss Inferno'
     command: boss give boss {player} INFERNO {amount} 1
     amount: 5
     icon:
@@ -139,7 +139,7 @@ rewards:
   boss-arauto:
     type: COMMAND_ITEM
     chance: 10
-    display: '&d&lx&d{amount} &dBoss Arauto'
+    display: '&dx&l{amount} &dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 1
     icon:
@@ -152,7 +152,7 @@ rewards:
   boss-arauto-x3:
     type: COMMAND_ITEM
     chance: 5
-    display: '&d&lx&d{amount} &dBoss Arauto'
+    display: '&dx&l{amount} &dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 3
     icon:
@@ -165,7 +165,7 @@ rewards:
   boss-arauto-x5:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&d&lx&d{amount} &dBoss Arauto'
+    display: '&dx&l{amount} &dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 5
     icon:
@@ -179,7 +179,7 @@ rewards:
   boss-tita:
     type: COMMAND_ITEM
     chance: 6
-    display: '&5&lx&5{amount} &5Boss Titã'
+    display: '&5x&l{amount} &5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 1
     icon:
@@ -192,7 +192,7 @@ rewards:
   boss-tita-x3:
     type: COMMAND_ITEM
     chance: 3
-    display: '&5&lx&5{amount} &5Boss Titã'
+    display: '&5x&l{amount} &5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 3
     icon:
@@ -205,7 +205,7 @@ rewards:
   boss-tita-x5:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&5&lx&5{amount} &5Boss Titã'
+    display: '&5x&l{amount} &5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 5
     icon:
@@ -219,7 +219,7 @@ rewards:
   boss-devorador:
     type: COMMAND_ITEM
     chance: 3
-    display: '&4&lx&4{amount} &4Boss Devorador'
+    display: '&4x&l{amount} &4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 1
     icon:
@@ -232,7 +232,7 @@ rewards:
   boss-devorador-x3:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&4&lx&4{amount} &4Boss Devorador'
+    display: '&4x&l{amount} &4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 3
     icon:
@@ -245,7 +245,7 @@ rewards:
   boss-devorador-x5:
     type: COMMAND_ITEM
     chance: 0.75
-    display: '&4&lx&4{amount} &4Boss Devorador'
+    display: '&4x&l{amount} &4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 5
     icon:
@@ -259,7 +259,7 @@ rewards:
   matadora-bruta:
     type: COMMAND_ITEM
     chance: 3.75
-    display: '&7&lx&7{amount} &7Matadora Bruta'
+    display: '&7x&l{amount} &7Matadora Bruta'
     command: boss give sword {player} bruta {amount}
     amount: 1
     icon:
@@ -273,7 +273,7 @@ rewards:
   matadora-sombria:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&5&lx&5{amount} &5Matadora Sombria'
+    display: '&5x&l{amount} &5Matadora Sombria'
     command: boss give sword {player} sombria {amount}
     amount: 1
     icon:
@@ -287,7 +287,7 @@ rewards:
   matadora-ancestral:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&b&lx&b{amount} &bMatadora Ancestral'
+    display: '&bx&l{amount} &bMatadora Ancestral'
     command: boss give sword {player} ancestral {amount}
     amount: 1
     icon:
@@ -302,7 +302,7 @@ rewards:
   livro-killstack:
     type: COMMAND_ITEM
     chance: 3
-    display: '&4&lx&4{amount} &4Livro de Kill-Stack'
+    display: '&4x&l{amount} &4Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
     amount: 1
     icon:
@@ -322,7 +322,7 @@ rewards:
   caixa-bosses-ii:
     type: COMMAND_ITEM
     chance: 1
-    display: '&4&lx&4{amount} &4Caixa Bosses &4[Tier &lII&4]'
+    display: '&4x&l{amount} &4Caixa Bosses &4[Tier &lII&4]'
     command: caixas give bosses-ii {player} {amount}
     amount: 1
     icon:

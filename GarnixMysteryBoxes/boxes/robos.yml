@@ -44,7 +44,7 @@ rewards:
   comum:
     type: COMMAND_ITEM
     chance: 35
-    display: '&a&lx&a{amount} &aRobô Comum'
+    display: '&ax&l{amount} &aRobô Comum'
     command: crates giverobot comum {player} {amount}
     amount: 1
     icon:
@@ -60,7 +60,7 @@ rewards:
   raro:
     type: COMMAND_ITEM
     chance: 32
-    display: '&b&lx&b{amount} &bRobô Raro'
+    display: '&bx&l{amount} &bRobô Raro'
     command: crates giverobot raro {player} {amount}
     amount: 1
     icon:
@@ -79,7 +79,7 @@ rewards:
   epico:
     type: COMMAND_ITEM
     chance: 22
-    display: '&d&lx&d{amount} &dRobô Épico'
+    display: '&dx&l{amount} &dRobô Épico'
     command: crates giverobot epico {player} {amount}
     amount: 1
     icon:
@@ -98,7 +98,7 @@ rewards:
   lendario:
     type: COMMAND_ITEM
     chance: 9
-    display: '&4&lx&4{amount} &4Robô Lendário'
+    display: '&4x&l{amount} &4Robô Lendário'
     command: crates giverobot lendario {player} {amount}
     amount: 1
     icon:
@@ -117,7 +117,7 @@ rewards:
   mitico:
     type: COMMAND_ITEM
     chance: 2
-    display: '&6&lx&6{amount} &6Robô Mítico'
+    display: '&6x&l{amount} &6Robô Mítico'
     command: crates giverobot mitico {player} {amount}
     amount: 1
     icon:

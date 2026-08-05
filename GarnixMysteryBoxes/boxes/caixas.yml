@@ -54,7 +54,7 @@ rewards:
   mineracao-i:
     type: COMMAND_ITEM
     chance: 7.33
-    display: '&6&lx&6{amount} &6Caixa Mineração &6[Tier &lI&6]'
+    display: '&6x&l{amount} &6Caixa Mineração &6[Tier &lI&6]'
     command: caixas give mineracao-i {player} {amount}
     amount: 1
     icon:
@@ -68,7 +68,7 @@ rewards:
   mineracao-i-x2:
     type: COMMAND_ITEM
     chance: 3.67
-    display: '&6&lx&6{amount} &6Caixa Mineração &6[Tier &lI&6]'
+    display: '&6x&l{amount} &6Caixa Mineração &6[Tier &lI&6]'
     command: caixas give mineracao-i {player} {amount}
     amount: 2
     icon:
@@ -82,7 +82,7 @@ rewards:
   farm-i:
     type: COMMAND_ITEM
     chance: 7
-    display: '&a&lx&a{amount} &aCaixa Farm &a[Tier &lI&a]'
+    display: '&ax&l{amount} &aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
     amount: 1
     icon:
@@ -96,7 +96,7 @@ rewards:
   farm-i-x2:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&a&lx&a{amount} &aCaixa Farm &a[Tier &lI&a]'
+    display: '&ax&l{amount} &aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
     amount: 2
     icon:
@@ -110,7 +110,7 @@ rewards:
   pesca-i:
     type: COMMAND_ITEM
     chance: 6.67
-    display: '&b&lx&b{amount} &bCaixa Pesca &b[Tier &lI&b]'
+    display: '&bx&l{amount} &bCaixa Pesca &b[Tier &lI&b]'
     command: caixas give pesca-i {player} {amount}
     amount: 1
     icon:
@@ -124,7 +124,7 @@ rewards:
   pesca-i-x2:
     type: COMMAND_ITEM
     chance: 3.33
-    display: '&b&lx&b{amount} &bCaixa Pesca &b[Tier &lI&b]'
+    display: '&bx&l{amount} &bCaixa Pesca &b[Tier &lI&b]'
     command: caixas give pesca-i {player} {amount}
     amount: 2
     icon:
@@ -138,7 +138,7 @@ rewards:
   skins-i:
     type: COMMAND_ITEM
     chance: 6
-    display: '&e&lx&e{amount} &eCaixa Skins &e[Tier &lI&e]'
+    display: '&ex&l{amount} &eCaixa Skins &e[Tier &lI&e]'
     command: caixas give skins-i {player} {amount}
     amount: 1
     icon:
@@ -152,7 +152,7 @@ rewards:
   skins-i-x2:
     type: COMMAND_ITEM
     chance: 3
-    display: '&e&lx&e{amount} &eCaixa Skins &e[Tier &lI&e]'
+    display: '&ex&l{amount} &eCaixa Skins &e[Tier &lI&e]'
     command: caixas give skins-i {player} {amount}
     amount: 2
     icon:
@@ -166,7 +166,7 @@ rewards:
   runas:
     type: COMMAND_ITEM
     chance: 5.33
-    display: '&5&lx&5{amount} &5Caixa Runas'
+    display: '&5x&l{amount} &5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 1
     icon:
@@ -180,7 +180,7 @@ rewards:
   runas-x2:
     type: COMMAND_ITEM
     chance: 2.67
-    display: '&5&lx&5{amount} &5Caixa Runas'
+    display: '&5x&l{amount} &5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 2
     icon:
@@ -194,7 +194,7 @@ rewards:
   recursos:
     type: COMMAND_ITEM
     chance: 5
-    display: '&2&lx&2{amount} &2Caixa Recursos'
+    display: '&2x&l{amount} &2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 1
     icon:
@@ -208,7 +208,7 @@ rewards:
   recursos-x2:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&2&lx&2{amount} &2Caixa Recursos'
+    display: '&2x&l{amount} &2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 2
     icon:
@@ -222,7 +222,7 @@ rewards:
   bosses-i:
     type: COMMAND_ITEM
     chance: 4.67
-    display: '&4&lx&4{amount} &4Caixa Bosses &4[Tier &lI&4]'
+    display: '&4x&l{amount} &4Caixa Bosses &4[Tier &lI&4]'
     command: caixas give bosses-i {player} {amount}
     amount: 1
     icon:
@@ -236,7 +236,7 @@ rewards:
   bosses-i-x2:
     type: COMMAND_ITEM
     chance: 2.33
-    display: '&4&lx&4{amount} &4Caixa Bosses &4[Tier &lI&4]'
+    display: '&4x&l{amount} &4Caixa Bosses &4[Tier &lI&4]'
     command: caixas give bosses-i {player} {amount}
     amount: 2
     icon:
@@ -250,7 +250,7 @@ rewards:
   chaves:
     type: COMMAND_ITEM
     chance: 4.33
-    display: '&9&lx&9{amount} &9Caixa Chaves'
+    display: '&9x&l{amount} &9Caixa Chaves'
     command: caixas give chaves {player} {amount}
     amount: 1
     icon:
@@ -264,7 +264,7 @@ rewards:
   chaves-x2:
     type: COMMAND_ITEM
     chance: 2.17
-    display: '&9&lx&9{amount} &9Caixa Chaves'
+    display: '&9x&l{amount} &9Caixa Chaves'
     command: caixas give chaves {player} {amount}
     amount: 2
     icon:
@@ -278,7 +278,7 @@ rewards:
   mineracao-ii:
     type: COMMAND_ITEM
     chance: 3.67
-    display: '&6&lx&6{amount} &6Caixa Mineração &6[Tier &lII&6]'
+    display: '&6x&l{amount} &6Caixa Mineração &6[Tier &lII&6]'
     command: caixas give mineracao-ii {player} {amount}
     amount: 1
     icon:
@@ -292,7 +292,7 @@ rewards:
   mineracao-ii-x2:
     type: COMMAND_ITEM
     chance: 1.83
-    display: '&6&lx&6{amount} &6Caixa Mineração &6[Tier &lII&6]'
+    display: '&6x&l{amount} &6Caixa Mineração &6[Tier &lII&6]'
     command: caixas give mineracao-ii {player} {amount}
     amount: 2
     icon:
@@ -306,7 +306,7 @@ rewards:
   farm-ii:
     type: COMMAND_ITEM
     chance: 3.33
-    display: '&a&lx&a{amount} &aCaixa Farm &a[Tier &lII&a]'
+    display: '&ax&l{amount} &aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
     amount: 1
     icon:
@@ -320,7 +320,7 @@ rewards:
   farm-ii-x2:
     type: COMMAND_ITEM
     chance: 1.67
-    display: '&a&lx&a{amount} &aCaixa Farm &a[Tier &lII&a]'
+    display: '&ax&l{amount} &aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
     amount: 2
     icon:
@@ -334,7 +334,7 @@ rewards:
   pesca-ii:
     type: COMMAND_ITEM
     chance: 3
-    display: '&b&lx&b{amount} &bCaixa Pesca &b[Tier &lII&b]'
+    display: '&bx&l{amount} &bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}
     amount: 1
     icon:
@@ -348,7 +348,7 @@ rewards:
   pesca-ii-x2:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&b&lx&b{amount} &bCaixa Pesca &b[Tier &lII&b]'
+    display: '&bx&l{amount} &bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}
     amount: 2
     icon:
@@ -362,7 +362,7 @@ rewards:
   skins-ii:
     type: COMMAND_ITEM
     chance: 2.67
-    display: '&e&lx&e{amount} &eCaixa Skins &e[Tier &lII&e]'
+    display: '&ex&l{amount} &eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 1
     icon:
@@ -376,7 +376,7 @@ rewards:
   skins-ii-x2:
     type: COMMAND_ITEM
     chance: 1.33
-    display: '&e&lx&e{amount} &eCaixa Skins &e[Tier &lII&e]'
+    display: '&ex&l{amount} &eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 2
     icon:
@@ -390,7 +390,7 @@ rewards:
   bosses-ii:
     type: COMMAND_ITEM
     chance: 2.33
-    display: '&4&lx&4{amount} &4Caixa Bosses &4[Tier &lII&4]'
+    display: '&4x&l{amount} &4Caixa Bosses &4[Tier &lII&4]'
     command: caixas give bosses-ii {player} {amount}
     amount: 1
     icon:
@@ -404,7 +404,7 @@ rewards:
   bosses-ii-x2:
     type: COMMAND_ITEM
     chance: 1.17
-    display: '&4&lx&4{amount} &4Caixa Bosses &4[Tier &lII&4]'
+    display: '&4x&l{amount} &4Caixa Bosses &4[Tier &lII&4]'
     command: caixas give bosses-ii {player} {amount}
     amount: 2
     icon:
@@ -418,7 +418,7 @@ rewards:
   boosters:
     type: COMMAND_ITEM
     chance: 2
-    display: '&a&lx&a{amount} &aCaixa Boosters'
+    display: '&ax&l{amount} &aCaixa Boosters'
     command: caixas give boosters {player} {amount}
     amount: 1
     icon:
@@ -432,7 +432,7 @@ rewards:
   boosters-x2:
     type: COMMAND_ITEM
     chance: 1
-    display: '&a&lx&a{amount} &aCaixa Boosters'
+    display: '&ax&l{amount} &aCaixa Boosters'
     command: caixas give boosters {player} {amount}
     amount: 2
     icon:
@@ -446,7 +446,7 @@ rewards:
   maquinas:
     type: COMMAND_ITEM
     chance: 1.67
-    display: '&b&lx&b{amount} &bCaixa Máquinas'
+    display: '&bx&l{amount} &bCaixa Máquinas'
     command: caixas give maquinas {player} {amount}
     amount: 1
     icon:
@@ -460,7 +460,7 @@ rewards:
   maquinas-x2:
     type: COMMAND_ITEM
     chance: 0.83
-    display: '&b&lx&b{amount} &bCaixa Máquinas'
+    display: '&bx&l{amount} &bCaixa Máquinas'
     command: caixas give maquinas {player} {amount}
     amount: 2
     icon:
@@ -474,7 +474,7 @@ rewards:
   robos:
     type: COMMAND_ITEM
     chance: 1
-    display: '&c&lx&c{amount} &cCaixa Robôs'
+    display: '&cx&l{amount} &cCaixa Robôs'
     command: caixas give robos {player} {amount}
     amount: 1
     icon:
@@ -488,7 +488,7 @@ rewards:
   robos-x2:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&c&lx&c{amount} &cCaixa Robôs'
+    display: '&cx&l{amount} &cCaixa Robôs'
     command: caixas give robos {player} {amount}
     amount: 2
     icon:
@@ -502,7 +502,7 @@ rewards:
   garnix:
     type: COMMAND_ITEM
     chance: 0.67
-    display: '&6&lx&6{amount} &6Caixa Garnix'
+    display: '&6x&l{amount} &6Caixa Garnix'
     command: caixas give garnix {player} {amount}
     amount: 1
     icon:
@@ -516,7 +516,7 @@ rewards:
   garnix-x2:
     type: COMMAND_ITEM
     chance: 0.33
-    display: '&6&lx&6{amount} &6Caixa Garnix'
+    display: '&6x&l{amount} &6Caixa Garnix'
     command: caixas give garnix {player} {amount}
     amount: 2
     icon:

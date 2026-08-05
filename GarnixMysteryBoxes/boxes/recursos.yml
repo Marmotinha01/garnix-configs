@@ -201,7 +201,7 @@ rewards:
   sagrada-25:
     type: COMMAND
     chance: 3
-    display: '&4&lx&4{amount} &4Runa Sagrada'
+    display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 25
     icon:
@@ -213,7 +213,7 @@ rewards:
   sagrada-50:
     type: COMMAND
     chance: 1.5
-    display: '&4&lx&4{amount} &4Runa Sagrada'
+    display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 50
     icon:
@@ -226,7 +226,7 @@ rewards:
   eterna-25:
     type: COMMAND
     chance: 3
-    display: '&2&lx&2{amount} &2Runa Eterna'
+    display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 25
     icon:
@@ -241,7 +241,7 @@ rewards:
   eterna-50:
     type: COMMAND
     chance: 1.5
-    display: '&2&lx&2{amount} &2Runa Eterna'
+    display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 50
     icon:
@@ -257,7 +257,7 @@ rewards:
   divina-25:
     type: COMMAND
     chance: 3
-    display: '&f&lx&f{amount} &fRuna Divina'
+    display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 25
     icon:
@@ -269,7 +269,7 @@ rewards:
   divina-50:
     type: COMMAND
     chance: 1.5
-    display: '&f&lx&f{amount} &fRuna Divina'
+    display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 50
     icon:
@@ -282,7 +282,7 @@ rewards:
   primal-25:
     type: COMMAND
     chance: 3
-    display: '&3&lx&3{amount} &3Runa Primal'
+    display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 25
     icon:
@@ -294,7 +294,7 @@ rewards:
   primal-50:
     type: COMMAND
     chance: 1.5
-    display: '&3&lx&3{amount} &3Runa Primal'
+    display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 50
     icon:
@@ -338,7 +338,7 @@ rewards:
   combustivel-2000:
     type: COMMAND
     chance: 6
-    display: '&e{amount}L de Combustível'
+    display: '&e{amount_decimal}L de Combustível'
     command: maquina givefuel {player} default {amount} 1
     amount: 2000
     icon:
@@ -346,12 +346,12 @@ rewards:
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &7{amount}L'
+      - '&fLitros: &7{amount_decimal}L'
 
   combustivel-4000:
     type: COMMAND
     chance: 3
-    display: '&e{amount}L de Combustível'
+    display: '&e{amount_decimal}L de Combustível'
     command: maquina givefuel {player} default {amount} 1
     amount: 4000
     icon:
@@ -359,12 +359,12 @@ rewards:
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &7{amount}L'
+      - '&fLitros: &7{amount_decimal}L'
 
   combustivel-8000:
     type: COMMAND
     chance: 1.5
-    display: '&e{amount}L de Combustível'
+    display: '&e{amount_decimal}L de Combustível'
     command: maquina givefuel {player} default {amount} 1
     amount: 8000
     icon:
@@ -372,7 +372,7 @@ rewards:
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &7{amount}L'
+      - '&fLitros: &7{amount_decimal}L'
 
   # -- Limite de Armazém
   lim-armazem-30:
@@ -435,7 +435,7 @@ rewards:
   ativador-bau:
     type: COMMAND_ITEM
     chance: 5.5
-    display: '&6&lx&6{amount} &6Ativador de Baú'
+    display: '&6x&l{amount} &6Ativador de Baú'
     command: bau giveitem {player} {amount}
     amount: 1
     icon:
@@ -449,7 +449,7 @@ rewards:
   limpador-terreno:
     type: COMMAND_ITEM
     chance: 5.5
-    display: '&e&lx&e{amount} &eLimpador de Terreno'
+    display: '&ex&l{amount} &eLimpador de Terreno'
     command: clearplot give {player} {amount}
     amount: 1
     icon:
@@ -581,7 +581,7 @@ rewards:
   caixa-runas:
     type: COMMAND_ITEM
     chance: 3
-    display: '&5&lx&5{amount} &5Caixa Runas'
+    display: '&5x&l{amount} &5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 1
     icon:
@@ -596,7 +596,7 @@ rewards:
   reset-kdr:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&b&lx&b{amount} &bReset de KDR'
+    display: '&bx&l{amount} &bReset de KDR'
     command: clan giveresetkdr {player} {amount}
     amount: 1
     icon:

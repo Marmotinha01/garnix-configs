@@ -57,7 +57,7 @@ rewards:
   mina-coins-2x-15m:
     type: COMMAND_ITEM
     chance: 4
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 2 15m {amount}
     amount: 1
     icon:
@@ -79,7 +79,7 @@ rewards:
   mina-coins-2x-30m:
     type: COMMAND_ITEM
     chance: 3
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 2 30m {amount}
     amount: 1
     icon:
@@ -101,7 +101,7 @@ rewards:
   mina-coins-2x-1h:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 2 1h {amount}
     amount: 1
     icon:
@@ -123,7 +123,7 @@ rewards:
   mina-coins-3x-5m:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 3 5m {amount}
     amount: 1
     icon:
@@ -145,7 +145,7 @@ rewards:
   mina-coins-3x-10m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 3 10m {amount}
     amount: 1
     icon:
@@ -169,7 +169,7 @@ rewards:
   mina-gemas-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 2 15m {amount}
     amount: 1
     icon:
@@ -191,7 +191,7 @@ rewards:
   mina-gemas-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 2 30m {amount}
     amount: 1
     icon:
@@ -213,7 +213,7 @@ rewards:
   mina-gemas-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 2 1h {amount}
     amount: 1
     icon:
@@ -235,7 +235,7 @@ rewards:
   mina-gemas-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 3 5m {amount}
     amount: 1
     icon:
@@ -257,7 +257,7 @@ rewards:
   mina-gemas-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 3 10m {amount}
     amount: 1
     icon:
@@ -281,7 +281,7 @@ rewards:
   mina-xp-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
@@ -303,7 +303,7 @@ rewards:
   mina-xp-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
@@ -325,7 +325,7 @@ rewards:
   mina-xp-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
@@ -347,7 +347,7 @@ rewards:
   mina-xp-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
@@ -369,7 +369,7 @@ rewards:
   mina-xp-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
@@ -393,7 +393,7 @@ rewards:
   mina-both-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
@@ -415,7 +415,7 @@ rewards:
   mina-both-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
@@ -437,7 +437,7 @@ rewards:
   mina-both-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
@@ -459,7 +459,7 @@ rewards:
   mina-both-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
@@ -481,7 +481,7 @@ rewards:
   mina-both-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&6&lx&6{amount} &6Booster de Mineração'
+    display: '&6x&l{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
@@ -505,7 +505,7 @@ rewards:
   fazenda-coins-2x-15m:
     type: COMMAND_ITEM
     chance: 4
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 15m {amount}
     amount: 1
     icon:
@@ -527,7 +527,7 @@ rewards:
   fazenda-coins-2x-30m:
     type: COMMAND_ITEM
     chance: 3
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 30m {amount}
     amount: 1
     icon:
@@ -549,7 +549,7 @@ rewards:
   fazenda-coins-2x-1h:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 1h {amount}
     amount: 1
     icon:
@@ -571,7 +571,7 @@ rewards:
   fazenda-coins-3x-5m:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 3 5m {amount}
     amount: 1
     icon:
@@ -593,7 +593,7 @@ rewards:
   fazenda-coins-3x-10m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 3 10m {amount}
     amount: 1
     icon:
@@ -617,7 +617,7 @@ rewards:
   fazenda-sementes-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 15m {amount}
     amount: 1
     icon:
@@ -639,7 +639,7 @@ rewards:
   fazenda-sementes-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 30m {amount}
     amount: 1
     icon:
@@ -661,7 +661,7 @@ rewards:
   fazenda-sementes-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 1h {amount}
     amount: 1
     icon:
@@ -683,7 +683,7 @@ rewards:
   fazenda-sementes-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 3 5m {amount}
     amount: 1
     icon:
@@ -705,7 +705,7 @@ rewards:
   fazenda-sementes-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 3 10m {amount}
     amount: 1
     icon:
@@ -729,7 +729,7 @@ rewards:
   fazenda-xp-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
@@ -751,7 +751,7 @@ rewards:
   fazenda-xp-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
@@ -773,7 +773,7 @@ rewards:
   fazenda-xp-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
@@ -795,7 +795,7 @@ rewards:
   fazenda-xp-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
@@ -817,7 +817,7 @@ rewards:
   fazenda-xp-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
@@ -841,7 +841,7 @@ rewards:
   fazenda-both-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
@@ -863,7 +863,7 @@ rewards:
   fazenda-both-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
@@ -885,7 +885,7 @@ rewards:
   fazenda-both-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
@@ -907,7 +907,7 @@ rewards:
   fazenda-both-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
@@ -929,7 +929,7 @@ rewards:
   fazenda-both-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
@@ -953,7 +953,7 @@ rewards:
   pesca-corais-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 2 15m {amount}
     amount: 1
     icon:
@@ -975,7 +975,7 @@ rewards:
   pesca-corais-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 2 30m {amount}
     amount: 1
     icon:
@@ -997,7 +997,7 @@ rewards:
   pesca-corais-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 2 1h {amount}
     amount: 1
     icon:
@@ -1019,7 +1019,7 @@ rewards:
   pesca-corais-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 3 5m {amount}
     amount: 1
     icon:
@@ -1041,7 +1041,7 @@ rewards:
   pesca-corais-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 3 10m {amount}
     amount: 1
     icon:
@@ -1065,7 +1065,7 @@ rewards:
   pesca-xp-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
@@ -1087,7 +1087,7 @@ rewards:
   pesca-xp-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
@@ -1109,7 +1109,7 @@ rewards:
   pesca-xp-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
@@ -1131,7 +1131,7 @@ rewards:
   pesca-xp-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
@@ -1153,7 +1153,7 @@ rewards:
   pesca-xp-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
@@ -1177,7 +1177,7 @@ rewards:
   pesca-both-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
@@ -1199,7 +1199,7 @@ rewards:
   pesca-both-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
@@ -1221,7 +1221,7 @@ rewards:
   pesca-both-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
@@ -1243,7 +1243,7 @@ rewards:
   pesca-both-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
@@ -1265,7 +1265,7 @@ rewards:
   pesca-both-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
@@ -1289,7 +1289,7 @@ rewards:
   maquina-drops-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&a&lx&a{amount} &aBooster de Máquina'
+    display: '&ax&l{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 2 15m {amount}
     amount: 1
     icon:
@@ -1311,7 +1311,7 @@ rewards:
   maquina-drops-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&a&lx&a{amount} &aBooster de Máquina'
+    display: '&ax&l{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 2 30m {amount}
     amount: 1
     icon:
@@ -1333,7 +1333,7 @@ rewards:
   maquina-drops-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&a&lx&a{amount} &aBooster de Máquina'
+    display: '&ax&l{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 2 1h {amount}
     amount: 1
     icon:
@@ -1355,7 +1355,7 @@ rewards:
   maquina-drops-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&a&lx&a{amount} &aBooster de Máquina'
+    display: '&ax&l{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 3 5m {amount}
     amount: 1
     icon:
@@ -1377,7 +1377,7 @@ rewards:
   maquina-drops-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&a&lx&a{amount} &aBooster de Máquina'
+    display: '&ax&l{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 3 10m {amount}
     amount: 1
     icon:
@@ -1401,7 +1401,7 @@ rewards:
   spawner-drops-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 2 15m {amount}
     amount: 1
     icon:
@@ -1423,7 +1423,7 @@ rewards:
   spawner-drops-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 2 30m {amount}
     amount: 1
     icon:
@@ -1445,7 +1445,7 @@ rewards:
   spawner-drops-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 2 1h {amount}
     amount: 1
     icon:
@@ -1467,7 +1467,7 @@ rewards:
   spawner-drops-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 3 5m {amount}
     amount: 1
     icon:
@@ -1489,7 +1489,7 @@ rewards:
   spawner-drops-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 3 10m {amount}
     amount: 1
     icon:
@@ -1513,7 +1513,7 @@ rewards:
   spawner-heads-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 2 15m {amount}
     amount: 1
     icon:
@@ -1535,7 +1535,7 @@ rewards:
   spawner-heads-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 2 30m {amount}
     amount: 1
     icon:
@@ -1557,7 +1557,7 @@ rewards:
   spawner-heads-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 2 1h {amount}
     amount: 1
     icon:
@@ -1579,7 +1579,7 @@ rewards:
   spawner-heads-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 3 5m {amount}
     amount: 1
     icon:
@@ -1601,7 +1601,7 @@ rewards:
   spawner-heads-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&a&lx&a{amount} &aBooster de Spawner'
+    display: '&ax&l{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 3 10m {amount}
     amount: 1
     icon:
@@ -1625,7 +1625,7 @@ rewards:
   armazem-venda-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&a&lx&a{amount} &aBooster de Armazém'
+    display: '&ax&l{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 2 15m {amount}
     amount: 1
     icon:
@@ -1647,7 +1647,7 @@ rewards:
   armazem-venda-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&a&lx&a{amount} &aBooster de Armazém'
+    display: '&ax&l{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 2 30m {amount}
     amount: 1
     icon:
@@ -1669,7 +1669,7 @@ rewards:
   armazem-venda-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&a&lx&a{amount} &aBooster de Armazém'
+    display: '&ax&l{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 2 1h {amount}
     amount: 1
     icon:
@@ -1691,7 +1691,7 @@ rewards:
   armazem-venda-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&a&lx&a{amount} &aBooster de Armazém'
+    display: '&ax&l{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 3 5m {amount}
     amount: 1
     icon:
@@ -1713,7 +1713,7 @@ rewards:
   armazem-venda-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&a&lx&a{amount} &aBooster de Armazém'
+    display: '&ax&l{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 3 10m {amount}
     amount: 1
     icon:

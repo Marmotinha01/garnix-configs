@@ -66,7 +66,7 @@ rewards:
   mineracao-quartzo:
     type: COMMAND_ITEM
     chance: 16.5
-    display: '&f&lx&f{amount} &fSkin de Quartzo'
+    display: '&fx&l{amount} &fSkin de Quartzo'
     command: mina giveskin {player} quartzo {amount}
     amount: 1
     icon:
@@ -85,7 +85,7 @@ rewards:
   mineracao-jade:
     type: COMMAND_ITEM
     chance: 9.6
-    display: '&a&lx&a{amount} &aSkin de Jade'
+    display: '&ax&l{amount} &aSkin de Jade'
     command: mina giveskin {player} jade {amount}
     amount: 1
     icon:
@@ -105,7 +105,7 @@ rewards:
   mineracao-safira:
     type: COMMAND_ITEM
     chance: 3.3
-    display: '&9&lx&9{amount} &9Skin de Safira'
+    display: '&9x&l{amount} &9Skin de Safira'
     command: mina giveskin {player} safira {amount}
     amount: 1
     icon:
@@ -125,7 +125,7 @@ rewards:
   mineracao-mithril:
     type: COMMAND_ITEM
     chance: 0.6
-    display: '&4&lx&4{amount} &4Skin de Mithril'
+    display: '&4x&l{amount} &4Skin de Mithril'
     command: mina giveskin {player} mithril {amount}
     amount: 1
     icon:
@@ -146,7 +146,7 @@ rewards:
   farm-esmeralda:
     type: COMMAND_ITEM
     chance: 16.5
-    display: '&a&lx&a{amount} &aSkin de Esmeralda'
+    display: '&ax&l{amount} &aSkin de Esmeralda'
     command: fazenda giveskin {player} esmeralda {amount}
     amount: 1
     icon:
@@ -167,7 +167,7 @@ rewards:
   farm-ametista:
     type: COMMAND_ITEM
     chance: 9.6
-    display: '&b&lx&b{amount} &bSkin de Ametista'
+    display: '&bx&l{amount} &bSkin de Ametista'
     command: fazenda giveskin {player} ametista {amount}
     amount: 1
     icon:
@@ -187,7 +187,7 @@ rewards:
   farm-cristal:
     type: COMMAND_ITEM
     chance: 3.3
-    display: '&9&lx&9{amount} &9Skin de Cristal'
+    display: '&9x&l{amount} &9Skin de Cristal'
     command: fazenda giveskin {player} cristal {amount}
     amount: 1
     icon:
@@ -207,7 +207,7 @@ rewards:
   farm-marfim:
     type: COMMAND_ITEM
     chance: 0.6
-    display: '&f&lx&f{amount} &fSkin de Marfim'
+    display: '&fx&l{amount} &fSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
     amount: 1
     icon:
@@ -228,7 +228,7 @@ rewards:
   pesca-serenita:
     type: COMMAND_ITEM
     chance: 20.9
-    display: '&5&lx&5{amount} &5Skin de Serenita'
+    display: '&5x&l{amount} &5Skin de Serenita'
     command: pesca giveskin {player} serenita {amount}
     amount: 1
     icon:
@@ -246,7 +246,7 @@ rewards:
   pesca-oceanita:
     type: COMMAND_ITEM
     chance: 12.16
-    display: '&1&lx&1{amount} &1Skin de Oceanita'
+    display: '&1x&l{amount} &1Skin de Oceanita'
     command: pesca giveskin {player} oceanita {amount}
     amount: 1
     icon:
@@ -264,7 +264,7 @@ rewards:
   pesca-perola:
     type: COMMAND_ITEM
     chance: 4.18
-    display: '&9&lx&9{amount} &9Skin de Pérola'
+    display: '&9x&l{amount} &9Skin de Pérola'
     command: pesca giveskin {player} perola {amount}
     amount: 1
     icon:
@@ -282,7 +282,7 @@ rewards:
   pesca-tempestita:
     type: COMMAND_ITEM
     chance: 0.76
-    display: '&d&lx&d{amount} &dSkin de Tempestita'
+    display: '&dx&l{amount} &dSkin de Tempestita'
     command: pesca giveskin {player} tempestita {amount}
     amount: 1
     icon:
@@ -301,7 +301,7 @@ rewards:
   caixa-skins-ii-x2:
     type: COMMAND_ITEM
     chance: 2
-    display: '&e&lx&e{amount} &eCaixa Skins &e[Tier &lII&e]'
+    display: '&ex&l{amount} &eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 2
     icon:

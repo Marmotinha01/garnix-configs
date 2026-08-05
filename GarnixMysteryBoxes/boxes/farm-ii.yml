@@ -87,7 +87,7 @@ rewards:
   armadura-iii-capacete:
     type: COMMAND_ITEM
     chance: 6
-    display: '&b&lx&b{amount} &bCapacete Farm &b[Tier &lIII&b]'
+    display: '&bx&l{amount} &bCapacete Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_helmet {amount}
     amount: 1
     icon:
@@ -107,7 +107,7 @@ rewards:
   armadura-iii-peitoral:
     type: COMMAND_ITEM
     chance: 6
-    display: '&b&lx&b{amount} &bPeitoral Farm &b[Tier &lIII&b]'
+    display: '&bx&l{amount} &bPeitoral Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_chestplate {amount}
     amount: 1
     icon:
@@ -127,7 +127,7 @@ rewards:
   armadura-iii-calca:
     type: COMMAND_ITEM
     chance: 6
-    display: '&b&lx&b{amount} &bCalça Farm &b[Tier &lIII&b]'
+    display: '&bx&l{amount} &bCalça Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_leggings {amount}
     amount: 1
     icon:
@@ -147,7 +147,7 @@ rewards:
   armadura-iii-bota:
     type: COMMAND_ITEM
     chance: 6
-    display: '&b&lx&b{amount} &bBota Farm &b[Tier &lIII&b]'
+    display: '&bx&l{amount} &bBota Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_boots {amount}
     amount: 1
     icon:
@@ -168,7 +168,7 @@ rewards:
   armadura-iv-capacete:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&d&lx&d{amount} &dCapacete Farm &d[Tier &lIV&d]'
+    display: '&dx&l{amount} &dCapacete Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_helmet {amount}
     amount: 1
     icon:
@@ -188,7 +188,7 @@ rewards:
   armadura-iv-peitoral:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&d&lx&d{amount} &dPeitoral Farm &d[Tier &lIV&d]'
+    display: '&dx&l{amount} &dPeitoral Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_chestplate {amount}
     amount: 1
     icon:
@@ -208,7 +208,7 @@ rewards:
   armadura-iv-calca:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&d&lx&d{amount} &dCalça Farm &d[Tier &lIV&d]'
+    display: '&dx&l{amount} &dCalça Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_leggings {amount}
     amount: 1
     icon:
@@ -228,7 +228,7 @@ rewards:
   armadura-iv-bota:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&d&lx&d{amount} &dBota Farm &d[Tier &lIV&d]'
+    display: '&dx&l{amount} &dBota Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_boots {amount}
     amount: 1
     icon:
@@ -249,7 +249,7 @@ rewards:
   armadura-v-capacete:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6&lx&6{amount} &6Capacete Farm &6[Tier &lV&6]'
+    display: '&6x&l{amount} &6Capacete Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_helmet {amount}
     amount: 1
     icon:
@@ -269,7 +269,7 @@ rewards:
   armadura-v-peitoral:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6&lx&6{amount} &6Peitoral Farm &6[Tier &lV&6]'
+    display: '&6x&l{amount} &6Peitoral Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_chestplate {amount}
     amount: 1
     icon:
@@ -289,7 +289,7 @@ rewards:
   armadura-v-calca:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6&lx&6{amount} &6Calça Farm &6[Tier &lV&6]'
+    display: '&6x&l{amount} &6Calça Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_leggings {amount}
     amount: 1
     icon:
@@ -309,7 +309,7 @@ rewards:
   armadura-v-bota:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6&lx&6{amount} &6Bota Farm &6[Tier &lV&6]'
+    display: '&6x&l{amount} &6Bota Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_boots {amount}
     amount: 1
     icon:
@@ -330,7 +330,7 @@ rewards:
   skin-ambar:
     type: COMMAND_ITEM
     chance: 10
-    display: '&5&lx&5{amount} &5Skin de Âmbar'
+    display: '&5x&l{amount} &5Skin de Âmbar'
     command: fazenda giveskin {player} ambar {amount}
     amount: 1
     icon:
@@ -349,7 +349,7 @@ rewards:
   skin-esmeralda:
     type: COMMAND_ITEM
     chance: 7.5
-    display: '&a&lx&a{amount} &aSkin de Esmeralda'
+    display: '&ax&l{amount} &aSkin de Esmeralda'
     command: fazenda giveskin {player} esmeralda {amount}
     amount: 1
     icon:
@@ -368,7 +368,7 @@ rewards:
   skin-ametista:
     type: COMMAND_ITEM
     chance: 3.75
-    display: '&b&lx&b{amount} &bSkin de Ametista'
+    display: '&bx&l{amount} &bSkin de Ametista'
     command: fazenda giveskin {player} ametista {amount}
     amount: 1
     icon:
@@ -388,7 +388,7 @@ rewards:
   skin-cristal:
     type: COMMAND_ITEM
     chance: 1
-    display: '&9&lx&9{amount} &9Skin de Cristal'
+    display: '&9x&l{amount} &9Skin de Cristal'
     command: fazenda giveskin {player} cristal {amount}
     amount: 1
     icon:
@@ -408,7 +408,7 @@ rewards:
   skin-marfim:
     type: COMMAND_ITEM
     chance: 0.25
-    display: '&f&lx&f{amount} &fSkin de Marfim'
+    display: '&fx&l{amount} &fSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
     amount: 1
     icon:
@@ -490,7 +490,7 @@ rewards:
   booster-2x-15m:
     type: COMMAND_ITEM
     chance: 4.25
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
@@ -512,7 +512,7 @@ rewards:
   booster-2x-30m:
     type: COMMAND_ITEM
     chance: 2.75
-    display: '&e&lx&e{amount} &eBooster de Fazenda'
+    display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
@@ -535,7 +535,7 @@ rewards:
   livro-ceifador:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&d&lx&d{amount} &dLivro de Ceifador'
+    display: '&dx&l{amount} &dLivro de Ceifador'
     command: lamina givebook {player} ceifador 1 {amount}
     amount: 1
     icon:
@@ -553,7 +553,7 @@ rewards:
   livro-massacre:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&4&lx&4{amount} &4Livro de Massacre'
+    display: '&4x&l{amount} &4Livro de Massacre'
     command: lamina givebook {player} massacre 1 {amount}
     amount: 1
     icon:
@@ -571,7 +571,7 @@ rewards:
   livro-pilhagem:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&a&lx&a{amount} &aLivro de Pilhagem'
+    display: '&ax&l{amount} &aLivro de Pilhagem'
     command: lamina givebook {player} pilhagem 1 {amount}
     amount: 1
     icon:
@@ -590,7 +590,7 @@ rewards:
   caixa-farm-ii-x2:
     type: COMMAND_ITEM
     chance: 2
-    display: '&a&lx&a{amount} &aCaixa Farm &a[Tier &lII&a]'
+    display: '&ax&l{amount} &aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
     amount: 2
     icon:

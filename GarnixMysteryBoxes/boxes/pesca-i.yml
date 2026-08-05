@@ -75,7 +75,7 @@ rewards:
   armadura-ii-capacete:
     type: COMMAND_ITEM
     chance: 6
-    display: '&a&lx&a{amount} &aCapacete Pesca &a[Tier &lII&a]'
+    display: '&ax&l{amount} &aCapacete Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_helmet {amount}
     amount: 1
     icon:
@@ -94,7 +94,7 @@ rewards:
   armadura-ii-peitoral:
     type: COMMAND_ITEM
     chance: 6
-    display: '&a&lx&a{amount} &aPeitoral Pesca &a[Tier &lII&a]'
+    display: '&ax&l{amount} &aPeitoral Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_chestplate {amount}
     amount: 1
     icon:
@@ -113,7 +113,7 @@ rewards:
   armadura-ii-calca:
     type: COMMAND_ITEM
     chance: 6
-    display: '&a&lx&a{amount} &aCalça Pesca &a[Tier &lII&a]'
+    display: '&ax&l{amount} &aCalça Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_leggings {amount}
     amount: 1
     icon:
@@ -132,7 +132,7 @@ rewards:
   armadura-ii-bota:
     type: COMMAND_ITEM
     chance: 6
-    display: '&a&lx&a{amount} &aBota Pesca &a[Tier &lII&a]'
+    display: '&ax&l{amount} &aBota Pesca &a[Tier &lII&a]'
     command: pesca givearmor {player} tier-ii_boots {amount}
     amount: 1
     icon:
@@ -152,7 +152,7 @@ rewards:
   armadura-iii-capacete:
     type: COMMAND_ITEM
     chance: 1.75
-    display: '&b&lx&b{amount} &bCapacete Pesca &b[Tier &lIII&b]'
+    display: '&bx&l{amount} &bCapacete Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_helmet {amount}
     amount: 1
     icon:
@@ -171,7 +171,7 @@ rewards:
   armadura-iii-peitoral:
     type: COMMAND_ITEM
     chance: 1.75
-    display: '&b&lx&b{amount} &bPeitoral Pesca &b[Tier &lIII&b]'
+    display: '&bx&l{amount} &bPeitoral Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_chestplate {amount}
     amount: 1
     icon:
@@ -190,7 +190,7 @@ rewards:
   armadura-iii-calca:
     type: COMMAND_ITEM
     chance: 1.75
-    display: '&b&lx&b{amount} &bCalça Pesca &b[Tier &lIII&b]'
+    display: '&bx&l{amount} &bCalça Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_leggings {amount}
     amount: 1
     icon:
@@ -209,7 +209,7 @@ rewards:
   armadura-iii-bota:
     type: COMMAND_ITEM
     chance: 1.75
-    display: '&b&lx&b{amount} &bBota Pesca &b[Tier &lIII&b]'
+    display: '&bx&l{amount} &bBota Pesca &b[Tier &lIII&b]'
     command: pesca givearmor {player} tier-iii_boots {amount}
     amount: 1
     icon:
@@ -229,7 +229,7 @@ rewards:
   skin-escama:
     type: COMMAND_ITEM
     chance: 5.5
-    display: '&6&lx&6{amount} &6Skin de Escama'
+    display: '&6x&l{amount} &6Skin de Escama'
     command: pesca giveskin {player} escama {amount}
     amount: 1
     icon:
@@ -247,7 +247,7 @@ rewards:
   skin-prata:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&f&lx&f{amount} &fSkin de Prata'
+    display: '&fx&l{amount} &fSkin de Prata'
     command: pesca giveskin {player} prata {amount}
     amount: 1
     icon:
@@ -265,7 +265,7 @@ rewards:
   skin-turquesa:
     type: COMMAND_ITEM
     chance: 2
-    display: '&b&lx&b{amount} &bSkin de Turquesa'
+    display: '&bx&l{amount} &bSkin de Turquesa'
     command: pesca giveskin {player} turquesa {amount}
     amount: 1
     icon:
@@ -284,7 +284,7 @@ rewards:
   forja:
     type: COMMAND_ITEM
     chance: 6.5
-    display: '&b&lx&b{amount} &bForja de Skins'
+    display: '&bx&l{amount} &bForja de Skins'
     command: pesca giveforge {player} {amount}
     amount: 1
     icon:
@@ -361,7 +361,7 @@ rewards:
   booster-2x-5m:
     type: COMMAND_ITEM
     chance: 4
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 5m {amount}
     amount: 1
     icon:
@@ -383,7 +383,7 @@ rewards:
   booster-2x-10m:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&b&lx&b{amount} &bBooster de Pesca'
+    display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 10m {amount}
     amount: 1
     icon:
@@ -406,7 +406,7 @@ rewards:
   livro-fartura:
     type: COMMAND_ITEM
     chance: 4
-    display: '&d&lx&d{amount} &dLivro de Cobiça'
+    display: '&dx&l{amount} &dLivro de Cobiça'
     command: pesca givebook {player} double 1 {amount}
     amount: 1
     icon:
@@ -425,7 +425,7 @@ rewards:
   livro-faro:
     type: COMMAND_ITEM
     chance: 4
-    display: '&a&lx&a{amount} &aLivro de Maré'
+    display: '&ax&l{amount} &aLivro de Maré'
     command: pesca givebook {player} luck 1 {amount}
     amount: 1
     icon:
@@ -443,7 +443,7 @@ rewards:
   livro-correnteza:
     type: COMMAND_ITEM
     chance: 4
-    display: '&b&lx&b{amount} &bLivro de Correnteza'
+    display: '&bx&l{amount} &bLivro de Correnteza'
     command: pesca givebook {player} speed 1 {amount}
     amount: 1
     icon:
@@ -462,7 +462,7 @@ rewards:
   caixa-pesca-ii:
     type: COMMAND_ITEM
     chance: 1
-    display: '&b&lx&b{amount} &bCaixa Pesca &b[Tier &lII&b]'
+    display: '&bx&l{amount} &bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}
     amount: 1
     icon:
