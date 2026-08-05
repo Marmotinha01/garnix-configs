@@ -27,28 +27,73 @@ boss-icon:
 # Types:
 # NONE, CURRENCY, ITEM, COMMAND, COMMAND_ITEM
 #
-# FAIXAS deste boss:
-#   comum 87% (azar 25 incluso) · comum plus 10% · incomum 2% ·
-#   semi raro 0,6% · raro 0,3% · raro plus 0,09% · jackpot 0,01%
+# ⚠️ CLASSE: FACIL. O Colosso e o boss de entrada e o mais comum da rede (56%
+# da crate Bosses). A tabela dele e recurso de desenvolvimento quase inteira —
+# combustivel, limite, runa e utilitario. Nao ha skin, armadura, matadora nem
+# livro aqui: quem mata Colosso esta comprando material, nao equipamento.
+#
+# FAIXAS deste boss (peso = porcentagem, o arquivo soma 100):
+#   azar 25 · moeda 26 · recurso 28 · recurso bom 17 · raro 3 · jackpot 1
+#
+# ⚠️ BOSS NAO PAGA GEMA, SEMENTE NEM CORAL — nos cinco, por decisao do dono. As
+# tres secundarias de via saem de crate, de caixa e da propria profissao; a moeda
+# do boss e COINS e DRACMAS, e so. O peso que sobrou nao virou mais moeda: ele foi
+# para RECURSO e RECURSO BOM, que e onde o dono quer o valor do boss.
+#
+# ⚠️ A DRACMA E A SECUNDARIA DO BOSS e por isso ela ganhou escada de 3 degraus
+# (500 · 1.000 · 2.000) e peso 8, contra os 100 fixos com peso 15 de antes. Por
+# abate ela sai de ~45 para ~228 — 5x. E o maior salto desta refatoracao, e e
+# deliberado: dracma era a unica moeda que o boss deveria pagar e era a que ele
+# menos pagava. A Caixa Recursos entrega ~145 por abertura, entao o boss facil
+# passa a caixa mediana, que e a ordem pedida.
+#
+# ⚠️ O LIMITE DE ARMAZEM CAIU DE 500 PARA 15 · 30. Os 500 antigos valiam 800 de
+# cash no shop e saiam em 4% dos rolls do boss mais comum do servidor — era o
+# maior vazamento da tabela. A escada nova acompanha a Caixa Recursos e sobe
+# boss a boss ate 150 · 250 · 400 no Devorador.
+#
+# ⚠️ Os tres limites seguem a razao 6:3:1 (armazem : maquina : spawner), a mesma
+# da RankUP, da Mineracao e da Caixa Recursos. E o que compensa 15 de armazem
+# valer 24 de cash e 1 de spawner valer 4.000.
+#
+# ⚠️ MOEDA SAI EM ESCADA DE 3 DEGRAUS (x1 · x2 · x4) com peso 50/30/20 dentro
+# da familia, o padrao das caixas. O degrau base de coins continua sendo o valor
+# antigo do boss — a escada acrescenta topo, nao rebaixa o piso.
+#
+# ⚠️ O QUE SEPARA AS CLASSES E O PISO, NAO O TETO: o Colosso e o unico boss sem
+# livro de kill-stack, sem caixa de tier acima no raro e com azar em 25%.
 #
 # ⚠️ `chance` e PESO — RewardManager usa RandomSelector.weighted, que normaliza
 # pelo total. MAS o menu imprime o peso cru como porcentagem
 # (BossRewardsMenu.java:136), entao somar 100 aqui nao e so legibilidade: e o
 # que faz o numero que o jogador ve ser verdade.
 #
-# ⚠️ reward-rolls: 3 — cada abate sorteia 3 vezes nesta tabela.
+# ⚠️ reward-rolls: 3 — cada abate sorteia 3 vezes nesta tabela. Com azar 25%, a
+# chance de um abate nao render NADA e 0,25³ = 1,5625%.
 #
 # ⚠️ A lore do bloco `icon:` segue a gramatica das crates (`&fValor: &2$&a{amount}`),
 # e o {amount} e resolvido no load pelo BossConfigManager#applyAmountPlaceholder —
 # porte do metodo de mesmo nome do CrateManager. Ele le o `amount:` DA RECOMPENSA,
 # nao o `amount:` de dentro do `icon:` (esse continua sendo so a pilha do preview).
 #
+# ⚠️ O COMBUSTIVEL ESCREVE OS LITROS A MAO na lore. O applyAmountPlaceholder usa
+# NumberFormatter.formatSuffix, entao `{amount}` com 2.000 renderiza "2K" e a
+# linha sairia "2KL". O token `{amount_decimal}` das caixas NAO existe no
+# garnix-bosses (BoxManager.java:64 e exclusivo do mystery-boxes).
+#
+# ⚠️ `type: COMMAND` = o {amount} e VALOR carregado por um item so (limite,
+# combustivel, runa, chave virtual). `type: COMMAND_ITEM` = o {amount} e
+# CONTAGEM de pilha e vai no ultimo argumento. Trocar os dois faz 20 entradas
+# virarem 20 itens, ou estoura o byte de Count da 1.8.
+#
 # ⚠️ No correio a lore do icone NAO aparece: o MailMenu monta a dele com o total
-# ja agregado (`Total: ✆300` quando 3 rolls caem em dracmas). A lore daqui vale no
+# ja agregado (`Total: ✆1K` quando 3 rolls caem em dracmas). A lore daqui vale no
 # menu /boss > recompensas, que mostra o valor por roll.
 rewards:
 
-  # -- COMUM ---------------------------------------------------------- 87%
+  # -- AZAR ----------------------------------------------------------- 25%
+  # type: NONE = slot vazio de verdade. O RewardManager pula a entrega
+  # (RewardManager.java:78), entao o roll some e o jogador nao recebe nada.
   azar:
     type: NONE
     chance: 25
@@ -59,40 +104,94 @@ rewards:
       lore:
       - '&7Não foi dessa vez.'
 
+  # -- MOEDA ---------------------------------------------------------- 26%
   coins:
     type: CURRENCY
-    chance: 30
+    chance: 9
     currency-id: coins
     amount: '10800'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  gemas:
+  coins-2x:
     type: CURRENCY
-    chance: 17
-    currency-id: gemas
-    amount: '200'
+    chance: 5.4
+    currency-id: coins
+    amount: '21600'
     icon:
       lore:
-      - '&fValor: &d۞{amount}'
+      - '&fValor: &2$&a{amount}'
 
-  dracmas:
+  coins-4x:
     type: CURRENCY
-    chance: 15
+    chance: 3.6
+    currency-id: coins
+    amount: '43200'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  dracmas-500:
+    type: CURRENCY
+    chance: 4
     currency-id: dracmas
-    amount: '100'
+    amount: '500'
     icon:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # -- COMUM PLUS ----------------------------------------------------- 10%
-  lim-armazem:
+  dracmas-1000:
+    type: CURRENCY
+    chance: 2.4
+    currency-id: dracmas
+    amount: '1000'
+    icon:
+      lore:
+      - '&fValor: &e✆{amount}'
+
+  dracmas-2000:
+    type: CURRENCY
+    chance: 1.6
+    currency-id: dracmas
+    amount: '2000'
+    icon:
+      lore:
+      - '&fValor: &e✆{amount}'
+
+  # -- RECURSO -------------------------------------------------------- 28%
+  combustivel-2000:
+    type: COMMAND
+    chance: 8
+    display: '&eCombustível'
+    command: maquina givefuel {player} default {amount} 1
+    amount: 2000
+    icon:
+      material: COAL
+      data: 0
+      display: '&eCombustível'
+      lore:
+      - '&fLitros: &72.000L'
+
+  combustivel-4000:
     type: COMMAND
     chance: 4
+    display: '&eCombustível'
+    command: maquina givefuel {player} default {amount} 1
+    amount: 4000
+    icon:
+      material: COAL
+      data: 0
+      display: '&eCombustível'
+      lore:
+      - '&fLitros: &74.000L'
+
+  lim-armazem-15:
+    type: COMMAND
+    chance: 4.8
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
-    amount: 500
+    amount: 15
     icon:
       material: INK_SACK
       data: 2
@@ -101,9 +200,23 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  lim-maquina:
+  lim-armazem-30:
     type: COMMAND
-    chance: 3.5
+    chance: 2.4
+    display: '&2Limite de Armazém'
+    command: armazem givelimititem {player} {amount} 1
+    amount: 30
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&fValor: &2∞{amount}'
+
+  lim-maquina-1:
+    type: COMMAND
+    chance: 2.4
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 1
@@ -115,9 +228,23 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner:
+  lim-maquina-2:
     type: COMMAND
-    chance: 2.5
+    chance: 1.2
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 2
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞{amount}'
+
+  lim-spawner-1:
+    type: COMMAND
+    chance: 1.2
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
     amount: 1
@@ -129,10 +256,134 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  # -- INCOMUM --------------------------------------------------------- 2%
+  ativador-bau:
+    type: COMMAND_ITEM
+    chance: 2
+    display: '&6Ativador de Baú'
+    command: bau giveitem {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&6Ativador de Baú'
+      lore:
+      - '&7Libera mais um baú na'
+      - '&7sua lista de baús.'
+
+  reset-kdr:
+    type: COMMAND_ITEM
+    chance: 2
+    display: '&bReset de KDR'
+    command: clan giveresetkdr {player} {amount}
+    amount: 1
+    icon:
+      material: NETHER_STAR
+      glow: true
+      display: '&bReset de KDR'
+      lore:
+      - '&7Zera os seus abates e'
+      - '&7mortes dentro do clan.'
+
+  # -- RECURSO BOM ---------------------------------------------------- 17%
+  # As runas entram em lote de 10 — abaixo dos 25 da Caixa Recursos, que e o
+  # degrau mais baixo da Caixa Runas. A loja de fragmentos cobra 90 a 120, entao
+  # 10 e um passo curto de proposito: o Colosso alimenta a runa, nao a paga.
+  sagrada-10:
+    type: COMMAND
+    chance: 2.5
+    display: '&4Runa Sagrada'
+    command: runas give {player} sagrada {amount} 1
+    amount: 10
+    icon:
+      texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
+      display: '&4Runa Sagrada'
+      lore:
+      - '&fQuantia: &7x{amount}'
+
+  eterna-10:
+    type: COMMAND
+    chance: 2.5
+    display: '&2Runa Eterna'
+    command: runas give {player} eterna {amount} 1
+    amount: 10
+    icon:
+      texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
+      display: '&2Runa Eterna'
+      lore:
+      - '&fQuantia: &7x{amount}'
+
+  divina-10:
+    type: COMMAND
+    chance: 2.5
+    display: '&fRuna Divina'
+    command: runas give {player} divina {amount} 1
+    amount: 10
+    icon:
+      texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
+      display: '&fRuna Divina'
+      lore:
+      - '&fQuantia: &7x{amount}'
+
+  primal-10:
+    type: COMMAND
+    chance: 2.5
+    display: '&3Runa Primal'
+    command: runas give {player} primal {amount} 1
+    amount: 10
+    icon:
+      texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
+      display: '&3Runa Primal'
+      lore:
+      - '&fQuantia: &7x{amount}'
+
+  limpador-terreno:
+    type: COMMAND_ITEM
+    chance: 3.5
+    display: '&eLimpador de Terreno'
+    command: clearplot give {player} {amount}
+    amount: 1
+    icon:
+      material: GOLD_SPADE
+      data: 0
+      glow: true
+      display: '&eLimpador de Terreno'
+      lore:
+      - '&7Limpa todos os blocos'
+      - '&7do seu terreno de uma vez.'
+      flags:
+      - HIDE_ATTRIBUTES
+
+  chaves-boss-3:
+    type: COMMAND
+    chance: 3.5
+    display: '&cChave de Boss'
+    command: crates givevirtualkey bosses {player} {amount}
+    amount: 3
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&4Chave Bosses'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+      - ''
+      - '&8 ▪ &fQuantia: &7x{amount}'
+
+  # -- RARO ------------------------------------------------------------ 3%
+  boss-inferno:
+    type: COMMAND_ITEM
+    chance: 1.2
+    display: '&6Boss Inferno'
+    command: boss give boss {player} INFERNO {amount} 1
+    amount: 1
+    icon:
+      texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
+      display: '&6Boss Inferno'
+      lore:
+      - '&fVida: &4❤50K'
+
   chaves-boss-5:
     type: COMMAND
-    chance: 2
+    chance: 0.8
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 5
@@ -146,23 +397,22 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # -- SEMI RARO ----------------------------------------------------- 0,6%
-  boss-inferno:
+  caixa-recursos:
     type: COMMAND_ITEM
-    chance: 0.6
-    display: '&6Boss Inferno'
-    command: boss give boss {player} INFERNO {amount} 1
+    chance: 0.7
+    display: '&2Caixa Recursos'
+    command: caixas give recursos {player} {amount}
     amount: 1
     icon:
-      texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
-      display: '&6Boss Inferno'
+      material: CHEST
+      display: '&2Caixa Recursos'
       lore:
-      - '&fVida: &4❤50K'
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
-  # -- RARO ---------------------------------------------------------- 0,3%
   boss-arauto:
     type: COMMAND_ITEM
-    chance: 0.2
+    chance: 0.3
     display: '&dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 1
@@ -172,9 +422,10 @@ rewards:
       lore:
       - '&fVida: &4❤75K'
 
+  # -- JACKPOT --------------------------------------------------------- 1%
   caixa-runas:
     type: COMMAND_ITEM
-    chance: 0.1
+    chance: 0.6
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 1
@@ -185,46 +436,28 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # -- RARO PLUS ---------------------------------------------------- 0,09%
-  chaves-boss-10:
-    type: COMMAND
-    chance: 0.09
-    display: '&cChave de Boss'
-    command: crates givevirtualkey bosses {player} {amount}
-    amount: 10
-    icon:
-      material: TRIPWIRE_HOOK
-      glow: true
-      display: '&4Chave Bosses'
-      lore:
-      - '&7Consiga recompensas'
-      - '&7abrindo essa chave.'
-      - ''
-      - '&8 ▪ &fQuantia: &7x{amount}'
-
-  # -- JACKPOT ------------------------------------------------------- 0,01%
-  caixa-boosters:
+  caixa-bosses-i:
     type: COMMAND_ITEM
-    chance: 0.006
-    display: '&aCaixa Boosters'
-    command: caixas give boosters {player} {amount}
+    chance: 0.3
+    display: '&4Caixa Bosses &4[Tier &lI&4]'
+    command: caixas give bosses-i {player} {amount}
     amount: 1
     icon:
-      material: ENDER_CHEST
-      display: '&aCaixa Boosters'
+      material: CHEST
+      display: '&4Caixa Bosses &4[Tier &lI&4]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  caixa-caixas:
+  caixa-chaves:
     type: COMMAND_ITEM
-    chance: 0.004
-    display: '&dCaixa Caixas'
-    command: caixas give caixas {player} {amount}
+    chance: 0.1
+    display: '&9Caixa Chaves'
+    command: caixas give chaves {player} {amount}
     amount: 1
     icon:
-      material: ENDER_CHEST
-      display: '&dCaixa Caixas'
+      material: CHEST
+      display: '&9Caixa Chaves'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
