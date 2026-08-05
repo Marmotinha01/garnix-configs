@@ -19,9 +19,9 @@ Os 5 bosses viraram **3 classes**, e o que separa uma da outra é o **piso**, n�
 
 | Classe | Bosses | Vida | Ideia |
 |---|---|---|---|
-| **Fácil** | Colosso · Inferno | 25k · 50k | recurso de desenvolvimento puro. Sem item raro, sem livro. |
-| **Médio** | Arauto · Titã | 75k · 150k | mais recurso bom, entra o Livro de Kill-Stack e a caixa de tier acima. |
-| **Difícil** | Devorador | 300k | menos filler, um em cada cinco rolls é item. Única fonte de Caixa Garnix. |
+| **Fácil** | Colosso · Inferno | 25k · 50k | recurso de desenvolvimento puro. Sem livro nenhum, sem utilitário de topo. |
+| **Médio** | Arauto · Titã | 75k · 150k | entram os 6 livros de encantamento, o Kill-Stack e a caixa de tier acima. |
+| **Difícil** | Devorador | 300k | menos filler, mais de um em cada quatro rolls é item. Única fonte de Caixa Garnix. |
 
 ### A grade de faixas
 
@@ -29,18 +29,29 @@ Os 5 bosses viraram **3 classes**, e o que separa uma da outra é o **piso**, n�
 |---|---:|---:|---:|---:|---:|
 | **Azar** | 25 | 25 | 15 | 15 | **8** |
 | **Moeda** (coins + dracmas) | 26 | 25 | 21 | 20 | **16** |
-| **Recurso** | 28 | 28 | 24 | 22 | 17 |
-| **Recurso bom** | 17 | 18 | 28 | 30 | **32** |
-| **Raro** | 3 | 3 | 10 | 10 | **22** |
+| **Recurso** | 26 | 26 | 24 | 22 | 17 |
+| **Recurso bom** | 19 | 20 | 25 | 26 | 26 |
+| **Raro** | 3 | 3 | 13 | 14 | **28** |
 | **Jackpot** | 1 | 1 | 2 | 3 | **5** |
-| Abate sem nada (0,azar³) | 1,56% | 1,56% | 0,34% | 0,34% | **0,05%** |
-| Nº de recompensas | 29 | 30 | 39 | 40 | 43 |
+| Abate sem nada (azar³) | 1,56% | 1,56% | 0,34% | 0,34% | **0,05%** |
+| Nº de recompensas | 29 | 29 | 45 | 47 | 50 |
 
-Do Colosso ao Devorador a **moeda cai pela metade** (26 → 16) e o **raro multiplica por 7** (3 → 22). É essa inversão que faz o boss difícil parecer diferente, não a quantia.
+Do Colosso ao Devorador a **moeda cai pela metade** (26 → 16) e o **raro multiplica por 9** (3 → 28). É essa inversão que faz o boss difícil parecer diferente, não a quantia.
+
+### A escada de utilitário — o que entra em que classe
+
+| | Colosso | Inferno | Arauto | Titã | Devorador |
+|---|:---:|:---:|:---:|:---:|:---:|
+| Ativador de Baú | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Reset de KDR | — | — | ✅ | ✅ | ✅ |
+| Limpador de Terreno | — | — | — | ✅ | ✅ |
+| Livro de Kill-Stack | — | — | ✅ | ✅ | ✅ |
+| 6 livros de encantamento | — | — | ✅ | ✅ | ✅ |
+| Cash | — | — | ✅ | ✅ | ✅ |
 
 ---
 
-## 2. As cinco decisões de fundo
+## 2. As sete decisões de fundo
 
 ### 2.1 Boss não paga gema, semente nem coral
 
@@ -58,11 +69,24 @@ Ela era a moeda que o boss menos pagava e deveria ser a única que ele paga. Gan
 | Titã | 400 fixo, peso 16 | 1.750 · 3.500 · 7.000, peso 6 | 192 → **599** |
 | Devorador | 500 fixo, peso 16 | 3.000 · 6.000 · 12.000, peso 4 | 240 → **684** |
 
-Referência: uma abertura de Caixa Recursos entrega ~145 de dracma. O boss **fácil** já passa a caixa mediana — que é a ordem pedida.
+Referência: uma abertura de Caixa Recursos entrega ~145 de dracma. O boss **fácil** já passa a caixa mediana.
 
-### 2.3 O Livro de Kill-Stack passa a cair de boss; a matadora, não
+### 2.3 Os 6 livros de encantamento entram a partir do Arauto
 
-Antes, matar 1.000 Devoradores nunca dropava nada do ecossistema de boss. Agora o livro cai nos médios e no difícil — ele só tem valor para quem **já** mata boss, então não antecipa nada.
+Sempre **1x**, sempre **nível 1**, e o que muda de boss para boss é **só a chance**. As duas famílias com o mesmo peso, porque boss é superfície de todo mundo e não pode privilegiar uma via.
+
+| Livro | Comando | Arauto | Titã | Devorador |
+|---|---|---:|---:|---:|
+| Ceifador · Massacre · Pilhagem | `lamina givebook` | 0,5 cada | 0,7 cada | 1,0 cada |
+| Cobiça · Maré · Correnteza | `pesca givebook` | 0,5 cada | 0,7 cada | 1,0 cada |
+| **Total da faixa** | | **3%** | **4,2%** | **6%** |
+| **Abates com livro** | | **9%** | **12,6%** | **18%** |
+
+Colosso e Inferno não têm livro nenhum — é o gate da classe.
+
+### 2.4 O Kill-Stack cai de boss; a matadora, não
+
+Antes, matar 1.000 Devoradores nunca dropava nada do ecossistema de boss. O livro só tem valor para quem **já** mata boss, então não antecipa nada.
 
 | Boss | Kill-Stack |
 |---|---|
@@ -73,20 +97,33 @@ Antes, matar 1.000 Devoradores nunca dropava nada do ecossistema de boss. Agora 
 
 **A matadora continua exclusiva** da Caixa Bosses I/II e da crate. É o que mantém motivo para abrir a caixa.
 
-### 2.4 O limite de armazém foi cortado — era o maior vazamento
+### 2.5 O cash é mais topo que os limites
 
-Os 5 bosses davam **500 de armazém a 4%**, do Colosso ao Devorador. 500 de armazém vale **800 de cash** no shop, e o Colosso é 56% da crate Bosses. A escada nova acompanha a Caixa Recursos e sobe boss a boss:
+Decisão do dono: o cash tem que ser **mais raro que qualquer degrau de limite** do mesmo arquivo. Ele fica no jackpot, e só a Caixa Garnix passa por cima dele.
+
+| Boss | Cash | Peso | Limite mais raro do arquivo | Por abate |
+|---|---:|---:|---|---:|
+| Arauto | 100 | 0,05 | spawner 75 → 0,1 | 0,15 |
+| Titã | 250 | 0,05 | spawner 100 → 0,08 | 0,375 |
+| Devorador | 500 | 0,1 | spawner 150 → 0,2 | 1,5 |
+
+⚠️ Se algum limite ficar mais raro que o cash num ajuste futuro, a hierarquia inverte — o cash tem que descer junto.
+
+### 2.6 O limite de armazém foi cortado; o de spawner subiu
+
+Os 5 bosses davam **500 de armazém a 4%**, do Colosso ao Devorador — 800 de cash no shop, no boss que é 56% da crate. A escada nova acompanha a Caixa Recursos:
 
 | | Colosso | Inferno | Arauto | Titã | Devorador |
 |---|---|---|---|---|---|
 | Armazém | 15 · 30 | 30 · 50 | 50 · 100 · **150** | 100 · 150 · **250** | 150 · 250 · **400** |
 | Máquinas | 1 · 2 | 2 · 3 | 3 · 5 · **8** | 5 · 8 · **12** | 8 · 12 · **20** |
-| Spawners | 1 | 1 · 2 | 2 · 3 · **5** | 3 · 5 · **8** | 5 · 8 · **12** |
-| Por abate (armazém) | 60 → **4,3** | 60 → **7,9** | 60 → **17,4** | 60 → **30,2** | 60 → **41,1** |
+| **Spawners** | 10 · 20 · 30 | 20 · 30 · 50 | 20 · 30 · **50 · 75** | 25 · 50 · **75 · 100** | 50 · 75 · **100 · 150** |
+| Armazém / abate | 60 → **4,3** | 60 → **7,9** | 60 → **17,4** | 60 → **26,4** | 60 → **37,5** |
+| Spawner / abate | 0,08 → **0,61** | 0,08 → **1,04** | 0,08 → **1,22** | 0,08 → **1,41** | 0,08 → **3,30** |
 
-O **degrau em negrito vive na faixa `RECURSO BOM`**, não no recheio — 150 de armazém vale 240 de cash e 5 de spawner vale 20.000, isso não é filler. Os três limites seguem a razão **6:3:1** (armazém : máquina : spawner) de sempre.
+O **degrau em negrito vive na faixa `RECURSO BOM`**, não no recheio. Os três limites seguem a razão **6:3:1** (armazém : máquina : spawner) nos pesos.
 
-### 2.5 O azar cai com a dificuldade
+### 2.7 O azar cai com a dificuldade
 
 25% nos fáceis, 15% nos médios, **8% no difícil** — a menor taxa de "não veio nada" da rede. Um Devorador morto só sai seco em **1 de cada 1.953 abates**.
 
@@ -100,28 +137,29 @@ O **degrau em negrito vive na faixa `RECURSO BOM`**, não no recheio — 150 de 
 |---|---|
 | **Azar 25** | — |
 | **Moeda 26** | coins 10,8K · 21,6K · 43,2K (9 · 5,4 · 3,6) — dracmas 500 · 1.000 · 2.000 (4 · 2,4 · 1,6) |
-| **Recurso 28** | combustível 2.000L · 4.000L (8 · 4) — armazém 15 · 30 (4,8 · 2,4) — máquinas 1 · 2 (2,4 · 1,2) — spawners 1 (1,2) — Ativador de Baú (2) — Reset de KDR (2) |
-| **Recurso bom 17** | as 4 runas x10 (2,5 cada) — Limpador de Terreno (3,5) — chave de boss x3 (3,5) |
+| **Recurso 26** | combustível 500L · 1.000L (8 · 4) — armazém 15 · 30 (4,8 · 2,4) — máquinas 1 · 2 (2,4 · 1,2) — spawners 10 · 20 · 30 (0,6 · 0,36 · 0,24) — Ativador de Baú (2) |
+| **Recurso bom 19** | as 4 runas x10 (3,5 cada) — chave de boss x3 (5) |
 | **Raro 3** | Boss Inferno (1,2) — chave x5 (0,8) — Caixa Recursos (0,7) — Boss Arauto (0,3) |
 | **Jackpot 1** | Caixa Runas (0,6) — Caixa Bosses I (0,3) — Caixa Chaves (0,1) |
 
 ### 3.2 Inferno — `inferno.yml` · 50.000 · fácil
 
-Mesma estrutura, um degrau acima. Combustível 3.000L · 6.000L · armazém 30 · 50 · spawner 1 · 2 · runas x15 · chave x5 e x10 · no raro Boss Arauto e Boss Titã.
+Mesma estrutura, um degrau acima: combustível 750L · 1.500L · armazém 30 · 50 · máquinas 2 · 3 · spawners 20 · 30 · 50 · runas x15 (3,6 cada) · chave x5 (5,6) · no raro Boss Arauto e Boss Titã.
 
 ### 3.3 Arauto — `arauto.yml` · 75.000 · médio
 
-É aqui que a tabela vira: azar 25 → **15**, moeda 25 → **21**, recurso bom 18 → **28**.
+É aqui que a tabela vira: azar 25 → **15**, moeda 25 → **21**, raro 3 → **13**.
 
 | Faixa | Conteúdo |
 |---|---|
-| **Recurso bom 28** | as 4 runas x25 (3,5 cada) — chave x10 (3,5) — Limpador (3) — Caixa Recursos (3) — chave x15 (2,5) — armazém 150 / máquina 8 / spawner 5 (1,2 · 0,6 · 0,2) |
-| **Raro 10** | Boss Titã (3,3) — **Livro de Kill-Stack (1,7)** — Caixa Runas (1,7) — Caixa Bosses I (1,5) — Boss Devorador (1,3) — chave x25 (0,5) |
-| **Jackpot 2** | Caixa Chaves (0,8) — Boosters (0,5) — Bosses II (0,35) — Robôs (0,25) — 100 de cash (0,1) |
+| **Recurso 24** | combustível 1.000L · 2.000L — armazém 50 · 100 — máquinas 3 · 5 — spawners 20 · 30 — Ativador (2) — **Reset de KDR (2)** |
+| **Recurso bom 25** | as 4 runas x25 (3,5 cada) — chave x10 (3,5) — Caixa Recursos (3) — chave x15 (2,4) — armazém 150 / máquina 8 / spawner 50 e 75 (1,2 · 0,6 · 0,2 · 0,1) |
+| **Raro 13** | Boss Titã (3,3) — **Kill-Stack (1,7)** — Caixa Runas (1,7) — Caixa Bosses I (1,5) — Boss Devorador (1,3) — **os 6 livros (0,5 cada)** — chave x25 (0,5) |
+| **Jackpot 2** | Caixa Chaves (0,8) — Boosters (0,5) — Bosses II (0,35) — Robôs (0,3) — **100 de cash (0,05)** |
 
 ### 3.4 Titã — `tita.yml` · 150.000 · médio
 
-Topo da faixa média. Combustível 6.000L · 12.000L e armazém 100 · 150 · 250 **já passam o topo da Caixa Recursos**. Runas x40, kill-stack a 2%, Devorador x1 e x3 no raro, e o jackpot ganha a Caixa Caixas e 250 de cash.
+Topo da faixa média e o primeiro com **Limpador de Terreno**. Combustível 1.500L · 3.000L · armazém 100 · 150 · 250 · spawners 25 · 50 · 75 · 100 · runas x40 (3,2 cada) · Kill-Stack a 2% · os 6 livros a 0,7 · Devorador x1 e x3 no raro · jackpot com Caixa Caixas e 250 de cash (0,05).
 
 ### 3.5 Devorador — `devorador.yml` · 300.000 · difícil
 
@@ -129,10 +167,10 @@ Topo da faixa média. Combustível 6.000L · 12.000L e armazém 100 · 150 · 25
 |---|---|
 | **Azar 8** | a menor da rede |
 | **Moeda 16** | coins 1,44×10¹⁷ · 2,88×10¹⁷ · 5,76×10¹⁷ — dracmas 3.000 · 6.000 · 12.000 |
-| **Recurso 17** | combustível 8.000L · 16.000L — armazém 150 · 250 — máquinas 8 · 12 — spawners 5 · 8 — Ativador — Reset de KDR |
-| **Recurso bom 32** | as 4 runas **x60 (4 cada)** — chave x25 (4) — Caixa Recursos (3,5) — Limpador (3) — chave x50 (2) — armazém 400 (1,5) — Caixa Runas (1) — máquina 20 / spawner 12 (0,7 · 0,3) |
-| **Raro 22** | Devorador x3 (5,5) — **Kill-Stack (4)** — Caixa Bosses I (3,2) — Devorador x5 (2,2) — Caixa Chaves (2,2) — **Kill-Stack x2 (1,7)** — Caixa Boosters (1,7) — chave x75 (1,5) |
-| **Jackpot 5** | Bosses II (1,5) — Robôs (1,2) — Caixas (1,05) — Máquinas (0,7) — 500 de cash (0,4) — **Caixa Garnix (0,15)** |
+| **Recurso 17** | combustível 2.000L · 4.000L — armazém 150 · 250 — máquinas 8 · 12 — spawners 50 · 75 — Ativador — Reset de KDR |
+| **Recurso bom 26** | as 4 runas **x60 (3,2 cada)** — chave x25 (3,2) — Caixa Recursos (2,8) — Limpador (2,4) — chave x50 (1,6) — armazém 400 (1,2) — Caixa Runas (0,8) — máquina 20 / spawner 100 e 150 (0,6 · 0,4 · 0,2) |
+| **Raro 28** | Devorador x3 (5,5) — **Kill-Stack (4)** — Caixa Bosses I (3,2) — Devorador x5 (2,2) — Caixa Chaves (2,2) — **Kill-Stack x2 (1,7)** — Caixa Boosters (1,7) — chave x75 (1,5) — **os 6 livros (1,0 cada)** |
+| **Jackpot 5** | Bosses II (1,5) — Robôs (1,3) — Caixas (1,15) — Máquinas (0,9) — **500 de cash (0,1)** — **Caixa Garnix (0,05)** |
 
 **Ele fica abaixo da caixa boa de propósito.** Não dá armadura, skin nem matadora — que é justamente o que a Caixa Tier II vende. O que ele tem de melhor é o **volume**: 3 rolls por abate, quantas vezes o jogador quiser matar.
 
@@ -156,22 +194,23 @@ A escada x1 · x2 · x4 (peso 50/30/20) entrou, mas o peso da família caiu junt
 
 ### 4.2 O que subiu
 
-| Item | Colosso | Inferno | Arauto | Titã | Devorador |
+| Item / abate | Colosso | Inferno | Arauto | Titã | Devorador |
 |---|---:|---:|---:|---:|---:|
-| **Dracmas** / abate | 45 → 228 | 96 → 342 | 144 → 428 | 192 → 599 | 240 → 684 |
-| **Combustível** / abate | 0 → 960L | 0 → 1.440L | 0 → 1.809L | 0 → 2.160L | 0 → 2.256L |
-| **Runa** / abate | 0 → 3 | 0 → 4,7 | 0 → 10,5 | 0 → 17,8 | 0 → 28,8 |
-| **Chave de boss** / abate | 0,33 → 0,44 | 0,52 → 0,81 | 0,74 → 2,55 | 2,10 → 5,03 | 4,13 → 9,38 |
+| **Dracmas** | 45 → 228 | 96 → 342 | 144 → 428 | 192 → 599 | 240 → 684 |
+| **Combustível** | 0 → 240L | 0 → 360L | 0 → 402L | 0 → 540L | 0 → 564L |
+| **Runa** | 0 → 4,2 | 0 → 6,5 | 0 → 10,5 | 0 → 15,4 | 0 → 23,0 |
+| **Chave de boss** | 0,33 → 0,57 | 0,52 → 1,08 | 0,74 → 2,51 | 2,10 → 4,22 | 4,13 → 8,18 |
+| **Limite de spawner** | 0,08 → 0,61 | 0,08 → 1,04 | 0,08 → 1,22 | 0,08 → 1,41 | 0,08 → 3,30 |
 
-Combustível, runa, Ativador de Baú, Limpador de Terreno e Reset de KDR **não existiam em boss nenhum** antes.
+Combustível, runa, Ativador de Baú, Limpador de Terreno, Reset de KDR e os 6 livros de encantamento **não existiam em boss nenhum** antes.
 
 ### 4.3 O que desceu
 
 | Item | Antes | Agora |
 |---|---|---|
-| **Limite de armazém** | 500 a 4% nos cinco (60 / abate) | 4,3 → 41,1 / abate, escalando com o boss |
+| **Limite de armazém** | 500 a 4% nos cinco (60 / abate) | 4,3 → 37,5 / abate, escalando com o boss |
 | **Limite de máquinas** | 1 a 3,5% nos cinco | escada 1·2 → 8·12·20, na razão 6:3:1 |
-| **Limite de spawners** | 1 a 2,5% nos cinco | escada 1 → 5·8·12, com o peso mais baixo da família |
+| **Cash** | 0,02% · 0,05% · 0,1% | 0,05% · 0,05% · 0,1% — agora sempre abaixo do limite mais raro |
 | **Coins do Devorador** | 1,08×10¹⁷ | 9,85×10¹⁶ (−9%) |
 
 ---
@@ -190,8 +229,9 @@ Combustível, runa, Ativador de Baú, Limpador de Terreno e Reset de KDR **não 
 
 ## 6. Pontos em aberto
 
-1. **A dracma multiplicou por 5** em toda a linha. É o maior salto de faucet desta refatoração e foi deliberado — ela era a moeda que o boss deveria pagar e era a que ele menos pagava. Se virar problema, o ajuste é no **peso da família** (8 · 8 · 6 · 6 · 4), não na quantia.
-2. **A chave de boss dobrou** no Titã e no Devorador. O loop chave → crate → boss → chave continua decaindo (a crate tem 33,3% de azar e 56% de Colosso), mas agora bem mais devagar.
-3. **O limite de spawner continua desproporcional.** 12 dele no Devorador valem 48.000 de cash. A razão 6:3:1 compensa parte; se virar problema, o caminho é **tirar ele da tabela**, não afinar mais o peso — a mesma nota que já está no `recursos.yml`.
-4. **Os 3 bosses engatilhados não seguem esta grade.** Adotar Algoz, Flagelo e Leviatã exige reescrever os três com as mesmas seis faixas antes de subir.
-5. **Nenhum boss dá armadura, skin nem booster.** Foi decisão de escopo: esses três são o produto das caixas de via, e boss é superfície de todo mundo. Se um dia entrarem, o lugar é a faixa `RARO` dos médios e do difícil.
+1. **🚩 As três colunas de limite deixaram de ser comparáveis.** A razão 6:3:1 de peso foi desenhada para quando os três saem na MESMA quantia — é assim na Caixa Recursos e na RankUP. Com o spawner em 50-150 e a máquina em 8-20, ela **amplifica** em vez de compensar. No Devorador: spawner rende 3,30 por abate a 4.000 de cash a unidade = **13.200 de valor**, contra 0,95 de máquina a 1.500 = 1.425. Nove vezes de diferença. Dois caminhos: **subir a escada da máquina** para a mesma faixa do spawner, ou **cortar o peso do spawner** bem abaixo do 6:3:1.
+2. **O spawner do Devorador (3,30 / abate) passa a Caixa Recursos** (0,79 por abertura) em 4,2x. Nos outros quatro bosses ele fica entre 0,6 e 1,4 — na mesma ordem de grandeza da caixa.
+3. **A dracma multiplicou por 5** em toda a linha. Foi deliberado — ela era a moeda que o boss deveria pagar e era a que ele menos pagava. Se virar problema, o ajuste é no **peso da família** (8 · 8 · 6 · 6 · 4), não na quantia.
+4. **A chave de boss dobrou** no Titã e no Devorador. O loop chave → crate → boss → chave continua decaindo (a crate tem 33,3% de azar e 56% de Colosso), mas agora bem mais devagar.
+5. **Os 3 bosses engatilhados não seguem esta grade.** Adotar Algoz, Flagelo e Leviatã exige reescrever os três com as mesmas seis faixas antes de subir — e eles já usam `lamina givebook` em níveis 2 e 3, que nenhum boss no ar usa.
+6. **Nenhum boss dá armadura, skin nem booster.** Decisão de escopo: esses três são o produto das caixas de via. Se um dia entrarem, o lugar é a faixa `RARO` dos médios e do difícil.

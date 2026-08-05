@@ -29,11 +29,11 @@ boss-icon:
 #
 # ⚠️ CLASSE: FACIL. O Colosso e o boss de entrada e o mais comum da rede (56%
 # da crate Bosses). A tabela dele e recurso de desenvolvimento quase inteira —
-# combustivel, limite, runa e utilitario. Nao ha skin, armadura, matadora nem
-# livro aqui: quem mata Colosso esta comprando material, nao equipamento.
+# combustivel, limite e runa. Nao ha skin, armadura, matadora, livro de
+# encantamento nem kill-stack aqui: quem mata Colosso esta comprando material.
 #
 # FAIXAS deste boss (peso = porcentagem, o arquivo soma 100):
-#   azar 25 · moeda 26 · recurso 28 · recurso bom 17 · raro 3 · jackpot 1
+#   azar 25 · moeda 26 · recurso 26 · recurso bom 19 · raro 3 · jackpot 1
 #
 # ⚠️ BOSS NAO PAGA GEMA, SEMENTE NEM CORAL — nos cinco, por decisao do dono. As
 # tres secundarias de via saem de crate, de caixa e da propria profissao; a moeda
@@ -42,26 +42,32 @@ boss-icon:
 #
 # ⚠️ A DRACMA E A SECUNDARIA DO BOSS e por isso ela ganhou escada de 3 degraus
 # (500 · 1.000 · 2.000) e peso 8, contra os 100 fixos com peso 15 de antes. Por
-# abate ela sai de ~45 para ~228 — 5x. E o maior salto desta refatoracao, e e
-# deliberado: dracma era a unica moeda que o boss deveria pagar e era a que ele
-# menos pagava. A Caixa Recursos entrega ~145 por abertura, entao o boss facil
-# passa a caixa mediana, que e a ordem pedida.
+# abate ela sai de ~45 para ~228. A Caixa Recursos entrega ~145 por abertura,
+# entao o boss facil passa a caixa mediana, que e a ordem pedida.
+#
+# ⚠️ SEM LIMPADOR DE TERRENO E SEM RESET DE KDR — por decisao do dono, os dois
+# utilitarios comecam mais para cima na escada: o Limpador so a partir do Tita e
+# o Reset de KDR so a partir do Arauto. Aqui o utilitario e o Ativador de Bau.
+#
+# ⚠️ O LIMITE DE SPAWNER SAI EM 10 · 20 · 30, quantia dada pelo dono. Com o
+# armazem em 15 · 30 e a maquina em 1 · 2, as tres colunas DEIXARAM de ser
+# comparaveis: 30 de spawner vale 120.000 de cash e 30 de armazem vale 48. A
+# razao 6:3:1 de peso (armazem : maquina : spawner) foi mantida, mas ela nao
+# fecha essa conta — ela so compensava quando as quantias eram iguais. Se o
+# spawner virar problema, o caminho e subir a escada da MAQUINA para a mesma
+# faixa, ou cortar o peso do spawner de vez, nao afinar mais o 6:3:1.
 #
 # ⚠️ O LIMITE DE ARMAZEM CAIU DE 500 PARA 15 · 30. Os 500 antigos valiam 800 de
 # cash no shop e saiam em 4% dos rolls do boss mais comum do servidor — era o
 # maior vazamento da tabela. A escada nova acompanha a Caixa Recursos e sobe
 # boss a boss ate 150 · 250 · 400 no Devorador.
 #
-# ⚠️ Os tres limites seguem a razao 6:3:1 (armazem : maquina : spawner), a mesma
-# da RankUP, da Mineracao e da Caixa Recursos. E o que compensa 15 de armazem
-# valer 24 de cash e 1 de spawner valer 4.000.
-#
 # ⚠️ MOEDA SAI EM ESCADA DE 3 DEGRAUS (x1 · x2 · x4) com peso 50/30/20 dentro
 # da familia, o padrao das caixas. O degrau base de coins continua sendo o valor
 # antigo do boss — a escada acrescenta topo, nao rebaixa o piso.
 #
 # ⚠️ O QUE SEPARA AS CLASSES E O PISO, NAO O TETO: o Colosso e o unico boss sem
-# livro de kill-stack, sem caixa de tier acima no raro e com azar em 25%.
+# livro nenhum, sem caixa de tier acima no raro e com azar em 25%.
 #
 # ⚠️ `chance` e PESO — RewardManager usa RandomSelector.weighted, que normaliza
 # pelo total. MAS o menu imprime o peso cru como porcentagem
@@ -77,8 +83,8 @@ boss-icon:
 # nao o `amount:` de dentro do `icon:` (esse continua sendo so a pilha do preview).
 #
 # ⚠️ O COMBUSTIVEL ESCREVE OS LITROS A MAO na lore. O applyAmountPlaceholder usa
-# NumberFormatter.formatSuffix, entao `{amount}` com 2.000 renderiza "2K" e a
-# linha sairia "2KL". O token `{amount_decimal}` das caixas NAO existe no
+# NumberFormatter.formatSuffix, entao `{amount}` com 1.000 renderiza "1K" e a
+# linha sairia "1KL". O token `{amount_decimal}` das caixas NAO existe no
 # garnix-bosses (BoxManager.java:64 e exclusivo do mystery-boxes).
 #
 # ⚠️ `type: COMMAND` = o {amount} e VALOR carregado por um item so (limite,
@@ -159,32 +165,32 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # -- RECURSO -------------------------------------------------------- 28%
-  combustivel-2000:
+  # -- RECURSO -------------------------------------------------------- 26%
+  combustivel-500:
     type: COMMAND
     chance: 8
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 2000
+    amount: 500
     icon:
       material: COAL
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &72.000L'
+      - '&fLitros: &7500L'
 
-  combustivel-4000:
+  combustivel-1000:
     type: COMMAND
     chance: 4
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 4000
+    amount: 1000
     icon:
       material: COAL
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &74.000L'
+      - '&fLitros: &71.000L'
 
   lim-armazem-15:
     type: COMMAND
@@ -242,12 +248,40 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner-1:
+  lim-spawner-10:
     type: COMMAND
-    chance: 1.2
+    chance: 0.6
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 1
+    amount: 10
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  lim-spawner-20:
+    type: COMMAND
+    chance: 0.36
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 20
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  lim-spawner-30:
+    type: COMMAND
+    chance: 0.24
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 30
     icon:
       material: INK_SACK
       data: 12
@@ -269,27 +303,13 @@ rewards:
       - '&7Libera mais um baú na'
       - '&7sua lista de baús.'
 
-  reset-kdr:
-    type: COMMAND_ITEM
-    chance: 2
-    display: '&bReset de KDR'
-    command: clan giveresetkdr {player} {amount}
-    amount: 1
-    icon:
-      material: NETHER_STAR
-      glow: true
-      display: '&bReset de KDR'
-      lore:
-      - '&7Zera os seus abates e'
-      - '&7mortes dentro do clan.'
-
-  # -- RECURSO BOM ---------------------------------------------------- 17%
+  # -- RECURSO BOM ---------------------------------------------------- 19%
   # As runas entram em lote de 10 — abaixo dos 25 da Caixa Recursos, que e o
   # degrau mais baixo da Caixa Runas. A loja de fragmentos cobra 90 a 120, entao
   # 10 e um passo curto de proposito: o Colosso alimenta a runa, nao a paga.
   sagrada-10:
     type: COMMAND
-    chance: 2.5
+    chance: 3.5
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 10
@@ -301,7 +321,7 @@ rewards:
 
   eterna-10:
     type: COMMAND
-    chance: 2.5
+    chance: 3.5
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 10
@@ -313,7 +333,7 @@ rewards:
 
   divina-10:
     type: COMMAND
-    chance: 2.5
+    chance: 3.5
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 10
@@ -325,7 +345,7 @@ rewards:
 
   primal-10:
     type: COMMAND
-    chance: 2.5
+    chance: 3.5
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 10
@@ -335,26 +355,9 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  limpador-terreno:
-    type: COMMAND_ITEM
-    chance: 3.5
-    display: '&eLimpador de Terreno'
-    command: clearplot give {player} {amount}
-    amount: 1
-    icon:
-      material: GOLD_SPADE
-      data: 0
-      glow: true
-      display: '&eLimpador de Terreno'
-      lore:
-      - '&7Limpa todos os blocos'
-      - '&7do seu terreno de uma vez.'
-      flags:
-      - HIDE_ATTRIBUTES
-
   chaves-boss-3:
     type: COMMAND
-    chance: 3.5
+    chance: 5
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 3

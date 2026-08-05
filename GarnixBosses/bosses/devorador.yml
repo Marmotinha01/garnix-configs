@@ -31,11 +31,17 @@ boss-icon:
 # TRES eixos ao mesmo tempo, nao so no topo:
 #   · o AZAR desaba de 15 para 8 — a menor taxa de "nao veio nada" da rede;
 #   · a MOEDA encolhe para 16 (era 26 no Colosso) — menos filler;
-#   · o RARO explode para 22 (era 3 no Colosso) — um em cada cinco rolls e item.
+#   · o RARO explode para 28 (era 3 no Colosso) — mais de um em cada quatro rolls.
 # E o mesmo eixo das caixas Tier I e Tier II: a diferenca esta no PISO.
 #
 # FAIXAS deste boss (peso = porcentagem, o arquivo soma 100):
-#   azar 8 · moeda 16 · recurso 17 · recurso bom 32 · raro 22 · jackpot 5
+#   azar 8 · moeda 16 · recurso 17 · recurso bom 26 · raro 28 · jackpot 5
+#
+# ⚠️ OS 6 LIVROS DE ENCANTAMENTO SAEM A 1,0 CADA — o degrau mais facil dos tres
+# bosses que os dao (0,5 Arauto · 0,7 Tita · 1,0 aqui). Sempre 1x e sempre nivel
+# 1; o que escala e so a chance. Sao os 3 da lamina (Ceifador, Massacre,
+# Pilhagem) e os 3 da vara (Cobica, Mare, Correnteza), com o mesmo peso nas duas
+# familias — 6% do arquivo em livro, ou ~17% dos abates.
 #
 # ⚠️ BOSS NAO PAGA GEMA, SEMENTE NEM CORAL — nos cinco, por decisao do dono. A
 # moeda do boss e COINS e DRACMAS, e so.
@@ -46,12 +52,25 @@ boss-icon:
 #
 # ⚠️ ELE FICA ABAIXO DA CAIXA BOA DE PROPOSITO. Ele nao da armadura, skin nem
 # matadora, que sao justamente o que a Caixa Tier II vende, e a Caixa Garnix so
-# aparece aqui a 0,15%. O que ele tem de melhor e o VOLUME: 3 rolls por abate,
+# aparece aqui a 0,05%. O que ele tem de melhor e o VOLUME: 3 rolls por abate,
 # quantas vezes o jogador quiser matar.
 #
 # ⚠️ A MATADORA NAO CAI DE BOSS, por decisao do dono. A espada continua exclusiva
 # da Caixa Bosses I/II e da crate. O kill-stack cai — e aqui em dois lotes (x1 a
 # 4% e x2 a 1,7%), que e a maior fonte de livro fora da Caixa Bosses II.
+#
+# ⚠️ O CASH E MAIS TOPO QUE OS LIMITES, por decisao do dono: ele esta em 0,1,
+# abaixo do degrau de limite mais raro do arquivo (spawner 150, em 0,2). So a
+# Caixa Garnix (0,05) fica acima dele.
+#
+# ⚠️ O LIMITE DE SPAWNER SAI EM 50 · 75 · 100 · 150, quantia dada pelo dono, com
+# os dois degraus de baixo no recheio e os dois de cima no RECURSO BOM. Com o
+# armazem em 150 · 250 · 400 e a maquina em 8 · 12 · 20, as tres colunas
+# DEIXARAM de ser comparaveis: 150 de spawner vale 600.000 de cash e 400 de
+# armazem vale 640. A razao 6:3:1 de peso foi mantida, mas ela so compensava
+# quando as quantias eram iguais — aqui ela amplifica em vez de compensar. Se o
+# spawner virar problema, o caminho e subir a escada da MAQUINA para a mesma
+# faixa, ou cortar o peso do spawner de vez, nao afinar mais o 6:3:1.
 #
 # ⚠️ Sem faixa de boss acima: o Devorador e o ultimo da escada, entao ele se
 # auto-alimenta. 3x a 5,5% e 5x a 2,2% dao 0,275 stack de retorno por roll, ou
@@ -61,11 +80,6 @@ boss-icon:
 # ⚠️ O DEVORADOR APARECE DUAS VEZES: sao o MESMO item, um com stack 3 e outro com
 # stack 5. O `boss give boss` recebe <stacks> <quantia> e o {amount} vai no
 # PRIMEIRO — 3x aqui e UM item com pilha 3, nao tres itens soltos.
-#
-# ⚠️ O DEGRAU ALTO DOS LIMITES (armazem 400, maquina 20, spawner 12) vive na faixa
-# RECURSO BOM. Os degraus de baixo (150/250, 8/12, 5/8) ficam no recheio, na razao
-# 6:3:1 de sempre. O spawner e o item mais caro do servidor — 12 dele valem 48.000
-# de cash — e por isso ele sai a 0,3%, um quinto do armazem.
 #
 # ⚠️ MOEDA SAI EM ESCADA DE 3 DEGRAUS (x1 · x2 · x4) com peso 50/30/20 dentro
 # da familia. O degrau base de coins continua sendo o valor antigo do boss.
@@ -84,13 +98,14 @@ boss-icon:
 # nao o `amount:` de dentro do `icon:` (esse continua sendo so a pilha do preview).
 #
 # ⚠️ O COMBUSTIVEL ESCREVE OS LITROS A MAO na lore: o applyAmountPlaceholder usa
-# NumberFormatter.formatSuffix e `{amount}` com 8.000 renderiza "8K".
+# NumberFormatter.formatSuffix e `{amount}` com 4.000 renderiza "4K".
 #
 # ⚠️ `boss give killstack <jogador> <nivel> [quantia]` — o NIVEL vem PRIMEIRO (1)
-# e a quantia depois. E a ordem OPOSTA a do `boss give boss`.
+# e a quantia depois. Ja `lamina givebook` e `pesca givebook` recebem <tipo>
+# <nivel> <quantia>, com o {amount} no fim.
 #
-# ⚠️ A CAIXA GARNIX E O UNICO PREMIO DO SERVIDOR QUE SO SAI AQUI. Ela esta a 0,15%
-# por roll, ou 0,45% por abate. Ela e a caixa mais rara da rede e o conteudo dela
+# ⚠️ A CAIXA GARNIX E O UNICO PREMIO DO SERVIDOR QUE SO SAI AQUI. Ela esta a 0,05%
+# por roll, ou 0,15% por abate. Ela e a caixa mais rara da rede e o conteudo dela
 # (5 maquinas de limite, papel de VIP, Matadora Hit-Kill) e desproporcional de
 # proposito — mexer nesse peso e mexer no item mais valioso da economia.
 #
@@ -166,31 +181,31 @@ rewards:
       - '&fValor: &e✆{amount}'
 
   # -- RECURSO -------------------------------------------------------- 17%
-  combustivel-8000:
+  combustivel-2000:
     type: COMMAND
     chance: 4.6
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 8000
+    amount: 2000
     icon:
       material: COAL
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &78.000L'
+      - '&fLitros: &72.000L'
 
-  combustivel-16000:
+  combustivel-4000:
     type: COMMAND
     chance: 2.4
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 16000
+    amount: 4000
     icon:
       material: COAL
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &716.000L'
+      - '&fLitros: &74.000L'
 
   lim-armazem-150:
     type: COMMAND
@@ -248,12 +263,12 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner-5:
+  lim-spawner-50:
     type: COMMAND
     chance: 0.5
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 5
+    amount: 50
     icon:
       material: INK_SACK
       data: 12
@@ -262,12 +277,12 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  lim-spawner-8:
+  lim-spawner-75:
     type: COMMAND
     chance: 0.2
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 8
+    amount: 75
     icon:
       material: INK_SACK
       data: 12
@@ -303,13 +318,12 @@ rewards:
       - '&7Zera os seus abates e'
       - '&7mortes dentro do clan.'
 
-  # -- RECURSO BOM ---------------------------------------------------- 32%
+  # -- RECURSO BOM ---------------------------------------------------- 26%
   # Lote de 60 nas quatro runas — mais que os 50 do segundo degrau da Caixa Runas
-  # e a 4% cada, o maior peso de runa da rede fora da propria Caixa Runas. Com 3
-  # rolls por abate, ~38% dos abates saem com runa.
+  # e a 3,2 cada, o maior peso de runa da rede fora da propria Caixa Runas.
   sagrada-60:
     type: COMMAND
-    chance: 4
+    chance: 3.2
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 60
@@ -321,7 +335,7 @@ rewards:
 
   eterna-60:
     type: COMMAND
-    chance: 4
+    chance: 3.2
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 60
@@ -333,7 +347,7 @@ rewards:
 
   divina-60:
     type: COMMAND
-    chance: 4
+    chance: 3.2
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 60
@@ -345,7 +359,7 @@ rewards:
 
   primal-60:
     type: COMMAND
-    chance: 4
+    chance: 3.2
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 60
@@ -357,7 +371,7 @@ rewards:
 
   chaves-boss-25:
     type: COMMAND
-    chance: 4
+    chance: 3.2
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 25
@@ -373,7 +387,7 @@ rewards:
 
   caixa-recursos:
     type: COMMAND_ITEM
-    chance: 3.5
+    chance: 2.8
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 1
@@ -386,7 +400,7 @@ rewards:
 
   limpador-terreno:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 2.4
     display: '&eLimpador de Terreno'
     command: clearplot give {player} {amount}
     amount: 1
@@ -403,7 +417,7 @@ rewards:
 
   chaves-boss-50:
     type: COMMAND
-    chance: 2
+    chance: 1.6
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 50
@@ -419,7 +433,7 @@ rewards:
 
   lim-armazem-400:
     type: COMMAND
-    chance: 1.5
+    chance: 1.2
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 400
@@ -433,7 +447,7 @@ rewards:
 
   caixa-runas:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 0.8
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 1
@@ -446,7 +460,7 @@ rewards:
 
   lim-maquina-20:
     type: COMMAND
-    chance: 0.7
+    chance: 0.6
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 20
@@ -458,12 +472,12 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner-12:
+  lim-spawner-100:
     type: COMMAND
-    chance: 0.3
+    chance: 0.4
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 12
+    amount: 100
     icon:
       material: INK_SACK
       data: 12
@@ -472,7 +486,21 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  # -- RARO ----------------------------------------------------------- 22%
+  lim-spawner-150:
+    type: COMMAND
+    chance: 0.2
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 150
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  # -- RARO ----------------------------------------------------------- 28%
   boss-devorador-3:
     type: COMMAND_ITEM
     chance: 5.5
@@ -592,6 +620,115 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
+  livro-ceifador:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&dLivro de Ceifador'
+    command: lamina givebook {player} ceifador 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&dLivro de Ceifador'
+      lore:
+      - '&7Chance de o abate soltar'
+      - '&7o dobro de cabeças.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &cLâmina '
+      - ''
+
+  livro-massacre:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&4Livro de Massacre'
+    command: lamina givebook {player} massacre 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&4Livro de Massacre'
+      lore:
+      - '&7Mobs empilhados morrem'
+      - '&7juntos no mesmo golpe.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &cLâmina '
+      - ''
+
+  livro-pilhagem:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&aLivro de Pilhagem'
+    command: lamina givebook {player} pilhagem 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&aLivro de Pilhagem'
+      lore:
+      - '&7Multiplica os drops que'
+      - '&7os mobs deixam ao morrer.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &cLâmina '
+      - ''
+
+  livro-cobica:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&dLivro de Cobiça'
+    command: pesca givebook {player} double 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&dLivro de Cobiça'
+      lore:
+      - '&7Chance de a fisgada valer'
+      - '&7dobrado, e não só o item:'
+      - '&7corais e XP dobram junto.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+
+  livro-mare:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&aLivro de Maré'
+    command: pesca givebook {player} luck 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&aLivro de Maré'
+      lore:
+      - '&7Deixa os peixes raros mais'
+      - '&7fáceis de cair no anzol.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+
+  livro-correnteza:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&bLivro de Correnteza'
+    command: pesca givebook {player} speed 1 {amount}
+    amount: 1
+    icon:
+      material: ENCHANTED_BOOK
+      display: '&bLivro de Correnteza'
+      lore:
+      - '&7Diminui o tempo de espera'
+      - '&7entre uma fisgada e outra.'
+      - ''
+      - ' &8Especificações: '
+      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fTipo: &bVara de Pesca '
+      - ''
+
   # -- JACKPOT --------------------------------------------------------- 5%
   caixa-bosses-ii:
     type: COMMAND_ITEM
@@ -608,7 +745,7 @@ rewards:
 
   caixa-robos:
     type: COMMAND_ITEM
-    chance: 1.2
+    chance: 1.3
     display: '&cCaixa Robôs'
     command: caixas give robos {player} {amount}
     amount: 1
@@ -621,7 +758,7 @@ rewards:
 
   caixa-caixas:
     type: COMMAND_ITEM
-    chance: 1.05
+    chance: 1.15
     display: '&dCaixa Caixas'
     command: caixas give caixas {player} {amount}
     amount: 1
@@ -634,7 +771,7 @@ rewards:
 
   caixa-maquinas:
     type: COMMAND_ITEM
-    chance: 0.7
+    chance: 0.9
     display: '&bCaixa Máquinas'
     command: caixas give maquinas {player} {amount}
     amount: 1
@@ -647,7 +784,7 @@ rewards:
 
   cash:
     type: CURRENCY
-    chance: 0.4
+    chance: 0.1
     currency-id: cash
     amount: '500'
     icon:
@@ -656,7 +793,7 @@ rewards:
 
   caixa-garnix:
     type: COMMAND_ITEM
-    chance: 0.15
+    chance: 0.05
     display: '&6Caixa Garnix'
     command: caixas give garnix {player} {amount}
     amount: 1

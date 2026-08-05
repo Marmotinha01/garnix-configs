@@ -29,11 +29,11 @@ boss-icon:
 #
 # ⚠️ CLASSE: FACIL. O Inferno e o segundo boss de entrada (28% da crate Bosses)
 # e usa a MESMA estrutura do Colosso — recurso de desenvolvimento quase inteiro,
-# sem skin, armadura, matadora nem livro. O que muda e a quantia: um degrau
-# acima em todas as familias, e um pouco mais de peso na faixa de recurso bom.
+# sem skin, armadura, matadora, livro de encantamento nem kill-stack. O que muda
+# e a quantia: um degrau acima em todas as familias.
 #
 # FAIXAS deste boss (peso = porcentagem, o arquivo soma 100):
-#   azar 25 · moeda 25 · recurso 28 · recurso bom 18 · raro 3 · jackpot 1
+#   azar 25 · moeda 25 · recurso 26 · recurso bom 20 · raro 3 · jackpot 1
 #
 # ⚠️ BOSS NAO PAGA GEMA, SEMENTE NEM CORAL — nos cinco, por decisao do dono. A
 # moeda do boss e COINS e DRACMAS, e so. O peso que sobrou nao virou mais moeda:
@@ -43,13 +43,24 @@ boss-icon:
 # 3.000) com peso 8. Por abate ela rende ~342, contra os ~96 de antes e os ~145
 # de uma abertura de Caixa Recursos.
 #
+# ⚠️ SEM LIMPADOR DE TERRENO E SEM RESET DE KDR — por decisao do dono, o Limpador
+# so entra a partir do Tita e o Reset de KDR so a partir do Arauto. Aqui o
+# utilitario e o Ativador de Bau.
+#
+# ⚠️ O LIMITE DE SPAWNER SAI EM 20 · 30 · 50, quantia dada pelo dono. Com o
+# armazem em 30 · 50 e a maquina em 2 · 3, as tres colunas DEIXARAM de ser
+# comparaveis: 50 de spawner vale 200.000 de cash e 50 de armazem vale 80. A
+# razao 6:3:1 de peso foi mantida, mas ela so compensava quando as quantias eram
+# iguais. Se o spawner virar problema, o caminho e subir a escada da MAQUINA
+# para a mesma faixa, ou cortar o peso do spawner, nao afinar mais o 6:3:1.
+#
 # ⚠️ Os tres limites seguem a razao 6:3:1 (armazem : maquina : spawner).
 #
 # ⚠️ MOEDA SAI EM ESCADA DE 3 DEGRAUS (x1 · x2 · x4) com peso 50/30/20 dentro
 # da familia. O degrau base de coins continua sendo o valor antigo do boss.
 #
 # ⚠️ O QUE SEPARA AS CLASSES E O PISO, NAO O TETO: o Inferno ainda nao tem livro
-# de kill-stack nem caixa de tier acima no raro, e o azar dele segue em 25%.
+# nenhum nem caixa de tier acima no raro, e o azar dele segue em 25%.
 #
 # ⚠️ `chance` e PESO — RewardManager usa RandomSelector.weighted, que normaliza
 # pelo total. MAS o menu imprime o peso cru como porcentagem
@@ -65,7 +76,7 @@ boss-icon:
 # nao o `amount:` de dentro do `icon:` (esse continua sendo so a pilha do preview).
 #
 # ⚠️ O COMBUSTIVEL ESCREVE OS LITROS A MAO na lore: o applyAmountPlaceholder usa
-# NumberFormatter.formatSuffix e `{amount}` com 3.000 renderiza "3K".
+# NumberFormatter.formatSuffix e `{amount}` com 1.500 renderiza "1.5K".
 #
 # ⚠️ `boss give boss` recebe <stacks> <quantia>: o {amount} vai no PRIMEIRO. Dois
 # rolls no mesmo boss viram um item x2, nao dois itens soltos.
@@ -141,32 +152,32 @@ rewards:
       lore:
       - '&fValor: &e✆{amount}'
 
-  # -- RECURSO -------------------------------------------------------- 28%
-  combustivel-3000:
+  # -- RECURSO -------------------------------------------------------- 26%
+  combustivel-750:
     type: COMMAND
     chance: 8
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 3000
+    amount: 750
     icon:
       material: COAL
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &73.000L'
+      - '&fLitros: &7750L'
 
-  combustivel-6000:
+  combustivel-1500:
     type: COMMAND
     chance: 4
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 6000
+    amount: 1500
     icon:
       material: COAL
       data: 0
       display: '&eCombustível'
       lore:
-      - '&fLitros: &76.000L'
+      - '&fLitros: &71.500L'
 
   lim-armazem-30:
     type: COMMAND
@@ -224,12 +235,12 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner-1:
+  lim-spawner-20:
     type: COMMAND
-    chance: 0.8
+    chance: 0.6
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 1
+    amount: 20
     icon:
       material: INK_SACK
       data: 12
@@ -238,12 +249,26 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
-  lim-spawner-2:
+  lim-spawner-30:
     type: COMMAND
-    chance: 0.4
+    chance: 0.36
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 2
+    amount: 30
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  lim-spawner-50:
+    type: COMMAND
+    chance: 0.24
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 50
     icon:
       material: INK_SACK
       data: 12
@@ -265,24 +290,10 @@ rewards:
       - '&7Libera mais um baú na'
       - '&7sua lista de baús.'
 
-  reset-kdr:
-    type: COMMAND_ITEM
-    chance: 2
-    display: '&bReset de KDR'
-    command: clan giveresetkdr {player} {amount}
-    amount: 1
-    icon:
-      material: NETHER_STAR
-      glow: true
-      display: '&bReset de KDR'
-      lore:
-      - '&7Zera os seus abates e'
-      - '&7mortes dentro do clan.'
-
-  # -- RECURSO BOM ---------------------------------------------------- 18%
+  # -- RECURSO BOM ---------------------------------------------------- 20%
   sagrada-15:
     type: COMMAND
-    chance: 2.6
+    chance: 3.6
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 15
@@ -294,7 +305,7 @@ rewards:
 
   eterna-15:
     type: COMMAND
-    chance: 2.6
+    chance: 3.6
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 15
@@ -306,7 +317,7 @@ rewards:
 
   divina-15:
     type: COMMAND
-    chance: 2.6
+    chance: 3.6
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 15
@@ -318,7 +329,7 @@ rewards:
 
   primal-15:
     type: COMMAND
-    chance: 2.6
+    chance: 3.6
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 15
@@ -328,26 +339,9 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  limpador-terreno:
-    type: COMMAND_ITEM
-    chance: 3.8
-    display: '&eLimpador de Terreno'
-    command: clearplot give {player} {amount}
-    amount: 1
-    icon:
-      material: GOLD_SPADE
-      data: 0
-      glow: true
-      display: '&eLimpador de Terreno'
-      lore:
-      - '&7Limpa todos os blocos'
-      - '&7do seu terreno de uma vez.'
-      flags:
-      - HIDE_ATTRIBUTES
-
   chaves-boss-5:
     type: COMMAND
-    chance: 3.8
+    chance: 5.6
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 5
