@@ -65,7 +65,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 56
     display: '&cBoss Colosso'
-    command: boss give boss {player} COLOSSO 1 1
+    command: boss give boss {player} COLOSSO {amount} 1
     amount: 1
     icon:
       texture: 590591f78e6bcbd800d5864cb297b98460c35aa6cf52af26fb240618fcee2fb7
@@ -77,7 +77,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 28
     display: '&6Boss Inferno'
-    command: boss give boss {player} INFERNO 1 1
+    command: boss give boss {player} INFERNO {amount} 1
     amount: 1
     icon:
       texture: 1c4d7ff18bda1d81288c12b126bb538310b191c4dea96c0db4f32f8d2365d502
@@ -90,7 +90,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 11
     display: '&dBoss Arauto'
-    command: boss give boss {player} ARAUTO 1 1
+    command: boss give boss {player} ARAUTO {amount} 1
     amount: 1
     icon:
       texture: 38eef639b9c151ee810adf488f29f74b9077dcc8c4816e27a34a6491fce04677
@@ -103,7 +103,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 0.8
     display: '&7Matadora Bruta'
-    command: boss give sword {player} bruta
+    command: boss give sword {player} bruta {amount}
     amount: 1
     icon:
       material: STONE_SWORD
@@ -130,7 +130,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 1.5
     display: '&5Boss Titã'
-    command: boss give boss {player} TITA 1 1
+    command: boss give boss {player} TITA {amount} 1
     amount: 1
     icon:
       texture: efec3e24551726cb3d64cbd1604a1a9f8a1e11693722a8aad5109a1fffa8d43c
@@ -156,7 +156,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 0.4
     display: '&4Boss Devorador'
-    command: boss give boss {player} DEVORADOR 1 1
+    command: boss give boss {player} DEVORADOR {amount} 1
     amount: 1
     icon:
       texture: ef93e9e1de7c1f721514968e4cd7c30082be02061a0e1ce91e67c3f0d70d5840
@@ -168,7 +168,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 0.05
     display: '&5Matadora Sombria'
-    command: boss give sword {player} sombria
+    command: boss give sword {player} sombria {amount}
     amount: 1
     icon:
       material: IRON_SWORD

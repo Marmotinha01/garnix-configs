@@ -149,7 +149,7 @@ rewards:
     type: COMMAND
     chance: 10.45
     display: '&eCombustível'
-    command: maquina givefuel {player} default {amount}
+    command: maquina givefuel {player} default {amount} 1
     amount: 500
     icon:
       material: COAL

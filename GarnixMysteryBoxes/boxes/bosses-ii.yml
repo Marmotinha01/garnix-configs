@@ -195,7 +195,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 6
     display: '&5Matadora Sombria'
-    command: boss give sword {player} sombria
+    command: boss give sword {player} sombria {amount}
     amount: 1
     icon:
       material: IRON_SWORD
@@ -209,7 +209,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 3
     display: '&bMatadora Ancestral'
-    command: boss give sword {player} ancestral
+    command: boss give sword {player} ancestral {amount}
     amount: 1
     icon:
       material: DIAMOND_SWORD
@@ -223,7 +223,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 1.5
     display: '&6Matadora Rúnica'
-    command: boss give sword {player} runica
+    command: boss give sword {player} runica {amount}
     amount: 1
     icon:
       material: DIAMOND_SWORD
@@ -237,7 +237,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 0.5
     display: '&3Matadora Abissal'
-    command: boss give sword {player} abissal
+    command: boss give sword {player} abissal {amount}
     amount: 1
     icon:
       material: DIAMOND_SWORD

@@ -83,7 +83,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 4
     display: '&5Livro de Ceifador 2'
-    command: lamina givebook {player} ceifador 2
+    command: lamina givebook {player} ceifador 2 {amount}
     amount: 1
     icon:
       material: ENCHANTED_BOOK
@@ -98,7 +98,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 2
     display: '&6Matadora Sombria'
-    command: boss give sword {player} sombria
+    command: boss give sword {player} sombria {amount}
     amount: 1
     icon:
       material: IRON_SWORD

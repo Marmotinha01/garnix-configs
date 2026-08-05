@@ -333,7 +333,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 9
     display: '&bForja de Skins'
-    command: pesca giveforge {player} 1
+    command: pesca giveforge {player} {amount}
     amount: 1
     icon:
       texture: c03563c9259bdc86b44d1a02fee3853dea696770a28c4724d13f713f6c5ec54f

@@ -83,7 +83,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 4
     display: '&cLivro de Massacre 3'
-    command: lamina givebook {player} massacre 3
+    command: lamina givebook {player} massacre 3 {amount}
     amount: 1
     icon:
       material: ENCHANTED_BOOK
@@ -98,7 +98,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 2
     display: '&6Matadora Ancestral'
-    command: boss give sword {player} ancestral
+    command: boss give sword {player} ancestral {amount}
     amount: 1
     icon:
       material: DIAMOND_SWORD

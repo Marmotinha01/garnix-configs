@@ -308,7 +308,7 @@ rewards:
     type: COMMAND
     chance: 6
     display: '&eCombustível'
-    command: maquina givefuel {player} default {amount}
+    command: maquina givefuel {player} default {amount} 1
     amount: 25
     icon:
       material: COAL
@@ -321,7 +321,7 @@ rewards:
     type: COMMAND
     chance: 3
     display: '&eCombustível'
-    command: maquina givefuel {player} default {amount}
+    command: maquina givefuel {player} default {amount} 1
     amount: 50
     icon:
       material: COAL
@@ -334,7 +334,7 @@ rewards:
     type: COMMAND
     chance: 1.5
     display: '&eCombustível'
-    command: maquina givefuel {player} default {amount}
+    command: maquina givefuel {player} default {amount} 1
     amount: 100
     icon:
       material: COAL

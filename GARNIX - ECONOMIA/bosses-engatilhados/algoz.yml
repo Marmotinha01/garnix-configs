@@ -83,7 +83,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 4
     display: '&cLivro de Massacre 2'
-    command: lamina givebook {player} massacre 2
+    command: lamina givebook {player} massacre 2 {amount}
     amount: 1
     icon:
       material: ENCHANTED_BOOK

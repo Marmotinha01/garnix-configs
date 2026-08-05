@@ -357,7 +357,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 8
     display: '&6Forja de Skins'
-    command: mina giveforge {player} 1
+    command: mina giveforge {player} {amount}
     amount: 1
     icon:
       texture: 818f83eb64f438e3f6ae3a5c2dea8ed10303bad85ac34a798659a275aa096506

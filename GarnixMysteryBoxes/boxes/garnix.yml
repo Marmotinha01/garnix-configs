@@ -127,7 +127,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 9
     display: '&a&lVaga de Visitante'
-    command: mina giveslot {player} 1
+    command: mina giveslot {player} {amount}
     amount: 1
     icon:
       texture: 4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb
@@ -159,7 +159,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 9
     display: '&a&lTorre de Cacto &8[15 Andares]'
-    command: cactustower give {player} 15 1
+    command: cactustower give {player} 15 {amount}
     amount: 1
     icon:
       material: CACTUS
@@ -216,7 +216,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 2.5
     display: '&a&lTorre de Cacto &8[30 Andares]'
-    command: cactustower give {player} 30 1
+    command: cactustower give {player} 30 {amount}
     amount: 1
     icon:
       material: CACTUS
@@ -364,7 +364,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 0.25
     display: '&b&lCombustível Infinito'
-    command: maquina giveinfinitefuel {player}
+    command: maquina giveinfinitefuel {player} {amount}
     amount: 1
     icon:
       material: COAL
@@ -379,7 +379,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 0.25
     display: '&4&lMatadora Hit-Kill'
-    command: boss give sword {player} hk
+    command: boss give sword {player} hk {amount}
     amount: 1
     icon:
       material: STICK

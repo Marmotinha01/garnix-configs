@@ -349,7 +349,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 9.5
     display: '&eForja de Skins'
-    command: fazenda giveforge {player} 1
+    command: fazenda giveforge {player} {amount}
     amount: 1
     icon:
       texture: 13cfc3cbc0cf6f81774fa37b1f6608417c36aa19e5a429c97698ff94dafb3a6

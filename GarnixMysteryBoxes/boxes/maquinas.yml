@@ -35,7 +35,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 20
     display: '&5Máquina de Sementes'
-    command: maquina give {player} sementes
+    command: maquina give {player} sementes {amount} 1
     amount: 1
     icon:
       texture: 66963f79e5f01536d04be18c99330cdacdee91b3232baebe58baca05f4640d1a
@@ -48,7 +48,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 20
     display: '&3Máquina de Corais'
-    command: maquina give {player} corais
+    command: maquina give {player} corais {amount} 1
     amount: 1
     icon:
       texture: e6799bfaa3a2c63ad85dd378e66d57d9a97a3f86d0d9f683c498632f4f5c
@@ -61,7 +61,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 20
     display: '&dMáquina de Gemas'
-    command: maquina give {player} gemas
+    command: maquina give {player} gemas {amount} 1
     amount: 1
     icon:
       texture: 19ecbdcb554123fa4d31876538bc7fb247494aea325bd26595694505aebd10ed
@@ -74,7 +74,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 15
     display: '&eMáquina de Dracmas'
-    command: maquina give {player} dracmas
+    command: maquina give {player} dracmas {amount} 1
     amount: 1
     icon:
       texture: c3d14561bbd063f70424a8afcc37bfe9c74562ea36f7bfa3f23206830c64faf1
@@ -87,7 +87,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 12
     display: '&8Máquina de Combustível'
-    command: maquina give {player} combustivel
+    command: maquina give {player} combustivel {amount} 1
     amount: 1
     icon:
       texture: 150c11b7c9b9070034f44721c6ea9d1b7775283014979f2d8126bb5a1765188e
@@ -100,7 +100,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 8
     display: '&6Máquina de Cash'
-    command: maquina give {player} cash
+    command: maquina give {player} cash {amount} 1
     amount: 1
     icon:
       texture: c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071
@@ -113,7 +113,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 2.5
     display: '&bMáquina de L. de Spawners'
-    command: maquina give {player} limite-spawners
+    command: maquina give {player} limite-spawners {amount} 1
     amount: 1
     icon:
       texture: a61b98d8934900a08ab7c0d60f3476c569bf7ff637196dce644e8cc4b7ba325a
@@ -126,7 +126,7 @@ rewards:
     type: COMMAND_ITEM
     chance: 2.5
     display: '&9Máquina de L. de Máquinas'
-    command: maquina give {player} limite-maquinas
+    command: maquina give {player} limite-maquinas {amount} 1
     amount: 1
     icon:
       texture: 93f9eeda3ba23fe1423c4036e7dd0a74461dff96badc5b2f2b9faa7cc16f382f
