@@ -37,7 +37,7 @@ chance final  = peso final ÷ novo total
 
 ### As duas escadas
 
-Moeda e limite não são mais prêmio único: são escadas com peso **60/30/10** (três degraus) ou **50/30/15/5** (quatro).
+Moeda e limite não são prêmio único: são escadas de três ou quatro degraus.
 
 | Crate | Coins | Secundária | Limites |
 |---|---|---|---|
@@ -46,6 +46,11 @@ Moeda e limite não são mais prêmio único: são escadas com peso **60/30/10**
 | RankUP | 1.000 / 2.000 / 4.000 | 500 / 1.000 / 2.000 dracmas | 5 / 15 / 30 / 50 |
 
 Entre os três limites o peso é **6:3:1** (armazém : máquinas : spawners), espelhando o cash shop: **800 / 1.500 / 4.000 cash**.
+
+Como os degraus se distribuem muda por crate:
+
+- **Profissão e RankUP** — todos os degraus da mesma escada vivem na mesma faixa, repartidos em 60/30/10 (três) ou 50/30/15/5 (quatro).
+- **VIP** — cada degrau sobe **uma faixa**: 500 no comum, 1.000 no comum plus, 2.000 no comum plus plus; limite 5 no comum, 15 no comum plus, 30 no comum plus plus, 50 no raro. É o que separa a crate paga das de profissão.
 
 ---
 
@@ -228,41 +233,45 @@ O teto do boost de robô aqui é **4,5** (total 150 × 3 ÷ 100), não 3,999999 
 
 ## 6. Crate VIP — `vip.yml`
 
-| Item | Faixa | Peso | Base | Raro | Épico | Lendário | Mítico | Quantia |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| Coins | comum | 24,8 | 18,6% | 18,11% | 16,79% | 15,31% | 13% | 500 |
-| Dracmas | comum | 22,8 | 17,1% | 16,65% | 15,44% | 14,07% | 11,95% | 300 |
-| Coins | comum | 12,3 | 9,23% | 8,98% | 8,33% | 7,59% | 6,45% | 1.000 |
-| Dracmas | comum | 11,4 | 8,55% | 8,33% | 7,72% | 7,04% | 5,98% | 600 |
-| Coins | comum | 3,9 | 2,93% | 2,85% | 3,96% | 4,81% | 6,13% | 2.000 |
-| Dracmas | comum | 3,8 | 2,85% | 2,78% | 3,86% | 4,69% | 5,98% | 1.200 |
-| Limite de Armazém | comum plus | 3,6 | 2,7% | 2,63% | 3,66% | 4,44% | 5,66% | 5 |
-| Combustível | comum plus | 3 | 2,25% | 2,19% | 3,05% | 3,7% | 4,72% | 500L |
-| Chave de Boss | mediana | 2,5 | 1,88% | 2,28% | 2,54% | 3,09% | 3,93% | 3 |
-| Limite de Armazém | comum plus | 2,16 | 1,62% | 1,97% | 2,19% | 2,67% | 3,4% | 15 |
-| Cacto | comum plus | 2 | 1,5% | 1,83% | 2,03% | 2,47% | 3,15% | 1 |
-| Limite de Máquinas | comum plus | 1,8 | 1,35% | 1,64% | 1,83% | 2,22% | 2,83% | 5 |
-| Limite de Armazém | comum plus | 1,08 | 0,81% | 0,986% | 1,1% | 1,33% | 1,7% | 30 |
-| Limite de Máquinas | comum plus | 1,08 | 0,81% | 0,986% | 1,1% | 1,33% | 1,7% | 15 |
-| Limite de Spawners | comum plus | 0,6 | 0,45% | 0,548% | 0,609% | 0,741% | 0,944% | 5 |
-| Chave de Boss | mediana plus | 0,6 | 0,45% | 0,548% | 0,609% | 0,741% | 0,944% | 5 |
-| Limite de Máquinas | comum plus | 0,54 | 0,405% | 0,493% | 0,548% | 0,667% | 0,849% | 30 |
-| Robô Comum | mediana plus | 0,5 | 0,375% | 0,456% | 0,508% | 0,617% | 0,786% | 1 |
-| Limite de Armazém | comum plus | 0,36 | 0,27% | 0,329% | 0,366% | 0,444% | 0,566% | 50 |
-| Limite de Spawners | comum plus | 0,36 | 0,27% | 0,329% | 0,366% | 0,444% | 0,566% | 15 |
-| Robô Raro | rara | 0,3 | 0,225% | 0,274% | 0,305% | 0,37% | 0,472% | 1 |
-| Limite de Máquinas | comum plus | 0,18 | 0,135% | 0,164% | 0,183% | 0,222% | 0,283% | 50 |
-| Limite de Spawners | comum plus | 0,18 | 0,135% | 0,164% | 0,183% | 0,222% | 0,283% | 30 |
-| Limite de Spawners | comum plus | 0,06 | 0,045% | 0,0548% | 0,0609% | 0,0741% | 0,0944% | 50 |
-| Caixa Skins [Tier I] | raríssima | 0,028 | 0,021% | 0,0256% | 0,0284% | 0,0346% | 0,044% | 1 |
-| Caixa Runas | raríssima | 0,022 | 0,0165% | 0,0201% | 0,0223% | 0,0272% | 0,0346% | 1 |
-| Caixa Recursos | raríssima | 0,017 | 0,0128% | 0,0155% | 0,0173% | 0,021% | 0,0267% | 1 |
-| Caixa Chaves | raríssima | 0,013 | 0,00975% | 0,0119% | 0,0132% | 0,016% | 0,0204% | 1 |
-| Caixa Skins [Tier II] | raríssima | 0,009 | 0,00675% | 0,00822% | 0,00914% | 0,0111% | 0,0142% | 1 |
-| Caixa Boosters | raríssima | 0,006 | 0,0045% | 0,00548% | 0,00609% | 0,00741% | 0,00944% | 1 |
-| Caixa Caixas | raríssima | 0,004 | 0,003% | 0,00365% | 0,00406% | 0,00494% | 0,00629% | 1 |
-| Cash | jackpot | 0,001 | 0,00075% | 0,00091% | 0,00102% | 0,00123% | 0,00157% | 250 |
-| **Azar** | — | 33,3333 | **25%** | 24,34% | 22,57% | 20,57% | **17,48%** | — |
+As escadas de moeda e de limite sobem **uma faixa por degrau** — é isso que separa esta crate das de profissão. Em 1.000 chaves:
+
+| Item | Faixa | Peso | Chance | Em 1.000 | Quantia |
+|---|---|---:|---:|---:|---:|
+| Coins | comum | 26 | 19,5% | 195 | 500 |
+| Dracmas | comum | 24 | 18% | 180 | 300 |
+| Limite de Armazém | comum | 6 | 4,5% | 45 | 5 |
+| Limite de Máquinas | comum | 3 | 2,25% | 22,5 | 5 |
+| Limite de Spawners | comum | 1 | 0,75% | 7,5 | 5 |
+| Caixa Chaves | comum | 1 | 0,75% | 7,5 | 1 |
+| Caixa Recursos | comum | 1 | 0,75% | 7,5 | 1 |
+| Coins | comum plus | 9 | 6,75% | 67,5 | 1.000 |
+| Dracmas | comum plus | 8 | 6% | 60 | 600 |
+| Combustível | comum plus | 3 | 2,25% | 22,5 | 500L |
+| Limite de Armazém | comum plus | 2,4 | 1,8% | 18 | 15 |
+| Chave de Boss | comum plus | 2 | 1,5% | 15 | 3 |
+| Limite de Máquinas | comum plus | 1,2 | 0,9% | 9 | 15 |
+| Chave de Boss | comum plus | 0,6 | 0,45% | 4,5 | 5 |
+| Limite de Spawners | comum plus | 0,4 | 0,3% | 3 | 15 |
+| Caixa Runas | comum plus | 0,4 | 0,3% | 3 | 1 |
+| Coins | comum plus plus | 3,3 | 2,48% | 24,8 | 2.000 |
+| Dracmas | comum plus plus | 2,7 | 2,03% | 20,3 | 1.200 |
+| Limite de Armazém | comum plus plus | 1,2 | 0,9% | 9 | 30 |
+| Limite de Máquinas | comum plus plus | 0,6 | 0,45% | 4,5 | 30 |
+| Limite de Spawners | comum plus plus | 0,2 | 0,15% | 1,5 | 30 |
+| Robô Comum | raro | 0,8 | 0,6% | 6 | 1 |
+| Limite de Armazém | raro | 0,6 | 0,45% | 4,5 | 50 |
+| Caixa Boosters | raro | 0,4 | 0,3% | 3 | 1 |
+| Limite de Máquinas | raro | 0,3 | 0,225% | 2,25 | 50 |
+| Caixa Skins [Tier I] | raro | 0,2 | 0,15% | 1,5 | 1 |
+| Limite de Spawners | raro | 0,1 | 0,075% | 0,75 | 50 |
+| Caixa Caixas | raro | 0,1 | 0,075% | 0,75 | 1 |
+| Robô Raro | raríssimo | 0,2 | 0,15% | 1,5 | 1 |
+| Cacto | raríssimo | 0,15 | 0,113% | 1,1 | 1 |
+| Caixa Skins [Tier II] | raríssimo | 0,1 | 0,075% | 0,75 | 1 |
+| Cash | jackpot | 0,05 | 0,0375% | 0,375 | 250 |
+| **Azar** | — | 33,3333 | **25%** | **250** | — |
+
+> **As caixas aqui não seguem o `weight` do menu `/caixas`**, por decisão do dono. Pela ordem oficial a Caixa Skins I (weight 40) seria a mais comum das sete e a Caixa Chaves (weight 80) viria só em 4º; aqui é o inverso. A VIP é crate paga e a chave é o que se quer entregar. Nas outras crates a ordem do menu continua valendo.
 
 ---
 

@@ -37,25 +37,28 @@ key-item:
 
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
-# FAIXAS desta crate:
-#   comum 79% · comum plus 17% · mediana 2,5% · mediana plus 1,1% ·
-#   rara 0,3% · raríssima 0,099% · jackpot 0,001%
+# FAIXAS desta crate (os numeros sao PESO):
+#   comum 62 · comum plus 27 · comum plus plus 8 · raro 2,5 ·
+#   rarissimo 0,45 · jackpot 0,05 · azar 33,3333
 #
-# ⚠️ As sete caixas da faixa RARÍSSIMA sao ordenadas pelo `weight` do menu
-# /caixas (GarnixMysteryBoxes/boxes/*.yml), que e a ordem de raridade oficial
-# do servidor — quanto MAIOR o weight, mais rara e menor a chance aqui:
-#   skins-i 40 (0,028) · runas 50 (0,022) · recursos 60 (0,017) ·
-#   chaves 80 (0,013) · skins-ii 120 (0,009) · boosters 140 (0,006) ·
-#   caixas 170 (0,004).
-# Antes a Caixa Boosters era a MAIS provavel das sete sendo a 2a mais rara.
+# ⚠️ AS CAIXAS AQUI NAO SEGUEM O `weight` DO MENU /caixas, e e decisao do dono.
+# Pela ordem oficial de raridade a Caixa Skins I (weight 40) seria a mais comum
+# das sete e a Caixa Chaves (weight 80) viria so em 4o. Nesta crate e o inverso:
+# Chaves e Recursos sao COMUM e Skins I e RARO. A VIP e crate paga, e a chave e
+# o que se quer entregar. Nas outras crates a ordem do menu continua valendo.
+#
+# ⚠️ As recompensas estao ORDENADAS POR FAIXA no arquivo, e cada separador traz
+# a soma da faixa. Se mover um bloco de lugar, mova para dentro da faixa certa —
+# senao o comentario passa a mentir sobre o que vem depois dele.
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
 # mesma tabela. Por isso o premio em coins e pequeno: no dia 1 e um empurrao
 # real, no dia 5 vira ruido. O valor da crate sao os ITENS.
 #
-# ⚠️ MOEDA E LIMITE SAO ESCADAS. O peso da FAMILIA nao mudou (coins 41,
-# dracmas 38, limites 12) — o que mudou e que ele agora esta repartido. Se mexer
-# num degrau, mexa nos outros: a soma da familia e o que mantem o arquivo em 100.
+# ⚠️ MOEDA E LIMITE SAO ESCADAS de 3 e 4 degraus, e os degraus agora vivem em
+# FAIXAS DIFERENTES: 500/300 no comum, 1.000/600 no comum plus, 2.000/1.200 no
+# comum plus plus; limite 5 no comum, 15 no comum plus, 30 no comum plus plus e
+# 50 no raro. Subir um degrau de faixa e o que separa esta crate das de profissao.
 #
 # ⚠️ A VIP fica UM DEGRAU ACIMA das crates de profissao (que pagam 250/500/1.000
 # de coins) e UM ABAIXO da RankUP (1.000/2.000/4.000). As tres escadas usam a
@@ -88,76 +91,111 @@ key-item:
 # totalChance. Somar 100 e so legibilidade (o azar entra por cima, ver no fim).
 rewards:
 
-  # -- COMUM ---------------------------------------------------------- 79%
+  # -- COMUM ------------------------------------------------- peso 62
   coins-500:
     type: CURRENCY
-    chance: 24.8
+    chance: 26
     currency-id: coins
     amount: '500'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-1000:
-    type: CURRENCY
-    chance: 12.3
-    currency-id: coins
-    amount: '1000'
-    icon:
-      lore:
-      - '&fValor: &2$&a{amount}'
-
-  coins-2000:
-    type: CURRENCY
-    chance: 3.9
-    currency-id: coins
-    amount: '2000'
-    icon:
-      lore:
-      - '&fValor: &2$&a{amount}'
-
   dracmas-300:
     type: CURRENCY
-    chance: 22.8
+    chance: 24
     currency-id: dracmas
     amount: '300'
     icon:
       lore:
       - '&fValor: &e✆{amount}'
 
+  lim-armazem-5:
+    type: COMMAND
+    chance: 6
+    display: '&2Limite de Armazém'
+    command: armazem givelimititem {player} {amount} 1
+    amount: 5
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&fValor: &2∞{amount}'
+
+  lim-maquina-5:
+    type: COMMAND
+    chance: 3
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 5
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞{amount}'
+
+  lim-spawner-5:
+    type: COMMAND
+    chance: 1
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 5
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  caixa-chaves:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&9Caixa Chaves'
+    command: caixas give chaves {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&9Caixa Chaves'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-recursos:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&2Caixa Recursos'
+    command: caixas give recursos {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&2Caixa Recursos'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  # -- COMUM PLUS -------------------------------------------- peso 27
+  coins-1000:
+    type: CURRENCY
+    chance: 9
+    currency-id: coins
+    amount: '1000'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
   dracmas-600:
     type: CURRENCY
-    chance: 11.4
+    chance: 8
     currency-id: dracmas
     amount: '600'
     icon:
       lore:
       - '&fValor: &e✆{amount}'
-
-  dracmas-1200:
-    type: CURRENCY
-    chance: 3.8
-    currency-id: dracmas
-    amount: '1200'
-    icon:
-      lore:
-      - '&fValor: &e✆{amount}'
-
-  # -- COMUM PLUS ----------------------------------------------------- 17%
-  #
-  # ⚠️ O cacto e `type: ITEM` e vai SEM display e SEM lore, igual ao produto da
-  # loja de coins (`GarnixServerShops/coins-shop/farm.yml`). Nome ou lore
-  # customizada muda o NBT e o item deixa de empilhar com o cacto que o jogador
-  # ja tem no armazem e no plot — 1 cacto que nao empilha nao serve para nada.
-  cacto:
-    type: ITEM
-    chance: 2
-    display: '&aCacto'
-    amount: 1
-    item:
-      material: CACTUS
-      data: 0
-      amount: 1
 
   combustivel:
     type: COMMAND
@@ -171,23 +209,9 @@ rewards:
       lore:
       - '&fLitros: &7{amount}L'
 
-  lim-armazem-5:
-    type: COMMAND
-    chance: 3.6
-    display: '&2Limite de Armazém'
-    command: armazem givelimititem {player} {amount} 1
-    amount: 5
-    icon:
-      material: INK_SACK
-      data: 2
-      glow: true
-      display: '&2Limite de Armazém'
-      lore:
-      - '&fValor: &2∞{amount}'
-
   lim-armazem-15:
     type: COMMAND
-    chance: 2.16
+    chance: 2.4
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 15
@@ -199,150 +223,9 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  lim-armazem-30:
-    type: COMMAND
-    chance: 1.08
-    display: '&2Limite de Armazém'
-    command: armazem givelimititem {player} {amount} 1
-    amount: 30
-    icon:
-      material: INK_SACK
-      data: 2
-      glow: true
-      display: '&2Limite de Armazém'
-      lore:
-      - '&fValor: &2∞{amount}'
-
-  lim-armazem-50:
-    type: COMMAND
-    chance: 0.36
-    display: '&2Limite de Armazém'
-    command: armazem givelimititem {player} {amount} 1
-    amount: 50
-    icon:
-      material: INK_SACK
-      data: 2
-      glow: true
-      display: '&2Limite de Armazém'
-      lore:
-      - '&fValor: &2∞{amount}'
-
-  lim-maquina-5:
-    type: COMMAND
-    chance: 1.8
-    display: '&9Limite de Máquinas'
-    command: maquina givelimite {player} {amount} 1
-    amount: 5
-    icon:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
-      lore:
-      - '&fValor: &9∞{amount}'
-
-  lim-maquina-15:
-    type: COMMAND
-    chance: 1.08
-    display: '&9Limite de Máquinas'
-    command: maquina givelimite {player} {amount} 1
-    amount: 15
-    icon:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
-      lore:
-      - '&fValor: &9∞{amount}'
-
-  lim-maquina-30:
-    type: COMMAND
-    chance: 0.54
-    display: '&9Limite de Máquinas'
-    command: maquina givelimite {player} {amount} 1
-    amount: 30
-    icon:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
-      lore:
-      - '&fValor: &9∞{amount}'
-
-  lim-maquina-50:
-    type: COMMAND
-    chance: 0.18
-    display: '&9Limite de Máquinas'
-    command: maquina givelimite {player} {amount} 1
-    amount: 50
-    icon:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
-      lore:
-      - '&fValor: &9∞{amount}'
-
-  lim-spawner-5:
-    type: COMMAND
-    chance: 0.6
-    display: '&bLimite de Spawners'
-    command: spawner givelimite {player} {amount} 1
-    amount: 5
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&fValor: &b∞{amount}'
-
-  lim-spawner-15:
-    type: COMMAND
-    chance: 0.36
-    display: '&bLimite de Spawners'
-    command: spawner givelimite {player} {amount} 1
-    amount: 15
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&fValor: &b∞{amount}'
-
-  lim-spawner-30:
-    type: COMMAND
-    chance: 0.18
-    display: '&bLimite de Spawners'
-    command: spawner givelimite {player} {amount} 1
-    amount: 30
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&fValor: &b∞{amount}'
-
-  lim-spawner-50:
-    type: COMMAND
-    chance: 0.06
-    display: '&bLimite de Spawners'
-    command: spawner givelimite {player} {amount} 1
-    amount: 50
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&fValor: &b∞{amount}'
-
-  # -- MEDIANA ------------------------------------------------------- 2,5%
   chaves-boss-3:
     type: COMMAND
-    chance: 2.5
+    chance: 2
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 3
@@ -356,7 +239,20 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # -- MEDIANA PLUS -------------------------------------------------- 1,1%
+  lim-maquina-15:
+    type: COMMAND
+    chance: 1.2
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 15
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞{amount}'
+
   chaves-boss-5:
     type: COMMAND
     chance: 0.6
@@ -373,9 +269,98 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
+  lim-spawner-15:
+    type: COMMAND
+    chance: 0.4
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 15
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  caixa-runas:
+    type: COMMAND_ITEM
+    chance: 0.4
+    display: '&5Caixa Runas'
+    command: caixas give runas {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&5Caixa Runas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  # -- COMUM PLUS PLUS ---------------------------------------- peso 8
+  coins-2000:
+    type: CURRENCY
+    chance: 3.3
+    currency-id: coins
+    amount: '2000'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  dracmas-1200:
+    type: CURRENCY
+    chance: 2.7
+    currency-id: dracmas
+    amount: '1200'
+    icon:
+      lore:
+      - '&fValor: &e✆{amount}'
+
+  lim-armazem-30:
+    type: COMMAND
+    chance: 1.2
+    display: '&2Limite de Armazém'
+    command: armazem givelimititem {player} {amount} 1
+    amount: 30
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&fValor: &2∞{amount}'
+
+  lim-maquina-30:
+    type: COMMAND
+    chance: 0.6
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 30
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞{amount}'
+
+  lim-spawner-30:
+    type: COMMAND
+    chance: 0.2
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 30
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  # -- RARO ------------------------------------------------- peso 2,5
   robo-comum:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 0.8
     display: '&aRobô Comum'
     command: crates giverobot comum {player} {amount}
     amount: 1
@@ -389,10 +374,91 @@ rewards:
       - ' &8Informações: '
       - ' &8▪ &fAbre chaves a cada &a&l20&as&f. '
 
-  # -- RARA ---------------------------------------------------------- 0,3%
+  lim-armazem-50:
+    type: COMMAND
+    chance: 0.6
+    display: '&2Limite de Armazém'
+    command: armazem givelimititem {player} {amount} 1
+    amount: 50
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&fValor: &2∞{amount}'
+
+  caixa-boosters:
+    type: COMMAND_ITEM
+    chance: 0.4
+    display: '&aCaixa Boosters'
+    command: caixas give boosters {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&aCaixa Boosters'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  lim-maquina-50:
+    type: COMMAND
+    chance: 0.3
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 50
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞{amount}'
+
+  caixa-skins-i:
+    type: COMMAND_ITEM
+    chance: 0.2
+    display: '&eCaixa Skins &e[Tier &lI&e]'
+    command: caixas give skins-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      display: '&eCaixa Skins &e[Tier &lI&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  lim-spawner-50:
+    type: COMMAND
+    chance: 0.1
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 50
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
+  caixa-caixas:
+    type: COMMAND_ITEM
+    chance: 0.1
+    display: '&dCaixa Caixas'
+    command: caixas give caixas {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      display: '&dCaixa Caixas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  # -- RARISSIMO ------------------------------------------- peso 0,45
   robo-raro:
     type: COMMAND_ITEM
-    chance: 0.3
+    chance: 0.2
     display: '&bRobô Raro'
     command: crates giverobot raro {player} {amount}
     amount: 1
@@ -409,93 +475,19 @@ rewards:
       - ' &fPrêmios abaixo de &c&l2&c% &fganham'
       - ' &a+&l15&a% &fsobre a chance deles.'
 
-  # -- RARÍSSIMA --------------------------------------------------- 0,099%
-  #
-  # ⚠️ A caixa chaves entrou nesta faixa sem aumenta-la: os 0,016 dela saíram de
-  # dentro dos 0,099 que ja existiam, cada uma das outras seis cedendo um pouco.
-  # A faixa continua 0,099% e o arquivo continua somando 100 — nao "arredonde"
-  # nenhum destes numeros de volta sem refazer a conta das sete.
-  caixa-boosters:
-    type: COMMAND_ITEM
-    chance: 0.006
-    display: '&aCaixa Boosters'
-    command: caixas give boosters {player} {amount}
+  cacto:
+    type: ITEM
+    chance: 0.15
+    display: '&aCacto'
     amount: 1
-    icon:
-      material: ENDER_CHEST
-      display: '&aCaixa Boosters'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  caixa-caixas:
-    type: COMMAND_ITEM
-    chance: 0.004
-    display: '&dCaixa Caixas'
-    command: caixas give caixas {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      display: '&dCaixa Caixas'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  caixa-chaves:
-    type: COMMAND_ITEM
-    chance: 0.013
-    display: '&9Caixa Chaves'
-    command: caixas give chaves {player} {amount}
-    amount: 1
-    icon:
-      material: CHEST
-      display: '&9Caixa Chaves'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  caixa-recursos:
-    type: COMMAND_ITEM
-    chance: 0.017
-    display: '&2Caixa Recursos'
-    command: caixas give recursos {player} {amount}
-    amount: 1
-    icon:
-      material: CHEST
-      display: '&2Caixa Recursos'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  caixa-runas:
-    type: COMMAND_ITEM
-    chance: 0.022
-    display: '&5Caixa Runas'
-    command: caixas give runas {player} {amount}
-    amount: 1
-    icon:
-      material: CHEST
-      display: '&5Caixa Runas'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  caixa-skins-i:
-    type: COMMAND_ITEM
-    chance: 0.028
-    display: '&eCaixa Skins &e[Tier &lI&e]'
-    command: caixas give skins-i {player} {amount}
-    amount: 1
-    icon:
-      material: CHEST
-      display: '&eCaixa Skins &e[Tier &lI&e]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
+    item:
+      material: CACTUS
+      data: 0
+      amount: 1
 
   caixa-skins-ii:
     type: COMMAND_ITEM
-    chance: 0.009
+    chance: 0.1
     display: '&eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 1
@@ -506,17 +498,17 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # -- JACKPOT ------------------------------------------------------- 0,001%
+  # -- JACKPOT --------------------------------------------- peso 0,05
   jackpot:
     type: CURRENCY
-    chance: 0.001
+    chance: 0.05
     currency-id: cash
     amount: '250'
     icon:
       lore:
       - '&fValor: &6❂{amount}'
 
-  # -- AZAR ---------------------------------------------------------- 25%
+  # -- AZAR ------------------------- peso 33,3333 = 25% real (250/1.000)
   # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
   # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
   # recebe absolutamente nada. Aparece no preview, some do /crates manage
