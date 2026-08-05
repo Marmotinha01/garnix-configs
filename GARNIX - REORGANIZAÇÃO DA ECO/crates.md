@@ -6,7 +6,9 @@
 
 - **Peso** é o valor literal do campo `chance:` no yml. Ele **não é porcentagem**: o `Crate.java` normaliza pelo total (`Crate.java:100-105`).
 - **Base** é o peso convertido em porcentagem real. É a chance na abertura manual **e** com o Robô Comum.
-- Os prêmios somam **100 de peso** nos seis arquivos e o `azar` entra com **33,3333** por fora → total **133,3333**, o que faz cada prêmio valer **0,75x** o peso e o azar valer exatamente **25%**.
+- Os prêmios somam **100 de peso** nos seis arquivos e o `azar` entra **por fora** desses 100, então `chance do azar = peso ÷ (100 + peso)`:
+  - **Cinco crates** usam azar 33,3333 → total 133,3333, cada prêmio vale **0,75x** o peso e o azar dá exatamente **25%**.
+  - **A crate Bosses** usa azar 50 → total 150, cada prêmio vale **0,6667x** o peso e o azar dá **33,3%**.
 - `azar` é `type: NONE`: o giro para nele e o jogador **não recebe nada** (`RewardDelivery.java:60`).
 - Toda crate é aberta **sem gate de tier** — o jogador do dia 1 e o do dia 30 abrem a mesma tabela.
 
@@ -31,7 +33,7 @@ chance final  = peso final ÷ novo total
 
 **O azar nunca é turbinado** (`type: NONE` é excluído), então robô melhor = menos azar. Nas crates de profissão ele cai de 25% para **17,5%–18,6%** no Mítico.
 
-> ⚠️ **O teto é 3,999999, não 4.** O total do arquivo é 133,3333 (e não 133,3333…), então `133,3333 × 3 ÷ 100 = 3,999999`. Um prêmio de peso **exatamente 4** ficaria de fora do boost por 0,000001. Por isso o degrau de topo de cada moeda foi fixado em 3,9 / 3,8 / 3,2 — **não arredonde para 4**.
+> ⚠️ **Nas cinco crates de total 133,3333 o teto é 3,999999, não 4.** O total é 133,3333 (e não 133,3333…), então `133,3333 × 3 ÷ 100 = 3,999999`. Um prêmio de peso **exatamente 4** ficaria de fora do boost por 0,000001. Por isso o degrau de topo de cada moeda foi fixado em 3,9 / 3,8 / 3,2 — **não arredonde para 4**. Na crate Bosses o teto é **4,5**, porque o total dela é 150.
 
 ### As duas escadas
 
@@ -170,22 +172,22 @@ Estrutura idêntica à Farm; só mudam a secundária, os boosters e as skins.
 
 ## 4. Crate Bosses — `bosses.yml`
 
-A escada acompanha a **vida** do boss.
+A escada acompanha a **vida** do boss. É a única crate com total **150** em vez de 133,3333: o azar dela pesa 50, não 33,3333, para render os 333 azares por 1.000 chaves.
 
-| Item | Faixa | Peso | Base | Raro | Épico | Lendário | Mítico | Quantia |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| Boss Colosso (25.000 HP) | comum | 60 | 45% | 44,67% | 44,33% | 43,69% | 42,45% | 1 stack |
-| Boss Inferno (50.000 HP) | comum plus | 30 | 22,5% | 22,33% | 22,17% | 21,84% | 21,23% | 1 stack |
-| Boss Arauto (75.000 HP) | mediana | 6 | 4,5% | 4,47% | 4,43% | 4,37% | 4,25% | 1 stack |
-| Caixa Bosses [Tier I] | mediana | 0,9 | 0,675% | 0,837% | 0,998% | 1,31% | 1,91% | 1 |
-| Matadora Bruta | mediana | 0,4 | 0,3% | 0,372% | 0,443% | 0,583% | 0,849% | 1 |
-| Boss Titã (150.000 HP) | rara | 2 | 1,5% | 1,86% | 2,22% | 2,91% | 4,25% | 1 stack |
-| Caixa Bosses [Tier II] | rara | 0,199 | 0,149% | 0,185% | 0,221% | 0,29% | 0,422% | 1 |
-| Boss Devorador (300.000 HP) | raro plus | 0,5 | 0,375% | 0,465% | 0,554% | 0,728% | 1,06% | 1 stack |
-| Matadora Sombria | jackpot | 0,001 | 0,00075% | 0,00093% | 0,00111% | 0,00146% | 0,00212% | 1 |
-| **Azar** | — | 33,3333 | **25%** | 24,81% | 24,63% | 24,27% | **23,58%** | — |
+| Item | Faixa | Peso | Chance | Em 1.000 | Quantia |
+|---|---|---:|---:|---:|---:|
+| Boss Colosso (25.000 HP) | comum | 56 | 37,33% | 373 | 1 stack |
+| Boss Inferno (50.000 HP) | comum | 28 | 18,67% | 187 | 1 stack |
+| Boss Arauto (75.000 HP) | mediano | 11 | 7,33% | 73 | 1 stack |
+| Caixa Bosses [Tier I] | mediano plus | 2 | 1,33% | 13,3 | 1 |
+| Boss Titã (150.000 HP) | mediano plus | 1,5 | 1% | 10 | 1 stack |
+| Matadora Bruta | mediano plus | 0,8 | 0,53% | 5,3 | 1 |
+| Boss Devorador (300.000 HP) | raro | 0,4 | 0,27% | 2,7 | 1 stack |
+| Caixa Bosses [Tier II] | raro | 0,25 | 0,17% | 1,7 | 1 |
+| Matadora Sombria | raro | 0,05 | 0,03% | 0,3 | 1 |
+| **Azar** | — | 50 | **33,33%** | **333** | — |
 
-**4,0 de peso** desta crate é elegível ao rate-up (Titã, Devorador, as duas caixas e as duas matadoras). O Titã sai de 1,5% na mão para 4,25% com Robô Mítico.
+O teto do boost de robô aqui é **4,5** (total 150 × 3 ÷ 100), não 3,999999 como nas crates de profissão — o total é outro. Cai dentro dele toda a cauda: as duas caixas, Titã, Devorador e as duas matadoras, somando 5,0 de peso.
 
 ---
 

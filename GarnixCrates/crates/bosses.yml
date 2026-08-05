@@ -37,35 +37,33 @@ key-item:
 
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
-# FAIXAS desta crate:
-#   comum 60% · comum plus 30% · mediana 6% · rara 2% ·
-#   raro plus 1,8% · jackpot 0,001%
+# FAIXAS desta crate (os numeros sao PESO):
+#   comum 84 · mediano 11 · mediano plus 4,3 · raro 0,7 · azar 50
 #
-# ⚠️ CURVA ACHATADA (ago/2026). Era 87,5% de Colosso e 12% de Inferno, com todo
-# o resto somando 0,5% — a crate inteira era "voce ganhou um Colosso". Agora a
-# escada acompanha a VIDA do boss: Colosso 25K (60) · Inferno 50K (30) ·
-# Arauto 75K (6) · Tita 150K (2) · Devorador 300K (0,5).
+# ⚠️ ESTA CRATE TEM O AZAR MAIS PESADO DA REDE, e e de proposito: peso 50 contra
+# os 33,3333 das outras. Como o azar entra POR FORA dos 100 dos premios, a conta
+# e `peso / (100 + peso)` — 50/150 = 33,3% das aberturas, ou 333 a cada 1.000.
+# Nas outras crates 33,3333/133,3333 da 25%. Mexer neste numero muda TODAS as
+# porcentagens da tabela, porque ele e o denominador de todo mundo.
 #
-# ⚠️ O achatamento tambem consertou o boost de robo. So peso ABAIXO de 3,999999
-# e elegivel ao rate-up, e antes so 0,769 de peso cabia ai — o robo praticamente
-# nao agia nesta crate. Agora sao 4,0 de peso elegivel (Tita, Devorador, as duas
-# caixas e as duas matadoras), 5,2x mais.
+# ⚠️ A escada acompanha a VIDA do boss — Colosso 25K, Inferno 50K, Arauto 75K,
+# Tita 150K, Devorador 300K — e o Colosso e o recheio: abrir uma chave que nao
+# deu azar quase sempre devolve um boss para matar.
 #
-# ⚠️ Os pesos agora somam 100 CRAVADOS. Antes somavam 100,27, entao a % que o
-# preview mostrava nao era a % real de nenhuma recompensa desta crate.
+# ⚠️ O teto do boost de robo aqui e 4,5 (total 150 x 3 / 100), nao 3,999999 como
+# nas crates de profissao, justamente porque o total e outro. Cai dentro dele
+# toda a cauda: as duas caixas, Tita, Devorador e as duas matadoras (5,0 de peso).
 #
-# ⚠️ A crate de boss NAO tem faixa mediana: ela so entrega bosses e matadoras,
-# sem moeda nem recheio. Os 2,5% da mediana foram para o Colosso, que e o
-# recheio desta tabela — abrir uma chave sempre devolve um boss para matar.
+# ⚠️ Os premios somam 100 CRAVADOS. E o que faz a % do preview ser verdade.
 #
 # ⚠️ `chance` e PESO, nao porcentagem — Crate.java:100-105 normaliza por
 # totalChance. Somar 100 e so legibilidade.
 rewards:
 
-  # -- COMUM ---------------------------------------------------------- 60%
+  # -- COMUM ------------------------------------------------- peso 84
   boss-colosso:
     type: COMMAND_ITEM
-    chance: 60
+    chance: 56
     display: '&cBoss Colosso'
     command: boss give boss {player} COLOSSO 1 1
     amount: 1
@@ -75,10 +73,9 @@ rewards:
       lore:
       - '&fVida: &4❤25.000'
 
-  # -- COMUM PLUS ----------------------------------------------------- 30%
   boss-inferno:
     type: COMMAND_ITEM
-    chance: 30
+    chance: 28
     display: '&6Boss Inferno'
     command: boss give boss {player} INFERNO 1 1
     amount: 1
@@ -88,10 +85,10 @@ rewards:
       lore:
       - '&fVida: &4❤50.000'
 
-  # -- MEDIANA ---------------------------------------------------------- 6%
+  # -- MEDIANO ----------------------------------------------- peso 11
   boss-arauto:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 11
     display: '&dBoss Arauto'
     command: boss give boss {player} ARAUTO 1 1
     amount: 1
@@ -101,9 +98,10 @@ rewards:
       lore:
       - '&fVida: &4❤75.000'
 
+  # -- MEDIANO PLUS ----------------------------------------- peso 4,3
   matadora-bruta:
     type: COMMAND_ITEM
-    chance: 0.4
+    chance: 0.8
     display: '&7Matadora Bruta'
     command: boss give sword {player} bruta
     amount: 1
@@ -117,7 +115,7 @@ rewards:
 
   caixa-bosses-i:
     type: COMMAND_ITEM
-    chance: 0.9
+    chance: 2
     display: '&4Caixa Bosses &4[Tier &lI&4]'
     command: caixas give bosses-i {player} {amount}
     amount: 1
@@ -128,10 +126,9 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # -- RARA ------------------------------------------------------------- 2%
   boss-tita:
     type: COMMAND_ITEM
-    chance: 2
+    chance: 1.5
     display: '&5Boss Titã'
     command: boss give boss {player} TITA 1 1
     amount: 1
@@ -141,9 +138,10 @@ rewards:
       lore:
       - '&fVida: &4❤150.000'
 
+  # -- RARO ------------------------------------------------- peso 0,7
   caixa-bosses-ii:
     type: COMMAND_ITEM
-    chance: 0.199
+    chance: 0.25
     display: '&4Caixa Bosses &4[Tier &lII&4]'
     command: caixas give bosses-ii {player} {amount}
     amount: 1
@@ -154,10 +152,9 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # -- RARO PLUS ------------------------------------------------------ 1,8%
   boss-devorador:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 0.4
     display: '&4Boss Devorador'
     command: boss give boss {player} DEVORADOR 1 1
     amount: 1
@@ -167,10 +164,9 @@ rewards:
       lore:
       - '&fVida: &4❤300.000'
 
-  # -- JACKPOT ------------------------------------------------------- 0,001%
   jackpot:
     type: COMMAND_ITEM
-    chance: 0.001
+    chance: 0.05
     display: '&5Matadora Sombria'
     command: boss give sword {player} sombria
     amount: 1
@@ -182,18 +178,18 @@ rewards:
       - '&fDano: &c750'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
-  # -- AZAR ---------------------------------------------------------- 25%
+  # -- AZAR ------------------------------- peso 50 = 33,3% real (333/1.000)
   # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
   # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
   # recebe absolutamente nada. Aparece no preview, some do /crates manage
   # (nao da para filtrar o azar) e NUNCA e turbinado por robo.
   #
-  # Peso 33,3333 sobre os 100 dos premios: 33,3333/133,3333 = 25% das
-  # aberturas, ou 250 a cada 1.000. Os pesos acima ficaram intactos — o
-  # que muda e que cada um agora vale 0,75x do que valia (47 = 35,25%).
+  # Peso 50 sobre os 100 dos premios: 50/150 = 33,3% das aberturas, ou 333
+  # a cada 1.000 — o alvo pedido de 300 a 400. E o azar mais pesado da rede;
+  # as outras crates usam 33,3333, que da 25%.
   azar:
     type: NONE
-    chance: 33.3333
+    chance: 50
     display: '&8Azar'
     icon:
       material: WEB
