@@ -57,7 +57,7 @@ rewards:
   mina-coins-2x-15m:
     type: COMMAND_ITEM
     chance: 4
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 2 15m {amount}
     amount: 1
     icon:
@@ -72,13 +72,14 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-coins-2x-30m:
     type: COMMAND_ITEM
     chance: 3
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 2 30m {amount}
     amount: 1
     icon:
@@ -93,13 +94,14 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-coins-2x-1h:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 2 1h {amount}
     amount: 1
     icon:
@@ -114,13 +116,14 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-coins-3x-5m:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 3 5m {amount}
     amount: 1
     icon:
@@ -135,13 +138,14 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-coins-3x-10m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} coins 3 10m {amount}
     amount: 1
     icon:
@@ -156,6 +160,7 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -164,7 +169,7 @@ rewards:
   mina-gemas-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 2 15m {amount}
     amount: 1
     icon:
@@ -179,13 +184,14 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-gemas-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 2 30m {amount}
     amount: 1
     icon:
@@ -200,13 +206,14 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-gemas-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 2 1h {amount}
     amount: 1
     icon:
@@ -221,13 +228,14 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-gemas-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 3 5m {amount}
     amount: 1
     icon:
@@ -242,13 +250,14 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-gemas-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} gemas 3 10m {amount}
     amount: 1
     icon:
@@ -263,6 +272,7 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -271,7 +281,7 @@ rewards:
   mina-xp-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
@@ -286,13 +296,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-xp-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
@@ -307,13 +318,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-xp-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
@@ -328,13 +340,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-xp-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
@@ -349,13 +362,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-xp-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
@@ -370,6 +384,7 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -378,7 +393,7 @@ rewards:
   mina-both-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
@@ -393,13 +408,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-both-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
@@ -414,13 +430,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-both-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
@@ -435,13 +452,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-both-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
@@ -456,13 +474,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   mina-both-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&6Booster de Mineração'
+    display: '&6&lx&6{amount} &6Booster de Mineração'
     command: mina givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
@@ -477,6 +496,7 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -485,7 +505,7 @@ rewards:
   fazenda-coins-2x-15m:
     type: COMMAND_ITEM
     chance: 4
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 15m {amount}
     amount: 1
     icon:
@@ -500,13 +520,14 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-coins-2x-30m:
     type: COMMAND_ITEM
     chance: 3
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 30m {amount}
     amount: 1
     icon:
@@ -521,13 +542,14 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-coins-2x-1h:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 2 1h {amount}
     amount: 1
     icon:
@@ -542,13 +564,14 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-coins-3x-5m:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 3 5m {amount}
     amount: 1
     icon:
@@ -563,13 +586,14 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-coins-3x-10m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} coins 3 10m {amount}
     amount: 1
     icon:
@@ -584,6 +608,7 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -592,7 +617,7 @@ rewards:
   fazenda-sementes-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 15m {amount}
     amount: 1
     icon:
@@ -607,13 +632,14 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-sementes-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 30m {amount}
     amount: 1
     icon:
@@ -628,13 +654,14 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-sementes-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 2 1h {amount}
     amount: 1
     icon:
@@ -649,13 +676,14 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-sementes-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 3 5m {amount}
     amount: 1
     icon:
@@ -670,13 +698,14 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-sementes-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} sementes 3 10m {amount}
     amount: 1
     icon:
@@ -691,6 +720,7 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -699,7 +729,7 @@ rewards:
   fazenda-xp-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
@@ -714,13 +744,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-xp-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
@@ -735,13 +766,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-xp-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
@@ -756,13 +788,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-xp-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
@@ -777,13 +810,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-xp-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
@@ -798,6 +832,7 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -806,7 +841,7 @@ rewards:
   fazenda-both-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
@@ -821,13 +856,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-both-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
@@ -842,13 +878,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-both-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
@@ -863,13 +900,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-both-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
@@ -884,13 +922,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   fazenda-both-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
@@ -905,6 +944,7 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -913,7 +953,7 @@ rewards:
   pesca-corais-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 2 15m {amount}
     amount: 1
     icon:
@@ -928,13 +968,14 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-corais-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 2 30m {amount}
     amount: 1
     icon:
@@ -949,13 +990,14 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-corais-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 2 1h {amount}
     amount: 1
     icon:
@@ -970,13 +1012,14 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-corais-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 3 5m {amount}
     amount: 1
     icon:
@@ -991,13 +1034,14 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-corais-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} corais 3 10m {amount}
     amount: 1
     icon:
@@ -1012,6 +1056,7 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1020,7 +1065,7 @@ rewards:
   pesca-xp-2x-15m:
     type: COMMAND_ITEM
     chance: 2.7
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 2 15m {amount}
     amount: 1
     icon:
@@ -1035,13 +1080,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-xp-2x-30m:
     type: COMMAND_ITEM
     chance: 2
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 2 30m {amount}
     amount: 1
     icon:
@@ -1056,13 +1102,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-xp-2x-1h:
     type: COMMAND_ITEM
     chance: 1
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 2 1h {amount}
     amount: 1
     icon:
@@ -1077,13 +1124,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-xp-3x-5m:
     type: COMMAND_ITEM
     chance: 1.65
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 3 5m {amount}
     amount: 1
     icon:
@@ -1098,13 +1146,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-xp-3x-10m:
     type: COMMAND_ITEM
     chance: 0.65
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} xp 3 10m {amount}
     amount: 1
     icon:
@@ -1119,6 +1168,7 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1127,7 +1177,7 @@ rewards:
   pesca-both-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
@@ -1142,13 +1192,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-both-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
@@ -1163,13 +1214,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-both-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 1h {amount}
     amount: 1
     icon:
@@ -1184,13 +1236,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-both-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 3 5m {amount}
     amount: 1
     icon:
@@ -1205,13 +1258,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   pesca-both-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&bBooster de Pesca'
+    display: '&b&lx&b{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 3 10m {amount}
     amount: 1
     icon:
@@ -1226,6 +1280,7 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1234,7 +1289,7 @@ rewards:
   maquina-drops-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&aBooster de Máquina'
+    display: '&a&lx&a{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 2 15m {amount}
     amount: 1
     icon:
@@ -1249,13 +1304,14 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   maquina-drops-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&aBooster de Máquina'
+    display: '&a&lx&a{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 2 30m {amount}
     amount: 1
     icon:
@@ -1270,13 +1326,14 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   maquina-drops-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&aBooster de Máquina'
+    display: '&a&lx&a{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 2 1h {amount}
     amount: 1
     icon:
@@ -1291,13 +1348,14 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   maquina-drops-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&aBooster de Máquina'
+    display: '&a&lx&a{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 3 5m {amount}
     amount: 1
     icon:
@@ -1312,13 +1370,14 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   maquina-drops-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&aBooster de Máquina'
+    display: '&a&lx&a{amount} &aBooster de Máquina'
     command: maquina givebooster {player} 3 10m {amount}
     amount: 1
     icon:
@@ -1333,6 +1392,7 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1341,7 +1401,7 @@ rewards:
   spawner-drops-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 2 15m {amount}
     amount: 1
     icon:
@@ -1356,13 +1416,14 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   spawner-drops-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 2 30m {amount}
     amount: 1
     icon:
@@ -1377,13 +1438,14 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   spawner-drops-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 2 1h {amount}
     amount: 1
     icon:
@@ -1398,13 +1460,14 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   spawner-drops-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 3 5m {amount}
     amount: 1
     icon:
@@ -1419,13 +1482,14 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   spawner-drops-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} drops 3 10m {amount}
     amount: 1
     icon:
@@ -1440,6 +1504,7 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1448,7 +1513,7 @@ rewards:
   spawner-heads-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 2 15m {amount}
     amount: 1
     icon:
@@ -1463,13 +1528,14 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   spawner-heads-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 2 30m {amount}
     amount: 1
     icon:
@@ -1484,13 +1550,14 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   spawner-heads-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 2 1h {amount}
     amount: 1
     icon:
@@ -1505,13 +1572,14 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   spawner-heads-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 3 5m {amount}
     amount: 1
     icon:
@@ -1526,13 +1594,14 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   spawner-heads-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&aBooster de Spawner'
+    display: '&a&lx&a{amount} &aBooster de Spawner'
     command: spawner givebooster {player} heads 3 10m {amount}
     amount: 1
     icon:
@@ -1547,6 +1616,7 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1555,7 +1625,7 @@ rewards:
   armazem-venda-2x-15m:
     type: COMMAND_ITEM
     chance: 1.35
-    display: '&aBooster de Armazém'
+    display: '&a&lx&a{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 2 15m {amount}
     amount: 1
     icon:
@@ -1570,13 +1640,14 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   armazem-venda-2x-30m:
     type: COMMAND_ITEM
     chance: 1
-    display: '&aBooster de Armazém'
+    display: '&a&lx&a{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 2 30m {amount}
     amount: 1
     icon:
@@ -1591,13 +1662,14 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   armazem-venda-2x-1h:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&aBooster de Armazém'
+    display: '&a&lx&a{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 2 1h {amount}
     amount: 1
     icon:
@@ -1612,13 +1684,14 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   armazem-venda-3x-5m:
     type: COMMAND_ITEM
     chance: 0.85
-    display: '&aBooster de Armazém'
+    display: '&a&lx&a{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 3 5m {amount}
     amount: 1
     icon:
@@ -1633,13 +1706,14 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   armazem-venda-3x-10m:
     type: COMMAND_ITEM
     chance: 0.3
-    display: '&aBooster de Armazém'
+    display: '&a&lx&a{amount} &aBooster de Armazém'
     command: armazem givebooster {player} 3 10m {amount}
     amount: 1
     icon:
@@ -1654,6 +1728,7 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 

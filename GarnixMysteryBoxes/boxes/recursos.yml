@@ -77,6 +77,7 @@ rewards:
   gemas-300:
     type: CURRENCY
     chance: 3.5
+    display: '&d۞{amount} gemas'
     currency-id: gemas
     amount: '300'
     icon:
@@ -86,6 +87,7 @@ rewards:
   gemas-600:
     type: CURRENCY
     chance: 2.5
+    display: '&d۞{amount} gemas'
     currency-id: gemas
     amount: '600'
     icon:
@@ -95,6 +97,7 @@ rewards:
   gemas-1200:
     type: CURRENCY
     chance: 1.5
+    display: '&d۞{amount} gemas'
     currency-id: gemas
     amount: '1200'
     icon:
@@ -105,6 +108,7 @@ rewards:
   sementes-300:
     type: CURRENCY
     chance: 3.5
+    display: '&5❋{amount} sementes'
     currency-id: sementes
     amount: '300'
     icon:
@@ -114,6 +118,7 @@ rewards:
   sementes-600:
     type: CURRENCY
     chance: 2.5
+    display: '&5❋{amount} sementes'
     currency-id: sementes
     amount: '600'
     icon:
@@ -123,6 +128,7 @@ rewards:
   sementes-1200:
     type: CURRENCY
     chance: 1.5
+    display: '&5❋{amount} sementes'
     currency-id: sementes
     amount: '1200'
     icon:
@@ -133,6 +139,7 @@ rewards:
   corais-300:
     type: CURRENCY
     chance: 3.5
+    display: '&3✶{amount} corais'
     currency-id: corais
     amount: '300'
     icon:
@@ -142,6 +149,7 @@ rewards:
   corais-600:
     type: CURRENCY
     chance: 2.5
+    display: '&3✶{amount} corais'
     currency-id: corais
     amount: '600'
     icon:
@@ -151,6 +159,7 @@ rewards:
   corais-1200:
     type: CURRENCY
     chance: 1.5
+    display: '&3✶{amount} corais'
     currency-id: corais
     amount: '1200'
     icon:
@@ -161,6 +170,7 @@ rewards:
   dracmas-1000:
     type: CURRENCY
     chance: 3.5
+    display: '&e✆{amount} dracmas'
     currency-id: dracmas
     amount: '1000'
     icon:
@@ -170,6 +180,7 @@ rewards:
   dracmas-2000:
     type: CURRENCY
     chance: 2.5
+    display: '&e✆{amount} dracmas'
     currency-id: dracmas
     amount: '2000'
     icon:
@@ -179,6 +190,7 @@ rewards:
   dracmas-4000:
     type: CURRENCY
     chance: 1.5
+    display: '&e✆{amount} dracmas'
     currency-id: dracmas
     amount: '4000'
     icon:
@@ -189,7 +201,7 @@ rewards:
   sagrada-25:
     type: COMMAND
     chance: 3
-    display: '&4Runa Sagrada'
+    display: '&4&lx&4{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 25
     icon:
@@ -201,7 +213,7 @@ rewards:
   sagrada-50:
     type: COMMAND
     chance: 1.5
-    display: '&4Runa Sagrada'
+    display: '&4&lx&4{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 50
     icon:
@@ -214,7 +226,7 @@ rewards:
   eterna-25:
     type: COMMAND
     chance: 3
-    display: '&2Runa Eterna'
+    display: '&2&lx&2{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 25
     icon:
@@ -229,7 +241,7 @@ rewards:
   eterna-50:
     type: COMMAND
     chance: 1.5
-    display: '&2Runa Eterna'
+    display: '&2&lx&2{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 50
     icon:
@@ -245,7 +257,7 @@ rewards:
   divina-25:
     type: COMMAND
     chance: 3
-    display: '&fRuna Divina'
+    display: '&f&lx&f{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 25
     icon:
@@ -257,7 +269,7 @@ rewards:
   divina-50:
     type: COMMAND
     chance: 1.5
-    display: '&fRuna Divina'
+    display: '&f&lx&f{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 50
     icon:
@@ -270,7 +282,7 @@ rewards:
   primal-25:
     type: COMMAND
     chance: 3
-    display: '&3Runa Primal'
+    display: '&3&lx&3{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 25
     icon:
@@ -282,7 +294,7 @@ rewards:
   primal-50:
     type: COMMAND
     chance: 1.5
-    display: '&3Runa Primal'
+    display: '&3&lx&3{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 50
     icon:
@@ -295,6 +307,7 @@ rewards:
   coins-2000:
     type: CURRENCY
     chance: 5.5
+    display: '&2$&a{amount} coins'
     currency-id: coins
     amount: '2000'
     icon:
@@ -304,6 +317,7 @@ rewards:
   coins-4000:
     type: CURRENCY
     chance: 3
+    display: '&2$&a{amount} coins'
     currency-id: coins
     amount: '4000'
     icon:
@@ -313,6 +327,7 @@ rewards:
   coins-8000:
     type: CURRENCY
     chance: 1.5
+    display: '&2$&a{amount} coins'
     currency-id: coins
     amount: '8000'
     icon:
@@ -323,7 +338,7 @@ rewards:
   combustivel-2000:
     type: COMMAND
     chance: 6
-    display: '&eCombustível'
+    display: '&e{amount}L de Combustível'
     command: maquina givefuel {player} default {amount} 1
     amount: 2000
     icon:
@@ -336,7 +351,7 @@ rewards:
   combustivel-4000:
     type: COMMAND
     chance: 3
-    display: '&eCombustível'
+    display: '&e{amount}L de Combustível'
     command: maquina givefuel {player} default {amount} 1
     amount: 4000
     icon:
@@ -349,7 +364,7 @@ rewards:
   combustivel-8000:
     type: COMMAND
     chance: 1.5
-    display: '&eCombustível'
+    display: '&e{amount}L de Combustível'
     command: maquina givefuel {player} default {amount} 1
     amount: 8000
     icon:
@@ -363,7 +378,7 @@ rewards:
   lim-armazem-30:
     type: COMMAND
     chance: 4.8
-    display: '&2Limite de Armazém'
+    display: '&2∞{amount} de Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 30
     icon:
@@ -377,7 +392,7 @@ rewards:
   lim-armazem-50:
     type: COMMAND
     chance: 2.4
-    display: '&2Limite de Armazém'
+    display: '&2∞{amount} de Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 50
     icon:
@@ -391,7 +406,7 @@ rewards:
   lim-armazem-100:
     type: COMMAND
     chance: 1.2
-    display: '&2Limite de Armazém'
+    display: '&2∞{amount} de Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 100
     icon:
@@ -405,7 +420,7 @@ rewards:
   lim-armazem-150:
     type: COMMAND
     chance: 0.6
-    display: '&2Limite de Armazém'
+    display: '&2∞{amount} de Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 150
     icon:
@@ -420,7 +435,7 @@ rewards:
   ativador-bau:
     type: COMMAND_ITEM
     chance: 5.5
-    display: '&6Ativador de Baú'
+    display: '&6&lx&6{amount} &6Ativador de Baú'
     command: bau giveitem {player} {amount}
     amount: 1
     icon:
@@ -434,7 +449,7 @@ rewards:
   limpador-terreno:
     type: COMMAND_ITEM
     chance: 5.5
-    display: '&eLimpador de Terreno'
+    display: '&e&lx&e{amount} &eLimpador de Terreno'
     command: clearplot give {player} {amount}
     amount: 1
     icon:
@@ -452,7 +467,7 @@ rewards:
   lim-maquina-30:
     type: COMMAND
     chance: 2.4
-    display: '&9Limite de Máquinas'
+    display: '&9∞{amount} de Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 30
     icon:
@@ -466,7 +481,7 @@ rewards:
   lim-maquina-50:
     type: COMMAND
     chance: 1.2
-    display: '&9Limite de Máquinas'
+    display: '&9∞{amount} de Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 50
     icon:
@@ -480,7 +495,7 @@ rewards:
   lim-maquina-100:
     type: COMMAND
     chance: 0.6
-    display: '&9Limite de Máquinas'
+    display: '&9∞{amount} de Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 100
     icon:
@@ -494,7 +509,7 @@ rewards:
   lim-maquina-150:
     type: COMMAND
     chance: 0.3
-    display: '&9Limite de Máquinas'
+    display: '&9∞{amount} de Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 150
     icon:
@@ -509,7 +524,7 @@ rewards:
   lim-spawner-30:
     type: COMMAND
     chance: 0.8
-    display: '&bLimite de Spawners'
+    display: '&b∞{amount} de Limite de Spawners'
     command: spawner givelimite {player} {amount} 1
     amount: 30
     icon:
@@ -523,7 +538,7 @@ rewards:
   lim-spawner-50:
     type: COMMAND
     chance: 0.4
-    display: '&bLimite de Spawners'
+    display: '&b∞{amount} de Limite de Spawners'
     command: spawner givelimite {player} {amount} 1
     amount: 50
     icon:
@@ -537,7 +552,7 @@ rewards:
   lim-spawner-100:
     type: COMMAND
     chance: 0.2
-    display: '&bLimite de Spawners'
+    display: '&b∞{amount} de Limite de Spawners'
     command: spawner givelimite {player} {amount} 1
     amount: 100
     icon:
@@ -551,7 +566,7 @@ rewards:
   lim-spawner-150:
     type: COMMAND
     chance: 0.1
-    display: '&bLimite de Spawners'
+    display: '&b∞{amount} de Limite de Spawners'
     command: spawner givelimite {player} {amount} 1
     amount: 150
     icon:
@@ -566,7 +581,7 @@ rewards:
   caixa-runas:
     type: COMMAND_ITEM
     chance: 3
-    display: '&5Caixa Runas'
+    display: '&5&lx&5{amount} &5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 1
     icon:
@@ -581,7 +596,7 @@ rewards:
   reset-kdr:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&bReset de KDR'
+    display: '&b&lx&b{amount} &bReset de KDR'
     command: clan giveresetkdr {player} {amount}
     amount: 1
     icon:

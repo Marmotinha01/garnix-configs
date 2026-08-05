@@ -27,8 +27,8 @@ box-item:
 # ⚠️ GRADE DAS TRES CAIXAS TIER II — mineracao, pesca e farm usam a MESMA
 # grade, familia por familia:
 #
-#   skins 22,5 · moeda 20 · armadura T-III 18 · armadura T-IV 13 ·
-#   livros 10,5 · armadura T-V 7 · boosters 7 · a propria caixa x2 2
+#   armadura T-III 24 · skins 22,5 · moeda 20 · livros 10,5 ·
+#   armadura T-IV 10 · boosters 7 · armadura T-V 4 · a propria caixa x2 2
 #
 # A mineracao e a unica que difere, e so porque tem dois blocos a mais (6x6,
 # 8x8 e britadeira, mais a vaga de visitante): la a grade acima vale
@@ -62,8 +62,19 @@ box-item:
 # 50/30/20, NAO o 60/30/10 da crate — moeda nunca pode ser mais rara que
 # item, e com 60/30/10 o degrau de cima ficaria abaixo da skin de topo.
 #
-# ⚠️ O TOPO SAO A SKIN DE TOPO (1,5) E A PECA T-V (1,75), nesta ordem. Nao
+# ⚠️ O TOPO E A SKIN DE TOPO (0,25), com a peca T-V (1) logo atras. Nao
 # existe degrau para cima aqui: a Tier II e o fim da escada de caixa.
+#
+# ⚠️ APERTADO EM 05/08/2026 a pedido do dono, que achou facil demais tirar as
+# duas ultimas skins e as armaduras T-IV e T-V. O degrau 9 caiu 3x (3 → 1) e
+# o degrau 10 caiu 6x (1,5 → 0,25); a peca T-V caiu de 1,75 para 1 e a T-IV
+# de 3,25 para 2,5. O peso saiu de dentro da propria familia — os degraus
+# 6-8 da skin e o T-III da armadura absorveram tudo, entao o equilibrio
+# entre familias nao mudou.
+#
+# ⚠️ Com o degrau 10 em 0,25 a Caixa Garnix (0,5) volta a ser a fonte mais
+# provavel dele, que e como deve ser. A Caixa Skins II foi apertada junto,
+# senao ela virava a rota facil.
 #
 # ⚠️ A PROPRIA CAIXA X2 (2%) e a unica recompensa que se auto-sorteia. Ela
 # devolve DUAS caixas por uma consumida, entao o saldo e +1: e bonus, nao
@@ -72,11 +83,11 @@ box-item:
 # sozinha se esse peso subisse acima de 50.
 rewards:
 
-  # -- ARMADURA TIER III ------------------------------------------- 18%
+  # -- ARMADURA TIER III ------------------------------------------- 24%
   armadura-iii-capacete:
     type: COMMAND_ITEM
-    chance: 4.5
-    display: '&bCapacete Farm &b[Tier &lIII&b]'
+    chance: 6
+    display: '&b&lx&b{amount} &bCapacete Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_helmet {amount}
     amount: 1
     icon:
@@ -89,13 +100,14 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &5Sementes '
       - '&8 ▪ &a+&l3.5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-iii-peitoral:
     type: COMMAND_ITEM
-    chance: 4.5
-    display: '&bPeitoral Farm &b[Tier &lIII&b]'
+    chance: 6
+    display: '&b&lx&b{amount} &bPeitoral Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_chestplate {amount}
     amount: 1
     icon:
@@ -108,13 +120,14 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &5Sementes '
       - '&8 ▪ &a+&l3.5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-iii-calca:
     type: COMMAND_ITEM
-    chance: 4.5
-    display: '&bCalça Farm &b[Tier &lIII&b]'
+    chance: 6
+    display: '&b&lx&b{amount} &bCalça Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_leggings {amount}
     amount: 1
     icon:
@@ -127,13 +140,14 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &5Sementes '
       - '&8 ▪ &a+&l3.5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-iii-bota:
     type: COMMAND_ITEM
-    chance: 4.5
-    display: '&bBota Farm &b[Tier &lIII&b]'
+    chance: 6
+    display: '&b&lx&b{amount} &bBota Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_boots {amount}
     amount: 1
     icon:
@@ -146,14 +160,15 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &5Sementes '
       - '&8 ▪ &a+&l3.5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- ARMADURA TIER IV -------------------------------------------- 13%
+  # -- ARMADURA TIER IV -------------------------------------------- 10%
   armadura-iv-capacete:
     type: COMMAND_ITEM
-    chance: 3.25
-    display: '&dCapacete Farm &d[Tier &lIV&d]'
+    chance: 2.5
+    display: '&d&lx&d{amount} &dCapacete Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_helmet {amount}
     amount: 1
     icon:
@@ -166,13 +181,14 @@ rewards:
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &5Sementes '
       - '&8 ▪ &a+&l5.5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-iv-peitoral:
     type: COMMAND_ITEM
-    chance: 3.25
-    display: '&dPeitoral Farm &d[Tier &lIV&d]'
+    chance: 2.5
+    display: '&d&lx&d{amount} &dPeitoral Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_chestplate {amount}
     amount: 1
     icon:
@@ -185,13 +201,14 @@ rewards:
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &5Sementes '
       - '&8 ▪ &a+&l5.5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-iv-calca:
     type: COMMAND_ITEM
-    chance: 3.25
-    display: '&dCalça Farm &d[Tier &lIV&d]'
+    chance: 2.5
+    display: '&d&lx&d{amount} &dCalça Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_leggings {amount}
     amount: 1
     icon:
@@ -204,13 +221,14 @@ rewards:
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &5Sementes '
       - '&8 ▪ &a+&l5.5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-iv-bota:
     type: COMMAND_ITEM
-    chance: 3.25
-    display: '&dBota Farm &d[Tier &lIV&d]'
+    chance: 2.5
+    display: '&d&lx&d{amount} &dBota Farm &d[Tier &lIV&d]'
     command: fazenda givearmor {player} tier-iv_boots {amount}
     amount: 1
     icon:
@@ -223,14 +241,15 @@ rewards:
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &5Sementes '
       - '&8 ▪ &a+&l5.5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- ARMADURA TIER V ---------------------------------------------- 7%
+  # -- ARMADURA TIER V ---------------------------------------------- 4%
   armadura-v-capacete:
     type: COMMAND_ITEM
-    chance: 1.75
-    display: '&6Capacete Farm &6[Tier &lV&6]'
+    chance: 1
+    display: '&6&lx&6{amount} &6Capacete Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_helmet {amount}
     amount: 1
     icon:
@@ -243,13 +262,14 @@ rewards:
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &5Sementes '
       - '&8 ▪ &a+&l8&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-v-peitoral:
     type: COMMAND_ITEM
-    chance: 1.75
-    display: '&6Peitoral Farm &6[Tier &lV&6]'
+    chance: 1
+    display: '&6&lx&6{amount} &6Peitoral Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_chestplate {amount}
     amount: 1
     icon:
@@ -262,13 +282,14 @@ rewards:
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &5Sementes '
       - '&8 ▪ &a+&l8&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-v-calca:
     type: COMMAND_ITEM
-    chance: 1.75
-    display: '&6Calça Farm &6[Tier &lV&6]'
+    chance: 1
+    display: '&6&lx&6{amount} &6Calça Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_leggings {amount}
     amount: 1
     icon:
@@ -281,13 +302,14 @@ rewards:
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &5Sementes '
       - '&8 ▪ &a+&l8&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-v-bota:
     type: COMMAND_ITEM
-    chance: 1.75
-    display: '&6Bota Farm &6[Tier &lV&6]'
+    chance: 1
+    display: '&6&lx&6{amount} &6Bota Farm &6[Tier &lV&6]'
     command: fazenda givearmor {player} tier-v_boots {amount}
     amount: 1
     icon:
@@ -300,14 +322,15 @@ rewards:
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &5Sementes '
       - '&8 ▪ &a+&l8&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   # -- SKINS ----------------------------------------------------- 22,5%
   skin-ambar:
     type: COMMAND_ITEM
-    chance: 7.5
-    display: '&5Skin de Âmbar'
+    chance: 10
+    display: '&5&lx&5{amount} &5Skin de Âmbar'
     command: fazenda giveskin {player} ambar {amount}
     amount: 1
     icon:
@@ -319,13 +342,14 @@ rewards:
       - '&8 ▪ &a+&l20&a% &aCoins '
       - '&8 ▪ &a+&l20&a% &5Sementes '
       - '&8 ▪ &a+&l20&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   skin-esmeralda:
     type: COMMAND_ITEM
-    chance: 6
-    display: '&aSkin de Esmeralda'
+    chance: 7.5
+    display: '&a&lx&a{amount} &aSkin de Esmeralda'
     command: fazenda giveskin {player} esmeralda {amount}
     amount: 1
     icon:
@@ -337,13 +361,14 @@ rewards:
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l28&a% &5Sementes '
       - '&8 ▪ &a+&l28&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   skin-ametista:
     type: COMMAND_ITEM
-    chance: 4.5
-    display: '&bSkin de Ametista'
+    chance: 3.75
+    display: '&b&lx&b{amount} &bSkin de Ametista'
     command: fazenda giveskin {player} ametista {amount}
     amount: 1
     icon:
@@ -356,13 +381,14 @@ rewards:
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l38&a% &5Sementes '
       - '&8 ▪ &a+&l38&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   skin-cristal:
     type: COMMAND_ITEM
-    chance: 3
-    display: '&9Skin de Cristal'
+    chance: 1
+    display: '&9&lx&9{amount} &9Skin de Cristal'
     command: fazenda giveskin {player} cristal {amount}
     amount: 1
     icon:
@@ -375,13 +401,14 @@ rewards:
       - '&8 ▪ &a+&l50&a% &aCoins '
       - '&8 ▪ &a+&l50&a% &5Sementes '
       - '&8 ▪ &a+&l50&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   skin-marfim:
     type: COMMAND_ITEM
-    chance: 1.5
-    display: '&fSkin de Marfim'
+    chance: 0.25
+    display: '&f&lx&f{amount} &fSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
     amount: 1
     icon:
@@ -394,6 +421,7 @@ rewards:
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l65&a% &5Sementes '
       - '&8 ▪ &a+&l65&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -401,6 +429,7 @@ rewards:
   coins-1250:
     type: CURRENCY
     chance: 5
+    display: '&2$&a{amount} coins'
     currency-id: coins
     amount: '1250'
     icon:
@@ -410,6 +439,7 @@ rewards:
   coins-2500:
     type: CURRENCY
     chance: 3
+    display: '&2$&a{amount} coins'
     currency-id: coins
     amount: '2500'
     icon:
@@ -419,6 +449,7 @@ rewards:
   coins-5000:
     type: CURRENCY
     chance: 2
+    display: '&2$&a{amount} coins'
     currency-id: coins
     amount: '5000'
     icon:
@@ -428,6 +459,7 @@ rewards:
   sementes-750:
     type: CURRENCY
     chance: 5
+    display: '&5❋{amount} sementes'
     currency-id: sementes
     amount: '750'
     icon:
@@ -437,6 +469,7 @@ rewards:
   sementes-1500:
     type: CURRENCY
     chance: 3
+    display: '&5❋{amount} sementes'
     currency-id: sementes
     amount: '1500'
     icon:
@@ -446,6 +479,7 @@ rewards:
   sementes-3000:
     type: CURRENCY
     chance: 2
+    display: '&5❋{amount} sementes'
     currency-id: sementes
     amount: '3000'
     icon:
@@ -456,7 +490,7 @@ rewards:
   booster-2x-15m:
     type: COMMAND_ITEM
     chance: 4.25
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 15m {amount}
     amount: 1
     icon:
@@ -471,13 +505,14 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
   booster-2x-30m:
     type: COMMAND_ITEM
     chance: 2.75
-    display: '&eBooster de Fazenda'
+    display: '&e&lx&e{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 30m {amount}
     amount: 1
     icon:
@@ -492,6 +527,7 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
+      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -499,7 +535,7 @@ rewards:
   livro-ceifador:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&dLivro de Ceifador'
+    display: '&d&lx&d{amount} &dLivro de Ceifador'
     command: lamina givebook {player} ceifador 1 {amount}
     amount: 1
     icon:
@@ -512,11 +548,12 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
+      - ''
 
   livro-massacre:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&4Livro de Massacre'
+    display: '&4&lx&4{amount} &4Livro de Massacre'
     command: lamina givebook {player} massacre 1 {amount}
     amount: 1
     icon:
@@ -529,11 +566,12 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
+      - ''
 
   livro-pilhagem:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&aLivro de Pilhagem'
+    display: '&a&lx&a{amount} &aLivro de Pilhagem'
     command: lamina givebook {player} pilhagem 1 {amount}
     amount: 1
     icon:
@@ -546,12 +584,13 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
+      - ''
 
   # -- A PROPRIA CAIXA, X2 ------------------------------------------ 2%
   caixa-farm-ii-x2:
     type: COMMAND_ITEM
     chance: 2
-    display: '&aCaixa Farm &a[Tier &lII&a]'
+    display: '&a&lx&a{amount} &aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
     amount: 2
     icon:

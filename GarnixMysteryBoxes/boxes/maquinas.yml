@@ -59,7 +59,7 @@ rewards:
   sementes:
     type: COMMAND_ITEM
     chance: 22
-    display: '&5Máquina de Sementes'
+    display: '&5&lx&5{amount} &5Máquina de Sementes'
     command: maquina give {player} sementes {amount} 1
     amount: 1
     icon:
@@ -72,7 +72,7 @@ rewards:
   corais:
     type: COMMAND_ITEM
     chance: 22
-    display: '&3Máquina de Corais'
+    display: '&3&lx&3{amount} &3Máquina de Corais'
     command: maquina give {player} corais {amount} 1
     amount: 1
     icon:
@@ -85,7 +85,7 @@ rewards:
   gemas:
     type: COMMAND_ITEM
     chance: 22
-    display: '&dMáquina de Gemas'
+    display: '&d&lx&d{amount} &dMáquina de Gemas'
     command: maquina give {player} gemas {amount} 1
     amount: 1
     icon:
@@ -98,7 +98,7 @@ rewards:
   dracmas:
     type: COMMAND_ITEM
     chance: 15
-    display: '&eMáquina de Dracmas'
+    display: '&e&lx&e{amount} &eMáquina de Dracmas'
     command: maquina give {player} dracmas {amount} 1
     amount: 1
     icon:
@@ -111,7 +111,7 @@ rewards:
   combustivel:
     type: COMMAND_ITEM
     chance: 12
-    display: '&8Máquina de Combustível'
+    display: '&8&lx&8{amount} &8Máquina de Combustível'
     command: maquina give {player} combustivel {amount} 1
     amount: 1
     icon:
@@ -124,7 +124,7 @@ rewards:
   cash:
     type: COMMAND_ITEM
     chance: 2
-    display: '&6Máquina de Cash'
+    display: '&6&lx&6{amount} &6Máquina de Cash'
     command: maquina give {player} cash {amount} 1
     amount: 1
     icon:
@@ -137,7 +137,7 @@ rewards:
   limite-spawners:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&bMáquina de L. de Spawners'
+    display: '&b&lx&b{amount} &bMáquina de L. de Spawners'
     command: maquina give {player} limite-spawners {amount} 1
     amount: 1
     icon:
@@ -150,7 +150,7 @@ rewards:
   limite-maquinas:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&9Máquina de L. de Máquinas'
+    display: '&9&lx&9{amount} &9Máquina de L. de Máquinas'
     command: maquina give {player} limite-maquinas {amount} 1
     amount: 1
     icon:

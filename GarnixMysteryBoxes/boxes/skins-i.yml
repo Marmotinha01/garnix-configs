@@ -54,7 +54,7 @@ rewards:
   mineracao-pedra:
     type: COMMAND_ITEM
     chance: 11.4
-    display: '&7Skin de Pedra'
+    display: '&7&lx&7{amount} &7Skin de Pedra'
     command: mina giveskin {player} pedra {amount}
     amount: 1
     icon:
@@ -66,13 +66,14 @@ rewards:
       - '&8 ▪ &a+&l2&a% &aCoins '
       - '&8 ▪ &a+&l2&a% &dGemas '
       - '&8 ▪ &a+&l2&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   mineracao-ferro:
     type: COMMAND_ITEM
     chance: 8.4
-    display: '&fSkin de Ferro'
+    display: '&f&lx&f{amount} &fSkin de Ferro'
     command: mina giveskin {player} ferro {amount}
     amount: 1
     icon:
@@ -84,13 +85,14 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l5&a% &dGemas '
       - '&8 ▪ &a+&l5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   mineracao-ouro:
     type: COMMAND_ITEM
     chance: 5.4
-    display: '&6Skin de Ouro'
+    display: '&6&lx&6{amount} &6Skin de Ouro'
     command: mina giveskin {player} ouro {amount}
     amount: 1
     icon:
@@ -102,13 +104,14 @@ rewards:
       - '&8 ▪ &a+&l9&a% &aCoins '
       - '&8 ▪ &a+&l9&a% &dGemas '
       - '&8 ▪ &a+&l9&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   mineracao-diamante:
     type: COMMAND_ITEM
     chance: 3.3
-    display: '&bSkin de Diamante'
+    display: '&b&lx&b{amount} &bSkin de Diamante'
     command: mina giveskin {player} diamante {amount}
     amount: 1
     icon:
@@ -120,13 +123,14 @@ rewards:
       - '&8 ▪ &a+&l14&a% &aCoins '
       - '&8 ▪ &a+&l14&a% &dGemas '
       - '&8 ▪ &a+&l14&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   mineracao-rubi:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&cSkin de Rubi'
+    display: '&c&lx&c{amount} &cSkin de Rubi'
     command: mina giveskin {player} rubi {amount}
     amount: 1
     icon:
@@ -138,6 +142,7 @@ rewards:
       - '&8 ▪ &a+&l20&a% &aCoins '
       - '&8 ▪ &a+&l20&a% &dGemas '
       - '&8 ▪ &a+&l20&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -145,7 +150,7 @@ rewards:
   farm-pedra:
     type: COMMAND_ITEM
     chance: 11.4
-    display: '&7Skin de Pedra'
+    display: '&7&lx&7{amount} &7Skin de Pedra'
     command: fazenda giveskin {player} pedra {amount}
     amount: 1
     icon:
@@ -157,13 +162,14 @@ rewards:
       - '&8 ▪ &a+&l2&a% &aCoins '
       - '&8 ▪ &a+&l2&a% &5Sementes '
       - '&8 ▪ &a+&l2&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   farm-ferro:
     type: COMMAND_ITEM
     chance: 8.4
-    display: '&fSkin de Ferro'
+    display: '&f&lx&f{amount} &fSkin de Ferro'
     command: fazenda giveskin {player} ferro {amount}
     amount: 1
     icon:
@@ -175,13 +181,14 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l5&a% &5Sementes '
       - '&8 ▪ &a+&l5&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   farm-ouro:
     type: COMMAND_ITEM
     chance: 5.4
-    display: '&6Skin de Ouro'
+    display: '&6&lx&6{amount} &6Skin de Ouro'
     command: fazenda giveskin {player} ouro {amount}
     amount: 1
     icon:
@@ -193,13 +200,14 @@ rewards:
       - '&8 ▪ &a+&l9&a% &aCoins '
       - '&8 ▪ &a+&l9&a% &5Sementes '
       - '&8 ▪ &a+&l9&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   farm-diamante:
     type: COMMAND_ITEM
     chance: 3.3
-    display: '&bSkin de Diamante'
+    display: '&b&lx&b{amount} &bSkin de Diamante'
     command: fazenda giveskin {player} diamante {amount}
     amount: 1
     icon:
@@ -211,13 +219,14 @@ rewards:
       - '&8 ▪ &a+&l14&a% &aCoins '
       - '&8 ▪ &a+&l14&a% &5Sementes '
       - '&8 ▪ &a+&l14&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   farm-ambar:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&5Skin de Âmbar'
+    display: '&5&lx&5{amount} &5Skin de Âmbar'
     command: fazenda giveskin {player} ambar {amount}
     amount: 1
     icon:
@@ -229,6 +238,7 @@ rewards:
       - '&8 ▪ &a+&l20&a% &aCoins '
       - '&8 ▪ &a+&l20&a% &5Sementes '
       - '&8 ▪ &a+&l20&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -236,7 +246,7 @@ rewards:
   pesca-coral:
     type: COMMAND_ITEM
     chance: 14.82
-    display: '&3Skin de Coral'
+    display: '&3&lx&3{amount} &3Skin de Coral'
     command: pesca giveskin {player} coral {amount}
     amount: 1
     icon:
@@ -249,11 +259,12 @@ rewards:
       - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
       - '&8 ▪ &cPeso até &l6&ckg '
+      - ''
 
   pesca-escama:
     type: COMMAND_ITEM
     chance: 10.92
-    display: '&6Skin de Escama'
+    display: '&6&lx&6{amount} &6Skin de Escama'
     command: pesca giveskin {player} escama {amount}
     amount: 1
     icon:
@@ -266,11 +277,12 @@ rewards:
       - '&8 ▪ &a+&l5&a% &3Corais '
       - '&8 ▪ &a+&l5&a% &bXP '
       - '&8 ▪ &cPeso até &l10&ckg '
+      - ''
 
   pesca-prata:
     type: COMMAND_ITEM
     chance: 7.02
-    display: '&fSkin de Prata'
+    display: '&f&lx&f{amount} &fSkin de Prata'
     command: pesca giveskin {player} prata {amount}
     amount: 1
     icon:
@@ -283,11 +295,12 @@ rewards:
       - '&8 ▪ &a+&l9&a% &3Corais '
       - '&8 ▪ &a+&l9&a% &bXP '
       - '&8 ▪ &cPeso até &l15&ckg '
+      - ''
 
   pesca-turquesa:
     type: COMMAND_ITEM
     chance: 4.29
-    display: '&bSkin de Turquesa'
+    display: '&b&lx&b{amount} &bSkin de Turquesa'
     command: pesca giveskin {player} turquesa {amount}
     amount: 1
     icon:
@@ -300,11 +313,12 @@ rewards:
       - '&8 ▪ &a+&l14&a% &3Corais '
       - '&8 ▪ &a+&l14&a% &bXP '
       - '&8 ▪ &cPeso até &l22&ckg '
+      - ''
 
   pesca-abissita:
     type: COMMAND_ITEM
     chance: 1.95
-    display: '&aSkin de Abissita'
+    display: '&a&lx&a{amount} &aSkin de Abissita'
     command: pesca giveskin {player} abissita {amount}
     amount: 1
     icon:
@@ -317,12 +331,13 @@ rewards:
       - '&8 ▪ &a+&l20&a% &3Corais '
       - '&8 ▪ &a+&l20&a% &bXP '
       - '&8 ▪ &cPeso até &l32&ckg '
+      - ''
 
   # -- O DEGRAU PARA A TIER II -------------------------------------- 1%
   caixa-skins-ii:
     type: COMMAND_ITEM
     chance: 1
-    display: '&eCaixa Skins &e[Tier &lII&e]'
+    display: '&e&lx&e{amount} &eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 1
     icon:

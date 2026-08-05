@@ -54,7 +54,7 @@ rewards:
   boss-arauto:
     type: COMMAND_ITEM
     chance: 20
-    display: '&dBoss Arauto'
+    display: '&d&lx&d{amount} &dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 1
     icon:
@@ -67,7 +67,7 @@ rewards:
   boss-arauto-x3:
     type: COMMAND_ITEM
     chance: 10
-    display: '&dBoss Arauto'
+    display: '&d&lx&d{amount} &dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 3
     icon:
@@ -80,7 +80,7 @@ rewards:
   boss-arauto-x5:
     type: COMMAND_ITEM
     chance: 5
-    display: '&dBoss Arauto'
+    display: '&d&lx&d{amount} &dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 5
     icon:
@@ -94,7 +94,7 @@ rewards:
   boss-tita:
     type: COMMAND_ITEM
     chance: 14
-    display: '&5Boss Titã'
+    display: '&5&lx&5{amount} &5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 1
     icon:
@@ -107,7 +107,7 @@ rewards:
   boss-tita-x3:
     type: COMMAND_ITEM
     chance: 7
-    display: '&5Boss Titã'
+    display: '&5&lx&5{amount} &5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 3
     icon:
@@ -120,7 +120,7 @@ rewards:
   boss-tita-x5:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&5Boss Titã'
+    display: '&5&lx&5{amount} &5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 5
     icon:
@@ -134,7 +134,7 @@ rewards:
   boss-devorador:
     type: COMMAND_ITEM
     chance: 9
-    display: '&4Boss Devorador'
+    display: '&4&lx&4{amount} &4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 1
     icon:
@@ -147,7 +147,7 @@ rewards:
   boss-devorador-x3:
     type: COMMAND_ITEM
     chance: 4.5
-    display: '&4Boss Devorador'
+    display: '&4&lx&4{amount} &4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 3
     icon:
@@ -160,7 +160,7 @@ rewards:
   boss-devorador-x5:
     type: COMMAND_ITEM
     chance: 2.25
-    display: '&4Boss Devorador'
+    display: '&4&lx&4{amount} &4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 5
     icon:
@@ -174,7 +174,7 @@ rewards:
   livro-killstack:
     type: COMMAND_ITEM
     chance: 8
-    display: '&4Livro de Kill-Stack'
+    display: '&4&lx&4{amount} &4Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
     amount: 1
     icon:
@@ -187,12 +187,13 @@ rewards:
       - '&7ao abater apenas um.'
       - ''
       - '&8 ▪ &fNível: &c1 '
+      - ''
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
   livro-killstack-x2:
     type: COMMAND_ITEM
     chance: 4
-    display: '&4Livro de Kill-Stack'
+    display: '&4&lx&4{amount} &4Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
     amount: 2
     icon:
@@ -205,13 +206,14 @@ rewards:
       - '&7ao abater apenas um.'
       - ''
       - '&8 ▪ &fNível: &c1 '
+      - ''
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
   # -- MATADORAS ------------------------------------------------ 10,75%
   matadora-sombria:
     type: COMMAND_ITEM
     chance: 6
-    display: '&5Matadora Sombria'
+    display: '&5&lx&5{amount} &5Matadora Sombria'
     command: boss give sword {player} sombria {amount}
     amount: 1
     icon:
@@ -225,7 +227,7 @@ rewards:
   matadora-ancestral:
     type: COMMAND_ITEM
     chance: 3
-    display: '&bMatadora Ancestral'
+    display: '&b&lx&b{amount} &bMatadora Ancestral'
     command: boss give sword {player} ancestral {amount}
     amount: 1
     icon:
@@ -239,7 +241,7 @@ rewards:
   matadora-runica:
     type: COMMAND_ITEM
     chance: 1.5
-    display: '&6Matadora Rúnica'
+    display: '&6&lx&6{amount} &6Matadora Rúnica'
     command: boss give sword {player} runica {amount}
     amount: 1
     icon:
@@ -253,7 +255,7 @@ rewards:
   matadora-abissal:
     type: COMMAND_ITEM
     chance: 0.25
-    display: '&3Matadora Abissal'
+    display: '&3&lx&3{amount} &3Matadora Abissal'
     command: boss give sword {player} abissal {amount}
     amount: 1
     icon:
@@ -268,7 +270,7 @@ rewards:
   caixa-bosses-ii-x2:
     type: COMMAND_ITEM
     chance: 2
-    display: '&4Caixa Bosses &4[Tier &lII&4]'
+    display: '&4&lx&4{amount} &4Caixa Bosses &4[Tier &lII&4]'
     command: caixas give bosses-ii {player} {amount}
     amount: 2
     icon:

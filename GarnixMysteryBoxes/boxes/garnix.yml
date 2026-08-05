@@ -96,7 +96,7 @@ rewards:
   maquina-limite-spawners:
     type: COMMAND
     chance: 19.25
-    display: '&bMáquina de L. de Spawners'
+    display: '&b&lx&b{amount} &bMáquina de L. de Spawners'
     command: maquina give {player} limite-spawners {amount} 1
     amount: 5
     icon:
@@ -111,7 +111,7 @@ rewards:
   maquina-limite-maquinas:
     type: COMMAND
     chance: 19.25
-    display: '&9Máquina de L. de Máquinas'
+    display: '&9&lx&9{amount} &9Máquina de L. de Máquinas'
     command: maquina give {player} limite-maquinas {amount} 1
     amount: 5
     icon:
@@ -126,7 +126,7 @@ rewards:
   maquina-cash:
     type: COMMAND
     chance: 18.25
-    display: '&6Máquina de Cash'
+    display: '&6&lx&6{amount} &6Máquina de Cash'
     command: maquina give {player} cash {amount} 1
     amount: 3
     icon:
@@ -141,7 +141,7 @@ rewards:
   vaga:
     type: COMMAND_ITEM
     chance: 9
-    display: '&a&lVaga de Visitante'
+    display: '&a&lx&a{amount} &a&lVaga de Visitante'
     command: mina giveslot {player} {amount}
     amount: 1
     icon:
@@ -154,7 +154,7 @@ rewards:
   robo-lendario:
     type: COMMAND_ITEM
     chance: 9
-    display: '&4&lRobô Lendário'
+    display: '&4&lx&4{amount} &4&lRobô Lendário'
     command: crates giverobot lendario {player} {amount}
     amount: 1
     icon:
@@ -173,7 +173,7 @@ rewards:
   torre-cacto-15:
     type: COMMAND_ITEM
     chance: 9
-    display: '&a&lTorre de Cacto &8[15 Andares]'
+    display: '&a&lx&a{amount} &a&lTorre de Cacto &8[15 Andares]'
     command: cactustower give {player} 15 {amount}
     amount: 1
     icon:
@@ -186,7 +186,7 @@ rewards:
   caixas:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&dCaixa Caixas'
+    display: '&d&lx&d{amount} &dCaixa Caixas'
     command: caixas give caixas {player} {amount}
     amount: 25
     icon:
@@ -200,7 +200,7 @@ rewards:
   skins-ii:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&eCaixa Skins &e[Tier &lII&e]'
+    display: '&e&lx&e{amount} &eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 15
     icon:
@@ -214,7 +214,7 @@ rewards:
   torre-cacto-30:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&a&lTorre de Cacto &8[30 Andares]'
+    display: '&a&lx&a{amount} &a&lTorre de Cacto &8[30 Andares]'
     command: cactustower give {player} 30 {amount}
     amount: 1
     icon:
@@ -227,7 +227,7 @@ rewards:
   livro-killstack:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&4Livro de Kill-Stack'
+    display: '&4&lx&4{amount} &4Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
     amount: 3
     icon:
@@ -240,11 +240,12 @@ rewards:
       - ''
       - '&8 ▪ &fNível: &c1 '
       - '&8 ▪ &fQuantia: &c{amount} '
+      - ''
 
   papel-imortal:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&b&lPapel VIP IMORTAL &8[3 Dias]'
+    display: '&b&lx&b{amount} &b&lPapel VIP IMORTAL &8[3 Dias]'
     command: vip givepaper {player} imortal 3d {amount}
     amount: 1
     icon:
@@ -259,7 +260,7 @@ rewards:
   venda-automatica:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&6&lVenda Automática'
+    display: '&6&lx&6{amount} &6&lVenda Automática'
     command: armazem giveautosell {player} {amount}
     amount: 1
     icon:
@@ -277,7 +278,7 @@ rewards:
   skin-mithril:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&4&lSkin de Mithril'
+    display: '&4&lx&4{amount} &4&lSkin de Mithril'
     command: mina giveskin {player} mithril {amount}
     amount: 1
     icon:
@@ -290,13 +291,14 @@ rewards:
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l65&a% &dGemas '
       - '&8 ▪ &a+&l65&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   skin-marfim:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&f&lSkin de Marfim'
+    display: '&f&lx&f{amount} &f&lSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
     amount: 1
     icon:
@@ -309,13 +311,14 @@ rewards:
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l65&a% &5Sementes '
       - '&8 ▪ &a+&l65&a% &bXP '
+      - ''
       flags:
       - HIDE_ATTRIBUTES
 
   skin-tempestita:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&d&lSkin de Tempestita'
+    display: '&d&lx&d{amount} &d&lSkin de Tempestita'
     command: pesca giveskin {player} tempestita {amount}
     amount: 1
     icon:
@@ -328,11 +331,12 @@ rewards:
       - '&8 ▪ &a+&l65&a% &3Corais '
       - '&8 ▪ &a+&l65&a% &bXP '
       - '&8 ▪ &cPeso até &l130&ckg '
+      - ''
 
   robo-mitico:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&6&lRobô Mítico'
+    display: '&6&lx&6{amount} &6&lRobô Mítico'
     command: crates giverobot mitico {player} {amount}
     amount: 1
     icon:
@@ -351,7 +355,7 @@ rewards:
   papel-supremo:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&4&lPapel VIP SUPREMO &8[2 Dias]'
+    display: '&4&lx&4{amount} &4&lPapel VIP SUPREMO &8[2 Dias]'
     command: vip givepaper {player} supremo 2d {amount}
     amount: 1
     icon:
@@ -366,7 +370,7 @@ rewards:
   papel-garnix:
     type: COMMAND_ITEM
     chance: 0.25
-    display: '&6&lPapel VIP GARNIX &8[1 Dia]'
+    display: '&6&lx&6{amount} &6&lPapel VIP GARNIX &8[1 Dia]'
     command: vip givepaper {player} garnix 1d {amount}
     amount: 1
     icon:
@@ -381,7 +385,7 @@ rewards:
   combustivel-inf:
     type: COMMAND_ITEM
     chance: 0.25
-    display: '&b&lCombustível Infinito'
+    display: '&b&lx&b{amount} &b&lCombustível Infinito'
     command: maquina giveinfinitefuel {player} {amount}
     amount: 1
     icon:
@@ -396,7 +400,7 @@ rewards:
   matadora-hk:
     type: COMMAND_ITEM
     chance: 0.25
-    display: '&4&lMatadora Hit-Kill'
+    display: '&4&lx&4{amount} &4&lMatadora Hit-Kill'
     command: boss give sword {player} hk {amount}
     amount: 1
     icon:
