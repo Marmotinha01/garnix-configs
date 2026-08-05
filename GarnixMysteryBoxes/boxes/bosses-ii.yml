@@ -37,7 +37,7 @@ rewards:
   boss-arauto:
     type: COMMAND_ITEM
     chance: 20
-    display: '&d&l{amount}x Boss Arauto'
+    display: '&dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 1
     icon:
@@ -50,7 +50,7 @@ rewards:
   boss-arauto-x3:
     type: COMMAND_ITEM
     chance: 10
-    display: '&d&l{amount}x Boss Arauto'
+    display: '&dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 3
     icon:
@@ -63,7 +63,7 @@ rewards:
   boss-arauto-x5:
     type: COMMAND_ITEM
     chance: 5
-    display: '&d&l{amount}x Boss Arauto'
+    display: '&dBoss Arauto'
     command: boss give boss {player} ARAUTO {amount} 1
     amount: 5
     icon:
@@ -77,7 +77,7 @@ rewards:
   boss-tita:
     type: COMMAND_ITEM
     chance: 14
-    display: '&5&l{amount}x Boss Titã'
+    display: '&5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 1
     icon:
@@ -90,7 +90,7 @@ rewards:
   boss-tita-x3:
     type: COMMAND_ITEM
     chance: 7
-    display: '&5&l{amount}x Boss Titã'
+    display: '&5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 3
     icon:
@@ -103,7 +103,7 @@ rewards:
   boss-tita-x5:
     type: COMMAND_ITEM
     chance: 3.5
-    display: '&5&l{amount}x Boss Titã'
+    display: '&5Boss Titã'
     command: boss give boss {player} TITA {amount} 1
     amount: 5
     icon:
@@ -117,7 +117,7 @@ rewards:
   boss-devorador:
     type: COMMAND_ITEM
     chance: 9
-    display: '&4&l{amount}x Boss Devorador'
+    display: '&4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 1
     icon:
@@ -130,7 +130,7 @@ rewards:
   boss-devorador-x3:
     type: COMMAND_ITEM
     chance: 4.5
-    display: '&4&l{amount}x Boss Devorador'
+    display: '&4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 3
     icon:
@@ -143,7 +143,7 @@ rewards:
   boss-devorador-x5:
     type: COMMAND_ITEM
     chance: 2.25
-    display: '&4&l{amount}x Boss Devorador'
+    display: '&4Boss Devorador'
     command: boss give boss {player} DEVORADOR {amount} 1
     amount: 5
     icon:
@@ -157,7 +157,7 @@ rewards:
   livro-killstack:
     type: COMMAND_ITEM
     chance: 8
-    display: '&4&l{amount}x Livro de Kill-Stack'
+    display: '&4Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
     amount: 1
     icon:
@@ -175,7 +175,7 @@ rewards:
   livro-killstack-x2:
     type: COMMAND_ITEM
     chance: 4
-    display: '&4&l{amount}x Livro de Kill-Stack'
+    display: '&4Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
     amount: 2
     icon:

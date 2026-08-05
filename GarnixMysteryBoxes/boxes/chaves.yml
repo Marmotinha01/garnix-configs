@@ -51,7 +51,7 @@ rewards:
   mineracao-x3:
     type: COMMAND
     chance: 45
-    display: '&e&l{amount}x Chave Mineração'
+    display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 3
     icon:
@@ -66,7 +66,7 @@ rewards:
   mineracao-x5:
     type: COMMAND
     chance: 27
-    display: '&e&l{amount}x Chave Mineração'
+    display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 5
     icon:
@@ -81,7 +81,7 @@ rewards:
   mineracao-x10:
     type: COMMAND
     chance: 16
-    display: '&e&l{amount}x Chave Mineração'
+    display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 10
     icon:
@@ -96,7 +96,7 @@ rewards:
   mineracao-x15:
     type: COMMAND
     chance: 9
-    display: '&e&l{amount}x Chave Mineração'
+    display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 15
     icon:
@@ -111,7 +111,7 @@ rewards:
   mineracao-x30:
     type: COMMAND
     chance: 3
-    display: '&e&l{amount}x Chave Mineração'
+    display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 30
     icon:
@@ -128,7 +128,7 @@ rewards:
   farm-x3:
     type: COMMAND
     chance: 45
-    display: '&a&l{amount}x Chave Farm'
+    display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 3
     icon:
@@ -143,7 +143,7 @@ rewards:
   farm-x5:
     type: COMMAND
     chance: 27
-    display: '&a&l{amount}x Chave Farm'
+    display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 5
     icon:
@@ -158,7 +158,7 @@ rewards:
   farm-x10:
     type: COMMAND
     chance: 16
-    display: '&a&l{amount}x Chave Farm'
+    display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 10
     icon:
@@ -173,7 +173,7 @@ rewards:
   farm-x15:
     type: COMMAND
     chance: 9
-    display: '&a&l{amount}x Chave Farm'
+    display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 15
     icon:
@@ -188,7 +188,7 @@ rewards:
   farm-x30:
     type: COMMAND
     chance: 3
-    display: '&a&l{amount}x Chave Farm'
+    display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 30
     icon:
@@ -205,7 +205,7 @@ rewards:
   pesca-x3:
     type: COMMAND
     chance: 45
-    display: '&b&l{amount}x Chave Pesca'
+    display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 3
     icon:
@@ -220,7 +220,7 @@ rewards:
   pesca-x5:
     type: COMMAND
     chance: 27
-    display: '&b&l{amount}x Chave Pesca'
+    display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 5
     icon:
@@ -235,7 +235,7 @@ rewards:
   pesca-x10:
     type: COMMAND
     chance: 16
-    display: '&b&l{amount}x Chave Pesca'
+    display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 10
     icon:
@@ -250,7 +250,7 @@ rewards:
   pesca-x15:
     type: COMMAND
     chance: 9
-    display: '&b&l{amount}x Chave Pesca'
+    display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 15
     icon:
@@ -265,7 +265,7 @@ rewards:
   pesca-x30:
     type: COMMAND
     chance: 3
-    display: '&b&l{amount}x Chave Pesca'
+    display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 30
     icon:
@@ -282,7 +282,7 @@ rewards:
   bosses-x3:
     type: COMMAND
     chance: 45
-    display: '&4&l{amount}x Chave Bosses'
+    display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 3
     icon:
@@ -297,7 +297,7 @@ rewards:
   bosses-x5:
     type: COMMAND
     chance: 27
-    display: '&4&l{amount}x Chave Bosses'
+    display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 5
     icon:
@@ -312,7 +312,7 @@ rewards:
   bosses-x10:
     type: COMMAND
     chance: 16
-    display: '&4&l{amount}x Chave Bosses'
+    display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 10
     icon:
@@ -327,7 +327,7 @@ rewards:
   bosses-x15:
     type: COMMAND
     chance: 9
-    display: '&4&l{amount}x Chave Bosses'
+    display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 15
     icon:
@@ -342,7 +342,7 @@ rewards:
   bosses-x30:
     type: COMMAND
     chance: 3
-    display: '&4&l{amount}x Chave Bosses'
+    display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 30
     icon:
@@ -359,7 +359,7 @@ rewards:
   vip-x3:
     type: COMMAND
     chance: 45
-    display: '&d&l{amount}x Chave VIP'
+    display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 3
     icon:
@@ -374,7 +374,7 @@ rewards:
   vip-x5:
     type: COMMAND
     chance: 27
-    display: '&d&l{amount}x Chave VIP'
+    display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 5
     icon:
@@ -389,7 +389,7 @@ rewards:
   vip-x10:
     type: COMMAND
     chance: 16
-    display: '&d&l{amount}x Chave VIP'
+    display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 10
     icon:
@@ -404,7 +404,7 @@ rewards:
   vip-x15:
     type: COMMAND
     chance: 9
-    display: '&d&l{amount}x Chave VIP'
+    display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 15
     icon:
@@ -419,7 +419,7 @@ rewards:
   vip-x30:
     type: COMMAND
     chance: 3
-    display: '&d&l{amount}x Chave VIP'
+    display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 30
     icon:
@@ -436,7 +436,7 @@ rewards:
   rankup-x3:
     type: COMMAND
     chance: 45
-    display: '&6&l{amount}x Chave RankUP'
+    display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 3
     icon:
@@ -451,7 +451,7 @@ rewards:
   rankup-x5:
     type: COMMAND
     chance: 27
-    display: '&6&l{amount}x Chave RankUP'
+    display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 5
     icon:
@@ -466,7 +466,7 @@ rewards:
   rankup-x10:
     type: COMMAND
     chance: 16
-    display: '&6&l{amount}x Chave RankUP'
+    display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 10
     icon:
@@ -481,7 +481,7 @@ rewards:
   rankup-x15:
     type: COMMAND
     chance: 9
-    display: '&6&l{amount}x Chave RankUP'
+    display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 15
     icon:
@@ -496,7 +496,7 @@ rewards:
   rankup-x30:
     type: COMMAND
     chance: 3
-    display: '&6&l{amount}x Chave RankUP'
+    display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 30
     icon:

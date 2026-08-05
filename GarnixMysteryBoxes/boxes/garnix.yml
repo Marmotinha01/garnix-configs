@@ -81,7 +81,7 @@ rewards:
   maquina-limite-spawners:
     type: COMMAND
     chance: 19.25
-    display: '&b&l{amount}x Máquina de L. de Spawners'
+    display: '&bMáquina de L. de Spawners'
     command: maquina give {player} limite-spawners {amount} 1
     amount: 5
     icon:
@@ -96,7 +96,7 @@ rewards:
   maquina-limite-maquinas:
     type: COMMAND
     chance: 19.25
-    display: '&9&l{amount}x Máquina de L. de Máquinas'
+    display: '&9Máquina de L. de Máquinas'
     command: maquina give {player} limite-maquinas {amount} 1
     amount: 5
     icon:
@@ -111,7 +111,7 @@ rewards:
   maquina-cash:
     type: COMMAND
     chance: 16.25
-    display: '&6&l{amount}x Máquina de Cash'
+    display: '&6Máquina de Cash'
     command: maquina give {player} cash {amount} 1
     amount: 3
     icon:
@@ -171,7 +171,7 @@ rewards:
   caixas:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&d&l{amount}x Caixa Caixas'
+    display: '&dCaixa Caixas'
     command: caixas give caixas {player} {amount}
     amount: 25
     icon:
@@ -185,7 +185,7 @@ rewards:
   skins-ii:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&e&l{amount}x Caixa Skins &e[Tier &lII&e]'
+    display: '&eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 15
     icon:
@@ -228,7 +228,7 @@ rewards:
   livro-killstack:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&4&l{amount}x Livro de Kill-Stack'
+    display: '&4Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
     amount: 3
     icon:
