@@ -43,14 +43,16 @@ Moeda e limite não são prêmio único: são escadas de três ou quatro degraus
 |---|---|---|---|
 | Mineração / Farm / Pesca | 250 / 500 / 1.000 | 150 / 300 / 600 | 1 / 3 / 5 |
 | VIP | 500 / 1.000 / 2.000 | 300 / 600 / 1.200 dracmas | 5 / 15 / 30 / 50 |
-| RankUP | 1.000 / 2.000 / 4.000 | 500 / 1.000 / 2.000 dracmas | 5 / 15 / 30 / 50 |
+| RankUP | 1.000 / 2.000 / 4.000 | 500 / 1.000 / 2.000 dracmas | **15 / 30 / 50 / 100** |
 
 Entre os três limites o peso é **6:3:1** (armazém : máquinas : spawners), espelhando o cash shop: **800 / 1.500 / 4.000 cash**.
 
 Como os degraus se distribuem muda por crate:
 
-- **Profissão e RankUP** — todos os degraus da mesma escada vivem na mesma faixa, repartidos em 60/30/10 (três) ou 50/30/15/5 (quatro).
-- **VIP** — cada degrau sobe **uma faixa**: 500 no comum, 1.000 no comum plus, 2.000 no comum plus plus; limite 5 no comum, 15 no comum plus, 30 no comum plus plus, 50 no raro. É o que separa a crate paga das de profissão.
+- **Profissão** — todos os degraus da mesma escada vivem na mesma faixa, repartidos em 60/30/10.
+- **VIP e RankUP** — cada degrau sobe **uma faixa**. Na VIP: 500 no comum, 1.000 no comum plus, 2.000 no comum plus plus, limite de 5 até 50 atravessando quatro faixas. Na RankUP: 1.000 no comum, 2.000 no comum plus, 4.000 no comum plus plus, limite de 15 até 100. É o que separa as crates de topo das de profissão.
+
+A RankUP é a **única sem o degrau de 5** e a única que entrega **limite de 100**.
 
 ---
 
@@ -198,36 +200,41 @@ O teto do boost de robô aqui é **4,5** (total 150 × 3 ÷ 100), não 3,999999 
 
 ## 5. Crate RankUP — `rankup.yml`
 
-| Item | Faixa | Peso | Base | Raro | Épico | Lendário | Mítico | Quantia |
-|---|---|---:|---:|---:|---:|---:|---:|---:|
-| Coins | comum | 19,2 | 14,4% | 14% | 13,19% | 12,18% | 10,55% | 1.000 |
-| Dracmas | comum | 16,8 | 12,6% | 12,25% | 11,55% | 10,65% | 9,23% | 500 |
-| Coins | comum | 9,6 | 7,2% | 7% | 6,6% | 6,09% | 5,27% | 2.000 |
-| Limite de Armazém | comum plus | 8,4 | 6,3% | 6,12% | 5,77% | 5,33% | 4,61% | 5 |
-| Dracmas | comum | 8,4 | 6,3% | 6,12% | 5,77% | 5,33% | 4,61% | 1.000 |
-| Limite de Armazém | comum plus | 5,04 | 3,78% | 3,67% | 3,46% | 3,2% | 2,77% | 15 |
-| Limite de Máquinas | comum plus | 4,2 | 3,15% | 3,06% | 2,89% | 2,66% | 2,31% | 5 |
-| Chave de Boss | mediana | 4 | 3% | 2,92% | 2,75% | 2,54% | 2,2% | 5 |
-| Coins | comum | 3,2 | 2,4% | 2,33% | 3,3% | 4,06% | 5,27% | 4.000 |
-| Caixa Runas | mediana | 3 | 2,25% | 2,19% | 3,09% | 3,8% | 4,94% | 1 |
-| Dracmas | comum | 2,8 | 2,1% | 2,04% | 2,89% | 3,55% | 4,61% | 2.000 |
-| Limite de Armazém | comum plus | 2,52 | 1,89% | 2,3% | 2,6% | 3,2% | 4,15% | 30 |
-| Limite de Máquinas | comum plus | 2,52 | 1,89% | 2,3% | 2,6% | 3,2% | 4,15% | 15 |
-| Torre de Cacto [5 Andares] | mediana | 2 | 1,5% | 1,82% | 2,06% | 2,54% | 3,3% | 1 |
-| Chave de Boss | mediana plus | 1,4 | 1,05% | 1,28% | 1,44% | 1,78% | 2,31% | 10 |
-| Limite de Spawners | comum plus | 1,4 | 1,05% | 1,28% | 1,44% | 1,78% | 2,31% | 5 |
-| Limite de Máquinas | comum plus | 1,26 | 0,945% | 1,15% | 1,3% | 1,6% | 2,08% | 30 |
-| Caixa Chaves | mediana plus | 0,9 | 0,675% | 0,82% | 0,928% | 1,14% | 1,48% | 1 |
-| Limite de Armazém | comum plus | 0,84 | 0,63% | 0,765% | 0,866% | 1,07% | 1,38% | 50 |
-| Limite de Spawners | comum plus | 0,84 | 0,63% | 0,765% | 0,866% | 1,07% | 1,38% | 15 |
-| Limite de Máquinas | comum plus | 0,42 | 0,315% | 0,383% | 0,433% | 0,533% | 0,692% | 50 |
-| Limite de Spawners | comum plus | 0,42 | 0,315% | 0,383% | 0,433% | 0,533% | 0,692% | 30 |
-| Caixa Boosters | raríssima | 0,4 | 0,3% | 0,365% | 0,412% | 0,507% | 0,659% | 1 |
-| Caixa Robôs | raríssima | 0,2 | 0,15% | 0,182% | 0,206% | 0,254% | 0,33% | 1 |
-| Limite de Spawners | comum plus | 0,14 | 0,105% | 0,128% | 0,144% | 0,178% | 0,231% | 50 |
-| Caixa Caixas | raríssima | 0,099 | 0,0743% | 0,0902% | 0,102% | 0,126% | 0,163% | 1 |
-| Cash | jackpot | 0,001 | 0,00075% | 0,00091% | 0,00103% | 0,00127% | 0,00165% | 500 |
-| **Azar** | — | 33,3333 | **25%** | 24,3% | 22,91% | 21,14% | **18,31%** | — |
+A crate de topo. A escada de limite começa em **15** e vai até **100** — é a única sem o degrau de 5 e a única que entrega limite de 100. Em 1.000 chaves:
+
+| Item | Faixa | Peso | Chance | Em 1.000 | Quantia |
+|---|---|---:|---:|---:|---:|
+| Coins | comum | 22 | 16,5% | 165 | 1.000 |
+| Dracmas | comum | 20 | 15% | 150 | 500 |
+| Limite de Armazém | comum | 9 | 6,75% | 67,5 | 15 |
+| Limite de Máquinas | comum | 4,5 | 3,375% | 33,8 | 15 |
+| Caixa Runas | comum | 2 | 1,5% | 15 | 1 |
+| Limite de Spawners | comum | 1,5 | 1,125% | 11,3 | 15 |
+| Chave de Boss | comum | 1 | 0,75% | 7,5 | 5 |
+| Coins | comum plus | 9 | 6,75% | 67,5 | 2.000 |
+| Dracmas | comum plus | 8 | 6% | 60 | 1.000 |
+| Limite de Armazém | comum plus | 3,6 | 2,7% | 27 | 30 |
+| Combustível | comum plus | 3 | 2,25% | 22,5 | 2.000L |
+| Limite de Máquinas | comum plus | 1,8 | 1,35% | 13,5 | 30 |
+| Chave de Boss | comum plus | 1,2 | 0,9% | 9 | 10 |
+| Caixa Chaves | comum plus | 0,8 | 0,6% | 6 | 1 |
+| Limite de Spawners | comum plus | 0,6 | 0,45% | 4,5 | 30 |
+| Coins | comum plus plus | 3,5 | 2,625% | 26,3 | 4.000 |
+| Dracmas | comum plus plus | 3 | 2,25% | 22,5 | 2.000 |
+| Limite de Armazém | comum plus plus | 1,8 | 1,35% | 13,5 | 50 |
+| Limite de Máquinas | comum plus plus | 0,9 | 0,675% | 6,8 | 50 |
+| Caixa Caixas | comum plus plus | 0,5 | 0,375% | 3,8 | 1 |
+| Limite de Spawners | comum plus plus | 0,3 | 0,225% | 2,3 | 50 |
+| Caixa Boosters | raro | 0,7 | 0,525% | 5,3 | 1 |
+| Caixa Robôs | raro | 0,5 | 0,375% | 3,8 | 1 |
+| Torre de Cacto [5 Andares] | raro | 0,35 | 0,2625% | 2,6 | 1 |
+| Limite de Armazém | raríssimo | 0,24 | 0,18% | 1,8 | 100 |
+| Limite de Máquinas | raríssimo | 0,12 | 0,09% | 0,9 | 100 |
+| Limite de Spawners | raríssimo | 0,04 | 0,03% | 0,3 | 100 |
+| Cash | jackpot | 0,05 | 0,0375% | 0,375 | 500 |
+| **Azar** | — | 33,3333 | **25%** | **250** | — |
+
+O combustível de 2.000L e os três limites de 100 são recompensas **novas** — não existiam nesta crate. O limite de 5 saiu.
 
 ---
 
