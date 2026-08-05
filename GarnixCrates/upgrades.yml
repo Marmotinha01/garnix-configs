@@ -18,8 +18,17 @@ levels:
     opens: 100
     cost: 15000
   '3':
-    opens: 200
+    opens: 250
     cost: 50000
   '4':
     opens: 500
     cost: 150000
+  '5':
+    opens: 1000
+    cost: 300000
+  '6':
+    opens: 2500
+    cost: 600000
+  '7':
+    opens: 5000
+    cost: 2000000
