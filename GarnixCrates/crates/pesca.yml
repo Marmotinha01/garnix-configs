@@ -90,7 +90,7 @@ rewards:
   # -- COMUM -------------------------------------------------------- 83,5%
   coins-250:
     type: CURRENCY
-    chance: 27.6
+    chance: 27.17
     currency-id: coins
     amount: '250'
     icon:
@@ -99,7 +99,7 @@ rewards:
 
   coins-500:
     type: CURRENCY
-    chance: 13.5
+    chance: 13.3
     currency-id: coins
     amount: '500'
     icon:
@@ -117,7 +117,7 @@ rewards:
 
   corais-150:
     type: CURRENCY
-    chance: 16.8
+    chance: 16.57
     currency-id: corais
     amount: '150'
     icon:
@@ -126,7 +126,7 @@ rewards:
 
   corais-300:
     type: CURRENCY
-    chance: 8.4
+    chance: 8.28
     currency-id: corais
     amount: '300'
     icon:
@@ -135,7 +135,7 @@ rewards:
 
   corais-600:
     type: CURRENCY
-    chance: 2.8
+    chance: 2.76
     currency-id: corais
     amount: '600'
     icon:
@@ -144,7 +144,7 @@ rewards:
 
   combustivel:
     type: COMMAND
-    chance: 10.5
+    chance: 10.45
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount}
     amount: 500
@@ -299,7 +299,7 @@ rewards:
 
   chave-boss:
     type: COMMAND
-    chance: 2
+    chance: 5.6
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 1
@@ -315,7 +315,7 @@ rewards:
 
   chave-rankup:
     type: COMMAND
-    chance: 1
+    chance: 0.75
     display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 1
@@ -332,7 +332,7 @@ rewards:
   # -- ARMADURA --------------------------------------------------------- 2%
   armadura-i-capacete:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 0.25
     display: '&7Capacete Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_helmet {amount}
     amount: 1
@@ -350,7 +350,7 @@ rewards:
 
   armadura-i-peitoral:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 0.25
     display: '&7Peitoral Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_chestplate {amount}
     amount: 1
@@ -368,7 +368,7 @@ rewards:
 
   armadura-i-calca:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 0.25
     display: '&7Calça Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_leggings {amount}
     amount: 1
@@ -386,7 +386,7 @@ rewards:
 
   armadura-i-bota:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 0.25
     display: '&7Bota Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_boots {amount}
     amount: 1
@@ -405,7 +405,7 @@ rewards:
   # -- MEDIANA ------------------------------------------------------- 1,4%
   booster-xp-2x:
     type: COMMAND_ITEM
-    chance: 0.7
+    chance: 0.21
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} xp 2 5m {amount}
     amount: 1
@@ -426,7 +426,7 @@ rewards:
 
   booster-corais-2x:
     type: COMMAND_ITEM
-    chance: 0.7
+    chance: 0.21
     display: '&bBooster de Pesca'
     command: pesca givebooster {player} corais 2 5m {amount}
     amount: 1
@@ -461,7 +461,7 @@ rewards:
 
   caixa-recursos:
     type: COMMAND_ITEM
-    chance: 0.099
+    chance: 0.1
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 1
@@ -475,7 +475,7 @@ rewards:
   # -- MEDIANA PLUS (skins) ------------------------------------------ 0,7%
   skin-coral:
     type: COMMAND_ITEM
-    chance: 0.4
+    chance: 0.2
     display: '&3Skin de Coral'
     command: pesca giveskin {player} coral {amount}
     amount: 1
@@ -491,7 +491,7 @@ rewards:
 
   skin-escama:
     type: COMMAND_ITEM
-    chance: 0.3
+    chance: 0.15
     display: '&6Skin de Escama'
     command: pesca giveskin {player} escama {amount}
     amount: 1
@@ -508,7 +508,7 @@ rewards:
   # -- JACKPOT ------------------------------------------------------- 0,001%
   jackpot:
     type: COMMAND_ITEM
-    chance: 0.001
+    chance: 0.05
     display: '&bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}
     amount: 1
