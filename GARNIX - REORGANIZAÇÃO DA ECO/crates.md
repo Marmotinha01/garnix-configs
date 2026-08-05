@@ -51,42 +51,42 @@ Entre os três limites o peso é **6:3:1** (armazém : máquinas : spawners), es
 
 | Item | Faixa | Peso | Base | Raro | Épico | Lendário | Mítico | Quantia |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| Coins | comum | 23,4 | 17,55% | 16,99% | 15,9% | 14,54% | 12,41% | 250 |
-| Gemas | comum | 15 | 11,25% | 10,89% | 10,19% | 9,32% | 7,96% | 150 |
-| Coins | comum | 11,7 | 8,78% | 8,5% | 7,95% | 7,27% | 6,21% | 500 |
-| Combustível | comum | 9,8 | 7,35% | 7,12% | 6,66% | 6,09% | 5,2% | 500L |
-| Gemas | comum | 7,5 | 5,63% | 5,45% | 5,1% | 4,66% | 3,98% | 300 |
-| Explosivo 2x2 | comum | 5 | 3,75% | 3,63% | 3,4% | 3,11% | 2,65% | 1 |
-| Coins | comum | 3,9 | 2,93% | 2,83% | 3,98% | 4,85% | 6,21% | 1.000 |
-| Explosivo 4x4 | comum | 3,5 | 2,63% | 2,54% | 3,57% | 4,35% | 5,57% | 1 |
-| Gemas | comum | 2,5 | 1,88% | 2,27% | 2,55% | 3,11% | 3,98% | 600 |
-| Limite de Armazém | comum plus | 2,7 | 2,03% | 1,96% | 2,75% | 3,36% | 4,3% | 1 |
-| Chave de Boss | comum plus | 2 | 1,5% | 1,82% | 2,04% | 2,49% | 3,18% | 1 |
-| Chave VIP | comum plus | 1,5 | 1,13% | 1,36% | 1,53% | 1,86% | 2,39% | 1 |
-| Limite de Armazém | comum plus | 1,35 | 1,01% | 1,23% | 1,38% | 1,68% | 2,15% | 3 |
-| Limite de Máquinas | comum plus | 1,35 | 1,01% | 1,23% | 1,38% | 1,68% | 2,15% | 1 |
-| Chave RankUP | comum plus | 1 | 0,75% | 0,908% | 1,02% | 1,24% | 1,59% | 1 |
-| Limite de Máquinas | comum plus | 0,68 | 0,51% | 0,617% | 0,693% | 0,845% | 1,08% | 3 |
-| Limite de Armazém | comum plus | 0,45 | 0,338% | 0,408% | 0,459% | 0,559% | 0,716% | 5 |
-| Limite de Spawners | comum plus | 0,45 | 0,338% | 0,408% | 0,459% | 0,559% | 0,716% | 1 |
-| Limite de Máquinas | comum plus | 0,22 | 0,165% | 0,2% | 0,224% | 0,273% | 0,35% | 5 |
-| Limite de Spawners | comum plus | 0,22 | 0,165% | 0,2% | 0,224% | 0,273% | 0,35% | 3 |
-| Limite de Spawners | comum plus | 0,08 | 0,06% | 0,0726% | 0,0816% | 0,0994% | 0,127% | 5 |
-| Capacete Mineração [Tier I] | armadura | 0,5 | 0,375% | 0,454% | 0,51% | 0,621% | 0,796% | 1 |
-| Peitoral Mineração [Tier I] | armadura | 0,5 | 0,375% | 0,454% | 0,51% | 0,621% | 0,796% | 1 |
-| Calça Mineração [Tier I] | armadura | 0,5 | 0,375% | 0,454% | 0,51% | 0,621% | 0,796% | 1 |
-| Bota Mineração [Tier I] | armadura | 0,5 | 0,375% | 0,454% | 0,51% | 0,621% | 0,796% | 1 |
-| Booster de Mineração — Gemas 2x 5m | mediana | 0,7 | 0,525% | 0,635% | 0,714% | 0,87% | 1,11% | 1 |
-| Booster de Mineração — Coins 2x 5m | mediana | 0,7 | 0,525% | 0,635% | 0,714% | 0,87% | 1,11% | 1 |
-| Britadeira | mediana | 0,6 | 0,45% | 0,545% | 0,612% | 0,746% | 0,955% | 1 |
-| Explosivo 6x6 | mediana | 0,45 | 0,338% | 0,408% | 0,459% | 0,559% | 0,716% | 1 |
-| Explosivo 8x8 | mediana | 0,15 | 0,113% | 0,136% | 0,153% | 0,186% | 0,239% | 1 |
-| Skin de Pedra | mediana plus | 0,4 | 0,3% | 0,363% | 0,408% | 0,497% | 0,636% | 1 |
-| Skin de Ferro | mediana plus | 0,3 | 0,225% | 0,272% | 0,306% | 0,373% | 0,477% | 1 |
-| Caixa Mineração [Tier I] | rara | 0,3 | 0,225% | 0,272% | 0,306% | 0,373% | 0,477% | 1 |
-| Caixa Recursos | rara | 0,099 | 0,0743% | 0,0899% | 0,101% | 0,123% | 0,158% | 1 |
-| Caixa Mineração [Tier II] | jackpot | 0,001 | 0,00075% | 0,00091% | 0,00102% | 0,00124% | 0,00159% | 1 |
-| **Azar** | — | 33,3333 | **25%** | 24,21% | 22,66% | 20,71% | **17,68%** | — |
+| Coins | comum | 25,4 | 19,05% | 18,59% | 17,57% | 16,3% | 14,25% | 250 |
+| Gemas | comum | 16,15 | 12,11% | 11,82% | 11,17% | 10,37% | 9,06% | 150 |
+| Coins | comum | 12,6 | 9,45% | 9,22% | 8,72% | 8,09% | 7,07% | 500 |
+| Combustível | comum | 9,75 | 7,31% | 7,14% | 6,74% | 6,26% | 5,47% | 500L |
+| Gemas | comum | 8,05 | 6,04% | 5,89% | 5,57% | 5,17% | 4,52% | 300 |
+| Chave de Boss | comum plus | 5,6 | 4,2% | 4,1% | 3,87% | 3,59% | 3,14% | 1 |
+| Coins | comum | 3,9 | 2,93% | 2,85% | 4,05% | 5,01% | 6,56% | 1.000 |
+| Limite de Armazém | comum plus | 2,7 | 2,03% | 1,98% | 2,8% | 3,47% | 4,54% | 1 |
+| Gemas | comum | 2,68 | 2,01% | 1,96% | 2,78% | 3,44% | 4,51% | 600 |
+| Explosivo 2x2 | comum | 2 | 1,5% | 1,83% | 2,08% | 2,57% | 3,37% | 1 |
+| Chave VIP | comum plus | 1,5 | 1,13% | 1,37% | 1,56% | 1,93% | 2,52% | 1 |
+| Explosivo 4x4 | comum | 1,4 | 1,05% | 1,28% | 1,45% | 1,8% | 2,36% | 1 |
+| Limite de Armazém | comum plus | 1,35 | 1,01% | 1,24% | 1,4% | 1,73% | 2,27% | 3 |
+| Limite de Máquinas | comum plus | 1,35 | 1,01% | 1,24% | 1,4% | 1,73% | 2,27% | 1 |
+| Chave RankUP | comum plus | 0,75 | 0,563% | 0,686% | 0,778% | 0,963% | 1,26% | 1 |
+| Limite de Máquinas | comum plus | 0,68 | 0,51% | 0,622% | 0,706% | 0,873% | 1,14% | 3 |
+| Limite de Armazém | comum plus | 0,45 | 0,338% | 0,412% | 0,467% | 0,578% | 0,757% | 5 |
+| Limite de Spawners | comum plus | 0,45 | 0,338% | 0,412% | 0,467% | 0,578% | 0,757% | 1 |
+| Caixa Mineração [Tier I] | mediana | 0,3 | 0,225% | 0,274% | 0,311% | 0,385% | 0,505% | 1 |
+| Capacete Mineração [Tier I] | armadura | 0,25 | 0,188% | 0,229% | 0,259% | 0,321% | 0,421% | 1 |
+| Peitoral Mineração [Tier I] | armadura | 0,25 | 0,188% | 0,229% | 0,259% | 0,321% | 0,421% | 1 |
+| Calça Mineração [Tier I] | armadura | 0,25 | 0,188% | 0,229% | 0,259% | 0,321% | 0,421% | 1 |
+| Bota Mineração [Tier I] | armadura | 0,25 | 0,188% | 0,229% | 0,259% | 0,321% | 0,421% | 1 |
+| Britadeira | mediana | 0,25 | 0,188% | 0,229% | 0,259% | 0,321% | 0,421% | 1 |
+| Limite de Máquinas | comum plus | 0,22 | 0,165% | 0,201% | 0,228% | 0,282% | 0,37% | 5 |
+| Limite de Spawners | comum plus | 0,22 | 0,165% | 0,201% | 0,228% | 0,282% | 0,37% | 3 |
+| Booster de Mineração — Gemas 2x 5m | mediana | 0,21 | 0,158% | 0,192% | 0,218% | 0,27% | 0,353% | 1 |
+| Booster de Mineração — Coins 2x 5m | mediana | 0,21 | 0,158% | 0,192% | 0,218% | 0,27% | 0,353% | 1 |
+| Skin de Pedra | mediana | 0,2 | 0,15% | 0,183% | 0,208% | 0,257% | 0,337% | 1 |
+| Explosivo 6x6 | mediana | 0,18 | 0,135% | 0,165% | 0,187% | 0,231% | 0,303% | 1 |
+| Skin de Ferro | mediana | 0,15 | 0,113% | 0,137% | 0,156% | 0,193% | 0,252% | 1 |
+| Caixa Recursos | mediana | 0,1 | 0,075% | 0,0915% | 0,104% | 0,128% | 0,168% | 1 |
+| Limite de Spawners | comum plus | 0,08 | 0,06% | 0,0732% | 0,083% | 0,103% | 0,135% | 5 |
+| Explosivo 8x8 | mediana | 0,07 | 0,0525% | 0,064% | 0,0726% | 0,0899% | 0,118% | 1 |
+| Caixa Mineração [Tier II] | jackpot | 0,05 | 0,0375% | 0,0457% | 0,0519% | 0,0642% | 0,0842% | 1 |
+| **Azar** | — | 33,3333 | **25%** | 24,4% | 23,06% | 21,4% | **18,7%** | — |
 
 ---
 
@@ -94,37 +94,37 @@ Entre os três limites o peso é **6:3:1** (armazém : máquinas : spawners), es
 
 | Item | Faixa | Peso | Base | Raro | Épico | Lendário | Mítico | Quantia |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| Coins | comum | 27,6 | 20,7% | 20,18% | 19,04% | 17,63% | 15,36% | 250 |
-| Sementes | comum | 16,8 | 12,6% | 12,28% | 11,59% | 10,73% | 9,35% | 150 |
-| Coins | comum | 13,5 | 10,13% | 9,87% | 9,31% | 8,62% | 7,51% | 500 |
-| Combustível | comum | 10,5 | 7,88% | 7,68% | 7,24% | 6,71% | 5,84% | 500L |
-| Sementes | comum | 8,4 | 6,3% | 6,14% | 5,8% | 5,37% | 4,67% | 300 |
-| Coins | comum | 3,9 | 2,93% | 2,85% | 4,04% | 4,98% | 6,51% | 1.000 |
-| Sementes | comum | 2,8 | 2,1% | 2,05% | 2,9% | 3,58% | 4,67% | 600 |
-| Limite de Armazém | comum plus | 2,7 | 2,03% | 1,97% | 2,79% | 3,45% | 4,51% | 1 |
-| Chave de Boss | comum plus | 2 | 1,5% | 1,83% | 2,07% | 2,56% | 3,34% | 1 |
-| Chave VIP | comum plus | 1,5 | 1,13% | 1,37% | 1,55% | 1,92% | 2,5% | 1 |
-| Limite de Armazém | comum plus | 1,35 | 1,01% | 1,23% | 1,4% | 1,72% | 2,25% | 3 |
-| Limite de Máquinas | comum plus | 1,35 | 1,01% | 1,23% | 1,4% | 1,72% | 2,25% | 1 |
-| Chave RankUP | comum plus | 1 | 0,75% | 0,914% | 1,03% | 1,28% | 1,67% | 1 |
-| Limite de Máquinas | comum plus | 0,68 | 0,51% | 0,621% | 0,704% | 0,869% | 1,14% | 3 |
-| Limite de Armazém | comum plus | 0,45 | 0,338% | 0,411% | 0,466% | 0,575% | 0,751% | 5 |
-| Limite de Spawners | comum plus | 0,45 | 0,338% | 0,411% | 0,466% | 0,575% | 0,751% | 1 |
-| Limite de Máquinas | comum plus | 0,22 | 0,165% | 0,201% | 0,228% | 0,281% | 0,367% | 5 |
-| Limite de Spawners | comum plus | 0,22 | 0,165% | 0,201% | 0,228% | 0,281% | 0,367% | 3 |
-| Limite de Spawners | comum plus | 0,08 | 0,06% | 0,0731% | 0,0828% | 0,102% | 0,134% | 5 |
-| Capacete Farm [Tier I] | armadura | 0,5 | 0,375% | 0,457% | 0,517% | 0,639% | 0,835% | 1 |
-| Peitoral Farm [Tier I] | armadura | 0,5 | 0,375% | 0,457% | 0,517% | 0,639% | 0,835% | 1 |
-| Calça Farm [Tier I] | armadura | 0,5 | 0,375% | 0,457% | 0,517% | 0,639% | 0,835% | 1 |
-| Bota Farm [Tier I] | armadura | 0,5 | 0,375% | 0,457% | 0,517% | 0,639% | 0,835% | 1 |
-| Booster de Fazenda — Sementes 2x 5m | mediana | 0,7 | 0,525% | 0,64% | 0,724% | 0,894% | 1,17% | 1 |
-| Booster de Fazenda — Coins 2x 5m | mediana | 0,7 | 0,525% | 0,64% | 0,724% | 0,894% | 1,17% | 1 |
-| Skin de Pedra | mediana plus | 0,4 | 0,3% | 0,366% | 0,414% | 0,511% | 0,668% | 1 |
-| Skin de Ferro | mediana plus | 0,3 | 0,225% | 0,274% | 0,31% | 0,383% | 0,501% | 1 |
-| Caixa Farm [Tier I] | rara | 0,3 | 0,225% | 0,274% | 0,31% | 0,383% | 0,501% | 1 |
-| Caixa Recursos | rara | 0,099 | 0,0743% | 0,0905% | 0,102% | 0,126% | 0,165% | 1 |
-| Caixa Farm [Tier II] | jackpot | 0,001 | 0,00075% | 0,00091% | 0,00103% | 0,00128% | 0,00167% | 1 |
-| **Azar** | — | 33,3333 | **25%** | 24,37% | 23% | 21,29% | **18,55%** | — |
+| Coins | comum | 27,17 | 20,38% | 20,03% | 19,05% | 17,88% | 15,93% | 250 |
+| Sementes | comum | 16,57 | 12,43% | 12,22% | 11,62% | 10,9% | 9,71% | 150 |
+| Coins | comum | 13,3 | 9,98% | 9,8% | 9,32% | 8,75% | 7,8% | 500 |
+| Combustível | comum | 10,45 | 7,84% | 7,7% | 7,33% | 6,88% | 6,13% | 500L |
+| Sementes | comum | 8,28 | 6,21% | 6,1% | 5,8% | 5,45% | 4,85% | 300 |
+| Chave de Boss | comum plus | 5,6 | 4,2% | 4,13% | 3,93% | 3,69% | 3,28% | 1 |
+| Coins | comum | 3,9 | 2,93% | 2,88% | 4,1% | 5,13% | 6,86% | 1.000 |
+| Sementes | comum | 2,76 | 2,07% | 2,03% | 2,9% | 3,63% | 4,85% | 600 |
+| Limite de Armazém | comum plus | 2,7 | 2,03% | 1,99% | 2,84% | 3,55% | 4,75% | 1 |
+| Chave VIP | comum plus | 1,5 | 1,13% | 1,38% | 1,58% | 1,97% | 2,64% | 1 |
+| Limite de Armazém | comum plus | 1,35 | 1,01% | 1,24% | 1,42% | 1,78% | 2,37% | 3 |
+| Limite de Máquinas | comum plus | 1,35 | 1,01% | 1,24% | 1,42% | 1,78% | 2,37% | 1 |
+| Chave RankUP | comum plus | 0,75 | 0,563% | 0,691% | 0,789% | 0,987% | 1,32% | 1 |
+| Limite de Máquinas | comum plus | 0,68 | 0,51% | 0,627% | 0,715% | 0,895% | 1,2% | 3 |
+| Limite de Armazém | comum plus | 0,45 | 0,338% | 0,415% | 0,473% | 0,592% | 0,791% | 5 |
+| Limite de Spawners | comum plus | 0,45 | 0,338% | 0,415% | 0,473% | 0,592% | 0,791% | 1 |
+| Caixa Farm [Tier I] | mediana | 0,3 | 0,225% | 0,276% | 0,315% | 0,395% | 0,528% | 1 |
+| Capacete Farm [Tier I] | armadura | 0,25 | 0,188% | 0,23% | 0,263% | 0,329% | 0,44% | 1 |
+| Peitoral Farm [Tier I] | armadura | 0,25 | 0,188% | 0,23% | 0,263% | 0,329% | 0,44% | 1 |
+| Calça Farm [Tier I] | armadura | 0,25 | 0,188% | 0,23% | 0,263% | 0,329% | 0,44% | 1 |
+| Bota Farm [Tier I] | armadura | 0,25 | 0,188% | 0,23% | 0,263% | 0,329% | 0,44% | 1 |
+| Limite de Máquinas | comum plus | 0,22 | 0,165% | 0,203% | 0,231% | 0,29% | 0,387% | 5 |
+| Limite de Spawners | comum plus | 0,22 | 0,165% | 0,203% | 0,231% | 0,29% | 0,387% | 3 |
+| Booster de Fazenda — Sementes 2x 5m | mediana | 0,21 | 0,158% | 0,194% | 0,221% | 0,276% | 0,369% | 1 |
+| Booster de Fazenda — Coins 2x 5m | mediana | 0,21 | 0,158% | 0,194% | 0,221% | 0,276% | 0,369% | 1 |
+| Skin de Pedra | mediana | 0,2 | 0,15% | 0,184% | 0,21% | 0,263% | 0,352% | 1 |
+| Skin de Ferro | mediana | 0,15 | 0,113% | 0,138% | 0,158% | 0,197% | 0,264% | 1 |
+| Caixa Recursos | mediana | 0,1 | 0,075% | 0,0921% | 0,105% | 0,132% | 0,176% | 1 |
+| Limite de Spawners | comum plus | 0,08 | 0,06% | 0,0737% | 0,0841% | 0,105% | 0,141% | 5 |
+| Caixa Farm [Tier II] | jackpot | 0,05 | 0,0375% | 0,0461% | 0,0526% | 0,0658% | 0,0879% | 1 |
+| **Azar** | — | 33,3333 | **25%** | 24,57% | 23,37% | 21,94% | **19,54%** | — |
 
 ---
 
@@ -134,37 +134,37 @@ Estrutura idêntica à Farm; só mudam a secundária, os boosters e as skins.
 
 | Item | Faixa | Peso | Base | Raro | Épico | Lendário | Mítico | Quantia |
 |---|---|---:|---:|---:|---:|---:|---:|---:|
-| Coins | comum | 27,6 | 20,7% | 20,18% | 19,04% | 17,63% | 15,36% | 250 |
-| Corais | comum | 16,8 | 12,6% | 12,28% | 11,59% | 10,73% | 9,35% | 150 |
-| Coins | comum | 13,5 | 10,13% | 9,87% | 9,31% | 8,62% | 7,51% | 500 |
-| Combustível | comum | 10,5 | 7,88% | 7,68% | 7,24% | 6,71% | 5,84% | 500L |
-| Corais | comum | 8,4 | 6,3% | 6,14% | 5,8% | 5,37% | 4,67% | 300 |
-| Coins | comum | 3,9 | 2,93% | 2,85% | 4,04% | 4,98% | 6,51% | 1.000 |
-| Corais | comum | 2,8 | 2,1% | 2,05% | 2,9% | 3,58% | 4,67% | 600 |
-| Limite de Armazém | comum plus | 2,7 | 2,03% | 1,97% | 2,79% | 3,45% | 4,51% | 1 |
-| Chave de Boss | comum plus | 2 | 1,5% | 1,83% | 2,07% | 2,56% | 3,34% | 1 |
-| Chave VIP | comum plus | 1,5 | 1,13% | 1,37% | 1,55% | 1,92% | 2,5% | 1 |
-| Limite de Armazém | comum plus | 1,35 | 1,01% | 1,23% | 1,4% | 1,72% | 2,25% | 3 |
-| Limite de Máquinas | comum plus | 1,35 | 1,01% | 1,23% | 1,4% | 1,72% | 2,25% | 1 |
-| Chave RankUP | comum plus | 1 | 0,75% | 0,914% | 1,03% | 1,28% | 1,67% | 1 |
-| Limite de Máquinas | comum plus | 0,68 | 0,51% | 0,621% | 0,704% | 0,869% | 1,14% | 3 |
-| Limite de Armazém | comum plus | 0,45 | 0,338% | 0,411% | 0,466% | 0,575% | 0,751% | 5 |
-| Limite de Spawners | comum plus | 0,45 | 0,338% | 0,411% | 0,466% | 0,575% | 0,751% | 1 |
-| Limite de Máquinas | comum plus | 0,22 | 0,165% | 0,201% | 0,228% | 0,281% | 0,367% | 5 |
-| Limite de Spawners | comum plus | 0,22 | 0,165% | 0,201% | 0,228% | 0,281% | 0,367% | 3 |
-| Limite de Spawners | comum plus | 0,08 | 0,06% | 0,0731% | 0,0828% | 0,102% | 0,134% | 5 |
-| Capacete Pesca [Tier I] | armadura | 0,5 | 0,375% | 0,457% | 0,517% | 0,639% | 0,835% | 1 |
-| Peitoral Pesca [Tier I] | armadura | 0,5 | 0,375% | 0,457% | 0,517% | 0,639% | 0,835% | 1 |
-| Calça Pesca [Tier I] | armadura | 0,5 | 0,375% | 0,457% | 0,517% | 0,639% | 0,835% | 1 |
-| Bota Pesca [Tier I] | armadura | 0,5 | 0,375% | 0,457% | 0,517% | 0,639% | 0,835% | 1 |
-| Booster de Pesca — XP 2x 5m | mediana | 0,7 | 0,525% | 0,64% | 0,724% | 0,894% | 1,17% | 1 |
-| Booster de Pesca — Corais 2x 5m | mediana | 0,7 | 0,525% | 0,64% | 0,724% | 0,894% | 1,17% | 1 |
-| Skin de Coral | mediana plus | 0,4 | 0,3% | 0,366% | 0,414% | 0,511% | 0,668% | 1 |
-| Skin de Escama | mediana plus | 0,3 | 0,225% | 0,274% | 0,31% | 0,383% | 0,501% | 1 |
-| Caixa Pesca [Tier I] | rara | 0,3 | 0,225% | 0,274% | 0,31% | 0,383% | 0,501% | 1 |
-| Caixa Recursos | rara | 0,099 | 0,0743% | 0,0905% | 0,102% | 0,126% | 0,165% | 1 |
-| Caixa Pesca [Tier II] | jackpot | 0,001 | 0,00075% | 0,00091% | 0,00103% | 0,00128% | 0,00167% | 1 |
-| **Azar** | — | 33,3333 | **25%** | 24,37% | 23% | 21,29% | **18,55%** | — |
+| Coins | comum | 27,17 | 20,38% | 20,03% | 19,05% | 17,88% | 15,93% | 250 |
+| Corais | comum | 16,57 | 12,43% | 12,22% | 11,62% | 10,9% | 9,71% | 150 |
+| Coins | comum | 13,3 | 9,98% | 9,8% | 9,32% | 8,75% | 7,8% | 500 |
+| Combustível | comum | 10,45 | 7,84% | 7,7% | 7,33% | 6,88% | 6,13% | 500L |
+| Corais | comum | 8,28 | 6,21% | 6,1% | 5,8% | 5,45% | 4,85% | 300 |
+| Chave de Boss | comum plus | 5,6 | 4,2% | 4,13% | 3,93% | 3,69% | 3,28% | 1 |
+| Coins | comum | 3,9 | 2,93% | 2,88% | 4,1% | 5,13% | 6,86% | 1.000 |
+| Corais | comum | 2,76 | 2,07% | 2,03% | 2,9% | 3,63% | 4,85% | 600 |
+| Limite de Armazém | comum plus | 2,7 | 2,03% | 1,99% | 2,84% | 3,55% | 4,75% | 1 |
+| Chave VIP | comum plus | 1,5 | 1,13% | 1,38% | 1,58% | 1,97% | 2,64% | 1 |
+| Limite de Armazém | comum plus | 1,35 | 1,01% | 1,24% | 1,42% | 1,78% | 2,37% | 3 |
+| Limite de Máquinas | comum plus | 1,35 | 1,01% | 1,24% | 1,42% | 1,78% | 2,37% | 1 |
+| Chave RankUP | comum plus | 0,75 | 0,563% | 0,691% | 0,789% | 0,987% | 1,32% | 1 |
+| Limite de Máquinas | comum plus | 0,68 | 0,51% | 0,627% | 0,715% | 0,895% | 1,2% | 3 |
+| Limite de Armazém | comum plus | 0,45 | 0,338% | 0,415% | 0,473% | 0,592% | 0,791% | 5 |
+| Limite de Spawners | comum plus | 0,45 | 0,338% | 0,415% | 0,473% | 0,592% | 0,791% | 1 |
+| Caixa Pesca [Tier I] | mediana | 0,3 | 0,225% | 0,276% | 0,315% | 0,395% | 0,528% | 1 |
+| Capacete Pesca [Tier I] | armadura | 0,25 | 0,188% | 0,23% | 0,263% | 0,329% | 0,44% | 1 |
+| Peitoral Pesca [Tier I] | armadura | 0,25 | 0,188% | 0,23% | 0,263% | 0,329% | 0,44% | 1 |
+| Calça Pesca [Tier I] | armadura | 0,25 | 0,188% | 0,23% | 0,263% | 0,329% | 0,44% | 1 |
+| Bota Pesca [Tier I] | armadura | 0,25 | 0,188% | 0,23% | 0,263% | 0,329% | 0,44% | 1 |
+| Limite de Máquinas | comum plus | 0,22 | 0,165% | 0,203% | 0,231% | 0,29% | 0,387% | 5 |
+| Limite de Spawners | comum plus | 0,22 | 0,165% | 0,203% | 0,231% | 0,29% | 0,387% | 3 |
+| Booster de Pesca — XP 2x 5m | mediana | 0,21 | 0,158% | 0,194% | 0,221% | 0,276% | 0,369% | 1 |
+| Booster de Pesca — Corais 2x 5m | mediana | 0,21 | 0,158% | 0,194% | 0,221% | 0,276% | 0,369% | 1 |
+| Skin de Coral | mediana | 0,2 | 0,15% | 0,184% | 0,21% | 0,263% | 0,352% | 1 |
+| Skin de Escama | mediana | 0,15 | 0,113% | 0,138% | 0,158% | 0,197% | 0,264% | 1 |
+| Caixa Recursos | mediana | 0,1 | 0,075% | 0,0921% | 0,105% | 0,132% | 0,176% | 1 |
+| Limite de Spawners | comum plus | 0,08 | 0,06% | 0,0737% | 0,0841% | 0,105% | 0,141% | 5 |
+| Caixa Pesca [Tier II] | jackpot | 0,05 | 0,0375% | 0,0461% | 0,0526% | 0,0658% | 0,0879% | 1 |
+| **Azar** | — | 33,3333 | **25%** | 24,57% | 23,37% | 21,94% | **19,54%** | — |
 
 ---
 
@@ -295,6 +295,32 @@ Dracmas está ancorada na escada de spawners (PIG 22 · WOLF 500 · GUARDIAN 2.2
 
 ---
 
-## 9. Ponto em aberto
+## 9. Rendimento das crates de profissão em 20.000 aberturas
+
+Os pesos saíram de uma corrida real de 20.000 chaves, não de estimativa.
+`esperado = 20.000 × peso ÷ 133,3333`:
+
+| Recompensa | Em 20.000 |
+|---|---:|
+| Chave de Boss | 840 |
+| Chave VIP | 225 |
+| Chave RankUP | 112 |
+| Explosivo 2x2 | 300 |
+| Explosivo 4x4 | 210 |
+| Caixa [Tier I] | 45 |
+| Armadura (por peça) | 37,5 |
+| Britadeira | 37,5 |
+| Booster (cada) | 31,5 |
+| Skin (a mais comum) | 30 |
+| Explosivo 6x6 | 27 |
+| Caixa Recursos | 15 |
+| Explosivo 8x8 | 10,5 |
+| Caixa [Tier II] | 7,5 |
+
+Bomba e britadeira só existem na mineração; o resto vale nas três. Os pesos de coins e da
+secundária carregam duas casas decimais porque são eles que absorvem o resto da conta para
+o arquivo fechar em 100.
+
+## 10. Ponto em aberto
 
 A família de limites da **RankUP vale 28 de peso** — o mesmo que dracmas e quase o mesmo que coins. Nas outras crates ela vale 7,5 (profissão) ou 12 (VIP). Se a regra é "limite é mais raro que moeda", essa é a crate que ainda precisa de uma decisão sobre para onde vai o peso liberado.

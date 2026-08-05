@@ -89,7 +89,7 @@ Esta é a medida que importa para balancear: o pagamento de um encantamento de �
 Duas coisas só apareceram por causa da simulação:
 
 - **O Kraken é muito maior do que parece no YML.** `reach: 10` sugere um alcance de 10 blocos, mas os braços giram 250° durante os 100 ticks da animação — então eles não cavam 6 túneis, eles varrem um **disco inteiro** de raio 10 que ainda mergulha 6 blocos. São 2.304 blocos, mais que o Wither inteiro.
-- **O Meteoro quase não se sobrepõe.** Os 40 meteoros caem em colunas sorteadas na mina inteira (`MeteorEffect.java:215`), não perto do jogador. Cada cratera cai em terreno virgem, então o raio da explosão vira quase multiplicação direta: raio 2 dava ~890 blocos, raio 3 dá ~2.870.
+- **O Meteoro quase não se sobrepõe.** Os 40 meteoros caem em colunas sorteadas na mina inteira (`MeteorEffect.java:215`), não perto do jogador. Cada cratera cai em terreno virgem, então o raio da explosão vira quase multiplicação direta — mexer no raio muda o rendimento quase na mesma proporção.
 
 ### Eficiência — o que cada encantamento entrega pelo que custa
 

@@ -38,14 +38,17 @@ key-item:
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
 # FAIXAS desta crate:
-#   comum 83,5% · comum plus 12% · armadura 2% · mediana 1,4% ·
-#   mediana plus 0,7% (skins) · rara 0,399% (caixas) · jackpot 0,001%
+#   comum 83,42 · comum plus 15,35 · armadura 1 · mediana 0,42 ·
+#   mediana plus 0,35 (skins) · rara 0,4 (caixas) · jackpot 0,05
 #
-# ⚠️ A faixa das SKINS agora e mais provavel que a das CAIXAS (0,7% contra
-# 0,399%) — e por isso ela se chama `mediana plus` e nao `raro plus`. Uma Caixa
-# Farm [Tier I] contem armadura ate T-III, skin ate diamante, forja, livros e
-# 1.000 sementes: ela vale MAIS que uma Skin de Pedra solta, entao tem que ser
-# mais rara. No arquivo a caixa vem antes da skin so por historico de edicao.
+# Os numeros acima sao PESO, nao porcentagem: multiplique por 0,75 para a chance
+# real. Os separadores de faixa la embaixo seguem a mesma unidade.
+#
+# ⚠️ As SKINS foram cortadas em 50% a pedido do dono, entao a faixa delas
+# (0,35) ficou ABAIXO da faixa das caixas (0,4) — por isso ela se chama RARISSIMA.
+# Individualmente a Caixa Farm [Tier I] (0,3) segue mais provavel que a
+# Skin de Pedra (0,2). Foi decisao de balanceamento, nao descuido: a medicao
+# de 20.000 chaves mostrou skin demais e a caixa ficou onde ja estava.
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
 # mesma tabela. Por isso o premio em coins e pequeno: no dia 1 e um empurrao
@@ -87,7 +90,7 @@ key-item:
 # todo item fisico do servidor — skin e armadura passam a quantia sorteada.
 rewards:
 
-  # -- COMUM -------------------------------------------------------- 83,5%
+  # -- COMUM ---------------------------------------------------- 82,43%
   coins-250:
     type: CURRENCY
     chance: 27.17
@@ -154,7 +157,7 @@ rewards:
       lore:
       - '&fLitros: &7{amount}L'
 
-  # -- COMUM PLUS ----------------------------------------------------- 12%
+  # -- COMUM PLUS ----------------------------------------------- 15,35%
   lim-armazem-1:
     type: COMMAND
     chance: 2.7
@@ -329,7 +332,7 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # -- ARMADURA --------------------------------------------------------- 2%
+  # -- ARMADURA ----------------------------------------------------- 1%
   armadura-i-capacete:
     type: COMMAND_ITEM
     chance: 0.25
@@ -406,7 +409,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- MEDIANA ------------------------------------------------------- 1,4%
+  # -- MEDIANA --------------------------------------------------- 0,42%
   booster-sementes-2x:
     type: COMMAND_ITEM
     chance: 0.21
@@ -449,7 +452,7 @@ rewards:
       flags:
       - HIDE_POTION_EFFECTS
 
-  # -- RARA (caixas) ----------------------------------------------- 0,399%
+  # -- RARA (caixas) ---------------------------------------------- 0,4%
   caixa-farm-i:
     type: COMMAND_ITEM
     chance: 0.3
@@ -476,7 +479,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # -- MEDIANA PLUS (skins) ------------------------------------------ 0,7%
+  # -- RARISSIMA (skins) ------------------------------------------ 0,35%
   skin-pedra:
     type: COMMAND_ITEM
     chance: 0.2
@@ -511,7 +514,7 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- JACKPOT ------------------------------------------------------- 0,001%
+  # -- JACKPOT --------------------------------------------------- 0,05%
   jackpot:
     type: COMMAND_ITEM
     chance: 0.05
@@ -525,7 +528,7 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # -- AZAR ---------------------------------------------------------- 25%
+  # -- AZAR ---------------------------- peso 33,3333 = 25% real
   # type: NONE = slot vazio de verdade. O RewardDelivery pula a entrega
   # (RewardDelivery.java:60), entao o jogador ve o giro parar aqui e nao
   # recebe absolutamente nada. Aparece no preview, some do /crates manage
