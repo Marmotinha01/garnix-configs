@@ -8,15 +8,16 @@ opened-win: '&aVocê abriu uma caixa e ganhou {reward}&a!'
 # Placeholders: {box} e {amount} no bloco · {reward} na entrada.
 opened-win-multi:
 - ''
-- '  &fx&l{amount}&fx caixas abertas:'
+- '  &fx&l{amount} &acaixas abertas!'
 - ''
+- '  &8Recompensas:'
 - '{rewards}'
 - ''
-opened-win-entry: ' &8 ▪ {reward} '
+opened-win-entry: '  &8▪ {reward} '
 
 # Mostrada quando o jogador dá SHIFT + botão direito sem caixa suficiente na mão.
 # {amount} = quantas o lote pede · {held} = quantas ele tem · {box} = a caixa.
-not-enough-boxes: '&cVocê precisa de &cx{amount} {box} &cna mão para abrir.'
+not-enough-boxes: '&cVocê precisa de &cx&l{amount} &r{box} &cna mão para abrir.'
 
 # Título do menu de confirmação ao abrir uma caixa. Placeholder: {box}
 confirm-title: 'Abrir {box}'
@@ -28,7 +29,7 @@ animation:
   win-subtitle: '{reward}'
   # Usados no lote, onde não existe UM prêmio para mostrar. Placeholder: {amount}
   win-title-multi: '&fVocê ganhou:'
-  win-subtitle-multi: '&6{amount} prêmios'
+  win-subtitle-multi: '&ax{amount} Prêmios'
 
 box-not-found: '&cCaixa &f{input} &cnão encontrada.'
 player-not-found: '&cJogador não encontrado.'
