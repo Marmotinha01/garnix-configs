@@ -144,12 +144,14 @@ Espelha a mineração. `booster-icon`, `forge-icon`, 9 skins (`pedra`→`marfim`
 `boss-icon` ×3 (→5, →8) | invocável, **empilhável (`boss-stack-radius: 5`)** | ❌ nenhuma, nem admin documentado | **chave de boss** (~5% das aberturas de crate) → ~250–300/dia |
 `swords.default` (Matadora Inicial) | 250 de dano | ✅ `/matadora` grátis | manter |
 **`swords.bruta`** 🆕 | 500 | ❌ | **crate de boss, faixa rara** |
-`swords.sombria` | 750 | ❌ só admin | dracmas + **jackpot de crate de boss** |
-`swords.ancestral` | 1500 | ❌ | **a definir** (saiu do jackpot da crate) |
-**`swords.runica`** 🆕 | 4000 | ❌ | **a definir** |
-**`swords.abissal`** 🆕 | 9000 | ❌ | **a definir** |
-**`swords.hk`** | **hit-kill — mata qualquer boss em 1 golpe** | ❌ | **site (faixa D)** + jackpot | **Mítico −** |
-`kill-stack-item` | sobe o nível da matadora, nível ilimitado no comando | ❌ | crate de boss, faixa "Bom" |
+`swords.sombria` | 750 | ❌ só admin | ✅ jackpot da crate de boss + Caixas Bosses I e II |
+`swords.ancestral` | 1500 | ❌ | ✅ Caixas Bosses I e II |
+**`swords.runica`** 🆕 | 4000 | ❌ | ✅ **Caixa Bosses II** (exclusiva) |
+**`swords.abissal`** 🆕 | 9000 | ❌ | ✅ **Caixa Bosses II** (exclusiva) |
+**`swords.hk`** | **hit-kill — mata qualquer boss em 1 golpe** | ❌ | **site (faixa D)** + jackpot da Caixa Garnix | **Mítico −** |
+`kill-stack-item` | sobe o nível da matadora, nível ilimitado no comando | ❌ | ✅ Caixas Bosses I e II + **abate de Arauto, Titã e Devorador** |
+
+⚠️ **Matadora não cai de boss** (05/08/2026, decisão do dono): a escada inteira de espada fica na Caixa Bosses I/II e na crate. Do abate sai o **Livro de Kill-Stack**, que só tem valor para quem já mata boss. Ver [15-LOOT.md §3](15-LOOT.md).
 
 ### GarnixCrates — 3 itens + as 6 chaves
 

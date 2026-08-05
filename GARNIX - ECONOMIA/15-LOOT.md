@@ -122,21 +122,27 @@ Com o nome errado, a Matadora Hit-Kill — um dos itens Mítico− — falharia 
 
 ---
 
-## 3. Bosses — de 3 idênticos para 5 por banda
+## 3. Bosses — de 3 idênticos para 5 em 3 classes
 
-Os 3 tinham blocos `rewards:` **byte-idênticos** (md5 `6ec10abf` nos três). Mesma tabela, mesmo `reward-rolls: 3`, só a vida mudava.
+Os 3 tinham blocos `rewards:` **byte-idênticos** (md5 `6ec10abf` nos três). Mesma tabela, mesmo `reward-rolls: 3`, só a vida mudava. Viraram 5, e em 05/08/2026 os 5 foram reescritos em **3 classes**.
 
-| Boss | Tipo | Banda | Vida | Coins por abate | Livro | Matadora |
-|---|---|---|---|---|---|---|
-`colosso` | MAGMA_CUBE | T1–T4 | 25.000 | 1,08×10⁴ | Massacre 2 | — |
-`inferno` | BLAZE | T5–T8 | 50.000 | 2,07×10⁷ | Massacre 2 | — |
-`arauto` | ENDERMITE | T9–T12 | 75.000 | 3,95×10¹⁰ | Ceifador 2 | Sombria |
-**`tita`** 🆕 | IRON_GOLEM | T13–T16 | 150.000 | 7,53×10¹³ | Pilhagem 2 | Ancestral |
-**`devorador`** 🆕 | WITHER | T17–T20 | 300.000 | 1,44×10¹⁷ | Pilhagem 2 | Ancestral + **Caixa Garnix** |
+> 📄 A tabela completa, com as seis faixas de cada arquivo e os valores esperados por abate, está em **[GARNIX - REORGANIZAÇÃO DA ECO/bosses.md](../GARNIX%20-%20REORGANIZAÇÃO%20DA%20ECO/bosses.md)**. O que segue é só o resumo.
 
-**Boss não é via de renda**, igual à crate — a repartição das 6 vias já soma 100%. O coins por abate é **0,01% da renda da banda**, o que com ~250 abates/dia dá **~2,5% do dia**: sentido, sem distorcer a curva.
+| Boss | Tipo | Banda | Vida | Classe | Coins por abate | Azar |
+|---|---|---|---|---|---|---:|
+`colosso` | MAGMA_CUBE | T1–T4 | 25.000 | **fácil** | 1,11×10⁴ | 25% |
+`inferno` | BLAZE | T5–T8 | 50.000 | **fácil** | 2,01×10⁷ | 25% |
+`arauto` | ENDERMITE | T9–T12 | 75.000 | **médio** | 3,38×10¹⁰ | 15% |
+`tita` | IRON_GOLEM | T13–T16 | 150.000 | **médio** | 6,01×10¹³ | 15% |
+`devorador` | WITHER | T17–T20 | 300.000 | **difícil** | 9,85×10¹⁶ | **8%** |
 
-**Os livros são o freio da temporada.** `Massacre 2` na banda baixa, `Pilhagem 2` só a partir da T13 — e `Pilhagem 3` continua exclusivo do jackpot. Livro sem gate de banda antecipa o multiplicador de todo mundo.
+**Boss não é via de renda**, igual à crate — a repartição das 6 vias já soma 100%. O coins por abate é **0,01% da renda da banda**, o que com ~250 abates/dia dá **~2,5% do dia**: sentido, sem distorcer a curva. A escada de coins não mudou na reescrita (±15%, e −9% no Devorador).
+
+**A moeda do boss é `coins` e `dracmas`, e só.** Gema, semente e coral não saem de boss nenhum, por decisão do dono — elas são o produto da crate, da caixa e da própria profissão.
+
+**Os livros são o freio da temporada, e o gate agora é a classe.** Colosso e Inferno não dão livro nenhum. Do Arauto para cima saem os **6 livros de encantamento** (Ceifador, Massacre, Pilhagem, Cobiça, Maré, Correnteza), sempre **1x e sempre nível 1** — o que escala é só a chance: 0,5% no Arauto, 0,7% no Titã, 1,0% no Devorador. Os níveis 2 e 3 continuam fora do boss.
+
+**A matadora não cai de boss.** A escada de espada é exclusiva da Caixa Bosses I/II e da crate — é o que mantém motivo para abrir a caixa. O que cai de boss é o **Livro de Kill-Stack** (1,7% · 2% · 4% + 1,7% em x2), porque ele só tem valor para quem já mata boss.
 
 ---
 
