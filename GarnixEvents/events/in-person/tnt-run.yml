@@ -109,7 +109,7 @@ messages:
       &8▎ {c}Evento {c}&lTNT Run {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/tnt-run entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &cTag [Dinamite] &8+ &6❂20 cash &8+ &dx&l10 &dChaves VIP
+      &8▶ &fPrêmios: &cTag [Dinamite] &8+ &6❂20 cash &8+ &dx&l10 &dChave VIP
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -138,7 +138,7 @@ messages:
       &r
       &8▶ &7{player} &ffoi o último de pé no TNT Run.
       &r
-      &8▪ &fPrêmios: &cTag [Dinamite] &8+ &6❂20 cash &8+ &dx&l10 &dChaves VIP
+      &8▪ &fPrêmios: &cTag [Dinamite] &8+ &6❂20 cash &8+ &dx&l10 &dChave VIP
       &r
 
   # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros

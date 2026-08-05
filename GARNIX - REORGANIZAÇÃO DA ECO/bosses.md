@@ -136,7 +136,7 @@ O **degrau em negrito vive na faixa `RECURSO BOM`**, não no recheio. Os três l
 | Faixa | Conteúdo |
 |---|---|
 | **Azar 25** | — |
-| **Moeda 26** | coins 10,8K · 21,6K · 43,2K (9 · 5,4 · 3,6) — dracmas 500 · 1.000 · 2.000 (4 · 2,4 · 1,6) |
+| **Moeda 26** | coins 1.000 · 2.000 · 4.000 (9 · 5,4 · 3,6) — dracmas 500 · 1.000 · 2.000 (4 · 2,4 · 1,6) |
 | **Recurso 26** | combustível 500L · 1.000L (8 · 4) — armazém 15 · 30 (4,8 · 2,4) — máquinas 1 · 2 (2,4 · 1,2) — spawners 10 · 20 · 30 (0,6 · 0,36 · 0,24) — Ativador de Baú (2) |
 | **Recurso bom 19** | as 4 runas x10 (3,5 cada) — chave de boss x3 (5) |
 | **Raro 3** | Boss Inferno (1,2) — chave x5 (0,8) — Caixa Recursos (0,7) — Boss Arauto (0,3) |
@@ -166,7 +166,7 @@ Topo da faixa média e o primeiro com **Limpador de Terreno**. Combustível 1.50
 | Faixa | Conteúdo |
 |---|---|
 | **Azar 8** | a menor da rede |
-| **Moeda 16** | coins 1,44×10¹⁷ · 2,88×10¹⁷ · 5,76×10¹⁷ — dracmas 3.000 · 6.000 · 12.000 |
+| **Moeda 16** | coins 15.000 · 30.000 · 60.000 — dracmas 3.000 · 6.000 · 12.000 |
 | **Recurso 17** | combustível 2.000L · 4.000L — armazém 150 · 250 — máquinas 8 · 12 — spawners 50 · 75 — Ativador — Reset de KDR |
 | **Recurso bom 26** | as 4 runas **x60 (3,2 cada)** — chave x25 (3,2) — Caixa Recursos (2,8) — Limpador (2,4) — chave x50 (1,6) — armazém 400 (1,2) — Caixa Runas (0,8) — máquina 20 / spawner 100 e 150 (0,6 · 0,4 · 0,2) |
 | **Raro 28** | Devorador x3 (5,5) — **Kill-Stack (4)** — Caixa Bosses I (3,2) — Devorador x5 (2,2) — Caixa Chaves (2,2) — **Kill-Stack x2 (1,7)** — Caixa Boosters (1,7) — chave x75 (1,5) — **os 6 livros (1,0 cada)** |
@@ -180,17 +180,23 @@ Topo da faixa média e o primeiro com **Limpador de Terreno**. Combustível 1.50
 
 ## 4. O que mudou em números
 
-### 4.1 Coins ficou praticamente igual
+### 4.1 Coins deixou de ser geométrico
 
-A escada x1 · x2 · x4 (peso 50/30/20) entrou, mas o peso da família caiu junto. O resultado é neutro — de propósito, porque coins é a moeda que já estava calibrada contra a banda de renda.
+A escada antiga ia de 10.800 a **1,44×10¹⁷**, multiplicando ~1.910× por boss. A justificativa registrada era que o coins é "0,01% da renda da banda" — mas **boss não tem gate de tier**, então nada obriga o jogador a matar o boss da banda dele. Um T1 que consegue um Devorador (crate 0,4% · Caixa Bosses I 5,25% · drop de Titã) e o mata com a Matadora Inicial leva a renda inteira de um dia T17.
 
-| Boss | Antes / abate | Agora / abate | Δ |
-|---|---:|---:|---:|
-| Colosso | 9.720 | 11.081 | +14% |
-| Inferno | 1,74×10⁷ | 2,01×10⁷ | +15% |
-| Arauto | 3,20×10¹⁰ | 3,38×10¹⁰ | +5,5% |
-| Titã | 5,87×10¹³ | 6,01×10¹³ | +2,3% |
-| Devorador | 1,08×10¹⁷ | 9,85×10¹⁶ | **−9%** |
+É o mesmo problema da crate, e a decisão passa a ser a mesma: **coins é empurrão no dia 1 e ruído depois.** A escada nova dobra a cada boss.
+
+| Boss | Antes (base) | Agora (base · x2 · x4) | Antes / abate | Agora / abate |
+|---|---:|---|---:|---:|
+| Colosso | 10.800 | 1.000 · 2.000 · 4.000 | 9.720 | **1.026** |
+| Inferno | 2,07×10⁷ | 2.000 · 4.000 · 8.000 | 1,74×10⁷ | **1.938** |
+| Arauto | 3,95×10¹⁰ | 4.000 · 8.000 · 16.000 | 3,20×10¹⁰ | **3.420** |
+| Titã | 7,53×10¹³ | 8.000 · 16.000 · 32.000 | 5,87×10¹³ | **6.384** |
+| Devorador | 1,44×10¹⁷ | 15.000 · 30.000 · 60.000 | 1,08×10¹⁷ | **10.260** |
+
+Referências: a crate paga ~117 coins por abertura e a Caixa Recursos ~350. O Colosso paga **8,8× a crate** por abate.
+
+> **O valor do boss são os ITENS** — runa, combustível, limite, chave, caixa e livro. Se o coins parecer pequeno, o ajuste é nos itens, não em voltar à escada geométrica.
 
 ### 4.2 O que subiu
 

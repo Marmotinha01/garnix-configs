@@ -202,6 +202,13 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
+  # ⚠️ OS LITROS SAO ESCRITOS A MAO, nao com {amount}. O CrateManager resolve o
+  # token com NumberFormatter.formatSuffix (CrateManager.java:404), entao 2.000
+  # renderiza "2K" e a linha sairia "2KL". O item real usa formatDecimal
+  # (FuelItemBuilder.java:37) e mostra "2.000L" — e o preview tem que bater com
+  # ele. As outras quatro crates escapam por coincidencia: 500 nao tem sufixo.
+  # O conserto duravel e o token {amount_decimal}, que hoje so existe no
+  # garnix-mystery-boxes (BoxManager.java:64).
   combustivel:
     type: COMMAND
     chance: 3
@@ -212,7 +219,7 @@ rewards:
       material: COAL
       display: '&eCombustível'
       lore:
-      - '&fLitros: &7{amount}L'
+      - '&fLitros: &72.000L'
 
   lim-maquina-30:
     type: COMMAND

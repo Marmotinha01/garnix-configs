@@ -81,8 +81,22 @@ boss-icon:
 # stack 5. O `boss give boss` recebe <stacks> <quantia> e o {amount} vai no
 # PRIMEIRO — 3x aqui e UM item com pilha 3, nao tres itens soltos.
 #
-# ⚠️ MOEDA SAI EM ESCADA DE 3 DEGRAUS (x1 · x2 · x4) com peso 50/30/20 dentro
-# da familia. O degrau base de coins continua sendo o valor antigo do boss.
+# ⚠️ COINS RECEBE O TRATAMENTO DA CRATE, nao o da banda de tier. A escada antiga
+# era geometrica — 10.800 no Colosso ate 1,44x10^17 no Devorador, ~1.910x por
+# boss — porque o 15-LOOT.md assumia que cada boss e morto dentro da banda dele.
+# So que BOSS NAO TEM GATE DE TIER: um T1 pega um Devorador da crate (0,4%), da
+# Caixa Bosses I (5,25%) ou de um Tita, mata com a Matadora Inicial, e leva a
+# renda inteira de um dia T17. E o mesmo problema que a crate tem, e a decisao e
+# a mesma que o dono ja tomou la: coins e empurrao no dia 1 e ruido depois.
+#
+# A escada nova dobra a cada boss: 1.000 · 2.000 · 4.000 · 8.000 · 15.000 de base,
+# com x2 e x4 em cima e peso 50/30/20 dentro da familia. Referencia: a crate paga
+# ~117 coins por abertura e a Caixa Recursos ~350. O Colosso paga ~1.026 por
+# abate — 8,8x a crate — e o Devorador ~10.260.
+#
+# ⚠️ O VALOR DO BOSS SAO OS ITENS, nao a moeda: runa, combustivel, limite, chave,
+# caixa e livro. Se um dia o coins do boss parecer pequeno demais, o certo e
+# mexer nos ITENS, nao em reintroduzir a escada geometrica.
 #
 # ⚠️ `chance` e PESO — RewardManager usa RandomSelector.weighted, que normaliza
 # pelo total. MAS o menu imprime o peso cru como porcentagem
@@ -130,7 +144,7 @@ rewards:
     type: CURRENCY
     chance: 6
     currency-id: coins
-    amount: '144000000000000000'
+    amount: '15000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -139,7 +153,7 @@ rewards:
     type: CURRENCY
     chance: 3.6
     currency-id: coins
-    amount: '288000000000000000'
+    amount: '30000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -148,7 +162,7 @@ rewards:
     type: CURRENCY
     chance: 2.4
     currency-id: coins
-    amount: '576000000000000000'
+    amount: '60000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -636,7 +650,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   livro-massacre:
     type: COMMAND_ITEM
@@ -654,7 +667,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   livro-pilhagem:
     type: COMMAND_ITEM
@@ -672,7 +684,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   livro-cobica:
     type: COMMAND_ITEM
@@ -691,7 +702,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   livro-mare:
     type: COMMAND_ITEM
@@ -709,7 +719,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   livro-correnteza:
     type: COMMAND_ITEM
@@ -727,7 +736,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   # -- JACKPOT --------------------------------------------------------- 5%
   caixa-bosses-ii:

@@ -62,9 +62,22 @@ boss-icon:
 # maior vazamento da tabela. A escada nova acompanha a Caixa Recursos e sobe
 # boss a boss ate 150 · 250 · 400 no Devorador.
 #
-# ⚠️ MOEDA SAI EM ESCADA DE 3 DEGRAUS (x1 · x2 · x4) com peso 50/30/20 dentro
-# da familia, o padrao das caixas. O degrau base de coins continua sendo o valor
-# antigo do boss — a escada acrescenta topo, nao rebaixa o piso.
+# ⚠️ COINS RECEBE O TRATAMENTO DA CRATE, nao o da banda de tier. A escada antiga
+# era geometrica — 10.800 no Colosso ate 1,44x10^17 no Devorador, ~1.910x por
+# boss — porque o 15-LOOT.md assumia que cada boss e morto dentro da banda dele.
+# So que BOSS NAO TEM GATE DE TIER: um T1 pega um Devorador da crate (0,4%), da
+# Caixa Bosses I (5,25%) ou de um Tita, mata com a Matadora Inicial, e leva a
+# renda inteira de um dia T17. E o mesmo problema que a crate tem, e a decisao e
+# a mesma que o dono ja tomou la: coins e empurrao no dia 1 e ruido depois.
+#
+# A escada nova dobra a cada boss: 1.000 · 2.000 · 4.000 · 8.000 · 15.000 de base,
+# com x2 e x4 em cima e peso 50/30/20 dentro da familia. Referencia: a crate paga
+# ~117 coins por abertura e a Caixa Recursos ~350. O Colosso paga ~1.026 por
+# abate — 8,8x a crate — e o Devorador ~10.260.
+#
+# ⚠️ O VALOR DO BOSS SAO OS ITENS, nao a moeda: runa, combustivel, limite, chave,
+# caixa e livro. Se um dia o coins do boss parecer pequeno demais, o certo e
+# mexer nos ITENS, nao em reintroduzir a escada geometrica.
 #
 # ⚠️ O QUE SEPARA AS CLASSES E O PISO, NAO O TETO: o Colosso e o unico boss sem
 # livro nenhum, sem caixa de tier acima no raro e com azar em 25%.
@@ -115,7 +128,7 @@ rewards:
     type: CURRENCY
     chance: 9
     currency-id: coins
-    amount: '10800'
+    amount: '1000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -124,7 +137,7 @@ rewards:
     type: CURRENCY
     chance: 5.4
     currency-id: coins
-    amount: '21600'
+    amount: '2000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -133,7 +146,7 @@ rewards:
     type: CURRENCY
     chance: 3.6
     currency-id: coins
-    amount: '43200'
+    amount: '4000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

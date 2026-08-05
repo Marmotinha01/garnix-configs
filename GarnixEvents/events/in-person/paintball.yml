@@ -193,7 +193,7 @@ messages:
       &8▎ {c}Evento {c}&lPaintball {c}iniciando!
       &8▎ &fParticipe clicando &a&l<click:run_command:/paintball entrar><hover:show_text:&fClique para entrar no evento.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &aTag [Chroma] &8+ &6❂25 cash &8+ &dx&l15 &dChaves VIP
+      &8▶ &fPrêmios: &aTag [Chroma] &8+ &6❂25 cash &8+ &dx&l15 &dChave VIP
       &r
       &8▪ &fParticipantes: &7{count}
       &8▪ &fEntradas fecham em &7{seconds}s
@@ -222,7 +222,7 @@ messages:
       &r
       &8▶ &7{player} &ffoi o último de pé no Paintball.
       &r
-      &8▪ &fPrêmios: &aTag [Chroma] &8+ &6❂25 cash &8+ &dx&l15 &dChaves VIP
+      &8▪ &fPrêmios: &aTag [Chroma] &8+ &6❂25 cash &8+ &dx&l15 &dChave VIP
       &r
 
   # {player} sobrou sozinho depois que as entradas já tinham fechado — os outros

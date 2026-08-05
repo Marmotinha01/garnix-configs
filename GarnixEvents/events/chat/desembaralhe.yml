@@ -14,7 +14,7 @@ display: '&e&lDESEMBARALHE'
 # o evento inteiro é editar esta linha e mais nada.
 color: '&e'
 
-start-time: 3s
+start-time: 5s
 duration: 45s
 # De quantos em quantos segundos a palavra embaralhada é REENVIADA enquanto ninguém
 # acerta — o chat anda rápido e quem chegou no meio da rodada não viu o embaralhado.
@@ -55,10 +55,16 @@ palavras:
 # Recompensa do vencedor. Banda: CHAT — chat rapido — se ganha digitando, o de menor atrito do servidor.
 #
 # Nada em coins de proposito: evento nao tem gate de tier, entao um valor fixo
-# seria enorme no dia 1 e po no dia 5. Cash, chave e caixa sao neutros em tier.
+# seria enorme no dia 1 e po no dia 5. Chave e caixa sao neutros em tier.
+#
+# ⚠️ EVENTO DE CHAT NAO DA CASH, por decisao do dono. O cash fica com os eventos
+# presenciais, que pedem deslocamento e disputa de verdade. Aqui o premio e chave,
+# e so — este e o evento de menor atrito do servidor, entao ele tem o menor
+# premio tambem. O bolao e a unica excecao do grupo: la nao ha bloco 
+ewards:,
+# a moeda e a taxa sao escolhidas pela staff ao iniciar e o vencedor leva o pote.
 #
 rewards:
-- cash add {player} 10
 - crates givekey vip {player} 5
 
 # -- COMO ESCREVER AS MENSAGENS ----------------------------------------
@@ -105,7 +111,7 @@ messages:
       &8▎ {c}Evento {c}&lDesembaralhe {c}iniciando!
       &8▎ &fResponda clicando &a&l<click:suggest_command:/desembaralhe ><hover:show_text:&fClique para já digitar &7/desembaralhe &fno chat.>AQUI</hover></click>&f.
       &r
-      &8▶ &fPrêmios: &6❂10 cash &8+ &dx&l5 &dChaves VIP
+      &8▶ &fPrêmio: &dx&l5 &dChave VIP
       &r
       &8▪ &fRevela em: &7{seconds}s
       &r
@@ -138,7 +144,7 @@ messages:
       &8▶ &7{player} &fdesembaralhou a palavra primeiro.
       &r
       &8▪ &fResposta: &7{answer}
-      &8▪ &fPrêmios: &6❂10 cash &8+ &dx&l5 &dChaves VIP
+      &8▪ &fPrêmio: &dx&l5 &dChave VIP
       &r
 # {answer} a resposta que ninguém acertou
   no-winner: |2

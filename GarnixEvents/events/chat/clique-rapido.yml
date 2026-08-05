@@ -16,7 +16,7 @@ display: '&2&lCLIQUE RAPIDO'
 # o evento inteiro é editar esta linha e mais nada.
 color: '&2'
 
-start-time: 3s
+start-time: 5s
 duration: 20s
 # De quantos em quantos segundos a grade é REDESENHADA enquanto ninguém clica no X
 # verde — o chat anda rápido e a grade sobe. O X verde vai para outro lugar, mas o
@@ -41,10 +41,16 @@ grid:
 # Recompensa do vencedor. Banda: CHAT — chat rapido — se ganha digitando, o de menor atrito do servidor.
 #
 # Nada em coins de proposito: evento nao tem gate de tier, entao um valor fixo
-# seria enorme no dia 1 e po no dia 5. Cash, chave e caixa sao neutros em tier.
+# seria enorme no dia 1 e po no dia 5. Chave e caixa sao neutros em tier.
+#
+# ⚠️ EVENTO DE CHAT NAO DA CASH, por decisao do dono. O cash fica com os eventos
+# presenciais, que pedem deslocamento e disputa de verdade. Aqui o premio e chave,
+# e so — este e o evento de menor atrito do servidor, entao ele tem o menor
+# premio tambem. O bolao e a unica excecao do grupo: la nao ha bloco 
+ewards:,
+# a moeda e a taxa sao escolhidas pela staff ao iniciar e o vencedor leva o pote.
 #
 rewards:
-- cash add {player} 10
 - crates givekey vip {player} 5
 
 # -- COMO ESCREVER AS MENSAGENS ----------------------------------------
@@ -91,7 +97,7 @@ messages:
       &8▎ {c}Evento {c}&lClique Rápido {c}iniciando!
       &8▎ &fPrepare o mouse e clique no &aX verde&f.
       &r
-      &8▶ &fPrêmios: &6❂10 cash &8+ &dx&l5 &dChaves VIP
+      &8▶ &fPrêmio: &dx&l5 &dChave VIP
       &r
       &8▪ &fRevela em: &7{seconds}s
       &r
@@ -120,7 +126,7 @@ messages:
       &r
       &8▶ &7{player} &fachou o &aX verde &fprimeiro.
       &r
-      &8▪ &fPrêmios: &6❂10 cash &8+ &dx&l5 &dChaves VIP
+      &8▪ &fPrêmio: &dx&l5 &dChave VIP
       &r
   no-winner: |2
 

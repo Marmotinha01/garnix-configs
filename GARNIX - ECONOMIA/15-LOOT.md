@@ -128,15 +128,25 @@ Os 3 tinham blocos `rewards:` **byte-idênticos** (md5 `6ec10abf` nos três). Me
 
 > 📄 A tabela completa, com as seis faixas de cada arquivo e os valores esperados por abate, está em **[GARNIX - REORGANIZAÇÃO DA ECO/bosses.md](../GARNIX%20-%20REORGANIZAÇÃO%20DA%20ECO/bosses.md)**. O que segue é só o resumo.
 
-| Boss | Tipo | Banda | Vida | Classe | Coins por abate | Azar |
-|---|---|---|---|---|---|---:|
-`colosso` | MAGMA_CUBE | T1–T4 | 25.000 | **fácil** | 1,11×10⁴ | 25% |
-`inferno` | BLAZE | T5–T8 | 50.000 | **fácil** | 2,01×10⁷ | 25% |
-`arauto` | ENDERMITE | T9–T12 | 75.000 | **médio** | 3,38×10¹⁰ | 15% |
-`tita` | IRON_GOLEM | T13–T16 | 150.000 | **médio** | 6,01×10¹³ | 15% |
-`devorador` | WITHER | T17–T20 | 300.000 | **difícil** | 9,85×10¹⁶ | **8%** |
+| Boss | Tipo | Banda | Vida | Classe | Coins (base · x2 · x4) | Por abate | Azar |
+|---|---|---|---|---|---|---:|---:|
+`colosso` | MAGMA_CUBE | T1–T4 | 25.000 | **fácil** | 1.000 · 2.000 · 4.000 | 1.026 | 25% |
+`inferno` | BLAZE | T5–T8 | 50.000 | **fácil** | 2.000 · 4.000 · 8.000 | 1.938 | 25% |
+`arauto` | ENDERMITE | T9–T12 | 75.000 | **médio** | 4.000 · 8.000 · 16.000 | 3.420 | 15% |
+`tita` | IRON_GOLEM | T13–T16 | 150.000 | **médio** | 8.000 · 16.000 · 32.000 | 6.384 | 15% |
+`devorador` | WITHER | T17–T20 | 300.000 | **difícil** | 15.000 · 30.000 · 60.000 | 10.260 | **8%** |
 
-**Boss não é via de renda**, igual à crate — a repartição das 6 vias já soma 100%. O coins por abate é **0,01% da renda da banda**, o que com ~250 abates/dia dá **~2,5% do dia**: sentido, sem distorcer a curva. A escada de coins não mudou na reescrita (±15%, e −9% no Devorador).
+### 🚩 O coins do boss recebe o tratamento da crate, não o da banda
+
+A escada anterior era geométrica — **10.800 no Colosso até 1,44×10¹⁷ no Devorador**, ~1.910× por boss — sob a justificativa de que o coins é "0,01% da renda da banda". **Essa justificativa não se sustenta: boss não tem gate de tier.**
+
+Um T1 pega um Devorador da crate (0,4%), da Caixa Bosses I (5,25%) ou de um Titã, mata com a Matadora Inicial em ~1.200 golpes, e leva **a renda inteira de um dia T17**. É exatamente o problema que a crate tem, e a decisão passa a ser a mesma que já vale lá (§1): *coins é relevante no dia 1 e ruído depois*.
+
+A escada nova **dobra a cada boss**, com base 1.000 → 15.000. Referências: a crate paga ~117 coins por abertura e a Caixa Recursos ~350. O Colosso paga **8,8× a crate** por abate, e o Devorador ~10.260.
+
+> **O valor do boss são os ITENS** — runa, combustível, limite, chave, caixa e livro. Se o coins do boss parecer pequeno, o ajuste é nos itens, não em voltar à escada geométrica.
+
+**Boss não é via de renda**, igual à crate — a repartição das 6 vias já soma 100%.
 
 **A moeda do boss é `coins` e `dracmas`, e só.** Gema, semente e coral não saem de boss nenhum, por decisão do dono — elas são o produto da crate, da caixa e da própria profissão.
 
