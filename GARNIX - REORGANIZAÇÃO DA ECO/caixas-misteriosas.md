@@ -41,33 +41,28 @@
 
 | Item | Grupo | Peso | Chance | Quantia |
 |---|---|---:|---:|---:|
-| Capacete Mineração [Tier I] | armadura | 5,5 | 5,5% | 1 |
-| Peitoral Mineração [Tier I] | armadura | 5,5 | 5,5% | 1 |
-| Calça Mineração [Tier I] | armadura | 5,5 | 5,5% | 1 |
-| Bota Mineração [Tier I] | armadura | 5,5 | 5,5% | 1 |
-| Capacete Mineração [Tier II] | armadura | 4,5 | 4,5% | 1 |
-| Peitoral Mineração [Tier II] | armadura | 4,5 | 4,5% | 1 |
-| Calça Mineração [Tier II] | armadura | 4,5 | 4,5% | 1 |
-| Bota Mineração [Tier II] | armadura | 4,5 | 4,5% | 1 |
-| Capacete Mineração [Tier III] | armadura | 2,75 | 2,75% | 1 |
-| Peitoral Mineração [Tier III] | armadura | 2,75 | 2,75% | 1 |
-| Calça Mineração [Tier III] | armadura | 2,75 | 2,75% | 1 |
-| Bota Mineração [Tier III] | armadura | 2,75 | 2,75% | 1 |
-| Forja de Skins | utilitário | 8 | 8% | 1 |
-| Explosivo 2x2 | utilitário | 7 | 7% | 1 |
-| Explosivo 4x4 | utilitário | 3 | 3% | 1 |
-| Britadeira | utilitário | 2,5 | 2,5% | 1 |
-| Skin de Pedra | skin | 5 | 5% | 1 |
-| Skin de Ferro | skin | 4 | 4% | 1 |
-| Skin de Ouro | skin | 2,5 | 2,5% | 1 |
-| Skin de Diamante | skin | 2 | 2% | 1 |
-| Gemas | economia | 4,5 | 4,5% | 1.000 |
-| Livro de Ceifador | livro | 2,5 | 2,5% | 1 |
-| Livro de Massacre | livro | 2,5 | 2,5% | 1 |
-| Livro de Pilhagem | livro | 2,5 | 2,5% | 1 |
-| Booster de Mineração 2x 5m | booster | 1,5 | 1,5% | 1 |
-| Booster de Mineração 2x 10m | booster | 1 | 1% | 1 |
-| Caixa Mineração [Tier II] | caixa | 0,5 | 0,5% | 1 |
+| Capacete Mineração [Tier II] | armadura | 6,16 | 6,16% | 1 |
+| Peitoral Mineração [Tier II] | armadura | 6,16 | 6,16% | 1 |
+| Calça Mineração [Tier II] | armadura | 6,16 | 6,16% | 1 |
+| Bota Mineração [Tier II] | armadura | 6,16 | 6,16% | 1 |
+| Capacete Mineração [Tier III] | armadura | 3,77 | 3,77% | 1 |
+| Peitoral Mineração [Tier III] | armadura | 3,77 | 3,77% | 1 |
+| Calça Mineração [Tier III] | armadura | 3,77 | 3,77% | 1 |
+| Bota Mineração [Tier III] | armadura | 3,77 | 3,77% | 1 |
+| Forja de Skins | utilitário | 11 | 11% | 1 |
+| Explosivo 2x2 | utilitário | 9,59 | 9,59% | 1 |
+| Explosivo 4x4 | utilitário | 4,11 | 4,11% | 1 |
+| Britadeira | utilitário | 3,42 | 3,42% | 1 |
+| Skin de Ferro | skin | 5,48 | 5,48% | 1 |
+| Skin de Ouro | skin | 3,42 | 3,42% | 1 |
+| Skin de Diamante | skin | 2,74 | 2,74% | 1 |
+| Gemas | economia | 6,16 | 6,16% | 1.000 |
+| Livro de Ceifador | livro | 3,42 | 3,42% | 1 |
+| Livro de Massacre | livro | 3,42 | 3,42% | 1 |
+| Livro de Pilhagem | livro | 3,42 | 3,42% | 1 |
+| Booster de Mineração 2x 5m | booster | 2,05 | 2,05% | 1 |
+| Booster de Mineração 2x 10m | booster | 1,37 | 1,37% | 1 |
+| Caixa Mineração [Tier II] | caixa | 0,68 | 0,68% | 1 |
 
 ---
 
@@ -75,30 +70,25 @@
 
 | Item | Grupo | Peso | Chance | Quantia |
 |---|---|---:|---:|---:|
-| Capacete Farm [Tier I] | armadura | 6,75 | 6,75% | 1 |
-| Peitoral Farm [Tier I] | armadura | 6,75 | 6,75% | 1 |
-| Calça Farm [Tier I] | armadura | 6,75 | 6,75% | 1 |
-| Bota Farm [Tier I] | armadura | 6,75 | 6,75% | 1 |
-| Capacete Farm [Tier II] | armadura | 5 | 5% | 1 |
-| Peitoral Farm [Tier II] | armadura | 5 | 5% | 1 |
-| Calça Farm [Tier II] | armadura | 5 | 5% | 1 |
-| Bota Farm [Tier II] | armadura | 5 | 5% | 1 |
-| Capacete Farm [Tier III] | armadura | 3,25 | 3,25% | 1 |
-| Peitoral Farm [Tier III] | armadura | 3,25 | 3,25% | 1 |
-| Calça Farm [Tier III] | armadura | 3,25 | 3,25% | 1 |
-| Bota Farm [Tier III] | armadura | 3,25 | 3,25% | 1 |
-| Forja de Skins | utilitário | 9,5 | 9,5% | 1 |
-| Skin de Pedra | skin | 5 | 5% | 1 |
-| Skin de Ferro | skin | 4 | 4% | 1 |
-| Skin de Ouro | skin | 3 | 3% | 1 |
-| Skin de Diamante | skin | 2 | 2% | 1 |
-| Sementes | economia | 6 | 6% | 1.000 |
-| Livro de Ceifador | livro | 2,5 | 2,5% | 1 |
-| Livro de Massacre | livro | 2,5 | 2,5% | 1 |
-| Livro de Pilhagem | livro | 2,5 | 2,5% | 1 |
-| Booster de Fazenda 2x 5m | booster | 1,5 | 1,5% | 1 |
-| Booster de Fazenda 2x 10m | booster | 1 | 1% | 1 |
-| Caixa Farm [Tier II] | caixa | 0,5 | 0,5% | 1 |
+| Capacete Farm [Tier II] | armadura | 7,35 | 7,35% | 1 |
+| Peitoral Farm [Tier II] | armadura | 7,35 | 7,35% | 1 |
+| Calça Farm [Tier II] | armadura | 7,35 | 7,35% | 1 |
+| Bota Farm [Tier II] | armadura | 7,35 | 7,35% | 1 |
+| Capacete Farm [Tier III] | armadura | 4,78 | 4,78% | 1 |
+| Peitoral Farm [Tier III] | armadura | 4,78 | 4,78% | 1 |
+| Calça Farm [Tier III] | armadura | 4,78 | 4,78% | 1 |
+| Bota Farm [Tier III] | armadura | 4,78 | 4,78% | 1 |
+| Forja de Skins | utilitário | 13,97 | 13,97% | 1 |
+| Skin de Ferro | skin | 5,88 | 5,88% | 1 |
+| Skin de Ouro | skin | 4,41 | 4,41% | 1 |
+| Skin de Diamante | skin | 2,94 | 2,94% | 1 |
+| Sementes | economia | 8,82 | 8,82% | 1.000 |
+| Livro de Ceifador | livro | 3,68 | 3,68% | 1 |
+| Livro de Massacre | livro | 3,68 | 3,68% | 1 |
+| Livro de Pilhagem | livro | 3,68 | 3,68% | 1 |
+| Booster de Fazenda 2x 5m | booster | 2,21 | 2,21% | 1 |
+| Booster de Fazenda 2x 10m | booster | 1,47 | 1,47% | 1 |
+| Caixa Farm [Tier II] | caixa | 0,74 | 0,74% | 1 |
 
 ---
 
@@ -106,30 +96,25 @@
 
 | Item | Grupo | Peso | Chance | Quantia |
 |---|---|---:|---:|---:|
-| Capacete Pesca [Tier I] | armadura | 6 | 6% | 1 |
-| Peitoral Pesca [Tier I] | armadura | 6 | 6% | 1 |
-| Calça Pesca [Tier I] | armadura | 6 | 6% | 1 |
-| Bota Pesca [Tier I] | armadura | 6 | 6% | 1 |
-| Capacete Pesca [Tier II] | armadura | 5,25 | 5,25% | 1 |
-| Peitoral Pesca [Tier II] | armadura | 5,25 | 5,25% | 1 |
-| Calça Pesca [Tier II] | armadura | 5,25 | 5,25% | 1 |
-| Bota Pesca [Tier II] | armadura | 5,25 | 5,25% | 1 |
-| Capacete Pesca [Tier III] | armadura | 3 | 3% | 1 |
-| Peitoral Pesca [Tier III] | armadura | 3 | 3% | 1 |
-| Calça Pesca [Tier III] | armadura | 3 | 3% | 1 |
-| Bota Pesca [Tier III] | armadura | 3 | 3% | 1 |
-| Forja de Skins | utilitário | 9 | 9% | 1 |
-| Skin de Coral | skin | 5,5 | 5,5% | 1 |
-| Skin de Escama | skin | 4,5 | 4,5% | 1 |
-| Skin de Prata | skin | 3 | 3% | 1 |
-| Skin de Turquesa | skin | 2 | 2% | 1 |
-| Corais | economia | 5,5 | 5,5% | 1.000 |
-| Livro de Cobiça | livro | 3 | 3% | 1 |
-| Livro de Maré | livro | 3 | 3% | 1 |
-| Livro de Correnteza | livro | 3 | 3% | 1 |
-| Booster de Pesca 2x 5m | booster | 2,5 | 2,5% | 1 |
-| Booster de Pesca 2x 10m | booster | 1,5 | 1,5% | 1 |
-| Caixa Pesca [Tier II] | caixa | 0,5 | 0,5% | 1 |
+| Capacete Pesca [Tier II] | armadura | 7,45 | 7,45% | 1 |
+| Peitoral Pesca [Tier II] | armadura | 7,45 | 7,45% | 1 |
+| Calça Pesca [Tier II] | armadura | 7,45 | 7,45% | 1 |
+| Bota Pesca [Tier II] | armadura | 7,45 | 7,45% | 1 |
+| Capacete Pesca [Tier III] | armadura | 4,26 | 4,26% | 1 |
+| Peitoral Pesca [Tier III] | armadura | 4,26 | 4,26% | 1 |
+| Calça Pesca [Tier III] | armadura | 4,26 | 4,26% | 1 |
+| Bota Pesca [Tier III] | armadura | 4,26 | 4,26% | 1 |
+| Forja de Skins | utilitário | 12,71 | 12,71% | 1 |
+| Skin de Escama | skin | 6,38 | 6,38% | 1 |
+| Skin de Prata | skin | 4,26 | 4,26% | 1 |
+| Skin de Turquesa | skin | 2,84 | 2,84% | 1 |
+| Corais | economia | 7,8 | 7,8% | 1.000 |
+| Livro de Cobiça | livro | 4,26 | 4,26% | 1 |
+| Livro de Maré | livro | 4,26 | 4,26% | 1 |
+| Livro de Correnteza | livro | 4,26 | 4,26% | 1 |
+| Booster de Pesca 2x 5m | booster | 3,55 | 3,55% | 1 |
+| Booster de Pesca 2x 10m | booster | 2,13 | 2,13% | 1 |
+| Caixa Pesca [Tier II] | caixa | 0,71 | 0,71% | 1 |
 
 ---
 

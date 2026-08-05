@@ -492,8 +492,9 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l2&a% Coins '
-      - '&8 ▪ &5+&l1&5% Sementes '
+      - '&8 ▪ &a+&l2&a% &aCoins '
+      - '&8 ▪ &a+&l2&a% &5Sementes '
+      - '&8 ▪ &a+&l2&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -509,8 +510,9 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l5&a% Coins '
-      - '&8 ▪ &5+&l3&5% Sementes '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l5&a% &5Sementes '
+      - '&8 ▪ &a+&l5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 

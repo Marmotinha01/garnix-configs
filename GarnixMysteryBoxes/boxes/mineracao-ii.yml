@@ -301,7 +301,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l20&a% &aCoins '
-      - '&8 ▪ &a+&l12&a% &dGemas '
+      - '&8 ▪ &a+&l20&a% &dGemas '
+      - '&8 ▪ &a+&l20&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -318,7 +319,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l28&a% &aCoins '
-      - '&8 ▪ &a+&l17&a% &dGemas '
+      - '&8 ▪ &a+&l28&a% &dGemas '
+      - '&8 ▪ &a+&l28&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -336,7 +338,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l38&a% &aCoins '
-      - '&8 ▪ &a+&l25&a% &dGemas '
+      - '&8 ▪ &a+&l38&a% &dGemas '
+      - '&8 ▪ &a+&l38&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -354,7 +357,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l50&a% &aCoins '
-      - '&8 ▪ &a+&l34&a% &dGemas '
+      - '&8 ▪ &a+&l50&a% &dGemas '
+      - '&8 ▪ &a+&l50&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -372,7 +376,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l65&a% &aCoins '
-      - '&8 ▪ &a+&l45&a% &dGemas '
+      - '&8 ▪ &a+&l65&a% &dGemas '
+      - '&8 ▪ &a+&l65&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 

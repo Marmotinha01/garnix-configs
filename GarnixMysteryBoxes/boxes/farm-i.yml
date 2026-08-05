@@ -45,87 +45,9 @@ box-item:
 # linha, sem nenhuma linha extra.
 rewards:
 
-  # -- ARMADURA TIER I --------------------------------------------- 27%
-  armadura-i-capacete:
-    type: COMMAND_ITEM
-    chance: 6.75
-    display: '&7Capacete Farm &7[Tier &lI&7]'
-    command: fazenda givearmor {player} tier-i_helmet {amount}
-    amount: 1
-    icon:
-      material: LEATHER_HELMET
-      color: '#AAAAAA'
-      display: '&7Capacete Farm &7[Tier &lI&7]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l1.5&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      - '&8 ▪ &a+&l1&a% &bXP '
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-i-peitoral:
-    type: COMMAND_ITEM
-    chance: 6.75
-    display: '&7Peitoral Farm &7[Tier &lI&7]'
-    command: fazenda givearmor {player} tier-i_chestplate {amount}
-    amount: 1
-    icon:
-      material: LEATHER_CHESTPLATE
-      color: '#AAAAAA'
-      display: '&7Peitoral Farm &7[Tier &lI&7]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l1.5&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      - '&8 ▪ &a+&l1&a% &bXP '
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-i-calca:
-    type: COMMAND_ITEM
-    chance: 6.75
-    display: '&7Calça Farm &7[Tier &lI&7]'
-    command: fazenda givearmor {player} tier-i_leggings {amount}
-    amount: 1
-    icon:
-      material: LEATHER_LEGGINGS
-      color: '#AAAAAA'
-      display: '&7Calça Farm &7[Tier &lI&7]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l1.5&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      - '&8 ▪ &a+&l1&a% &bXP '
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-i-bota:
-    type: COMMAND_ITEM
-    chance: 6.75
-    display: '&7Bota Farm &7[Tier &lI&7]'
-    command: fazenda givearmor {player} tier-i_boots {amount}
-    amount: 1
-    icon:
-      material: LEATHER_BOOTS
-      color: '#AAAAAA'
-      display: '&7Bota Farm &7[Tier &lI&7]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l1.5&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      - '&8 ▪ &a+&l1&a% &bXP '
-      flags:
-      - HIDE_ATTRIBUTES
-
-  # -- ARMADURA TIER II -------------------------------------------- 20%
   armadura-ii-capacete:
     type: COMMAND_ITEM
-    chance: 5
+    chance: 7.35
     display: '&aCapacete Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_helmet {amount}
     amount: 1
@@ -144,7 +66,7 @@ rewards:
 
   armadura-ii-peitoral:
     type: COMMAND_ITEM
-    chance: 5
+    chance: 7.35
     display: '&aPeitoral Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_chestplate {amount}
     amount: 1
@@ -163,7 +85,7 @@ rewards:
 
   armadura-ii-calca:
     type: COMMAND_ITEM
-    chance: 5
+    chance: 7.35
     display: '&aCalça Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_leggings {amount}
     amount: 1
@@ -182,7 +104,7 @@ rewards:
 
   armadura-ii-bota:
     type: COMMAND_ITEM
-    chance: 5
+    chance: 7.35
     display: '&aBota Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_boots {amount}
     amount: 1
@@ -198,11 +120,11 @@ rewards:
       - '&8 ▪ &a+&l2&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
-
   # -- ARMADURA TIER III ------------------------------------------- 13%
+
   armadura-iii-capacete:
     type: COMMAND_ITEM
-    chance: 3.25
+    chance: 4.78
     display: '&bCapacete Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_helmet {amount}
     amount: 1
@@ -221,7 +143,7 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND_ITEM
-    chance: 3.25
+    chance: 4.78
     display: '&bPeitoral Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_chestplate {amount}
     amount: 1
@@ -240,7 +162,7 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND_ITEM
-    chance: 3.25
+    chance: 4.78
     display: '&bCalça Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_leggings {amount}
     amount: 1
@@ -259,7 +181,7 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND_ITEM
-    chance: 3.25
+    chance: 4.78
     display: '&bBota Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_boots {amount}
     amount: 1
@@ -275,28 +197,11 @@ rewards:
       - '&8 ▪ &a+&l3.5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
-
   # -- SKINS ------------------------------------------------------- 14%
-  skin-pedra:
-    type: COMMAND_ITEM
-    chance: 5
-    display: '&7Skin de Pedra'
-    command: fazenda giveskin {player} pedra {amount}
-    amount: 1
-    icon:
-      material: STONE_HOE
-      display: '&7Skin de Pedra'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l2&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      flags:
-      - HIDE_ATTRIBUTES
 
   skin-ferro:
     type: COMMAND_ITEM
-    chance: 4
+    chance: 5.88
     display: '&fSkin de Ferro'
     command: fazenda giveskin {player} ferro {amount}
     amount: 1
@@ -307,13 +212,14 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &aCoins '
-      - '&8 ▪ &a+&l3&a% &5Sementes '
+      - '&8 ▪ &a+&l5&a% &5Sementes '
+      - '&8 ▪ &a+&l5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
   skin-ouro:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 4.41
     display: '&6Skin de Ouro'
     command: fazenda giveskin {player} ouro {amount}
     amount: 1
@@ -324,13 +230,14 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l9&a% &aCoins '
-      - '&8 ▪ &a+&l5&a% &5Sementes '
+      - '&8 ▪ &a+&l9&a% &5Sementes '
+      - '&8 ▪ &a+&l9&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
   skin-diamante:
     type: COMMAND_ITEM
-    chance: 2
+    chance: 2.94
     display: '&bSkin de Diamante'
     command: fazenda giveskin {player} diamante {amount}
     amount: 1
@@ -341,13 +248,14 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l14&a% &aCoins '
-      - '&8 ▪ &a+&l8&a% &5Sementes '
+      - '&8 ▪ &a+&l14&a% &5Sementes '
+      - '&8 ▪ &a+&l14&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
   forja:
     type: COMMAND_ITEM
-    chance: 9.5
+    chance: 13.97
     display: '&eForja de Skins'
     command: fazenda giveforge {player} {amount}
     amount: 1
@@ -362,17 +270,17 @@ rewards:
 
   secundaria:
     type: CURRENCY
-    chance: 6
+    chance: 8.82
     currency-id: sementes
     amount: '1000'
     icon:
       lore:
       - '&fValor: &5❋{amount}'
-
   # -- BOOSTERS --------------------------------------------------- 2,5%
+
   booster-2x-5m:
     type: COMMAND_ITEM
-    chance: 1.5
+    chance: 2.21
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 5m {amount}
     amount: 1
@@ -393,7 +301,7 @@ rewards:
 
   booster-2x-10m:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 1.47
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 10m {amount}
     amount: 1
@@ -411,11 +319,11 @@ rewards:
       - ' &8▪ &fDuração: &710m '
       flags:
       - HIDE_POTION_EFFECTS
-
   # -- LIVROS ----------------------------------------------------- 7,5%
+
   livro-ceifador:
     type: COMMAND_ITEM
-    chance: 2.5
+    chance: 3.68
     display: '&dLivro de Ceifador'
     command: lamina givebook {player} ceifador 1 {amount}
     amount: 1
@@ -432,7 +340,7 @@ rewards:
 
   livro-massacre:
     type: COMMAND_ITEM
-    chance: 2.5
+    chance: 3.68
     display: '&4Livro de Massacre'
     command: lamina givebook {player} massacre 1 {amount}
     amount: 1
@@ -449,7 +357,7 @@ rewards:
 
   livro-pilhagem:
     type: COMMAND_ITEM
-    chance: 2.5
+    chance: 3.68
     display: '&aLivro de Pilhagem'
     command: lamina givebook {player} pilhagem 1 {amount}
     amount: 1
@@ -463,11 +371,11 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-
   # -- O DEGRAU PARA A TIER II
+
   caixa-farm-ii:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 0.74
     display: '&aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
     amount: 1

@@ -58,7 +58,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l28&a% &aCoins '
-      - '&8 ▪ &a+&l17&a% &dGemas '
+      - '&8 ▪ &a+&l28&a% &dGemas '
+      - '&8 ▪ &a+&l28&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -76,7 +77,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l38&a% &aCoins '
-      - '&8 ▪ &a+&l25&a% &dGemas '
+      - '&8 ▪ &a+&l38&a% &dGemas '
+      - '&8 ▪ &a+&l38&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -94,7 +96,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l50&a% &aCoins '
-      - '&8 ▪ &a+&l34&a% &dGemas '
+      - '&8 ▪ &a+&l50&a% &dGemas '
+      - '&8 ▪ &a+&l50&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -112,7 +115,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l65&a% &aCoins '
-      - '&8 ▪ &a+&l45&a% &dGemas '
+      - '&8 ▪ &a+&l65&a% &dGemas '
+      - '&8 ▪ &a+&l65&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -130,7 +134,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l28&a% &aCoins '
-      - '&8 ▪ &a+&l17&a% &5Sementes '
+      - '&8 ▪ &a+&l28&a% &5Sementes '
+      - '&8 ▪ &a+&l28&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -150,7 +155,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l38&a% &aCoins '
-      - '&8 ▪ &a+&l25&a% &5Sementes '
+      - '&8 ▪ &a+&l38&a% &5Sementes '
+      - '&8 ▪ &a+&l38&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -168,7 +174,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l50&a% &aCoins '
-      - '&8 ▪ &a+&l34&a% &5Sementes '
+      - '&8 ▪ &a+&l50&a% &5Sementes '
+      - '&8 ▪ &a+&l50&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -186,7 +193,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l65&a% &aCoins '
-      - '&8 ▪ &a+&l45&a% &5Sementes '
+      - '&8 ▪ &a+&l65&a% &5Sementes '
+      - '&8 ▪ &a+&l65&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -205,6 +213,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l28&a% &3Corais '
+      - '&8 ▪ &a+&l28&a% &bXP '
       - '&8 ▪ &cPeso até &l45&ckg '
 
   pesca-oceanita:
@@ -221,6 +230,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l38&a% &3Corais '
+      - '&8 ▪ &a+&l38&a% &bXP '
       - '&8 ▪ &cPeso até &l65&ckg '
 
   pesca-perola:
@@ -237,6 +247,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l50&a% &3Corais '
+      - '&8 ▪ &a+&l50&a% &bXP '
       - '&8 ▪ &cPeso até &l90&ckg '
 
   pesca-tempestita:
@@ -253,4 +264,5 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l65&a% &3Corais '
+      - '&8 ▪ &a+&l65&a% &bXP '
       - '&8 ▪ &cPeso até &l130&ckg '

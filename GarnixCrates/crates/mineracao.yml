@@ -561,8 +561,9 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l2&a% Coins '
-      - '&8 ▪ &d+&l1&d% Gemas '
+      - '&8 ▪ &a+&l2&a% &aCoins '
+      - '&8 ▪ &a+&l2&a% &dGemas '
+      - '&8 ▪ &a+&l2&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -578,8 +579,9 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l5&a% Coins '
-      - '&8 ▪ &d+&l3&d% Gemas '
+      - '&8 ▪ &a+&l5&a% &aCoins '
+      - '&8 ▪ &a+&l5&a% &dGemas '
+      - '&8 ▪ &a+&l5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 

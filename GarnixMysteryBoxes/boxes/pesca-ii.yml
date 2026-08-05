@@ -279,6 +279,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l20&a% &3Corais '
+      - '&8 ▪ &a+&l20&a% &bXP '
       - '&8 ▪ &cPeso até &l32&ckg '
 
   skin-serenita:
@@ -295,6 +296,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l28&a% &3Corais '
+      - '&8 ▪ &a+&l28&a% &bXP '
       - '&8 ▪ &cPeso até &l45&ckg '
 
   skin-oceanita:
@@ -311,6 +313,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l38&a% &3Corais '
+      - '&8 ▪ &a+&l38&a% &bXP '
       - '&8 ▪ &cPeso até &l65&ckg '
 
   skin-perola:
@@ -327,6 +330,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l50&a% &3Corais '
+      - '&8 ▪ &a+&l50&a% &bXP '
       - '&8 ▪ &cPeso até &l90&ckg '
 
   skin-tempestita:
@@ -343,6 +347,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l65&a% &3Corais '
+      - '&8 ▪ &a+&l65&a% &bXP '
       - '&8 ▪ &cPeso até &l130&ckg '
 
   # -- BOOSTERS ----------------------------------------------------- 7%

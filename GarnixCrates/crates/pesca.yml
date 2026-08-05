@@ -490,6 +490,7 @@ rewards:
       - ''
       - ' &8Especificações:'
       - '&8 ▪ &a+&l2&a% &3Corais '
+      - '&8 ▪ &a+&l2&a% &bXP '
       - '&8 ▪ &cPeso até &l6&ckg '
 
   skin-escama:
@@ -505,7 +506,8 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l2&a% &3Corais '
+      - '&8 ▪ &a+&l5&a% &3Corais '
+      - '&8 ▪ &a+&l5&a% &bXP '
       - '&8 ▪ &cPeso até &l10&ckg '
 
   # -- JACKPOT --------------------------------------------------- 0,05%
