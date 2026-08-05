@@ -26,14 +26,39 @@ box-item:
 # em coins e nao precisa de rota de loot; estas oito so saem daqui, do site
 # e da caixa garnix.
 #
-# ⚠️ Esta caixa nao tem `azar`: toda abertura devolve uma maquina. O que
-# separa as oito e o valor — moeda secundaria em baixo, Cash e os dois
-# limites no topo.
+# ⚠️ Esta caixa nao tem `azar`: toda abertura devolve uma maquina.
+#
+# ⚠️ O QUE ORDENA A TABELA E O IMPACTO ECONOMICO DA MAQUINA, nao o que ela
+# dropa hoje. Os drops vao ser recalibrados; esta escada nao muda junto.
+#
+#   sementes · corais · gemas  22 cada  moeda de LINHA, gasta dentro da
+#                                     propria atividade
+#   dracmas                    15     moeda de BOSS — renda passiva que pula
+#                                     o loop de matar boss
+#   combustivel                12     consumivel puro: nao gera renda, so faz
+#                                     as outras maquinas rodarem
+#   limite-spawners           2,5     compoe: mais spawners = mais renda
+#   limite-maquinas           2,5     compoe mais forte: mais slots = mais de
+#                                     TODAS as maquinas, inclusive mais destas
+#   cash                        2     moeda PREMIUM, e a MAIS RARA da caixa:
+#                                     ela compra os dois limites acima e tudo
+#                                     o mais do cash shop
+#
+# ⚠️ CASH E MAIS RARO QUE OS DOIS LIMITES, por decisao do dono. A logica: o
+# limite so serve para uma coisa, o cash compra qualquer coisa — inclusive o
+# limite. Quem tira a maquina de cash tira, no fim, as outras duas tambem.
+#
+# ⚠️ Os dois limites ficam EMPATADOS em 2,5, mesmo a de maquinas compondo
+# mais forte que a de spawners. Foi decisao do dono: sao o topo dos itens de
+# desbloqueio e a leitura simples ganhou.
+#
+# ⚠️ A maquina de CASH caiu de 8 para 2 (05/08/2026). Os 6 pontos foram para
+# as tres moedas de linha (20 → 22 cada), que sao o recheio.
 rewards:
 
   sementes:
     type: COMMAND_ITEM
-    chance: 20
+    chance: 22
     display: '&5Máquina de Sementes'
     command: maquina give {player} sementes {amount} 1
     amount: 1
@@ -46,7 +71,7 @@ rewards:
 
   corais:
     type: COMMAND_ITEM
-    chance: 20
+    chance: 22
     display: '&3Máquina de Corais'
     command: maquina give {player} corais {amount} 1
     amount: 1
@@ -59,7 +84,7 @@ rewards:
 
   gemas:
     type: COMMAND_ITEM
-    chance: 20
+    chance: 22
     display: '&dMáquina de Gemas'
     command: maquina give {player} gemas {amount} 1
     amount: 1
@@ -98,7 +123,7 @@ rewards:
 
   cash:
     type: COMMAND_ITEM
-    chance: 8
+    chance: 2
     display: '&6Máquina de Cash'
     command: maquina give {player} cash {amount} 1
     amount: 1

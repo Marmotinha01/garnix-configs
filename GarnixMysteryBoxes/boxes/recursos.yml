@@ -24,27 +24,43 @@ box-item:
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve recurso. Os 39 pesos
 # somam 100 de proposito — aqui peso e porcentagem, e a leitura fica direta.
 #
-# ⚠️ A ESCALA E LITERAL, POR DECISAO DO DONO: 25 · 50 · 100 em TODO recurso,
-# inclusive coins, combustivel e os tres limites. Nao e a escala das crates
-# (coins 250, armazem 500, limite 1) — aqui o trio e o mesmo para todos e o
-# que varia e so a chance. Os lotes de runa param em 25 e 50, dois por runa.
+# ⚠️ A ESCALA SAI DA CRATE RANKUP, com a regra "tira o degrau mais baixo dela
+# e acrescenta um mais alto". A escala literal 25/50/100 que este arquivo
+# usava foi aposentada: ela dava 25 coins (a crate de linha da 250) ao lado
+# de 25 limites de spawner (que valem 100.000 no cash shop).
+#
+#   coins        2.000 · 4.000 · 8.000     (RankUP: 1.000 · 2.000 · 4.000)
+#   combustivel  2.000 · 4.000 · 8.000     (RankUP: 2.000)
+#   dracmas      1.000 · 2.000 · 4.000     (RankUP:   500 · 1.000 · 2.000)
+#   gemas/sementes/corais  300 · 600 · 1.200   (crate de linha: 150·300·600)
+#   os tres limites   30 · 50 · 100 · 150  (RankUP: 15 · 30 · 50 · 100)
+#
+# As runas sao a unica familia que NAO subiu: 25 e 50 continuam sendo os dois
+# degraus mais baixos da Caixa Runas, que vai ate 500. Elas tem economia
+# propria (a loja de fragmentos cobra 90 a 120), entao 25 ja e meia compra.
+#
+# ⚠️ OS TRES LIMITES TEM A MESMA QUANTIA E CHANCES DIFERENTES, na razao
+# 6 : 3 : 1 — a mesma que a RankUP e a Mineracao usam. E o que compensa 30 de
+# armazem valer 48 de cash e 30 de spawner valer 120.000. A razao 6:3:1 NAO
+# fecha essa conta inteira, e nao tem como fechar por chance: o limite de
+# spawner e o item mais caro do servidor e esta numa caixa comum. Se um dia
+# ele virar problema, o caminho e tirar ele daqui, nao afinar mais o peso.
 #
 # ⚠️ As familias, do recheio ao topo:
 #   SECUNDARIAS     30%  gemas · sementes · corais · dracmas, 3 lotes cada
 #   RUNAS           18%  as 4 runas, 2 lotes cada
 #   COMBUSTIVEL   10,5%
 #   COINS           10%
-#   L. ARMAZEM     8,5%
-#   ATIVADOR        5%   um bau a mais na lista
-#   LIMPADOR        5%   limpa o terreno inteiro
-#   L. MAQUINAS     4%
-#   L. SPAWNERS     4%
-#   CAIXA RUNAS   2,5%   a unica recompensa que nao e recurso solto
-#   RESET DE KDR  2,5%
+#   L. ARMAZEM       9%  4 degraus
+#   ATIVADOR       5,5%  um bau a mais na lista
+#   LIMPADOR       5,5%  limpa o terreno inteiro
+#   L. MAQUINAS    4,5%  4 degraus
+#   CAIXA RUNAS      3%  a unica recompensa que nao e recurso solto
+#   RESET DE KDR   2,5%
+#   L. SPAWNERS    1,5%  4 degraus
 #
-# ⚠️ Dentro de cada familia o lote cai pela metade a cada degrau (25 vale o
-# dobro do 50, que vale o dobro do 100). Os dois limites de compra ficam no
-# topo porque 25 deles e MUITO — a crate e o boss dao 1 por vez.
+# ⚠️ Dentro de cada familia o lote cai pela metade a cada degrau. Nos limites,
+# que tem quatro degraus, isso da 8 : 4 : 2 : 1 sobre o peso da familia.
 #
 # ⚠️ As runas usam `givevirtual`: caem no armazenamento e o jogador retira
 # pelo /runas quando quiser, sem ocupar slot na hora da abertura.
@@ -58,113 +74,113 @@ box-item:
 rewards:
 
   # -- Gemas
-  gemas-25:
+  gemas-300:
     type: CURRENCY
     chance: 3.5
     currency-id: gemas
-    amount: '25'
+    amount: '300'
     icon:
       lore:
       - '&fValor: &d۞{amount}'
 
-  gemas-50:
+  gemas-600:
     type: CURRENCY
     chance: 2.5
     currency-id: gemas
-    amount: '50'
+    amount: '600'
     icon:
       lore:
       - '&fValor: &d۞{amount}'
 
-  gemas-100:
+  gemas-1200:
     type: CURRENCY
     chance: 1.5
     currency-id: gemas
-    amount: '100'
+    amount: '1200'
     icon:
       lore:
       - '&fValor: &d۞{amount}'
 
   # -- Sementes
-  sementes-25:
+  sementes-300:
     type: CURRENCY
     chance: 3.5
     currency-id: sementes
-    amount: '25'
+    amount: '300'
     icon:
       lore:
       - '&fValor: &5❋{amount}'
 
-  sementes-50:
+  sementes-600:
     type: CURRENCY
     chance: 2.5
     currency-id: sementes
-    amount: '50'
+    amount: '600'
     icon:
       lore:
       - '&fValor: &5❋{amount}'
 
-  sementes-100:
+  sementes-1200:
     type: CURRENCY
     chance: 1.5
     currency-id: sementes
-    amount: '100'
+    amount: '1200'
     icon:
       lore:
       - '&fValor: &5❋{amount}'
 
   # -- Corais
-  corais-25:
+  corais-300:
     type: CURRENCY
     chance: 3.5
     currency-id: corais
-    amount: '25'
+    amount: '300'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
-  corais-50:
+  corais-600:
     type: CURRENCY
     chance: 2.5
     currency-id: corais
-    amount: '50'
+    amount: '600'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
-  corais-100:
+  corais-1200:
     type: CURRENCY
     chance: 1.5
     currency-id: corais
-    amount: '100'
+    amount: '1200'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
   # -- Dracmas
-  dracmas-25:
+  dracmas-1000:
     type: CURRENCY
     chance: 3.5
     currency-id: dracmas
-    amount: '25'
+    amount: '1000'
     icon:
       lore:
       - '&fValor: &e✆{amount}'
 
-  dracmas-50:
+  dracmas-2000:
     type: CURRENCY
     chance: 2.5
     currency-id: dracmas
-    amount: '50'
+    amount: '2000'
     icon:
       lore:
       - '&fValor: &e✆{amount}'
 
-  dracmas-100:
+  dracmas-4000:
     type: CURRENCY
     chance: 1.5
     currency-id: dracmas
-    amount: '100'
+    amount: '4000'
     icon:
       lore:
       - '&fValor: &e✆{amount}'
@@ -276,40 +292,40 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   # -- Coins
-  coins-25:
+  coins-2000:
     type: CURRENCY
     chance: 5.5
     currency-id: coins
-    amount: '25'
+    amount: '2000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-50:
+  coins-4000:
     type: CURRENCY
     chance: 3
     currency-id: coins
-    amount: '50'
+    amount: '4000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-100:
+  coins-8000:
     type: CURRENCY
     chance: 1.5
     currency-id: coins
-    amount: '100'
+    amount: '8000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
   # -- Combustível
-  combustivel-25:
+  combustivel-2000:
     type: COMMAND
     chance: 6
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 25
+    amount: 2000
     icon:
       material: COAL
       data: 0
@@ -317,12 +333,12 @@ rewards:
       lore:
       - '&fLitros: &7{amount}L'
 
-  combustivel-50:
+  combustivel-4000:
     type: COMMAND
     chance: 3
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 50
+    amount: 4000
     icon:
       material: COAL
       data: 0
@@ -330,12 +346,12 @@ rewards:
       lore:
       - '&fLitros: &7{amount}L'
 
-  combustivel-100:
+  combustivel-8000:
     type: COMMAND
     chance: 1.5
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
-    amount: 100
+    amount: 8000
     icon:
       material: COAL
       data: 0
@@ -344,12 +360,12 @@ rewards:
       - '&fLitros: &7{amount}L'
 
   # -- Limite de Armazém
-  lim-armazem-25:
+  lim-armazem-30:
     type: COMMAND
-    chance: 5
+    chance: 4.8
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
-    amount: 25
+    amount: 30
     icon:
       material: INK_SACK
       data: 2
@@ -360,7 +376,7 @@ rewards:
 
   lim-armazem-50:
     type: COMMAND
-    chance: 2.5
+    chance: 2.4
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 50
@@ -374,7 +390,7 @@ rewards:
 
   lim-armazem-100:
     type: COMMAND
-    chance: 1
+    chance: 1.2
     display: '&2Limite de Armazém'
     command: armazem givelimititem {player} {amount} 1
     amount: 100
@@ -386,10 +402,24 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
+  lim-armazem-150:
+    type: COMMAND
+    chance: 0.6
+    display: '&2Limite de Armazém'
+    command: armazem givelimititem {player} {amount} 1
+    amount: 150
+    icon:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&fValor: &2∞{amount}'
+
   # -- Ativador de Baú
   ativador-bau:
     type: COMMAND_ITEM
-    chance: 5
+    chance: 5.5
     display: '&6Ativador de Baú'
     command: bau giveitem {player} {amount}
     amount: 1
@@ -403,7 +433,7 @@ rewards:
   # -- Limpador de Terreno
   limpador-terreno:
     type: COMMAND_ITEM
-    chance: 5
+    chance: 5.5
     display: '&eLimpador de Terreno'
     command: clearplot give {player} {amount}
     amount: 1
@@ -419,12 +449,12 @@ rewards:
       - HIDE_ATTRIBUTES
 
   # -- Limite de Máquinas
-  lim-maquina-25:
+  lim-maquina-30:
     type: COMMAND
-    chance: 2.5
+    chance: 2.4
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 25
+    amount: 30
     icon:
       material: INK_SACK
       data: 4
@@ -435,7 +465,7 @@ rewards:
 
   lim-maquina-50:
     type: COMMAND
-    chance: 1
+    chance: 1.2
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 50
@@ -449,7 +479,7 @@ rewards:
 
   lim-maquina-100:
     type: COMMAND
-    chance: 0.5
+    chance: 0.6
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
     amount: 100
@@ -461,13 +491,27 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  # -- Limite de Spawners
-  lim-spawner-25:
+  lim-maquina-150:
     type: COMMAND
-    chance: 2.5
+    chance: 0.3
+    display: '&9Limite de Máquinas'
+    command: maquina givelimite {player} {amount} 1
+    amount: 150
+    icon:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&fValor: &9∞{amount}'
+
+  # -- Limite de Spawners
+  lim-spawner-30:
+    type: COMMAND
+    chance: 0.8
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 25
+    amount: 30
     icon:
       material: INK_SACK
       data: 12
@@ -478,7 +522,7 @@ rewards:
 
   lim-spawner-50:
     type: COMMAND
-    chance: 1
+    chance: 0.4
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
     amount: 50
@@ -492,7 +536,7 @@ rewards:
 
   lim-spawner-100:
     type: COMMAND
-    chance: 0.5
+    chance: 0.2
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
     amount: 100
@@ -504,10 +548,24 @@ rewards:
       lore:
       - '&fValor: &b∞{amount}'
 
+  lim-spawner-150:
+    type: COMMAND
+    chance: 0.1
+    display: '&bLimite de Spawners'
+    command: spawner givelimite {player} {amount} 1
+    amount: 150
+    icon:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&fValor: &b∞{amount}'
+
   # -- Caixa Runas
   caixa-runas:
     type: COMMAND_ITEM
-    chance: 2.5
+    chance: 3
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 1

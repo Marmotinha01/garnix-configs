@@ -21,33 +21,46 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
-# ⚠️ Esta caixa só sorteia SKIN — ela não tem `azar`. Abrir sempre devolve
-# uma skin, e o que varia é qual das três vias e qual degrau da escada.
+# ⚠️ Esta caixa é de SKIN — ela não tem `azar`. Abrir sempre devolve prêmio:
+# uma das doze skins, ou a própria caixa em dobro em 2% das vezes.
 #
 # ⚠️ ESCADA DA TIER II — os degraus 7 a 10 de cada via, ou seja tudo que a
 # forja NÃO alcança (`forgeable: false` nos três skins.yml). Os degraus 2 a
 # 6, que a forja alcança, ficam na caixa skins-i.
 #   mineração: quartzo · jade · safira · mithril
-#   fazenda:   esmeralda · opala · cristal · marfim
+#   fazenda:   esmeralda · ametista · cristal · marfim
 #   pesca:     serenita · oceanita · pérola · tempestita
 #
 # ⚠️ O DEGRAU 10 (mithril · marfim · tempestita) era exclusivo da Caixa
-# Garnix. Ele continua aqui no menor peso de todos — 6 de 100 dentro da via,
-# ou seja 2% da caixa por via e 6% de sair alguma das três. A Garnix segue
-# sendo a fonte mais provável dessas três skins.
+# Garnix. Ele continua aqui no menor peso de todos — 4 de 100 dentro da via,
+# ou seja 3,92% de sair alguma das três. A Garnix segue sendo a fonte mais
+# provável dessas três skins, e de proposito.
 #
-# ⚠️ As três vias valem o MESMO: cada uma soma 100 de peso (48/30/16/6),
-# então abrir é 1/3 mineração, 1/3 fazenda, 1/3 pesca. Dentro da via o peso
-# despenca conforme a skin sobe na escada.
+# ⚠️ AS TRES VIAS NAO VALEM O MESMO: a pesca sai mais que as outras duas, na
+# razao 38 : 30 : 30. Mineracao e fazenda sao as vias mais raras e ficam
+# empatadas entre si. Os 2 que sobram sao a propria caixa em dobro.
+#
+# ⚠️ Dentro da via a escada e sempre 50 : 30 : 16 : 4, repartindo o peso da
+# via. Ela despenca de proposito: o degrau 7 e o conteudo da caixa e o
+# degrau 10 e o acidente. Se mexer num degrau, mexa nos quatro.
+#
+# ⚠️ A PROPRIA CAIXA X2 (2%) e a unica recompensa que nao e skin. Ela
+# devolve DUAS caixas por uma consumida, entao o saldo e +1: e bonus, nao
+# re-roll. Nao vira loop infinito porque 0,02 x 2 = 0,04 caixa por abertura,
+# muito abaixo de 1 — a corrente sempre morre. So passaria a se sustentar
+# sozinha se esse peso subisse acima de 50.
+#
+# ⚠️ O arquivo soma 100, entao o peso de cada entrada JA E a porcentagem: a
+# Skin de Serenita sai em 19% das aberturas e a de Mithril em 1,2%.
 #
 # ⚠️ A lore de cada ícone espelha o item real (skins.yml de cada plugin) —
 # preview e item recebido têm que bater linha a linha, sem nenhuma linha extra.
 rewards:
 
-  # -- MINERAÇÃO --------------------------------------------------- 1/3
+  # -- MINERACAO --------------------------------------------------- 30%
   mineracao-quartzo:
     type: COMMAND_ITEM
-    chance: 48
+    chance: 15
     display: '&fSkin de Quartzo'
     command: mina giveskin {player} quartzo {amount}
     amount: 1
@@ -65,7 +78,7 @@ rewards:
 
   mineracao-jade:
     type: COMMAND_ITEM
-    chance: 30
+    chance: 9
     display: '&aSkin de Jade'
     command: mina giveskin {player} jade {amount}
     amount: 1
@@ -84,7 +97,7 @@ rewards:
 
   mineracao-safira:
     type: COMMAND_ITEM
-    chance: 16
+    chance: 4.8
     display: '&9Skin de Safira'
     command: mina giveskin {player} safira {amount}
     amount: 1
@@ -103,7 +116,7 @@ rewards:
 
   mineracao-mithril:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 1.2
     display: '&4Skin de Mithril'
     command: mina giveskin {player} mithril {amount}
     amount: 1
@@ -120,10 +133,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- FAZENDA ----------------------------------------------------- 1/3
+  # -- FAZENDA ----------------------------------------------------- 30%
   farm-esmeralda:
     type: COMMAND_ITEM
-    chance: 48
+    chance: 15
     display: '&aSkin de Esmeralda'
     command: fazenda giveskin {player} esmeralda {amount}
     amount: 1
@@ -143,7 +156,7 @@ rewards:
   # ainda é provisório. Se o dono trocar o nome, troca aqui e no skins.yml.
   farm-ametista:
     type: COMMAND_ITEM
-    chance: 30
+    chance: 9
     display: '&bSkin de Ametista'
     command: fazenda giveskin {player} ametista {amount}
     amount: 1
@@ -162,7 +175,7 @@ rewards:
 
   farm-cristal:
     type: COMMAND_ITEM
-    chance: 16
+    chance: 4.8
     display: '&9Skin de Cristal'
     command: fazenda giveskin {player} cristal {amount}
     amount: 1
@@ -181,7 +194,7 @@ rewards:
 
   farm-marfim:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 1.2
     display: '&fSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
     amount: 1
@@ -198,10 +211,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- PESCA ------------------------------------------------------- 1/3
+  # -- PESCA ------------------------------------------------------- 38%
   pesca-serenita:
     type: COMMAND_ITEM
-    chance: 48
+    chance: 19
     display: '&5Skin de Serenita'
     command: pesca giveskin {player} serenita {amount}
     amount: 1
@@ -218,7 +231,7 @@ rewards:
 
   pesca-oceanita:
     type: COMMAND_ITEM
-    chance: 30
+    chance: 11.4
     display: '&1Skin de Oceanita'
     command: pesca giveskin {player} oceanita {amount}
     amount: 1
@@ -235,7 +248,7 @@ rewards:
 
   pesca-perola:
     type: COMMAND_ITEM
-    chance: 16
+    chance: 6.08
     display: '&9Skin de Pérola'
     command: pesca giveskin {player} perola {amount}
     amount: 1
@@ -252,7 +265,7 @@ rewards:
 
   pesca-tempestita:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 1.52
     display: '&dSkin de Tempestita'
     command: pesca giveskin {player} tempestita {amount}
     amount: 1
@@ -266,3 +279,18 @@ rewards:
       - '&8 ▪ &a+&l65&a% &3Corais '
       - '&8 ▪ &a+&l65&a% &bXP '
       - '&8 ▪ &cPeso até &l130&ckg '
+
+  # -- A PROPRIA CAIXA, X2 ------------------------------------------ 2%
+  caixa-skins-ii-x2:
+    type: COMMAND_ITEM
+    chance: 2
+    display: '&eCaixa Skins &e[Tier &lII&e]'
+    command: caixas give skins-ii {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&eCaixa Skins &e[Tier &lII&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

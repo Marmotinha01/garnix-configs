@@ -22,9 +22,19 @@ box-item:
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve premio. Azar so existe
-# nas crates e nos bosses. Os 3 pontos que o azar tinha foram devolvidos
-# para os premios na mesma proporcao — nenhuma recompensa mudou de posicao
-# na tabela.
+# nas crates e nos bosses.
+#
+# ⚠️ GRADE DAS TRES CAIXAS TIER II — mineracao, pesca e farm usam a MESMA
+# grade, familia por familia:
+#
+#   skins 22,5 · moeda 20 · armadura T-III 18 · armadura T-IV 13 ·
+#   livros 10,5 · armadura T-V 7 · boosters 7 · a propria caixa x2 2
+#
+# So que esta caixa tem dois blocos que as outras duas nao tem (6x6, 8x8 e
+# britadeira, mais a vaga de visitante). Entao ELA e a grade acima
+# multiplicada por 0,86, mais os 12% dos explosivos e os 2% da vaga — as
+# proporcoes entre as familias continuam identicas nas tres caixas e os tres
+# arquivos fecham em 100. Se mexer numa familia aqui, mexa nas outras duas.
 #
 # ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
 # sufixo de slot entrega o set inteiro (+48%) num drop só.
@@ -54,12 +64,35 @@ box-item:
 # ⚠️ As 3 britadeiras nao entram no display: quem mostra a quantia e a pilha
 # do proprio icone (`amount: 3`), igual ao x2 da caixa `caixas`. HOPPER
 # empilha, entao o icone renderiza o numero sozinho.
+#
+# ⚠️ MOEDA E ESCADA DE 3 DEGRAUS espelhando a crate mineracao — os mesmos
+# 250·500·1.000 coins e 150·300·600 gemas de la, multiplicados por 5. A
+# Tier I usa a mesma escada da crate multiplicada por 3. Se mexer num
+# degrau, mexa nos tres: a familia inteira e que da a escada.
+#
+# ⚠️ A VAGA sai 1 por vez, sempre — `/mina giveslot <jogador> [quantidade]`
+# nao tem escada. Ela tambem sai da caixa `garnix`, que e a unica outra
+# fonte dela em caixa.
+#
+# ⚠️ A MOEDA E O FILLER, mas aqui ela pesa 17,2% e nao os 26,4% da Tier I:
+# esta caixa e comprada, e quem paga quer ITEM. Dentro da familia a escada e
+# 50/30/20, NAO o 60/30/10 da crate — moeda nunca pode ser mais rara que
+# item, e com 60/30/10 o degrau de cima ficaria abaixo da skin de topo.
+#
+# ⚠️ O TOPO SAO A SKIN DE MITHRIL (1,29) E A PECA T-V (1,5), nesta ordem.
+# Nao existe degrau para cima aqui: a Tier II e o fim da escada de caixa.
+#
+# ⚠️ A PROPRIA CAIXA X2 (1,72%) e a unica recompensa que se auto-sorteia.
+# Ela devolve DUAS caixas por uma consumida, entao o saldo e +1: e bonus,
+# nao re-roll. Nao vira loop infinito porque 0,0172 x 2 = 0,034 caixa por
+# abertura, muito abaixo de 1 — a corrente sempre morre. So passaria a se
+# sustentar sozinha se esse peso subisse acima de 50.
 rewards:
 
-  # -- ARMADURA TIER III ------------------------------------------- 23%
+  # -- ARMADURA TIER III ---------------------------------------- 15,48%
   armadura-iii-capacete:
     type: COMMAND_ITEM
-    chance: 5.75
+    chance: 3.87
     display: '&bCapacete Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_helmet {amount}
     amount: 1
@@ -78,7 +111,7 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND_ITEM
-    chance: 5.75
+    chance: 3.87
     display: '&bPeitoral Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_chestplate {amount}
     amount: 1
@@ -97,7 +130,7 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND_ITEM
-    chance: 5.75
+    chance: 3.87
     display: '&bCalça Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_leggings {amount}
     amount: 1
@@ -116,7 +149,7 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND_ITEM
-    chance: 5.75
+    chance: 3.87
     display: '&bBota Mineração &b[Tier &lIII&b]'
     command: mina givearmor {player} tier-iii_boots {amount}
     amount: 1
@@ -133,10 +166,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- ARMADURA TIER IV -------------------------------------------- 18%
+  # -- ARMADURA TIER IV ------------------------------------------ 11,2%
   armadura-iv-capacete:
     type: COMMAND_ITEM
-    chance: 4.5
+    chance: 2.8
     display: '&dCapacete Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_helmet {amount}
     amount: 1
@@ -155,7 +188,7 @@ rewards:
 
   armadura-iv-peitoral:
     type: COMMAND_ITEM
-    chance: 4.5
+    chance: 2.8
     display: '&dPeitoral Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_chestplate {amount}
     amount: 1
@@ -174,7 +207,7 @@ rewards:
 
   armadura-iv-calca:
     type: COMMAND_ITEM
-    chance: 4.5
+    chance: 2.8
     display: '&dCalça Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_leggings {amount}
     amount: 1
@@ -193,7 +226,7 @@ rewards:
 
   armadura-iv-bota:
     type: COMMAND_ITEM
-    chance: 4.5
+    chance: 2.8
     display: '&dBota Mineração &d[Tier &lIV&d]'
     command: mina givearmor {player} tier-iv_boots {amount}
     amount: 1
@@ -210,10 +243,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- ARMADURA TIER V --------------------------------------------- 12%
+  # -- ARMADURA TIER V ---------------------------------------------- 6%
   armadura-v-capacete:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 1.5
     display: '&6Capacete Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_helmet {amount}
     amount: 1
@@ -232,7 +265,7 @@ rewards:
 
   armadura-v-peitoral:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 1.5
     display: '&6Peitoral Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_chestplate {amount}
     amount: 1
@@ -251,7 +284,7 @@ rewards:
 
   armadura-v-calca:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 1.5
     display: '&6Calça Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_leggings {amount}
     amount: 1
@@ -270,7 +303,7 @@ rewards:
 
   armadura-v-bota:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 1.5
     display: '&6Bota Mineração &6[Tier &lV&6]'
     command: mina givearmor {player} tier-v_boots {amount}
     amount: 1
@@ -287,10 +320,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- SKINS ------------------------------------------------------- 23,5%
+  # -- SKINS ---------------------------------------------------- 19,35%
   skin-rubi:
     type: COMMAND_ITEM
-    chance: 8
+    chance: 6.45
     display: '&cSkin de Rubi'
     command: mina giveskin {player} rubi {amount}
     amount: 1
@@ -308,7 +341,7 @@ rewards:
 
   skin-quartzo:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 5.16
     display: '&fSkin de Quartzo'
     command: mina giveskin {player} quartzo {amount}
     amount: 1
@@ -326,7 +359,7 @@ rewards:
 
   skin-jade:
     type: COMMAND_ITEM
-    chance: 4
+    chance: 3.87
     display: '&aSkin de Jade'
     command: mina giveskin {player} jade {amount}
     amount: 1
@@ -345,7 +378,7 @@ rewards:
 
   skin-safira:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 2.58
     display: '&9Skin de Safira'
     command: mina giveskin {player} safira {amount}
     amount: 1
@@ -364,7 +397,7 @@ rewards:
 
   skin-mithril:
     type: COMMAND_ITEM
-    chance: 2.5
+    chance: 1.29
     display: '&4Skin de Mithril'
     command: mina giveskin {player} mithril {amount}
     amount: 1
@@ -381,9 +414,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
+  # -- EXPLOSIVOS E BRITADEIRA ------------------------------------- 12%
   bomba-6x6:
     type: COMMAND_ITEM
-    chance: 4.5
+    chance: 6
     display: '&4Explosivo'
     command: mina givebomb {player} 6x6 {amount}
     amount: 1
@@ -395,7 +429,7 @@ rewards:
 
   bomba-8x8:
     type: COMMAND_ITEM
-    chance: 2.5
+    chance: 4
     display: '&4Explosivo'
     command: mina givebomb {player} 8x8 {amount}
     amount: 1
@@ -407,7 +441,7 @@ rewards:
 
   britadeira:
     type: COMMAND_ITEM
-    chance: 2.5
+    chance: 2
     display: '&cBritadeira'
     command: mina givedrill {player} {amount}
     amount: 3
@@ -419,10 +453,79 @@ rewards:
       lore:
       - '&fÁrea: &c3x3'
 
-  # -- BOOSTERS ----------------------------------------------------- 5%
+  # -- MOEDAS ---------------------------------------------------- 17,2%
+  coins-1250:
+    type: CURRENCY
+    chance: 4.3
+    currency-id: coins
+    amount: '1250'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  coins-2500:
+    type: CURRENCY
+    chance: 2.58
+    currency-id: coins
+    amount: '2500'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  coins-5000:
+    type: CURRENCY
+    chance: 1.72
+    currency-id: coins
+    amount: '5000'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  gemas-750:
+    type: CURRENCY
+    chance: 4.3
+    currency-id: gemas
+    amount: '750'
+    icon:
+      lore:
+      - '&fValor: &d۞{amount}'
+
+  gemas-1500:
+    type: CURRENCY
+    chance: 2.58
+    currency-id: gemas
+    amount: '1500'
+    icon:
+      lore:
+      - '&fValor: &d۞{amount}'
+
+  gemas-3000:
+    type: CURRENCY
+    chance: 1.72
+    currency-id: gemas
+    amount: '3000'
+    icon:
+      lore:
+      - '&fValor: &d۞{amount}'
+
+  # -- VAGA DE VISITANTE -------------------------------------------- 2%
+  vaga:
+    type: COMMAND_ITEM
+    chance: 2
+    display: '&aVaga de Visitante'
+    command: mina giveslot {player} {amount}
+    amount: 1
+    icon:
+      texture: 4089d0e0c88e5250038e659f508ebda5b65a5be0bfc4103d0e12faba4018d5cb
+      display: '&aVaga de Visitante'
+      lore:
+      - '&7Desbloqueia mais uma vaga'
+      - '&7de visitante na sua mina.'
+
+  # -- BOOSTERS -------------------------------------------------- 6,02%
   booster-2x-15m:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 3.66
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 2 15m {amount}
     amount: 1
@@ -443,7 +546,7 @@ rewards:
 
   booster-2x-30m:
     type: COMMAND_ITEM
-    chance: 2
+    chance: 2.36
     display: '&6Booster de Mineração'
     command: mina givebooster {player} both 2 30m {amount}
     amount: 1
@@ -462,10 +565,10 @@ rewards:
       flags:
       - HIDE_POTION_EFFECTS
 
-  # -- LIVROS ------------------------------------------------------- 9%
+  # -- LIVROS ---------------------------------------------------- 9,03%
   livro-ceifador:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 3.01
     display: '&dLivro de Ceifador'
     command: lamina givebook {player} ceifador 1 {amount}
     amount: 1
@@ -482,7 +585,7 @@ rewards:
 
   livro-massacre:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 3.01
     display: '&4Livro de Massacre'
     command: lamina givebook {player} massacre 1 {amount}
     amount: 1
@@ -499,7 +602,7 @@ rewards:
 
   livro-pilhagem:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 3.01
     display: '&aLivro de Pilhagem'
     command: lamina givebook {player} pilhagem 1 {amount}
     amount: 1
@@ -513,3 +616,18 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
+
+  # -- A PROPRIA CAIXA, X2 --------------------------------------- 1,72%
+  caixa-mineracao-ii-x2:
+    type: COMMAND_ITEM
+    chance: 1.72
+    display: '&6Caixa Mineração &6[Tier &lII&6]'
+    command: caixas give mineracao-ii {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&6Caixa Mineração &6[Tier &lII&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

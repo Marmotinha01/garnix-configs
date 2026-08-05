@@ -22,19 +22,28 @@ box-item:
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
 # ⚠️ O robo NAO e cosmetico: com ~20.700 chaves/dia no servidor, ele e o que
-# torna o volume de chaves utilizavel. Por isso o Comum e o recheio desta
-# caixa — todo mundo precisa de um — e o que se compra aqui e o TIER.
+# torna o volume de chaves utilizavel. O que se compra aqui e o TIER.
 #
 # ⚠️ Cada tier abre mais rapido E turbina mais os premios raros
 # (boost-threshold / boost-multiplier em GarnixCrates/robots/). O Mitico e o
-# unico que nao sai daqui em volume: 1 em 100 aberturas. Ele e produto de site.
+# unico que nao sai daqui em volume: 2 em 100 aberturas. Ele e produto de site.
+#
+# ⚠️ SO UM ROBO FICA ATIVO por jogador, entao tirar um tier igual ou menor do
+# que o que voce ja tem nao vale nada. Por isso o Comum nao e mais o recheio
+# de 45% que era: ele desceu para 35 e o Raro subiu para 32, quase empatando.
+# A escada e 35 : 32 : 22 : 9 : 2.
+#
+# ⚠️ Consequencia disso, e e de proposito: esta caixa vale muito mais para
+# quem ainda nao tem robo do que para quem ja tem um Lendario. Nao adianta
+# mexer nos pesos para consertar isso — o unico jeito seria duplicata virar
+# fusao ou upgrade, que hoje o plugin nao faz.
 #
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve um robo.
 rewards:
 
   comum:
     type: COMMAND_ITEM
-    chance: 45
+    chance: 35
     display: '&aRobô Comum'
     command: crates giverobot comum {player} {amount}
     amount: 1
@@ -50,7 +59,7 @@ rewards:
 
   raro:
     type: COMMAND_ITEM
-    chance: 30
+    chance: 32
     display: '&bRobô Raro'
     command: crates giverobot raro {player} {amount}
     amount: 1
@@ -69,7 +78,7 @@ rewards:
 
   epico:
     type: COMMAND_ITEM
-    chance: 18
+    chance: 22
     display: '&dRobô Épico'
     command: crates giverobot epico {player} {amount}
     amount: 1
@@ -88,7 +97,7 @@ rewards:
 
   lendario:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 9
     display: '&4Robô Lendário'
     command: crates giverobot lendario {player} {amount}
     amount: 1
@@ -107,7 +116,7 @@ rewards:
 
   mitico:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 2
     display: '&6Robô Mítico'
     command: crates giverobot mitico {player} {amount}
     amount: 1

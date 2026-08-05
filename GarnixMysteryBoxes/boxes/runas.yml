@@ -21,17 +21,29 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
-# ⚠️ 4 runas × 5 lotes = 20 premios. A entrega e VIRTUAL (`givevirtual`):
+# ⚠️ 4 runas × 6 lotes = 24 premios. A entrega e VIRTUAL (`givevirtual`):
 # cai direto no armazenamento do jogador, que retira pelo /runas quando
 # quiser. Nao ocupa slot no inventario na hora da abertura.
 #
-# ⚠️ Peso por lote, igual para as 4: 25 = 12 · 50 = 7 · 100 = 4 ·
-# 250 = 1,5 · 500 = 0,5. Soma 25 por runa e 100 no total, entao cada runa
-# tem 25% e o lote de 500 dela sai em 0,5%.
+# ⚠️ A ESCADA DE LOTE E 25 · 50 · 75 · 100 · 250 · 500, igual para as quatro
+# runas, com os pesos 11 · 6,5 · 4 · 2,5 · 0,75 · 0,25. Soma 25 por runa e
+# 100 no total, entao cada runa tem 25% da caixa e o lote de 500 dela sai em
+# 0,25%. O degrau de 75 entrou em 05/08/2026 — antes a escada pulava de 50
+# direto para 100.
+#
+# ⚠️ Os quatro primeiros degraus sao um passo curto entre si (25 → 50 → 75 →
+# 100) e por isso os pesos deles caem devagar. O salto de verdade e do 100
+# para o 250, e o peso acompanha: cai de 2,5 para 0,75.
 #
 # ⚠️ Os lotes conversam com a loja de runas, onde o item mais barato custa
 # 90 e o mais caro 1.000 de cada tipo. Um lote de 25 e um passo, o de 500
 # e meio item caro.
+#
+# ⚠️ AS QUATRO RUNAS TEM O MESMO PESO (25% cada), mas a loja NAO pede elas
+# na mesma proporcao: a eterna aparece em 17 itens e soma 5.770, a sagrada
+# em 8 e soma 2.250, a primal em 5 e soma 1.270, a divina em 6 e soma 930.
+# Ou seja a eterna e ~6x mais demandada que a divina e cai na mesma taxa.
+# Isso NAO foi corrigido — fica registrado para uma decisao futura.
 #
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve runa.
 rewards:
@@ -39,7 +51,7 @@ rewards:
   # -- Runa Sagrada
   sagrada-25:
     type: COMMAND
-    chance: 12
+    chance: 11
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 25
@@ -51,7 +63,7 @@ rewards:
 
   sagrada-50:
     type: COMMAND
-    chance: 7
+    chance: 6.5
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 50
@@ -61,9 +73,21 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  sagrada-100:
+  sagrada-75:
     type: COMMAND
     chance: 4
+    display: '&4Runa Sagrada'
+    command: runas give {player} sagrada {amount} 1
+    amount: 75
+    icon:
+      texture: bd763649bd843b31627956d1a5b5127938e96eefafd5ee5ad40f5b856ec006e1
+      display: '&4Runa Sagrada'
+      lore:
+      - '&fQuantia: &7x{amount}'
+
+  sagrada-100:
+    type: COMMAND
+    chance: 2.5
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 100
@@ -75,7 +99,7 @@ rewards:
 
   sagrada-250:
     type: COMMAND
-    chance: 1.5
+    chance: 0.75
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 250
@@ -87,7 +111,7 @@ rewards:
 
   sagrada-500:
     type: COMMAND
-    chance: 0.5
+    chance: 0.25
     display: '&4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 500
@@ -101,7 +125,7 @@ rewards:
   # -- Runa Eterna
   eterna-25:
     type: COMMAND
-    chance: 12
+    chance: 11
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 25
@@ -113,7 +137,7 @@ rewards:
 
   eterna-50:
     type: COMMAND
-    chance: 7
+    chance: 6.5
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 50
@@ -123,9 +147,21 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  eterna-100:
+  eterna-75:
     type: COMMAND
     chance: 4
+    display: '&2Runa Eterna'
+    command: runas give {player} eterna {amount} 1
+    amount: 75
+    icon:
+      texture: 7dc453d0501dc2af61504e5b9a40ba2a63de0923409f6ae431fde9e7786a5e63
+      display: '&2Runa Eterna'
+      lore:
+      - '&fQuantia: &7x{amount}'
+
+  eterna-100:
+    type: COMMAND
+    chance: 2.5
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 100
@@ -137,7 +173,7 @@ rewards:
 
   eterna-250:
     type: COMMAND
-    chance: 1.5
+    chance: 0.75
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 250
@@ -149,7 +185,7 @@ rewards:
 
   eterna-500:
     type: COMMAND
-    chance: 0.5
+    chance: 0.25
     display: '&2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 500
@@ -163,7 +199,7 @@ rewards:
   # -- Runa Divina
   divina-25:
     type: COMMAND
-    chance: 12
+    chance: 11
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 25
@@ -175,7 +211,7 @@ rewards:
 
   divina-50:
     type: COMMAND
-    chance: 7
+    chance: 6.5
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 50
@@ -185,9 +221,21 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  divina-100:
+  divina-75:
     type: COMMAND
     chance: 4
+    display: '&fRuna Divina'
+    command: runas give {player} divina {amount} 1
+    amount: 75
+    icon:
+      texture: 76f33b297a981b527bec393168401d8a2ecadeb9f1603ba5e276f42d64475116
+      display: '&fRuna Divina'
+      lore:
+      - '&fQuantia: &7x{amount}'
+
+  divina-100:
+    type: COMMAND
+    chance: 2.5
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 100
@@ -199,7 +247,7 @@ rewards:
 
   divina-250:
     type: COMMAND
-    chance: 1.5
+    chance: 0.75
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 250
@@ -211,7 +259,7 @@ rewards:
 
   divina-500:
     type: COMMAND
-    chance: 0.5
+    chance: 0.25
     display: '&fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 500
@@ -225,7 +273,7 @@ rewards:
   # -- Runa Primal
   primal-25:
     type: COMMAND
-    chance: 12
+    chance: 11
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 25
@@ -237,7 +285,7 @@ rewards:
 
   primal-50:
     type: COMMAND
-    chance: 7
+    chance: 6.5
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 50
@@ -247,9 +295,21 @@ rewards:
       lore:
       - '&fQuantia: &7x{amount}'
 
-  primal-100:
+  primal-75:
     type: COMMAND
     chance: 4
+    display: '&3Runa Primal'
+    command: runas give {player} primal {amount} 1
+    amount: 75
+    icon:
+      texture: 20ac1fbeba077e48569c2964249d91e440da018f97d938533f152a1526b756d
+      display: '&3Runa Primal'
+      lore:
+      - '&fQuantia: &7x{amount}'
+
+  primal-100:
+    type: COMMAND
+    chance: 2.5
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 100
@@ -261,7 +321,7 @@ rewards:
 
   primal-250:
     type: COMMAND
-    chance: 1.5
+    chance: 0.75
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 250
@@ -273,7 +333,7 @@ rewards:
 
   primal-500:
     type: COMMAND
-    chance: 0.5
+    chance: 0.25
     display: '&3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 500

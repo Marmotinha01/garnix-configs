@@ -31,9 +31,26 @@ box-item:
 #
 # ⚠️ `/boss give boss <jogador> <BOSS> <stacks> 1`: o PRIMEIRO int escala.
 # ⚠️ `/boss give killstack <jogador> <nivel> [quantia]`: o NÍVEL vem primeiro.
+#
+# ⚠️ A ESCADA DE VOLUME e 1 : 0,5 : 0,25 dentro de cada boss, a mesma da
+# Tier I. A ESCADA DE BOSS aqui e 20 : 14 : 9 nos pesos de x1 — Arauto 75k ·
+# Tita 150k · Devorador 300k. Os tres bosses somam 75,25% da caixa.
+#
+# ⚠️ A MATADORA E O TOPO, nao o boss. A espada e permanente e escala tudo o
+# que vem depois; o boss e consumido numa luta so. Por isso a Abissal (0,25,
+# 9.000 de dano) e o item mais raro do arquivo, e a Runica (1,5) vem logo
+# atras. As duas so existem aqui — e o que separa esta caixa da Tier I.
+#
+# ⚠️ A PROPRIA CAIXA X2 (2%) devolve DUAS caixas por uma consumida, entao o
+# saldo e +1: e bonus, nao re-roll. Nao vira loop infinito porque
+# 0,02 x 2 = 0,04 caixa por abertura, muito abaixo de 1 — a corrente sempre
+# morre. So passaria a se sustentar sozinha se esse peso subisse acima de 50.
+#
+# ⚠️ O arquivo soma 100, entao o peso de cada entrada JA E a porcentagem: o
+# Arauto x1 sai em 20% das aberturas e a Matadora Abissal em 0,25%.
 rewards:
 
-  # -- ARAUTO — o recheio desta tabela
+  # -- ARAUTO ------------------------------------------------------ 35%
   boss-arauto:
     type: COMMAND_ITEM
     chance: 20
@@ -73,7 +90,7 @@ rewards:
       lore:
       - '&fVida: &4❤75.000'
 
-  # -- TITÃ
+  # -- TITA ------------------------------------------------------ 24,5%
   boss-tita:
     type: COMMAND_ITEM
     chance: 14
@@ -113,7 +130,7 @@ rewards:
       lore:
       - '&fVida: &4❤150.000'
 
-  # -- DEVORADOR
+  # -- DEVORADOR ------------------------------------------------ 15,75%
   boss-devorador:
     type: COMMAND_ITEM
     chance: 9
@@ -153,7 +170,7 @@ rewards:
       lore:
       - '&fVida: &4❤300.000'
 
-  # -- LIVROS
+  # -- LIVROS ------------------------------------------------------ 12%
   livro-killstack:
     type: COMMAND_ITEM
     chance: 8
@@ -190,7 +207,7 @@ rewards:
       - '&8 ▪ &fNível: &c1 '
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
-  # -- MATADORAS
+  # -- MATADORAS ------------------------------------------------ 10,75%
   matadora-sombria:
     type: COMMAND_ITEM
     chance: 6
@@ -235,7 +252,7 @@ rewards:
 
   matadora-abissal:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 0.25
     display: '&3Matadora Abissal'
     command: boss give sword {player} abissal {amount}
     amount: 1
@@ -246,3 +263,18 @@ rewards:
       lore:
       - '&fDano: &c9.000'
       flags: [ 'HIDE_ATTRIBUTES' ]
+
+  # -- A PROPRIA CAIXA, X2 ------------------------------------------ 2%
+  caixa-bosses-ii-x2:
+    type: COMMAND_ITEM
+    chance: 2
+    display: '&4Caixa Bosses &4[Tier &lII&4]'
+    command: caixas give bosses-ii {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&4Caixa Bosses &4[Tier &lII&4]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'

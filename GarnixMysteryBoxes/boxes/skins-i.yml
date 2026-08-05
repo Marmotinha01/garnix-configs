@@ -21,8 +21,8 @@ box-item:
 # Types: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
-# ⚠️ Esta caixa só sorteia SKIN — ela não tem `azar`. Abrir sempre devolve
-# uma skin, e o que varia é qual das três vias e qual degrau da escada.
+# ⚠️ Esta caixa é de SKIN — ela não tem `azar`. Abrir sempre devolve prêmio:
+# uma das quinze skins, ou o degrau para a Tier II em 1% das vezes.
 #
 # ⚠️ ESCADA DA TIER I — os degraus 2 a 6 de cada via, ou seja tudo que a
 # forja alcança (a default, degrau 1, nunca sai de caixa). Os degraus 7 a
@@ -31,9 +31,17 @@ box-item:
 #   fazenda:   pedra · ferro · ouro · diamante · âmbar
 #   pesca:     coral · escama · prata · turquesa · abissita
 #
-# ⚠️ As três vias valem o MESMO: cada uma soma 100 de peso (30/25/20/15/10),
-# então abrir é 1/3 mineração, 1/3 fazenda, 1/3 pesca. Dentro da via o peso
-# cai conforme a skin sobe na escada.
+# ⚠️ AS TRES VIAS NAO VALEM O MESMO: a pesca sai mais que as outras duas, na
+# razao 39 : 30 : 30. Mineracao e fazenda sao as vias mais raras e ficam
+# empatadas entre si. O 1 que sobra e o degrau para a Tier II.
+#
+# ⚠️ Dentro da via a escada e sempre 38 : 28 : 18 : 11 : 5, repartindo o peso
+# da via. Ela e ingreme de proposito: a skin de topo (rubi · ambar ·
+# abissita, +20%) tem que ser um resultado notavel, nao o quinto degrau de
+# uma escada plana. Se mexer num degrau, mexa nos cinco.
+#
+# ⚠️ O arquivo soma 100, entao o peso de cada entrada JA E a porcentagem: a
+# Skin de Coral sai em 14,82% das aberturas e a Skin de Rubi em 1,5%.
 #
 # ⚠️ A lore de cada ícone espelha o item real (skins.yml de cada plugin) —
 # preview e item recebido têm que bater linha a linha, sem nenhuma linha extra.
@@ -42,10 +50,10 @@ box-item:
 # x enxada) e o sufixo do `display` da recompensa.
 rewards:
 
-  # -- MINERAÇÃO --------------------------------------------------- 1/3
+  # -- MINERACAO --------------------------------------------------- 30%
   mineracao-pedra:
     type: COMMAND_ITEM
-    chance: 30
+    chance: 11.4
     display: '&7Skin de Pedra'
     command: mina giveskin {player} pedra {amount}
     amount: 1
@@ -63,7 +71,7 @@ rewards:
 
   mineracao-ferro:
     type: COMMAND_ITEM
-    chance: 25
+    chance: 8.4
     display: '&fSkin de Ferro'
     command: mina giveskin {player} ferro {amount}
     amount: 1
@@ -81,7 +89,7 @@ rewards:
 
   mineracao-ouro:
     type: COMMAND_ITEM
-    chance: 20
+    chance: 5.4
     display: '&6Skin de Ouro'
     command: mina giveskin {player} ouro {amount}
     amount: 1
@@ -99,7 +107,7 @@ rewards:
 
   mineracao-diamante:
     type: COMMAND_ITEM
-    chance: 15
+    chance: 3.3
     display: '&bSkin de Diamante'
     command: mina giveskin {player} diamante {amount}
     amount: 1
@@ -117,7 +125,7 @@ rewards:
 
   mineracao-rubi:
     type: COMMAND_ITEM
-    chance: 10
+    chance: 1.5
     display: '&cSkin de Rubi'
     command: mina giveskin {player} rubi {amount}
     amount: 1
@@ -133,10 +141,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- FAZENDA ----------------------------------------------------- 1/3
+  # -- FAZENDA ----------------------------------------------------- 30%
   farm-pedra:
     type: COMMAND_ITEM
-    chance: 30
+    chance: 11.4
     display: '&7Skin de Pedra'
     command: fazenda giveskin {player} pedra {amount}
     amount: 1
@@ -154,7 +162,7 @@ rewards:
 
   farm-ferro:
     type: COMMAND_ITEM
-    chance: 25
+    chance: 8.4
     display: '&fSkin de Ferro'
     command: fazenda giveskin {player} ferro {amount}
     amount: 1
@@ -172,7 +180,7 @@ rewards:
 
   farm-ouro:
     type: COMMAND_ITEM
-    chance: 20
+    chance: 5.4
     display: '&6Skin de Ouro'
     command: fazenda giveskin {player} ouro {amount}
     amount: 1
@@ -190,7 +198,7 @@ rewards:
 
   farm-diamante:
     type: COMMAND_ITEM
-    chance: 15
+    chance: 3.3
     display: '&bSkin de Diamante'
     command: fazenda giveskin {player} diamante {amount}
     amount: 1
@@ -208,7 +216,7 @@ rewards:
 
   farm-ambar:
     type: COMMAND_ITEM
-    chance: 10
+    chance: 1.5
     display: '&5Skin de Âmbar'
     command: fazenda giveskin {player} ambar {amount}
     amount: 1
@@ -224,10 +232,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- PESCA ------------------------------------------------------- 1/3
+  # -- PESCA ------------------------------------------------------- 39%
   pesca-coral:
     type: COMMAND_ITEM
-    chance: 30
+    chance: 14.82
     display: '&3Skin de Coral'
     command: pesca giveskin {player} coral {amount}
     amount: 1
@@ -244,7 +252,7 @@ rewards:
 
   pesca-escama:
     type: COMMAND_ITEM
-    chance: 25
+    chance: 10.92
     display: '&6Skin de Escama'
     command: pesca giveskin {player} escama {amount}
     amount: 1
@@ -261,7 +269,7 @@ rewards:
 
   pesca-prata:
     type: COMMAND_ITEM
-    chance: 20
+    chance: 7.02
     display: '&fSkin de Prata'
     command: pesca giveskin {player} prata {amount}
     amount: 1
@@ -278,7 +286,7 @@ rewards:
 
   pesca-turquesa:
     type: COMMAND_ITEM
-    chance: 15
+    chance: 4.29
     display: '&bSkin de Turquesa'
     command: pesca giveskin {player} turquesa {amount}
     amount: 1
@@ -295,7 +303,7 @@ rewards:
 
   pesca-abissita:
     type: COMMAND_ITEM
-    chance: 10
+    chance: 1.95
     display: '&aSkin de Abissita'
     command: pesca giveskin {player} abissita {amount}
     amount: 1
@@ -310,10 +318,10 @@ rewards:
       - '&8 ▪ &a+&l20&a% &bXP '
       - '&8 ▪ &cPeso até &l32&ckg '
 
-  # -- O DEGRAU PARA A TIER II
+  # -- O DEGRAU PARA A TIER II -------------------------------------- 1%
   caixa-skins-ii:
     type: COMMAND_ITEM
-    chance: 1.5
+    chance: 1
     display: '&eCaixa Skins &e[Tier &lII&e]'
     command: caixas give skins-ii {player} {amount}
     amount: 1

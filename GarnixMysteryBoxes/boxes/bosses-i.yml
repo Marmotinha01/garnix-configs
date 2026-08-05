@@ -36,9 +36,26 @@ box-item:
 #
 # ⚠️ Os três volumes de cada boss (1x, 3x e 5x) usam o mesmo ícone; quem
 # mostra quantos são é a pilha (`amount:`) e o `{amount}x` do display.
+#
+# ⚠️ A ESCADA DE VOLUME e 1 : 0,5 : 0,25 dentro de cada boss — o x3 vale
+# metade do x1 e o x5 metade do x3. Ela e igual nos cinco bosses e igual na
+# Tier II. Se mexer num volume, mexa nos tres.
+#
+# ⚠️ A ESCADA DE BOSS e 18 : 14 : 10 : 6 : 3 nos pesos de x1, e acompanha a
+# vida: Colosso 25k · Inferno 50k · Arauto 75k · Tita 150k · Devorador 300k.
+# Como cada familia e 1,75x o seu x1, os cinco bosses somam 89,25% da caixa.
+#
+# ⚠️ A MATADORA E O TOPO, nao o boss. A espada e permanente e escala tudo o
+# que vem depois; o boss e consumido numa luta so. Por isso a Ancestral
+# (0,5) e o item mais raro da caixa, mais raro ate que o degrau para a
+# Tier II (1). O unico premio entre os dois e o lote de 5 Devoradores (0,75),
+# que sao 1,5 milhao de vida de boss num drop so.
+#
+# ⚠️ O arquivo soma 100, entao o peso de cada entrada JA E a porcentagem: o
+# Colosso x1 sai em 18% das aberturas e a Matadora Ancestral em 0,5%.
 rewards:
 
-  # -- COLOSSO — o recheio da tabela
+  # -- COLOSSO --------------------------------------------------- 31,5%
   boss-colosso:
     type: COMMAND_ITEM
     chance: 18
@@ -78,7 +95,7 @@ rewards:
       lore:
       - '&fVida: &4❤25.000'
 
-  # -- INFERNO
+  # -- INFERNO --------------------------------------------------- 24,5%
   boss-inferno:
     type: COMMAND_ITEM
     chance: 14
@@ -118,7 +135,7 @@ rewards:
       lore:
       - '&fVida: &4❤50.000'
 
-  # -- ARAUTO
+  # -- ARAUTO ---------------------------------------------------- 17,5%
   boss-arauto:
     type: COMMAND_ITEM
     chance: 10
@@ -158,7 +175,7 @@ rewards:
       lore:
       - '&fVida: &4❤75.000'
 
-  # -- TITÃ
+  # -- TITA ------------------------------------------------------ 10,5%
   boss-tita:
     type: COMMAND_ITEM
     chance: 6
@@ -198,7 +215,7 @@ rewards:
       lore:
       - '&fVida: &4❤150.000'
 
-  # -- DEVORADOR
+  # -- DEVORADOR ------------------------------------------------- 5,25%
   boss-devorador:
     type: COMMAND_ITEM
     chance: 3
@@ -238,10 +255,10 @@ rewards:
       lore:
       - '&fVida: &4❤300.000'
 
-  # -- MATADORAS
+  # -- MATADORAS ------------------------------------------------- 6,75%
   matadora-bruta:
     type: COMMAND_ITEM
-    chance: 3
+    chance: 3.75
     display: '&7Matadora Bruta'
     command: boss give sword {player} bruta {amount}
     amount: 1
@@ -255,7 +272,7 @@ rewards:
 
   matadora-sombria:
     type: COMMAND_ITEM
-    chance: 1.5
+    chance: 2.5
     display: '&5Matadora Sombria'
     command: boss give sword {player} sombria {amount}
     amount: 1
@@ -281,10 +298,10 @@ rewards:
       - '&fDano: &c1.500'
       flags: [ 'HIDE_ATTRIBUTES' ]
 
-  # -- LIVRO
+  # -- LIVRO -------------------------------------------------------- 3%
   livro-killstack:
     type: COMMAND_ITEM
-    chance: 2
+    chance: 3
     display: '&4Livro de Kill-Stack'
     command: boss give killstack {player} 1 {amount}
     amount: 1
@@ -300,10 +317,10 @@ rewards:
       - '&8 ▪ &fNível: &c1 '
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
-  # -- O DEGRAU PARA A TIER II
+  # -- O DEGRAU PARA A TIER II -------------------------------------- 1%
   caixa-bosses-ii:
     type: COMMAND_ITEM
-    chance: 0.5
+    chance: 1
     display: '&4Caixa Bosses &4[Tier &lII&4]'
     command: caixas give bosses-ii {player} {amount}
     amount: 1

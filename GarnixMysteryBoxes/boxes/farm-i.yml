@@ -22,9 +22,18 @@ box-item:
 # 'chance' é o peso do sorteio (não precisa somar 100).
 #
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve premio. Azar so existe
-# nas crates e nos bosses. Os 20 pontos que o azar tinha foram devolvidos
-# para os premios na mesma proporcao — nenhuma recompensa mudou de posicao
-# na tabela, todas ficaram ~1,24x mais provaveis.
+# nas crates e nos bosses.
+#
+# ⚠️ GRADE DAS TRES CAIXAS TIER I — mineracao, pesca e farm usam a MESMA
+# grade, familia por familia:
+#
+#   moeda 30 · armadura T-II 24 · livros 12 · skins 11 · armadura T-III 9 ·
+#   boosters 6,5 · forja 6,5 · caixa Tier II 1
+#
+# A mineracao e a unica que difere, e so porque tem tres premios a mais
+# (2x2, 4x4 e britadeira): la a grade acima vale multiplicada por 0,88 mais
+# os 12% do bloco de explosivos. Se mexer numa familia aqui, mexa nas
+# outras duas: e uma grade so.
 #
 # ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
 # sufixo de slot entrega o set inteiro (+48%) num drop só.
@@ -43,11 +52,27 @@ box-item:
 # ⚠️ A lore de cada ícone espelha o item real (GarnixFarm/skins.yml e
 # GarnixFarm/armors/) — preview e item recebido têm que bater linha a
 # linha, sem nenhuma linha extra.
+#
+# ⚠️ MOEDA E ESCADA DE 3 DEGRAUS espelhando a crate farm — os mesmos
+# 250·500·1.000 coins e 150·300·600 sementes de la, multiplicados por 3. A
+# Tier II usa a mesma escada da crate multiplicada por 5. Se mexer num
+# degrau, mexa nos tres: a familia inteira e que da a escada.
+#
+# ⚠️ A MOEDA E O FILLER desta caixa, o mesmo papel que ela tem na crate:
+# 30% das aberturas devolvem dinheiro. Dentro da familia a escada e
+# 50/30/20, NAO o 60/30/10 da crate — com 60/30/10 o degrau de cima (3.000
+# coins) ficaria mais raro que a skin de topo, e moeda nunca pode ser mais
+# rara que item.
+#
+# ⚠️ O TOPO E A CAIXA TIER II (1%). Logo abaixo vem a skin de topo (2) e a
+# peca de armadura T-III (2,25) — as duas coisas boas da caixa. O set T-III
+# inteiro sao 4 pecas, entao junta-lo e MUITO mais raro que a skin.
 rewards:
 
+  # -- ARMADURA TIER II -------------------------------------------- 24%
   armadura-ii-capacete:
     type: COMMAND_ITEM
-    chance: 7.35
+    chance: 6
     display: '&aCapacete Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_helmet {amount}
     amount: 1
@@ -66,7 +91,7 @@ rewards:
 
   armadura-ii-peitoral:
     type: COMMAND_ITEM
-    chance: 7.35
+    chance: 6
     display: '&aPeitoral Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_chestplate {amount}
     amount: 1
@@ -85,7 +110,7 @@ rewards:
 
   armadura-ii-calca:
     type: COMMAND_ITEM
-    chance: 7.35
+    chance: 6
     display: '&aCalça Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_leggings {amount}
     amount: 1
@@ -104,7 +129,7 @@ rewards:
 
   armadura-ii-bota:
     type: COMMAND_ITEM
-    chance: 7.35
+    chance: 6
     display: '&aBota Farm &a[Tier &lII&a]'
     command: fazenda givearmor {player} tier-ii_boots {amount}
     amount: 1
@@ -120,11 +145,11 @@ rewards:
       - '&8 ▪ &a+&l2&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
-  # -- ARMADURA TIER III ------------------------------------------- 13%
 
+  # -- ARMADURA TIER III -------------------------------------------- 9%
   armadura-iii-capacete:
     type: COMMAND_ITEM
-    chance: 4.78
+    chance: 2.25
     display: '&bCapacete Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_helmet {amount}
     amount: 1
@@ -143,7 +168,7 @@ rewards:
 
   armadura-iii-peitoral:
     type: COMMAND_ITEM
-    chance: 4.78
+    chance: 2.25
     display: '&bPeitoral Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_chestplate {amount}
     amount: 1
@@ -162,7 +187,7 @@ rewards:
 
   armadura-iii-calca:
     type: COMMAND_ITEM
-    chance: 4.78
+    chance: 2.25
     display: '&bCalça Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_leggings {amount}
     amount: 1
@@ -181,7 +206,7 @@ rewards:
 
   armadura-iii-bota:
     type: COMMAND_ITEM
-    chance: 4.78
+    chance: 2.25
     display: '&bBota Farm &b[Tier &lIII&b]'
     command: fazenda givearmor {player} tier-iii_boots {amount}
     amount: 1
@@ -197,11 +222,11 @@ rewards:
       - '&8 ▪ &a+&l3.5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
-  # -- SKINS ------------------------------------------------------- 14%
 
+  # -- SKINS ------------------------------------------------------- 11%
   skin-ferro:
     type: COMMAND_ITEM
-    chance: 5.88
+    chance: 5.5
     display: '&fSkin de Ferro'
     command: fazenda giveskin {player} ferro {amount}
     amount: 1
@@ -219,7 +244,7 @@ rewards:
 
   skin-ouro:
     type: COMMAND_ITEM
-    chance: 4.41
+    chance: 3.5
     display: '&6Skin de Ouro'
     command: fazenda giveskin {player} ouro {amount}
     amount: 1
@@ -237,7 +262,7 @@ rewards:
 
   skin-diamante:
     type: COMMAND_ITEM
-    chance: 2.94
+    chance: 2
     display: '&bSkin de Diamante'
     command: fazenda giveskin {player} diamante {amount}
     amount: 1
@@ -253,9 +278,10 @@ rewards:
       flags:
       - HIDE_ATTRIBUTES
 
+  # -- FORJA ------------------------------------------------------ 6,5%
   forja:
     type: COMMAND_ITEM
-    chance: 13.97
+    chance: 6.5
     display: '&eForja de Skins'
     command: fazenda giveforge {player} {amount}
     amount: 1
@@ -268,19 +294,65 @@ rewards:
       - ''
       - '&8 ▪ &fTipo: &eEnxada '
 
-  secundaria:
+  # -- MOEDAS ------------------------------------------------------ 30%
+  coins-750:
     type: CURRENCY
-    chance: 8.82
+    chance: 7.5
+    currency-id: coins
+    amount: '750'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  coins-1500:
+    type: CURRENCY
+    chance: 4.5
+    currency-id: coins
+    amount: '1500'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  coins-3000:
+    type: CURRENCY
+    chance: 3
+    currency-id: coins
+    amount: '3000'
+    icon:
+      lore:
+      - '&fValor: &2$&a{amount}'
+
+  sementes-450:
+    type: CURRENCY
+    chance: 7.5
     currency-id: sementes
-    amount: '1000'
+    amount: '450'
     icon:
       lore:
       - '&fValor: &5❋{amount}'
-  # -- BOOSTERS --------------------------------------------------- 2,5%
 
+  sementes-900:
+    type: CURRENCY
+    chance: 4.5
+    currency-id: sementes
+    amount: '900'
+    icon:
+      lore:
+      - '&fValor: &5❋{amount}'
+
+  sementes-1800:
+    type: CURRENCY
+    chance: 3
+    currency-id: sementes
+    amount: '1800'
+    icon:
+      lore:
+      - '&fValor: &5❋{amount}'
+
+  # -- BOOSTERS --------------------------------------------------- 6,5%
   booster-2x-5m:
     type: COMMAND_ITEM
-    chance: 2.21
+    chance: 4
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 5m {amount}
     amount: 1
@@ -301,7 +373,7 @@ rewards:
 
   booster-2x-10m:
     type: COMMAND_ITEM
-    chance: 1.47
+    chance: 2.5
     display: '&eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 10m {amount}
     amount: 1
@@ -319,11 +391,11 @@ rewards:
       - ' &8▪ &fDuração: &710m '
       flags:
       - HIDE_POTION_EFFECTS
-  # -- LIVROS ----------------------------------------------------- 7,5%
 
+  # -- LIVROS ------------------------------------------------------ 12%
   livro-ceifador:
     type: COMMAND_ITEM
-    chance: 3.68
+    chance: 4
     display: '&dLivro de Ceifador'
     command: lamina givebook {player} ceifador 1 {amount}
     amount: 1
@@ -340,7 +412,7 @@ rewards:
 
   livro-massacre:
     type: COMMAND_ITEM
-    chance: 3.68
+    chance: 4
     display: '&4Livro de Massacre'
     command: lamina givebook {player} massacre 1 {amount}
     amount: 1
@@ -357,7 +429,7 @@ rewards:
 
   livro-pilhagem:
     type: COMMAND_ITEM
-    chance: 3.68
+    chance: 4
     display: '&aLivro de Pilhagem'
     command: lamina givebook {player} pilhagem 1 {amount}
     amount: 1
@@ -371,11 +443,11 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-  # -- O DEGRAU PARA A TIER II
 
+  # -- O DEGRAU PARA A TIER II -------------------------------------- 1%
   caixa-farm-ii:
     type: COMMAND_ITEM
-    chance: 0.74
+    chance: 1
     display: '&aCaixa Farm &a[Tier &lII&a]'
     command: caixas give farm-ii {player} {amount}
     amount: 1

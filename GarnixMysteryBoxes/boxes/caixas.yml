@@ -25,9 +25,25 @@ box-item:
 # devolve uma caixa, e o que varia é qual. Ela também nao se sorteia a si
 # mesma: sem isso, uma abertura poderia so devolver a propria caixa.
 #
+# ⚠️ Ela sorteia TODAS as outras 17 caixas do servidor. Se voce criar uma
+# caixa nova, ela entra aqui tambem — a regra e "todas menos ela mesma".
+#
+# ⚠️ A ORDEM DESTE ARQUIVO E A ORDEM DO CAMPO `weight:` de cada caixa, que e
+# a mesma raridade que o menu /caixas ja mostra. A mineracao-i abre a lista
+# (weight 10) e a garnix fecha (weight 180). Se voce mudar o `weight:` de
+# alguma caixa, mova a entrada dela aqui junto — as duas ordens tem que
+# contar a mesma historia.
+#
+#   comum    mineracao-i 11 · farm-i 10,5 · pesca-i 10 · skins-i 9
+#            runas 8 · recursos 7,5 · bosses-i 7 · chaves 6,5
+#   medio    mineracao-ii 5,5 · farm-ii 5 · pesca-ii 4,5 · skins-ii 4
+#            bosses-ii 3,5 · boosters 3 · maquinas 2,5
+#   raro     robos 1,5 · garnix 1
+#
 # ⚠️ Cada caixa tem duas entradas: a de x1 e a de x2, com a de x2 valendo
-# metade do peso da de x1. O x2 nao muda display nem lore — a pilha do icone
-# (amount: 2) e o que mostra que sao duas.
+# metade do peso da de x1 — os numeros acima sao a soma das duas. O x2 nao
+# muda display nem lore: a pilha do icone (amount: 2) e o que mostra que sao
+# duas.
 #
 # ⚠️ O piso e o teto vem das caixas sorteadas, nao daqui. NENHUMA caixa tem
 # azar — nem estas, nem as de via, nem as de skins, nem as de bosses, nem a
@@ -37,7 +53,7 @@ rewards:
 
   mineracao-i:
     type: COMMAND_ITEM
-    chance: 12
+    chance: 7.33
     display: '&6Caixa Mineração &6[Tier &lI&6]'
     command: caixas give mineracao-i {player} {amount}
     amount: 1
@@ -51,7 +67,7 @@ rewards:
 
   mineracao-i-x2:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 3.67
     display: '&6Caixa Mineração &6[Tier &lI&6]'
     command: caixas give mineracao-i {player} {amount}
     amount: 2
@@ -65,7 +81,7 @@ rewards:
 
   farm-i:
     type: COMMAND_ITEM
-    chance: 12
+    chance: 7
     display: '&aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
     amount: 1
@@ -79,7 +95,7 @@ rewards:
 
   farm-i-x2:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 3.5
     display: '&aCaixa Farm &a[Tier &lI&a]'
     command: caixas give farm-i {player} {amount}
     amount: 2
@@ -93,7 +109,7 @@ rewards:
 
   pesca-i:
     type: COMMAND_ITEM
-    chance: 12
+    chance: 6.67
     display: '&bCaixa Pesca &b[Tier &lI&b]'
     command: caixas give pesca-i {player} {amount}
     amount: 1
@@ -107,7 +123,7 @@ rewards:
 
   pesca-i-x2:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 3.33
     display: '&bCaixa Pesca &b[Tier &lI&b]'
     command: caixas give pesca-i {player} {amount}
     amount: 2
@@ -121,7 +137,7 @@ rewards:
 
   skins-i:
     type: COMMAND_ITEM
-    chance: 12
+    chance: 6
     display: '&eCaixa Skins &e[Tier &lI&e]'
     command: caixas give skins-i {player} {amount}
     amount: 1
@@ -135,7 +151,7 @@ rewards:
 
   skins-i-x2:
     type: COMMAND_ITEM
-    chance: 6
+    chance: 3
     display: '&eCaixa Skins &e[Tier &lI&e]'
     command: caixas give skins-i {player} {amount}
     amount: 2
@@ -147,233 +163,9 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  bosses-i:
-    type: COMMAND_ITEM
-    chance: 12
-    display: '&4Caixa Bosses &4[Tier &lI&4]'
-    command: caixas give bosses-i {player} {amount}
-    amount: 1
-    icon:
-      material: CHEST
-      amount: 1
-      display: '&4Caixa Bosses &4[Tier &lI&4]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  bosses-i-x2:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&4Caixa Bosses &4[Tier &lI&4]'
-    command: caixas give bosses-i {player} {amount}
-    amount: 2
-    icon:
-      material: CHEST
-      amount: 2
-      display: '&4Caixa Bosses &4[Tier &lI&4]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  mineracao-ii:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&6Caixa Mineração &6[Tier &lII&6]'
-    command: caixas give mineracao-ii {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      amount: 1
-      display: '&6Caixa Mineração &6[Tier &lII&6]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  mineracao-ii-x2:
-    type: COMMAND_ITEM
-    chance: 3
-    display: '&6Caixa Mineração &6[Tier &lII&6]'
-    command: caixas give mineracao-ii {player} {amount}
-    amount: 2
-    icon:
-      material: ENDER_CHEST
-      amount: 2
-      display: '&6Caixa Mineração &6[Tier &lII&6]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  farm-ii:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&aCaixa Farm &a[Tier &lII&a]'
-    command: caixas give farm-ii {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      amount: 1
-      display: '&aCaixa Farm &a[Tier &lII&a]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  farm-ii-x2:
-    type: COMMAND_ITEM
-    chance: 3
-    display: '&aCaixa Farm &a[Tier &lII&a]'
-    command: caixas give farm-ii {player} {amount}
-    amount: 2
-    icon:
-      material: ENDER_CHEST
-      amount: 2
-      display: '&aCaixa Farm &a[Tier &lII&a]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  pesca-ii:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&bCaixa Pesca &b[Tier &lII&b]'
-    command: caixas give pesca-ii {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      amount: 1
-      display: '&bCaixa Pesca &b[Tier &lII&b]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  pesca-ii-x2:
-    type: COMMAND_ITEM
-    chance: 3
-    display: '&bCaixa Pesca &b[Tier &lII&b]'
-    command: caixas give pesca-ii {player} {amount}
-    amount: 2
-    icon:
-      material: ENDER_CHEST
-      amount: 2
-      display: '&bCaixa Pesca &b[Tier &lII&b]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  skins-ii:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&eCaixa Skins &e[Tier &lII&e]'
-    command: caixas give skins-ii {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      amount: 1
-      display: '&eCaixa Skins &e[Tier &lII&e]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  skins-ii-x2:
-    type: COMMAND_ITEM
-    chance: 3
-    display: '&eCaixa Skins &e[Tier &lII&e]'
-    command: caixas give skins-ii {player} {amount}
-    amount: 2
-    icon:
-      material: ENDER_CHEST
-      amount: 2
-      display: '&eCaixa Skins &e[Tier &lII&e]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  bosses-ii:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&4Caixa Bosses &4[Tier &lII&4]'
-    command: caixas give bosses-ii {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      amount: 1
-      display: '&4Caixa Bosses &4[Tier &lII&4]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  bosses-ii-x2:
-    type: COMMAND_ITEM
-    chance: 3
-    display: '&4Caixa Bosses &4[Tier &lII&4]'
-    command: caixas give bosses-ii {player} {amount}
-    amount: 2
-    icon:
-      material: ENDER_CHEST
-      amount: 2
-      display: '&4Caixa Bosses &4[Tier &lII&4]'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  maquinas:
-    type: COMMAND_ITEM
-    chance: 3.5
-    display: '&bCaixa Máquinas'
-    command: caixas give maquinas {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      amount: 1
-      display: '&bCaixa Máquinas'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  maquinas-x2:
-    type: COMMAND_ITEM
-    chance: 1.5
-    display: '&bCaixa Máquinas'
-    command: caixas give maquinas {player} {amount}
-    amount: 2
-    icon:
-      material: ENDER_CHEST
-      amount: 2
-      display: '&bCaixa Máquinas'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  boosters:
-    type: COMMAND_ITEM
-    chance: 3.5
-    display: '&aCaixa Boosters'
-    command: caixas give boosters {player} {amount}
-    amount: 1
-    icon:
-      material: ENDER_CHEST
-      amount: 1
-      display: '&aCaixa Boosters'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  boosters-x2:
-    type: COMMAND_ITEM
-    chance: 1.5
-    display: '&aCaixa Boosters'
-    command: caixas give boosters {player} {amount}
-    amount: 2
-    icon:
-      material: ENDER_CHEST
-      amount: 2
-      display: '&aCaixa Boosters'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
   runas:
     type: COMMAND_ITEM
-    chance: 3.5
+    chance: 5.33
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 1
@@ -387,7 +179,7 @@ rewards:
 
   runas-x2:
     type: COMMAND_ITEM
-    chance: 1.5
+    chance: 2.67
     display: '&5Caixa Runas'
     command: caixas give runas {player} {amount}
     amount: 2
@@ -401,7 +193,7 @@ rewards:
 
   recursos:
     type: COMMAND_ITEM
-    chance: 3.5
+    chance: 5
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 1
@@ -415,7 +207,7 @@ rewards:
 
   recursos-x2:
     type: COMMAND_ITEM
-    chance: 1.5
+    chance: 2.5
     display: '&2Caixa Recursos'
     command: caixas give recursos {player} {amount}
     amount: 2
@@ -427,9 +219,289 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  garnix:
+  bosses-i:
+    type: COMMAND_ITEM
+    chance: 4.67
+    display: '&4Caixa Bosses &4[Tier &lI&4]'
+    command: caixas give bosses-i {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      amount: 1
+      display: '&4Caixa Bosses &4[Tier &lI&4]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  bosses-i-x2:
+    type: COMMAND_ITEM
+    chance: 2.33
+    display: '&4Caixa Bosses &4[Tier &lI&4]'
+    command: caixas give bosses-i {player} {amount}
+    amount: 2
+    icon:
+      material: CHEST
+      amount: 2
+      display: '&4Caixa Bosses &4[Tier &lI&4]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  chaves:
+    type: COMMAND_ITEM
+    chance: 4.33
+    display: '&9Caixa Chaves'
+    command: caixas give chaves {player} {amount}
+    amount: 1
+    icon:
+      material: CHEST
+      amount: 1
+      display: '&9Caixa Chaves'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  chaves-x2:
+    type: COMMAND_ITEM
+    chance: 2.17
+    display: '&9Caixa Chaves'
+    command: caixas give chaves {player} {amount}
+    amount: 2
+    icon:
+      material: CHEST
+      amount: 2
+      display: '&9Caixa Chaves'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  mineracao-ii:
+    type: COMMAND_ITEM
+    chance: 3.67
+    display: '&6Caixa Mineração &6[Tier &lII&6]'
+    command: caixas give mineracao-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      amount: 1
+      display: '&6Caixa Mineração &6[Tier &lII&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  mineracao-ii-x2:
+    type: COMMAND_ITEM
+    chance: 1.83
+    display: '&6Caixa Mineração &6[Tier &lII&6]'
+    command: caixas give mineracao-ii {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&6Caixa Mineração &6[Tier &lII&6]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  farm-ii:
+    type: COMMAND_ITEM
+    chance: 3.33
+    display: '&aCaixa Farm &a[Tier &lII&a]'
+    command: caixas give farm-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      amount: 1
+      display: '&aCaixa Farm &a[Tier &lII&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  farm-ii-x2:
+    type: COMMAND_ITEM
+    chance: 1.67
+    display: '&aCaixa Farm &a[Tier &lII&a]'
+    command: caixas give farm-ii {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&aCaixa Farm &a[Tier &lII&a]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  pesca-ii:
     type: COMMAND_ITEM
     chance: 3
+    display: '&bCaixa Pesca &b[Tier &lII&b]'
+    command: caixas give pesca-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      amount: 1
+      display: '&bCaixa Pesca &b[Tier &lII&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  pesca-ii-x2:
+    type: COMMAND_ITEM
+    chance: 1.5
+    display: '&bCaixa Pesca &b[Tier &lII&b]'
+    command: caixas give pesca-ii {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&bCaixa Pesca &b[Tier &lII&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  skins-ii:
+    type: COMMAND_ITEM
+    chance: 2.67
+    display: '&eCaixa Skins &e[Tier &lII&e]'
+    command: caixas give skins-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      amount: 1
+      display: '&eCaixa Skins &e[Tier &lII&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  skins-ii-x2:
+    type: COMMAND_ITEM
+    chance: 1.33
+    display: '&eCaixa Skins &e[Tier &lII&e]'
+    command: caixas give skins-ii {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&eCaixa Skins &e[Tier &lII&e]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  bosses-ii:
+    type: COMMAND_ITEM
+    chance: 2.33
+    display: '&4Caixa Bosses &4[Tier &lII&4]'
+    command: caixas give bosses-ii {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      amount: 1
+      display: '&4Caixa Bosses &4[Tier &lII&4]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  bosses-ii-x2:
+    type: COMMAND_ITEM
+    chance: 1.17
+    display: '&4Caixa Bosses &4[Tier &lII&4]'
+    command: caixas give bosses-ii {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&4Caixa Bosses &4[Tier &lII&4]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  boosters:
+    type: COMMAND_ITEM
+    chance: 2
+    display: '&aCaixa Boosters'
+    command: caixas give boosters {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      amount: 1
+      display: '&aCaixa Boosters'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  boosters-x2:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&aCaixa Boosters'
+    command: caixas give boosters {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&aCaixa Boosters'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  maquinas:
+    type: COMMAND_ITEM
+    chance: 1.67
+    display: '&bCaixa Máquinas'
+    command: caixas give maquinas {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      amount: 1
+      display: '&bCaixa Máquinas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  maquinas-x2:
+    type: COMMAND_ITEM
+    chance: 0.83
+    display: '&bCaixa Máquinas'
+    command: caixas give maquinas {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&bCaixa Máquinas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  robos:
+    type: COMMAND_ITEM
+    chance: 1
+    display: '&cCaixa Robôs'
+    command: caixas give robos {player} {amount}
+    amount: 1
+    icon:
+      material: ENDER_CHEST
+      amount: 1
+      display: '&cCaixa Robôs'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  robos-x2:
+    type: COMMAND_ITEM
+    chance: 0.5
+    display: '&cCaixa Robôs'
+    command: caixas give robos {player} {amount}
+    amount: 2
+    icon:
+      material: ENDER_CHEST
+      amount: 2
+      display: '&cCaixa Robôs'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  garnix:
+    type: COMMAND_ITEM
+    chance: 0.67
     display: '&6Caixa Garnix'
     command: caixas give garnix {player} {amount}
     amount: 1
@@ -443,7 +515,7 @@ rewards:
 
   garnix-x2:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 0.33
     display: '&6Caixa Garnix'
     command: caixas give garnix {player} {amount}
     amount: 2

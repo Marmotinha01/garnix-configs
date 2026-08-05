@@ -25,16 +25,29 @@ box-item:
 # chave, e o que varia é de qual crate e quantas.
 #
 # ⚠️ AS SEIS CHAVES DO SERVIDOR, todas aqui: mineração · farm · pesca ·
-# bosses · rankup · vip. Cada uma soma 100 de peso, então abrir é 1/6 para
-# cada crate — nenhuma via é favorecida. O total do arquivo é 600 de
-# propósito, mesmo desenho da caixa `skins-i`.
+# bosses · rankup · vip. As vias NAO valem o mesmo:
 #
-# ⚠️ A ESCADA DE QUANTIDADE é igual nas seis: 3x (45) · 5x (27) · 10x (16) ·
-# 15x (9) · 30x (3). O 30x é ~3% do peso da via, ou 0,5% da caixa inteira.
+#   mineracao 22 · farm 22 · pesca 22 · bosses 17 · vip 10 · rankup 7
 #
-# ⚠️ `/crate givekey <crate> <jogador> <quantidade>`: o ID DA CRATE vem
-# PRIMEIRO, antes do jogador — é a ordem inversa da maioria dos outros give*
-# do servidor. Trocar os dois faz o comando falhar em silêncio.
+# A ordem sai das proprias crates de linha, que ja sorteiam essas chaves em
+# 5,6 (bosses) : 1,5 (vip) : 0,75 (rankup) — rankup e a mais valiosa das
+# tres. As tres chaves de LINHA ficam por cima porque o jogador consegue
+# elas jogando a via; a de VIP e a de RankUP nao se joga para conseguir,
+# entao sao as duas mais raras daqui.
+#
+# ⚠️ A ESCADA DE QUANTIDADE é a mesma nas seis, na razao 45 : 27 : 16 : 9 : 3
+# repartindo o peso da via (3x · 5x · 10x · 15x · 30x). O 30x continua sendo
+# 3% da via — na mineracao isso e 0,66% da caixa, na rankup 0,21%.
+#
+# ⚠️ O arquivo soma 100, entao o peso de cada entrada JA E a porcentagem: o
+# lote de 3 chaves de mineracao sai em 9,9% das aberturas e o de 30 chaves
+# de RankUP em 0,21%.
+#
+# ⚠️ `/crates givevirtualkey <crate> <jogador> <quantidade>`: o ID DA CRATE
+# vem PRIMEIRO, antes do jogador — é a ordem inversa da maioria dos outros
+# give* do servidor. Trocar os dois faz o comando falhar em silêncio. Existe
+# tambem `/crates givekey`, que entrega a chave como ITEM fisico; esta caixa
+# usa a virtual de proposito, que ja cai armazenada.
 #
 # ⚠️ Quem mostra quantas chaves saíram é a pilha do próprio ícone (`amount:`)
 # e o `{amount}x` do display. TRIPWIRE_HOOK empilha, então o ícone renderiza
@@ -46,11 +59,11 @@ box-item:
 # das outras quatro: a chave delas não se consegue jogando a via.
 rewards:
 
-  # ── CHAVE MINERAÇÃO ─────────────────────────────────────────── 1/6
+  # ── CHAVE MINERACAO ──────────────────────────────────────────── 22%
 
   mineracao-x3:
     type: COMMAND
-    chance: 45
+    chance: 9.9
     display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 3
@@ -65,7 +78,7 @@ rewards:
 
   mineracao-x5:
     type: COMMAND
-    chance: 27
+    chance: 5.94
     display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 5
@@ -80,7 +93,7 @@ rewards:
 
   mineracao-x10:
     type: COMMAND
-    chance: 16
+    chance: 3.52
     display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 10
@@ -95,7 +108,7 @@ rewards:
 
   mineracao-x15:
     type: COMMAND
-    chance: 9
+    chance: 1.98
     display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 15
@@ -110,7 +123,7 @@ rewards:
 
   mineracao-x30:
     type: COMMAND
-    chance: 3
+    chance: 0.66
     display: '&eChave Mineração'
     command: crates givevirtualkey mineracao {player} {amount}
     amount: 30
@@ -123,11 +136,11 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
 
-  # ── CHAVE FARM ──────────────────────────────────────────────── 1/6
+  # ── CHAVE FARM ──────────────────────────────────────────────── 22%
 
   farm-x3:
     type: COMMAND
-    chance: 45
+    chance: 9.9
     display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 3
@@ -142,7 +155,7 @@ rewards:
 
   farm-x5:
     type: COMMAND
-    chance: 27
+    chance: 5.94
     display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 5
@@ -157,7 +170,7 @@ rewards:
 
   farm-x10:
     type: COMMAND
-    chance: 16
+    chance: 3.52
     display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 10
@@ -172,7 +185,7 @@ rewards:
 
   farm-x15:
     type: COMMAND
-    chance: 9
+    chance: 1.98
     display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 15
@@ -187,7 +200,7 @@ rewards:
 
   farm-x30:
     type: COMMAND
-    chance: 3
+    chance: 0.66
     display: '&aChave Farm'
     command: crates givevirtualkey farm {player} {amount}
     amount: 30
@@ -200,11 +213,11 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
 
-  # ── CHAVE PESCA ─────────────────────────────────────────────── 1/6
+  # ── CHAVE PESCA ─────────────────────────────────────────────── 22%
 
   pesca-x3:
     type: COMMAND
-    chance: 45
+    chance: 9.9
     display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 3
@@ -219,7 +232,7 @@ rewards:
 
   pesca-x5:
     type: COMMAND
-    chance: 27
+    chance: 5.94
     display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 5
@@ -234,7 +247,7 @@ rewards:
 
   pesca-x10:
     type: COMMAND
-    chance: 16
+    chance: 3.52
     display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 10
@@ -249,7 +262,7 @@ rewards:
 
   pesca-x15:
     type: COMMAND
-    chance: 9
+    chance: 1.98
     display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 15
@@ -264,7 +277,7 @@ rewards:
 
   pesca-x30:
     type: COMMAND
-    chance: 3
+    chance: 0.66
     display: '&bChave Pesca'
     command: crates givevirtualkey pesca {player} {amount}
     amount: 30
@@ -277,11 +290,11 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
 
-  # ── CHAVE BOSSES ────────────────────────────────────────────── 1/6
+  # ── CHAVE BOSSES ────────────────────────────────────────────── 17%
 
   bosses-x3:
     type: COMMAND
-    chance: 45
+    chance: 7.65
     display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 3
@@ -296,7 +309,7 @@ rewards:
 
   bosses-x5:
     type: COMMAND
-    chance: 27
+    chance: 4.59
     display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 5
@@ -311,7 +324,7 @@ rewards:
 
   bosses-x10:
     type: COMMAND
-    chance: 16
+    chance: 2.72
     display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 10
@@ -326,7 +339,7 @@ rewards:
 
   bosses-x15:
     type: COMMAND
-    chance: 9
+    chance: 1.53
     display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 15
@@ -341,7 +354,7 @@ rewards:
 
   bosses-x30:
     type: COMMAND
-    chance: 3
+    chance: 0.51
     display: '&4Chave Bosses'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 30
@@ -354,11 +367,11 @@ rewards:
       - '&7Consiga recompensas'
       - '&7abrindo essa chave.'
 
-  # ── CHAVE VIP ───────────────────────────────────────────────── 1/6
+  # ── CHAVE VIP ───────────────────────────────────────────────── 10%
 
   vip-x3:
     type: COMMAND
-    chance: 45
+    chance: 4.5
     display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 3
@@ -373,7 +386,7 @@ rewards:
 
   vip-x5:
     type: COMMAND
-    chance: 27
+    chance: 2.7
     display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 5
@@ -388,7 +401,7 @@ rewards:
 
   vip-x10:
     type: COMMAND
-    chance: 16
+    chance: 1.6
     display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 10
@@ -403,7 +416,7 @@ rewards:
 
   vip-x15:
     type: COMMAND
-    chance: 9
+    chance: 0.9
     display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 15
@@ -418,7 +431,7 @@ rewards:
 
   vip-x30:
     type: COMMAND
-    chance: 3
+    chance: 0.3
     display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 30
@@ -431,11 +444,11 @@ rewards:
       - '&7Consiga jogando bastante'
       - '&7no servidor todo dia.'
 
-  # ── CHAVE RANKUP ────────────────────────────────────────────── 1/6
+  # ── CHAVE RANKUP ──────────────────────────────────────────────  7%
 
   rankup-x3:
     type: COMMAND
-    chance: 45
+    chance: 3.15
     display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 3
@@ -450,7 +463,7 @@ rewards:
 
   rankup-x5:
     type: COMMAND
-    chance: 27
+    chance: 1.89
     display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 5
@@ -465,7 +478,7 @@ rewards:
 
   rankup-x10:
     type: COMMAND
-    chance: 16
+    chance: 1.12
     display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 10
@@ -480,7 +493,7 @@ rewards:
 
   rankup-x15:
     type: COMMAND
-    chance: 9
+    chance: 0.63
     display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 15
@@ -495,7 +508,7 @@ rewards:
 
   rankup-x30:
     type: COMMAND
-    chance: 3
+    chance: 0.21
     display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 30
