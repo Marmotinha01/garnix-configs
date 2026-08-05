@@ -25,7 +25,6 @@
 # ---------------------------------------------------------------------
 
 unlock-lore:
-- ''
 - '&aClique para desbloquear.'
 
 bonus-format: "&8 ▪ &a+&l{value}&a{unit} {primary_color}{Display} "
