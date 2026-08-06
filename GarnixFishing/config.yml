@@ -65,7 +65,7 @@ fishing-base-interval-seconds: 15
 rod:
   # Purchase price and the GarnixCurrencies id it is paid with (a main economy
   # currency — buying with corais would be circular, since corais come from fishing).
-  price: 10000
+  price: 40000
   currency: coins
   display: '&bVara de Pesca'
   lore:

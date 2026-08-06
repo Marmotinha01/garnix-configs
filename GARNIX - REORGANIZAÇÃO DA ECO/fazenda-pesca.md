@@ -72,3 +72,24 @@ quebras de monotonia dentro dos blocos . 0    ✅  (subir de nível nunca paga m
 A terceira é a que importa: o [14-FARM-PESCA.md](../GARNIX%20-%20ECONOMIA/14-FARM-PESCA.md) registra que uma versão anterior da escada produziu multiplicador **0,82** num degrau — *"subir de nível faria o jogador ganhar menos, e é o tipo de coisa que nenhum teste de banda pega, porque as pontas fechavam"*. Por isso ela é verificada explicitamente a cada reescala.
 
 ⚠️ **Um bug de `awk` quase repetiu esse erro aqui.** Comparar `lvl < 60` com `lvl` vindo de `gsub` compara **string**, e `"150" < "60"` é verdadeiro — o que jogou o nível 150 no bloco errado e produziu multiplicador `0,483`. Quem for reescalar de novo: force `lvl = lvl + 0` antes de comparar.
+
+## Os custos de entrada — o que quase passou batido
+
+Reescalar drop e payout não cobre tudo: as duas vias têm **custos em coins** que também derivavam da âncora antiga e não aparecem em nenhuma tabela de recompensa.
+
+Aqui o fator é outro — custo escala com a **casa/dia inteira**, não com a fatia da via:
+
+```
+fator do custo = casa_nova(N) / casa_antiga(N) = 4 × 0,92981^(N-1)
+```
+
+| Item | Onde | Tier | Antes | Depois |
+|---|---|---|---|---|
+**Vara de Pesca** | `GarnixFishing/config.yml` → `rod.price` | 1 | 10.000 | **40.000** |
+Upgrade para Cenoura | `GarnixFarm/farms.yml` | 4 (nível 60) | 1,08×10⁷ | **3,47×10⁷** |
+Upgrade para Batata | idem | 10 (nível 150) | 9,03×10¹¹ | **1,88×10¹²** |
+Upgrade para Fungo | idem | 16 (nível 240) | 1,14×10¹⁶ | **1,53×10¹⁶** |
+
+⚠️ **A vara é comprada em coins mas a via rende corais** — de propósito: comprá-la com corais seria circular, já que corais só vêm de pescar. É a única barreira em moeda principal para entrar numa via secundária.
+
+✅ **Os encantes das duas vias NÃO entram nesta lista.** A fazenda cobra em `sementes` (`enchant-currency`) e a mineração em `gemas` — moedas de **contagem**, que não inflam com a curva. É exatamente o desenho das quatro vias: coins pagam a entrada, a secundária paga a profundidade.
