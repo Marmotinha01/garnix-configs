@@ -89,8 +89,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &aCoins '
-      - '&8 ▪ &a+&l2&a% &5Sementes '
-      - '&8 ▪ &a+&l2&a% &bXP '
+      - '&8 ▪ &a+&l3&a% &5Sementes '
+      - '&8 ▪ &a+&l3&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -108,8 +108,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &aCoins '
-      - '&8 ▪ &a+&l2&a% &5Sementes '
-      - '&8 ▪ &a+&l2&a% &bXP '
+      - '&8 ▪ &a+&l3&a% &5Sementes '
+      - '&8 ▪ &a+&l3&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -127,8 +127,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &aCoins '
-      - '&8 ▪ &a+&l2&a% &5Sementes '
-      - '&8 ▪ &a+&l2&a% &bXP '
+      - '&8 ▪ &a+&l3&a% &5Sementes '
+      - '&8 ▪ &a+&l3&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -146,8 +146,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &aCoins '
-      - '&8 ▪ &a+&l2&a% &5Sementes '
-      - '&8 ▪ &a+&l2&a% &bXP '
+      - '&8 ▪ &a+&l3&a% &5Sementes '
+      - '&8 ▪ &a+&l3&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -166,8 +166,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &aCoins '
-      - '&8 ▪ &a+&l3.5&a% &5Sementes '
-      - '&8 ▪ &a+&l3.5&a% &bXP '
+      - '&8 ▪ &a+&l5&a% &5Sementes '
+      - '&8 ▪ &a+&l5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -185,8 +185,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &aCoins '
-      - '&8 ▪ &a+&l3.5&a% &5Sementes '
-      - '&8 ▪ &a+&l3.5&a% &bXP '
+      - '&8 ▪ &a+&l5&a% &5Sementes '
+      - '&8 ▪ &a+&l5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -204,8 +204,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &aCoins '
-      - '&8 ▪ &a+&l3.5&a% &5Sementes '
-      - '&8 ▪ &a+&l3.5&a% &bXP '
+      - '&8 ▪ &a+&l5&a% &5Sementes '
+      - '&8 ▪ &a+&l5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -223,8 +223,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &aCoins '
-      - '&8 ▪ &a+&l3.5&a% &5Sementes '
-      - '&8 ▪ &a+&l3.5&a% &bXP '
+      - '&8 ▪ &a+&l5&a% &5Sementes '
+      - '&8 ▪ &a+&l5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 

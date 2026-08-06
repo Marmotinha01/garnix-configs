@@ -23,7 +23,7 @@ color: '&4'
 # %events_tag_killer%. Deixe vazio para o evento não dar tag.
 tag: '&4[SerialKiller]'
 
-join-time: 1m
+join-time: 2m30s
 start-time: 10s
 duration: 15m
 
@@ -95,10 +95,13 @@ titles:
 #
 # Tokens sempre disponíveis: {c} = a cor deste evento (a chave 'color' acima)
 #                            {event} = o nome colorido do evento
-# Os demais tokens ({count}, {seconds}, {player}…) estão anotados em cada mensagem.
+# Os demais tokens ({count}, {seconds}, {time}, {player}…) estão anotados em cada mensagem.
+# {seconds} é o número cru (5, 4, 3… no título de contagem); {time} é o mesmo número
+# escrito como duração pelo DurationFormatter do core (150 vira "2m e 30s"), e serve
+# em qualquer mensagem que já receba {seconds}.
 messages:
   
-  # {count} participantes até agora · {seconds} para fechar as entradas
+  # {count} participantes até agora · {time} para fechar as entradas
   announce: |2
 
       &8▎ {c}Evento {c}&lKiller {c}iniciando!
@@ -107,7 +110,7 @@ messages:
       &8▶ &fPrêmios: &4Tag [SerialKiller] &8+ &6❂25 cash &8+ &dx&l15 &dChave VIP
       &r
       &8▪ &fParticipantes: &7{count}
-      &8▪ &fEntradas fecham em &7{seconds}s
+      &8▪ &fEntradas fecham em &7{time}
       &r
   # {count} participantes · {seconds} para começar
   locked: |2

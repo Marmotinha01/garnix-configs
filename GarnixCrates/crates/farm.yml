@@ -347,8 +347,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l1.5&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      - '&8 ▪ &a+&l1&a% &bXP '
+      - '&8 ▪ &a+&l1.5&a% &5Sementes '
+      - '&8 ▪ &a+&l1.5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -366,8 +366,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l1.5&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      - '&8 ▪ &a+&l1&a% &bXP '
+      - '&8 ▪ &a+&l1.5&a% &5Sementes '
+      - '&8 ▪ &a+&l1.5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -385,8 +385,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l1.5&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      - '&8 ▪ &a+&l1&a% &bXP '
+      - '&8 ▪ &a+&l1.5&a% &5Sementes '
+      - '&8 ▪ &a+&l1.5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
@@ -404,8 +404,8 @@ rewards:
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &a+&l1.5&a% &aCoins '
-      - '&8 ▪ &a+&l1&a% &5Sementes '
-      - '&8 ▪ &a+&l1&a% &bXP '
+      - '&8 ▪ &a+&l1.5&a% &5Sementes '
+      - '&8 ▪ &a+&l1.5&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 

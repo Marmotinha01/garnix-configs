@@ -17,12 +17,19 @@ placeholder-status:
   watching: '&eEspectando'
 
 # Segundos restantes em que o anúncio de entrada é repetido no chat.
-# As paradas finais (5/3/1) foram removidas: colidem com o title de contagem
-# regressiva, que já mostra o número na tela do jogador.
+#
+# Cadência de 30 em 30 dentro da janela de 2m30s (o `join-time` de todo evento
+# presencial). Somando o anúncio de abertura, que sai sozinho quando o evento
+# abre, o servidor é lembrado cinco vezes: 2m30s · 2m · 1m30s · 1m · 30s.
+#
+# O 10 saiu junto com as paradas finais (5/3/1): a ponta da janela de entrada
+# colide com o title de contagem regressiva, que já mostra o número na tela do
+# jogador — e um sexto bloco de anúncio não cabe no chat sem afogar o resto.
 announce-at:
+- 120
+- 90
 - 60
 - 30
-- 10
 
 # Comandos liberados para quem está EM JOGO no evento.
 # Bypass: events.bypass.commands

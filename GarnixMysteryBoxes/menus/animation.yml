@@ -27,6 +27,15 @@ pointer-item:
   data: 4
   display: '&e&l▼ SORTEANDO ▼'
 
+# Linhas acrescentadas a lore de TODO icone que passa na bobina, com o {chance} da
+# recompensa. O jogador ve, item a item, o quao raro e o que esta deslizando na
+# frente dele — e o que transforma o giro em leitura de sorte em vez de enfeite.
+# Mesmo bloco do menus/preview.yml. Remova a chave e os icones passam intactos.
+reward-lore:
+- ''
+- '&8 ▪ &fChance: &c{chance}% '
+- ''
+
 # Quantos deslizes antes de travar e os ticks por deslize (início rápido → fim lento).
 shifts: 45
 min-interval: 1
