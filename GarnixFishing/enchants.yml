@@ -1,11 +1,29 @@
-# The 3 rod enchantments. Levels live on the rod's NBT and are applied with
-# enchant books (dragged onto the rod). The highest configured level is the cap.
-#   speed  : seconds removed from the catch interval (flat, not percent)
-#   luck   : % weight boost for rewards flagged "rare: true"
-#   double : % chance to catch twice at once
+# Os 3 encantamentos da vara. Os niveis vivem no NBT da vara e sao aplicados
+# com livros (arrastados sobre ela). O maior nivel configurado e o teto.
+#   speed  : segundos removidos do intervalo entre fisgadas (flat, nao percentual)
+#   luck   : % de peso extra nas recompensas marcadas "rare: true"
+#   double : % de chance de a fisgada valer dobrado
 #
-# Each enchant defines its own book item under "book" (material/display/lore),
-# with the {enchant} (enchant display) and {level} placeholders.
+# ⚠️ 10 NIVEIS CADA, e isso e uma escolha de RITMO, nao de poder. Sao 30 livros
+# para maximizar os tres, e a Caixa Pesca I entrega ~1,6 livro por dia — ou seja
+# a arvore de encantes leva a TEMPORADA INTEIRA para fechar, em vez de saturar
+# no meio dela. E o que mantem a trajetoria de equipamento amarrada ao tempo, e
+# e sobre essa trajetoria que a curva de levels.yml foi integrada.
+#
+# ⚠️ A Correnteza e o unico encante que mexe no TETO FISICO da via: no nivel 10
+# o intervalo cai de 15s para 5s, ou seja 720 fisgadas/h contra as 240 do nivel
+# 0. Somada a Cobica 10 (+60%), a conta de referencia sai de 240 para 1.152
+# unidades/h ao longo da temporada. Mexer nesses dois numeros invalida a curva
+# de XP, a escada de coins e a taxa de caixas de uma vez so.
+#
+# ⚠️ A Mare turbina SO as duas caixas (as unicas com "rare: true" em
+# rewards.yml). A chave ficou de fora de proposito: ela ja cai ~20 a 44 vezes
+# por dia, e turbinar isso nao faria diferenca sentida — enquanto nas caixas,
+# que sao o topo do topo, +150% e a unica forma de o jogador acelerar a propria
+# rota de livros, skins e armadura.
+#
+# Cada encante define o proprio item de livro em "book" (material/display/lore),
+# com os placeholders {enchant} (display do encante) e {level}.
 #
 # O efeito de cada nivel NAO aparece no livro: la o {level} e quantos niveis o
 # livro aplica, e nao o nivel final — um livro de 1 numa vara que ja esta em
@@ -15,7 +33,7 @@
 # de cada encantamento e a moldura desse numero (sinal, unidade, cor).
 
 enchantments:
-  
+
   speed:
     display: '&bCorrenteza'
     value-format: '&c-&l{value}&cs'
@@ -43,7 +61,17 @@ enchantments:
         value: 4
       '5':
         value: 5
-  
+      '6':
+        value: 6
+      '7':
+        value: 7
+      '8':
+        value: 8
+      '9':
+        value: 9
+      '10':
+        value: 10
+
   luck:
     display: '&aMaré'
     value-format: '&a+&l{value}&a%'
@@ -51,8 +79,8 @@ enchantments:
       material: ENCHANTED_BOOK
       display: '&aLivro de Maré'
       lore:
-      - '&7Deixa os peixes raros mais'
-      - '&7fáceis de cair no anzol.'
+      - '&7Aumenta a chance de fisgar'
+      - '&7as caixas de pesca.'
       - ''
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &7{level} '
@@ -66,12 +94,22 @@ enchantments:
       '2':
         value: 30
       '3':
-        value: 50
+        value: 45
       '4':
-        value: 75
+        value: 60
       '5':
-        value: 100
-  
+        value: 75
+      '6':
+        value: 90
+      '7':
+        value: 105
+      '8':
+        value: 120
+      '9':
+        value: 135
+      '10':
+        value: 150
+
   double:
     display: '&dCobiça'
     value-format: '&a+&l{value}&a%'
@@ -95,8 +133,18 @@ enchantments:
       '2':
         value: 10
       '3':
-        value: 18
+        value: 15
       '4':
-        value: 28
+        value: 21
       '5':
+        value: 27
+      '6':
+        value: 33
+      '7':
         value: 40
+      '8':
+        value: 47
+      '9':
+        value: 54
+      '10':
+        value: 60

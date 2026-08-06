@@ -24,54 +24,73 @@ box-item:
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve premio. Azar so existe
 # nas crates e nos bosses.
 #
-# ⚠️ GRADE DAS TRES CAIXAS TIER II — mineracao, pesca e farm usam a MESMA
-# grade, familia por familia:
+# ⚠️ RECALIBRADA COM A PESCA em 05/08/2026 — esta caixa DIVERGIU da grade
+# compartilhada com mineracao-ii e farm-ii. A grade antiga era:
 #
 #   armadura T-III 24 · skins 22,5 · moeda 20 · livros 10,5 ·
 #   armadura T-IV 10 · boosters 7 · armadura T-V 4 · a propria caixa x2 2
 #
-# A mineracao e a unica que difere, e so porque tem dois blocos a mais (6x6,
-# 8x8 e britadeira, mais a vaga de visitante): la a grade acima vale
-# multiplicada por 0,86, mais os 12% dos explosivos e os 2% da vaga. Se
-# mexer numa familia aqui, mexa nas outras duas: e uma grade so.
+# A nova, so da pesca:
+#
+#   armadura T-V 40 · livros de NIVEL 3 30 · skins 20 · moeda 6 ·
+#   boosters 3 · a propria caixa x2 1
+#
+# ⚠️ Levar mineracao-ii e farm-ii para esta grade quando aquelas duas vias
+# forem calibradas. Ate la as tres divergem, e isso e sabido.
+#
+# A CAIXA II FICOU DENSA DE PROPOSITO. Ela cai 25 vezes na temporada e precisa
+# entregar 7 itens especificos — as 4 pecas do T-V e as 3 skins que a forja nao
+# alcanca. A conta de coletor de cupons pede ~18 aberturas so para juntar os 7,
+# entao nao ha espaco para filler: moeda e booster cairam de 27 para 9 somados,
+# e os tiers III e IV de armadura desceram inteiros para a Caixa I.
+#
+# ⚠️ MESMO ASSIM O CONJUNTO T-V E ~50/50 ate o dia 17. Isso e sabido e esta
+# absorvido: a curva de levels.yml mira o conjunto T-IV (+16%) como referencia,
+# e o T-V e upside. A diferenca no multiplicador e 3,4%, dentro do erro de
+# banda que a escada ja tem.
+#
+# ⚠️ OS LIVROS DAQUI VALEM 3 NIVEIS, os da Caixa I valem 1. Somados
+# (25 x 30% x 3 + 150 x 10,5% x 1) dao ~38 niveis de livro, e a arvore de
+# encantes pede 30 (10 x 3 encantes). A folga e o colchao de variancia.
+#
+# ⚠️ AS TRES SKINS DE TOPO SAO SORTE, NAO PRAZO — decisao do dono. Oceanita
+# 1,25 · Perola 0,63 · Tempestita 0,13 na temporada. Por isso NENHUMA
+# recompensa de GarnixFishing/rewards.yml passa de peso 45 (Serenita): se a
+# renda dependesse delas, quem nao tirasse ficaria 4x10^5 atras no dia 20.
+# O max-weight 65/90/130 dessas tres e vitrine.
 #
 # ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
-# sufixo de slot entrega o set inteiro (+48%) num drop só.
+# sufixo de slot entrega o set inteiro (+20%) num drop só.
 #
 # ⚠️ ARMADURA NUNCA VAI PARA O SITE. Ela existe só via caixa — e como a
 # caixa II é comprável, quem paga compra CHANCE, não a peça.
 #
-# ⚠️ ESCADA DA ARMADURA — esta caixa sorteia as QUATRO peças dos tiers III,
-# IV e V (12 peças). Os tiers I e II só saem na caixa pesca-i; o tier III
-# aparece nas duas, e é o degrau que liga uma caixa na outra.
+# ⚠️ ESCADA DA ARMADURA — esta caixa é a ÚNICA fonte do tier V, e só dele. Os
+# tiers II, III e IV saem da caixa pesca-i e o tier I da crate de pesca. Não há
+# mais tier compartilhado entre as duas caixas: cada uma tem o seu topo.
 #
-# ⚠️ ESCADA DA SKIN — degraus 6 a 10 da vara (abissita · serenita ·
-# oceanita · pérola · tempestita), os que a forja NÃO alcança. Os degraus
-# 2 a 5 ficam na caixa pesca-i.
+# ⚠️ ESCADA DA SKIN — degraus 7 a 10 da vara (serenita · oceanita · pérola ·
+# tempestita). Os degraus 2 a 6 ficam na caixa pesca-i. A Serenita é o único
+# dos quatro que a escada de níveis exige (peso 45, nível 39, dia 16,57) — os
+# três acima dela são bônus.
 #
 # ⚠️ A lore de cada ícone espelha o item real (GarnixFishing/skins.yml e
 # GarnixFishing/armors/) — preview e item recebido têm que bater linha a
 # linha, sem nenhuma linha extra.
 #
 # ⚠️ MOEDA E ESCADA DE 3 DEGRAUS espelhando a crate pesca — os mesmos
-# 250·500·1.000 coins e 150·300·600 corais de la, multiplicados por 5. A
-# Tier I usa a mesma escada da crate multiplicada por 3. Se mexer num
-# degrau, mexa nos tres: a familia inteira e que da a escada.
+# 2.500·5.000·10.000 coins e corais de la, multiplicados por 5. A Tier I usa a
+# mesma escada da crate multiplicada por 3. Se mexer num degrau, mexa nos
+# tres: a familia inteira e que da a escada.
 #
-# ⚠️ A MOEDA E O FILLER, mas aqui ela pesa 20% e nao os 30% da Tier I: esta
-# caixa e comprada, e quem paga quer ITEM. Dentro da familia a escada e
-# 50/30/20, NAO o 60/30/10 da crate — moeda nunca pode ser mais rara que
-# item, e com 60/30/10 o degrau de cima ficaria abaixo da skin de topo.
+# ⚠️ A MOEDA CAIU DE 20 PARA 6 e o booster de 7 para 3. Nao e desvalorizacao
+# da moeda: e falta de espaco. Sao 25 aberturas na temporada para entregar 7
+# itens especificos (4 pecas T-V + 3 skins), e cada ponto de peso em filler
+# sai direto da chance de fechar o conjunto. Dentro da familia a escada
+# continua 50/30/20.
 #
-# ⚠️ O TOPO E A SKIN DE TOPO (0,25), com a peca T-V (1) logo atras. Nao
-# existe degrau para cima aqui: a Tier II e o fim da escada de caixa.
-#
-# ⚠️ APERTADO EM 05/08/2026 a pedido do dono, que achou facil demais tirar as
-# duas ultimas skins e as armaduras T-IV e T-V. O degrau 9 caiu 3x (3 → 1) e
-# o degrau 10 caiu 6x (1,5 → 0,25); a peca T-V caiu de 1,75 para 1 e a T-IV
-# de 3,25 para 2,5. O peso saiu de dentro da propria familia — os degraus
-# 6-8 da skin e o T-III da armadura absorveram tudo, entao o equilibrio
-# entre familias nao mudou.
+# ⚠️ O TOPO E A TEMPESTITA (0,5), com a Perola (2,5) logo atras. Nao existe
+# degrau para cima aqui: a Tier II e o fim da escada de caixa.
 #
 # ⚠️ Com o degrau 10 em 0,25 a Caixa Garnix (0,5) volta a ser a fonte mais
 # provavel dele, que e como deve ser. A Caixa Skins II foi apertada junto,
@@ -83,165 +102,10 @@ box-item:
 # muito abaixo de 1 — a corrente sempre morre. So passaria a se sustentar
 # sozinha se esse peso subisse acima de 50.
 rewards:
-
-  # -- ARMADURA TIER III ------------------------------------------- 24%
-  armadura-iii-capacete:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&bx&l{amount} &bCapacete Pesca &b[Tier &lIII&b]'
-    command: pesca givearmor {player} tier-iii_helmet {amount}
-    amount: 1
-    icon:
-      material: LEATHER_HELMET
-      color: '#55FFFF'
-      display: '&bCapacete Pesca &b[Tier &lIII&b]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l5&a% &3Corais '
-      - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-iii-peitoral:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&bx&l{amount} &bPeitoral Pesca &b[Tier &lIII&b]'
-    command: pesca givearmor {player} tier-iii_chestplate {amount}
-    amount: 1
-    icon:
-      material: LEATHER_CHESTPLATE
-      color: '#55FFFF'
-      display: '&bPeitoral Pesca &b[Tier &lIII&b]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l5&a% &3Corais '
-      - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-iii-calca:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&bx&l{amount} &bCalça Pesca &b[Tier &lIII&b]'
-    command: pesca givearmor {player} tier-iii_leggings {amount}
-    amount: 1
-    icon:
-      material: LEATHER_LEGGINGS
-      color: '#55FFFF'
-      display: '&bCalça Pesca &b[Tier &lIII&b]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l5&a% &3Corais '
-      - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-iii-bota:
-    type: COMMAND_ITEM
-    chance: 6
-    display: '&bx&l{amount} &bBota Pesca &b[Tier &lIII&b]'
-    command: pesca givearmor {player} tier-iii_boots {amount}
-    amount: 1
-    icon:
-      material: LEATHER_BOOTS
-      color: '#55FFFF'
-      display: '&bBota Pesca &b[Tier &lIII&b]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l5&a% &3Corais '
-      - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  # -- ARMADURA TIER IV -------------------------------------------- 10%
-  armadura-iv-capacete:
-    type: COMMAND_ITEM
-    chance: 2.5
-    display: '&dx&l{amount} &dCapacete Pesca &d[Tier &lIV&d]'
-    command: pesca givearmor {player} tier-iv_helmet {amount}
-    amount: 1
-    icon:
-      material: LEATHER_HELMET
-      color: '#FF55FF'
-      display: '&dCapacete Pesca &d[Tier &lIV&d]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l8&a% &3Corais '
-      - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-iv-peitoral:
-    type: COMMAND_ITEM
-    chance: 2.5
-    display: '&dx&l{amount} &dPeitoral Pesca &d[Tier &lIV&d]'
-    command: pesca givearmor {player} tier-iv_chestplate {amount}
-    amount: 1
-    icon:
-      material: LEATHER_CHESTPLATE
-      color: '#FF55FF'
-      display: '&dPeitoral Pesca &d[Tier &lIV&d]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l8&a% &3Corais '
-      - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-iv-calca:
-    type: COMMAND_ITEM
-    chance: 2.5
-    display: '&dx&l{amount} &dCalça Pesca &d[Tier &lIV&d]'
-    command: pesca givearmor {player} tier-iv_leggings {amount}
-    amount: 1
-    icon:
-      material: LEATHER_LEGGINGS
-      color: '#FF55FF'
-      display: '&dCalça Pesca &d[Tier &lIV&d]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l8&a% &3Corais '
-      - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  armadura-iv-bota:
-    type: COMMAND_ITEM
-    chance: 2.5
-    display: '&dx&l{amount} &dBota Pesca &d[Tier &lIV&d]'
-    command: pesca givearmor {player} tier-iv_boots {amount}
-    amount: 1
-    icon:
-      material: LEATHER_BOOTS
-      color: '#FF55FF'
-      display: '&dBota Pesca &d[Tier &lIV&d]'
-      lore:
-      - ''
-      - ' &8Especificações: '
-      - '&8 ▪ &a+&l8&a% &3Corais '
-      - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
-      flags:
-      - HIDE_ATTRIBUTES
-
-  # -- ARMADURA TIER V ---------------------------------------------- 4%
+  # -- ARMADURA TIER V --------------------------------------------- 40%
   armadura-v-capacete:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 10
     display: '&6x&l{amount} &6Capacete Pesca &6[Tier &lV&6]'
     command: pesca givearmor {player} tier-v_helmet {amount}
     amount: 1
@@ -252,15 +116,15 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l12&a% &3Corais '
-      - '&8 ▪ &a+&l8&a% &bXP '
+      - '&8 ▪ &a+&l5&a% &3Corais '
+      - '&8 ▪ &a+&l5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-v-peitoral:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 10
     display: '&6x&l{amount} &6Peitoral Pesca &6[Tier &lV&6]'
     command: pesca givearmor {player} tier-v_chestplate {amount}
     amount: 1
@@ -271,15 +135,15 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l12&a% &3Corais '
-      - '&8 ▪ &a+&l8&a% &bXP '
+      - '&8 ▪ &a+&l5&a% &3Corais '
+      - '&8 ▪ &a+&l5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-v-calca:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 10
     display: '&6x&l{amount} &6Calça Pesca &6[Tier &lV&6]'
     command: pesca givearmor {player} tier-v_leggings {amount}
     amount: 1
@@ -290,15 +154,15 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l12&a% &3Corais '
-      - '&8 ▪ &a+&l8&a% &bXP '
+      - '&8 ▪ &a+&l5&a% &3Corais '
+      - '&8 ▪ &a+&l5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-v-bota:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 10
     display: '&6x&l{amount} &6Bota Pesca &6[Tier &lV&6]'
     command: pesca givearmor {player} tier-v_boots {amount}
     amount: 1
@@ -309,34 +173,18 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l12&a% &3Corais '
-      - '&8 ▪ &a+&l8&a% &bXP '
+      - '&8 ▪ &a+&l5&a% &3Corais '
+      - '&8 ▪ &a+&l5&a% &bXP '
       - ''
       flags:
       - HIDE_ATTRIBUTES
 
-  # -- SKINS ----------------------------------------------------- 22,5%
-  skin-abissita:
-    type: COMMAND_ITEM
-    chance: 10
-    display: '&ax&l{amount} &aSkin de Abissita'
-    command: pesca giveskin {player} abissita {amount}
-    amount: 1
-    icon:
-      material: FISHING_ROD
-      glow: true
-      display: '&aSkin de Abissita'
-      lore:
-      - ''
-      - ' &8Especificações:'
-      - '&8 ▪ &a+&l20&a% &3Corais '
-      - '&8 ▪ &a+&l20&a% &bXP '
-      - '&8 ▪ &cPeso até &l32&ckg '
-      - ''
-
+  # -- SKINS ------------------------------------------------------- 20%
+  # A Serenita e o ultimo degrau que a escada de niveis exige (peso 45). As
+  # tres abaixo dela sao SORTE, nao prazo: nenhuma recompensa passa de peso 45.
   skin-serenita:
     type: COMMAND_ITEM
-    chance: 7.5
+    chance: 12
     display: '&5x&l{amount} &5Skin de Serenita'
     command: pesca giveskin {player} serenita {amount}
     amount: 1
@@ -347,14 +195,14 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l28&a% &3Corais '
-      - '&8 ▪ &a+&l28&a% &bXP '
+      - '&8 ▪ &a+&l11&a% &3Corais '
+      - '&8 ▪ &a+&l11&a% &bXP '
       - '&8 ▪ &cPeso até &l45&ckg '
       - ''
 
   skin-oceanita:
     type: COMMAND_ITEM
-    chance: 3.75
+    chance: 5
     display: '&1x&l{amount} &1Skin de Oceanita'
     command: pesca giveskin {player} oceanita {amount}
     amount: 1
@@ -365,14 +213,14 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l38&a% &3Corais '
-      - '&8 ▪ &a+&l38&a% &bXP '
+      - '&8 ▪ &a+&l15&a% &3Corais '
+      - '&8 ▪ &a+&l15&a% &bXP '
       - '&8 ▪ &cPeso até &l65&ckg '
       - ''
 
   skin-perola:
     type: COMMAND_ITEM
-    chance: 1
+    chance: 2.5
     display: '&9x&l{amount} &9Skin de Pérola'
     command: pesca giveskin {player} perola {amount}
     amount: 1
@@ -383,14 +231,14 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l50&a% &3Corais '
-      - '&8 ▪ &a+&l50&a% &bXP '
+      - '&8 ▪ &a+&l20&a% &3Corais '
+      - '&8 ▪ &a+&l20&a% &bXP '
       - '&8 ▪ &cPeso até &l90&ckg '
       - ''
 
   skin-tempestita:
     type: COMMAND_ITEM
-    chance: 0.25
+    chance: 0.5
     display: '&dx&l{amount} &dSkin de Tempestita'
     command: pesca giveskin {player} tempestita {amount}
     amount: 1
@@ -401,76 +249,76 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l65&a% &3Corais '
-      - '&8 ▪ &a+&l65&a% &bXP '
+      - '&8 ▪ &a+&l25&a% &3Corais '
+      - '&8 ▪ &a+&l25&a% &bXP '
       - '&8 ▪ &cPeso até &l130&ckg '
       - ''
 
-  # -- MOEDAS ------------------------------------------------------ 20%
-  coins-1250:
+  # -- MOEDAS ------------------------------------------------------- 6%
+  coins-12500:
     type: CURRENCY
-    chance: 5
+    chance: 1.5
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '1250'
+    amount: '12500'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-2500:
+  coins-25000:
     type: CURRENCY
-    chance: 3
+    chance: 0.9
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '2500'
+    amount: '25000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-5000:
+  coins-50000:
     type: CURRENCY
-    chance: 2
+    chance: 0.6
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '5000'
+    amount: '50000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  corais-750:
+  corais-7500:
     type: CURRENCY
-    chance: 5
+    chance: 1.5
     display: '&3✶{amount} corais'
     currency-id: corais
-    amount: '750'
+    amount: '7500'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
-  corais-1500:
+  corais-15000:
     type: CURRENCY
-    chance: 3
+    chance: 0.9
     display: '&3✶{amount} corais'
     currency-id: corais
-    amount: '1500'
+    amount: '15000'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
-  corais-3000:
+  corais-30000:
     type: CURRENCY
-    chance: 2
+    chance: 0.6
     display: '&3✶{amount} corais'
     currency-id: corais
-    amount: '3000'
+    amount: '30000'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
-  # -- BOOSTERS ----------------------------------------------------- 7%
+  # -- BOOSTERS ----------------------------------------------------- 3%
   booster-2x-15m:
     type: COMMAND_ITEM
-    chance: 4.25
+    chance: 2
     display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 15m {amount}
     amount: 1
@@ -492,7 +340,7 @@ rewards:
 
   booster-2x-30m:
     type: COMMAND_ITEM
-    chance: 2.75
+    chance: 1
     display: '&bx&l{amount} &bBooster de Pesca'
     command: pesca givebooster {player} both 2 30m {amount}
     amount: 1
@@ -512,66 +360,66 @@ rewards:
       flags:
       - HIDE_POTION_EFFECTS
 
-  # -- LIVROS ---------------------------------------------------- 10,5%
+  # -- LIVROS (nivel 3) --------------------------------------------- 30%
   livro-fartura:
     type: COMMAND_ITEM
-    chance: 3.5
-    display: '&dx&l{amount} &dLivro de Cobiça'
-    command: pesca givebook {player} double 1 {amount}
+    chance: 10
+    display: '&dx&l{amount} &dLivro de Cobiça &7[Nível &lIII&7]'
+    command: pesca givebook {player} double 3 {amount}
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&dLivro de Cobiça'
+      display: '&dLivro de Cobiça &7[Nível &lIII&7]'
       lore:
       - '&7Chance de a fisgada valer'
       - '&7dobrado, e não só o item:'
       - '&7corais e XP dobram junto.'
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fNível: &73 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
 
   livro-faro:
     type: COMMAND_ITEM
-    chance: 3.5
-    display: '&ax&l{amount} &aLivro de Maré'
-    command: pesca givebook {player} luck 1 {amount}
+    chance: 10
+    display: '&ax&l{amount} &aLivro de Maré &7[Nível &lIII&7]'
+    command: pesca givebook {player} luck 3 {amount}
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&aLivro de Maré'
+      display: '&aLivro de Maré &7[Nível &lIII&7]'
       lore:
       - '&7Deixa os peixes raros mais'
       - '&7fáceis de cair no anzol.'
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fNível: &73 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
 
   livro-correnteza:
     type: COMMAND_ITEM
-    chance: 3.5
-    display: '&bx&l{amount} &bLivro de Correnteza'
-    command: pesca givebook {player} speed 1 {amount}
+    chance: 10
+    display: '&bx&l{amount} &bLivro de Correnteza &7[Nível &lIII&7]'
+    command: pesca givebook {player} speed 3 {amount}
     amount: 1
     icon:
       material: ENCHANTED_BOOK
-      display: '&bLivro de Correnteza'
+      display: '&bLivro de Correnteza &7[Nível &lIII&7]'
       lore:
       - '&7Diminui o tempo de espera'
       - '&7entre uma fisgada e outra.'
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &fNível: &71 '
+      - '&8 ▪ &fNível: &73 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
       - ''
 
-  # -- A PROPRIA CAIXA, X2 ------------------------------------------ 2%
+  # -- A PROPRIA CAIXA, X2 ------------------------------------------ 1%
   caixa-pesca-ii-x2:
     type: COMMAND_ITEM
-    chance: 2
+    chance: 1
     display: '&bx&l{amount} &bCaixa Pesca &b[Tier &lII&b]'
     command: caixas give pesca-ii {player} {amount}
     amount: 2
@@ -582,3 +430,4 @@ rewards:
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
+

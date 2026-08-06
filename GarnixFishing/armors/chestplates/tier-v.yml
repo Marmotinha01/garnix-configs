@@ -11,8 +11,8 @@ item:
   flags: ["HIDE_ATTRIBUTES"]
 bonuses:
   corais:
-    value: 12.0
+    value: 5.0
     percent: true
   xp:
-    value: 12.0
+    value: 5.0
     percent: true

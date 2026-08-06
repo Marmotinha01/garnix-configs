@@ -25,7 +25,7 @@ Sem rota nenhuma | ~162 (76%) | ~144 — e **cada um tem fase e canal definidos*
 7 máquinas especiais | `shop: false` — rota por loot/site, produção calibrada |
 Vara de pesca | 10.000 coins (mantida) |
 Coral-shop | 6 produtos, câmbio **1.100 corais = 1 de limite** |
-Cacto | `sell-price` derivado + a escada `warehouse.sellmult` |
+Cacto | `sell-price` derivado — a escada `warehouse.sellmult` foi REMOVIDA em 06/08/2026 |
 3 upgrades de planta | coins, nos níveis 60 / 150 / 240 |
 
 As 6 rotas originais eram: vara de pesca (10.000 coins) · máquina de madeira (1.000 coins) · os 20 spawners (5B coins, idênticos) · limite de spawners (1.500 corais, o exploit 1:1) · a lâmina (`/lamina`, grátis) · a matadora inicial (`/matadora`, grátis).
@@ -234,7 +234,7 @@ Isto é o que mais importa na hora de precificar, e só apareceu lendo o código
 |---|---|---|
 Mineração · Fazenda · Pesca | **SOMA** no bloco aditivo (`+200%` dentro do `1 + Σ`) | ~2,2× na prática, porque divide o bloco com skin, armadura e permBonus |
 **Spawners · Máquinas** | **MULTIPLICA** (`total.multiply(boosterMultiplier)`) | **exatamente 3×** |
-Armazém (cacto) | SOMA, junto com o `sellbonus` | ~depende do `sellmult`, que é multiplicativo e fica fora |
+Armazém (cacto) | SOMA, junto com o `warehouse.bonus` | não há mais multiplicador na via |
 
 > **Um booster de spawner/máquina é ~1,4× mais forte que o mesmo booster de mineração.** Ele tem que ser proporcionalmente mais raro nas tabelas de loot, ou vira o item mais eficiente do servidor sem ninguém ter decidido isso.
 

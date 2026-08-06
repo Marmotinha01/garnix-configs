@@ -21,23 +21,37 @@
 # Ou seja: a areia é o único sink em coins da via do cacto, e ele é linear no tamanho
 # do plot. É o freio nº 3 dos 4 de 11-CACTO.md ("espaço do plot") virando preço.
 #
-# -- A âncora -----------------------------------------------------------------
+# -- A âncora da AREIA — o sink linear ----------------------------------------
 #
 #   plot cheio = 30.000 cactos (número do dono) em colunas de 3 = 10.000 colunas
-#   1 coluna   = 1 areia + 1 cacto-semente = 5.000 + 6.000 = 11.000 coins
-#   plot cheio = 1,10×10^8 coins
+#   1 coluna   = 1 areia = 5.000 coins
+#   plot cheio = 5,00×10^7 coins em areia
 #
 # Contra a renda diária da casa (02-TIERS.md):
 #
-#   T1 (dia 1)  3,75×10^5  →  o plot cheio custa 293 dias   (só dá para semear)
-#   T4 (dia 4)  1,08×10^8  →  o plot cheio custa 1,02 dia   ← a âncora
-#   T6 (dia 6)  4,74×10^9  →  2,3% de um dia                (vira conveniência)
+#   T1 (dia 1)  3,75×10^5  →  o plot cheio custa 133 dias   (só dá para semear)
+#   T4 (dia 4)  1,08×10^8  →  o plot cheio custa 0,46 dia   ← a âncora
+#   T6 (dia 6)  4,74×10^9  →  1,1% de um dia                (vira conveniência)
 #
-# Comprar o plot inteiro é uma diária de renda no dia 4, que é quando as pessoas montam
+# Encher o plot de areia é meia diária de renda no dia 4, que é quando as pessoas montam
 # a farm. Antes disso o jogador semeia poucas colunas e deixa o composto trabalhar —
 # que é a via funcionando como projetada. Depois do dia 6 comprar vira atalho barato,
 # e tudo bem: a essa altura a rampa já aconteceu e o plot tem teto físico de qualquer
 # jeito, então o atalho não fura nada, só poupa tempo.
+#
+# -- O CACTO é semente, e é caro de propósito ---------------------------------
+#
+# ✅ Decisão do dono (05/08/2026): *"não deve ser algo alcançável tão facilmente,
+# provavelmente uns 30 minutos de mineração/fazenda em coins"*.
+#
+#   renda ativa por hora no dia 1 = renda(1) / 5,4 = 69.444 coins/h
+#   30 minutos                    = 34.722          →  preço 35.000
+#
+# Subiu de 6.000 para 35.000, ou seja de ~5 minutos para 30. O motivo de poder ser
+# caro é que comprar cacto NUNCA é obrigatório: o cacto se replanta sozinho (quem tem
+# 9 chega aos 30.000) e sai de graça do armazém, puxando de volta o que já foi colhido.
+# Comprar é só ATALHO para quem não quer esperar o composto — então o preço é o que
+# separa "esperei" de "paguei para pular", e ele tem que doer no dia 1.
 #
 # ⚠️ Se o M2 (cactos/h medidos in-game) mudar o tamanho útil do plot, o que muda aqui é
 # só o preço da AREIA — o do cacto é semente e não escala com o tamanho.

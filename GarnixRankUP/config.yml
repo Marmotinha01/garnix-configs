@@ -7,10 +7,18 @@ prestige:
 
   # Comandos que rodam em QUALQUER prestígio. Placeholders: {player}, {prestige}.
   #
-  # ⚠️ NÃO removemos as permissões de rank aqui, de propósito. O prestígio reseta
+  # ⚠️ NÃO removemos as permissões de COMPRA aqui, de propósito. O prestígio reseta
   # SÓ a escada de rank (o plugin já zera `rank_order` para 1). Tudo o que o
   # jogador acumulou fica: cabeças, dracmas, equipamento, spawners colocados e as
-  # permissões `spawner.buy.*`, `machines.buy.*` e `mining.bonus.*`.
+  # permissões `spawner.buy.*` e `machines.buy.*` — isso é PATRIMÔNIO.
+  #
+  # As QUATRO escadas de BÔNUS (`mining.bonus.*`, `farm.bonus.*`,
+  # `fishing.bonus.*`, `warehouse.bonus.*`) são o oposto e saem todas, mais
+  # abaixo: elas são o que o rank paga, não o que o jogador comprou.
+  #
+  # ⚠️ As quatro andam SEMPRE juntas, com o mesmo número — regra do dono: um ator
+  # tem um bônus só, igual em todo sistema. Se acrescentar uma quinta via com
+  # bônus por permissão, ela entra aqui e nos 19 arquivos de rank no mesmo passo.
   #
   # É isso que transforma prestigiar de castigo em VOLTA RÁPIDA — e o V6 já tinha
   # provado que os spawners colocados continuam produzindo. A escada de rank vira
@@ -67,33 +75,81 @@ prestige:
   # So as escadas onde o maior vence. `spawner.buy.*` e `machines.buy.*` ficam:
   # sao patrimonio, e tirar patrimonio faria prestigiar virar castigo.
   - 'lp user {player} permission unset mining.bonus.10'
+  - 'lp user {player} permission unset farm.bonus.10'
+  - 'lp user {player} permission unset warehouse.bonus.10'
+  - 'lp user {player} permission unset fishing.bonus.10'
   - 'lp user {player} permission unset mining.bonus.11'
+  - 'lp user {player} permission unset farm.bonus.11'
+  - 'lp user {player} permission unset warehouse.bonus.11'
+  - 'lp user {player} permission unset fishing.bonus.11'
   - 'lp user {player} permission unset mining.bonus.12'
+  - 'lp user {player} permission unset farm.bonus.12'
+  - 'lp user {player} permission unset warehouse.bonus.12'
+  - 'lp user {player} permission unset fishing.bonus.12'
   - 'lp user {player} permission unset mining.bonus.13'
+  - 'lp user {player} permission unset farm.bonus.13'
+  - 'lp user {player} permission unset warehouse.bonus.13'
+  - 'lp user {player} permission unset fishing.bonus.13'
   - 'lp user {player} permission unset mining.bonus.14'
+  - 'lp user {player} permission unset farm.bonus.14'
+  - 'lp user {player} permission unset warehouse.bonus.14'
+  - 'lp user {player} permission unset fishing.bonus.14'
   - 'lp user {player} permission unset mining.bonus.15'
+  - 'lp user {player} permission unset farm.bonus.15'
+  - 'lp user {player} permission unset warehouse.bonus.15'
+  - 'lp user {player} permission unset fishing.bonus.15'
   - 'lp user {player} permission unset mining.bonus.16'
+  - 'lp user {player} permission unset farm.bonus.16'
+  - 'lp user {player} permission unset warehouse.bonus.16'
+  - 'lp user {player} permission unset fishing.bonus.16'
   - 'lp user {player} permission unset mining.bonus.17'
+  - 'lp user {player} permission unset farm.bonus.17'
+  - 'lp user {player} permission unset warehouse.bonus.17'
+  - 'lp user {player} permission unset fishing.bonus.17'
   - 'lp user {player} permission unset mining.bonus.18'
+  - 'lp user {player} permission unset farm.bonus.18'
+  - 'lp user {player} permission unset warehouse.bonus.18'
+  - 'lp user {player} permission unset fishing.bonus.18'
   - 'lp user {player} permission unset mining.bonus.19'
+  - 'lp user {player} permission unset farm.bonus.19'
+  - 'lp user {player} permission unset warehouse.bonus.19'
+  - 'lp user {player} permission unset fishing.bonus.19'
   - 'lp user {player} permission unset mining.bonus.2'
+  - 'lp user {player} permission unset farm.bonus.2'
+  - 'lp user {player} permission unset warehouse.bonus.2'
+  - 'lp user {player} permission unset fishing.bonus.2'
   - 'lp user {player} permission unset mining.bonus.20'
+  - 'lp user {player} permission unset farm.bonus.20'
+  - 'lp user {player} permission unset warehouse.bonus.20'
+  - 'lp user {player} permission unset fishing.bonus.20'
   - 'lp user {player} permission unset mining.bonus.3'
+  - 'lp user {player} permission unset farm.bonus.3'
+  - 'lp user {player} permission unset warehouse.bonus.3'
+  - 'lp user {player} permission unset fishing.bonus.3'
   - 'lp user {player} permission unset mining.bonus.4'
+  - 'lp user {player} permission unset farm.bonus.4'
+  - 'lp user {player} permission unset warehouse.bonus.4'
+  - 'lp user {player} permission unset fishing.bonus.4'
   - 'lp user {player} permission unset mining.bonus.5'
+  - 'lp user {player} permission unset farm.bonus.5'
+  - 'lp user {player} permission unset warehouse.bonus.5'
+  - 'lp user {player} permission unset fishing.bonus.5'
   - 'lp user {player} permission unset mining.bonus.6'
+  - 'lp user {player} permission unset farm.bonus.6'
+  - 'lp user {player} permission unset warehouse.bonus.6'
+  - 'lp user {player} permission unset fishing.bonus.6'
   - 'lp user {player} permission unset mining.bonus.7'
+  - 'lp user {player} permission unset farm.bonus.7'
+  - 'lp user {player} permission unset warehouse.bonus.7'
+  - 'lp user {player} permission unset fishing.bonus.7'
   - 'lp user {player} permission unset mining.bonus.8'
+  - 'lp user {player} permission unset farm.bonus.8'
+  - 'lp user {player} permission unset warehouse.bonus.8'
+  - 'lp user {player} permission unset fishing.bonus.8'
   - 'lp user {player} permission unset mining.bonus.9'
-  - 'lp user {player} permission unset warehouse.sellmult.1'
-  - 'lp user {player} permission unset warehouse.sellmult.117'
-  - 'lp user {player} permission unset warehouse.sellmult.13770'
-  - 'lp user {player} permission unset warehouse.sellmult.24'
-  - 'lp user {player} permission unset warehouse.sellmult.2813'
-  - 'lp user {player} permission unset warehouse.sellmult.330100'
-  - 'lp user {player} permission unset warehouse.sellmult.5'
-  - 'lp user {player} permission unset warehouse.sellmult.575'
-  - 'lp user {player} permission unset warehouse.sellmult.67420'
+  - 'lp user {player} permission unset farm.bonus.9'
+  - 'lp user {player} permission unset warehouse.bonus.9'
+  - 'lp user {player} permission unset fishing.bonus.9'
 
 
   # -- Marcos de prestígio (C6) ------------------------------------------------
@@ -116,75 +172,63 @@ prestige:
     '1':    # dia 10
       commands:
       - 'lp user {player} permission set machines.buy.ouro true'
-      - 'lp user {player} permission set warehouse.sellmult.1616000 true'
     # '10':  trocador de dracmas
     # - 'runas give {player} <tipo> 1'   # ⏳ Fase 5
     '20':   # dia 10
       commands:
       - 'lp user {player} permission set machines.buy.redstone true'
-      - 'lp user {player} permission set warehouse.sellmult.1616000 true'
     # '35':  4o slot de booster
     # ⏳ nao existe permissao de slot de booster no codigo — precisaria de C novo
     '50':   # dia 11
       commands:
       - 'lp user {player} permission set machines.buy.lapis true'
-      - 'lp user {player} permission set warehouse.sellmult.7912000 true'
     # '65':  slot extra de maquina especial
     # ⏳ nao existe teto de slot de maquina — o dono definiu que nao tem teto
     '80':   # dia 12
       commands:
       - 'lp user {player} permission set machines.buy.diamante true'
-      - 'lp user {player} permission set warehouse.sellmult.38730000 true'
     # '95':  caixa de prestigio I
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '110':  # dia 13
       commands:
       - 'lp user {player} permission set machines.buy.esmeralda true'
-      - 'lp user {player} permission set warehouse.sellmult.189600000 true'
     # '125':  tag de prestigio I
     # ⏳ Fase 7, junto com as tags
     '140':  # dia 14
       commands:
       - 'lp user {player} permission set machines.buy.obsidiana true'
-      - 'lp user {player} permission set warehouse.sellmult.928400000 true'
     '155':    # +1 vaga de visitante
       commands:
       - 'mina giveslot {player} 1'
     '170':  # dia 15
       commands:
       - 'lp user {player} permission set machines.buy.quartzo true'
-      - 'lp user {player} permission set warehouse.sellmult.4545000000 true'
     # '185':  caixa de prestigio II
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '200':  # dia 16
       commands:
       - 'lp user {player} permission set machines.buy.titanio true'
-      - 'lp user {player} permission set warehouse.sellmult.22250000000 true'
     # '215':  tag de prestigio II
     # ⏳ Fase 7
     '230':  # dia 17
       commands:
       - 'lp user {player} permission set machines.buy.rubi true'
-      - 'lp user {player} permission set warehouse.sellmult.108900000000 true'
     '245':    # +1 vaga de visitante
       commands:
       - 'mina giveslot {player} 1'
     '260':  # dia 18
       commands:
       - 'lp user {player} permission set machines.buy.safira true'
-      - 'lp user {player} permission set warehouse.sellmult.533400000000 true'
     # '275':  tag de prestigio III
     # ⏳ Fase 7
     '290':  # dia 19
       commands:
       - 'lp user {player} permission set machines.buy.platina true'
-      - 'lp user {player} permission set warehouse.sellmult.2611000000000 true'
     # '305':  caixa de prestigio III
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '320':  # dia 20
       commands:
       - 'lp user {player} permission set machines.buy.adamantita true'
-      - 'lp user {player} permission set warehouse.sellmult.12790000000000 true'
     # '345':  TETO da temporada — titulo
     # ⏳ Fase 7
 

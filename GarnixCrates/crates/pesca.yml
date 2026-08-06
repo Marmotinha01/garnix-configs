@@ -37,18 +37,29 @@ key-item:
 
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
-# FAIXAS desta crate:
-#   comum 83,42 · comum plus 15,35 · armadura 1 · mediana 0,42 ·
-#   mediana plus 0,35 (skins) · rara 0,4 (caixas) · jackpot 0,05
+# FAIXAS desta crate (05/08/2026 — recalibrada com a pesca):
+#
+#   moeda 71,98 · skin 7 · limites 7,5 · chaves 5,8 · combustivel 4,85 ·
+#   armadura T-I 2 · booster 0,42 · caixas 0,4 · jackpot 0,05
 #
 # Os numeros acima sao PESO, nao porcentagem: multiplique por 0,75 para a chance
 # real. Os separadores de faixa la embaixo seguem a mesma unidade.
 #
-# ⚠️ As SKINS foram cortadas em 50% a pedido do dono, entao a faixa delas
-# (0,35) ficou ABAIXO da faixa das caixas (0,4) — por isso ela se chama RARISSIMA.
-# Individualmente a Caixa Pesca [Tier I] (0,3) segue mais provavel que a
-# Skin de Coral (0,2). Foi decisao de balanceamento, nao descuido: a medicao
-# de 20.000 chaves mostrou skin demais e a caixa ficou onde ja estava.
+# ⚠️ A SKIN DE CORAL SAIU DE 0,2 PARA 6 — ela e o unico degrau de skin que a
+# vara INICIAL alcanca comprar, e a escada de 44 niveis de rewards.yml exige
+# ela no nivel 8, que e o dia 3,40. A 0,2 eram 0,63 Coral na temporada inteira:
+# o jogador travava no nivel 7 e nao saia mais. Agora sao ~19, o que tambem
+# alimenta a forja (7 Coral = 1 Escama).
+#
+# O peso veio de combustivel (10,45 -> 4,85), chaves (7,85 -> 5,8) e da propria
+# faixa de skin. A familia MOEDA ficou intacta em 71,98 por decisao do dono.
+#
+# ⚠️ MOEDA REESCALADA x10 (250/500/1.000 -> 2.500/5.000/10.000, idem corais).
+# Os valores antigos foram calibrados contra uma pesca que rendia muito menos;
+# hoje a conta AFK faz 19 mil corais ja no dia 1 e 437 mil no dia 18, entao
+# 150 corais nao era premio, era ruido. Continua sendo empurrao de comeco de
+# temporada — crate nao tem gate de tier, entao valor fixo sempre vira ruido
+# depois do dia 5, e isso e por desenho.
 #
 # ⚠️ Crate NAO tem gate de tier — o jogador do dia 1 e o do dia 20 abrem a
 # mesma tabela. Por isso o premio em coins e pequeno: no dia 1 e um empurrao
@@ -59,8 +70,8 @@ key-item:
 # agora esta repartido. Se mexer num degrau, mexa nos outros: a soma da familia
 # e o que mantem o arquivo em 100.
 #
-#   coins   250 · 500 · 1.000   pesos 27,6 · 13,5 · 3,9
-#   corais  150 · 300 ·   600   pesos 16,8 ·  8,4 · 2,8
+#   coins   2.500 · 5.000 · 10.000   pesos 27,6 · 13,5 · 3,9
+#   corais  2.500 · 5.000 · 10.000   pesos 16,8 ·  8,4 · 2,8
 #
 # ⚠️ Os tres limites sao repartidos por VALOR, na razao 6:3:1 — o cash shop
 # cobra 800 (armazem), 1.500 (maquina) e 4.000 (spawner), entao o spawner tem
@@ -81,73 +92,80 @@ key-item:
 # totalChance. Somar 100 e so legibilidade.
 #
 # ⚠️ A faixa ARMADURA e a T-I INTEIRA — as quatro pecas, peso igual. E o
-# tier mais fraco de todos (+1,5% corais e +1% XP por peca), entao ele pode
+# tier mais fraco de todos (+1% corais e +1% XP por peca), entao ele pode
 # viver na crate, que nao tem gate: no dia 1 e um empurrao, no dia 20 e
-# ruido. Os tiers II a V continuam so nas caixas misteriosas.
+# ruido. Ela subiu de 1 para 2 em 05/08/2026 para o conjunto de 4 pecas
+# fechar de verdade (6,3 pecas na temporada contra as 3,15 de antes). Os
+# tiers II a V continuam so nas caixas misteriosas.
+#
+# ⚠️ A faixa SKIN e o CORAL e a ESCAMA, e ela e a razao de esta crate existir
+# dentro da calibragem da pesca. A vara inicial (Madeira, peso 3) alcanca a
+# chave desta crate, e a crate e a fonte principal do Coral — que a escada de
+# GarnixFishing/rewards.yml exige no nivel 8, dia 3,40. A Escama entra em
+# quantidade menor porque a fonte principal dela e a Caixa Pesca I.
 #
 # ⚠️ Peca INDIVIDUAL, nunca a colecao: `givearmor tier-i` sem o sufixo de
 # slot entrega o set inteiro num drop so. O `{amount}` no fim e o padrao de
 # todo item fisico do servidor — skin e armadura passam a quantia sorteada.
 rewards:
-
-  # -- COMUM ---------------------------------------------------- 82,43%
-  coins-250:
+  # -- COMUM ---------------------------------------------------- 76,83%
+  coins-2500:
     type: CURRENCY
     chance: 27.17
     currency-id: coins
-    amount: '250'
+    amount: '2500'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-500:
+  coins-5000:
     type: CURRENCY
     chance: 13.3
     currency-id: coins
-    amount: '500'
+    amount: '5000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-1000:
+  coins-10000:
     type: CURRENCY
     chance: 3.9
     currency-id: coins
-    amount: '1000'
+    amount: '10000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  corais-150:
+  corais-2500:
     type: CURRENCY
     chance: 16.57
     currency-id: corais
-    amount: '150'
+    amount: '2500'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
-  corais-300:
+  corais-5000:
     type: CURRENCY
     chance: 8.28
     currency-id: corais
-    amount: '300'
+    amount: '5000'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
-  corais-600:
+  corais-10000:
     type: CURRENCY
     chance: 2.76
     currency-id: corais
-    amount: '600'
+    amount: '10000'
     icon:
       lore:
       - '&fValor: &3✶{amount}'
 
   combustivel:
     type: COMMAND
-    chance: 10.45
+    chance: 4.85
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
     amount: 500
@@ -157,7 +175,7 @@ rewards:
       lore:
       - '&fLitros: &7{amount}L'
 
-  # -- COMUM PLUS ----------------------------------------------- 15,35%
+  # -- COMUM PLUS ------------------------------------------------ 13,3%
   lim-armazem-1:
     type: COMMAND
     chance: 2.7
@@ -286,7 +304,7 @@ rewards:
 
   chave-vip:
     type: COMMAND
-    chance: 1.5
+    chance: 1.2
     display: '&dChave VIP'
     command: crates givevirtualkey vip {player} {amount}
     amount: 1
@@ -302,7 +320,7 @@ rewards:
 
   chave-boss:
     type: COMMAND
-    chance: 5.6
+    chance: 4
     display: '&cChave de Boss'
     command: crates givevirtualkey bosses {player} {amount}
     amount: 1
@@ -318,7 +336,7 @@ rewards:
 
   chave-rankup:
     type: COMMAND
-    chance: 0.75
+    chance: 0.6
     display: '&6Chave RankUP'
     command: crates givevirtualkey rankup {player} {amount}
     amount: 1
@@ -332,10 +350,10 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  # -- ARMADURA ----------------------------------------------------- 1%
+  # -- ARMADURA ----------------------------------------------------- 2%
   armadura-i-capacete:
     type: COMMAND_ITEM
-    chance: 0.25
+    chance: 0.5
     display: '&7Capacete Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_helmet {amount}
     amount: 1
@@ -346,14 +364,14 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l1.5&a% &3Corais '
+      - '&8 ▪ &a+&l1&a% &3Corais '
       - '&8 ▪ &a+&l1&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-i-peitoral:
     type: COMMAND_ITEM
-    chance: 0.25
+    chance: 0.5
     display: '&7Peitoral Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_chestplate {amount}
     amount: 1
@@ -364,14 +382,14 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l1.5&a% &3Corais '
+      - '&8 ▪ &a+&l1&a% &3Corais '
       - '&8 ▪ &a+&l1&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-i-calca:
     type: COMMAND_ITEM
-    chance: 0.25
+    chance: 0.5
     display: '&7Calça Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_leggings {amount}
     amount: 1
@@ -382,14 +400,14 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l1.5&a% &3Corais '
+      - '&8 ▪ &a+&l1&a% &3Corais '
       - '&8 ▪ &a+&l1&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
 
   armadura-i-bota:
     type: COMMAND_ITEM
-    chance: 0.25
+    chance: 0.5
     display: '&7Bota Pesca &7[Tier &lI&7]'
     command: pesca givearmor {player} tier-i_boots {amount}
     amount: 1
@@ -400,7 +418,7 @@ rewards:
       lore:
       - ''
       - ' &8Especificações: '
-      - '&8 ▪ &a+&l1.5&a% &3Corais '
+      - '&8 ▪ &a+&l1&a% &3Corais '
       - '&8 ▪ &a+&l1&a% &bXP '
       flags:
       - HIDE_ATTRIBUTES
@@ -475,10 +493,10 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  # -- RARISSIMA (skins) ------------------------------------------ 0,35%
+  # -- SKIN (o portao da escada de niveis) --------------------------- 7%
   skin-coral:
     type: COMMAND_ITEM
-    chance: 0.2
+    chance: 6
     display: '&3Skin de Coral'
     command: pesca giveskin {player} coral {amount}
     amount: 1
@@ -489,13 +507,13 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l2&a% &3Corais '
-      - '&8 ▪ &a+&l2&a% &bXP '
+      - '&8 ▪ &a+&l1&a% &3Corais '
+      - '&8 ▪ &a+&l1&a% &bXP '
       - '&8 ▪ &cPeso até &l6&ckg '
 
   skin-escama:
     type: COMMAND_ITEM
-    chance: 0.15
+    chance: 1
     display: '&6Skin de Escama'
     command: pesca giveskin {player} escama {amount}
     amount: 1
@@ -506,8 +524,8 @@ rewards:
       lore:
       - ''
       - ' &8Especificações:'
-      - '&8 ▪ &a+&l5&a% &3Corais '
-      - '&8 ▪ &a+&l5&a% &bXP '
+      - '&8 ▪ &a+&l2&a% &3Corais '
+      - '&8 ▪ &a+&l2&a% &bXP '
       - '&8 ▪ &cPeso até &l10&ckg '
 
   # -- JACKPOT --------------------------------------------------- 0,05%
@@ -542,3 +560,4 @@ rewards:
       display: '&8Azar'
       lore:
       - '&7Não foi dessa vez.'
+

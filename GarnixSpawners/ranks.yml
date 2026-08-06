@@ -1,83 +1,120 @@
 # Tabela unica de desconto (na compra) e bonus (na venda dos drops).
 #
-# ⚠️ NAO SOMAM. O plugin ordena por (discount + bonus) decrescente e devolve
-#    a PRIMEIRA entrada cuja permissao o jogador tem — ou seja O MAIOR VENCE.
-#    Por isso todo no de VIP fica acima do teto do rank (19), senao o VIP nao
-#    valeria nada para quem chegou ao rank 20.
-#      MobConfigManager:313 / MachineConfigManager:247  -> a ordenacao
-#      MobConfigManager:319 / MachineConfigManager:242  -> o "primeiro vence"
+# ⚠️ NAO SOMAM ENTRE SI. O desconto vem da entrada de MAIOR discount que o
+#    jogador alcanca; o bonus, da de MAIOR bonus. Sao duas buscas independentes
+#    (getDiscountRank / getBonusRank), entao um nao cancela o outro — mas dentro
+#    de cada um deles vale o maior, nunca a soma.
 #
 # discount -> aplicado na COMPRA (ShopMenu:430). Exclusivo de VIP: rank e 0.
 # bonus    -> aplicado na VENDA dos drops (DropsMenu:56), so em moeda.
 #             ⚠️ o desconto NAO vale nos upgrades (UpgradeManager:137).
 #
-# Ordem efetiva (discount + bonus): garnix 50 > supremo 41 > investidor e
-# influencer 35 > imortal, yt, tiktoker e streamer 33 > celestial e miniyt 27 >
-# rank.wither (19%) > ... > rank.porco (1%).
+# ═══ UM NUMERO POR ATOR, IGUAL EM TODO SISTEMA (06/08/2026) ══════════════════
+#
+# ✅ Decisao do dono: "TODOS OS RANKS devem ser seus valores em bonus IGUAIS em
+# todos os sistemas, assim como os vips e os influencers. Se o vip X tem bonus de
+# 20% na mina ele vai ter de 20% nos spawners e nas maquinas tambem".
+#
+# Entao o "bonus" daqui e o MESMO numero dos nos mining.bonus / farm.bonus /
+# fishing.bonus / warehouse.bonus:
+#
+#   rank N ................................ N%   (rank 2 = 2 … rank 20 = 20)
+#   celestial e miniyt ..................... 8%
+#   imortal, yt, tiktoker e streamer ...... 12%
+#   supremo ............................... 16%
+#   garnix ................................ 20%
+#   investidor ............................ 22%   (o topo: melhor que o garnix em TUDO)
+#
+# ⚠️ O rank subiu 1 ponto em toda a escada. Ele estava desalinhado: dava 1% no
+# rank 2 aqui contra 2% no no mining.bonus.2. Agora bate.
+#
+# ⚠️ DESCONTO E BONUS SAO RESOLVIDOS SEPARADAMENTE (06/08/2026).
+#
+# Antes, os dois saiam do MESMO registro — o de maior (discount + bonus) — e por
+# isso o VIP baixo perdia o DESCONTO que pagou assim que o bonus do rank passasse
+# a soma dele: um celestial (3+8=11) no rank 12 (0+12=12) recebia o registro do
+# rank e comprava pelo preco cheio. O no do VIP nem era testado.
+#
+# Agora sao duas buscas:
+#   getDiscountRank(player) -> a entrada de MAIOR discount que o jogador alcanca
+#   getBonusRank(player)    -> a entrada de MAIOR bonus
+#
+# Cada numero vem de onde ele e maior e um nao cancela o outro. Um celestial no
+# rank 12 leva 3% de desconto (do VIP) e 12% de bonus (do rank).
+#   MobConfigManager / MachineConfigManager  -> os dois metodos
+#   ShopMenu (preco e lore)                  -> usa o de desconto
+#   DropsMenu (venda dos drops)              -> usa o de bonus
+#
+# O getRank(player) antigo continua existindo, mas SO para exibir uma tag unica.
+# Nao use ele para calcular nada: somar discount + bonus trata os dois numeros
+# como se fossem a mesma moeda, e eles nao sao.
 #
 # Os tiers de influencer ESPELHAM um VIP pago, por decisao do dono: yt, tiktoker
-# e streamer valem um imortal; miniyt vale um celestial. Espelhar em vez de
-# inventar uma escada propria mantem uma regra so no servidor — e como a tabela
-# devolve a primeira entrada por (discount + bonus), empatar significa que ter
-# os dois nao muda nada, que e o comportamento certo.
+# e streamer valem um IMORTAL (6% / 12%); miniyt vale um CELESTIAL (3% / 8%).
+# Espelhar em vez de inventar uma escada propria mantem uma regra so no servidor —
+# e como os valores sao identicos, ter dois desses grupos ao mesmo tempo nao muda
+# nada, que e o comportamento certo.
+#
+# ⚠️ NAO EXISTE GRUPO "influencer" AQUI. Os influenciadores sao SEMPRE os quatro
+# grupos concretos (yt, tiktoker, streamer, miniyt) — decisao do dono em
+# 06/08/2026. Havia uma entrada `influencer` guarda-chuva, e ela foi removida das
+# tres tabelas (spawners, maquinas e coins-shop). Se voltar a aparecer, e engano.
+#
+# ⚠️ O INVESTIDOR NAO E INFLUENCER. Ele e o topo pago e, por decisao do dono, e
+# melhor que o garnix nos DOIS numeros: 20% de desconto contra 15%, e 22% de
+# bonus contra 20%. Ele nao tem nada acima dele em lugar nenhum do servidor.
 
 celestial:
   discount: 3 # porcentagem de desconto na compra
-  bonus: 24 # porcentagem de bonus nos drops
+  bonus: 8 # porcentagem de bonus nos drops
   tag: '&e&lCELESTIAL'
   permission: vip.celestial
 
 imortal:
   discount: 6 # porcentagem de desconto na compra
-  bonus: 27 # porcentagem de bonus nos drops
+  bonus: 12 # porcentagem de bonus nos drops
   tag: '&b&lIMORTAL'
   permission: vip.imortal
 
 supremo:
   discount: 10 # porcentagem de desconto na compra
-  bonus: 31 # porcentagem de bonus nos drops
+  bonus: 16 # porcentagem de bonus nos drops
   tag: '&4&lSUPREMO'
   permission: vip.supremo
 
 garnix:
   discount: 15 # porcentagem de desconto na compra
-  bonus: 35 # porcentagem de bonus nos drops
+  bonus: 20 # porcentagem de bonus nos drops
   tag: '&6&lGARNIX'
   permission: vip.garnix
 
 investidor:
-  discount: 0 # porcentagem de desconto na compra
-  bonus: 35 # porcentagem de bonus nos drops
+  discount: 20 # ACIMA do garnix (15): o investidor e melhor em TUDO
+  bonus: 22 # porcentagem de bonus nos drops
   tag: '&a&lINVESTIDOR'
   permission: vip.investidor
 
-influencer:
-  discount: 0 # porcentagem de desconto na compra
-  bonus: 35 # porcentagem de bonus nos drops
-  tag: '&c&lINFLUENCER'
-  permission: vip.influencer
-
 miniyt:
   discount: 3 # igual ao celestial
-  bonus: 24 # igual ao celestial
+  bonus: 8 # igual ao celestial
   tag: '&b&lMINIYT'
   permission: vip.miniyt
 
 tiktoker:
   discount: 6 # igual ao imortal
-  bonus: 27 # igual ao imortal
+  bonus: 12 # igual ao imortal
   tag: '&b&lTIKTOKER'
   permission: vip.tiktoker
 
 yt:
   discount: 6 # igual ao imortal
-  bonus: 27 # igual ao imortal
+  bonus: 12 # igual ao imortal
   tag: '&b&lYT'
   permission: vip.yt
 
 streamer:
   discount: 6 # igual ao imortal
-  bonus: 27 # igual ao imortal
+  bonus: 12 # igual ao imortal
   tag: '&b&lSTREAMER'
   permission: vip.streamer
 
@@ -94,120 +131,121 @@ streamer:
 # LuckPerms, pelo kit), mas uma entrada aqui para ele so poderia valer 0% — que
 # e exatamente o que "nenhuma entrada" ja vale.
 #
-# Entao a escada da N-1% no rank N: rank 1 vale 0%, rank 2 vale 1%, teto 19% no
-# rank 20. O nome do no e o MESMO do kit (rank.<mob>), entao subir de rank
-# concede uma permissao so, que serve para as duas coisas.
+# Entao a escada da N% no rank N: rank 1 vale 0%, rank 2 vale 2%, teto 20% no
+# rank 20 — o mesmo numero dos nos <via>.bonus.<N>. O nome do no e o MESMO do kit
+# (rank.<mob>), entao subir de rank concede uma permissao so, que serve para as
+# duas coisas.
 
 rank-porco:
   discount: 0
-  bonus: 1
+  bonus: 2
   tag: '&7[Rank 2]'
   permission: rank.porco
 
 rank-ovelha:
   discount: 0
-  bonus: 2
+  bonus: 3
   tag: '&7[Rank 3]'
   permission: rank.ovelha
 
 rank-vaca:
   discount: 0
-  bonus: 3
+  bonus: 4
   tag: '&7[Rank 4]'
   permission: rank.vaca
 
 rank-morcego:
   discount: 0
-  bonus: 4
+  bonus: 5
   tag: '&7[Rank 5]'
   permission: rank.morcego
 
 rank-jaguatirica:
   discount: 0
-  bonus: 5
+  bonus: 6
   tag: '&7[Rank 6]'
   permission: rank.jaguatirica
 
 rank-lobo:
   discount: 0
-  bonus: 6
+  bonus: 7
   tag: '&7[Rank 7]'
   permission: rank.lobo
 
 rank-zumbi:
   discount: 0
-  bonus: 7
+  bonus: 8
   tag: '&7[Rank 8]'
   permission: rank.zumbi
 
 rank-esqueleto:
   discount: 0
-  bonus: 8
+  bonus: 9
   tag: '&7[Rank 9]'
   permission: rank.esqueleto
 
 rank-aranha:
   discount: 0
-  bonus: 9
+  bonus: 10
   tag: '&7[Rank 10]'
   permission: rank.aranha
 
 rank-pigzombie:
   discount: 0
-  bonus: 10
+  bonus: 11
   tag: '&7[Rank 11]'
   permission: rank.pigzombie
 
 rank-slime:
   discount: 0
-  bonus: 11
+  bonus: 12
   tag: '&7[Rank 12]'
   permission: rank.slime
 
 rank-guardian:
   discount: 0
-  bonus: 12
+  bonus: 13
   tag: '&7[Rank 13]'
   permission: rank.guardian
 
 rank-magmacube:
   discount: 0
-  bonus: 13
+  bonus: 14
   tag: '&7[Rank 14]'
   permission: rank.magmacube
 
 rank-endermite:
   discount: 0
-  bonus: 14
+  bonus: 15
   tag: '&7[Rank 15]'
   permission: rank.endermite
 
 rank-bruxa:
   discount: 0
-  bonus: 15
+  bonus: 16
   tag: '&7[Rank 16]'
   permission: rank.bruxa
 
 rank-blaze:
   discount: 0
-  bonus: 16
+  bonus: 17
   tag: '&7[Rank 17]'
   permission: rank.blaze
 
 rank-golem:
   discount: 0
-  bonus: 17
+  bonus: 18
   tag: '&7[Rank 18]'
   permission: rank.golem
 
 rank-ghast:
   discount: 0
-  bonus: 18
+  bonus: 19
   tag: '&7[Rank 19]'
   permission: rank.ghast
 
 rank-wither:
   discount: 0
-  bonus: 19
+  bonus: 20
   tag: '&7[Rank 20]'
   permission: rank.wither

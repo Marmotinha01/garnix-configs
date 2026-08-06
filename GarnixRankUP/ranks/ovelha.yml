@@ -10,12 +10,16 @@ commands:
 # carregar 20 nos equivalentes. `spawner.buy.*` e `machines.buy.*` NAO entram:
 # aquilo e desbloqueio individual e precisa acumular.
 - 'lp user {player} permission unset mining.bonus.2'
-- 'lp user {player} permission unset warehouse.sellmult.1'
+- 'lp user {player} permission unset farm.bonus.2'
+- 'lp user {player} permission unset warehouse.bonus.2'
+- 'lp user {player} permission unset fishing.bonus.2'
 - 'lp user {player} permission set rank.ovelha true'
 - 'crate givevirtualkey rankup {player} 1'
 - 'lp user {player} permission set mining.bonus.3 true'
+- 'lp user {player} permission set farm.bonus.3 true'
+- 'lp user {player} permission set warehouse.bonus.3 true'
+- 'lp user {player} permission set fishing.bonus.3 true'
 - 'lp user {player} permission set spawner.buy.sheep true'
-- 'lp user {player} permission set warehouse.sellmult.5 true'
 
 costs:
 - 'coins 328000'

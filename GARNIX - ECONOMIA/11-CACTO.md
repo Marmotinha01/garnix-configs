@@ -71,6 +71,81 @@ O nó de permissão **funcionaria numericamente**: `Double.parseDouble` engole `
 
 Ou seja: dá para fazer a via escalar, ao preço de matar dois sistemas nela. Não vale.
 
+### ❌ A saída que foi tentada e REVERTIDA: C13
+
+> **06/08/2026 — o `warehouse.sellmult` foi removido do código e dos 20 ranks, por decisão do dono.** *"Ele me dá arrepios, é melhor deixar sem."*
+>
+> Três coisas pesaram, e as duas primeiras são o que o dono sentiu antes de eu medir:
+>
+> 1. **Era o único multiplicador do servidor.** Todo o resto soma percentuais num bloco aditivo. Subir do rank 18 para o 19 multiplicava a renda da via por **4,89× de uma vez** — nenhum outro sistema dá um salto assim.
+> 2. **Acoplava os dois eixos com seis ordens de grandeza.** A Lei 1 diz que coins e cabeças são independentes. O `mining.bonus` respeita isso (rank 1→20 vale 1,20×); o `sellmult` valia **1.616.000×**.
+> 3. **E ainda assim era insuficiente.** Medido: o alvo de 15% pede `3,84×10¹⁵` do dia 1 ao dia 20; a via entregava `plot 300× × sellmult 1,62×10⁶ = 4,85×10⁸`. **Faltavam 7,9×10⁶.** Um número que parece absurdo e está 8 milhões de vezes curto é sinal de que o alvo está errado, não o número.
+>
+> ⚠️ **Junto veio um bug real:** o topo da escada (`warehouse.sellmult.1616000`) era concedido pelos ranks 19 e 20 e **nunca removido** — nem por rank (não há rank depois dele), nem pelo reset de prestígio. Quem prestigiasse voltava ao rank 1 carregando 1.616.000× **para sempre**.
+>
+> **A consequência assumida:** a via do cacto passa a ser limitada pelo tamanho do plot (**2,5 ordens**) contra as 15,6 da curva de tiers. Ela rende nos primeiros dias e satura — os **15% da renda diária** que ela carregava precisam de outro dono, ou a via precisa de outro desenho. Quem for calibrar parte disso, e **não** tenta recolocar a amplitude num multiplicador.
+
+### ✅ A saída adotada: o `sell-price` é uma alavanca VIVA, ajustada por update
+
+✅ **Decisão do dono (06/08/2026):** *"o cacto eu vou reajustando com updates conforme necessário, então ele vai começar nesse valor e eu vou subindo ao decorrer do servidor com buff"*.
+
+As 13 ordens de grandeza que faltam **saem da mão do operador**, não de um mecanismo. Um número só (`farms.CACTUS.sell-price`), sob controle direto, sem acoplar ao rank, sem nó de permissão e sem reset de prestígio para dar errado.
+
+**A régua do buff** — derivada de `renda(d) × 0,15 / 24 ÷ colheita/h(d)`, com a farm crescendo de 100 blocos no dia 1 para 30.000 no dia 20:
+
+| Dia | Farm (blocos) | Cactos/h | Alvo coins/h | `sell-price` |
+|---|---|---|---|---|
+| 1 | 100 | 4,70×10³ | 2,34×10³ | **0.499** |
+| 3 | 182 | 8,57×10³ | 1,02×10⁵ | 11.95 |
+| 5 | 332 | 1,56×10⁴ | 4,47×10⁶ | 286.5 |
+| 7 | 606 | 2,85×10⁴ | 1,95×10⁸ | 6.867 |
+| 10 | 1.491 | 7,01×10⁴ | 5,65×10¹⁰ | 8,06×10⁵ |
+| 13 | 3.669 | 1,72×10⁵ | 1,63×10¹³ | 9,46×10⁷ |
+| 16 | 9.029 | 4,24×10⁵ | 4,71×10¹⁵ | 1,11×10¹⁰ |
+| 20 | 30.000 | 1,41×10⁶ | 8,99×10¹⁸ | **6,38×10¹²** |
+
+**Cadência × tamanho do buff** — o total é 1,28×10¹³, então:
+
+| Buffar | Vezes | Cada buff |
+|---|---|---|
+| **todo dia** | 19 | **4,90×** |
+| a cada 2 dias | 9 | 28,6× |
+| a cada 3 dias | 6 | 153× |
+| a cada 5 dias | 3 | 2,34×10⁴ |
+| a cada 7 dias | 2 | 3,58×10⁶ |
+
+⚠️ **4,90× por dia é a MESMA razão que o `sellmult` usava** (4,89× a cada 2 ranks). O trabalho não mudou de tamanho — mudou de dono.
+
+### ✅ Estocar antes do buff NÃO é exploit — medido
+
+O `sell-price` vale na hora da venda, então a suspeita óbvia é bancar cacto antes de um buff. Não fecha:
+
+```
+limite inicial do armazém .... 3.000 cactos
+colheita no dia 20 ........... 1,41×10⁶ por hora
+tempo para encher ............ 7,6 SEGUNDOS
+```
+
+O estoque máximo é irrisório perto da colheita: o ganho de segurar um dia inteiro antes de um buff de 4,9× é **0,007% de uma diária**. Ruído.
+
+### 🚩 E é a mesma medição que expõe o problema real do armazém
+
+Se o armazém enche em 7,6 segundos, ele não é freio — é parede. Mesmo com o autosell no melhor nível:
+
+```
+autosell a 10s, colheita entre duas vendas (dia 20) .... 3.917 cactos
+limite do armazém ..................................... 3.000
+perda .................................................  23%
+```
+
+E esse já é o cenário premium. **No fim da temporada a via passa a ser governada pelo `initial-limit` e pelo intervalo do autosell, não pelo `sell-price`** — buffar o preço não adianta se a colheita está sendo jogada fora antes de ser vendida.
+
+É o que a calibragem do armazém tem que resolver: os dois números precisam escalar com a farm, ou o teto da via vira o limite do armazém e não o teto do plot.
+
+---
+
+O que segue abaixo é o registro de como o C13 foi desenhado, mantido porque a análise do problema continua válida — só a solução foi descartada.
+
 ### A saída: C13
 
 Uma escada **multiplicativa**, exatamente no formato do C2 que você já aprovou para o Farm — e pelo mesmo motivo, que é o mesmo problema:

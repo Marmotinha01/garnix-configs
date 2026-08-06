@@ -55,3 +55,11 @@ miniyt:
   color: 'b'
   tag: '[MINIYT]'
   perm: vip.miniyt
+
+investidor:
+  # ACIMA do garnix (15): o investidor e melhor em TUDO
+  value: 20
+  color: a
+  tag: '[Investidor]'
+  perm: vip.investidor
+

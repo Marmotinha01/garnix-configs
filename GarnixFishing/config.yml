@@ -1,10 +1,24 @@
 # GarnixFishing — config
 
 # Currency credited on each catch (a GarnixCurrencies id).
+#
+# ⚠️ É a renda IMEDIATA, creditada na hora e multiplicada por skin + armadura +
+# booster + rank. É por aqui que os corais entram, e é por isso que ela NÃO pode
+# ser coins: a pilha de multiplicadores da pesca não pode tocar no exponencial.
+# Os coins da pesca entram pelo payload `type: CURRENCY` das 44 recompensas da
+# escada, em rewards.yml, sem multiplicador nenhum — o equipamento compra ACESSO
+# (o `weight` que a skin alcança), não valor.
 currency: corais
-# Base currency per fished unit (before the rod-skin bonus; per-reward override in rewards.yml).
-currency-per-catch: '10'
-# Base XP per fished unit (per-reward override in rewards.yml).
+# Corais por unidade fisgada, ANTES dos bônus. Vale só para as recompensas que
+# não trazem o próprio `currency:` — ou seja a chave, as duas caixas e as 44 de
+# coins. As 10 espécies (o corpo da tabela) sobrescrevem com o valor delas,
+# de 3 a 69 corais.
+#
+# Calibrado junto com a escada das espécies para a temporada fechar em 2,20 M de
+# corais — que é a receita que os preços de shop.yml assumem.
+currency-per-catch: '15'
+# XP base por unidade fisgada. Na prática nunca é usado: toda recompensa de
+# rewards.yml declara o próprio `xp`. Fica como rede de segurança.
 xp-per-catch: 5.0
 # Shown as {xp_needed} once a rod is at the level cap.
 max-level-display: ∞
@@ -36,6 +50,12 @@ progress-bar:
   incomplete-color: '&7'
 
 # Seconds between catches. The Speed enchantment subtracts its flat seconds from this.
+#
+# ⚠️ NÚMERO CRÍTICO. Com a Correnteza 10 (−10s) o intervalo cai para 5s, ou seja
+# 720 fisgadas/h contra as 240 de uma vara sem encante. Somado à Cobiça 10
+# (+60%), a conta de referência sai de 240 para 1.152 unidades/h ao longo da
+# temporada — e é sobre essa curva de throughput que levels.yml foi integrado e
+# que a escada de coins de rewards.yml foi resolvida. Mexer aqui invalida os dois.
 fishing-base-interval-seconds: 15
 
 # Fishing rod (real, tradeable item). Bought in the home menu; all progression

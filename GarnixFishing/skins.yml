@@ -16,7 +16,18 @@
 # -- MESMO PERCENTUAL PARA TODA MOEDA ---------------------------------
 # Toda skin dá o MESMO percentual em corais e XP, igual às skins de Mining e Farm.
 # É o que permite anunciar um número só de bônus e ele fechar com o que está
-# escrito aqui. A ladder é 2 · 5 · 9 · 14 · 20 · 28 · 38 · 50 · 65.
+# escrito aqui. A ladder é 1 · 2 · 4 · 6 · 8 · 11 · 15 · 20 · 25.
+#
+# -- A SKIN É APOIO, O QUE ELA VENDE É O `max-weight` -----------------
+# ⚠️ O percentual foi cortado de 65% para 25% no topo (05/08/2026, decisão do
+# dono: "skins e armaduras são apenas um suporte, não é para disparar em %").
+# A skin da pesca já tem uma função forte que NÃO é multiplicador — o
+# `max-weight` é o portão que decide quais recompensas a vara alcança, e é
+# nele que mora a amplitude da via. Se o percentual voltasse a ser grande, a
+# skin pagaria duas vezes pelo mesmo degrau: uma no acesso e outra no bônus.
+#
+# O teto sustentado da pesca fica: skin 25% + armadura T-V 20% + rank/VIP 35%
+# = 1,80×  (com booster 2x no pico, 2,80×).
 #
 # -- LADDER DA TEMPORADA ----------------------------------------------
 # Ordem de raridade (a ordem DESTE arquivo é a ordem da forja):
@@ -65,10 +76,10 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 2.0
+        value: 1.0
         percent: true
       xp:
-        value: 2.0
+        value: 1.0
         percent: true
 
   escama:
@@ -88,10 +99,10 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 5.0
+        value: 2.0
         percent: true
       xp:
-        value: 5.0
+        value: 2.0
         percent: true
 
   prata:
@@ -111,10 +122,10 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 9.0
+        value: 4.0
         percent: true
       xp:
-        value: 9.0
+        value: 4.0
         percent: true
 
   turquesa:
@@ -134,10 +145,10 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 14.0
+        value: 6.0
         percent: true
       xp:
-        value: 14.0
+        value: 6.0
         percent: true
 
   abissita:
@@ -157,10 +168,10 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 20.0
+        value: 8.0
         percent: true
       xp:
-        value: 20.0
+        value: 8.0
         percent: true
 
   serenita:
@@ -180,10 +191,10 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 28.0
+        value: 11.0
         percent: true
       xp:
-        value: 28.0
+        value: 11.0
         percent: true
 
   oceanita:
@@ -203,10 +214,10 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 38.0
+        value: 15.0
         percent: true
       xp:
-        value: 38.0
+        value: 15.0
         percent: true
 
   perola:
@@ -226,10 +237,10 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 50.0
+        value: 20.0
         percent: true
       xp:
-        value: 50.0
+        value: 20.0
         percent: true
 
   tempestita:
@@ -249,8 +260,8 @@ rod-skins:
       - ''
     bonuses:
       corais:
-        value: 65.0
+        value: 25.0
         percent: true
       xp:
-        value: 65.0
+        value: 25.0
         percent: true

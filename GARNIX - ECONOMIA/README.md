@@ -27,6 +27,7 @@ Diretório de trabalho da economia da temporada. Todo material de projeto, cálc
 | [14-FARM-PESCA.md](14-FARM-PESCA.md) | Fazenda e pesca: o teto físico do farm, o gate 2D da pesca, as skins | ✅ Fase 4 |
 | [16-KITS.md](16-KITS.md) | Especificação das chaves dos kits — ⛔ você aplica no jogo | ✅ |
 | [15-LOOT.md](15-LOOT.md) | Superfícies de recompensa: crates, caixas, bosses, ontime, dailies, robôs | ✅ Fase 5 |
+| [17-PERMISSOES.md](17-PERMISSOES.md) | Bônus e desconto de rank, VIP e influencer — **os 40 nós de VIP não existem no repo**, só no LuckPerms | ✅ |
 | [TESTES-IN-GAME.md](TESTES-IN-GAME.md) | **Checklist do que testar no jogo** — deixe aberto do lado enquanto testa | ✅ |
 | [metrics.csv](metrics.csv) | Metas de cronometragem por tier vs medido in-game | ✅ |
 | [sim/](sim/) | Simulador em JavaScript — abre `sim/index.html` no navegador | ✅ |
@@ -311,7 +312,7 @@ Então a 4b entrega a **especificação completa** — classe, moeda, fórmula, 
 **C10** | `garnix-crates` | remover os aliases `caixa`/`caixas`, que colidem com o `GarnixMysteryBoxes` | ✅ aprovado |
 ~~C11~~ | ~~`garnix-warehouse`~~ | ~~`total_sold` + placar do cacto~~ | ❌ **recusado por você** (*"placar de cacto n precisa"*). Os R$ 120 do cacto foram para o prestígio |
 ~~C12~~ | ~~`garnix-spawners`~~ | ~~debitar `spawnerslimite` na compra~~ | ❌ **retirado** — não era bug. O dono confirmou que comparar sem debitar **é o desenho**: teto de lote por compra, que cresce com o que cai de recompensa |
-**C13** | `garnix-warehouse` | `getSellMultiplier(Player)` lendo `warehouse.sellmult.<N>`, aplicado no `SellService.computeValue` | ✅ **no ar** — é o que dá ao cacto as 15,6 ordens que o tamanho do plot (2,5) não dá |
+**C13** | `garnix-warehouse` | ~~`getSellMultiplier(Player)` lendo `warehouse.sellmult.<N>`~~ | ❌ **REVERTIDO em 06/08/2026** por decisão do dono. Era o único multiplicador do servidor e acoplava o eixo de cabeças ao de coins em 6 ordens de grandeza. A via do cacto passa a ser limitada pelo plot (2,5 ordens) e satura no meio da temporada |
 **C14** | `garnix-duels` | **taxa da aposta** — alíquota lida do GarnixCurrencies na liquidação, incidindo só sobre o prêmio, + a linha `{tax_info}` no ícone de valor do menu | ✅ **no ar** |
 **C15** | `garnix-crates`, `garnix-mystery-boxes`, `garnix-bosses`, `garnix-ontime`, `garnix-fishing` | recompensa `type: CURRENCY` herda o ícone da própria moeda **campo a campo**: material, `data` e `display` vêm da moeda quando o config não os declara, e a `lore:` do config entra por cima | ✅ **escrito e compilando** nos 5 — aguardando sua revisão |
 C3 | — | tabela de sufixos configurável | ❌ **desnecessário**, o V1 passou |

@@ -1,449 +1,1046 @@
-# One ready-made reward of EACH type, as a template. Copy a block to add more.
-# Each reward:
-#   required-level : level at which it unlocks
-#   chance         : relative draw weight (higher = caught more often)
-#   weight         : the reward's PESO — the rod gate: a rod skin only catches
-#                    rewards whose weight <= its max-weight
-#   rare           : if true, receives the Luck enchantment boost
-#   bad-luck       : if true, an "unlucky" catch — delivers nothing (= type NONE)
-#   xp             : XP granted per unit (works on every type, incl. bad-luck);
-#                    omit to use the global xp-per-catch
-#   type           : how the payload is delivered to the mailbox (GarnixMail):
-#                      ITEM         → physical item to the mailbox
-#                      COMMAND      → console command, virtual (no inv check)
-#                      COMMAND_ITEM → console command that gives an item (mailbox)
-#                      CURRENCY     → deposit {amount} of {currency-id}
-#                      NONE         → nothing (bad luck)
-#   display        : reward display name
-#   icon           : icon shown in the reward catalog/menus
-#   item           : physical item delivered (type ITEM)
-#   command        : console command, with {player} / {amount} (COMMAND, COMMAND_ITEM)
-#   currency-id    : currency deposited (type CURRENCY)
-#   amount         : per-catch quantity — {amount} in commands, or the CURRENCY deposit
-#   currency       : (optional) per-catch INCOME override (immediate, credited on the
-#                    catch — independent of the type; NOT the CURRENCY payload)
+# GarnixFishing — a tabela de fisgada.
+#
+# Cada recompensa:
+#   required-level : nivel em que ela abre
+#   chance         : PESO relativo do sorteio (nao precisa somar 100)
+#   weight         : o PESO da recompensa — o portao da vara: a skin so fisga
+#                    recompensas cujo weight <= o max-weight dela
+#   rare           : se true, recebe o impulso do encante Mare
+#   bad-luck       : fisgada de azar — nao entrega nada e nao paga nada
+#   xp             : XP por unidade; omita para usar o xp-per-catch global
+#   type           : ITEM / COMMAND / COMMAND_ITEM / CURRENCY / NONE
+#   currency       : renda POR FISGADA em corais (imediata, creditada na hora,
+#                    multiplicada por skin + armadura + booster + rank)
+#   amount         : quantia do payload ({amount} nos comandos, deposito do CURRENCY)
+#
+# ═══ COMO A TABELA E DIVIDIDA ════════════════════════════════════════════════
+#
+#   azar        1 entrada    paga nada
+#   especies   10 entradas   pagam CORAIS na hora, sem payload  (o corpo)
+#   coins      44 entradas   pagam COINS por correio            (a escada)
+#   chave       1 entrada    chave de pesca, direto no /crates
+#   caixas      2 entradas   Caixa Pesca I e II, por correio    (o topo)
+#
+# ═══ O PORTAO DA ESCADA SAO AS SKINS 1 A 7, E SO ELAS ════════════════════════
+#
+# Nenhuma recompensa passa de PESO 45 (Serenita). Oceanita, Perola e Tempestita
+# — as tres que a forja nao alcanca e que o site vende — ficam FORA da escada
+# de renda: elas valem o percentual (+15/+20/+25%) e o prestigio, e o max-weight
+# de 65/90/130 delas nao gateia recompensa nenhuma.
+#
+# Isso e deliberado e e o que torna a escada honesta. Se a renda dependesse
+# delas, a conta AFK sem sorte travaria no nivel gateado pela Serenita e ficaria
+# 4x10^5 atras de quem comprou a skin no site no fim da temporada — porque o
+# alvo do tier continua subindo 6,61x por dia depois que o jogador trava.
+#
+# A escada de peso das skins (3 · 6 · 10 · 15 · 22 · 32 · 45 · 65 · 90 · 130)
+# continua escrita como esta: os tres ultimos degraus sao vitrine.
+#
+# ⚠️ Prazo de cada portao — e o que a crate e as caixas TEM que entregar:
+#
+#   Coral    (peso  6) abre no nivel  8, dia  3,40
+#   Escama   (peso 10) abre no nivel 14, dia  5,95
+#   Prata    (peso 15) abre no nivel 20, dia  8,50
+#   Turquesa (peso 22) abre no nivel 27, dia 11,47
+#   Abissita (peso 32) abre no nivel 33, dia 14,02
+#   Serenita (peso 45) abre no nivel 39, dia 16,57
+#
+# ═══ POR QUE O CORPO E "type: NONE" E ISSO NAO E AZAR ════════════════════════
+#
+# O RewardDelivery grava UMA LINHA DE CORREIO por fisgada entregue, sem
+# agregacao (MailManager.sendCurrency faz um INSERT por chamada). Com 94% das
+# fisgadas gerando payload, uma conta AFK no fim da temporada geraria ~21.800
+# linhas por dia — 2,2 milhoes/dia com 100 contas.
+#
+# Por isso as 10 especies nao tem "type": elas sao NONE, ou seja SEM PAYLOAD, e
+# o valor delas e o campo currency — corais creditados na hora, sem passar pelo
+# correio. O RewardService ramifica pela flag bad-luck crua (nao pelo
+# isBadLuck(), que junta NONE com azar), entao a especie mantem titulo, Cobica e
+# contador do ranking. So o azar abaixo leva bad-luck: true.
+#
+# ⚠️ NAO acrescente bad-luck: true numa especie: ela viraria azar de verdade —
+# perderia o titulo, a Cobica pararia de dobrar e o ranking pararia de contar.
+#
+# A chave e type: COMMAND (comando VIRTUAL): o RewardDelivery executa na hora,
+# sem correio, porque ela credita um saldo no GarnixCrates e nao ocupa slot. As
+# caixas sao COMMAND_ITEM (item fisico), entao vao para o correio mesmo — e sao
+# as unicas coisas que vao. O correio da pesca fica em 53 a 1.239 linhas/dia.
+#
+# ═══ A ESCADA DE COINS ═══════════════════════════════════════════════════════
+#
+# 44 recompensas, uma por nivel, com portao 2D: required-level (a escada de
+# niveis) x weight (a skin da vara). Cada degrau vale ~2,2x, contra os 6,6x da
+# escada antiga de 20 — o degrau menor e o que faz um erro de ritmo custar 2,2x
+# em vez de uma ordem de grandeza.
+#
+# Os valores foram resolvidos por RECORRENCIA contra o alvo de 7% da renda
+# diaria do tier: a recompensa nova entrega o que FALTA depois das anteriores,
+# que continuam no pool. O erro contra a banda fica entre 0,4x e 2,1x.
+#
+# ⚠️ chance: 0.1 e baixo de proposito. Ela e o unico numero que controla o
+# volume de correio da escada: a 1,5 seriam ~10.000 linhas/dia por conta. A 0,1
+# sao ~1.000, e a recorrencia so devolve valores maiores para compensar — a
+# renda nao muda.
+#
+# ⚠️ amount e lido como new BigDecimal(getString(...)) (Reward.java:73-74) — por
+# isso vai ENTRE ASPAS: sem aspas um inteiro grande viraria BigInteger e o
+# getString devolveria nulo.
+#
+# ⚠️ O menu de recompensas (menus/rewards.yml) ja acrescenta Nivel, Peso e
+# Chance em cada icone. NAO repita esses tres na lore daqui.
 
 rewards:
-  
-  # -- NONE — bad luck (stores/gives nothing; weight 1 so every rod can "miss") -
-  bad_luck:
+
+  # -- AZAR — nao entrega nada e nao paga nada -------------------------------
+  # Cai de 24% das fisgadas no nivel 1 para ~6% no nivel 44: o pool cresce a
+  # cada especie e a cada degrau da escada, entao a vara melhor erra menos.
+  azar:
     required-level: 0
-    chance: 25
+    chance: 8
     weight: 1
     bad-luck: true
-    xp: 1
+    xp: 2
     display: '&8Azar'
     icon:
       material: INK_SACK
       data: 8
       display: '&8Azar'
       lore:
-      - '&7Nada dessa vez...'
-  
-  # -- ITEM — physical item delivered to the inventory on collect -----
-  fish:
+      - '&7Não foi dessa vez.'
+
+  # ═══ O CORPO — 10 especies ═════════════════════════════════════════════════
+  # Pagam corais na hora, sem item e sem correio. A chance CAI conforme a
+  # especie sobe (24 -> 2) e o valor SOBE (4 -> 76 corais): a especie nova e
+  # sempre a mais rara e a mais valiosa do pool, entao trocar de skin muda o
+  # corpo da tabela de verdade, e nao so o teto dela.
+
+  sardinha:
     required-level: 0
-    chance: 50
-    weight: 1
-    xp: 5
-    type: ITEM
-    display: '&7Peixe'
-    item:
+    chance: 24
+    weight: 3
+    xp: 6
+    currency: '4'
+    display: '&7Sardinha'
+    icon:
       material: RAW_FISH
       data: 0
-      display: '&7Peixe'
+      display: '&7Sardinha'
       lore:
-      - '&7Um peixe comum.'
-  
-  # -- CURRENCY — deposits coins on collect (default rod, weight 2) ---
-  coins:
-    required-level: 2
-    chance: 15
-    weight: 2
-    xp: 8
-    type: CURRENCY
-    currency-id: corais
-    amount: 250
-    display: '&3Saco de Corais'
+      - '&fValor: &3✶4'
+      - '&7Exige a vara &fMadeira&7.'
+
+  corvina:
+    required-level: 5
+    chance: 12
+    weight: 3
+    xp: 7
+    currency: '6'
+    display: '&7Corvina'
     icon:
-      material: GOLD_NUGGET
-      display: '&3Saco de Corais'
+      material: RAW_FISH
+      data: 0
+      display: '&7Corvina'
       lore:
-      - '&7Vale &f250 &7corais ao sacar.'
-  
-  # -- COMMAND_ITEM — command that gives a physical item (Reinforced rod, weight 4) -
-  diamonds:
-    required-level: 6
+      - '&fValor: &3✶6'
+      - '&7Exige a vara &fMadeira&7.'
+
+  tainha:
+    required-level: 10
     chance: 8
-    weight: 4
-    xp: 15
-    type: COMMAND_ITEM
-    command: give {player} diamond {amount}
-    amount: 2
-    display: '&bCarga de Diamantes'
+    weight: 6
+    xp: 8
+    currency: '8'
+    display: '&fTainha'
     icon:
-      material: DIAMOND
-      display: '&bCarga de Diamantes'
+      material: RAW_FISH
+      data: 1
+      display: '&fTainha'
       lore:
-      - '&7Dá &b2 diamantes &7ao sacar.'
-  
-  # -- COMMAND — virtual command (crate key), rare, Golden rod (weight 8) -
-  treasure:
-    required-level: 12
+      - '&fValor: &3✶8'
+      - '&7Exige a vara &fCoral&7.'
+
+  robalo:
+    required-level: 15
+    chance: 6
+    weight: 10
+    xp: 9
+    currency: '12'
+    display: '&aRobalo'
+    icon:
+      material: COOKED_FISH
+      data: 0
+      display: '&aRobalo'
+      lore:
+      - '&fValor: &3✶12'
+      - '&7Exige a vara &fEscama&7.'
+
+  badejo:
+    required-level: 20
+    chance: 5
+    weight: 15
+    xp: 10
+    currency: '17'
+    display: '&bBadejo'
+    icon:
+      material: RAW_FISH
+      data: 2
+      display: '&bBadejo'
+      lore:
+      - '&fValor: &3✶17'
+      - '&7Exige a vara &fPrata&7.'
+
+  garoupa:
+    required-level: 25
+    chance: 4
+    weight: 15
+    xp: 11
+    currency: '23'
+    display: '&bGaroupa'
+    icon:
+      material: COOKED_FISH
+      data: 1
+      display: '&bGaroupa'
+      lore:
+      - '&fValor: &3✶23'
+      - '&7Exige a vara &fPrata&7.'
+
+  cherne:
+    required-level: 30
+    chance: 3.5
+    weight: 22
+    xp: 12
+    currency: '32'
+    display: '&3Cherne'
+    icon:
+      material: RAW_FISH
+      data: 3
+      display: '&3Cherne'
+      lore:
+      - '&fValor: &3✶32'
+      - '&7Exige a vara &fTurquesa&7.'
+
+  atum:
+    required-level: 34
+    chance: 3
+    weight: 32
+    xp: 13
+    currency: '42'
+    display: '&9Atum'
+    icon:
+      material: RAW_FISH
+      data: 1
+      glow: true
+      display: '&9Atum'
+      lore:
+      - '&fValor: &3✶42'
+      - '&7Exige a vara &fAbissita&7.'
+
+  espadarte:
+    required-level: 38
+    chance: 2.5
+    weight: 32
+    xp: 14
+    currency: '57'
+    display: '&9Espadarte'
+    icon:
+      material: RAW_FISH
+      data: 2
+      glow: true
+      display: '&9Espadarte'
+      lore:
+      - '&fValor: &3✶57'
+      - '&7Exige a vara &fAbissita&7.'
+
+  marlim:
+    required-level: 42
     chance: 2
-    weight: 8
-    rare: true
-    xp: 50
+    weight: 45
+    xp: 15
+    currency: '76'
+    display: '&dMarlim'
+    icon:
+      material: RAW_FISH
+      data: 3
+      glow: true
+      display: '&dMarlim'
+      lore:
+      - '&fValor: &3✶76'
+      - '&7Exige a vara &fSerenita&7.'
+
+  # ═══ A CHAVE — comando virtual, cai direto no /crates ══════════════════════
+  # ~18 a 49 por dia, 420 na temporada. Fora do "rare" de proposito: ela ja e
+  # frequente, entao a Mare foi inteira para as caixas.
+  chave:
+    required-level: 5
+    chance: 0.1725
+    weight: 3
+    xp: 25
     type: COMMAND
     command: crates givevirtualkey pesca {player} {amount}
     amount: 1
-    currency: '100'
-    display: '&6&lTesouro do Mar'
+    display: '&bChave Pesca'
+    icon:
+      material: TRIPWIRE_HOOK
+      glow: true
+      display: '&bChave Pesca'
+      lore:
+      - '&7Consiga recompensas'
+      - '&7abrindo essa chave.'
+
+  # ═══ O TOPO — as duas caixas ═══════════════════════════════════════════════
+  # Sao as unicas recompensas com "rare: true", ou seja as unicas que a Mare
+  # turbina (+150% no nivel 10).
+  #
+  # ⚠️ A Caixa Pesca I esta em PESO 3, alcancavel pela vara de Madeira desde o
+  # comeco. Ela ja esteve em peso 6 e isso era um deadlock: a Caixa I e a fonte
+  # das skins do meio, mas o peso 6 exigia justamente a skin de Coral para
+  # abri-la. O jogador travava no nivel 7 e nao saia mais.
+  #
+  # ⚠️ A Caixa Pesca I e a ROTA DE LIVROS da via, e por isso a taxa dela nao e
+  # solta: 150 na temporada x ~10,5% de livros dentro dela, mais 25 Caixas II x
+  # 30% x 3 niveis, dao os ~30 niveis de livro que a arvore de encantes pede.
+  # Mexer nesta chance, ou na fatia de livros da caixa, muda o ritmo de
+  # encantamento e desloca a curva inteira de levels.yml.
+  caixa-pesca-i:
+    required-level: 6
+    chance: 0.0384
+    weight: 3
+    rare: true
+    xp: 45
+    type: COMMAND_ITEM
+    command: caixas give pesca-i {player} {amount}
+    amount: 1
+    display: '&bCaixa Pesca &b[Tier &lI&b]'
     icon:
       material: CHEST
-      display: '&6&lTesouro do Mar'
+      display: '&bCaixa Pesca &b[Tier &lI&b]'
       lore:
-      - '&7Uma chave de caixa exclusiva!'
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
-  # -- AS 20 RECOMPENSAS DE COINS ----------------------------------------------
-  # Gate 2D: `required-level` (a escada de 20 niveis) x `weight` (a skin da vara).
-  # A recompensa do nivel N usa o peso da skin ceil(N/2), entao a skin ANTERIOR
-  # nao a alcanca — o equipamento compra ACESSO, nao multiplicador.
-  #
-  # Por que aqui e nao num multiplicador: a pilha da pesca nao chega em coins.
-  # `config.yml currency: corais`, e skins/armaduras/boosters empurram corais.
-  # Entao a amplitude toda vem do `amount` destas 20 recompensas.
-  #
-  # `amount` e lido como `new BigDecimal(getString(...))` (Reward.java:71) — por
-  # isso vai ENTRE ASPAS: sem aspas um inteiro grande viraria BigInteger e o
-  # getString devolveria nulo.
+  # ~0,9 a 5,3 por dia, 25 na temporada. E a UNICA fonte de armadura T-V e das
+  # tres skins que a forja nao alcanca, e por isso ela subiu de 12,5 para 25:
+  # sao 7 itens especificos (4 pecas + 3 skins) para juntar, e a conta de
+  # coletor de cupons pede ~18 aberturas so para os 7.
+  caixa-pesca-ii:
+    required-level: 18
+    chance: 0.00790
+    weight: 15
+    rare: true
+    xp: 110
+    type: COMMAND_ITEM
+    command: caixas give pesca-ii {player} {amount}
+    amount: 1
+    display: '&bCaixa Pesca &b[Tier &lII&b]'
+    icon:
+      material: ENDER_CHEST
+      display: '&bCaixa Pesca &b[Tier &lII&b]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
 
-  # nivel 1 · exige a skin default (peso 3)
+  # ═══ A ESCADA — 44 recompensas de coins, uma por nivel ═════════════════════
+
+  # nivel 1 · exige a vara Madeira
   coins_01:
     required-level: 1
-    chance: 10
+    chance: 0.1
     weight: 3
     xp: 8
     type: CURRENCY
     currency-id: coins
-    amount: '50.1'
-    display: '&7Cardume'
+    amount: '494'
+    display: '&7Moeda Enferrujada'
     icon:
-      material: RAW_FISH
-      display: '&7Cardume'
+      material: GOLD_NUGGET
+      display: '&7Moeda Enferrujada'
       lore:
-      - '&7Exige a vara &fdefault&7.'
+      - '&7Exige a vara &fMadeira&7.'
 
-  # nivel 2 · exige a skin default (peso 3)
+  # nivel 2 · exige a vara Madeira
   coins_02:
     required-level: 2
-    chance: 10
+    chance: 0.1
+    weight: 3
+    xp: 9
+    type: CURRENCY
+    currency-id: coins
+    amount: '612'
+    display: '&7Bolsa Encharcada'
+    icon:
+      material: GOLD_NUGGET
+      display: '&7Bolsa Encharcada'
+      lore:
+      - '&7Exige a vara &fMadeira&7.'
+
+  # nivel 3 · exige a vara Madeira
+  coins_03:
+    required-level: 3
+    chance: 0.1
+    weight: 3
+    xp: 9
+    type: CURRENCY
+    currency-id: coins
+    amount: '1370'
+    display: '&7Âncora Perdida'
+    icon:
+      material: GOLD_NUGGET
+      display: '&7Âncora Perdida'
+      lore:
+      - '&7Exige a vara &fMadeira&7.'
+
+  # nivel 4 · exige a vara Madeira
+  coins_04:
+    required-level: 4
+    chance: 0.1
     weight: 3
     xp: 10
     type: CURRENCY
     currency-id: coins
-    amount: '298'
+    amount: '3060'
+    display: '&7Rede de Espólio'
+    icon:
+      material: GOLD_NUGGET
+      display: '&7Rede de Espólio'
+      lore:
+      - '&7Exige a vara &fMadeira&7.'
+
+  # nivel 5 · exige a vara Madeira
+  coins_05:
+    required-level: 5
+    chance: 0.1
+    weight: 3
+    xp: 10
+    type: CURRENCY
+    currency-id: coins
+    amount: '11500'
     display: '&7Baú Afundado'
     icon:
-      material: CHEST
+      material: GOLD_NUGGET
       display: '&7Baú Afundado'
       lore:
-      - '&7Exige a vara &fdefault&7.'
+      - '&7Exige a vara &fMadeira&7.'
 
-  # nivel 3 · exige a skin coral (peso 6)
-  coins_03:
-    required-level: 3
-    chance: 10
+  # nivel 6 · exige a vara Madeira
+  coins_06:
+    required-level: 6
+    chance: 0.1
+    weight: 3
+    xp: 11
+    type: CURRENCY
+    currency-id: coins
+    amount: '20800'
+    display: '&7Lastro de Ferro'
+    icon:
+      material: GOLD_NUGGET
+      display: '&7Lastro de Ferro'
+      lore:
+      - '&7Exige a vara &fMadeira&7.'
+
+  # nivel 7 · exige a vara Madeira
+  coins_07:
+    required-level: 7
+    chance: 0.1
+    weight: 3
+    xp: 11
+    type: CURRENCY
+    currency-id: coins
+    amount: '46000'
+    display: '&7Casco de Navio'
+    icon:
+      material: GOLD_NUGGET
+      display: '&7Casco de Navio'
+      lore:
+      - '&7Exige a vara &fMadeira&7.'
+
+  # nivel 8 · exige a vara Coral
+  coins_08:
+    required-level: 8
+    chance: 0.1
     weight: 6
     xp: 12
     type: CURRENCY
     currency-id: coins
-    amount: '2050'
-    display: '&fÂncora Perdida'
+    amount: '102000'
+    display: '&fCofre Salgado'
     icon:
       material: IRON_INGOT
-      display: '&fÂncora Perdida'
+      display: '&fCofre Salgado'
       lore:
-      - '&7Exige a vara &fcoral&7.'
+      - '&7Exige a vara &fCoral&7.'
 
-  # nivel 4 · exige a skin coral (peso 6)
-  coins_04:
-    required-level: 4
-    chance: 10
+  # nivel 9 · exige a vara Coral
+  coins_09:
+    required-level: 9
+    chance: 0.1
+    weight: 6
+    xp: 12
+    type: CURRENCY
+    currency-id: coins
+    amount: '226000'
+    display: '&fArca de Madeira'
+    icon:
+      material: IRON_INGOT
+      display: '&fArca de Madeira'
+      lore:
+      - '&7Exige a vara &fCoral&7.'
+
+  # nivel 10 · exige a vara Coral
+  coins_10:
+    required-level: 10
+    chance: 0.1
+    weight: 6
+    xp: 13
+    type: CURRENCY
+    currency-id: coins
+    amount: '663000'
+    display: '&fRelicário do Recife'
+    icon:
+      material: IRON_INGOT
+      display: '&fRelicário do Recife'
+      lore:
+      - '&7Exige a vara &fCoral&7.'
+
+  # nivel 11 · exige a vara Coral
+  coins_11:
+    required-level: 11
+    chance: 0.1
+    weight: 6
+    xp: 13
+    type: CURRENCY
+    currency-id: coins
+    amount: '1310000'
+    display: '&fEspólio de Corsário'
+    icon:
+      material: IRON_INGOT
+      display: '&fEspólio de Corsário'
+      lore:
+      - '&7Exige a vara &fCoral&7.'
+
+  # nivel 12 · exige a vara Coral
+  coins_12:
+    required-level: 12
+    chance: 0.1
     weight: 6
     xp: 14
     type: CURRENCY
     currency-id: coins
-    amount: '14000'
-    display: '&fCasco de Navio'
+    amount: '2900000'
+    display: '&fBaú do Contrabandista'
     icon:
-      material: IRON_BLOCK
-      display: '&fCasco de Navio'
+      material: IRON_INGOT
+      display: '&fBaú do Contrabandista'
       lore:
-      - '&7Exige a vara &fcoral&7.'
+      - '&7Exige a vara &fCoral&7.'
 
-  # nivel 5 · exige a skin escama (peso 10)
-  coins_05:
-    required-level: 5
-    chance: 10
+  # nivel 13 · exige a vara Coral
+  coins_13:
+    required-level: 13
+    chance: 0.1
+    weight: 6
+    xp: 14
+    type: CURRENCY
+    currency-id: coins
+    amount: '6430000'
+    display: '&fCarga de Galeão'
+    icon:
+      material: IRON_INGOT
+      display: '&fCarga de Galeão'
+      lore:
+      - '&7Exige a vara &fCoral&7.'
+
+  # nivel 14 · exige a vara Escama
+  coins_14:
+    required-level: 14
+    chance: 0.1
+    weight: 10
+    xp: 15
+    type: CURRENCY
+    currency-id: coins
+    amount: '14300000'
+    display: '&aSino do Almirante'
+    icon:
+      material: CHEST
+      display: '&aSino do Almirante'
+      lore:
+      - '&7Exige a vara &fEscama&7.'
+
+  # nivel 15 · exige a vara Escama
+  coins_15:
+    required-level: 15
+    chance: 0.1
+    weight: 10
+    xp: 15
+    type: CURRENCY
+    currency-id: coins
+    amount: '38100000'
+    display: '&aTesouro da Corrente'
+    icon:
+      material: CHEST
+      display: '&aTesouro da Corrente'
+      lore:
+      - '&7Exige a vara &fEscama&7.'
+
+  # nivel 16 · exige a vara Escama
+  coins_16:
+    required-level: 16
+    chance: 0.1
+    weight: 10
+    xp: 16
+    type: CURRENCY
+    currency-id: coins
+    amount: '78000000'
+    display: '&aEspólio do Naufrágio'
+    icon:
+      material: CHEST
+      display: '&aEspólio do Naufrágio'
+      lore:
+      - '&7Exige a vara &fEscama&7.'
+
+  # nivel 17 · exige a vara Escama
+  coins_17:
+    required-level: 17
+    chance: 0.1
+    weight: 10
+    xp: 16
+    type: CURRENCY
+    currency-id: coins
+    amount: '173000000'
+    display: '&aArca das Marés'
+    icon:
+      material: CHEST
+      display: '&aArca das Marés'
+      lore:
+      - '&7Exige a vara &fEscama&7.'
+
+  # nivel 18 · exige a vara Escama
+  coins_18:
+    required-level: 18
+    chance: 0.1
     weight: 10
     xp: 17
     type: CURRENCY
     currency-id: coins
-    amount: '95200'
-    display: '&aCofre Salgado'
+    amount: '383000000'
+    display: '&aCofre de Bronze'
+    icon:
+      material: CHEST
+      display: '&aCofre de Bronze'
+      lore:
+      - '&7Exige a vara &fEscama&7.'
+
+  # nivel 19 · exige a vara Escama
+  coins_19:
+    required-level: 19
+    chance: 0.1
+    weight: 10
+    xp: 17
+    type: CURRENCY
+    currency-id: coins
+    amount: '850000000'
+    display: '&aCâmara Submersa'
+    icon:
+      material: CHEST
+      display: '&aCâmara Submersa'
+      lore:
+      - '&7Exige a vara &fEscama&7.'
+
+  # nivel 20 · exige a vara Prata
+  coins_20:
+    required-level: 20
+    chance: 0.1
+    weight: 15
+    xp: 18
+    type: CURRENCY
+    currency-id: coins
+    amount: '2120000000'
+    display: '&bGaleão Perdido'
     icon:
       material: GOLD_INGOT
-      display: '&aCofre Salgado'
+      display: '&bGaleão Perdido'
       lore:
-      - '&7Exige a vara &fescama&7.'
+      - '&7Exige a vara &fPrata&7.'
 
-  # nivel 6 · exige a skin escama (peso 10)
-  coins_06:
-    required-level: 6
-    chance: 10
-    weight: 10
+  # nivel 21 · exige a vara Prata
+  coins_21:
+    required-level: 21
+    chance: 0.1
+    weight: 15
+    xp: 18
+    type: CURRENCY
+    currency-id: coins
+    amount: '4340000000'
+    display: '&bBaú de Obsidiana'
+    icon:
+      material: GOLD_INGOT
+      display: '&bBaú de Obsidiana'
+      lore:
+      - '&7Exige a vara &fPrata&7.'
+
+  # nivel 22 · exige a vara Prata
+  coins_22:
+    required-level: 22
+    chance: 0.1
+    weight: 15
+    xp: 19
+    type: CURRENCY
+    currency-id: coins
+    amount: '9460000000'
+    display: '&bCripta Submersa'
+    icon:
+      material: GOLD_INGOT
+      display: '&bCripta Submersa'
+      lore:
+      - '&7Exige a vara &fPrata&7.'
+
+  # nivel 23 · exige a vara Prata
+  coins_23:
+    required-level: 23
+    chance: 0.1
+    weight: 15
+    xp: 19
+    type: CURRENCY
+    currency-id: coins
+    amount: '20600000000'
+    display: '&bCofre do Abismo'
+    icon:
+      material: GOLD_INGOT
+      display: '&bCofre do Abismo'
+      lore:
+      - '&7Exige a vara &fPrata&7.'
+
+  # nivel 24 · exige a vara Prata
+  coins_24:
+    required-level: 24
+    chance: 0.1
+    weight: 15
     xp: 20
     type: CURRENCY
     currency-id: coins
-    amount: '645000'
-    display: '&aRelicário do Recife'
+    amount: '44700000000'
+    display: '&bHerança do Leviatã'
     icon:
-      material: GOLD_BLOCK
-      display: '&aRelicário do Recife'
+      material: GOLD_INGOT
+      display: '&bHerança do Leviatã'
       lore:
-      - '&7Exige a vara &fescama&7.'
+      - '&7Exige a vara &fPrata&7.'
 
-  # nivel 7 · exige a skin prata (peso 15)
-  coins_07:
-    required-level: 7
-    chance: 10
+  # nivel 25 · exige a vara Prata
+  coins_25:
+    required-level: 25
+    chance: 0.1
     weight: 15
+    xp: 20
+    type: CURRENCY
+    currency-id: coins
+    amount: '108000000000'
+    display: '&bTrono de Coral'
+    icon:
+      material: GOLD_INGOT
+      display: '&bTrono de Coral'
+      lore:
+      - '&7Exige a vara &fPrata&7.'
+
+  # nivel 26 · exige a vara Prata
+  coins_26:
+    required-level: 26
+    chance: 0.1
+    weight: 15
+    xp: 21
+    type: CURRENCY
+    currency-id: coins
+    amount: '224000000000'
+    display: '&bRelicário de Pérola'
+    icon:
+      material: GOLD_INGOT
+      display: '&bRelicário de Pérola'
+      lore:
+      - '&7Exige a vara &fPrata&7.'
+
+  # nivel 27 · exige a vara Turquesa
+  coins_27:
+    required-level: 27
+    chance: 0.1
+    weight: 22
+    xp: 21
+    type: CURRENCY
+    currency-id: coins
+    amount: '484000000000'
+    display: '&3Bóveda Oceânica'
+    icon:
+      material: DIAMOND
+      display: '&3Bóveda Oceânica'
+      lore:
+      - '&7Exige a vara &fTurquesa&7.'
+
+  # nivel 28 · exige a vara Turquesa
+  coins_28:
+    required-level: 28
+    chance: 0.1
+    weight: 22
+    xp: 22
+    type: CURRENCY
+    currency-id: coins
+    amount: '1040000000000'
+    display: '&3Reserva Abissal'
+    icon:
+      material: DIAMOND
+      display: '&3Reserva Abissal'
+      lore:
+      - '&7Exige a vara &fTurquesa&7.'
+
+  # nivel 29 · exige a vara Turquesa
+  coins_29:
+    required-level: 29
+    chance: 0.1
+    weight: 22
+    xp: 22
+    type: CURRENCY
+    currency-id: coins
+    amount: '2240000000000'
+    display: '&3Espólio da Sereia'
+    icon:
+      material: DIAMOND
+      display: '&3Espólio da Sereia'
+      lore:
+      - '&7Exige a vara &fTurquesa&7.'
+
+  # nivel 30 · exige a vara Turquesa
+  coins_30:
+    required-level: 30
+    chance: 0.1
+    weight: 22
+    xp: 23
+    type: CURRENCY
+    currency-id: coins
+    amount: '5260000000000'
+    display: '&3Câmara do Tridente'
+    icon:
+      material: DIAMOND
+      display: '&3Câmara do Tridente'
+      lore:
+      - '&7Exige a vara &fTurquesa&7.'
+
+  # nivel 31 · exige a vara Turquesa
+  coins_31:
+    required-level: 31
+    chance: 0.1
+    weight: 22
+    xp: 23
+    type: CURRENCY
+    currency-id: coins
+    amount: '10800000000000'
+    display: '&3Selo do Maremoto'
+    icon:
+      material: DIAMOND
+      display: '&3Selo do Maremoto'
+      lore:
+      - '&7Exige a vara &fTurquesa&7.'
+
+  # nivel 32 · exige a vara Turquesa
+  coins_32:
+    required-level: 32
+    chance: 0.1
+    weight: 22
     xp: 24
     type: CURRENCY
     currency-id: coins
-    amount: '4360000'
-    display: '&bTesouro da Corrente'
+    amount: '23000000000000'
+    display: '&3Cofre da Fossa'
     icon:
       material: DIAMOND
-      display: '&bTesouro da Corrente'
+      display: '&3Cofre da Fossa'
       lore:
-      - '&7Exige a vara &fprata&7.'
+      - '&7Exige a vara &fTurquesa&7.'
 
-  # nivel 8 · exige a skin prata (peso 15)
-  coins_08:
-    required-level: 8
-    chance: 10
-    weight: 15
+  # nivel 33 · exige a vara Abissita
+  coins_33:
+    required-level: 33
+    chance: 0.1
+    weight: 32
+    xp: 24
+    type: CURRENCY
+    currency-id: coins
+    amount: '48600000000000'
+    display: '&9Legado da Maré Negra'
+    icon:
+      material: EMERALD
+      display: '&9Legado da Maré Negra'
+      lore:
+      - '&7Exige a vara &fAbissita&7.'
+
+  # nivel 34 · exige a vara Abissita
+  coins_34:
+    required-level: 34
+    chance: 0.1
+    weight: 32
+    xp: 25
+    type: CURRENCY
+    currency-id: coins
+    amount: '111000000000000'
+    display: '&9Relíquia do Vórtice'
+    icon:
+      material: EMERALD
+      display: '&9Relíquia do Vórtice'
+      lore:
+      - '&7Exige a vara &fAbissita&7.'
+
+  # nivel 35 · exige a vara Abissita
+  coins_35:
+    required-level: 35
+    chance: 0.1
+    weight: 32
+    xp: 25
+    type: CURRENCY
+    currency-id: coins
+    amount: '224000000000000'
+    display: '&9Tesouro do Kraken'
+    icon:
+      material: EMERALD
+      display: '&9Tesouro do Kraken'
+      lore:
+      - '&7Exige a vara &fAbissita&7.'
+
+  # nivel 36 · exige a vara Abissita
+  coins_36:
+    required-level: 36
+    chance: 0.1
+    weight: 32
+    xp: 26
+    type: CURRENCY
+    currency-id: coins
+    amount: '465000000000000'
+    display: '&9Arca do Dilúvio'
+    icon:
+      material: EMERALD
+      display: '&9Arca do Dilúvio'
+      lore:
+      - '&7Exige a vara &fAbissita&7.'
+
+  # nivel 37 · exige a vara Abissita
+  coins_37:
+    required-level: 37
+    chance: 0.1
+    weight: 32
+    xp: 26
+    type: CURRENCY
+    currency-id: coins
+    amount: '953000000000000'
+    display: '&9Herança de Poseidon'
+    icon:
+      material: EMERALD
+      display: '&9Herança de Poseidon'
+      lore:
+      - '&7Exige a vara &fAbissita&7.'
+
+  # nivel 38 · exige a vara Abissita
+  coins_38:
+    required-level: 38
+    chance: 0.1
+    weight: 32
+    xp: 27
+    type: CURRENCY
+    currency-id: coins
+    amount: '2040000000000000'
+    display: '&9Arca de Adamante'
+    icon:
+      material: EMERALD
+      display: '&9Arca de Adamante'
+      lore:
+      - '&7Exige a vara &fAbissita&7.'
+
+  # nivel 39 · exige a vara Serenita
+  coins_39:
+    required-level: 39
+    chance: 0.1
+    weight: 45
+    xp: 27
+    type: CURRENCY
+    currency-id: coins
+    amount: '3910000000000000'
+    display: '&dCoração do Oceano'
+    icon:
+      material: NETHER_STAR
+      display: '&dCoração do Oceano'
+      lore:
+      - '&7Exige a vara &fSerenita&7.'
+
+  # nivel 40 · exige a vara Serenita
+  coins_40:
+    required-level: 40
+    chance: 0.1
+    weight: 45
+    xp: 28
+    type: CURRENCY
+    currency-id: coins
+    amount: '7430000000000000'
+    display: '&dDiadema das Profundezas'
+    icon:
+      material: NETHER_STAR
+      display: '&dDiadema das Profundezas'
+      lore:
+      - '&7Exige a vara &fSerenita&7.'
+
+  # nivel 41 · exige a vara Serenita
+  coins_41:
+    required-level: 41
+    chance: 0.1
+    weight: 45
+    xp: 28
+    type: CURRENCY
+    currency-id: coins
+    amount: '13200000000000000'
+    display: '&dTesouro da Tempestade'
+    icon:
+      material: NETHER_STAR
+      display: '&dTesouro da Tempestade'
+      lore:
+      - '&7Exige a vara &fSerenita&7.'
+
+  # nivel 42 · exige a vara Serenita
+  coins_42:
+    required-level: 42
+    chance: 0.1
+    weight: 45
     xp: 29
     type: CURRENCY
     currency-id: coins
-    amount: '29300000'
-    display: '&bEspólio do Naufrágio'
-    icon:
-      material: DIAMOND_BLOCK
-      display: '&bEspólio do Naufrágio'
-      lore:
-      - '&7Exige a vara &fprata&7.'
-
-  # nivel 9 · exige a skin turquesa (peso 22)
-  coins_09:
-    required-level: 9
-    chance: 10
-    weight: 22
-    xp: 34
-    type: CURRENCY
-    currency-id: coins
-    amount: '196000000'
-    display: '&3Arca das Marés'
-    icon:
-      material: EMERALD
-      display: '&3Arca das Marés'
-      lore:
-      - '&7Exige a vara &fturquesa&7.'
-
-  # nivel 10 · exige a skin turquesa (peso 22)
-  coins_10:
-    required-level: 10
-    chance: 10
-    weight: 22
-    xp: 41
-    type: CURRENCY
-    currency-id: coins
-    amount: '1310000000'
-    display: '&3Câmara Submersa'
-    icon:
-      material: EMERALD_BLOCK
-      display: '&3Câmara Submersa'
-      lore:
-      - '&7Exige a vara &fturquesa&7.'
-
-  # nivel 11 · exige a skin abissita (peso 32)
-  coins_11:
-    required-level: 11
-    chance: 10
-    weight: 32
-    xp: 50
-    type: CURRENCY
-    currency-id: coins
-    amount: '8770000000'
-    display: '&9Galeão Perdido'
-    icon:
-      material: LAPIS_BLOCK
-      display: '&9Galeão Perdido'
-      lore:
-      - '&7Exige a vara &fabissita&7.'
-
-  # nivel 12 · exige a skin abissita (peso 32)
-  coins_12:
-    required-level: 12
-    chance: 10
-    weight: 32
-    xp: 59
-    type: CURRENCY
-    currency-id: coins
-    amount: '58400000000'
-    display: '&9Cofre do Abismo'
-    icon:
-      material: ENDER_CHEST
-      display: '&9Cofre do Abismo'
-      lore:
-      - '&7Exige a vara &fabissita&7.'
-
-  # nivel 13 · exige a skin serenita (peso 45)
-  coins_13:
-    required-level: 13
-    chance: 10
-    weight: 45
-    xp: 71
-    type: CURRENCY
-    currency-id: coins
-    amount: '388000000000'
-    display: '&dHerança do Leviatã'
-    icon:
-      material: BEACON
-      display: '&dHerança do Leviatã'
-      lore:
-      - '&7Exige a vara &fserenita&7.'
-
-  # nivel 14 · exige a skin serenita (peso 45)
-  coins_14:
-    required-level: 14
-    chance: 10
-    weight: 45
-    xp: 86
-    type: CURRENCY
-    currency-id: coins
-    amount: '2570000000000'
-    display: '&dTrono de Coral'
-    icon:
-      material: PRISMARINE
-      display: '&dTrono de Coral'
-      lore:
-      - '&7Exige a vara &fserenita&7.'
-
-  # nivel 15 · exige a skin oceanita (peso 65)
-  coins_15:
-    required-level: 15
-    chance: 10
-    weight: 65
-    rare: true
-    xp: 103
-    type: CURRENCY
-    currency-id: coins
-    amount: '17000000000000'
-    display: '&5Reserva Abissal'
-    icon:
-      material: PRISMARINE
-      display: '&5Reserva Abissal'
-      lore:
-      - '&7Exige a vara &foceanita&7.'
-
-  # nivel 16 · exige a skin oceanita (peso 65)
-  coins_16:
-    required-level: 16
-    chance: 10
-    weight: 65
-    rare: true
-    xp: 123
-    type: CURRENCY
-    currency-id: coins
-    amount: '112000000000000'
-    display: '&5Bóveda Oceânica'
-    icon:
-      material: SEA_LANTERN
-      display: '&5Bóveda Oceânica'
-      lore:
-      - '&7Exige a vara &foceanita&7.'
-
-  # nivel 17 · exige a skin perola (peso 90)
-  coins_17:
-    required-level: 17
-    chance: 10
-    weight: 90
-    rare: true
-    xp: 148
-    type: CURRENCY
-    currency-id: coins
-    amount: '742000000000000'
-    display: '&eLegado da Maré Negra'
+    amount: '23300000000000000'
+    display: '&dLegado do Mar Antigo'
     icon:
       material: NETHER_STAR
-      display: '&eLegado da Maré Negra'
+      display: '&dLegado do Mar Antigo'
       lore:
-      - '&7Exige a vara &fperola&7.'
-      glow: true
+      - '&7Exige a vara &fSerenita&7.'
 
-  # nivel 18 · exige a skin perola (peso 90)
-  coins_18:
-    required-level: 18
-    chance: 10
-    weight: 90
-    rare: true
-    xp: 177
+  # nivel 43 · exige a vara Serenita
+  coins_43:
+    required-level: 43
+    chance: 0.1
+    weight: 45
+    xp: 29
     type: CURRENCY
     currency-id: coins
-    amount: '4890000000000000'
-    display: '&eRelíquia do Vórtice'
+    amount: '63900000000000000'
+    display: '&dRelíquia do Fundo do Mundo'
     icon:
       material: NETHER_STAR
-      display: '&eRelíquia do Vórtice'
+      display: '&dRelíquia do Fundo do Mundo'
       lore:
-      - '&7Exige a vara &fperola&7.'
-      glow: true
+      - '&7Exige a vara &fSerenita&7.'
 
-  # nivel 19 · exige a skin tempestita (peso 130)
-  coins_19:
-    required-level: 19
-    chance: 10
-    weight: 130
-    rare: true
-    xp: 213
+  # nivel 44 · exige a vara Serenita
+  coins_44:
+    required-level: 44
+    chance: 0.1
+    weight: 45
+    xp: 30
     type: CURRENCY
     currency-id: coins
-    amount: '32200000000000000'
-    display: '&6&lCoroa do Mar Profundo'
+    amount: '143000000000000000'
+    display: '&dCoroa do Mar Profundo'
     icon:
-      material: DRAGON_EGG
-      display: '&6&lCoroa do Mar Profundo'
+      material: NETHER_STAR
+      display: '&dCoroa do Mar Profundo'
       lore:
-      - '&7Exige a vara &ftempestita&7.'
-      glow: true
-
-  # nivel 20 · exige a skin tempestita (peso 130)
-  coins_20:
-    required-level: 20
-    chance: 10
-    weight: 130
-    rare: true
-    xp: 256
-    type: CURRENCY
-    currency-id: coins
-    amount: '212000000000000000'
-    display: '&6&lTesouro da Tempestade'
-    icon:
-      material: DRAGON_EGG
-      display: '&6&lTesouro da Tempestade'
-      lore:
-      - '&7Exige a vara &ftempestita&7.'
-      glow: true
+      - '&7Exige a vara &fSerenita&7.'

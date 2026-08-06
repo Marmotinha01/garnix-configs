@@ -1,7 +1,7 @@
 lp-group: "investidor"
 display: "INVESTIDOR"
 color: "&a"
-weight: 70
+weight: 120
 
 switcher-icon:
   texture: "b985a29957d40fa564d5e31cbd905e3694a616393ce13710bfc31b1b8b0a522d"
@@ -18,8 +18,8 @@ advantages-icon:
     - "&8┌ &fTag: {color}Tab &8╺ {color}Cabeça &8╺ {color}Chat "
     - "&8└ &fKits Exclusivos: {color}Diário &8╺ {color}Semanal &8╺ {color}Mensal "
     - ""
-    - "&8┌ &fDesconto em compras: &c&lsem desconto&c "
-    - "&8└ &fBônus em vendas: &a+&l35&a% "
+    - "&8┌ &fDesconto em compras: &c-&l20&c% "
+    - "&8└ &fBônus em ganhos: &a+&l22&a% "
     - ""
     - "&8┌ &fHomes: {color}&l20 {color}homes "
     - "&8├ &fEchest: {color}&l6 {color}linhas "

@@ -9,8 +9,10 @@ commands:
 - 'lp user {player} permission set rank.porco true'
 - 'crate givevirtualkey rankup {player} 1'
 - 'lp user {player} permission set mining.bonus.2 true'
+- 'lp user {player} permission set farm.bonus.2 true'
+- 'lp user {player} permission set warehouse.bonus.2 true'
+- 'lp user {player} permission set fishing.bonus.2 true'
 - 'lp user {player} permission set spawner.buy.pig true'
-- 'lp user {player} permission set warehouse.sellmult.1 true'
 
 costs:
 - 'coins 49600'
