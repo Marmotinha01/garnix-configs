@@ -315,7 +315,6 @@ rewards:
       - '&7ao abater apenas um.'
       - ''
       - '&8 ▪ &fNível: &c1 '
-      - ''
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
   # -- O DEGRAU PARA A TIER II -------------------------------------- 1%

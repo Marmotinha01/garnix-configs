@@ -116,7 +116,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &dGemas '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -136,7 +135,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &dGemas '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -156,7 +154,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &dGemas '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -176,7 +173,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &dGemas '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -197,7 +193,6 @@ rewards:
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &dGemas '
       - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -217,7 +212,6 @@ rewards:
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &dGemas '
       - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -237,7 +231,6 @@ rewards:
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &dGemas '
       - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -257,7 +250,6 @@ rewards:
       - '&8 ▪ &a+&l8&a% &aCoins '
       - '&8 ▪ &a+&l5.5&a% &dGemas '
       - '&8 ▪ &a+&l5.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -278,7 +270,6 @@ rewards:
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &dGemas '
       - '&8 ▪ &a+&l8&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -298,7 +289,6 @@ rewards:
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &dGemas '
       - '&8 ▪ &a+&l8&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -318,7 +308,6 @@ rewards:
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &dGemas '
       - '&8 ▪ &a+&l8&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -338,7 +327,6 @@ rewards:
       - '&8 ▪ &a+&l12&a% &aCoins '
       - '&8 ▪ &a+&l8&a% &dGemas '
       - '&8 ▪ &a+&l8&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -358,7 +346,6 @@ rewards:
       - '&8 ▪ &a+&l20&a% &aCoins '
       - '&8 ▪ &a+&l20&a% &dGemas '
       - '&8 ▪ &a+&l20&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -377,7 +364,6 @@ rewards:
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l28&a% &dGemas '
       - '&8 ▪ &a+&l28&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -397,7 +383,6 @@ rewards:
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l38&a% &dGemas '
       - '&8 ▪ &a+&l38&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -417,7 +402,6 @@ rewards:
       - '&8 ▪ &a+&l50&a% &aCoins '
       - '&8 ▪ &a+&l50&a% &dGemas '
       - '&8 ▪ &a+&l50&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -437,7 +421,6 @@ rewards:
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l65&a% &dGemas '
       - '&8 ▪ &a+&l65&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -574,7 +557,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -596,7 +578,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -617,7 +598,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   livro-massacre:
     type: COMMAND_ITEM
@@ -635,7 +615,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   livro-pilhagem:
     type: COMMAND_ITEM
@@ -653,7 +632,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   # -- A PROPRIA CAIXA, X2 --------------------------------------- 1,72%
   caixa-mineracao-ii-x2:

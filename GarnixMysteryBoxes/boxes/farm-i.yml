@@ -91,7 +91,6 @@ rewards:
       - '&8 ▪ &a+&l3&a% &aCoins '
       - '&8 ▪ &a+&l2&a% &5Sementes '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -111,7 +110,6 @@ rewards:
       - '&8 ▪ &a+&l3&a% &aCoins '
       - '&8 ▪ &a+&l2&a% &5Sementes '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -131,7 +129,6 @@ rewards:
       - '&8 ▪ &a+&l3&a% &aCoins '
       - '&8 ▪ &a+&l2&a% &5Sementes '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -151,7 +148,6 @@ rewards:
       - '&8 ▪ &a+&l3&a% &aCoins '
       - '&8 ▪ &a+&l2&a% &5Sementes '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -172,7 +168,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &5Sementes '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -192,7 +187,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &5Sementes '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -212,7 +206,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &5Sementes '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -232,7 +225,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l3.5&a% &5Sementes '
       - '&8 ▪ &a+&l3.5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -252,7 +244,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l5&a% &5Sementes '
       - '&8 ▪ &a+&l5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -271,7 +262,6 @@ rewards:
       - '&8 ▪ &a+&l9&a% &aCoins '
       - '&8 ▪ &a+&l9&a% &5Sementes '
       - '&8 ▪ &a+&l9&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -290,7 +280,6 @@ rewards:
       - '&8 ▪ &a+&l14&a% &aCoins '
       - '&8 ▪ &a+&l14&a% &5Sementes '
       - '&8 ▪ &a+&l14&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -390,7 +379,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -412,7 +400,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -433,7 +420,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   livro-massacre:
     type: COMMAND_ITEM
@@ -451,7 +437,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   livro-pilhagem:
     type: COMMAND_ITEM
@@ -469,7 +454,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
-      - ''
 
   # -- CACTO ----------------------------------------------------- 1,25%
   #

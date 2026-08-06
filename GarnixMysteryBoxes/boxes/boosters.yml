@@ -72,7 +72,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -94,7 +93,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -116,7 +114,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -138,7 +135,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -160,7 +156,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -184,7 +179,6 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -206,7 +200,6 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -228,7 +221,6 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -250,7 +242,6 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -272,7 +263,6 @@ rewards:
       - ' &8▪ &fTipo: &dGemas '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -296,7 +286,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -318,7 +307,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -340,7 +328,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -362,7 +349,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -384,7 +370,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -408,7 +393,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -430,7 +414,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -452,7 +435,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -474,7 +456,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -496,7 +477,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &dGemas '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -520,7 +500,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -542,7 +521,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -564,7 +542,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -586,7 +563,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -608,7 +584,6 @@ rewards:
       - ' &8▪ &fTipo: &aCoins '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -632,7 +607,6 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -654,7 +628,6 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -676,7 +649,6 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -698,7 +670,6 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -720,7 +691,6 @@ rewards:
       - ' &8▪ &fTipo: &5Sementes '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -744,7 +714,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -766,7 +735,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -788,7 +756,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -810,7 +777,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -832,7 +798,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -856,7 +821,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -878,7 +842,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -900,7 +863,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -922,7 +884,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -944,7 +905,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &aCoins &7+ &5Sementes '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -968,7 +928,6 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -990,7 +949,6 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1012,7 +970,6 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1034,7 +991,6 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1056,7 +1012,6 @@ rewards:
       - ' &8▪ &fTipo: &3Corais '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1080,7 +1035,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1102,7 +1056,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1124,7 +1077,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1146,7 +1098,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1168,7 +1119,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1192,7 +1142,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1214,7 +1163,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1236,7 +1184,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1258,7 +1205,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1280,7 +1226,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1304,7 +1249,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1326,7 +1270,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1348,7 +1291,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1370,7 +1312,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1392,7 +1333,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1416,7 +1356,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1438,7 +1377,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1460,7 +1398,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1482,7 +1419,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1504,7 +1440,6 @@ rewards:
       - ' &8▪ &fTipo: &aDrops '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1528,7 +1463,6 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1550,7 +1484,6 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1572,7 +1505,6 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1594,7 +1526,6 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1616,7 +1547,6 @@ rewards:
       - ' &8▪ &fTipo: &aHeads '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1640,7 +1570,6 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1662,7 +1591,6 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1684,7 +1612,6 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &71h '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1706,7 +1633,6 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -1728,7 +1654,6 @@ rewards:
       - ' &8▪ &fTipo: &aVenda de Cactos '
       - ' &8▪ &fBônus: &a3x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 

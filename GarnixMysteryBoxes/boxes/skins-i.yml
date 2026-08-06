@@ -66,7 +66,6 @@ rewards:
       - '&8 ▪ &a+&l2&a% &aCoins '
       - '&8 ▪ &a+&l2&a% &dGemas '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -85,7 +84,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l5&a% &dGemas '
       - '&8 ▪ &a+&l5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -104,7 +102,6 @@ rewards:
       - '&8 ▪ &a+&l9&a% &aCoins '
       - '&8 ▪ &a+&l9&a% &dGemas '
       - '&8 ▪ &a+&l9&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -123,7 +120,6 @@ rewards:
       - '&8 ▪ &a+&l14&a% &aCoins '
       - '&8 ▪ &a+&l14&a% &dGemas '
       - '&8 ▪ &a+&l14&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -142,7 +138,6 @@ rewards:
       - '&8 ▪ &a+&l20&a% &aCoins '
       - '&8 ▪ &a+&l20&a% &dGemas '
       - '&8 ▪ &a+&l20&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -162,7 +157,6 @@ rewards:
       - '&8 ▪ &a+&l2&a% &aCoins '
       - '&8 ▪ &a+&l2&a% &5Sementes '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -181,7 +175,6 @@ rewards:
       - '&8 ▪ &a+&l5&a% &aCoins '
       - '&8 ▪ &a+&l5&a% &5Sementes '
       - '&8 ▪ &a+&l5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -200,7 +193,6 @@ rewards:
       - '&8 ▪ &a+&l9&a% &aCoins '
       - '&8 ▪ &a+&l9&a% &5Sementes '
       - '&8 ▪ &a+&l9&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -219,7 +211,6 @@ rewards:
       - '&8 ▪ &a+&l14&a% &aCoins '
       - '&8 ▪ &a+&l14&a% &5Sementes '
       - '&8 ▪ &a+&l14&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -238,7 +229,6 @@ rewards:
       - '&8 ▪ &a+&l20&a% &aCoins '
       - '&8 ▪ &a+&l20&a% &5Sementes '
       - '&8 ▪ &a+&l20&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -259,7 +249,6 @@ rewards:
       - '&8 ▪ &a+&l1&a% &3Corais '
       - '&8 ▪ &a+&l1&a% &bXP '
       - '&8 ▪ &cPeso até &l6&ckg '
-      - ''
 
   pesca-escama:
     type: COMMAND_ITEM
@@ -277,7 +266,6 @@ rewards:
       - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
       - '&8 ▪ &cPeso até &l10&ckg '
-      - ''
 
   pesca-prata:
     type: COMMAND_ITEM
@@ -295,7 +283,6 @@ rewards:
       - '&8 ▪ &a+&l4&a% &3Corais '
       - '&8 ▪ &a+&l4&a% &bXP '
       - '&8 ▪ &cPeso até &l15&ckg '
-      - ''
 
   pesca-turquesa:
     type: COMMAND_ITEM
@@ -313,7 +300,6 @@ rewards:
       - '&8 ▪ &a+&l6&a% &3Corais '
       - '&8 ▪ &a+&l6&a% &bXP '
       - '&8 ▪ &cPeso até &l22&ckg '
-      - ''
 
   pesca-abissita:
     type: COMMAND_ITEM
@@ -331,7 +317,6 @@ rewards:
       - '&8 ▪ &a+&l8&a% &3Corais '
       - '&8 ▪ &a+&l8&a% &bXP '
       - '&8 ▪ &cPeso até &l32&ckg '
-      - ''
 
   # -- O DEGRAU PARA A TIER II -------------------------------------- 1%
   caixa-skins-ii:

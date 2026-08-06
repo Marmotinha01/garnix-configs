@@ -118,7 +118,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &3Corais '
       - '&8 ▪ &a+&l5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -137,7 +136,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &3Corais '
       - '&8 ▪ &a+&l5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -156,7 +154,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &3Corais '
       - '&8 ▪ &a+&l5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -175,7 +172,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l5&a% &3Corais '
       - '&8 ▪ &a+&l5&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -198,7 +194,6 @@ rewards:
       - '&8 ▪ &a+&l11&a% &3Corais '
       - '&8 ▪ &a+&l11&a% &bXP '
       - '&8 ▪ &cPeso até &l45&ckg '
-      - ''
 
   skin-oceanita:
     type: COMMAND_ITEM
@@ -216,7 +211,6 @@ rewards:
       - '&8 ▪ &a+&l15&a% &3Corais '
       - '&8 ▪ &a+&l15&a% &bXP '
       - '&8 ▪ &cPeso até &l65&ckg '
-      - ''
 
   skin-perola:
     type: COMMAND_ITEM
@@ -234,7 +228,6 @@ rewards:
       - '&8 ▪ &a+&l20&a% &3Corais '
       - '&8 ▪ &a+&l20&a% &bXP '
       - '&8 ▪ &cPeso até &l90&ckg '
-      - ''
 
   skin-tempestita:
     type: COMMAND_ITEM
@@ -252,7 +245,6 @@ rewards:
       - '&8 ▪ &a+&l25&a% &3Corais '
       - '&8 ▪ &a+&l25&a% &bXP '
       - '&8 ▪ &cPeso até &l130&ckg '
-      - ''
 
   # -- MOEDAS ------------------------------------------------------- 6%
   coins-30000:
@@ -334,7 +326,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &715m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -356,7 +347,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &730m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -378,7 +368,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &73 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   livro-faro:
     type: COMMAND_ITEM
@@ -396,7 +385,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &73 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   livro-correnteza:
     type: COMMAND_ITEM
@@ -414,7 +402,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &73 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   # -- A PROPRIA CAIXA, X2 ------------------------------------------ 1%
   caixa-pesca-ii-x2:
@@ -430,4 +417,3 @@ rewards:
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
-

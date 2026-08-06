@@ -104,7 +104,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -123,7 +122,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -142,7 +140,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -161,7 +158,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -181,7 +177,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &3Corais '
       - '&8 ▪ &a+&l3&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -200,7 +195,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &3Corais '
       - '&8 ▪ &a+&l3&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -219,7 +213,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &3Corais '
       - '&8 ▪ &a+&l3&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -238,7 +231,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l3&a% &3Corais '
       - '&8 ▪ &a+&l3&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -260,7 +252,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l4&a% &3Corais '
       - '&8 ▪ &a+&l4&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -279,7 +270,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l4&a% &3Corais '
       - '&8 ▪ &a+&l4&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -298,7 +288,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l4&a% &3Corais '
       - '&8 ▪ &a+&l4&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -317,7 +306,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &a+&l4&a% &3Corais '
       - '&8 ▪ &a+&l4&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -340,7 +328,6 @@ rewards:
       - '&8 ▪ &a+&l1&a% &3Corais '
       - '&8 ▪ &a+&l1&a% &bXP '
       - '&8 ▪ &cPeso até &l6&ckg '
-      - ''
 
   skin-escama:
     type: COMMAND_ITEM
@@ -358,7 +345,6 @@ rewards:
       - '&8 ▪ &a+&l2&a% &3Corais '
       - '&8 ▪ &a+&l2&a% &bXP '
       - '&8 ▪ &cPeso até &l10&ckg '
-      - ''
 
   skin-prata:
     type: COMMAND_ITEM
@@ -376,7 +362,6 @@ rewards:
       - '&8 ▪ &a+&l4&a% &3Corais '
       - '&8 ▪ &a+&l4&a% &bXP '
       - '&8 ▪ &cPeso até &l15&ckg '
-      - ''
 
   skin-turquesa:
     type: COMMAND_ITEM
@@ -394,7 +379,6 @@ rewards:
       - '&8 ▪ &a+&l6&a% &3Corais '
       - '&8 ▪ &a+&l6&a% &bXP '
       - '&8 ▪ &cPeso até &l22&ckg '
-      - ''
 
   skin-abissita:
     type: COMMAND_ITEM
@@ -412,7 +396,6 @@ rewards:
       - '&8 ▪ &a+&l8&a% &3Corais '
       - '&8 ▪ &a+&l8&a% &bXP '
       - '&8 ▪ &cPeso até &l32&ckg '
-      - ''
 
   # -- FORJA ------------------------------------------------------ 6,5%
   forja:
@@ -510,7 +493,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &75m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -532,7 +514,6 @@ rewards:
       - ' &8▪ &fTipo: &bXP &7+ &3Corais '
       - ' &8▪ &fBônus: &a2x '
       - ' &8▪ &fDuração: &710m '
-      - ''
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -554,7 +535,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   livro-faro:
     type: COMMAND_ITEM
@@ -572,7 +552,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   livro-correnteza:
     type: COMMAND_ITEM
@@ -590,7 +569,6 @@ rewards:
       - ' &8Especificações: '
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &bVara de Pesca '
-      - ''
 
   # -- O DEGRAU PARA A TIER II ----------------------------------- 1,5%
   caixa-pesca-ii:
@@ -605,4 +583,3 @@ rewards:
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
-

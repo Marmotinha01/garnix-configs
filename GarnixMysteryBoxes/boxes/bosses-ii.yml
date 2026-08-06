@@ -187,7 +187,6 @@ rewards:
       - '&7ao abater apenas um.'
       - ''
       - '&8 ▪ &fNível: &c1 '
-      - ''
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
   livro-killstack-x2:
@@ -206,7 +205,6 @@ rewards:
       - '&7ao abater apenas um.'
       - ''
       - '&8 ▪ &fNível: &c1 '
-      - ''
       flags: [ 'HIDE_POTION_EFFECTS' ]
 
   # -- MATADORAS ------------------------------------------------ 10,75%

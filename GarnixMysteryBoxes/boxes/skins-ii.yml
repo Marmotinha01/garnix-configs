@@ -78,7 +78,6 @@ rewards:
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l28&a% &dGemas '
       - '&8 ▪ &a+&l28&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -98,7 +97,6 @@ rewards:
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l38&a% &dGemas '
       - '&8 ▪ &a+&l38&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -118,7 +116,6 @@ rewards:
       - '&8 ▪ &a+&l50&a% &aCoins '
       - '&8 ▪ &a+&l50&a% &dGemas '
       - '&8 ▪ &a+&l50&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -138,7 +135,6 @@ rewards:
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l65&a% &dGemas '
       - '&8 ▪ &a+&l65&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -158,7 +154,6 @@ rewards:
       - '&8 ▪ &a+&l28&a% &aCoins '
       - '&8 ▪ &a+&l28&a% &5Sementes '
       - '&8 ▪ &a+&l28&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -180,7 +175,6 @@ rewards:
       - '&8 ▪ &a+&l38&a% &aCoins '
       - '&8 ▪ &a+&l38&a% &5Sementes '
       - '&8 ▪ &a+&l38&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -200,7 +194,6 @@ rewards:
       - '&8 ▪ &a+&l50&a% &aCoins '
       - '&8 ▪ &a+&l50&a% &5Sementes '
       - '&8 ▪ &a+&l50&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -220,7 +213,6 @@ rewards:
       - '&8 ▪ &a+&l65&a% &aCoins '
       - '&8 ▪ &a+&l65&a% &5Sementes '
       - '&8 ▪ &a+&l65&a% &bXP '
-      - ''
       flags:
       - HIDE_ATTRIBUTES
 
@@ -241,7 +233,6 @@ rewards:
       - '&8 ▪ &a+&l11&a% &3Corais '
       - '&8 ▪ &a+&l11&a% &bXP '
       - '&8 ▪ &cPeso até &l45&ckg '
-      - ''
 
   pesca-oceanita:
     type: COMMAND_ITEM
@@ -259,7 +250,6 @@ rewards:
       - '&8 ▪ &a+&l15&a% &3Corais '
       - '&8 ▪ &a+&l15&a% &bXP '
       - '&8 ▪ &cPeso até &l65&ckg '
-      - ''
 
   pesca-perola:
     type: COMMAND_ITEM
@@ -277,7 +267,6 @@ rewards:
       - '&8 ▪ &a+&l20&a% &3Corais '
       - '&8 ▪ &a+&l20&a% &bXP '
       - '&8 ▪ &cPeso até &l90&ckg '
-      - ''
 
   pesca-tempestita:
     type: COMMAND_ITEM
@@ -295,7 +284,6 @@ rewards:
       - '&8 ▪ &a+&l25&a% &3Corais '
       - '&8 ▪ &a+&l25&a% &bXP '
       - '&8 ▪ &cPeso até &l130&ckg '
-      - ''
 
   # -- A PROPRIA CAIXA, X2 ------------------------------------------ 2%
   caixa-skins-ii-x2:
