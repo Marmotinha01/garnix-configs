@@ -38,8 +38,8 @@ key-item:
 # Tipos: CURRENCY, COMMAND, COMMAND_ITEM, ITEM, NONE
 #
 # FAIXAS desta crate:
-#   comum 83,42 · comum plus 15,35 · armadura 1 · mediana 0,42 ·
-#   mediana plus 0,35 (skins) · rara 0,4 (caixas) · jackpot 0,05
+#   comum 82,28 · comum plus 15,35 · armadura 1 · mediana 0,42 ·
+#   cacto 0,15 · mediana plus 0,35 (skins) · rara 0,4 (caixas) · jackpot 0,05
 #
 # Os numeros acima sao PESO, nao porcentagem: multiplique por 0,75 para a chance
 # real. Os separadores de faixa la embaixo seguem a mesma unidade.
@@ -90,7 +90,7 @@ key-item:
 # todo item fisico do servidor — skin e armadura passam a quantia sorteada.
 rewards:
 
-  # -- COMUM ---------------------------------------------------- 82,43%
+  # -- COMUM ---------------------------------------------------- 82,28%
   coins-250:
     type: CURRENCY
     chance: 27.17
@@ -147,7 +147,7 @@ rewards:
 
   combustivel:
     type: COMMAND
-    chance: 10.45
+    chance: 10.3
     display: '&eCombustível'
     command: maquina givefuel {player} default {amount} 1
     amount: 500
@@ -451,6 +451,45 @@ rewards:
       - ' &8▪ &fDuração: &75m '
       flags:
       - HIDE_POTION_EFFECTS
+
+  # -- CACTO ------------------------------------------------------ 0,15%
+  #
+  # ✅ Decisao do dono (06/08/2026): o cacto e a torre entram aqui "bem mais
+  # dificil do que nas crates vip e rankup".
+  #
+  #   crate VIP ...... cacto 0,15
+  #   crate RankUP ... torre de 5 andares 0,35
+  #   aqui ........... cacto 0,05  ·  torre 0,10   (3x e 3,5x mais raros)
+  #
+  # ⚠️ E de proposito que sao mais raros que o jackpot desta crate, apesar de
+  # valerem menos que ele. A via do cacto e reinvestimento COMPOSTO: quem
+  # recebe cacto de graca nao ganha o valor do cacto, ganha a rampa inteira que
+  # ele gera. O premio aqui e o atalho, nao o item.
+  #
+  # Os 0,15 de peso sairam do combustivel (10,45 -> 10,30), que e o unico item
+  # da faixa comum sem escada — encolher ele nao quebra nenhuma razao declarada.
+  cacto:
+    type: ITEM
+    chance: 0.05
+    display: '&aCacto'
+    amount: 1
+    item:
+      material: CACTUS
+      data: 0
+      amount: 1
+
+  torre-cacto-5:
+    type: COMMAND_ITEM
+    chance: 0.1
+    display: '&aTorre de Cacto &8[5 Andares]'
+    command: cactustower give {player} 5 {amount}
+    amount: 1
+    icon:
+      material: CACTUS
+      display: '&aTorre de Cacto &8[5 Andares]'
+      lore:
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
 
   # -- RARA (caixas) ---------------------------------------------- 0,4%
   caixa-farm-i:

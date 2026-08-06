@@ -138,9 +138,34 @@ spawner-limit:  cost 1500 corais  ->  spawner givelimite {player} 1500
 
 Câmbio **1:1** com o item nº 1 do Ranking de Apelões. A pesca rende ~2,19 milhões de corais na temporada, ou seja isso comprava **~2,19 milhões** de limite de spawner — várias ordens acima de qualquer necessidade real, já que um bloco comporta no máximo 512 itens.
 
-**Novo câmbio: 1.100 corais = 1 de limite**, derivado de `2,19×10⁶ ÷ ~2.000` (o teto útil com folga). `maquinaslimite` entra pelo mesmo câmbio — as duas são moedas de contagem pura.
+A primeira correção foi de preço: **1.100 corais = 1 de limite**, derivado de `2,19×10⁶ ÷ ~2.000` (o teto útil com folga), depois com câmbio crescente por lote para frear a concentração.
 
-⚠️ **Os três lotes (1/10/100) têm exatamente o mesmo câmbio.** Desconto por volume aqui seria auto-anulável: o produto não tem gate nem contador por jogador, então o mais barato por unidade dominaria e os outros dois virariam decoração.
+### ✅ E a segunda foi estrutural — a régua do dono (06/08/2026)
+
+> *"A loja da pesca só pode ter itens úteis e que não impactam de maneira forte na economia."*
+
+Isso resolve na origem o que o câmbio crescente remendava. **Saíram quatro produtos:**
+
+| Produto | Por quê |
+|---|---|
+`spawnerslimite` | item nº 1 do Ranking de Apelões, 4.000 cash a unidade, multiplica a única via sem teto físico |
+`maquinaslimite` | mesma família, 1.500 cash a unidade |
+Chave de bosses | furar a fila de matar boss com uma conta AFK |
+Caixa Recursos | é a rota indireta dos dois primeiros — 1,5% dela é limite de spawner, 4,5% de máquina |
+
+Com o `spawnerslimite` fora, o câmbio crescente perdeu o que frear e **tudo voltou a ser plano.** O que ficou tem um traço em comum: ou é loot da própria via (chave de pesca), ou é temporário (fly, Caixa Boosters, Caixa Runas), ou tem teto físico (limite de armazém).
+
+O limite de armazém passou a ser o carro-chefe, em lotes de **500 / 1.500 / 3.000** a 130 corais a unidade — os antigos 5/15/30 são pequenos demais para uma via que precisa de ~5.000 de limite na temporada (seriam 167 cliques).
+
+### O fly temporário entrou — e ele não era vendido em lugar nenhum
+
+`givetempfly` existia no código do GarnixEssentials e **não aparecia em nenhum `.yml` do servidor**: nem cash-shop, nem crate, nem caixa. Item pronto e nunca ligado.
+
+✅ **Preço ancorado em tempo pelo dono:** *"1 hora de pesca deve comprar 30m de fly, 2 horas devem comprar 1h"*. A ~4.580 corais/h (2,20M ÷ 480h), isso dá **4.500 / 9.000 / 27.000** para 30m / 1h / 3h.
+
+⚠️ **O voo não é bloqueado na fazenda** — ✅ decisão do dono: *"quem pode voar lá vai voar"*. Então o item carrega o 1,55× de throughput medido acima: 3h de fly rendem ~+9,9% da diária e custam ~25% da renda diária de corais. **Ele é lucrativo de propósito** — o freio é o custo de oportunidade contra o armazém e as chaves, não o preço. Duas travas naturais seguram o resto: o item **não funciona para VIP** (`TempFlyManager` recusa quem já tem `essentials.fly`) e o **relógio corre offline** (expiry absoluto).
+
+As doses longas (6h · 24h · 3d) ficaram na **loja de runas**, onde a moeda é contagem e o item continua difícil a temporada inteira.
 
 ### ⚠️ Correção de uma nota minha no plano
 

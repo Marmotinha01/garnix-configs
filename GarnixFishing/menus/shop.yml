@@ -1,5 +1,13 @@
 # Chrome for the coral shop. Products themselves live in shop.yml (each places
 # itself at its own slot); ShopMenu renders them here.
+#
+# A grade é de COLUNAS, uma por família, lidas de cima para baixo:
+#
+#   19 21 23 25    chaves  ·  fly  ·  armazém  ·  caixas
+#   28 30 32 34
+#   37 39 41 43
+#
+# As colunas de duas entradas (chaves e caixas) deixam o slot de baixo vazio.
 
 title: Loja de Corais
 rows: 6

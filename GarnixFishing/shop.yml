@@ -4,68 +4,87 @@
 #   command — run as console on purchase; {player} = buyer's name.
 #   icon    — material/display/lore shown in the menu (shared buy-lore appended).
 #
-# ═══ O QUE A LOJA VENDE ══════════════════════════════════════════════════════
+# ═══ A RÉGUA DA LOJA ═════════════════════════════════════════════════════════
 #
-# Três blocos, e só eles:
+# ✅ Decisão do dono (06/08/2026): *"a loja da pesca só pode ter itens úteis e
+# que não impactam de maneira forte na economia"*.
 #
-#   chaves    pesca e bosses, em lotes de 16 e 32
-#   limites   spawner · máquina · armazém, em lotes de 5, 15 e 30
-#   caixas    Recursos, Runas e Booster
+# A pesca é a via AFK de 24h numa conta dedicada. Qualquer item forte vendido
+# aqui vira renda passiva convertida em poder — e é por isso que ela não vende
+# nem peça de progressão, nem capacidade das vias sem teto físico.
 #
-# A pesca é a via AFK: ela não devolve poder de combate nem item de progressão
-# direto, ela devolve CHANCE (chave, caixa) e CAPACIDADE (limite). Quem quer a
-# peça em si abre a caixa ou vai na via ativa.
+# ⚠️ O QUE SAIU POR ESSA RÉGUA, em 06/08/2026:
 #
-# ═══ POR QUE O LIMITE TEM CÂMBIO CRESCENTE ═══════════════════════════════════
+#   limite de spawner   item nº 1 do Ranking de Apelões, 4.000 cash a unidade,
+#                       multiplica a única via SEM teto físico
+#   limite de máquina   mesma família, 1.500 cash a unidade
+#   chave de bosses     furar a fila de matar boss com conta AFK
+#   Caixa Recursos      é a rota indireta dos dois primeiros: 1,5% dela é limite
+#                       de spawner e 4,5% é limite de máquina
 #
-# Antes daqui existia um produto só, e ele era um exploit: 1.500 corais compravam
-# 1.500 de limite de spawner, câmbio 1:1 com o item nº 1 do Ranking de Apelões. A
-# pesca rende ~2,19 milhões de corais na temporada, então aquilo comprava ~2,19
-# MILHÕES de limite — várias ordens acima de qualquer necessidade real, já que um
-# bloco comporta no máximo 512 itens de spawner.
+# Junto saiu o câmbio CRESCENTE por lote (1.300 → 1.500 → 1.667 por unidade),
+# que existia só para frear a concentração de `spawnerslimite`. Sem o produto,
+# o freio não tem o que frear: tudo aqui volta a ser câmbio plano.
 #
-# O câmbio agora CRESCE com o lote, ao contrário de toda loja normal:
+# ═══ AS QUATRO FAMÍLIAS ══════════════════════════════════════════════════════
 #
-#   lote de  5  ->  1.300 corais por unidade
-#   lote de 15  ->  1.500 por unidade  (+15%)
-#   lote de 30  ->  1.667 por unidade  (+28%)
+#   chaves     a chave da PRÓPRIA via, em lotes de 16 e 32
+#   fly        conveniência por tempo, em 30m · 1h · 3h
+#   armazém    capacidade de estoque, em 500 · 1.500 · 3.000
+#   caixas     Runas e Booster
 #
-# A base de ~1.100 é derivada: 2,19×10⁶ corais na temporada ÷ ~2.000 de limite,
-# que é o teto útil com folga (512 itens por bloco × os blocos que o jogador
-# mantém). Os lotes daqui partem dela e sobem.
-#
-# É de propósito. `spawnerslimite` é o item nº 1 do Ranking de Apelões: multiplica
-# a única via SEM teto físico. E corais são negociáveis (sem blacklist, por decisão
-# do dono), então um jogador pode comprar os corais dos outros e converter tudo em
-# capacidade. Com câmbio plano, concentrar não custaria nada a mais.
-#
-# Quem compra pouco não sente. Quem quer concentrar paga progressivamente mais —
-# que é exatamente o freio que o E5 pedia sem precisar proibir a troca.
-#
-# `maquinaslimite` entra pelo mesmo câmbio: as duas são moedas de contagem pura e
-# devem custar o mesmo esforço.
-#
-# ⚠️ O armazém segue a MESMA escala de lote (5/15/30) por decisão do dono — a
-# leitura do menu fica uniforme nas três colunas. O preço dele é 1/10 do dos
-# outros dois porque a unidade dele sempre valeu 1/10: o item de armazém vendido
-# em todo o resto do servidor é 500 por 55.000 corais, ou seja 110 por unidade,
-# contra 1.100 dos limites de compra.
+# O que sobrou tem um traço em comum: ou é loot da própria via, ou é temporário,
+# ou tem teto físico. Nada aqui acumula poder permanente numa outra via.
 #
 # ═══ CHAVES ══════════════════════════════════════════════════════════════════
 #
-# Câmbio plano, sem desconto por lote — chave não é vetor de concentração, os 16
-# e os 32 existem só para poupar clique:
+# 875 corais por chave, plano — o 16 e o 32 existem só para poupar clique. O
+# lote de 10 já custava 900, então este é o preço que a via sempre teve.
 #
-#   chave de pesca    875 corais cada   (o lote de 10 já custava 900)
-#   chave de bosses  1.500 corais cada
+# ═══ FLY TEMPORÁRIO ══════════════════════════════════════════════════════════
 #
-# A de boss custa ~1,7× porque a fonte dela é matar boss, não ficar AFK — este é
-# o preço de furar essa fila com uma via passiva.
+# ✅ Decisão do dono (06/08/2026), ancorada em TEMPO e não em valor: *"não pode
+# ser muito caro, 1 hora de pesca deve comprar 30m de fly, 2 horas devem comprar
+# 1h"*. A temporada fecha em 2,20 M de corais e a conta AFK pesca ~480h, ou seja
+# ~4.580 corais/h — daí os 4.500 dos 30 minutos, e o dobro por hora de fly.
+#
+# ⚠️ O que esse preço assume, escrito para quem for recalibrar: o voo NÃO é
+# bloqueado na fazenda (✅ decisão do dono: *"quem pode voar lá vai voar"*), e lá
+# ele vale 1,55x de throughput — 12,5 contra 19,4 blocos/s, medido em
+# 14-FARM-PESCA.md. Uma sessão de 3h de fazenda com fly rende ~+9,9% da diária e
+# custa 27.000 corais, que é ~25% da renda diária da pesca. O item é lucrativo de
+# propósito; o freio dele é o custo de oportunidade contra o armazém e as chaves,
+# não o preço.
+#
+# ⚠️ Só funciona para quem NÃO é VIP: `TempFlyManager` recusa quem já tem
+# `essentials.fly` (sem consumir o item). E o relógio corre OFFLINE — o expiry é
+# absoluto, então 3h de fly são 3h de relógio, não de jogo.
+#
+# As doses LONGAS (6h, 24h, 3d) moram na loja de runas, não aqui. Runa é
+# contagem e mantém o item difícil a temporada inteira; corais viram pó no dia 6
+# e entregariam fly permanente.
+#
+# ═══ LIMITE DE ARMAZÉM ═══════════════════════════════════════════════════════
+#
+# 130 corais por unidade, plano. É o mesmo câmbio que os lotes de 5/15/30 já
+# usavam na base — o que mudou foi o TAMANHO do lote, e por um motivo medido:
+#
+#   colheita no dia 20 (farm de 30.000) ...... 392 cactos/s
+#   autosell no intervalo padrão de 20s ...... precisa de 7.834 de limite
+#   `initial-limit` do armazém ............... 3.000
+#
+# A venda automática esvazia o armazém INTEIRO a cada ciclo, então a perda é zero
+# sempre que `limite >= colheita durante o intervalo`. O jogador precisa comprar
+# ~5.000 de limite ao longo da temporada — em lotes de 30 isso seriam 167 cliques.
+#
+# Comprar o teto custa ~650.000 corais, ou 30% da receita da temporada. É o maior
+# sink da loja, e é o correto: o armazém tem teto físico (o plot) e o item só
+# remove desperdício.
 products:
 
   # -- Chaves -----------------------------------------------------------------
   chave-pesca-16:
-    slot: 10
+    slot: 19
     cost: 14000
     command: crates givekey pesca {player} 16
     icon:
@@ -80,7 +99,7 @@ products:
       - '&8 ▪ &fQuantia: &7x16 '
 
   chave-pesca-32:
-    slot: 11
+    slot: 28
     cost: 28000
     command: crates givekey pesca {player} 32
     icon:
@@ -94,133 +113,54 @@ products:
       - ''
       - '&8 ▪ &fQuantia: &7x32 '
 
-  chave-bosses-16:
-    slot: 15
-    cost: 24000
-    command: crates givekey bosses {player} 16
-    icon:
-      material: TRIPWIRE_HOOK
-      amount: 16
-      glow: true
-      display: '&4Chave Bosses'
-      lore:
-      - '&7Consiga recompensas'
-      - '&7abrindo essa chave.'
-      - ''
-      - '&8 ▪ &fQuantia: &7x16 '
-
-  chave-bosses-32:
-    slot: 16
-    cost: 48000
-    command: crates givekey bosses {player} 32
-    icon:
-      material: TRIPWIRE_HOOK
-      amount: 32
-      glow: true
-      display: '&4Chave Bosses'
-      lore:
-      - '&7Consiga recompensas'
-      - '&7abrindo essa chave.'
-      - ''
-      - '&8 ▪ &fQuantia: &7x32 '
-
-  # -- Limite de spawner ------------------------------------------------------
-  spawner-limit-5:
-    slot: 19
-    cost: 6500
-    command: spawner givelimite {player} 5 1
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b5 '
-
-  spawner-limit-15:
-    slot: 28
-    cost: 22500
-    command: spawner givelimite {player} 15 1
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b15 '
-
-  spawner-limit-30:
-    slot: 37
-    cost: 50000
-    command: spawner givelimite {player} 30 1
-    icon:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
-      lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b30 '
-
-  # -- Limite de maquina ------------------------------------------------------
-  machine-limit-5:
+  # -- Fly temporario ---------------------------------------------------------
+  fly-30m:
     slot: 21
-    cost: 6500
-    command: maquina givelimite {player} 5 1
+    cost: 4500
+    command: givetempfly {player} 30m 1
     icon:
-      material: INK_SACK
-      data: 4
+      material: FEATHER
       glow: true
-      display: '&9Limite de Máquinas'
+      display: '&bFly Temporário'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
+      - '&7Libera o voo livre pelo'
+      - '&7tempo indicado abaixo.'
       - ''
-      - '&8 ▪ &fQuantia: &95 '
+      - '&8 ▪ &fDuração: &b30m '
 
-  machine-limit-15:
+  fly-1h:
     slot: 30
-    cost: 22500
-    command: maquina givelimite {player} 15 1
+    cost: 9000
+    command: givetempfly {player} 1h 1
     icon:
-      material: INK_SACK
-      data: 4
+      material: FEATHER
       glow: true
-      display: '&9Limite de Máquinas'
+      display: '&bFly Temporário'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
+      - '&7Libera o voo livre pelo'
+      - '&7tempo indicado abaixo.'
       - ''
-      - '&8 ▪ &fQuantia: &915 '
+      - '&8 ▪ &fDuração: &b1h '
 
-  machine-limit-30:
+  fly-3h:
     slot: 39
-    cost: 50000
-    command: maquina givelimite {player} 30 1
+    cost: 27000
+    command: givetempfly {player} 3h 1
     icon:
-      material: INK_SACK
-      data: 4
+      material: FEATHER
       glow: true
-      display: '&9Limite de Máquinas'
+      display: '&bFly Temporário'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
+      - '&7Libera o voo livre pelo'
+      - '&7tempo indicado abaixo.'
       - ''
-      - '&8 ▪ &fQuantia: &930 '
+      - '&8 ▪ &fDuração: &b3h '
 
   # -- Limite de armazem ------------------------------------------------------
-  warehouse-limit-5:
+  warehouse-limit-500:
     slot: 23
-    cost: 650
-    command: armazem givelimititem {player} 5 1
+    cost: 65000
+    command: armazem givelimititem {player} 500 1
     icon:
       material: INK_SACK
       data: 2
@@ -230,12 +170,12 @@ products:
       - '&7Aumente a capacidade de'
       - '&7estoque do seu terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &a5 '
+      - '&8 ▪ &fQuantia: &a500 '
 
-  warehouse-limit-15:
+  warehouse-limit-1500:
     slot: 32
-    cost: 2250
-    command: armazem givelimititem {player} 15 1
+    cost: 195000
+    command: armazem givelimititem {player} 1500 1
     icon:
       material: INK_SACK
       data: 2
@@ -245,12 +185,12 @@ products:
       - '&7Aumente a capacidade de'
       - '&7estoque do seu terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &a15 '
+      - '&8 ▪ &fQuantia: &a1500 '
 
-  warehouse-limit-30:
+  warehouse-limit-3000:
     slot: 41
-    cost: 5000
-    command: armazem givelimititem {player} 30 1
+    cost: 390000
+    command: armazem givelimititem {player} 3000 1
     icon:
       material: INK_SACK
       data: 2
@@ -260,22 +200,11 @@ products:
       - '&7Aumente a capacidade de'
       - '&7estoque do seu terreno.'
       - ''
-      - '&8 ▪ &fQuantia: &a30 '
+      - '&8 ▪ &fQuantia: &a3000 '
 
   # -- Caixas -----------------------------------------------------------------
-  caixa-recursos:
-    slot: 25
-    cost: 40000
-    command: caixas give recursos {player} 1
-    icon:
-      material: CHEST
-      display: '&2Caixa Recursos'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
   caixa-runas:
-    slot: 34
+    slot: 25
     cost: 60000
     command: caixas give runas {player} 1
     icon:
@@ -286,7 +215,7 @@ products:
       - '&7guardou para você lá dentro.'
 
   caixa-boosters:
-    slot: 43
+    slot: 34
     cost: 35000
     command: caixas give boosters {player} 1
     icon:

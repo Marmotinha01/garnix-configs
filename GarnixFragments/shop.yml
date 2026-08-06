@@ -22,6 +22,7 @@
 #   10 11 12   14 15 16    caixas gerais      |  caixas das vias
 #   19 20 21   23 24 25    utilitários        |  mineração
 #   28 29 30   32 33 34    forjas             |  torres de cacto
+#   37 38 39               fly temporário     |  (livre)
 #
 # Trocar um item de lugar é mexer só no `slot` — a ordem das seções aqui é para
 # quem lê o arquivo, o menu não depende dela.
@@ -337,3 +338,71 @@ items:
       primal: 350
     commands:
     - 'cactustower give {player} 15 1'
+
+  # -- Linha 5, trio da esquerda: fly temporário ------------------------------
+  #
+  # O voo NÃO é bloqueado na fazenda (`GarnixEssentials/config.yml` só lista
+  # `eventos` e `arenas`), e lá ele vale 1,55x de throughput — 12,5 contra 19,4
+  # blocos/s, medido em 14-FARM-PESCA.md. Ou seja não é conveniência: é o único
+  # multiplicador do servidor que se compra avulso.
+  #
+  # Por isso as doses LONGAS moram aqui e não na loja da pesca. Runa é contagem:
+  # 450 são 450 no dia 3 e no dia 20, então o item continua difícil a temporada
+  # inteira. Um preço em corais viraria pó no dia 6 e entregaria fly permanente.
+  #
+  # E o item só funciona para quem NÃO é VIP — `TempFlyManager` recusa quem já
+  # tem `essentials.fly` (sem consumir). Esta é a rota do free para uma vantagem
+  # que hoje só o site dá, que é exatamente o que esta loja existe para fazer.
+  #
+  # ⚠️ O relógio corre OFFLINE: o expiry é absoluto, então 24h de fly são 24h de
+  # relógio e não de jogo. É o que impede a dose longa de virar estoque.
+  fly-6h:
+    slot: 37
+    icon:
+      material: FEATHER
+      glow: true
+      display: '&bFly Temporário &8[6 Horas]'
+      lore:
+      - '&7Libera o voo livre pelo'
+      - '&7tempo indicado abaixo.'
+      - ''
+      - '&8 ▪ &fDuração: &76h '
+    cost:
+      eterna: 200
+    commands:
+    - 'givetempfly {player} 6h 1'
+
+  fly-24h:
+    slot: 38
+    icon:
+      material: FEATHER
+      glow: true
+      display: '&bFly Temporário &8[24 Horas]'
+      lore:
+      - '&7Libera o voo livre pelo'
+      - '&7tempo indicado abaixo.'
+      - ''
+      - '&8 ▪ &fDuração: &724h '
+    cost:
+      eterna: 450
+      primal: 200
+    commands:
+    - 'givetempfly {player} 24h 1'
+
+  fly-3d:
+    slot: 39
+    icon:
+      material: FEATHER
+      glow: true
+      display: '&bFly Temporário &8[3 Dias]'
+      lore:
+      - '&7Libera o voo livre pelo'
+      - '&7tempo indicado abaixo.'
+      - ''
+      - '&8 ▪ &fDuração: &73d '
+    cost:
+      eterna: 900
+      primal: 400
+      sagrada: 300
+    commands:
+    - 'givetempfly {player} 3d 1'

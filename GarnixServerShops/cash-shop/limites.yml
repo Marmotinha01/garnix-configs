@@ -1,8 +1,13 @@
 # Cash Shop — Limites.
 #
 # O `spawnerslimite` e o item nº 1 do Ranking de Apeloes: multiplica a unica
-# via SEM teto fisico. Por isso e o produto mais caro da faixa C e tem rota
-# in-game deliberadamente lenta (corais, com cambio decrescente na /pesca).
+# via SEM teto fisico. Por isso e o produto mais caro da faixa C.
+#
+# ⚠️ Ele NAO tem mais rota in-game: a loja da pesca vendia limite de spawner e
+# de maquina por corais, e os dois sairam em 06/08/2026 pela regua do dono —
+# "a loja da pesca so pode ter itens uteis e que nao impactam de maneira forte
+# na economia". Uma via AFK de 24h nao pode financiar a via sem teto. O que
+# sobrou de limite por corais e o do ARMAZEM, que tem teto fisico (o plot).
 
 title: 'SHOP - Limites'
 

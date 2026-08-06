@@ -28,12 +28,16 @@ box-item:
 # grade, familia por familia:
 #
 #   armadura T-III 24 · skins 22,5 · moeda 20 · livros 10,5 ·
-#   armadura T-IV 10 · boosters 7 · armadura T-V 4 · a propria caixa x2 2
+#   armadura T-IV 10 · boosters 5,25 · armadura T-V 4 · a propria caixa x2 2
 #
-# A mineracao e a unica que difere, e so porque tem dois blocos a mais (6x6,
-# 8x8 e britadeira, mais a vaga de visitante): la a grade acima vale
-# multiplicada por 0,86, mais os 12% dos explosivos e os 2% da vaga. Se
-# mexer numa familia aqui, mexa nas outras duas: e uma grade so.
+# A mineracao difere porque tem dois blocos a mais (6x6, 8x8 e britadeira,
+# mais a vaga de visitante): la a grade acima vale multiplicada por 0,86, mais
+# os 12% dos explosivos e os 2% da vaga. Se mexer numa familia aqui, mexa nas
+# outras duas: e uma grade so.
+#
+# ⚠️ E a FARM difere desde 06/08/2026, pela familia CACTO (1,75) la embaixo —
+# a unica excecao legitima, porque cacto so existe nesta via. O peso dela saiu
+# dos boosters (7 -> 5,25), entao as outras oito familias seguem identicas.
 #
 # ⚠️ Peça de armadura INDIVIDUAL, nunca a coleção: `givearmor tier-v` sem o
 # sufixo de slot entrega o set inteiro (+48%) num drop só.
@@ -486,10 +490,10 @@ rewards:
       lore:
       - '&fValor: &5❋{amount}'
 
-  # -- BOOSTERS ----------------------------------------------------- 7%
+  # -- BOOSTERS -------------------------------------------------- 5,25%
   booster-2x-15m:
     type: COMMAND_ITEM
-    chance: 4.25
+    chance: 3.25
     display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 15m {amount}
     amount: 1
@@ -511,7 +515,7 @@ rewards:
 
   booster-2x-30m:
     type: COMMAND_ITEM
-    chance: 2.75
+    chance: 2
     display: '&ex&l{amount} &eBooster de Fazenda'
     command: fazenda givebooster {player} both 2 30m {amount}
     amount: 1
@@ -585,6 +589,47 @@ rewards:
       - '&8 ▪ &fNível: &71 '
       - '&8 ▪ &fTipo: &cLâmina '
       - ''
+
+  # -- CACTO ----------------------------------------------------- 1,75%
+  #
+  # ✅ Decisao do dono (06/08/2026): a escada de facilidade e
+  # caixa TII > caixa TI > crate farm, e em nenhuma delas "e para sair
+  # distribuindo muito".
+  #
+  #   crate farm ..... cacto 0,05 · torre 0,10
+  #   caixa TI ....... cacto 0,75 · torre 0,50
+  #   AQUI (TII) ..... cacto 1,00 · torre 0,75
+  #
+  # ⚠️ ESTA FAMILIA QUEBRA A GRADE UNICA das tres caixas Tier II, e e a unica
+  # que pode: cacto so existe na via da farm, entao mineracao e pesca nao tem
+  # o que espelhar. As outras oito familias continuam identicas nas tres — se
+  # mexer em qualquer uma delas, mexa nas outras duas caixas tambem.
+  #
+  # Os 1,75 de peso sairam dos BOOSTERS (7 -> 5,25), pelo mesmo motivo da TI:
+  # o que sai dura 15 ou 30 minutos, o que entra e insumo permanente da via.
+  # As duas caixas ficaram com a familia de booster no mesmo peso, 5,25.
+  cacto:
+    type: ITEM
+    chance: 1
+    display: '&ax&l{amount} &aCacto'
+    amount: 1
+    item:
+      material: CACTUS
+      data: 0
+      amount: 1
+
+  torre-cacto-5:
+    type: COMMAND_ITEM
+    chance: 0.75
+    display: '&ax&l{amount} &aTorre de Cacto &8[5 Andares]'
+    command: cactustower give {player} 5 {amount}
+    amount: 1
+    icon:
+      material: CACTUS
+      display: '&aTorre de Cacto &8[5 Andares]'
+      lore:
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
 
   # -- A PROPRIA CAIXA, X2 ------------------------------------------ 2%
   caixa-farm-ii-x2:

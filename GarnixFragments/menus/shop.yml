@@ -1,11 +1,12 @@
 title: Loja de Runas
 
 # Menu simples, sem paginação: cada item declara o próprio 'slot' no shop.yml.
-# As 3 linhas do meio são a grade da loja — dois trios por linha:
+# As 4 linhas do meio são a grade da loja — dois trios por linha:
 #
 #   linha 2   caixas gerais      |  caixas das vias
 #   linha 3   utilitários        |  mineração
 #   linha 4   forjas             |  torres de cacto
+#   linha 5   fly temporário     |  (livre)
 rows: 6
 
 back-icon:

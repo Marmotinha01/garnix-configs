@@ -20,12 +20,23 @@ autosell:
   # Moeda usada para comprar melhorias de velocidade.
   upgrade-currency: cash
   # <segundos_alvo>: <custo>. Aponta sempre para o menor alvo abaixo do intervalo atual.
+  #
+  # A venda automatica esvazia o armazem INTEIRO a cada ciclo, entao a perda e zero
+  # sempre que `limite >= colheita durante o intervalo`. Ou seja subir o limite e
+  # baixar o intervalo sao SUBSTITUTOS, e o limite tinha a rota mais barata ate
+  # dentro do cash: os 3.917 de limite que o salto de 20s para 10s poupa no dia 20
+  # custam 6.400 cash na loja (500 por 800), contra os 10.000 desta escada. O
+  # produto estava estritamente dominado — ninguem que fizesse a conta compraria.
+  #
+  # A faixa 150-800 conserta as duas coisas de uma vez: o upgrade volta a ser mais
+  # barato que o limite equivalente, e um free que guarde os 400 cash da temporada
+  # compra o primeiro nivel (antes nao alcancava nem o mais barato).
   upgrade-prices:
-    '18': 1000
-    '16': 1500
-    '14': 2000
-    '12': 2500
-    '10': 3000
+    '18': 150
+    '16': 275
+    '14': 400
+    '12': 550
+    '10': 800
 
 # Plantação suportada (apenas cacto). material/data = ícone,
 # currency = moeda (GarnixCurrencies), sell-price = preço unitário base,
@@ -36,12 +47,55 @@ farms:
     data: 0
     display: '&aCacto'
     currency: coins
-    # ⏳ Derivado de: alvo do cacto no dia 1 (renda x 15% / 24) dividido pela
-    # colheita/hora de uma farm de 100 blocos. A colheita/hora e uma
-    # ESTIMATIVA (teste M2): se a taxa real for k x a estimada, este numero
-    # divide por k e a escada de valor nao muda — ela e razao pura.
-    # ⏳ Derivado de: alvo do cacto no dia 1 (renda x 15% / 24) dividido pela
-    # colheita/hora de uma farm de 100 blocos. A colheita/hora e uma
-    # ESTIMATIVA (teste M2): se a taxa real for k x a estimada, este numero
-    # divide por k e a escada de valor nao muda — ela e razao pura.
-    sell-price: 0.499
+    # ✅ ANCORA NOVA (06/08/2026), decisao do dono: *"o que ele ganha minerando
+    # em 5 minutos na mina ou na fazenda ele tem que ganhar em 1 minuto com uma
+    # farm de cacto basica, coisa de 20 andares"*.
+    #
+    #   renda ativa da mina no dia 1 .... 69.444 coins/h = 1.157 coins/min
+    #   5 minutos de mina ............... 5.787 coins
+    #   alvo: isso em 1 minuto .......... 347.222 coins/h
+    #   farm de 20 andares .............. 180 pontas x 141 = 25.380 cactos/h
+    #   sell-price ...................... 347.222 / 25.380 = 13,68
+    #
+    # O valor unitario alto E a correcao da lentidao, nao um exagero: a mina
+    # entrega ~70.000 blocos/h contra 25.380 cactos/h, e cada ponta solta uma
+    # unidade a cada ~25s. O cacto vale ~14x o bloco de minerio porque sai ~14x
+    # mais devagar por unidade de renda.
+    #
+    # A ancora ANTERIOR era "15% da renda diaria / 24h", que dava 0,499 — este
+    # numero e 27,4x aquele, e a escada de buff da temporada multiplica pelo
+    # mesmo fator (ver a regua em 11-CACTO.md).
+    #
+    # ✅ OS 141 CACTOS/H POR PONTA NAO SAO ESTIMATIVA — sao derivados dos dois
+    # parametros do servidor, informados pelo dono em 06/08/2026:
+    #
+    #   gamerule randomTickSpeed ......... 8
+    #   spigot.yml growth.cactus-modifier  20000  (PandaSpigot 1.8)
+    #
+    #   random ticks por bloco = 20 ticks/s x 8 / 4096 blocos da secao
+    #                          = 0,0390625/s = 1 a cada 25,6 s
+    #   o cacto pede 16 estagios de `age` para soltar uma unidade, e o modifier
+    #   de 200x estoura os 16 num unico random tick — ou seja SATURA.
+    #   → 3600 x 0,0390625 = 140,6 cactos/h por ponta
+    #
+    # ⚠️ O modifier esta 12,5x ALEM do necessario: 1600 ja satura. Acima disso o
+    # gargalo e o random tick e subir o numero nao acelera nada.
+    #
+    # ⚠️ A UNICA alavanca real para acelerar cacto e o `randomTickSpeed`, e ele
+    # e global — mexer nele acelera junto trigo, cenoura, fogo, gelo e folhas.
+    # Nao existe jeito de acelerar so o cacto por config.
+    #
+    # O teste M2 vira CONFIRMACAO, nao descoberta. Se ainda assim a taxa medida
+    # for k x esta, este numero divide por k e a escada de valor nao muda — ela
+    # e razao pura.
+    #
+    # ⚠️ Este numero e uma alavanca VIVA: ele sobe por update ao longo da
+    # temporada. A amplitude da via mora aqui desde que o `warehouse.sellmult`
+    # foi removido em 06/08/2026.
+    #
+    # 🚩 O QUE ESTE NUMERO EXPOE: com ele, a renda da via passa a ser decidida
+    # pelo AUTOSELL, nao pelo preco. Uma farm de 20 andares sem venda automatica
+    # rende ~123.000 coins/dia (3 coletas manuais); com ela, 8,33 MILHOES —
+    # 68x mais, ou 22x a renda diaria de toda a casa. Um item de 250 de cash
+    # virou a maior alavanca do servidor. Ver 11-CACTO.md.
+    sell-price: 13.68

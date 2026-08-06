@@ -26,12 +26,13 @@ box-item:
 #
 # ⚠️ As seis faixas, do recheio ao topo:
 #   COMUM         19,25% x2  as duas maquinas de limite, 5 de cada
-#   COMUM PLUS    18,25%     maquina de cash, 3 de uma vez
+#   COMUM PLUS    16,25%     maquina de cash, 3 de uma vez
 #   RARO            9% x3    vaga de visitante · robo lendario · torre 15
-#   RARISSIMO     2,5% x5    25 caixas · 15 skins II · torre 30 ·
-#                            3 livros de kill-stack · papel imortal 3d
-#   RARISSIMO+    0,5% x6    VENDA AUTOMATICA · mithril · marfim ·
-#                            tempestita · robo mitico · papel supremo 2d
+#   RARISSIMO     2,5% x6    25 caixas · 15 skins II · torre 30 ·
+#                            3 livros de kill-stack · papel imortal 3d ·
+#                            VENDA AUTOMATICA
+#   RARISSIMO+    0,5% x5    mithril · marfim · tempestita · robo mitico ·
+#                            papel supremo 2d
 #   JACKPOT      0,25% x3    combustivel infinito · matadora hit-kill ·
 #                            papel garnix 1d
 #
@@ -39,6 +40,17 @@ box-item:
 # custa 250 de cash na loja). Os 0,5 dela sairam das duas faixas de recheio,
 # 0,25 de cada (19,5 → 19,25) — nenhuma faixa rara foi diluida, mesmo criterio
 # usado quando o livro e os 3 papeis entraram.
+#
+# ⚠️ ELA SUBIU DE 0,5 PARA 2,5 em 06/08/2026, por decisao do dono: *"nao e tao
+# raro assim, skins sao mais raras do que isso — mithril, marfim, tempestita"*.
+# Estava EMPATADA com as tres skins de degrau 10, e vale bem menos que elas: sao
+# 250 de cash contra as unicas tres skins que a forja nao alcanca e que so o
+# site vende. Agora ela e a sexta da faixa RARISSIMO, um degrau abaixo delas.
+#
+# Os 2 pontos vieram da maquina de cash (18,25 → 16,25), que e exatamente onde
+# eles estavam antes de a tempestita descer para 0,5 — a devolucao desfez
+# aquela realocacao, e a faixa de recheio das duas maquinas de limite ficou
+# intacta.
 #
 # ⚠️ AS TRES SKINS DE DEGRAU 10 ficam juntas na RARISSIMO+, todas em 0,5. A
 # Tempestita estava sozinha em 2,5, cinco vezes mais provavel que a Mithril e
@@ -83,6 +95,18 @@ box-item:
 # ⚠️ `{amount}` no display, na lore e no icone sai do `amount:` da recompensa —
 # o mesmo numero que o comando recebe. Escreva a quantia UMA vez, no `amount:`.
 #
+# ⚠️ O `&l` E DA QUANTIA, NAO DO NOME. ✅ Decisao do dono (06/08/2026): *"nao e
+# para por &l em displays comuns nas caixas misteriosas, o &l e especial para
+# quantias e nao para nomes"*. Catorze displays daqui tinham o nome em negrito
+# (`&6x&l{amount} &6&lVenda Automatica`) e foram limpos — este arquivo era o
+# unico do servidor com o problema, crates e as outras caixas ja estavam certas.
+#
+#   ✅ '&6x&l{amount} &6Venda Automatica'
+#   ❌ '&6x&l{amount} &6&lVenda Automatica'
+#
+# O `&l` do NUMERAL DE TIER continua, e nao e excecao — e a mesma regra: em
+# `&e[Tier &lII&e]` o negrito esta no numero, igual ao da quantia.
+#
 # ⚠️ Icone de cabeca (`texture`) TAMBEM empilha desde que o `setAmount` saiu do
 # ramo do `material` e foi para os atributos comuns (SpigotConfig). Antes so
 # CHEST/ENDER_CHEST mostravam a pilha, e por isso a quantia das maquinas foi
@@ -125,7 +149,7 @@ rewards:
 
   maquina-cash:
     type: COMMAND
-    chance: 18.25
+    chance: 16.25
     display: '&6x&l{amount} &6Máquina de Cash'
     command: maquina give {player} cash {amount} 1
     amount: 3
@@ -141,7 +165,7 @@ rewards:
   vaga:
     type: COMMAND_ITEM
     chance: 9
-    display: '&ax&l{amount} &a&lVaga de Visitante'
+    display: '&ax&l{amount} &aVaga de Visitante'
     command: mina giveslot {player} {amount}
     amount: 1
     icon:
@@ -154,7 +178,7 @@ rewards:
   robo-lendario:
     type: COMMAND_ITEM
     chance: 9
-    display: '&4x&l{amount} &4&lRobô Lendário'
+    display: '&4x&l{amount} &4Robô Lendário'
     command: crates giverobot lendario {player} {amount}
     amount: 1
     icon:
@@ -173,7 +197,7 @@ rewards:
   torre-cacto-15:
     type: COMMAND_ITEM
     chance: 9
-    display: '&ax&l{amount} &a&lTorre de Cacto &8[15 Andares]'
+    display: '&ax&l{amount} &aTorre de Cacto &8[15 Andares]'
     command: cactustower give {player} 15 {amount}
     amount: 1
     icon:
@@ -214,7 +238,7 @@ rewards:
   torre-cacto-30:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&ax&l{amount} &a&lTorre de Cacto &8[30 Andares]'
+    display: '&ax&l{amount} &aTorre de Cacto &8[30 Andares]'
     command: cactustower give {player} 30 {amount}
     amount: 1
     icon:
@@ -245,7 +269,7 @@ rewards:
   papel-imortal:
     type: COMMAND_ITEM
     chance: 2.5
-    display: '&bx&l{amount} &b&lPapel VIP IMORTAL &8[3 Dias]'
+    display: '&bx&l{amount} &bPapel VIP IMORTAL &8[3 Dias]'
     command: vip givepaper {player} imortal 3d {amount}
     amount: 1
     icon:
@@ -259,8 +283,8 @@ rewards:
 
   venda-automatica:
     type: COMMAND_ITEM
-    chance: 0.5
-    display: '&6x&l{amount} &6&lVenda Automática'
+    chance: 2.5
+    display: '&6x&l{amount} &6Venda Automática'
     command: armazem giveautosell {player} {amount}
     amount: 1
     icon:
@@ -278,7 +302,7 @@ rewards:
   skin-mithril:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&4x&l{amount} &4&lSkin de Mithril'
+    display: '&4x&l{amount} &4Skin de Mithril'
     command: mina giveskin {player} mithril {amount}
     amount: 1
     icon:
@@ -298,7 +322,7 @@ rewards:
   skin-marfim:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&fx&l{amount} &f&lSkin de Marfim'
+    display: '&fx&l{amount} &fSkin de Marfim'
     command: fazenda giveskin {player} marfim {amount}
     amount: 1
     icon:
@@ -318,7 +342,7 @@ rewards:
   skin-tempestita:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&dx&l{amount} &d&lSkin de Tempestita'
+    display: '&dx&l{amount} &dSkin de Tempestita'
     command: pesca giveskin {player} tempestita {amount}
     amount: 1
     icon:
@@ -336,7 +360,7 @@ rewards:
   robo-mitico:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&6x&l{amount} &6&lRobô Mítico'
+    display: '&6x&l{amount} &6Robô Mítico'
     command: crates giverobot mitico {player} {amount}
     amount: 1
     icon:
@@ -355,7 +379,7 @@ rewards:
   papel-supremo:
     type: COMMAND_ITEM
     chance: 0.5
-    display: '&4x&l{amount} &4&lPapel VIP SUPREMO &8[2 Dias]'
+    display: '&4x&l{amount} &4Papel VIP SUPREMO &8[2 Dias]'
     command: vip givepaper {player} supremo 2d {amount}
     amount: 1
     icon:
@@ -370,7 +394,7 @@ rewards:
   papel-garnix:
     type: COMMAND_ITEM
     chance: 0.25
-    display: '&6x&l{amount} &6&lPapel VIP GARNIX &8[1 Dia]'
+    display: '&6x&l{amount} &6Papel VIP GARNIX &8[1 Dia]'
     command: vip givepaper {player} garnix 1d {amount}
     amount: 1
     icon:
@@ -385,7 +409,7 @@ rewards:
   combustivel-inf:
     type: COMMAND_ITEM
     chance: 0.25
-    display: '&bx&l{amount} &b&lCombustível Infinito'
+    display: '&bx&l{amount} &bCombustível Infinito'
     command: maquina giveinfinitefuel {player} {amount}
     amount: 1
     icon:
@@ -400,7 +424,7 @@ rewards:
   matadora-hk:
     type: COMMAND_ITEM
     chance: 0.25
-    display: '&4x&l{amount} &4&lMatadora Hit-Kill'
+    display: '&4x&l{amount} &4Matadora Hit-Kill'
     command: boss give sword {player} hk {amount}
     amount: 1
     icon:

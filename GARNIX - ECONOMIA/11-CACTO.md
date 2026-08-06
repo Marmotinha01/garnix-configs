@@ -128,9 +128,9 @@ tempo para encher ............ 7,6 SEGUNDOS
 
 O estoque máximo é irrisório perto da colheita: o ganho de segurar um dia inteiro antes de um buff de 4,9× é **0,007% de uma diária**. Ruído.
 
-### 🚩 E é a mesma medição que expõe o problema real do armazém
+### 🚩 E é a mesma medição que levanta a suspeita sobre o armazém
 
-Se o armazém enche em 7,6 segundos, ele não é freio — é parede. Mesmo com o autosell no melhor nível:
+Se o armazém enche em 7,6 segundos, a leitura óbvia é que ele deixou de ser freio e virou parede. Mesmo com o autosell no melhor nível:
 
 ```
 autosell a 10s, colheita entre duas vendas (dia 20) .... 3.917 cactos
@@ -138,9 +138,31 @@ limite do armazém ..................................... 3.000
 perda .................................................  23%
 ```
 
-E esse já é o cenário premium. **No fim da temporada a via passa a ser governada pelo `initial-limit` e pelo intervalo do autosell, não pelo `sell-price`** — buffar o preço não adianta se a colheita está sendo jogada fora antes de ser vendida.
+### ✅ Lido no código, ele NÃO é parede — é sink
 
-É o que a calibragem do armazém tem que resolver: os dois números precisam escalar com a farm, ou o teto da via vira o limite do armazém e não o teto do plot.
+`AutoSellTask.runFor` chama `sellAll(warehouse, ...)`: o ciclo esvazia o armazém **inteiro**, não um lote. Então:
+
+> **perda = 0 sempre que `limite ≥ taxa × intervalo`.**
+
+Com o `initial-limit: 3000` e o intervalo padrão de 20s, o armazém aguenta uma farm de **~11.000 cactos sem perder nada**. Acima disso o jogador compra limite — que é exatamente o desenho de um sink, não de um teto. **O `initial-limit` fica como está.**
+
+Dois detalhes do código que valem registro:
+
+| Onde | O quê |
+|---|---|
+`AutoSellTask.tick` | só roda para jogadores **online** — a conta AFK precisa estar conectada |
+`FarmListener.handleGrow` | cancela o crescimento **mesmo com o armazém cheio**, então a perda é real e silenciosa |
+
+### ⚠️ O que estava de fato quebrado: o autosell premium estava dominado
+
+Limite e intervalo são **substitutos** — dá para zerar a perda subindo um ou baixando o outro. E o limite tinha a rota mais barata até dentro da mesma moeda:
+
+| Caminho | Custo | Efeito no dia 20 |
+|---|---|---|
+Os 5 upgrades de velocidade (20s → 10s) | **10.000 cash** | poupa 3.917 de limite |
+Comprar esses 3.917 de limite no cash-shop | **6.400 cash** (8× 500 por 800) | idêntico |
+
+Ninguém que fizesse a conta compraria velocidade. ✅ **Aplicado em 06/08/2026:** a escada foi para **150 / 275 / 400 / 550 / 800** (total 2.175). Isso conserta as duas coisas de uma vez — o upgrade volta a ser mais barato que o limite equivalente, e um free que guarde os 400 cash da temporada compra o primeiro nível, quando antes não alcançava nem o mais barato.
 
 ---
 
@@ -181,17 +203,52 @@ valor = sell-price × quantidade × sellMult × (1 + sellBonus + booster)
 
 ---
 
-## O `sell-price` base
+## ✅ O `sell-price` base — âncora nova em 06/08/2026
 
-Depende de **uma** medição (M2 em [TESTES-IN-GAME.md](TESTES-IN-GAME.md)): quantos cactos por hora uma farm de tamanho conhecido colhe.
+> **Decisão do dono:** *"o que ele ganha minerando em 5 minutos na mina ou na fazenda ele tem que ganhar em 1 minuto com uma farm de cacto básica, coisa de 20 andares"*.
+
+A âncora antiga era `renda(1) × 0,15 / 24 ÷ colheita/h` e dava **0,499**. A nova compara a via com a renda ATIVA:
 
 ```
-sell-price = renda(1) × 0,15 / 24 ÷ colheita_por_hora_no_dia_1
+renda ativa da mina no dia 1 ...... 69.444 coins/h = 1.157 coins/min
+5 minutos de mina ................. 5.787 coins
+alvo: isso em 1 minuto ............ 347.222 coins/h
+farm de 20 andares ................ 180 pontas × 140,6 = 25.313 cactos/h
+sell-price ........................ 13,68        (27,4× o anterior)
 ```
 
-Minha estimativa a confirmar, a partir do `randomTickSpeed: 8` e do `growth.cactus-modifier: 20000` que você passou: cada ponta de cacto cresce a cada ~2 s, o que dá ~141 colheitas/h por coluna. Com colunas de 3, uma farm de 30.000 blocos tem 10.000 pontas → **1,41×10⁶ cactos/h**.
+O motivo de o valor unitário ser tão alto **é a lentidão, não exagero**: a mina entrega ~70.000 blocos/h contra 25.313 cactos/h, e cada ponta solta uma unidade a cada 25,6 s. O cacto vale ~14× o bloco de minério porque sai ~14× mais devagar por unidade de renda.
 
-⚠️ **É exatamente o tipo de estimativa que já errei por 7× na mineração.** Por isso é uma constante única: quando o M2 chegar, se a taxa real for k× a minha, o `sell-price` divide por k e nada mais muda.
+### ✅ E os 141 cactos/h por ponta deixaram de ser estimativa
+
+O dono passou os dois parâmetros do servidor, e eles **derivam** o número em vez de estimá-lo:
+
+```
+gamerule randomTickSpeed ......... 8
+spigot.yml growth.cactus-modifier  20000   (PandaSpigot 1.8)
+
+random ticks por bloco = 20 ticks/s × 8 / 4096 blocos da seção
+                       = 0,0390625/s  =  1 a cada 25,6 s
+o cacto pede 16 estágios de `age`, e o modifier de 200× estoura os 16 num
+único random tick — ou seja SATURA.
+→ 3600 × 0,0390625 = 140,6 cactos/h por ponta
+```
+
+| | |
+|---|---|
+⚠️ O modifier está **12,5× além do necessário** | **1600 já satura.** Acima disso o gargalo é o random tick e subir o número não acelera nada |
+⚠️ A única alavanca real de velocidade é o `randomTickSpeed` | e ele é **global** — acelera junto trigo, cenoura, fogo, gelo e folhas. Não há como acelerar só o cacto por config |
+
+O **M2 vira confirmação, não descoberta**. Se ainda assim a taxa medida for k× esta, o `sell-price` divide por k e nada mais muda — ele é razão pura.
+
+### 🚩 O que a âncora nova expõe: a renda da via passou a ser decidida pelo autosell
+
+| Farm de 20 andares, `sell-price` 13,68 | Cactos/dia | Coins/dia |
+|---|---|---|
+Sem autosell (~3 coletas manuais) | 9.000 | 123.000 — 33% da diária |
+**Com autosell** | 609.120 | **8.333.000 — 22× a renda diária da casa** |
+
+**O autosell multiplica a via por 68×.** Um item de **250 de cash** virou, de longe, a maior alavanca do servidor — ele deixou de ser "conveniência que remove desperdício". Enquanto isso não for resolvido (teto por ciclo, teto diário, ou reescrita da tabela de tiers), este é o maior risco aberto da economia.
 
 O reinvestimento continua sendo a decisão interessante da via: **vender tudo faz a farm parar de crescer, plantar tudo não dá coins.** Só que agora ele governa o *ritmo de chegar ao teto do plot*, não a curva de valor.
 
@@ -233,21 +290,51 @@ Booster de armazém | `items/booster.yml` — **+200% aditivo**, mesma tabela do
 | # | Item | Depende de |
 |---|---|---|
 1 | `sell-price` do cacto | **V5** — cactos por colheita e intervalo real |
-2 | Preço de compra do cacto | V5, e da decisão de quão "um pouco difícil" |
+2 | ~~Preço de compra do cacto~~ | ✅ **6.000 → 35.000** em 06/08/2026 (30 min de renda ativa no dia 1) |
 3 | Taxa de drop do item cacto e da torre | tabelas de loot da Fase 5 |
-4 | Preço dos 5 níveis de autosell | faixa 150–800, a fechar na Fase 7 com o cash-shop |
+4 | ~~Preço dos 5 níveis de autosell~~ | ✅ **150 / 275 / 400 / 550 / 800** em 06/08/2026 |
 5 | Posição da via na tabela de tiers | qual tier a farm de cacto "vale" em cada dia |
 
 ---
 
 ## Nota de auditoria
 
-`GarnixWarehouse` tem 3 itens ativáveis e **os 3 estão sem rota** hoje:
+`GarnixWarehouse` tem 3 itens ativáveis. **Dois já têm rota; um continua sem:**
 
 | Item | Efeito | Rota hoje |
 |---|---|---|
-`items/autosell.yml` | desbloqueia o autosell | ❌ só `/armazem giveautosell` |
-`items/limit.yml` | +N de limite do armazém | ❌ só `/armazem givelimititem` |
-`items/booster.yml` | booster de venda de cacto | ❌ só `/armazem givebooster` |
+`items/limit.yml` | +N de limite do armazém | ✅ loja da pesca (500/1.500/3.000), cash-shop (500), crates e bosses |
+`items/booster.yml` | booster de venda de cacto | ✅ cash-shop e Caixa Boosters |
+`items/autosell.yml` | desbloqueia o autosell | ⚠️ só cash-shop (250) — **sem rota in-game nenhuma** |
 
-E o `farms.CACTUS.sell-price: 10` com `currency: coins` é o único número econômico do plugin — fictício, a derivar. Ver [10-ITENS.md](10-ITENS.md).
+### ✅ A rota de loot do cacto e da torre — aplicada em 06/08/2026
+
+As duas linhas de "✅ raro em recompensa" das decisões travadas lá em cima passaram a existir. A escada de facilidade é **decisão do dono**, e a crate da via é o degrau mais difícil de todos:
+
+| Onde | Cacto | Torre de 5 andares |
+|---|---|---|
+Crate VIP | 0,15 | — |
+Crate RankUP | — | 0,35 |
+**Crate Farm** 🆕 | **0,05** | **0,10** |
+**Caixa Farm [Tier I]** 🆕 | **0,75** | **0,50** |
+**Caixa Farm [Tier II]** 🆕 | **1,00** | **0,75** |
+
+As caixas parecem generosas ao lado da crate, mas o gate delas é a própria caixa: a Caixa Farm I sai da crate a 0,3 de peso, então tirar cacto por essa rota é **22× menos provável** do que tirá-lo direto da crate. É o que sustenta o *"não é para sair distribuindo muito"*.
+
+⚠️ **A família CACTO quebra a grade única das caixas Tier I e Tier II**, e é a única exceção legítima — cacto só existe nesta via, então mineração e pesca não têm o que espelhar. O peso saiu dos **boosters** nas duas caixas (6,5 → 5,25 na I, 7 → 5,25 na II) e do **combustível** na crate (10,45 → 10,30). As demais famílias seguem idênticas nas três caixas.
+
+⚠️ **É de propósito que na crate eles sejam mais raros que o jackpot**, apesar de valerem menos: a via é reinvestimento composto, então quem recebe cacto de graça não ganha o valor do cacto, ganha a rampa que ele gera.
+
+### A rota do autosell — existe, e é a mais estreita do servidor
+
+Ao contrário do que esta nota dizia antes, `items/autosell.yml` **não é pay-only**: a Venda Automática é um prêmio da **Caixa Garnix**, a 0,5 na faixa RARISSIMO+. O arquivo dela registra que isso foi deliberado — *"é o único jeito de conseguir o item fora do site"*, com os 0,5 tirados das duas máquinas de limite (19,5 → 19,25 cada).
+
+O que torna a rota estreita é o gate da caixa, não o peso dentro dela:
+
+```
+Caixa Garnix por abate do Devorador ......... 0,15%
+Venda Automática dentro da caixa ............ 0,50%
+composto .................................... 0,00075% por abate
+```
+
+A Caixa Garnix é a única do servidor que **só** sai do Devorador (ou custa 15.000 cash). Então a rota in-game existe no papel e é, na prática, uma loteria — o que é coerente com o autosell ser o produto premium correto da via, mas vale saber que "tem rota" aqui não significa "é alcançável".

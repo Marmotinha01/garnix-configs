@@ -41,17 +41,32 @@
 #
 # -- O CACTO é semente, e é caro de propósito ---------------------------------
 #
-# ✅ Decisão do dono (05/08/2026): *"não deve ser algo alcançável tão facilmente,
-# provavelmente uns 30 minutos de mineração/fazenda em coins"*.
+# ✅ Decisão do dono (05/08/2026): *"não deve ser algo alcançável tão facilmente"*.
+# ✅ Revisada em 06/08/2026 para **150.000**, depois de passar por 35.000.
 #
 #   renda ativa por hora no dia 1 = renda(1) / 5,4 = 69.444 coins/h
-#   30 minutos                    = 34.722          →  preço 35.000
+#   150.000                       = 2,16 HORAS de mineração por UNIDADE
 #
-# Subiu de 6.000 para 35.000, ou seja de ~5 minutos para 30. O motivo de poder ser
-# caro é que comprar cacto NUNCA é obrigatório: o cacto se replanta sozinho (quem tem
-# 9 chega aos 30.000) e sai de graça do armazém, puxando de volta o que já foi colhido.
-# Comprar é só ATALHO para quem não quer esperar o composto — então o preço é o que
-# separa "esperei" de "paguei para pular", e ele tem que doer no dia 1.
+# A escada foi 6.000 → 35.000 → 150.000, ou seja de ~5 minutos para mais de duas
+# horas. O motivo de poder ser tão caro é que comprar cacto NUNCA é obrigatório: o
+# cacto se replanta sozinho (quem tem 9 chega aos 30.000) e sai de graça do armazém,
+# puxando de volta o que já foi colhido. Comprar é só ATALHO para quem não quer
+# esperar o composto — então o preço é o que separa "esperei" de "paguei para pular".
+#
+# ⚠️ E o preço alto é METADE de um par. ✅ Decisão do dono (06/08/2026): *"o jogador
+# consegue dinheiro para comprar o cacto ou consegue suadamente em uma crate ou caixa
+# (...) o ganho tem que ser justificável"*. A entrada cara só se sustenta se o retorno
+# for rápido — e com o `sell-price` atual de 0,499 uma torre de 20 andares leva ~7
+# dias AFK para se pagar, que é o oposto do que a decisão pede.
+#
+#   9 cactos-semente a 150.000 ..... 1.350.000
+#   180 areias a 5.000 .............   900.000
+#   entrada de 20 andares .......... 2.250.000  = 6 diarias do dia 1
+#
+# ⏳ A OUTRA METADE DO PAR ESTA EM ABERTO: quanto o `sell-price` do GarnixWarehouse
+# precisa subir para o payback ser de horas e nao de dias. Ver 11-CACTO.md — o alvo
+# do dono ("5 min de mina = 1 min de cacto") pede `sell-price` 13,68 e leva a via a
+# 22x a renda diaria de toda a casa, entao o numero ainda depende de decisao.
 #
 # ⚠️ Se o M2 (cactos/h medidos in-game) mudar o tamanho útil do plot, o que muda aqui é
 # só o preço da AREIA — o do cacto é semente e não escala com o tamanho.
@@ -79,7 +94,7 @@ icon:
 products:
   cactus:
     amount: 1
-    price: 6000
+    price: 150000
     slot: 11
     ask-quantity: true
     item:
