@@ -13,9 +13,9 @@ texture: ""
 
 # Máquina B libera no dia 6 da temporada.
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "12/08/2026 20:00"
+release: "17/08/2026 20:00"
 
-rank: '&e[Rank 11]'
+rank: '&e[Rank 4]'
 
 # ⚠️ Gate autoritativo. Concedida em GarnixRankUP/ranks/*.yml -> commands do rank 11.
 buy-permission: machines.buy.pedra
@@ -43,7 +43,7 @@ machine-item:
   - '&aColoque no seu terreno.'
 
 costs:
-  coins: '11100000'
+  coins: '816000'
 
 # ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
 # Convenção OPOSTA à dos spawners, que usam 0-100. Escrever 5 aqui significa
@@ -53,4 +53,4 @@ drops:
     type: CURRENCY
     currency-id: coins
     chance: 1.0
-    amount: '793'
+    amount: '54.6'

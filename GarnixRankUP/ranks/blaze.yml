@@ -19,8 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.17 true'
 - 'lp user {player} permission set warehouse.bonus.17 true'
 - 'lp user {player} permission set fishing.bonus.17 true'
+- 'lp user {player} permission set machines.buy.safira true'
 - 'lp user {player} permission set spawner.buy.blaze true'
 
 costs:
-- 'coins 99600000000000000'
-- 'head SKELETON 34000'
+- 'coins 124000000000000000'
+- 'head SKELETON 24300'

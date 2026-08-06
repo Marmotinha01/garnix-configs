@@ -19,9 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.16 true'
 - 'lp user {player} permission set warehouse.bonus.16 true'
 - 'lp user {player} permission set fishing.bonus.16 true'
+- 'lp user {player} permission set machines.buy.rubi true'
 - 'lp user {player} permission set spawner.buy.witch true'
-- 'lp user {player} permission set machines.buy.ferro true'
 
 costs:
-- 'coins 15100000000000000'
-- 'head ZOMBIE 30000'
+- 'coins 20200000000000000'
+- 'head ZOMBIE 21400'

@@ -47,47 +47,53 @@ farms:
     data: 0
     display: '&aCacto'
     currency: coins
-    # ✅ ANCORA NOVA (06/08/2026), decisao do dono: *"o que ele ganha minerando
-    # em 5 minutos na mina ou na fazenda ele tem que ganhar em 1 minuto com uma
-    # farm de cacto basica, coisa de 20 andares"*.
+    # ✅ ANCORA (06/08/2026): o cacto e 19% da renda diaria da casa.
     #
-    #   renda ativa da mina no dia 1 .... 69.444 coins/h = 1.157 coins/min
-    #   5 minutos de mina ............... 5.787 coins
-    #   alvo: isso em 1 minuto .......... 347.222 coins/h
-    #   farm de 20 andares .............. 180 pontas x 141 = 25.380 cactos/h
-    #   sell-price ...................... 347.222 / 25.380 = 13,68
+    #   casa/dia no T1 ......... 1.500.000
+    #   cacto = 19% ............   285.000 por dia
+    #   farm do dia 1 .......... 2.500 cactos/min = 3.600.000/dia
+    #   sell-price ............. 285.000 / 3.600.000 = 0,0792
     #
-    # O valor unitario alto E a correcao da lentidao, nao um exagero: a mina
-    # entrega ~70.000 blocos/h contra 25.380 cactos/h, e cada ponta solta uma
-    # unidade a cada ~25s. O cacto vale ~14x o bloco de minerio porque sai ~14x
-    # mais devagar por unidade de renda.
+    # ⚠️ POR QUE NAO E A REGUA DOS "5 MINUTOS". O dono pediu *"o que ele ganha
+    # minerando em 5 minutos ele tem que ganhar em 1 minuto de cacto"*. Medido:
+    # essa regua e IMPOSSIVEL de satisfazer junto com a reparticao por via, e
+    # nao por causa dos numeros — por causa do tempo. O cacto roda 24h e a mina
+    # 3h, ou seja 8x mais tempo; pedir 5x de taxa em cima disso da 40x de renda
+    # total, e a mineracao inteira e 14% da casa. Nao existe reparticao em que
+    # os dois caibam em 100%.
     #
-    # A ancora ANTERIOR era "15% da renda diaria / 24h", que dava 0,499 — este
-    # numero e 27,4x aquele, e a escada de buff da temporada multiplica pelo
-    # mesmo fator (ver a regua em 11-CACTO.md).
+    # ✅ A saida, decidida pelo dono: medir a via POR DIA e nao por minuto. Numa
+    # via AFK o jogador nao cronometra — ele olha quanto entrou no dia. E por
+    # dia a hierarquia que ele queria acontece: cacto (19%) rende 1,36x a
+    # mineracao (14%), e os spawners (28,9%) rendem mais que os dois.
     #
-    # ✅ OS 141 CACTOS/H POR PONTA NAO SAO ESTIMATIVA — sao derivados dos dois
-    # parametros do servidor, informados pelo dono em 06/08/2026:
+    # A ESCADA DE BUFF e 5,51x por dia — derivada, nao escolhida: a economia
+    # cresce 6,146x/dia e a farm cresce 1,115x/dia (de 5% para 40% do maximo ao
+    # longo da temporada), entao o preco carrega a diferenca. Conferido: no dia
+    # 20 a via entrega 2,742x10^20, contra o alvo de 2,742x10^20.
     #
-    #   gamerule randomTickSpeed ......... 8
-    #   spigot.yml growth.cactus-modifier  20000  (PandaSpigot 1.8)
+    # ✅ A TAXA DE COLHEITA E MEDIDA, NAO DERIVADA (dono, 06/08/2026):
     #
-    #   random ticks por bloco = 20 ticks/s x 8 / 4096 blocos da secao
-    #                          = 0,0390625/s = 1 a cada 25,6 s
-    #   o cacto pede 16 estagios de `age` para soltar uma unidade, e o modifier
-    #   de 200x estoura os 16 num unico random tick — ou seja SATURA.
-    #   → 3600 x 0,0390625 = 140,6 cactos/h por ponta
+    #   144.345 cactos colocados  →  50.000 cactos por MINUTO
+    #   = 3,00x10^6 por hora  →  20,8 cactos/h POR CACTO COLOCADO
+    #   = 0,3464 por minuto por cacto colocado
     #
-    # ⚠️ O modifier esta 12,5x ALEM do necessario: 1600 ja satura. Acima disso o
-    # gargalo e o random tick e subir o numero nao acelera nada.
+    # ⚠️ ESTA MEDICAO DERRUBOU A DERIVACAO TEORICA, e vale registrar para
+    # ninguem refazer a conta errada. Pelos parametros do servidor
+    # (`randomTickSpeed: 8` + `growth.cactus-modifier: 20000` no spigot.yml do
+    # PandaSpigot) a conta dava 140,6/h por ponta:
     #
-    # ⚠️ A UNICA alavanca real para acelerar cacto e o `randomTickSpeed`, e ele
-    # e global — mexer nele acelera junto trigo, cenoura, fogo, gelo e folhas.
-    # Nao existe jeito de acelerar so o cacto por config.
+    #   random ticks por bloco = 20 ticks/s x 8 / 4096 = 1 a cada 25,6 s
+    #   supondo que o modifier de 200x estoura os 16 estagios de `age` num
+    #   unico random tick, ou seja que SATURA → 140,6/h por ponta
     #
-    # O teste M2 vira CONFIRMACAO, nao descoberta. Se ainda assim a taxa medida
-    # for k x esta, este numero divide por k e a escada de valor nao muda — ela
-    # e razao pura.
+    # A medicao da 20,8/h por cacto colocado — 6,8x menos. Mesmo assumindo
+    # colunas de 3 (so o topo cresce, `world.isEmpty(pos.up())`), sobra 62,4/h
+    # por ponta, ainda 2,3x abaixo. Conclusao: **o modifier NAO satura** como a
+    # teoria supunha. Use SEMPRE o numero medido.
+    #
+    # ⚠️ A unidade certa e "por CACTO COLOCADO", nao "por ponta": e o que o dono
+    # consegue contar no plot e nao depende de saber a geometria da farm.
     #
     # ⚠️ Este numero e uma alavanca VIVA: ele sobe por update ao longo da
     # temporada. A amplitude da via mora aqui desde que o `warehouse.sellmult`
@@ -98,4 +104,4 @@ farms:
     # rende ~123.000 coins/dia (3 coletas manuais); com ela, 8,33 MILHOES —
     # 68x mais, ou 22x a renda diaria de toda a casa. Um item de 250 de cash
     # virou a maior alavanca do servidor. Ver 11-CACTO.md.
-    sell-price: 13.68
+    sell-price: 0.0792

@@ -19,8 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.9 true'
 - 'lp user {player} permission set warehouse.bonus.9 true'
 - 'lp user {player} permission set fishing.bonus.9 true'
+- 'lp user {player} permission set machines.buy.diamante true'
 - 'lp user {player} permission set spawner.buy.skeleton true'
 
 costs:
-- 'coins 27300000000'
-- 'head BAT 8200'
+- 'coins 61100000000'
+- 'head BAT 5860'

@@ -128,7 +128,7 @@ rewards:
     type: CURRENCY
     chance: 9
     currency-id: coins
-    amount: '1000'
+    amount: '3330'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -137,7 +137,7 @@ rewards:
     type: CURRENCY
     chance: 5.4
     currency-id: coins
-    amount: '2000'
+    amount: '6670'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -146,7 +146,7 @@ rewards:
     type: CURRENCY
     chance: 3.6
     currency-id: coins
-    amount: '4000'
+    amount: '13300'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

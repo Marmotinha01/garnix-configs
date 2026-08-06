@@ -9,7 +9,7 @@ display: "&2{translated}"
 
 texture: "783aaaee22868cafdaa1f6f4a0e56b0fdb64cd0aeaabd6e83818c312ebe66437"
 
-release: "14/08/2026 20:00"
+release: "21/08/2026 20:00"
 
 rank: "&2[Zumbi]"
 
@@ -18,13 +18,12 @@ permissions:
   kill: ""
 
 costs:
-  coins: '135000000'
+  coins: '324000000'
   dracmas: '683'
 
 drops:
-  coins:
     chance: 100
-    amount: '9960'
+    amount: '11700'
   dracmas:
     chance: 1
     amount: '8'
@@ -58,46 +57,62 @@ upgrades:
     1:
       value: 96
       costs:
-        coins: '33200000'
+        coins: '79800000'
     2:
       value: 144
       costs:
-        coins: '116000000'
+        coins: '279000000'
     3:
       value: 216
       costs:
-        coins: '407000000'
+        coins: '978000000'
     4:
       value: 288
       costs:
-        coins: '1420000000'
+        coins: '3410000000'
     5:
       value: 384
       costs:
-        coins: '4980000000'
+        coins: '12000000000'
     6:
       value: 512
       costs:
-        coins: '17400000000'
+        coins: '41800000000'
         dracmas: '134000'
   mob-stack:
     base: 512
     1:
       value: -1
       costs:
-        coins: '6200000000'
+        coins: '14900000000'
         dracmas: '34100'
+  # ⚠️ O parser so aceita SEGUNDOS INTEIROS (DurationFormatter:37),
+  # entao entre o base de 10s e o teto de 4s
+  # existem exatamente 6 degraus possiveis. Esta escada usa 4 deles.
+  #
+  # ✅ Decisao do dono (06/08/2026): mais degraus, mais atraentes conforme o
+  # tier. O TETO segue 4s em todos os 20 — o que cresce e a GRANULARIDADE,
+  # entao o jogador de tier alto sente progresso mais vezes sem que o
+  # throughput final mude e sem refazer a calibragem dos drops.
+  #
+  # `speed` e a unica trilha que MULTIPLICA sem armadilha: os outros dois
+  # sao tetos que brigam no min(A,B). O custo total foi preservado e
+  # repartido geometricamente, com o ultimo degrau valendo 5x o primeiro.
   speed:
     1:
       delay: "8s"
       costs:
-        coins: '642000000'
+        coins: '2430000000'
     2:
-      delay: "6s"
+      delay: "7s"
       costs:
-        coins: '2250000000'
+        coins: '4160000000'
     3:
+      delay: "5s"
+      costs:
+        coins: '7110000000'
+    4:
       delay: "4s"
       costs:
-        coins: '7860000000'
+        coins: '12200000000'
         dracmas: '59200'

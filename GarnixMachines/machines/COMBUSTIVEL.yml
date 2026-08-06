@@ -13,7 +13,7 @@ display: '&8{translated}'
 texture: "150c11b7c9b9070034f44721c6ea9d1b7775283014979f2d8126bb5a1765188e"
 
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "12/08/2026 20:00"
+release: ''
 
 rank: ''
 
@@ -42,12 +42,37 @@ machine-item:
 costs: {}
 
 # ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
+#
+# ✅ RECALIBRADA em 06/08/2026. Decisão do dono: *"combustível não deve ser algo
+# raro nem impossível para ficar alimentando as máquinas, porém não é comum o
+# jogador acumular grandes quantias para ficar usando infinitamente sem precisar
+# do combustível infinito, mas ele deve sim sempre ter em mãos"*.
+#
+# A regra que isso vira: OFERTA ≈ CONSUMO. Sem folga não dá para estocar, e sem
+# déficit as máquinas não param.
+#
+#   consumo endgame (15 de coins + 4 secundárias + especiais) .. 165.848 L/dia
+#   recompensas (crates, caixas, bosses, a ~1.572 chaves/dia) ..  30.000 L/dia
+#   ---------------------------------------------------------------------------
+#   a máquina precisa cobrir ................................... 135.848 L/dia
+#   com stack 64 e ciclo de 60s: 1,47 L por ciclo
+#
+# ⚠️ ANTES ELA ESTAVA EM 28% DO CONSUMO. Era `chance: 0.1` com `amount: 2`, ou
+# seja produzia em 10% dos ciclos: 18.432 L/dia contra os 165.848 necessários.
+# O jogador com o parque completo ficava sem combustível 72% do tempo — e o
+# comentário antigo ("~53% do consumo de 4 blocos") media contra 4 blocos, não
+# contra o parque inteiro.
+#
+# A chance foi para 1.0 e o valor para o `amount`: produção constante é mais
+# legível que uma loteria por ciclo, e o número passa a ser a alavanca única.
 drops:
   combustivel:
     type: COMMAND
-    chance: 0.1
-    # ~768 L/h num stack de 64 = ~53% do consumo de 4 blocos
-    amount: '2'
+    chance: 1.0
+    # 1,47 L x 64 de stack x 1.440 ciclos/dia = 135.475 L/dia, ou 82% do consumo
+    # endgame. Os outros 18% vêm das recompensas — que é o que mantém as tabelas
+    # de loot relevantes em vez de decorativas.
+    amount: '1.47'
     icon:
       display: '&eCombustível'
       material: COAL

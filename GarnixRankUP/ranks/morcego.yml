@@ -19,8 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.5 true'
 - 'lp user {player} permission set warehouse.bonus.5 true'
 - 'lp user {player} permission set fishing.bonus.5 true'
+- 'lp user {player} permission set machines.buy.ferro true'
 - 'lp user {player} permission set spawner.buy.bat true'
 
 costs:
-- 'coins 14300000'
-- 'head SHEEP 2500'
+- 'coins 42800000'
+- 'head SHEEP 1790'

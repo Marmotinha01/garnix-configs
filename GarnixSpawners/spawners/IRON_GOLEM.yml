@@ -9,7 +9,7 @@ display: "&7&l{translated}"
 
 texture: "da6e0429ccaabb6f5f0c5d513c795bed6d80fce72f57f4bc3a616aee23e12572"
 
-release: "24/08/2026 20:00"
+release: "31/08/2026 20:00"
 
 rank: "&7&l[Golem]"
 
@@ -18,13 +18,12 @@ permissions:
   kill: ""
 
 costs:
-  coins: '10600000000000000'
+  coins: '12300000000000000'
   dracmas: '5190'
 
 drops:
-  coins:
     chance: 100
-    amount: '215000000000'
+    amount: '35700000000'
   dracmas:
     chance: 1
     amount: '18'
@@ -58,46 +57,70 @@ upgrades:
     1:
       value: 96
       costs:
-        coins: '5290000000000000'
+        coins: '6140000000000000'
     2:
       value: 144
       costs:
-        coins: '18500000000000000'
+        coins: '21500000000000000'
     3:
       value: 216
       costs:
-        coins: '64800000000000000'
+        coins: '75200000000000000'
     4:
       value: 288
       costs:
-        coins: '227000000000000000'
+        coins: '263000000000000000'
     5:
       value: 384
       costs:
-        coins: '793000000000000000'
+        coins: '920000000000000000'
     6:
       value: 512
       costs:
-        coins: '2780000000000000000'
+        coins: '3230000000000000000'
         dracmas: '1740000'
   mob-stack:
     base: 512
     1:
       value: -1
       costs:
-        coins: '988000000000000000'
+        coins: '1150000000000000000'
         dracmas: '444000'
+  # ⚠️ O parser so aceita SEGUNDOS INTEIROS (DurationFormatter:37),
+  # entao entre o base de 10s e o teto de 4s
+  # existem exatamente 6 degraus possiveis. Esta escada usa 6 deles.
+  #
+  # ✅ Decisao do dono (06/08/2026): mais degraus, mais atraentes conforme o
+  # tier. O TETO segue 4s em todos os 20 — o que cresce e a GRANULARIDADE,
+  # entao o jogador de tier alto sente progresso mais vezes sem que o
+  # throughput final mude e sem refazer a calibragem dos drops.
+  #
+  # `speed` e a unica trilha que MULTIPLICA sem armadilha: os outros dois
+  # sao tetos que brigam no min(A,B). O custo total foi preservado e
+  # repartido geometricamente, com o ultimo degrau valendo 5x o primeiro.
   speed:
     1:
+      delay: "9s"
+      costs:
+        coins: '128000000000000000'
+    2:
       delay: "8s"
       costs:
-        coins: '102000000000000000'
-    2:
+        coins: '176000000000000000'
+    3:
+      delay: "7s"
+      costs:
+        coins: '243000000000000000'
+    4:
       delay: "6s"
       costs:
-        coins: '358000000000000000'
-    3:
+        coins: '335000000000000000'
+    5:
+      delay: "5s"
+      costs:
+        coins: '463000000000000000'
+    6:
       delay: "4s"
       costs:
-        coins: '1250000000000000000'
+        coins: '639000000000000000'
         dracmas: '769000'

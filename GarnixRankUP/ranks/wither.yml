@@ -19,8 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.20 true'
 - 'lp user {player} permission set warehouse.bonus.20 true'
 - 'lp user {player} permission set fishing.bonus.20 true'
+- 'lp user {player} permission set machines.buy.adamantita true'
 - 'lp user {player} permission set spawner.buy.wither true'
 
 costs:
-- 'coins 1000000000000000000'
-- 'head SPIDER 52000'
+- 'coins 28900000000000000000'
+- 'head SPIDER 37100'

@@ -22,5 +22,5 @@ commands:
 - 'lp user {player} permission set spawner.buy.slime true'
 
 costs:
-- 'coins 7890000000000'
-- 'head OCELOT 15000'
+- 'coins 14200000000000'
+- 'head OCELOT 10700'

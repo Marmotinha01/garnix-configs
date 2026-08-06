@@ -304,32 +304,32 @@ rewards:
       - '&fQuantia: &7x{amount}'
 
   # -- Coins
-  coins-2000:
+  coins-6920:
     type: CURRENCY
     chance: 5.5
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '2000'
+    amount: '6920'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-4000:
+  coins-13800:
     type: CURRENCY
     chance: 3
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '4000'
+    amount: '13800'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-8000:
+  coins-27700:
     type: CURRENCY
     chance: 1.5
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '8000'
+    amount: '27700'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

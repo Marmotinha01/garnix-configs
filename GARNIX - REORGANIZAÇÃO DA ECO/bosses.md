@@ -1,5 +1,18 @@
 # GARNIX — Tabela de Recompensas dos Bosses
 
+> 🚩 **As recompensas em COINS foram reescaladas em 06/08/2026** contra a [tabela-mestra.md](tabela-mestra.md). As tabelas de valor abaixo mostram os números antigos; os pesos, chances e a estrutura continuam válidos.
+>
+> Fator aplicado — a casa/dia quadruplicou no dia 1 mas a curva ficou mais suave (6,146 contra 6,61), então o fator depende do tier em que cada tabela é aberta:
+>
+> | Tabela | Tier de referência | Fator |
+> |---|---|---|
+> | Crates | dia 1 (não têm gate de tier) | **×4,00** |
+> | Caixas Tier I | dia 3 | ×3,46 |
+> | Caixas Tier II | dia 8 | ×2,39 |
+> | Bosses | tier médio da banda | ×3,33 a ×1,07 |
+>
+> As chaves de cada recompensa foram renomeadas para bater com o novo valor (`coins-250` → `coins-1000`).
+
 > Escopo: `GarnixBosses/bosses/*.yml` — 5 bosses. **Refatoração aplicada** em 05/08/2026.
 > Os 3 engatilhados (`Algoz` 35k · `Flagelo` 62k · `Leviatã` 110k) continuam fora do ar, em
 > [GARNIX - ECONOMIA/bosses-engatilhados/](../GARNIX%20-%20ECONOMIA/bosses-engatilhados/), e **não** seguem esta grade ainda.

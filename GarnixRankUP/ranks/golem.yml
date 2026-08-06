@@ -22,5 +22,5 @@ commands:
 - 'lp user {player} permission set spawner.buy.iron_golem true'
 
 costs:
-- 'coins 658000000000000000'
-- 'head SKELETON 40000'
+- 'coins 764000000000000000'
+- 'head SKELETON 28600'

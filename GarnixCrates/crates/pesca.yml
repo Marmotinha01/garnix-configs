@@ -109,29 +109,29 @@ key-item:
 # todo item fisico do servidor — skin e armadura passam a quantia sorteada.
 rewards:
   # -- COMUM ---------------------------------------------------- 76,83%
-  coins-2500:
+  coins-10000:
     type: CURRENCY
     chance: 27.17
     currency-id: coins
-    amount: '2500'
+    amount: '10000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-5000:
+  coins-20000:
     type: CURRENCY
     chance: 13.3
     currency-id: coins
-    amount: '5000'
+    amount: '20000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-10000:
+  coins-40000:
     type: CURRENCY
     chance: 3.9
     currency-id: coins
-    amount: '10000'
+    amount: '40000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

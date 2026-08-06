@@ -13,9 +13,9 @@ texture: ""
 
 # Máquina L libera no dia 17 da temporada.
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "23/08/2026 20:00"
+release: "29/08/2026 20:00"
 
-rank: '&e[Prestígio 230]'
+rank: '&e[Rank 16]'
 
 # ⚠️ Gate autoritativo. Concedida no prestígio 230 — DEPENDE DO C6 (listas de comando
 # por nível de prestígio). Sem o C6 esta máquina não tem rota.
@@ -44,7 +44,7 @@ machine-item:
   - '&aColoque no seu terreno.'
 
 costs:
-  coins: '11700000000000000'
+  coins: '2370000000000000'
 
 # ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
 # Convenção OPOSTA à dos spawners, que usam 0-100. Escrever 5 aqui significa
@@ -54,4 +54,4 @@ drops:
     type: CURRENCY
     currency-id: coins
     chance: 1.0
-    amount: '1410000000000'
+    amount: '39700000000'

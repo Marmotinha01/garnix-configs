@@ -15,5 +15,5 @@ commands:
 - 'lp user {player} permission set spawner.buy.pig true'
 
 costs:
-- 'coins 49600'
-- 'head RABBIT 380'
+- 'coins 184000'
+- 'head RABBIT 271'

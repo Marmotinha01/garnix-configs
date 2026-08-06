@@ -57,7 +57,7 @@ box-item:
 # linha, sem nenhuma linha extra.
 #
 # ⚠️ MOEDA E ESCADA DE 3 DEGRAUS espelhando a crate farm — os mesmos
-# 250·500·1.000 coins e 150·300·600 sementes de la, multiplicados por 3. A
+# coins e as sementes da crate, os coins ja na ancora de 06/08/2026. A
 # Tier II usa a mesma escada da crate multiplicada por 5. Se mexer num
 # degrau, mexa nos tres: a familia inteira e que da a escada.
 #
@@ -311,32 +311,32 @@ rewards:
       - '&8 ▪ &fTipo: &eEnxada '
 
   # -- MOEDAS ------------------------------------------------------ 32%
-  coins-750:
+  coins-2590:
     type: CURRENCY
     chance: 8
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '750'
+    amount: '2590'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-1500:
+  coins-5190:
     type: CURRENCY
     chance: 4.8
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '1500'
+    amount: '5190'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-3000:
+  coins-10400:
     type: CURRENCY
     chance: 3.2
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '3000'
+    amount: '10400'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

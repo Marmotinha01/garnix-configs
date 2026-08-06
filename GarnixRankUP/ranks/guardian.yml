@@ -19,8 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.13 true'
 - 'lp user {player} permission set warehouse.bonus.13 true'
 - 'lp user {player} permission set fishing.bonus.13 true'
+- 'lp user {player} permission set machines.buy.quartzo true'
 - 'lp user {player} permission set spawner.buy.guardian true'
 
 costs:
-- 'coins 52200000000000'
-- 'head WOLF 18000'
+- 'coins 87100000000000'
+- 'head WOLF 12900'

@@ -431,32 +431,32 @@ rewards:
       - '&8 ▪ &fTipo: &bVara de Pesca '
 
   # -- MOEDAS ---------------------------------------------------- 27,5%
-  coins-7500:
+  coins-25900:
     type: CURRENCY
     chance: 6.9
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '7500'
+    amount: '25900'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-15000:
+  coins-51900:
     type: CURRENCY
     chance: 4.1
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '15000'
+    amount: '51900'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-30000:
+  coins-104000:
     type: CURRENCY
     chance: 2.75
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '30000'
+    amount: '104000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

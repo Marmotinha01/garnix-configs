@@ -56,16 +56,37 @@ enchantments:
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
+    # ✅ De 5 para 10 degraus em 06/08/2026, acompanhando pilhagem e ceifador —
+    # o teto (∞) NAO muda e nao vai mudar, so o caminho ate ele ficou mais longo.
+    #
+    # ⚠️ O ∞ NAO e "um numero grande": `MobManager:620` tem um caminho de codigo
+    # separado para `value: -1` que pega `mob.getStackSize()` inteiro, e o
+    # killCount e BigDecimal — nao existe teto de int para estourar. Uma pilha de
+    # bilhoes morre num golpe igual.
+    #
+    # ⚠️ E o ∞ e o par do upgrade `mob-stack: -1`: com o buffer ilimitado a pilha
+    # cresce enquanto o jogador esta fora, e so este nivel limpa o acumulo num
+    # golpe. Comprar um sem o outro e acumular o que nao se consegue colher.
     levels:
       '1':
         value: 4
       '2':
-        value: 16
+        value: 8
       '3':
-        value: 64
+        value: 16
       '4':
-        value: 256
+        value: 32
       '5':
+        value: 64
+      '6':
+        value: 128
+      '7':
+        value: 256
+      '8':
+        value: 512
+      '9':
+        value: 2048
+      '10':
         value: -1
         # O "x" do value-format cola no numero, entao aqui nao cabe frase: "-1"
         # sairia errado e "a pilha inteira" viraria "xa pilha inteira".
@@ -91,13 +112,63 @@ enchantments:
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
+    # ✅ Decisao do dono (06/08/2026): *"os players pediriam pilhagem infinita
+    # pois eles gostam bastante, mas podemos ir controlando definindo um valor
+    # bom e se necessario ir aumentando o maximo"*.
+    #
+    # Foi de 3 para 10 degraus SEM mexer no teto: o jogador evolui 10 vezes em
+    # vez de 3, e o 2,0 continua sendo o que o orcamento de 8,10x da via passiva
+    # assume. Nada de drop precisou ser recalculado.
+    #
+    # ⚠️ COMO SUBIR O TETO DEPOIS (o "ir aumentando o maximo"): acrescentar
+    # niveis '11', '12'... e retrocompativel — `MobConfig.getMaxLevel` devolve o
+    # ultimo nivel declarado, entao quem esta no 10 continua no 10 e passa a ver
+    # o 11. MAS cada ponto acima de 2,0 infla a via inteira: subir para 2,5
+    # exige dividir `drops.coins.amount` dos 20 spawners por 1,25. O teto e uma
+    # ALAVANCA VIVA, igual ao `sell-price` do cacto — mexe-se nele de proposito,
+    # com o recalculo junto, nunca sozinho.
+    #
+    # ⚠️ Os niveis tem que ser CONTIGUOS (1, 2, 3...): o upgrade sobe de um em
+    # um, entao um pulo de 10 para 12 deixa o 12 inalcancavel para sempre.
+    # ✅ Decisao do dono (06/08/2026): *"a pilhagem nao vai ter teto 2x, ate
+    # porque os players nao vao gostar"*. O teto foi de 2,0x para 11,0x.
+    #
+    # ⚠️ A ESCADA E GEOMETRICA, +26,8% por degrau, e nao +1x por nivel. Com o
+    # passo fixo de +1x o primeiro degrau valeria +50% (2->3) e o ultimo +10%
+    # (10->11): o jogador sentiria os livros valendo cada vez menos, justamente
+    # quando ficam mais dificeis de juntar. Geometrico, todo livro vale o mesmo.
+    #
+    # 🚩 O QUE ISSO ARRASTOU: a pilha de multiplicadores da via passiva foi de
+    # 8,10x (1,35 bonus x 2,0 pilhagem x 3,0 booster) para 44,55x. Os
+    # `drops.coins.amount` dos 20 spawners foram recalculados no mesmo passo,
+    # divididos por `5,5^((N-1)/19)` — interpolado, porque a pilha cresce com o
+    # tier: o T1 nao muda e o T20 divide por 5,5 inteiro.
+    #
+    # ⚠️ E o efeito que nao se recalcula: a distancia entre quem tem a lamina
+    # maxada e quem nao tem saiu de 2,0x para 11,0x. Como os drops assumem a
+    # pilha cheia, quem ainda nao juntou os 10 livros fica 11x abaixo do alvo.
+    # E o preco de a pilhagem ser o premio grande da via — decisao consciente.
     levels:
       '1':
-        value: 1.25
+        value: 1.3
       '2':
-        value: 1.5
+        value: 1.65
       '3':
-        value: 2.0
+        value: 2.1
+      '4':
+        value: 2.65
+      '5':
+        value: 3.35
+      '6':
+        value: 4.25
+      '7':
+        value: 5.4
+      '8':
+        value: 6.85
+      '9':
+        value: 8.7
+      '10':
+        value: 11.0
   # ⚠️ A lore MENTIA. Dizia "chance de abater o mob com um golpe so", mas
   # MobManager:634-641 e claro: e chance de DOBRAR as cabecas do abate.
   # Quem abate em um golpe e o `massacre`, nao este.
@@ -120,10 +191,43 @@ enchantments:
       - ''
       - '&7Arraste sobre a lâmina'
       - '&7para aplicar o livro.'
+    # ✅ Decisao do dono (06/08/2026): mesmo esquema da pilhagem, *"os jogadores
+    # gostam de bastante niveis"* — mas com um TETO ABSOLUTO menor: *"teto
+    # maximo para ceifador 50%, mas nao nos niveis iniciais que configurarmos e
+    # sim ao longo dos updates para ir aumentando o nivel"*.
+    #
+    #   configurado AGORA ...... 10 degraus, 3% -> 25%   (fator esperado 1,25x)
+    #   teto ABSOLUTO da via ... 50%                     (fator esperado 1,50x)
+    #   espaco de update ....... os degraus de 25% a 50%
+    #
+    # ⚠️ O TETO CAIU DE 75% PARA 50%, e isso arrasta o eixo de cabecas junto. O
+    # modelo da Fase 3a derivou o custo em `head` dos 19 ranks assumindo fator
+    # 1,75x (75% de chance de dobrar). Com o configurado de hoje o fator e 1,25x,
+    # ou seja a producao de cabecas cai 28,6% — e sem ajuste a escada de rank
+    # ficaria ~40% mais lenta. Os custos em `head` foram multiplicados por
+    # 1,25/1,75 = 0,714 nos 19 arquivos de rank, no mesmo passo.
+    #
+    # ⚠️ QUANDO SUBIR O TETO por update, o mesmo acerto vale ao contrario: ir de
+    # 25% para 50% leva o fator de 1,25x para 1,50x, entao os custos em cabeca
+    # sobem 20% (1,50/1,25) junto. Teto e alavanca viva — nunca sozinho.
     levels:
       '1':
-        chance: 25
+        chance: 3
       '2':
-        chance: 50
+        chance: 5
       '3':
-        chance: 75
+        chance: 8
+      '4':
+        chance: 10
+      '5':
+        chance: 13
+      '6':
+        chance: 15
+      '7':
+        chance: 18
+      '8':
+        chance: 20
+      '9':
+        chance: 23
+      '10':
+        chance: 25

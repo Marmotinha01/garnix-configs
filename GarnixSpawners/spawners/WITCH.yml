@@ -9,7 +9,7 @@ display: "&d{translated}"
 
 texture: "baf818b04d6ae98a69ad8d9463d8d0379921d3eb79222e1c6272f65372d80775"
 
-release: "22/08/2026 20:00"
+release: "29/08/2026 20:00"
 
 rank: "&d[Bruxa]"
 
@@ -18,13 +18,12 @@ permissions:
   kill: ""
 
 costs:
-  coins: '271000000000000'
+  coins: '364000000000000'
   dracmas: '3750'
 
 drops:
-  coins:
     chance: 100
-    amount: '6900000000'
+    amount: '1780000000'
   dracmas:
     chance: 1
     amount: '16'
@@ -58,46 +57,70 @@ upgrades:
     1:
       value: 96
       costs:
-        coins: '121000000000000'
+        coins: '162000000000000'
     2:
       value: 144
       costs:
-        coins: '423000000000000'
+        coins: '568000000000000'
     3:
       value: 216
       costs:
-        coins: '1480000000000000'
+        coins: '1990000000000000'
     4:
       value: 288
       costs:
-        coins: '5190000000000000'
+        coins: '6970000000000000'
     5:
       value: 384
       costs:
-        coins: '18200000000000000'
+        coins: '24400000000000000'
     6:
       value: 512
       costs:
-        coins: '63500000000000000'
+        coins: '85300000000000000'
         dracmas: '1150000'
   mob-stack:
     base: 512
     1:
       value: -1
       costs:
-        coins: '22600000000000000'
+        coins: '30300000000000000'
         dracmas: '293000'
+  # ⚠️ O parser so aceita SEGUNDOS INTEIROS (DurationFormatter:37),
+  # entao entre o base de 10s e o teto de 4s
+  # existem exatamente 6 degraus possiveis. Esta escada usa 6 deles.
+  #
+  # ✅ Decisao do dono (06/08/2026): mais degraus, mais atraentes conforme o
+  # tier. O TETO segue 4s em todos os 20 — o que cresce e a GRANULARIDADE,
+  # entao o jogador de tier alto sente progresso mais vezes sem que o
+  # throughput final mude e sem refazer a calibragem dos drops.
+  #
+  # `speed` e a unica trilha que MULTIPLICA sem armadilha: os outros dois
+  # sao tetos que brigam no min(A,B). O custo total foi preservado e
+  # repartido geometricamente, com o ultimo degrau valendo 5x o primeiro.
   speed:
     1:
+      delay: "9s"
+      costs:
+        coins: '3390000000000000'
+    2:
       delay: "8s"
       costs:
-        coins: '2340000000000000'
-    2:
+        coins: '4680000000000000'
+    3:
+      delay: "7s"
+      costs:
+        coins: '6450000000000000'
+    4:
       delay: "6s"
       costs:
-        coins: '8190000000000000'
-    3:
+        coins: '8900000000000000'
+    5:
+      delay: "5s"
+      costs:
+        coins: '12300000000000000'
+    6:
       delay: "4s"
       costs:
-        coins: '28700000000000000'
+        coins: '16900000000000000'
         dracmas: '507000'

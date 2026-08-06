@@ -169,66 +169,56 @@ prestige:
   #    comando apontando para um id inexistente falharia em silêncio, então eles
   #    entram quando o alvo entrar. As 12 máquinas já estão vivas.
   rewards:
+    # ⚠️ ERAM 12 MAQUINAS AQUI. Em 06/08/2026 QUATRO sairam para gate de RANK —
+    # ouro, redstone, lapis e diamante — por decisao do dono: ele queria maquina
+    # liberando TODO dia a partir do dia 3, e o prestigio nao consegue fazer isso.
+    #
+    # O motivo e de calendario, nao de gosto: o primeiro prestigio so acontece
+    # por volta do DIA 10, porque exige chegar ao rank 20, que exige cabeca de
+    # SPIDER — spawner que so abre no dia 10. Enquanto o gate for prestigio, os
+    # dias 4 a 9 nao tem como receber maquina nenhuma.
+    #
+    # Ficou: 7 maquinas de RANK (dias 3-9) + 8 de PRESTIGIO (dias 10-20).
     '1':    # dia 10
       commands:
-      - 'lp user {player} permission set machines.buy.ouro true'
     # '10':  trocador de dracmas
     # - 'runas give {player} <tipo> 1'   # ⏳ Fase 5
-    '20':   # dia 10
-      commands:
-      - 'lp user {player} permission set machines.buy.redstone true'
     # '35':  4o slot de booster
     # ⏳ nao existe permissao de slot de booster no codigo — precisaria de C novo
     '50':   # dia 11
       commands:
-      - 'lp user {player} permission set machines.buy.lapis true'
     # '65':  slot extra de maquina especial
     # ⏳ nao existe teto de slot de maquina — o dono definiu que nao tem teto
-    '80':   # dia 12
-      commands:
-      - 'lp user {player} permission set machines.buy.diamante true'
     # '95':  caixa de prestigio I
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '110':  # dia 13
       commands:
-      - 'lp user {player} permission set machines.buy.esmeralda true'
     # '125':  tag de prestigio I
     # ⏳ Fase 7, junto com as tags
     '140':  # dia 14
       commands:
-      - 'lp user {player} permission set machines.buy.obsidiana true'
     '155':    # +1 vaga de visitante
       commands:
       - 'mina giveslot {player} 1'
-    '170':  # dia 15
-      commands:
-      - 'lp user {player} permission set machines.buy.quartzo true'
     # '185':  caixa de prestigio II
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '200':  # dia 16
       commands:
-      - 'lp user {player} permission set machines.buy.titanio true'
     # '215':  tag de prestigio II
     # ⏳ Fase 7
     '230':  # dia 17
       commands:
-      - 'lp user {player} permission set machines.buy.rubi true'
     '245':    # +1 vaga de visitante
       commands:
       - 'mina giveslot {player} 1'
-    '260':  # dia 18
-      commands:
-      - 'lp user {player} permission set machines.buy.safira true'
     # '275':  tag de prestigio III
     # ⏳ Fase 7
     '290':  # dia 19
       commands:
-      - 'lp user {player} permission set machines.buy.platina true'
     # '305':  caixa de prestigio III
     # - 'caixas give {player} prestigio 1'   # ⏳ Fase 5
     '320':  # dia 20
       commands:
-      - 'lp user {player} permission set machines.buy.adamantita true'
     # '345':  TETO da temporada — titulo
     # ⏳ Fase 7
 

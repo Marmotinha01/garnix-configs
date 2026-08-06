@@ -17,7 +17,7 @@ display: '&b{translated}'
 texture: "a61b98d8934900a08ab7c0d60f3476c569bf7ff637196dce644e8cc4b7ba325a"
 
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "18/08/2026 20:00"
+release: ''
 
 rank: ''
 

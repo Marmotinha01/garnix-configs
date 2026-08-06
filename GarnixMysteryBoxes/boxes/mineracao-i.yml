@@ -317,32 +317,32 @@ rewards:
       - '&8 ▪ &fTipo: &6Picareta '
 
   # -- MOEDAS --------------------------------------------------- 28,16%
-  coins-750:
+  coins-2590:
     type: CURRENCY
     chance: 7.04
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '750'
+    amount: '2590'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-1500:
+  coins-5190:
     type: CURRENCY
     chance: 4.22
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '1500'
+    amount: '5190'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-3000:
+  coins-10400:
     type: CURRENCY
     chance: 2.82
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '3000'
+    amount: '10400'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

@@ -19,9 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.11 true'
 - 'lp user {player} permission set warehouse.bonus.11 true'
 - 'lp user {player} permission set fishing.bonus.11 true'
+- 'lp user {player} permission set machines.buy.obsidiana true'
 - 'lp user {player} permission set spawner.buy.pig_zombie true'
-- 'lp user {player} permission set machines.buy.pedra true'
 
 costs:
-- 'coins 1190000000000'
-- 'head OCELOT 13000'
+- 'coins 2310000000000'
+- 'head OCELOT 9290'

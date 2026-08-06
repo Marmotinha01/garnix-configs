@@ -9,7 +9,7 @@ display: "&7{translated}"
 
 texture: "c1db38ef3c1a1d59f779a0cd9f9e616de0cc9acc7734b8facc36fc4ea40d0235"
 
-release: "07/08/2026 20:00"
+release: "14/08/2026 20:00"
 
 rank: "&7[Coelho]"
 
@@ -18,12 +18,11 @@ permissions:
   kill: ""
 
 costs:
-  coins: '879'
+  coins: '3520'
 
 drops:
-  coins:
     chance: 100
-    amount: '0.447'
+    amount: '0.78'
   dracmas:
     chance: 1
     amount: '1'
@@ -57,46 +56,58 @@ upgrades:
     1:
       value: 96
       costs:
-        coins: '60'
+        coins: '240'
     2:
       value: 144
       costs:
-        coins: '211'
+        coins: '844'
     3:
       value: 216
       costs:
-        coins: '738'
+        coins: '2950'
     4:
       value: 288
       costs:
-        coins: '2580'
+        coins: '10300'
     5:
       value: 384
       costs:
-        coins: '9040'
+        coins: '36200'
     6:
       value: 512
       costs:
-        coins: '31600'
+        coins: '126000'
         dracmas: '1140'
   mob-stack:
     base: 512
     1:
       value: -1
       costs:
-        coins: '11300'
+        coins: '45200'
         dracmas: '290'
+  # ⚠️ O parser so aceita SEGUNDOS INTEIROS (DurationFormatter:37),
+  # entao entre o base de 10s e o teto de 4s
+  # existem exatamente 6 degraus possiveis. Esta escada usa 3 deles.
+  #
+  # ✅ Decisao do dono (06/08/2026): mais degraus, mais atraentes conforme o
+  # tier. O TETO segue 4s em todos os 20 — o que cresce e a GRANULARIDADE,
+  # entao o jogador de tier alto sente progresso mais vezes sem que o
+  # throughput final mude e sem refazer a calibragem dos drops.
+  #
+  # `speed` e a unica trilha que MULTIPLICA sem armadilha: os outros dois
+  # sao tetos que brigam no min(A,B). O custo total foi preservado e
+  # repartido geometricamente, com o ultimo degrau valendo 5x o primeiro.
   speed:
     1:
       delay: "8s"
       costs:
-        coins: '1160'
+        coins: '9490'
     2:
       delay: "6s"
       costs:
-        coins: '4070'
+        coins: '21200'
     3:
       delay: "4s"
       costs:
-        coins: '14300'
+        coins: '47400'
         dracmas: '503'

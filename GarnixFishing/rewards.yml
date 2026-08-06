@@ -349,7 +349,7 @@ rewards:
     xp: 8
     type: CURRENCY
     currency-id: coins
-    amount: '494'
+    amount: '847'
     display: '&7Moeda Enferrujada'
     icon:
       material: GOLD_NUGGET
@@ -365,7 +365,7 @@ rewards:
     xp: 9
     type: CURRENCY
     currency-id: coins
-    amount: '612'
+    amount: '1020'
     display: '&7Bolsa Encharcada'
     icon:
       material: GOLD_NUGGET
@@ -381,7 +381,7 @@ rewards:
     xp: 9
     type: CURRENCY
     currency-id: coins
-    amount: '1370'
+    amount: '2200'
     display: '&7Âncora Perdida'
     icon:
       material: GOLD_NUGGET
@@ -397,7 +397,7 @@ rewards:
     xp: 10
     type: CURRENCY
     currency-id: coins
-    amount: '3060'
+    amount: '4760'
     display: '&7Rede de Espólio'
     icon:
       material: GOLD_NUGGET
@@ -413,7 +413,7 @@ rewards:
     xp: 10
     type: CURRENCY
     currency-id: coins
-    amount: '11500'
+    amount: '17300'
     display: '&7Baú Afundado'
     icon:
       material: GOLD_NUGGET
@@ -429,7 +429,7 @@ rewards:
     xp: 11
     type: CURRENCY
     currency-id: coins
-    amount: '20800'
+    amount: '30400'
     display: '&7Lastro de Ferro'
     icon:
       material: GOLD_NUGGET
@@ -445,7 +445,7 @@ rewards:
     xp: 11
     type: CURRENCY
     currency-id: coins
-    amount: '46000'
+    amount: '65000'
     display: '&7Casco de Navio'
     icon:
       material: GOLD_NUGGET
@@ -461,7 +461,7 @@ rewards:
     xp: 12
     type: CURRENCY
     currency-id: coins
-    amount: '102000'
+    amount: '140000'
     display: '&fCofre Salgado'
     icon:
       material: IRON_INGOT
@@ -477,7 +477,7 @@ rewards:
     xp: 12
     type: CURRENCY
     currency-id: coins
-    amount: '226000'
+    amount: '300000'
     display: '&fArca de Madeira'
     icon:
       material: IRON_INGOT
@@ -493,7 +493,7 @@ rewards:
     xp: 13
     type: CURRENCY
     currency-id: coins
-    amount: '663000'
+    amount: '851000'
     display: '&fRelicário do Recife'
     icon:
       material: IRON_INGOT
@@ -509,7 +509,7 @@ rewards:
     xp: 13
     type: CURRENCY
     currency-id: coins
-    amount: '1310000'
+    amount: '1630000'
     display: '&fEspólio de Corsário'
     icon:
       material: IRON_INGOT
@@ -525,7 +525,7 @@ rewards:
     xp: 14
     type: CURRENCY
     currency-id: coins
-    amount: '2900000'
+    amount: '3490000'
     display: '&fBaú do Contrabandista'
     icon:
       material: IRON_INGOT
@@ -541,7 +541,7 @@ rewards:
     xp: 14
     type: CURRENCY
     currency-id: coins
-    amount: '6430000'
+    amount: '7490000'
     display: '&fCarga de Galeão'
     icon:
       material: IRON_INGOT
@@ -557,7 +557,7 @@ rewards:
     xp: 15
     type: CURRENCY
     currency-id: coins
-    amount: '14300000'
+    amount: '16100000'
     display: '&aSino do Almirante'
     icon:
       material: CHEST
@@ -573,7 +573,7 @@ rewards:
     xp: 15
     type: CURRENCY
     currency-id: coins
-    amount: '38100000'
+    amount: '41600000'
     display: '&aTesouro da Corrente'
     icon:
       material: CHEST
@@ -589,7 +589,7 @@ rewards:
     xp: 16
     type: CURRENCY
     currency-id: coins
-    amount: '78000000'
+    amount: '82500000'
     display: '&aEspólio do Naufrágio'
     icon:
       material: CHEST
@@ -605,7 +605,7 @@ rewards:
     xp: 16
     type: CURRENCY
     currency-id: coins
-    amount: '173000000'
+    amount: '177000000'
     display: '&aArca das Marés'
     icon:
       material: CHEST
@@ -621,7 +621,7 @@ rewards:
     xp: 17
     type: CURRENCY
     currency-id: coins
-    amount: '383000000'
+    amount: '380000000'
     display: '&aCofre de Bronze'
     icon:
       material: CHEST
@@ -637,7 +637,7 @@ rewards:
     xp: 17
     type: CURRENCY
     currency-id: coins
-    amount: '850000000'
+    amount: '817000000'
     display: '&aCâmara Submersa'
     icon:
       material: CHEST
@@ -653,7 +653,7 @@ rewards:
     xp: 18
     type: CURRENCY
     currency-id: coins
-    amount: '2120000000'
+    amount: '1970000000'
     display: '&bGaleão Perdido'
     icon:
       material: GOLD_INGOT
@@ -669,7 +669,7 @@ rewards:
     xp: 18
     type: CURRENCY
     currency-id: coins
-    amount: '4340000000'
+    amount: '3910000000'
     display: '&bBaú de Obsidiana'
     icon:
       material: GOLD_INGOT
@@ -685,7 +685,7 @@ rewards:
     xp: 19
     type: CURRENCY
     currency-id: coins
-    amount: '9460000000'
+    amount: '8250000000'
     display: '&bCripta Submersa'
     icon:
       material: GOLD_INGOT
@@ -701,7 +701,7 @@ rewards:
     xp: 19
     type: CURRENCY
     currency-id: coins
-    amount: '20600000000'
+    amount: '17400000000'
     display: '&bCofre do Abismo'
     icon:
       material: GOLD_INGOT
@@ -717,7 +717,7 @@ rewards:
     xp: 20
     type: CURRENCY
     currency-id: coins
-    amount: '44700000000'
+    amount: '36600000000'
     display: '&bHerança do Leviatã'
     icon:
       material: GOLD_INGOT
@@ -733,7 +733,7 @@ rewards:
     xp: 20
     type: CURRENCY
     currency-id: coins
-    amount: '108000000000'
+    amount: '85600000000'
     display: '&bTrono de Coral'
     icon:
       material: GOLD_INGOT
@@ -749,7 +749,7 @@ rewards:
     xp: 21
     type: CURRENCY
     currency-id: coins
-    amount: '224000000000'
+    amount: '172000000000'
     display: '&bRelicário de Pérola'
     icon:
       material: GOLD_INGOT
@@ -765,7 +765,7 @@ rewards:
     xp: 21
     type: CURRENCY
     currency-id: coins
-    amount: '484000000000'
+    amount: '360000000000'
     display: '&3Bóveda Oceânica'
     icon:
       material: DIAMOND
@@ -781,7 +781,7 @@ rewards:
     xp: 22
     type: CURRENCY
     currency-id: coins
-    amount: '1040000000000'
+    amount: '748000000000'
     display: '&3Reserva Abissal'
     icon:
       material: DIAMOND
@@ -797,7 +797,7 @@ rewards:
     xp: 22
     type: CURRENCY
     currency-id: coins
-    amount: '2240000000000'
+    amount: '1560000000000'
     display: '&3Espólio da Sereia'
     icon:
       material: DIAMOND
@@ -813,7 +813,7 @@ rewards:
     xp: 23
     type: CURRENCY
     currency-id: coins
-    amount: '5260000000000'
+    amount: '3550000000000'
     display: '&3Câmara do Tridente'
     icon:
       material: DIAMOND
@@ -829,7 +829,7 @@ rewards:
     xp: 23
     type: CURRENCY
     currency-id: coins
-    amount: '10800000000000'
+    amount: '7060000000000'
     display: '&3Selo do Maremoto'
     icon:
       material: DIAMOND
@@ -845,7 +845,7 @@ rewards:
     xp: 24
     type: CURRENCY
     currency-id: coins
-    amount: '23000000000000'
+    amount: '14500000000000'
     display: '&3Cofre da Fossa'
     icon:
       material: DIAMOND
@@ -861,7 +861,7 @@ rewards:
     xp: 24
     type: CURRENCY
     currency-id: coins
-    amount: '48600000000000'
+    amount: '29800000000000'
     display: '&9Legado da Maré Negra'
     icon:
       material: EMERALD
@@ -877,7 +877,7 @@ rewards:
     xp: 25
     type: CURRENCY
     currency-id: coins
-    amount: '111000000000000'
+    amount: '65800000000000'
     display: '&9Relíquia do Vórtice'
     icon:
       material: EMERALD
@@ -893,7 +893,7 @@ rewards:
     xp: 25
     type: CURRENCY
     currency-id: coins
-    amount: '224000000000000'
+    amount: '129000000000000'
     display: '&9Tesouro do Kraken'
     icon:
       material: EMERALD
@@ -909,7 +909,7 @@ rewards:
     xp: 26
     type: CURRENCY
     currency-id: coins
-    amount: '465000000000000'
+    amount: '259000000000000'
     display: '&9Arca do Dilúvio'
     icon:
       material: EMERALD
@@ -925,7 +925,7 @@ rewards:
     xp: 26
     type: CURRENCY
     currency-id: coins
-    amount: '953000000000000'
+    amount: '513000000000000'
     display: '&9Herança de Poseidon'
     icon:
       material: EMERALD
@@ -941,7 +941,7 @@ rewards:
     xp: 27
     type: CURRENCY
     currency-id: coins
-    amount: '2040000000000000'
+    amount: '1060000000000000'
     display: '&9Arca de Adamante'
     icon:
       material: EMERALD
@@ -957,7 +957,7 @@ rewards:
     xp: 27
     type: CURRENCY
     currency-id: coins
-    amount: '3910000000000000'
+    amount: '1970000000000000'
     display: '&dCoração do Oceano'
     icon:
       material: NETHER_STAR
@@ -973,7 +973,7 @@ rewards:
     xp: 28
     type: CURRENCY
     currency-id: coins
-    amount: '7430000000000000'
+    amount: '3630000000000000'
     display: '&dDiadema das Profundezas'
     icon:
       material: NETHER_STAR
@@ -989,7 +989,7 @@ rewards:
     xp: 28
     type: CURRENCY
     currency-id: coins
-    amount: '13200000000000000'
+    amount: '6250000000000000'
     display: '&dTesouro da Tempestade'
     icon:
       material: NETHER_STAR
@@ -1005,7 +1005,7 @@ rewards:
     xp: 29
     type: CURRENCY
     currency-id: coins
-    amount: '23300000000000000'
+    amount: '10700000000000000'
     display: '&dLegado do Mar Antigo'
     icon:
       material: NETHER_STAR
@@ -1021,7 +1021,7 @@ rewards:
     xp: 29
     type: CURRENCY
     currency-id: coins
-    amount: '63900000000000000'
+    amount: '28400000000000000'
     display: '&dRelíquia do Fundo do Mundo'
     icon:
       material: NETHER_STAR
@@ -1037,7 +1037,7 @@ rewards:
     xp: 30
     type: CURRENCY
     currency-id: coins
-    amount: '143000000000000000'
+    amount: '61500000000000000'
     display: '&dCoroa do Mar Profundo'
     icon:
       material: NETHER_STAR

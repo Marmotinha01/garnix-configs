@@ -59,7 +59,7 @@ key-item:
 # agora esta repartido. Se mexer num degrau, mexa nos outros: a soma da familia
 # e o que mantem o arquivo em 100.
 #
-#   coins     250 · 500 · 1.000   pesos 27,6 · 13,5 · 3,9
+#   coins   1.000 · 2.000 · 4.000  pesos 27,6 · 13,5 · 3,9
 #   sementes  150 · 300 ·   600   pesos 16,8 ·  8,4 · 2,8
 #
 # ⚠️ Os tres limites sao repartidos por VALOR, na razao 6:3:1 — o cash shop
@@ -91,29 +91,29 @@ key-item:
 rewards:
 
   # -- COMUM ---------------------------------------------------- 82,28%
-  coins-250:
+  coins-1000:
     type: CURRENCY
     chance: 27.17
     currency-id: coins
-    amount: '250'
+    amount: '1000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-500:
+  coins-2000:
     type: CURRENCY
     chance: 13.3
     currency-id: coins
-    amount: '500'
+    amount: '2000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-1000:
+  coins-4000:
     type: CURRENCY
     chance: 3.9
     currency-id: coins
-    amount: '1000'
+    amount: '4000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

@@ -255,32 +255,32 @@ rewards:
       - ''
 
   # -- MOEDAS ------------------------------------------------------- 6%
-  coins-12500:
+  coins-30000:
     type: CURRENCY
     chance: 1.5
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '12500'
+    amount: '30000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-25000:
+  coins-60100:
     type: CURRENCY
     chance: 0.9
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '25000'
+    amount: '60100'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-50000:
+  coins-120000:
     type: CURRENCY
     chance: 0.6
     display: '&2$&a{amount} coins'
     currency-id: coins
-    amount: '50000'
+    amount: '120000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

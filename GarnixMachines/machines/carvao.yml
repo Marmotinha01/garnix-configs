@@ -13,9 +13,9 @@ texture: ""
 
 # Máquina A libera no dia 3 da temporada.
 # ⚠️ A data-base é placeholder — o dono define a data real do lançamento.
-release: "09/08/2026 20:00"
+release: "16/08/2026 20:00"
 
-rank: '&e[Rank 6]'
+rank: '&e[Rank 3]'
 
 # ⚠️ Gate autoritativo. Concedida em GarnixRankUP/ranks/*.yml -> commands do rank 6.
 buy-permission: machines.buy.carvao
@@ -43,7 +43,7 @@ machine-item:
   - '&aColoque no seu terreno.'
 
 costs:
-  coins: '38400'
+  coins: '133000'
 
 # ⚠️ 'chance' aqui é FRAÇÃO 0.0-1.0 (MachineDrop.java:40), não porcentagem.
 # Convenção OPOSTA à dos spawners, que usam 0-100. Escrever 5 aqui significa
@@ -53,4 +53,4 @@ drops:
     type: CURRENCY
     currency-id: coins
     chance: 1.0
-    amount: '0.686'
+    amount: '11.8'

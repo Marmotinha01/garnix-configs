@@ -22,5 +22,5 @@ commands:
 - 'lp user {player} permission set spawner.buy.endermite true'
 
 costs:
-- 'coins 2280000000000000'
-- 'head ZOMBIE 25000'
+- 'coins 3290000000000000'
+- 'head ZOMBIE 17900'

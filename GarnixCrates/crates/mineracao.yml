@@ -99,29 +99,29 @@ key-item:
 rewards:
 
   # -- COMUM ---------------------------------------------------- 81,93%
-  coins-250:
+  coins-1000:
     type: CURRENCY
     chance: 25.4
     currency-id: coins
-    amount: '250'
+    amount: '1000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-500:
+  coins-2000:
     type: CURRENCY
     chance: 12.6
     currency-id: coins
-    amount: '500'
+    amount: '2000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
 
-  coins-1000:
+  coins-4000:
     type: CURRENCY
     chance: 3.9
     currency-id: coins
-    amount: '1000'
+    amount: '4000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

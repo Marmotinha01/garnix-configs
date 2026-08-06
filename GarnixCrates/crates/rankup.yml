@@ -80,11 +80,11 @@ key-item:
 rewards:
 
   # -- COMUM ------------------------------------------------- peso 60
-  coins-1000:
+  coins-4000:
     type: CURRENCY
     chance: 22
     currency-id: coins
-    amount: '1000'
+    amount: '4000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -170,11 +170,11 @@ rewards:
       - '&8 ▪ &fQuantia: &7x{amount}'
 
   # -- COMUM PLUS -------------------------------------------- peso 28
-  coins-2000:
+  coins-8000:
     type: CURRENCY
     chance: 9
     currency-id: coins
-    amount: '2000'
+    amount: '8000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'
@@ -279,11 +279,11 @@ rewards:
       - '&fValor: &b∞{amount}'
 
   # -- COMUM PLUS PLUS --------------------------------------- peso 10
-  coins-4000:
+  coins-16000:
     type: CURRENCY
     chance: 3.5
     currency-id: coins
-    amount: '4000'
+    amount: '16000'
     icon:
       lore:
       - '&fValor: &2$&a{amount}'

@@ -1,5 +1,9 @@
 # 02 — TABELA DE TIERS
 
+> 🚩 **SUPERADO EM 06/08/2026.** A âncora e a repartição por via foram reescritas: a casa/dia passou de `375.000 × 6,61^(N-1)` para `1.500.000 × 6,146^(N-1)`, e a conta ativa deixou de ser 56% da renda. **A tabela válida agora é [tabela-mestra.md](../GARNIX%20-%20REORGANIZA%C3%87%C3%83O%20DA%20ECO/tabela-mestra.md).**
+>
+> Este documento fica pelo **método** — as derivações de throughput, o teto da mina, os 300 níveis e as leis de progressão continuam valendo. Só as duas constantes mudaram. As tabelas de valor abaixo são as antigas.
+
 A tabela mestra. **Todo número de todo `.yml` deriva daqui.** Cada linha é um dia da temporada.
 
 Última atualização: **30/07/2026**

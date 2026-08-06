@@ -19,8 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.14 true'
 - 'lp user {player} permission set warehouse.bonus.14 true'
 - 'lp user {player} permission set fishing.bonus.14 true'
+- 'lp user {player} permission set machines.buy.titanio true'
 - 'lp user {player} permission set spawner.buy.magma_cube true'
 
 costs:
-- 'coins 345000000000000'
-- 'head WOLF 21000'
+- 'coins 536000000000000'
+- 'head WOLF 15000'

@@ -19,9 +19,9 @@ commands:
 - 'lp user {player} permission set farm.bonus.6 true'
 - 'lp user {player} permission set warehouse.bonus.6 true'
 - 'lp user {player} permission set fishing.bonus.6 true'
+- 'lp user {player} permission set machines.buy.ouro true'
 - 'lp user {player} permission set spawner.buy.ocelot true'
-- 'lp user {player} permission set machines.buy.carvao true'
 
 costs:
-- 'coins 94600000'
-- 'head SHEEP 3600'
+- 'coins 263000000'
+- 'head SHEEP 2570'
