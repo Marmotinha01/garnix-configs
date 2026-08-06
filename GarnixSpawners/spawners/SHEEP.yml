@@ -22,6 +22,7 @@ costs:
   dracmas: '67'
 
 drops:
+  coins:
     chance: 100
     amount: '9.03'
   dracmas:
