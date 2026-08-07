@@ -77,9 +77,11 @@ farms:
       material: WHEAT
       display: '&eTrigo'
       lore:
-      - '&7O tipo inicial de fazenda.'
-      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
-      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
+      - '&7Plantação inicial da fazenda.'
+      - ''
+      - ' &8Informações: '
+      - ' &fCoins p/colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value} '
+      - ' &fSementes p/colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value} '
 
   girassol:
     display: '&6Girassol'
@@ -96,8 +98,10 @@ farms:
       material: DOUBLE_PLANT
       display: '&6Girassol'
       lore:
-      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
-      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
+      - ''
+      - ' &8Informações: '
+      - ' &fCoins p/colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value} '
+      - ' &fSementes p/colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value} '
 
   cenoura:
     display: '&6Cenoura'
@@ -116,8 +120,10 @@ farms:
       material: CARROT_ITEM
       display: '&6Cenoura'
       lore:
-      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
-      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
+      - ''
+      - ' &8Informações: '
+      - ' &fCoins p/colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value} '
+      - ' &fSementes p/colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value} '
 
   batata:
     display: '&eBatata'
@@ -136,8 +142,10 @@ farms:
       material: POTATO_ITEM
       display: '&eBatata'
       lore:
-      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
-      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
+      - ''
+      - ' &8Informações: '
+      - ' &fCoins p/colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value} '
+      - ' &fSementes p/colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value} '
 
   fungo:
     display: '&cFungo do Nether'
@@ -156,5 +164,7 @@ farms:
       material: NETHER_STALK
       display: '&cFungo do Nether'
       lore:
-      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
-      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
+      - ''
+      - ' &8Informações: '
+      - ' &fCoins p/colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value} '
+      - ' &fSementes p/colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value} '

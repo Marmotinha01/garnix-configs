@@ -42,8 +42,8 @@ status-next:
 # inteiro. As outras três continuam aqui porque o plugin ainda as lê — se algum dia
 # voltar um gate de nível ou de colheitas, o template já está pronto.
 requirement-entries:
-  currency: '&8 ▪ {symbol_color}{symbol}{primary_color}{cost} &7{currency} '
-  secondary-currency: '&8 ▪ {symbol_color}{symbol}{primary_color}{cost} &7{currency} '
-  level: '&8 ▪ &7Nível &f{require-level}&7 de fazenda '
-  crops: '&8 ▪ &7x{require-crops} {require-crop} &7colhidos '
+  currency: '&8 ▪ {symbol_color}{symbol}{primary_color}{cost} {currency} '
+  secondary-currency: '&8 ▪ {symbol_color}{symbol}{primary_color}{cost} {currency} '
+  level: '&8 ▪ &7Nível &f{require-level}&f de fazenda '
+  crops: '&8 ▪ &cx&l{require-crops}&r {require-crop} &fcolhidos '
   permission: '&8 ▪ {permission-display} '
