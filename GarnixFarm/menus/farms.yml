@@ -29,13 +29,21 @@ status-next:
 - '&aClique para desbloquear.'
 
 # Um template por tipo de requisito. Entram só quando o requisito existe:
-#   level     -> só se require.level > 0.  {require-level} = nível exigido.
-#   currency  -> só se cost > 0.  {cost} = valor; moeda (singular/plural pelo valor):
-#                {symbol_color}{symbol}{primary_color}{currency}
-#   crops     -> só se require.crops > 0.  {require-crops} = qtd; {require-crop} = cultura.
-#   permission-> só se houver permission-display (o node NUNCA aparece).  {permission-display}
+#   currency           -> só se upgrade.cost > 0.  {cost} = valor em coins.
+#   secondary-currency -> só se upgrade.secondary-cost > 0.  {cost} = valor em sementes.
+#                         Cada uma das duas resolve os tokens de moeda na SUA moeda:
+#                         {symbol_color}{symbol}{primary_color}{currency} (singular/plural
+#                         pelo valor).
+#   level      -> só se require.level > 0.  {require-level} = nível exigido.
+#   crops      -> só se require.crops > 0.  {require-crops} = qtd; {require-crop} = cultura.
+#   permission -> só se houver permission-display (o node NUNCA aparece).  {permission-display}
+#
+# A progressão que vem no farms.yml usa só as duas primeiras: o preço é o requisito
+# inteiro. As outras três continuam aqui porque o plugin ainda as lê — se algum dia
+# voltar um gate de nível ou de colheitas, o template já está pronto.
 requirement-entries:
-  level: '&8 ▪ &7Nível &f{require-level}&7 de fazenda '
   currency: '&8 ▪ {symbol_color}{symbol}{primary_color}{cost} &7{currency} '
+  secondary-currency: '&8 ▪ {symbol_color}{symbol}{primary_color}{cost} &7{currency} '
+  level: '&8 ▪ &7Nível &f{require-level}&7 de fazenda '
   crops: '&8 ▪ &7x{require-crops} {require-crop} &7colhidos '
   permission: '&8 ▪ {permission-display} '

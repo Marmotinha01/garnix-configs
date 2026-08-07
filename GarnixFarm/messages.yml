@@ -97,6 +97,13 @@ forge:
   inventory-full: '&cSeu inventário está cheio.'
 
 # Compra/desbloqueio de plantação (one-way). Tokens: {display} {cost} {crops}
+#
+# A evolução custa DUAS moedas (coins + sementes) e o 'no-money' serve às duas: os
+# tokens de moeda são preenchidos pela que o jogador não tinha, então a mensagem sai
+# certa sem precisar de uma linha por moeda.
+#
+# need-level e need-crops continuam aqui porque o plugin ainda checa esses requisitos,
+# mas nenhuma plantação os declara — o preço é o requisito inteiro.
 upgrade:
   maxed: '&eVocê já desbloqueou a última plantação.'
   need-level: '&cVocê precisa ser nível &f{level} &cde fazenda para desbloquear &r{display}&c.'

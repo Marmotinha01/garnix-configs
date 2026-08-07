@@ -1,48 +1,64 @@
 # GarnixFarm — Tipos de farm (progressão só avança, nunca volta).
 #
-# Ordem fixa no código (GarnixFarm.FARM_TYPES): trigo -> cenoura -> batata -> fungo.
+# A ORDEM É A DESTE ARQUIVO. A primeira chave abaixo é o tipo inicial, e cada chave
+# seguinte é o próximo degrau. Adicionar plantação é editar aqui — não existe mais lista
+# fixa no código (o GarnixFarm.FARM_TYPES sobrou só como socorro se este bloco sumir).
+#
 # É UMA ÁREA SÓ: o tipo muda só QUAL cultura o jogador vê/colhe (render por-jogador).
 # Um /fazenda scan <raio> registra as posições e /fazenda setspawn define o spawn.
 #
-# crop: WHEAT | CARROT | POTATO | NETHER_WART
+# crop: WHEAT | SUNFLOWER | CARROT | POTATO | NETHER_WART
+#   SUNFLOWER é pintado como a METADE DE CIMA do girassol (DOUBLE_PLANT data 8), que é a
+#   metade que tem a flor. Um bloco só: o girassol inteiro custaria dois block-changes
+#   por célula e deixaria o campo com 2 blocos de altura, tapando a visão do próprio
+#   jogador enquanto ele colhe.
 # exp: XP de fazenda ganho por plantação colhida deste tipo (alimenta o nível; a curva
 #   de XP por nível fica em levels.yml). Boostável pelo provider "xp".
 # currencies.primary / secondary: pagamento por colheita (o primeiro tipo é o inicial,
-#   sem upgrade/require).
+#   sem upgrade).
 #
-# upgrade (evoluir PARA este tipo):
-#   cost / currency: preço.  (cost 0 = grátis; a linha de custo some da lore.)
-# require (requisito além do custo). O requisito que NÃO for usar: REMOVA a linha (não
-#   deixe vazia). Sem nenhum requisito, remova o bloco 'require' inteiro.
-#   level:      nível de fazenda mínimo. Remova a linha se não exigir nível.
-#   crops:      quantas colheitas são necessárias.
-#   crop-type:  de QUAL tipo contam essas colheitas — OBRIGATÓRIO quando há 'crops'.
-#               A contagem é POR TIPO, não a soma geral (o total geral fica no
-#               ranking/estatísticas). Ex.: cenoura conta trigo; batata conta cenoura.
-#   permission:         node checado — NUNCA aparece pro jogador. Remova se não usar.
-#   permission-display: rótulo amigável na lore (ex. "&6VIP+"). Remova se não usar.
-#               Ex.: permission "grupo.vip" + permission-display "&6VIP+".
+# upgrade (evoluir PARA este tipo) — o PREÇO É O ÚNICO REQUISITO:
+#   cost / currency:                     preço em coins.
+#   secondary-cost / secondary-currency: preço em sementes.
+#   Os dois lados são independentes e qualquer um pode ser 0 (a linha some da lore).
 #
-# -- De onde saem os valores de currencies (calibrado contra o GarnixMining) --------
+# ⚠️ NÃO EXISTE MAIS REQUISITO DE NÍVEL NEM DE COLHEITAS. O bloco 'require' continua
+# lido pelo plugin (level / crops / crop-type / permission), mas nenhuma plantação usa:
+# quem trava a evolução é o preço. Se algum dia voltar a usar, o requisito que NÃO for
+# usar deve ser REMOVIDO (linha fora, não vazia).
 #
-# PRIMÁRIA (coins) = curva de coins da mina no nível de desbloqueio da plantação,
-# multiplicada por 2,1933. O fator parece alto e não é: o que importa é coins por
-# HORA, não por colheita, e a fazenda dispara 3x menos eventos por ação que a mina.
+# -- De onde saem os valores (recalibrado em 07/08/2026) ---------------------------
 #
-#   mina     2,64e13/bloco    x 112,2 blocos por quebra manual = 2,96e15 por ação
-#   fazenda  5,79e13/colheita x  63,9 plantas por colheita      = 3,70e15 por ação
+# Ver GARNIX - REORGANIZAÇÃO DA ECO/fazenda-pesca.md. Resumo:
 #
-# O campo é 2D: não existe coluna vertical nem camada para explodir, então nenhum
-# encantamento da fazenda chega perto da Aniquilação. Compensar isso no valor por
-# evento é o que mantém os dois modos equivalentes — com o x1,25 "óbvio" a fazenda
-# rendia 59% MENOS que a mina por hora, não 25% a mais.
+# PRIMÁRIA (coins). O pagamento é `primary x payout-multiplier(nível)`. O multiplicador
+# do levels.yml agora é UMA CURVA CONTÍNUA de 0 a 300 — não reseta mais. Ele sobe 1,5%
+# por nível e dá um salto de x3,0634 a cada múltiplo de 15, MENOS nos níveis 60, 120,
+# 180 e 240: nesses quatro o salto não vem da curva, vem da COMPRA DA PLANTAÇÃO.
 #
-# SECUNDÁRIA (sementes) = gemas da mina no mesmo nível, x1,4413. Mesma lógica: as
-# sementes compram encantamento, e o que precisa empatar é quantas ações manuais
-# custa maxar tudo. Com estes valores são 81.053 colheitas contra 81.053 quebras.
+#   trigo x1  ·  girassol x3,0634  ·  cenoura x3,0634^2  ·  batata ^3  ·  fungo ^4
 #
-# A secundária NÃO leva o payout-multiplier do levels.yml (é linear por projeto,
-# como as gemas), então estes quatro números são o valor final antes da Fertilidade.
+# É por isso que o requisito de nível pôde sair. Antes o multiplicador resetava a 1 em
+# cada troca de planta, então comprar cenoura no nível 0 dava 206x de renda antecipada.
+# Agora as duas escadas MULTIPLICAM: comprar tudo no nível 0 rende 88x um trigo nível 0,
+# e continua sendo uma fração ínfima do que a mesma planta rende no nível certo.
+#
+# SECUNDÁRIA (sementes) = linear no nível de ancoragem, 1,80 + 0,12012 x nível. Os
+# extremos (1,80 no trigo e 30,63 no fungo) são os mesmos de antes — a renda total de
+# sementes da temporada não mudou, só ganhou um degrau a mais no meio.
+#
+# A secundária NÃO leva o payout-multiplier (é linear por projeto, como as gemas da
+# mina), então estes cinco números são o valor final antes da Fertilidade.
+#
+# CUSTO EM COINS = 10% da casa/dia no tier de ancoragem (tier = nível / 15). Os 10% são
+# a régua que a cenoura e a batata já seguiam; o fungo estava em 1,5% e foi corrigido.
+#
+# CUSTO EM SEMENTES = fatia do orçamento de encantamento (3,333e9 sementes para maxar os
+# 10 encantes). As quatro evoluções somam 15%: 0,0045% / 0,99% / 3,0% / 11,0%.
+#
+# ⚠️ A PRIMEIRA EVOLUÇÃO NÃO CUSTA COINS DE PROPÓSITO. Coins entram por spawner, máquina
+# e cacto — se o girassol custasse coins, dava para evoluir sem nunca ter colhido. Só
+# sementes, e sementes só saem da fazenda.
 #
 # Tokens de currency na lore do ícone (pagamento por colheita):
 #   {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}{primary_currency}
@@ -64,67 +80,79 @@ farms:
       - '&7O tipo inicial de fazenda.'
       - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
       - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
-  
+
+  girassol:
+    display: '&6Girassol'
+    crop: SUNFLOWER
+    exp: 2.0
+    upgrade:
+      secondary-cost: 150000
+      secondary-currency: sementes
+    currencies:
+      primary: 12.70
+      secondary: 9.01
+    icon:
+      slot: 12
+      material: DOUBLE_PLANT
+      display: '&6Girassol'
+      lore:
+      - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
+      - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
+
   cenoura:
     display: '&6Cenoura'
     crop: CARROT
     exp: 3.0
     upgrade:
-      cost: 34700000
+      cost: 49700000000
       currency: coins
-    require:
-      level: 60
-      crops: 1105000
-      crop-type: trigo
+      secondary-cost: 33000000
+      secondary-currency: sementes
     currencies:
-      primary: 853
-      secondary: 9.01
+      primary: 38.91
+      secondary: 16.21
     icon:
-      slot: 12
+      slot: 13
       material: CARROT_ITEM
       display: '&6Cenoura'
       lore:
       - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
       - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
-  
+
   batata:
     display: '&eBatata'
     crop: POTATO
     exp: 6.0
     upgrade:
-      cost: 1880000000000
+      cost: 70900000000000
       currency: coins
-    require:
-      level: 150
-      crops: 5865000
-      crop-type: cenoura
+      secondary-cost: 100000000
+      secondary-currency: sementes
     currencies:
-      primary: 2499000
-      secondary: 19.82
+      primary: 119.2
+      secondary: 23.42
     icon:
-      slot: 13
+      slot: 14
       material: POTATO_ITEM
       display: '&eBatata'
       lore:
       - '&7Coins por colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value}'
       - '&7Sementes por colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value}'
-  
+
   fungo:
     display: '&cFungo do Nether'
     crop: NETHER_WART
     exp: 12.0
     upgrade:
-      cost: 15300000000000000
+      cost: 101000000000000000
       currency: coins
-    require:
-      level: 240
-      crops: 22066000
-      crop-type: batata
+      secondary-cost: 367000000
+      secondary-currency: sementes
     currencies:
-      primary: 7364000000
+      primary: 365.1
       secondary: 30.63
     icon:
-      slot: 14
+      slot: 15
       material: NETHER_STALK
       display: '&cFungo do Nether'
       lore:
