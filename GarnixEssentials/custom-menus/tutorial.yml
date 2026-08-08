@@ -21,7 +21,6 @@ rows: 6
 #   linha 3 (19-25)   sua renda        moeda · limite · equipamento
 #   linha 4 (28-34)   mais recompensa  caixa · runa · evento · boss · prestígio
 #   linha 5 (38-42)   entre jogadores  clan · mercado · leilão · loja · correio
-#   linha 6 (48-50)   rodapé           warps · regras · discord
 #
 # A linha 5 tem cinco ícones e fica centralizada (colunas 2 a 6); as outras três
 # têm sete e ocupam as colunas 1 a 7. Só assim as quatro ficam simétricas numa
@@ -33,32 +32,39 @@ rows: 6
 # plugins: ele explica o que cada sistema é e como funciona, para o jogador
 # entender as regras — não para ser conduzido pela mão.
 #
-# ⚠️ VIP E CASH FICARAM DE FORA, de propósito: VIP em tutorial soa como vitrine,
-# e o Celestial grátis de 3 dias do vínculo do Discord já se vende sozinho no
-# ícone de Discord, no rodapé.
+# ⚠️ VIP E CASH FICARAM DE FORA: VIP em tutorial soa como vitrine.
 #
-# Também fora: punições, anti-nuker, chat, baús e scoreboard — nada disso é
-# decisão de jogador novo, e cada ícone a mais dilui os que importam.
+# ⚠️ WARPS, REGRAS E DISCORD SAÍRAM em 08/08/2026 (decisão do dono). Os três já
+# são comando próprio e não precisam de vaga aqui — o tutorial explica sistema,
+# não serve de atalho para o que o jogador já digita.
 #
-# -- ÍCONE INFORMATIVO -------------------------------------------------------
+# Também fora: punições, anti-nuker, chat, baús e scoreboard.
 #
-# Cinco sistemas NÃO têm menu próprio (Terreno, Moedas, Limites, Encantamentos,
-# Skins e Armaduras). Eles seguem a regra do repo para ícone não-clicável: sem
-# CTA, e um rodapé em `&7` no lugar dela dizendo onde a coisa mora. Clicar não
-# faz nada, que é o comportamento correto — não é bug.
+# -- A GRAMÁTICA DO MIOLO DA LORE --------------------------------------------
 #
-# ⚠️ TERRENO é informativo por outro motivo: o plugin de terreno é EXTERNO e os
-# comandos dele não estão neste repositório. Escrever `/plot auto` aqui seria
-# um chute, e comando errado num tutorial é pior que comando nenhum. Se o dono
-# confirmar os comandos, este ícone ganha bloco de comandos e CTA.
+# ✅ Regra do dono (08/08/2026): o bloco do meio é HARMÔNICO — toda linha tem a
+# MESMA forma, para as 26 lores lerem como um sistema só e não como 26 estilos:
 #
-# -- MANUTENÇÃO --------------------------------------------------------------
+#     &8 ▪ &fRótulo: &<cor>valor
 #
-# ⚠️ Todo comando abaixo foi conferido no CÓDIGO-FONTE (CommandBuilder.create e
-# aliases), não nos messages.yml. Se um plugin renomear o comando raiz, o ícone
-# daqui para de funcionar em silêncio — o menu não valida destino.
+#   · o marcador é sempre ` &8 ▪ ` e a linha termina com espaço
+#   · o RÓTULO é sempre `&f` — é a parte fixa, e é ela que dá o alinhamento
+#   · o VALOR é sempre COLORIDO, nunca `&f`
+#   · o conectivo entre dois valores é `&7` (` &acoins &7e &dgemas `)
+#   · a cor do valor é a da MOEDA quando for moeda, e a do próprio ícone quando
+#     não for — é o que faz cada ícone ter identidade sem quebrar o padrão
 #
-# ⚠️ TODA MOEDA CITADA VAI NA COR DELA, em qualquer lugar da lore — inclusive no
+# ⚠️ NADA DO MIOLO REPETE O TOPO. A explicação de duas linhas diz o que o
+# sistema É; o miolo só acrescenta o que ela não disse. Se uma linha do meio
+# parafraseia o topo, ela sai — não vira sinônimo.
+#
+# ⚠️ NÃO ESCREVER "moeda X não compra moeda Y" (decisão do dono, 08/08/2026).
+# O tutorial diz o que cada moeda FAZ; o que ela não faz o jogador descobre
+# tentando, e a frase negativa só ocupa linha.
+#
+# -- CORES DAS MOEDAS --------------------------------------------------------
+#
+# Toda moeda citada vai na cor dela, em qualquer lugar da lore — inclusive no
 # meio de uma linha `&7`, onde a cor volta para `&7` logo depois. As cores saem
 # de `GarnixCurrencies/currencies/<id>.yml`, bloco `colors`:
 #
@@ -73,6 +79,31 @@ rows: 6
 #
 # O erro fácil é escrever `&2coins`, que é a cor do CIFRÃO e não a do nome.
 #
+# -- ÍCONE INFORMATIVO -------------------------------------------------------
+#
+# Seis sistemas NÃO têm menu próprio (Terreno, Moedas, Limites, Encantamentos,
+# Skins e Armaduras). Eles seguem a regra do repo para ícone não-clicável: sem
+# CTA, e um rodapé em `&7` no lugar dela dizendo onde a coisa mora. Clicar não
+# faz nada, que é o comportamento correto — não é bug.
+#
+# ⚠️ TERRENO é informativo por outro motivo: o plugin de terreno é EXTERNO e os
+# comandos dele não estão neste repositório. Escrever `/plot auto` aqui seria
+# um chute, e comando errado num tutorial é pior que comando nenhum.
+#
+# -- MANUTENÇÃO --------------------------------------------------------------
+#
+# ⚠️ Todo comando abaixo foi conferido no CÓDIGO-FONTE (CommandBuilder.create e
+# aliases), não nos messages.yml. Se um plugin renomear o comando raiz, o ícone
+# daqui para de funcionar em silêncio — o menu não valida destino.
+#
+# ⚠️ MINA E FAZENDA TÊM MUNDO PRÓPRIO (`GarnixWorldManager/worlds/mina.yml` e
+# `fazenda.yml`) e NÃO ficam no terreno. O terreno abriga spawner, máquina,
+# cacto e a invocação de boss — só isso.
+#
+# ⚠️ CACTO E ARMAZÉM SÃO O MESMO SISTEMA. O cacto do terreno estoca no armazém
+# e o autosell vende de lá; por isso é um ícone só, chamado Armazém, que é como
+# os menus do GarnixWarehouse se chamam.
+#
 # ⚠️ Os números da lore saem do config e envelhecem: 20 ranks, 10 skins por via,
 # 5 tiers de armadura, +65% da skin de topo, +48% do conjunto T-V, 16 rodadas
 # de chat e 10 de arena por dia, armazém em 3.000. Mexeu no config, confira aqui.
@@ -86,12 +117,12 @@ items:
     material: GRASS
     display: "&2Terreno"
     lore:
-      - "&7O seu espaço no servidor,"
-      - "&7e onde toda renda acontece."
+      - "&7O seu espaço no servidor, e"
+      - "&7onde a renda passiva mora."
       - ""
-      - " &8 ▪ &fSpawners e máquinas "
-      - " &8 ▪ &fFazenda, cacto e armazém "
-      - " &8 ▪ &fInvocação de boss "
+      - " &8 ▪ &fAbriga: &2spawner, máquina e cacto "
+      - " &8 ▪ &fBoss: &2invocado dentro dele "
+      - " &8 ▪ &fMina e fazenda: &2ficam fora "
       - ""
       - "&7Pegue o seu antes de tudo."
 
@@ -104,8 +135,8 @@ items:
       - "&7do mob com o mesmo nome."
       - ""
       - " &8 ▪ &fCusto: &acoins &7e &fheads "
-      - " &8 ▪ &fHead &7vem de matar o mob "
-      - " &8 ▪ &fSão &b&l20 &fna temporada "
+      - " &8 ▪ &fHead: &bvem de matar o mob "
+      - " &8 ▪ &fTotal: &b&l20 &branks na temporada "
       - ""
       - "&bClique para acessar."
     player-commands:
@@ -118,12 +149,12 @@ items:
     flags:
       - HIDE_ATTRIBUTES
     lore:
-      - "&7Quebre blocos na mina para"
-      - "&7ganhar &acoins &7junto com &dgemas&7."
+      - "&7Quebre blocos na mina e"
+      - "&7suba o nível da picareta."
       - ""
       - " &8 ▪ &fPaga: &acoins &7e &dgemas "
-      - " &8 ▪ &dGema &fcompra encantamento "
-      - " &8 ▪ &aCoin &fnunca compra &dgema "
+      - " &8 ▪ &fGemas: &6compram os encantes "
+      - " &8 ▪ &fLocal: &6mundo da mina "
       - ""
       - "&6Clique para acessar."
     player-commands:
@@ -136,12 +167,12 @@ items:
     flags:
       - HIDE_ATTRIBUTES
     lore:
-      - "&7Plante e colha no terreno para"
-      - "&7ganhar &acoins &7e &5sementes&7."
+      - "&7Plante e colha para subir"
+      - "&7o nível da sua enxada."
       - ""
       - " &8 ▪ &fPaga: &acoins &7e &5sementes "
-      - " &8 ▪ &5Semente &fcompra encantamento "
-      - " &8 ▪ &fIrmã da mina, mesma escada "
+      - " &8 ▪ &fSementes: &acompram os encantes "
+      - " &8 ▪ &fLocal: &amundo da fazenda "
       - ""
       - "&aClique para acessar."
     player-commands:
@@ -156,8 +187,8 @@ items:
       - "&7a via roda com você parado."
       - ""
       - " &8 ▪ &fPaga: &acoins &7e &3corais "
-      - " &8 ▪ &fA vara sobe de nível pescando "
-      - " &8 ▪ &3Coral &fcompra na loja da pesca "
+      - " &8 ▪ &fCorais: &3compram na loja da pesca "
+      - " &8 ▪ &fVara: &3sobe de nível pescando "
       - ""
       - "&3Clique para acessar."
     player-commands:
@@ -172,9 +203,8 @@ items:
       - "&7sozinhos, e nada cai no chão."
       - ""
       - " &8 ▪ &fPaga: &acoins &7e &edracmas "
-      - " &8 ▪ &fDrop &7é vendido no spawner "
-      - " &8 ▪ &fHead &7fica guardada no &f/heads "
-      - " &8 ▪ &fCada mob pede o rank dele "
+      - " &8 ▪ &fDrop: &evendido no próprio spawner "
+      - " &8 ▪ &fHead: &eguardada até você retirar "
       - ""
       - "&eClique para acessar."
     player-commands:
@@ -188,9 +218,9 @@ items:
       - "&7Produzem sozinhas mesmo com"
       - "&7você longe do computador."
       - ""
-      - " &8 ▪ &fConsomem &9combustível "
-      - " &8 ▪ &fCada uma faz uma coisa "
-      - " &8 ▪ &fPrecisam de &9m.limite &7para colocar "
+      - " &8 ▪ &fConsomem: &9combustível "
+      - " &8 ▪ &fVaga: &9∞ m.limite &7por máquina "
+      - " &8 ▪ &fCada uma: &9faz algo diferente "
       - ""
       - "&9Clique para acessar."
     player-commands:
@@ -198,17 +228,17 @@ items:
 
   # ══ LINHA 3 — SUA RENDA ═══════════════════════════════════════════════════
 
-  cacto:
+  armazem:
     slot: 19
     material: CACTUS
-    display: "&2Cacto e Armazém"
+    display: "&2Armazém"
     lore:
-      - "&7O cacto cresce sozinho e o"
-      - "&7armazém estoca o que sai dele."
+      - "&7O cacto do terreno cresce"
+      - "&7sozinho e estoca aqui dentro."
       - ""
-      - " &8 ▪ &fVende só em &acoins "
-      - " &8 ▪ &fO autosell vende sozinho "
-      - " &8 ▪ &fEstoque cheio para de render "
+      - " &8 ▪ &fVende em: &2$ &acoins "
+      - " &8 ▪ &fAutosell: &2esvazia sozinho "
+      - " &8 ▪ &fCheio: &2para de render "
       - ""
       - "&2Clique para acessar."
     player-commands:
@@ -219,19 +249,18 @@ items:
     material: GOLD_INGOT
     display: "&6Moedas"
     lore:
-      - "&7São oito, e cada via paga"
-      - "&7uma que &acoins &7não compram."
+      - "&7São oito, e cada via tem"
+      - "&7uma moeda própria dela."
       - ""
-      - " &8 ▪ &2$ &acoins "
-      - " &8 ▪ &d۞ &dgemas "
-      - " &8 ▪ &5❋ &5sementes "
-      - " &8 ▪ &3✶ &3corais "
-      - " &8 ▪ &e✆ &edracmas "
-      - " &8 ▪ &6❂ &6cash "
-      - " &8 ▪ &b∞ &bs.limite "
-      - " &8 ▪ &9∞ &9m.limite "
+      - " &8 ▪ &fTudo: &2$ &acoins "
+      - " &8 ▪ &fMina: &d۞ gemas "
+      - " &8 ▪ &fFazenda: &5❋ sementes "
+      - " &8 ▪ &fPesca: &3✶ corais "
+      - " &8 ▪ &fSpawner: &e✆ dracmas "
+      - " &8 ▪ &fEvento e site: &6❂ cash "
+      - " &8 ▪ &fDrop de caixa: &b∞ &7e &9∞ "
       - ""
-      - "&7Só &acoins &7chega a número alto."
+      - "&7Cada uma tem o próprio saldo."
 
   limites:
     slot: 21
@@ -242,9 +271,9 @@ items:
       - "&7Definem quantos spawners e"
       - "&7máquinas você pode colocar."
       - ""
-      - " &8 ▪ &bS.limite &7e &9m.limite &7começam em &f&l1 "
-      - " &8 ▪ &fArmazém começa em &2&l3.000 "
-      - " &8 ▪ &fSlot vazio não rende nada "
+      - " &8 ▪ &fSpawner: &b∞ s.limite&7, começa em &l1 "
+      - " &8 ▪ &fMáquina: &9∞ m.limite&7, começa em &l1 "
+      - " &8 ▪ &fEstoque: &2armazém&7, começa em &l3.000 "
       - ""
       - "&7Sobem com item de recompensa."
 
@@ -253,11 +282,11 @@ items:
     material: EMERALD
     display: "&2Loja do Servidor"
     lore:
-      - "&7Compre blocos, ferramentas"
-      - "&7e utilitários com &acoins&7."
+      - "&7Compre o que falta para"
+      - "&7montar e decorar o terreno."
       - ""
-      - " &8 ▪ &fMoeda: &acoins "
-      - " &8 ▪ &fO primeiro destino do seu &2$ "
+      - " &8 ▪ &fMoeda: &2$ &acoins "
+      - " &8 ▪ &fVende: &2bloco, ferramenta e item "
       - ""
       - "&2Clique para acessar."
     player-commands:
@@ -274,9 +303,9 @@ items:
       - "&7Aumentam quanto cada bloco"
       - "&7ou colheita rende para você."
       - ""
-      - " &8 ▪ &fMina: pagos em &dgemas "
-      - " &8 ▪ &fFazenda: pagos em &5sementes "
-      - " &8 ▪ &fPesca: livros da vara "
+      - " &8 ▪ &fPicareta: &dgemas "
+      - " &8 ▪ &fEnxada: &5sementes "
+      - " &8 ▪ &fVara: &3livros de pesca "
       - ""
       - "&7Ficam dentro do menu da via."
 
@@ -290,10 +319,10 @@ items:
       - "&7Mudam o visual da ferramenta"
       - "&7e aumentam o que ela rende."
       - ""
-      - " &8 ▪ &fSão &e&l10 &fpor via "
-      - " &8 ▪ &fA de topo dá &e&l+65% "
-      - " &8 ▪ &f7 iguais forjam a próxima "
-      - " &8 ▪ &fAs &e&l3 &fmais raras não forjam "
+      - " &8 ▪ &fQuantidade: &e&l10 &epor via "
+      - " &8 ▪ &fA de topo: &e&l+65% &ede renda "
+      - " &8 ▪ &fForja: &e&l7 &eiguais viram a próxima "
+      - " &8 ▪ &fAs 3 mais raras: &esó de caixa "
       - ""
       - "&7Ficam dentro do menu da via."
 
@@ -307,11 +336,11 @@ items:
       - "&7Quatro peças que somam bônus"
       - "&7de renda para a sua via."
       - ""
-      - " &8 ▪ &fSão &b&l5 &ftiers por via "
-      - " &8 ▪ &fO conjunto T-V dá &b&l+48% "
-      - " &8 ▪ &fNunca vendidas no site "
+      - " &8 ▪ &fTiers: &b&l5 &bpor via "
+      - " &8 ▪ &fConjunto T-V: &b&l+48% &bde renda "
+      - " &8 ▪ &fRota: &bsó caixa, nunca o site "
       - ""
-      - "&7Só saem de caixa misteriosa."
+      - "&7Cada peça sai avulsa."
 
   # ══ LINHA 4 — MAIS RECOMPENSA ═════════════════════════════════════════════
 
@@ -325,7 +354,7 @@ items:
       - ""
       - " &8 ▪ &fChave: &e/crates "
       - " &8 ▪ &fCaixa: &e/caixas "
-      - " &8 ▪ &fDão skin, armadura e limite "
+      - " &8 ▪ &fDão: &eskin, armadura e limite "
       - ""
       - "&eClique para acessar."
     player-commands:
@@ -339,10 +368,10 @@ items:
       - "&7Moeda de contagem: 500 valem"
       - "&7o mesmo no dia 3 e no dia 20."
       - ""
-      - " &8 ▪ &fSagrada: &4boss "
-      - " &8 ▪ &fEterna: &2crate e caixa "
-      - " &8 ▪ &fDivina: &fevento de chat "
-      - " &8 ▪ &fPrimal: &3evento na arena "
+      - " &8 ▪ &fBoss: &4runa sagrada "
+      - " &8 ▪ &fCrate e caixa: &2runa eterna "
+      - " &8 ▪ &fEvento de chat: &fruna divina "
+      - " &8 ▪ &fEvento na arena: &3runa primal "
       - ""
       - "&5Clique para acessar."
     player-commands:
@@ -356,9 +385,9 @@ items:
       - "&7Disputas rápidas que abrem"
       - "&7sozinhas ao longo do dia."
       - ""
-      - " &8 ▪ &fChat: &d&l16 &frodadas por dia "
-      - " &8 ▪ &fArena: &d&l10 &frodadas por dia "
-      - " &8 ▪ &fPagam chave, &6cash &7e runa "
+      - " &8 ▪ &fChat: &d&l16 &drodadas por dia "
+      - " &8 ▪ &fArena: &d&l10 &drodadas por dia "
+      - " &8 ▪ &fPagam: &6cash&7, chave e runa "
       - ""
       - "&dClique para acessar."
     player-commands:
@@ -373,9 +402,9 @@ items:
       - "&7Invoque no seu terreno e"
       - "&7derrube junto com o clan."
       - ""
-      - " &8 ▪ &fPagam &4runa sagrada "
-      - " &8 ▪ &fPagam &6cash &7e limites "
-      - " &8 ▪ &fPrecisa de chave de boss "
+      - " &8 ▪ &fCusto: &cchave de boss "
+      - " &8 ▪ &fPagam: &4runa sagrada &7e &6cash "
+      - " &8 ▪ &fE ainda: &climite e combustível "
       - ""
       - "&cClique para acessar."
     player-commands:
@@ -391,7 +420,7 @@ items:
       - ""
       - " &8 ▪ &fDiária: &a/recompensas "
       - " &8 ▪ &fTempo online: &a/tempo "
-      - " &8 ▪ &fÉ como o free chega no &6cash "
+      - " &8 ▪ &fNa temporada: &6até &l500 &6cash "
       - ""
       - "&aClique para acessar."
     player-commands:
@@ -407,9 +436,9 @@ items:
       - "&7Aposte moeda contra outro"
       - "&7jogador e leve tudo se vencer."
       - ""
-      - " &8 ▪ &fDuelo: &c/duelo "
+      - " &8 ▪ &fDuelo 1v1: &c/duelo "
       - " &8 ▪ &fCara ou coroa: &c/cf "
-      - " &8 ▪ &fO perdedor não recupera "
+      - " &8 ▪ &fRegra: &co perdedor não recupera "
       - ""
       - "&cClique para acessar."
     player-commands:
@@ -423,9 +452,9 @@ items:
       - "&7Volta ao rank 1 e deixa a"
       - "&7escada inteira mais cara."
       - ""
-      - " &8 ▪ &fMantém tudo que comprou "
-      - " &8 ▪ &fPerde os kits de rank "
-      - " &8 ▪ &fGanha bônus permanente "
+      - " &8 ▪ &fMantém: &6tudo que você comprou "
+      - " &8 ▪ &fPerde: &6os &l20 &6kits de rank "
+      - " &8 ▪ &fGanha: &6bônus permanente "
       - ""
       - "&6Clique para acessar."
     player-commands:
@@ -441,9 +470,9 @@ items:
       - "&7Junte amigos num grupo com"
       - "&7tag própria e chat fechado."
       - ""
-      - " &8 ▪ &fVantagem em área de PvP "
       - " &8 ▪ &fChat do clan: &d/c "
       - " &8 ▪ &fChat dos aliados: &d/ally "
+      - " &8 ▪ &fVantagem: &dem área de PvP "
       - ""
       - "&dClique para acessar."
     player-commands:
@@ -457,8 +486,8 @@ items:
       - "&7Venda item para qualquer"
       - "&7jogador, com preço fixo."
       - ""
-      - " &8 ▪ &fHead &7de mob vende aqui "
-      - " &8 ▪ &fComprar head &7sobe o rank "
+      - " &8 ▪ &fMoeda: &2$ &acoins "
+      - " &8 ▪ &fHead: &enegociável, e sobe rank "
       - ""
       - "&eClique para acessar."
     player-commands:
@@ -472,8 +501,8 @@ items:
       - "&7Ofereça um item e deixe os"
       - "&7jogadores darem lances nele."
       - ""
-      - " &8 ▪ &fQuem der o maior lance leva "
-      - " &8 ▪ &fVIP anuncia mais itens "
+      - " &8 ▪ &fLeva: &6quem der o maior lance "
+      - " &8 ▪ &fVagas: &6VIP anuncia mais itens "
       - ""
       - "&6Clique para acessar."
     player-commands:
@@ -487,8 +516,8 @@ items:
       - "&7Monte uma loja no terreno e"
       - "&7venda mesmo estando offline."
       - ""
-      - " &8 ▪ &fO comprador vem até você "
-      - " &8 ▪ &fAnuncie com &6/anunciarloja "
+      - " &8 ▪ &fAnuncie: &6/anunciarloja "
+      - " &8 ▪ &fLista: &6/lojas "
       - ""
       - "&6Clique para acessar."
     player-commands:
@@ -502,49 +531,9 @@ items:
       - "&7Onde chega o que você compra"
       - "&7no site e o que a staff manda."
       - ""
-      - " &8 ▪ &fNão perde por inventário cheio "
-      - " &8 ▪ &fRetire quando quiser "
+      - " &8 ▪ &fGuarda: &emesmo com inventário cheio "
+      - " &8 ▪ &fRetire: &equando quiser "
       - ""
       - "&eClique para acessar."
     player-commands:
       - "correio"
-
-  # ══ RODAPÉ ════════════════════════════════════════════════════════════════
-
-  warps:
-    slot: 48
-    material: STONE
-    display: "&bWarps"
-    lore:
-      - "&7Todos os lugares do"
-      - "&7servidor em um menu."
-      - ""
-      - "&bClique para acessar."
-    player-commands:
-      - "warps"
-
-  regras:
-    slot: 49
-    material: BOOK
-    display: "&cRegras"
-    lore:
-      - "&7Leia antes de jogar para"
-      - "&7não tomar punição à toa."
-      - ""
-      - "&cClique para acessar."
-    player-commands:
-      - "regras"
-
-  discord:
-    slot: 50
-    material: SIGN
-    display: "&9Discord"
-    lore:
-      - "&7Entre no servidor e vincule"
-      - "&7a conta para ganhar VIP."
-      - ""
-      - " &8 ▪ &fO vínculo dá &9Celestial &fpor &9&l3 &fdias "
-      - ""
-      - "&9Clique para acessar."
-    player-commands:
-      - "discord"

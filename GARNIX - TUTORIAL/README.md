@@ -1,7 +1,7 @@
 # Menu `/tutorial`
 
 > Referência de conteúdo do menu `/tutorial` (`GarnixEssentials/custom-menus/tutorial.yml`).
-> **Implementado em 08/08/2026** — 29 ícones. Este documento é a fonte do texto de cada um: mexeu aqui, mexa lá.
+> **Implementado em 08/08/2026** — 26 ícones. Este documento é a fonte do texto de cada um: mexeu aqui, mexa lá.
 
 ## Princípio
 
@@ -20,16 +20,35 @@ Quatro linhas na **ordem da jornada**, não por família de plugin — o jogador
 | Linha | Slots | Tema | Ícones |
 |---|---|---|---|
 2 | 10–16 | comece aqui | Terreno · Ranks · Mineração · Fazenda · Pesca · Spawners · Máquinas |
-3 | 19–25 | sua renda | Cacto e Armazém · Moedas · Limites · Loja · Encantamentos · Skins · Armaduras |
+3 | 19–25 | sua renda | Armazém · Moedas · Limites · Loja · Encantamentos · Skins · Armaduras |
 4 | 28–34 | mais recompensa | Caixas · Runas · Eventos · Bosses · Diárias · Duelos · Prestígio |
 5 | 38–42 | entre jogadores | Clãs · Mercado · Leilão · Loja de Baú · Correio |
-6 | 48–50 | rodapé | Warps · Regras · Discord |
 
 A linha 5 tem cinco ícones e fica **centralizada** (colunas 2 a 6); as outras três têm sete e ocupam as colunas 1 a 7. Só assim as quatro ficam simétricas numa grade de 9 de largura.
 
+✅ **Decisão do dono (08/08/2026): Warps, Regras e Discord saíram.** Os três já são comando próprio e não precisam de vaga aqui — o tutorial explica sistema, não serve de atalho para o que o jogador já digita. Com eles fora, a linha 6 ficou vazia e o menu tem 26 ícones.
+
+## A gramática do miolo da lore
+
+✅ **Decisão do dono (08/08/2026): o bloco do meio é harmônico.** Toda linha tem a mesma forma, para as 26 lores lerem como um sistema só e não como 26 estilos:
+
+```
+ &8 ▪ &fRótulo: &<cor>valor
+```
+
+- o marcador é sempre ` &8 ▪ ` e a linha termina com espaço;
+- o **rótulo** é sempre `&f` — é a parte fixa, e é ela que dá o alinhamento visual;
+- o **valor** é sempre **colorido**, nunca `&f`;
+- o conectivo entre dois valores é `&7` — ` &acoins &7e &dgemas `;
+- a cor do valor é a da **moeda** quando for moeda, e a **do próprio ícone** quando não for. É o que dá identidade a cada ícone sem quebrar o padrão.
+
+⚠️ **Nada do miolo repete o topo.** A explicação de duas linhas diz o que o sistema **é**; o miolo só acrescenta o que ela não disse. Se uma linha do meio parafraseia o topo, ela sai — não vira sinônimo.
+
+⚠️ **Não escrever "moeda X não compra moeda Y"** (decisão do dono, 08/08/2026). O tutorial diz o que cada moeda **faz**; o que ela não faz o jogador descobre tentando, e a frase negativa só ocupa linha.
+
 ## Ícone informativo
 
-Cinco sistemas **não têm menu próprio** — Terreno, Moedas, Limites, Encantamentos, Skins e Armaduras. Eles seguem a regra do repo para ícone não-clicável: sem CTA, e um rodapé em `&7` no lugar dela dizendo onde a coisa mora. Clicar não faz nada, e isso é o comportamento correto.
+Seis sistemas **não têm menu próprio** — Terreno, Moedas, Limites, Encantamentos, Skins e Armaduras. Eles seguem a regra do repo para ícone não-clicável: sem CTA, e um rodapé em `&7` no lugar dela dizendo onde a coisa mora. Clicar não faz nada, e isso é o comportamento correto.
 
 ⚠️ **Terreno é informativo por outro motivo:** o plugin de terreno é **externo** e os comandos dele não estão neste repositório. Escrever `/plot auto` seria um chute, e comando errado num tutorial é pior que comando nenhum. Quando os comandos forem confirmados, o ícone ganha bloco de comandos e CTA.
 
@@ -39,7 +58,9 @@ Cinco sistemas **não têm menu próprio** — Terreno, Moedas, Limites, Encanta
 
 ### 1. Terreno
 
-É onde spawner, máquina, cacto, fazenda e boss acontecem — sem terreno o jogador não faz nada. É o primeiro passo, e por isso abre o menu.
+É onde spawner, máquina, cacto e a invocação de boss acontecem — sem terreno o jogador não tem renda passiva. É o primeiro passo, e por isso abre o menu.
+
+⚠️ **Mina e fazenda NÃO ficam no terreno** — as duas têm mundo próprio (`GarnixWorldManager/worlds/mina.yml` e `fazenda.yml`). O ícone diz isso explicitamente, porque é o erro que o jogador comete sozinho.
 
 ### 2. Ranks e Heads
 
@@ -55,11 +76,11 @@ Cinco sistemas **não têm menu próprio** — Terreno, Moedas, Limites, Encanta
 
 ### 3. Mineração
 
-Paga **coins + gemas**. Gemas compram os encantes da picareta — e coins não compram gema.
+Paga **coins + gemas**, no **mundo da mina**. Gemas compram os encantes da picareta.
 
 ### 4. Fazenda
 
-Irmã da mina: mesma mecânica, mesma escada de encantes. Paga **coins + sementes**.
+Irmã da mina: mesma mecânica, mesma escada de encantes, e também **mundo próprio** — a fazenda **não fica no terreno**. Paga **coins + sementes**.
 
 ### 5. Pesca
 
@@ -84,7 +105,7 @@ Os mobs nascem e morrem sozinhos e **nada cai no chão**: o drop é vendido dire
 
 Produzem sozinhas, consomem **combustível**, e cada uma faz algo que nenhuma outra faz. Precisam de **limite de máquina** para serem colocadas.
 
-### 8. Cacto e Armazém
+### 8. Armazém
 
 Via de primeira classe pareada com as outras: cresce por reinvestimento, vende **só em coins**, e a expansão sai do próprio armazém. O **autosell** vende antes de encher; estoque cheio para de render.
 
@@ -136,7 +157,7 @@ Vale dizer que **só coins chega a números gigantes** — as outras ficam peque
 
 ### 12. Encantamentos
 
-Aumentam quanto cada bloco ou colheita rende. **Mina paga em gemas, fazenda em sementes**, e a pesca usa livros da vara. É o aviso contraintuitivo nº 2 do tutorial: cada via tem uma moeda que coins não compram, e quem ignora isso até o dia 10 perde a curva.
+Aumentam quanto cada bloco ou colheita rende. **Mina paga em gemas, fazenda em sementes**, e a pesca usa livros da vara. É o aviso contraintuitivo nº 2 do tutorial: cada via tem uma moeda própria, e quem ignora isso até o dia 10 perde a curva.
 
 ### 13. Skins
 
@@ -204,24 +225,22 @@ Os três canais de troca entre jogadores. O que importa dizer: **head é negoci�
 
 Por onde chega o que foi comprado no site e o que a staff entrega. Não perde por inventário cheio.
 
-### 27 a 29. Warps, Regras e Discord
-
-Rodapé. Reaproveitam `/warps`, `/regras` e `/discord` (`GarnixEssentials/custom-commands.yml`). O ícone de Discord carrega o **Celestial grátis de 3 dias** do vínculo — que é a única menção a VIP no menu inteiro.
-
 ---
 
 ## Fora do tutorial, de propósito
 
-**VIP e Cash**, punições, anti-nuker, chat, baús, scoreboard, encantes de classe D/E e armadura/skin por tier individual.
+**VIP e Cash**, **Warps**, **Regras**, **Discord**, punições, anti-nuker, chat, baús, scoreboard, encantes de classe D/E e armadura/skin por tier individual.
 
-✅ **Decisão do dono (08/08/2026): VIP fica de fora.** VIP em tutorial soa como vitrine, e o Celestial grátis do vínculo do Discord já se vende sozinho no rodapé.
+✅ **VIP fica de fora** (08/08/2026): VIP em tutorial soa como vitrine.
+
+✅ **Warps, Regras e Discord ficam de fora** (08/08/2026): os três já são comando próprio, e o tutorial explica sistema — não é atalho para o que o jogador já digita.
 
 ## Dois avisos que a lore precisa dar
 
 Contraintuitivos, e o jogador só descobre errando:
 
 1. **Coins não sobem rank** — evita acumular 3 dias achando que compra o rank.
-2. **Cada via tem uma moeda que coins não compram** — evita ignorar gemas/sementes/corais/dracmas até o dia 10.
+2. **Cada via tem uma moeda própria** — evita ignorar gemas/sementes/corais/dracmas até o dia 10.
 
 ## Manutenção
 
