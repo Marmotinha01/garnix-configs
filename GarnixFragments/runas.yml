@@ -5,11 +5,70 @@
 #
 #   sagrada    bosses
 #   eterna     crates e caixas misteriosas
-#   divina     ⚠️ SEM FONTE — saia dos eventos de chat
-#   primal     ⚠️ SEM FONTE — saia dos eventos presenciais (o PvP)
+#   divina     eventos de chat
+#   primal     eventos presenciais (o PvP)
 #
 # E o que faz o custo multi-runa da loja obrigar a tocar em varios sistemas.
 # Se dois tipos saissem do mesmo lugar, seriam uma moeda so com passos extras.
+#
+# ⚠️ A DIVINA E A PRIMAL SO GANHARAM FONTE EM 07/08/2026. Ate ali as duas
+# linhas acima eram ficcao: nenhum dos 23 eventos dava runa — os 9 de chat
+# davam so Chave VIP e os 14 presenciais so cash e Chave VIP. As quatro runas
+# saiam dos MESMOS tres lugares (5 bosses, Caixa Runas, Caixa Recursos), o que
+# fazia o custo multi-runa da loja ser uma moeda so com passos extras.
+#
+# -- O QUE OS EVENTOS PASSARAM A DAR --------------------------------------
+#
+# A runa e SILENCIOSA em todos eles: entra por `givevirtual` (cai direto no
+# armazenamento, sem risco de inventario cheio) e NAO aparece em nenhuma
+# mensagem do evento, por decisao do dono. As mensagens continuam anunciando
+# so a Chave VIP e o cash.
+#
+#   banda            eventos              lote   rodadas/temporada
+#   CHAT merito      6 de saber/pensar   10 divina        240
+#   CHAT reflexo     clique · digite      —                80
+#   BASE presencial  8 eventos           15 primal        140
+#   PERICIA          4 eventos           20 primal         54
+#   TOPO             destemido · mvp     30 primal          5,7
+#
+# As rodadas saem do painel do Pterodactyl (16 de chat e 10 presenciais por
+# dia, temporada de 20 dias). ⚠️ Mudar horario la muda esta conta, e o painel
+# e a unica fonte dessa informacao — ela nao existe no repositorio.
+#
+# ⚠️ CLIQUE-RAPIDO E DIGITE-RAPIDO FICARAM DE FORA de proposito. Sao os dois
+# unicos eventos de reflexo puro do servidor, ou seja os dois que uma macro
+# ganha. Runa e a unica moeda que nao inflaciona — ela nao pode sair de um
+# canal que um bot farma. Os dois continuam com a Chave VIP.
+#
+# -- O QUE ISSO RENDE -----------------------------------------------------
+#
+# Torneira da temporada inteira: 2.400 divina (240 x 10) e 3.351 primal
+# (140x15 + 54x20 + 5,7x30). A razao de 1 : 1,40 acompanha de perto a razao
+# de DEMANDA da loja, que e 930 : 1.570, ou 1 : 1,69.
+#
+# Para um jogador que ganhe ~20% das rodadas: 480 divina e 673 primal, ou
+# seja 52% e 43% do que a loja inteira pede. O resto continua vindo de boss e
+# das duas caixas — o evento e um terco do canal, nao o canal todo.
+#
+# ⚠️ ISSO DESTRAVOU A BRITADEIRA. Ela pede 400 divina, que e 43% de toda a
+# demanda de divina do servidor concentrada num item so. Antes desta mudanca
+# a divina vinha so de caixa, e como a oferta dela caiu para 7,9% no reajuste
+# de pesos do mesmo dia, ela era o gargalo unico do item mais caro do jogo.
+#
+# ⚠️ A BANDA TOPO PAGA 2x A BASE E RODA 25x MENOS (5,7 rodadas contra 140),
+# entao ela responde por 5% da torneira de primal. Isso ja valia para o cash e
+# para a Chave VIP antes de existir runa — nao foi introduzido aqui, mas fica
+# registrado: se a intencao e o TOPO ser o premio grande, o lote dele nao pode
+# seguir a mesma razao 1 : 1,33 : 2 das outras duas bandas.
+#
+# ⚠️ A OFERTA deixou de ser 25% por tipo em 07/08/2026 nas DUAS caixas: tanto
+# a Caixa Runas quanto a Caixa Recursos agora repartem pela demanda da loja
+# (eterna 60,8% · sagrada 17,9% · primal 13,4% · divina 7,9%). O EV total de
+# cada caixa nao mudou — 58,5 e 6 runas por abertura.
+#
+# Os 5 BOSSES ficaram de fora e continuam dando os quatro tipos em taxa igual
+# (25 por lote, 3,2 a 3,6% cada). E o unico canal onde a identidade de fonte
+# acima ainda pode ser restaurada, entao ele nao foi nivelado junto.
 #
 # ⚠️ Runa nao inflaciona: 500 sao 500 no dia 3 e no dia 20. E por isso que
 # ela e a rota in-game de item de site que preco em coins nao consegue ser.

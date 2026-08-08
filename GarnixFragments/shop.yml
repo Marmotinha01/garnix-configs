@@ -295,6 +295,14 @@ items:
     - 'pesca giveforge {player} 1'
 
   # -- Linha 4, trio da direita: torres de cacto ------------------------------
+  #
+  # A escada tem DESCONTO POR LOTE desde 07/08/2026 — 70 · 65 · 60 runas por
+  # andar. Antes ela era 70 · 95 · 103, ou seja o lote grande era punido: três
+  # torres de 5 saíam por 1.050 runas contra as 1.550 da torre de 15, pelos
+  # mesmos 15 andares. Só a eterna salvava a torre grande (700 contra 750), e
+  # isso deixou de valer quando os pesos de drop passaram a seguir a demanda.
+  #
+  # ⚠️ Se mexer num degrau, mexa nos três: a curva só faz sentido decrescente.
   torre-cacto-5:
     slot: 32
     icon:
@@ -308,6 +316,7 @@ items:
       primal: 100
     commands:
     - 'cactustower give {player} 5 1'
+    # 350 no total · 70 por andar
 
   torre-cacto-10:
     slot: 33
@@ -318,11 +327,12 @@ items:
       - '&7Levanta uma torre de cacto'
       - '&7pronta no seu terreno.'
     cost:
-      eterna: 450
-      sagrada: 300
-      primal: 200
+      eterna: 400
+      sagrada: 150
+      primal: 100
     commands:
     - 'cactustower give {player} 10 1'
+    # 650 no total · 65 por andar
 
   torre-cacto-15:
     slot: 34
@@ -333,11 +343,12 @@ items:
       - '&7Levanta uma torre de cacto'
       - '&7pronta no seu terreno.'
     cost:
-      eterna: 700
-      sagrada: 500
-      primal: 350
+      eterna: 550
+      sagrada: 200
+      primal: 150
     commands:
     - 'cactustower give {player} 15 1'
+    # 900 no total · 60 por andar
 
   # -- Linha 5, trio da esquerda: fly temporário ------------------------------
   #

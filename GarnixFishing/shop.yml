@@ -38,8 +38,34 @@
 #
 # ═══ CHAVES ══════════════════════════════════════════════════════════════════
 #
-# 875 corais por chave, plano — o 16 e o 32 existem só para poupar clique. O
-# lote de 10 já custava 900, então este é o preço que a via sempre teve.
+# 3.000 corais por chave, plano — o 16 e o 32 existem só para poupar clique.
+#
+# ⚠️ O preço NÃO é arbitrário: ele é derivado do que a PRÓPRIA CRATE devolve em
+# coral. A `crates/pesca.yml` paga 2.500/5.000/10.000 com pesos 16,57/8,28/2,76
+# sobre um total de 133,3333, ou seja 828,2 corais de retorno esperado por
+# abertura. Aos 875 que a chave custava até 07/08/2026 ela se pagava em 94,65% e
+# o custo líquido era de 46,8 corais — um minuto de pesca.
+#
+# Isso multiplicava o poder de compra da temporada por 18,7x, que é a soma da
+# série geométrica `1 ÷ (1 − 0,9465)`: os 2,20 M de corais compravam ~47.000
+# chaves em vez de 2.514. E junto vinham ~532 de limite de spawner, ~1.584 de
+# limite de máquina, ~24,5 M de coins, ~35 Caixas Recursos e ~17,6 Caixas Pesca
+# II — o limite de spawner sozinho vale 2,1 M de cash no site.
+#
+# Era a JANELA ABERTA da régua logo acima: a loja expulsou `spawnerslimite` e a
+# Caixa Recursos, mas a crate que ela vende dropa os dois, e se auto-financiava.
+#
+# A causa é datável — em 06/08/2026 os corais da crate foram x10 (250/500/1.000
+# → 2.500/5.000/10.000) e o preço da chave, herdado do lote de 10 a 900, não
+# acompanhou. Antes do x10 o retorno era de 9,5% e a conta fechava.
+#
+# A 3.000 o retorno cai para 27,6%, o custo líquido vai a 2.172 e a temporada
+# compra ~1.013 chaves efetivas — ~50 por dia numa conta AFK. De quebra o prêmio
+# de 2.500 corais passa a valer 83% de uma chave, virando prêmio de verdade em
+# vez de ruído, que era exatamente o argumento do x10.
+#
+# ⚠️ Se mexer nos corais da crate, RECALCULE ESTE PREÇO. O acoplamento é direto:
+# `preço = EV_coral_da_crate ÷ retorno_alvo`, hoje `828,2 ÷ 0,276`.
 #
 # ═══ FLY TEMPORÁRIO ══════════════════════════════════════════════════════════
 #
@@ -80,12 +106,31 @@
 # Comprar o teto custa ~650.000 corais, ou 30% da receita da temporada. É o maior
 # sink da loja, e é o correto: o armazém tem teto físico (o plot) e o item só
 # remove desperdício.
+#
+# ═══ CAIXAS ══════════════════════════════════════════════════════════════════
+#
+# ⚠️ A Caixa Boosters subiu de 35.000 para 120.000 em 07/08/2026, e o motivo é
+# que ela é o MESMO item que a loja de runas vende por 200 eterna + 80 divina.
+# Aos 35.000 os dois preços diferiam 33x — a rota em coral era tão mais barata
+# que o produto da loja de runas ficava morto para qualquer um com conta de
+# pesca, e ainda por cima 35.000 dava 63 caixas por temporada numa conta AFK.
+#
+# Booster é multiplicador de TODAS as vias, não só da pesca. A 120.000 a conta
+# AFK tira 18 caixas na temporada e a discrepância entre as duas lojas cai para
+# 9,6x, que é a diferença esperada entre uma moeda de grind dedicado e uma de
+# contagem que exige boss e evento.
+#
+# A Caixa Runas fica em 60.000. ⚠️ Ela é a ÚNICA ponte coral → runa do servidor,
+# então é o item mais sensível daqui: qualquer mexida no preço, ou nos pesos de
+# `MysteryBoxes/boxes/runas.yml`, muda quanto de britadeira uma conta parada
+# consegue comprar. Veja o comentário daquele arquivo antes de tocar em qualquer
+# um dos dois.
 products:
 
   # -- Chaves -----------------------------------------------------------------
   chave-pesca-16:
-    slot: 19
-    cost: 14000
+    slot: 10
+    cost: 48000
     command: crates givekey pesca {player} 16
     icon:
       material: TRIPWIRE_HOOK
@@ -99,8 +144,8 @@ products:
       - '&8 ▪ &fQuantia: &7x16 '
 
   chave-pesca-32:
-    slot: 28
-    cost: 28000
+    slot: 19
+    cost: 96000
     command: crates givekey pesca {player} 32
     icon:
       material: TRIPWIRE_HOOK
@@ -115,7 +160,7 @@ products:
 
   # -- Fly temporario ---------------------------------------------------------
   fly-30m:
-    slot: 21
+    slot: 12
     cost: 4500
     command: givetempfly {player} 30m 1
     icon:
@@ -129,7 +174,7 @@ products:
       - '&8 ▪ &fDuração: &b30m '
 
   fly-1h:
-    slot: 30
+    slot: 21
     cost: 9000
     command: givetempfly {player} 1h 1
     icon:
@@ -143,7 +188,7 @@ products:
       - '&8 ▪ &fDuração: &b1h '
 
   fly-3h:
-    slot: 39
+    slot: 30
     cost: 27000
     command: givetempfly {player} 3h 1
     icon:
@@ -158,7 +203,7 @@ products:
 
   # -- Limite de armazem ------------------------------------------------------
   warehouse-limit-500:
-    slot: 23
+    slot: 14
     cost: 65000
     command: armazem givelimititem {player} 500 1
     icon:
@@ -173,7 +218,7 @@ products:
       - '&8 ▪ &fQuantia: &a500 '
 
   warehouse-limit-1500:
-    slot: 32
+    slot: 23
     cost: 195000
     command: armazem givelimititem {player} 1500 1
     icon:
@@ -188,7 +233,7 @@ products:
       - '&8 ▪ &fQuantia: &a1500 '
 
   warehouse-limit-3000:
-    slot: 41
+    slot: 32
     cost: 390000
     command: armazem givelimititem {player} 3000 1
     icon:
@@ -204,7 +249,7 @@ products:
 
   # -- Caixas -----------------------------------------------------------------
   caixa-runas:
-    slot: 25
+    slot: 16
     cost: 60000
     command: caixas give runas {player} 1
     icon:
@@ -215,8 +260,8 @@ products:
       - '&7guardou para você lá dentro.'
 
   caixa-boosters:
-    slot: 34
-    cost: 35000
+    slot: 25
+    cost: 120000
     command: caixas give boosters {player} 1
     icon:
       material: ENDER_CHEST

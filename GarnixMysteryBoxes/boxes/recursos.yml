@@ -65,6 +65,26 @@ box-item:
 # ⚠️ As runas usam `givevirtual`: caem no armazenamento e o jogador retira
 # pelo /runas quando quiser, sem ocupar slot na hora da abertura.
 #
+# ⚠️ AS 4 RUNAS NAO TEM MAIS O MESMO PESO (07/08/2026). A familia continua em
+# 18 e o EV continua em 6 runas por abertura — o que mudou e a reparticao, que
+# agora segue a DEMANDA de `GarnixFragments/shop.yml` em vez de dar 4,5 para
+# cada tipo:
+#
+#           demanda   familia   25      50     EV
+#   eterna    60,8%    10,98    7,32   3,66   3,66
+#   sagrada   17,9%     3,24    2,16   1,08   1,08
+#   primal    13,4%     2,34    1,56   0,78   0,78
+#   divina     7,9%     1,44    0,96   0,48   0,48
+#
+# A forma 2:1 entre o lote de 25 e o de 50 e preservada em todos. Antes eram
+# 3,0 e 1,5 para os quatro, e a loja pedia 7,7x mais eterna que divina — cerca
+# de 56% de tudo que caia era runa que ninguem gastava.
+#
+# ⚠️ A mesma correcao foi feita em `boxes/runas.yml`, com a explicacao longa.
+# Os 5 BOSSES ficaram DE FORA de proposito: a linha "sagrada = bosses" do
+# `GarnixFragments/runas.yml` e o que sobrou da identidade de fonte, e o boss
+# e o unico canal onde ela ainda pode ser restaurada.
+#
 # ⚠️ Recompensa `type: CURRENCY` nao declara material: o C15 resolve o icone
 # pela propria moeda (`GarnixCurrencies/currencies/<id>.yml`). So a lore vem
 # daqui — que e justamente o que se quer acrescentar.
@@ -200,7 +220,7 @@ rewards:
   # -- Runa Sagrada
   sagrada-25:
     type: COMMAND
-    chance: 3
+    chance: 2.16
     display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 25
@@ -212,7 +232,7 @@ rewards:
 
   sagrada-50:
     type: COMMAND
-    chance: 1.5
+    chance: 1.08
     display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 50
@@ -225,7 +245,7 @@ rewards:
   # -- Runa Eterna
   eterna-25:
     type: COMMAND
-    chance: 3
+    chance: 7.32
     display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 25
@@ -240,7 +260,7 @@ rewards:
 
   eterna-50:
     type: COMMAND
-    chance: 1.5
+    chance: 3.66
     display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 50
@@ -256,7 +276,7 @@ rewards:
   # -- Runa Divina
   divina-25:
     type: COMMAND
-    chance: 3
+    chance: 0.96
     display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 25
@@ -268,7 +288,7 @@ rewards:
 
   divina-50:
     type: COMMAND
-    chance: 1.5
+    chance: 0.48
     display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 50
@@ -281,7 +301,7 @@ rewards:
   # -- Runa Primal
   primal-25:
     type: COMMAND
-    chance: 3
+    chance: 1.56
     display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 25
@@ -293,7 +313,7 @@ rewards:
 
   primal-50:
     type: COMMAND
-    chance: 1.5
+    chance: 0.78
     display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 50

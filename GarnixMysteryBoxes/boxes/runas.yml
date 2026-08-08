@@ -26,24 +26,70 @@ box-item:
 # quiser. Nao ocupa slot no inventario na hora da abertura.
 #
 # ⚠️ A ESCADA DE LOTE E 25 · 50 · 75 · 100 · 250 · 500, igual para as quatro
-# runas, com os pesos 11 · 6,5 · 4 · 2,5 · 0,75 · 0,25. Soma 25 por runa e
-# 100 no total, entao cada runa tem 25% da caixa e o lote de 500 dela sai em
-# 0,25%. O degrau de 75 entrou em 05/08/2026 — antes a escada pulava de 50
-# direto para 100.
+# runas, com a MESMA FORMA de peso 11 · 6,5 · 4 · 2,5 · 0,75 · 0,25. O degrau
+# de 75 entrou em 05/08/2026 — antes a escada pulava de 50 direto para 100.
 #
 # ⚠️ Os quatro primeiros degraus sao um passo curto entre si (25 → 50 → 75 →
 # 100) e por isso os pesos deles caem devagar. O salto de verdade e do 100
-# para o 250, e o peso acompanha: cai de 2,5 para 0,75.
+# para o 250, e o peso acompanha: cai para ~30% do degrau anterior.
 #
 # ⚠️ Os lotes conversam com a loja de runas, onde o item mais barato custa
 # 90 e o mais caro 1.000 de cada tipo. Um lote de 25 e um passo, o de 500
 # e meio item caro.
 #
-# ⚠️ AS QUATRO RUNAS TEM O MESMO PESO (25% cada), mas a loja NAO pede elas
-# na mesma proporcao: a eterna aparece em 17 itens e soma 5.770, a sagrada
-# em 8 e soma 2.250, a primal em 5 e soma 1.270, a divina em 6 e soma 930.
-# Ou seja a eterna e ~6x mais demandada que a divina e cai na mesma taxa.
-# Isso NAO foi corrigido — fica registrado para uma decisao futura.
+# -- A OFERTA SEGUE A DEMANDA (07/08/2026) --------------------------------
+#
+# Ate 07/08/2026 as quatro runas tinham 25% cada, e a loja NAO pedia elas
+# nessa proporcao. Contado em `GarnixFragments/shop.yml`:
+#
+#   eterna    20 itens · 7.120 · 60,8% da demanda
+#   sagrada    9 itens · 2.100 · 17,9%
+#   primal     7 itens · 1.570 · 13,4%
+#   divina     6 itens ·   930 ·  7,9%
+#
+# A eterna era 7,7x mais demandada que a divina e caia na mesma taxa. Para
+# comprar a loja inteira o jogador precisava de 7.120 eterna, o que exigia
+# ~28.500 runas totais — e sobravam ~5.000 sagradas, ~6.200 divinas e ~5.500
+# primais. Perto de 56% de tudo que caia era lixo, e o custo multi-runa da
+# loja virava teatro: a restricao efetiva era SEMPRE a eterna.
+#
+# Agora a ESCADA DE CADA RUNA E MULTIPLICADA POR UM FATOR que a leva ate a
+# sua fatia da demanda. A forma 11/6,5/4/2,5/0,75/0,25 e preservada:
+#
+#   eterna   x2,44  →  61 de peso   (26,84 · 15,86 · 9,76 · 6,10 · 1,83 · 0,61)
+#   sagrada  x0,72  →  18           ( 7,92 ·  4,68 · 2,88 · 1,80 · 0,54 · 0,18)
+#   primal   x0,52  →  13           ( 5,72 ·  3,38 · 2,08 · 1,30 · 0,39 · 0,13)
+#   divina   x0,32  →   8           ( 3,52 ·  2,08 · 1,28 · 0,80 · 0,24 · 0,08)
+#
+# Soma 100. O EV TOTAL DA CAIXA NAO MUDOU — continua em 58,5 runas por
+# abertura (5.850 ÷ 100); o que mudou e a repartição:
+#
+#   eterna 35,69 · sagrada 10,53 · primal 7,61 · divina 4,68
+#
+# ⚠️ MEXER NA LOJA MEXE AQUI. Se um item novo pedir muita divina, ou se um
+# custo em eterna cair, os pesos saem de sincronia com a demanda de novo. A
+# conta e uma so: fatia_da_runa = soma_dela_na_loja ÷ soma_de_todas.
+#
+# ⚠️ E MEXER AQUI MEXE NA LOJA DA PESCA, porque esta caixa e vendida por coral
+# em `GarnixFishing/shop.yml` a 60.000 e e a UNICA ponte coral → runa do
+# servidor. Concentrar peso na eterna barateia a rota coral → eterna em 2,44x.
+# O preco de la NAO precisou mudar, e a conta e esta:
+#
+# Uma temporada de pesca AFK rende 2,20 M de corais = 36,67 caixas, ou seja
+# 1.308 eterna · 386 sagrada · 279 primal · 172 divina. A britadeira (o item
+# que mais empurra o Ranking de Apeloes) pede 1000/700/400/500, entao a eterna
+# deixou de ser o gargalo e quem passou a segurar foi a DIVINA: sao precisas
+# 85,5 caixas, 5,13 M de corais, 2,33 temporadas. Antes do reajuste o gargalo
+# era a eterna em 68,4 caixas, 4,10 M, 1,87 temporadas.
+#
+# ⚠️ Ou seja o reajuste deixou a britadeira 25% MAIS CARA pela rota do coral,
+# nao mais barata. O que ficou 2,44x mais acessivel foram os quatro itens de
+# eterna pura (limpador 90 · ativador 120 · bomba-2x2 150 · fly-6h 200), e os
+# quatro sao de baixo impacto ou tem rota direta mais barata na loja da pesca —
+# o fly-6h por runa sai a 336 mil corais contra os 54 mil das duas doses de 3h.
+#
+# ⚠️ Se um dia um item CARO passar a custar so eterna, esta conta inverte e o
+# preco da caixa na loja da pesca precisa subir junto.
 #
 # ⚠️ Esta caixa nao tem `azar`: toda abertura devolve runa.
 rewards:
@@ -51,7 +97,7 @@ rewards:
   # -- Runa Sagrada
   sagrada-25:
     type: COMMAND
-    chance: 11
+    chance: 7.92
     display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 25
@@ -63,7 +109,7 @@ rewards:
 
   sagrada-50:
     type: COMMAND
-    chance: 6.5
+    chance: 4.68
     display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 50
@@ -75,7 +121,7 @@ rewards:
 
   sagrada-75:
     type: COMMAND
-    chance: 4
+    chance: 2.88
     display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 75
@@ -87,7 +133,7 @@ rewards:
 
   sagrada-100:
     type: COMMAND
-    chance: 2.5
+    chance: 1.8
     display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 100
@@ -99,7 +145,7 @@ rewards:
 
   sagrada-250:
     type: COMMAND
-    chance: 0.75
+    chance: 0.54
     display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 250
@@ -111,7 +157,7 @@ rewards:
 
   sagrada-500:
     type: COMMAND
-    chance: 0.25
+    chance: 0.18
     display: '&4x&l{amount} &4Runa Sagrada'
     command: runas give {player} sagrada {amount} 1
     amount: 500
@@ -125,7 +171,7 @@ rewards:
   # -- Runa Eterna
   eterna-25:
     type: COMMAND
-    chance: 11
+    chance: 26.84
     display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 25
@@ -137,7 +183,7 @@ rewards:
 
   eterna-50:
     type: COMMAND
-    chance: 6.5
+    chance: 15.86
     display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 50
@@ -149,7 +195,7 @@ rewards:
 
   eterna-75:
     type: COMMAND
-    chance: 4
+    chance: 9.76
     display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 75
@@ -161,7 +207,7 @@ rewards:
 
   eterna-100:
     type: COMMAND
-    chance: 2.5
+    chance: 6.1
     display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 100
@@ -173,7 +219,7 @@ rewards:
 
   eterna-250:
     type: COMMAND
-    chance: 0.75
+    chance: 1.83
     display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 250
@@ -185,7 +231,7 @@ rewards:
 
   eterna-500:
     type: COMMAND
-    chance: 0.25
+    chance: 0.61
     display: '&2x&l{amount} &2Runa Eterna'
     command: runas give {player} eterna {amount} 1
     amount: 500
@@ -199,7 +245,7 @@ rewards:
   # -- Runa Divina
   divina-25:
     type: COMMAND
-    chance: 11
+    chance: 3.52
     display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 25
@@ -211,7 +257,7 @@ rewards:
 
   divina-50:
     type: COMMAND
-    chance: 6.5
+    chance: 2.08
     display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 50
@@ -223,7 +269,7 @@ rewards:
 
   divina-75:
     type: COMMAND
-    chance: 4
+    chance: 1.28
     display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 75
@@ -235,7 +281,7 @@ rewards:
 
   divina-100:
     type: COMMAND
-    chance: 2.5
+    chance: 0.8
     display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 100
@@ -247,7 +293,7 @@ rewards:
 
   divina-250:
     type: COMMAND
-    chance: 0.75
+    chance: 0.24
     display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 250
@@ -259,7 +305,7 @@ rewards:
 
   divina-500:
     type: COMMAND
-    chance: 0.25
+    chance: 0.08
     display: '&fx&l{amount} &fRuna Divina'
     command: runas give {player} divina {amount} 1
     amount: 500
@@ -273,7 +319,7 @@ rewards:
   # -- Runa Primal
   primal-25:
     type: COMMAND
-    chance: 11
+    chance: 5.72
     display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 25
@@ -285,7 +331,7 @@ rewards:
 
   primal-50:
     type: COMMAND
-    chance: 6.5
+    chance: 3.38
     display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 50
@@ -297,7 +343,7 @@ rewards:
 
   primal-75:
     type: COMMAND
-    chance: 4
+    chance: 2.08
     display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 75
@@ -309,7 +355,7 @@ rewards:
 
   primal-100:
     type: COMMAND
-    chance: 2.5
+    chance: 1.3
     display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 100
@@ -321,7 +367,7 @@ rewards:
 
   primal-250:
     type: COMMAND
-    chance: 0.75
+    chance: 0.39
     display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 250
@@ -333,7 +379,7 @@ rewards:
 
   primal-500:
     type: COMMAND
-    chance: 0.25
+    chance: 0.13
     display: '&3x&l{amount} &3Runa Primal'
     command: runas give {player} primal {amount} 1
     amount: 500

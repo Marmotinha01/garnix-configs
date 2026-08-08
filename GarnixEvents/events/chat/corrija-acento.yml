@@ -147,8 +147,12 @@ palavras:
 # premio tambem. O bolao e a unica excecao do grupo: la nao ha bloco rewards,
 # a moeda e a taxa sao escolhidas pela staff ao iniciar e o vencedor leva o pote.
 #
+# ⚠️ A runa e SILENCIOSA - nao aparece em nenhuma mensagem, por decisao do dono.
+# O lote e a conta do que isso rende na temporada estao em GarnixFragments/runas.yml.
+#
 rewards:
 - crates givekey vip {player} 5
+- runas givevirtual {player} divina 10
 
 # -- COMO ESCREVER AS MENSAGENS ----------------------------------------
 #

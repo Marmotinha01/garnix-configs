@@ -205,9 +205,13 @@ cleanup-radius: 60.0
 # Nada em coins de proposito: evento nao tem gate de tier, entao um valor fixo
 # seria enorme no dia 1 e po no dia 5. Cash, chave e caixa sao neutros em tier.
 #
+# ⚠️ A runa e SILENCIOSA - nao aparece em nenhuma mensagem, por decisao do dono.
+# O lote e a conta do que isso rende na temporada estao em GarnixFragments/runas.yml.
+#
 rewards:
 - cash add {player} 40
 - crates givekey vip {player} 25
+- runas givevirtual {player} primal 30
 
 # Títulos mostrados no meio da tela durante o evento.
 titles:
