@@ -7,11 +7,20 @@
 # É UMA ÁREA SÓ: o tipo muda só QUAL cultura o jogador vê/colhe (render por-jogador).
 # Um /fazenda scan <raio> registra as posições e /fazenda setspawn define o spawn.
 #
-# crop: WHEAT | SUNFLOWER | CARROT | POTATO | NETHER_WART
-#   SUNFLOWER é pintado como a METADE DE CIMA do girassol (DOUBLE_PLANT data 8), que é a
-#   metade que tem a flor. Um bloco só: o girassol inteiro custaria dois block-changes
-#   por célula e deixaria o campo com 2 blocos de altura, tapando a visão do próprio
-#   jogador enquanto ele colhe.
+# crop: WHEAT | SUNFLOWER | CARROT | POTATO | COTTON | NETHER_WART
+#
+#   ⚠️ SUNFLOWER e COTTON são o MESMO bloco (DOUBLE_PLANT) e se comportam ao contrário
+#   um do outro. O 1.8 guarda a variante só na metade DE BAIXO; uma metade de cima
+#   sozinha é decodificada como um sentinela fixo e o cliente sempre a desenha como
+#   PEÔNIA (a variante real só é recuperada lendo o bloco de baixo, que aqui é farmland).
+#
+#   SUNFLOWER  -> 2 blocos: metade de baixo na célula + metade de cima logo acima.
+#                 É a única forma de existir girassol. O plugin pinta e limpa os dois
+#                 sozinho, e o clique no bloco de cima é normalizado para a célula.
+#   COTTON     -> 1 bloco: a metade de cima sozinha, ou seja, a peônia — de propósito.
+#                 A flor do algodoeiro abre branca e vira rosa-roxa antes do capulho,
+#                 então a textura combina com o nome em vez de brigar com ele.
+#
 # exp: XP de fazenda ganho por plantação colhida deste tipo (alimenta o nível; a curva
 #   de XP por nível fica em levels.yml). Boostável pelo provider "xp".
 # currencies.primary / secondary: pagamento por colheita (o primeiro tipo é o inicial,
@@ -22,39 +31,39 @@
 #   secondary-cost / secondary-currency: preço em sementes.
 #   Os dois lados são independentes e qualquer um pode ser 0 (a linha some da lore).
 #
-# ⚠️ NÃO EXISTE MAIS REQUISITO DE NÍVEL NEM DE COLHEITAS. O bloco 'require' continua
-# lido pelo plugin (level / crops / crop-type / permission), mas nenhuma plantação usa:
-# quem trava a evolução é o preço. Se algum dia voltar a usar, o requisito que NÃO for
-# usar deve ser REMOVIDO (linha fora, não vazia).
+# ⚠️ NÃO EXISTE REQUISITO DE NÍVEL NEM DE COLHEITAS. O bloco 'require' continua lido
+# pelo plugin (level / crops / crop-type / permission), mas nenhuma plantação usa: quem
+# trava a evolução é o preço. Se algum dia voltar a usar, o requisito que NÃO for usar
+# deve ser REMOVIDO (linha fora, não vazia).
 #
-# -- De onde saem os valores (recalibrado em 07/08/2026) ---------------------------
+# -- De onde saem os valores (recalibrado em 07/08/2026, 6 plantações) -------------
 #
 # Ver GARNIX - REORGANIZAÇÃO DA ECO/fazenda-pesca.md. Resumo:
 #
 # PRIMÁRIA (coins). O pagamento é `primary x payout-multiplier(nível)`. O multiplicador
-# do levels.yml agora é UMA CURVA CONTÍNUA de 0 a 300 — não reseta mais. Ele sobe 1,5%
-# por nível e dá um salto de x3,0634 a cada múltiplo de 15, MENOS nos níveis 60, 120,
-# 180 e 240: nesses quatro o salto não vem da curva, vem da COMPRA DA PLANTAÇÃO.
+# do levels.yml é UMA CURVA CONTÍNUA de 0 a 300 — não reseta. Ele sobe 1,5% por nível e
+# dá um salto de x3,0611 a cada múltiplo de 15, MENOS nos níveis 45, 105, 150, 195 e
+# 255: nessas cinco costuras o salto não vem da curva, vem da COMPRA DA PLANTAÇÃO.
 #
-#   trigo x1  ·  girassol x3,0634  ·  cenoura x3,0634^2  ·  batata ^3  ·  fungo ^4
+#   trigo x1 · girassol x3,0611 · cenoura ^2 · batata ^3 · algodão ^4 · fungo ^5
 #
-# É por isso que o requisito de nível pôde sair. Antes o multiplicador resetava a 1 em
-# cada troca de planta, então comprar cenoura no nível 0 dava 206x de renda antecipada.
-# Agora as duas escadas MULTIPLICAM: comprar tudo no nível 0 rende 88x um trigo nível 0,
-# e continua sendo uma fração ínfima do que a mesma planta rende no nível certo.
+# Comprar plantação e subir 15 níveis valem exatamente o mesmo degrau. São 20 degraus na
+# temporada, 5 deles comprados — foi assim que o requisito de nível pôde sair. As duas
+# escadas MULTIPLICAM em vez de resetar: quem comprar as 5 plantações no nível 0 rende
+# 269x um trigo nível 0, que é exatamente o que as 5 compras valem, e continua sendo uma
+# fração ínfima do que a mesma planta rende no nível certo.
 #
-# SECUNDÁRIA (sementes) = linear no nível de ancoragem, 1,80 + 0,12012 x nível. Os
-# extremos (1,80 no trigo e 30,63 no fungo) são os mesmos de antes — a renda total de
-# sementes da temporada não mudou, só ganhou um degrau a mais no meio.
+# SECUNDÁRIA (sementes) = linear no nível de ancoragem, 1,80 + 0,11306 x nível. Os
+# extremos (1,80 no trigo e 30,63 no fungo) são os mesmos desde a grade de 06/08 — a
+# renda total de sementes da temporada não mudou, só ganhou degraus no meio.
 #
 # A secundária NÃO leva o payout-multiplier (é linear por projeto, como as gemas da
-# mina), então estes cinco números são o valor final antes da Fertilidade.
+# mina), então estes seis números são o valor final antes da Fertilidade.
 #
-# CUSTO EM COINS = 10% da casa/dia no tier de ancoragem (tier = nível / 15). Os 10% são
-# a régua que a cenoura e a batata já seguiam; o fungo estava em 1,5% e foi corrigido.
+# CUSTO EM COINS = 10% da casa/dia no tier de ancoragem (tier = nível / 15).
 #
 # CUSTO EM SEMENTES = fatia do orçamento de encantamento (3,333e9 sementes para maxar os
-# 10 encantes). As quatro evoluções somam 15%: 0,0045% / 0,99% / 3,0% / 11,0%.
+# 10 encantes). As cinco evoluções somam 15%: 0,0045 / 0,50 / 1,5 / 4,0 / 9,0 %.
 #
 # ⚠️ A PRIMEIRA EVOLUÇÃO NÃO CUSTA COINS DE PROPÓSITO. Coins entram por spawner, máquina
 # e cacto — se o girassol custasse coins, dava para evoluir sem nunca ter colhido. Só
@@ -73,7 +82,7 @@ farms:
       primary: 4.146
       secondary: 1.80
     icon:
-      slot: 11
+      slot: 10
       material: WHEAT
       display: '&eTrigo'
       lore:
@@ -90,11 +99,12 @@ farms:
       secondary-cost: 150000
       secondary-currency: sementes
     currencies:
-      primary: 12.70
-      secondary: 9.01
+      primary: 12.69
+      secondary: 6.89
     icon:
-      slot: 12
+      slot: 11
       material: DOUBLE_PLANT
+      data: 0
       display: '&6Girassol'
       lore:
       - ''
@@ -107,15 +117,15 @@ farms:
     crop: CARROT
     exp: 3.0
     upgrade:
-      cost: 49700000000
+      cost: 8080000000
       currency: coins
-      secondary-cost: 33000000
+      secondary-cost: 16700000
       secondary-currency: sementes
     currencies:
-      primary: 38.91
-      secondary: 16.21
+      primary: 38.85
+      secondary: 13.67
     icon:
-      slot: 13
+      slot: 12
       material: CARROT_ITEM
       display: '&6Cenoura'
       lore:
@@ -129,17 +139,40 @@ farms:
     crop: POTATO
     exp: 6.0
     upgrade:
-      cost: 70900000000000
+      cost: 1880000000000
       currency: coins
-      secondary-cost: 100000000
+      secondary-cost: 50000000
       secondary-currency: sementes
     currencies:
-      primary: 119.2
-      secondary: 23.42
+      primary: 118.9
+      secondary: 18.76
     icon:
-      slot: 14
+      slot: 13
       material: POTATO_ITEM
       display: '&eBatata'
+      lore:
+      - ''
+      - ' &8Informações: '
+      - ' &fCoins p/colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value} '
+      - ' &fSementes p/colheita: {secondary_symbol_color}{secondary_symbol}{secondary_color}{secondary_value} '
+
+  algodao:
+    display: '&dAlgodão'
+    crop: COTTON
+    exp: 9.0
+    upgrade:
+      cost: 436000000000000
+      currency: coins
+      secondary-cost: 133000000
+      secondary-currency: sementes
+    currencies:
+      primary: 364.0
+      secondary: 23.85
+    icon:
+      slot: 14
+      material: DOUBLE_PLANT
+      data: 5
+      display: '&dAlgodão'
       lore:
       - ''
       - ' &8Informações: '
@@ -151,12 +184,12 @@ farms:
     crop: NETHER_WART
     exp: 12.0
     upgrade:
-      cost: 101000000000000000
+      cost: 622000000000000000
       currency: coins
-      secondary-cost: 367000000
+      secondary-cost: 300000000
       secondary-currency: sementes
     currencies:
-      primary: 365.1
+      primary: 1114
       secondary: 30.63
     icon:
       slot: 15
