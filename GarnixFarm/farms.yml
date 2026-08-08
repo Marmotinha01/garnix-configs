@@ -77,7 +77,6 @@ farms:
       material: WHEAT
       display: '&eTrigo'
       lore:
-      - '&7Plantação inicial da fazenda.'
       - ''
       - ' &8Informações: '
       - ' &fCoins p/colheita: {primary_symbol_color}{primary_symbol}{primary_color}{primary_value} '
