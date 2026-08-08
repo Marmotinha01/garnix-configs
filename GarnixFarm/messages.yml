@@ -109,7 +109,7 @@ upgrade:
   need-level: '&cVocê precisa ser nível &f{level} &cde fazenda para desbloquear &r{display}&c.'
   need-crops: '&cVocê precisa colher &f{crops} {crop} &cpara desbloquear &r{display}&c.'
   need-permission: '&cVocê não tem permissão para desbloquear &r{display}&c.'
-  no-money: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{cost} &7{currency}&c para comprar &r{display}&c.'
+  no-money: '&cVocê precisa de {symbol_color}{symbol}{primary_color}{cost} {currency}&c para comprar &r{display}&c.'
   success: '&aVocê desbloqueou &r{display}&a. Toda a sua fazenda foi atualizada. Não há como voltar.'
 
 report:
