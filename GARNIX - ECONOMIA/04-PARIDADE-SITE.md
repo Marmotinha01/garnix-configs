@@ -38,7 +38,13 @@ Conferência do teto: garnix (100k) + combustível infinito (60k) + matadora (45
 Venda Automática | 250 | drop raro de caixa | contorna o `initial-limit` do armazém, que é o gargalo do cacto — por isso é legitimamente premium |
 Limite de Armazém +500 | 800 | `/armazem givelimititem` em recompensa | médio |
 Limite de Máquinas +1 | 1.500 | recompensa e marcos de prestígio (12 marcos) | **grátis pela escada de prestígio** — 12 máquinas ao longo dela |
-**Limite de Spawners +1** | 4.000 | `/pesca` → corais, com câmbio decrescente e teto diário | **deliberadamente lento.** É o item nº 1 do Ranking de Apelões: multiplica a única via sem teto físico |
+**Limite de Spawners +1** | 4.000 | drop de crate, boss e Caixa Recursos — `0,032`/chave VIP · `0,039`/chave RankUP · `0,011`/chave de via | **deliberadamente lento.** É o item nº 1 do Ranking de Apelões: multiplica a única via sem teto físico |
+
+> ⚠️ **A linha do spawner dizia `/pesca` → corais, com câmbio decrescente e teto diário — e as três metades estavam erradas.** O produto saiu da loja da pesca em 06/08/2026 pela régua do dono (*"só itens úteis e que não impactam de maneira forte na economia"*), o câmbio era crescente e não decrescente, e teto diário nunca existiu em lugar nenhum do config. Corrigido em 07/08/2026.
+>
+> A rota real é **drop**, e ela foi recalibrada no mesmo dia. As crates VIP e RankUP davam o limite de spawner em lotes de `5·15·30·50` e `15·30·50·100` — o mesmo tamanho do limite de armazém, que vale 800 cash contra os 4.000 daqui. Como a Chave VIP é o prêmio dos 22 eventos (~3.960 na temporada), um jogador que ganhasse 10% das rodadas tirava **~65 unidades de graça**, contra as 12–25 que um whale compra gastando 50–100 mil de cash. Os dois lotes desceram para `1·3·5·10` e o total da temporada caiu para **~27**.
+>
+> O mesmo tratamento foi aplicado ao **Limite de Máquinas**. ⚠️ A linha dele acima ainda diz *"grátis pela escada de prestígio — 12 máquinas ao longo dela"*: depois da correção a crate RankUP entrega **5,7** ao longo dos 20 ranks, e o total somando todos os canais fica em ~81. Os dois números precisam ser conferidos contra o que os marcos de prestígio realmente dão antes de a linha ser reescrita.
 
 ### Caixas — faixas A a C
 

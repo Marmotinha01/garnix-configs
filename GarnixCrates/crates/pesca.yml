@@ -87,8 +87,11 @@ key-item:
 #   maquina  1 · 3 · 5   pesos 1,35 · 0,68 · 0,22   (familia 2,25)
 #   spawner  1 · 3 · 5   pesos 0,45 · 0,22 · 0,08   (familia 0,75)
 #
-# ⚠️ A escada 1·3·5 e a das crates BASICAS. VIP e RankUP usam 5·15·30·50, quatro
-# degraus, com peso 50/30/15/5. A escada 5·15·30 e a mesma da loja da /pesca.
+# ⚠️ A escada 1·3·5 e a das crates BASICAS. A VIP e a RankUP tem QUATRO degraus,
+# mas desde 07/08/2026 so o ARMAZEM delas usa lote largo (5·15·30·50 na VIP,
+# 15·30·50·100 na RankUP). Maquina e spawner desceram para 1·3·5·10 nas duas:
+# a razao de valor 6:3:1 mora no PESO, e dar o mesmo LOTE aos tres fazia o item
+# de 4.000 cash sair na mesma quantia do de 800. Ver o comentario da rankup.yml.
 #
 # ⚠️ O degrau de cima de cada moeda fica ABAIXO de 3,999999 de proposito: esse
 # e o teto real do boost de robo (total 133,3333 x 3 / 100), e um peso 4 cravado

@@ -69,11 +69,27 @@ key-item:
 # chegam no GUARDIAN (2.200).
 #
 # ⚠️ Os tres limites sao repartidos por VALOR, na razao 6:3:1 — o cash shop
-# cobra 800 (armazem), 1.500 (maquina) e 4.000 (spawner):
+# cobra 800 (armazem), 1.500 (maquina) e 4.000 (spawner). O peso segue essa
+# razao; o LOTE nao, e e essa a diferenca desde 07/08/2026:
 #
-#   armazem  9 (15) · 3,6 (30) · 1,8 (50) · 0,24 (100)
-#   maquina  4,5    · 1,8      · 0,9      · 0,12
-#   spawner  1,5    · 0,6      · 0,3      · 0,04
+#   armazem  15 · 30 · 50 · 100   pesos 9   · 3,6 · 1,8 · 0,24  (familia 14,64)
+#   maquina   1 ·  3 ·  5 ·  10   pesos 4,5 · 1,8 · 0,9 · 0,12  (familia  7,32)
+#   spawner   1 ·  3 ·  5 ·  10   pesos 1,5 · 0,6 · 0,3 · 0,04  (familia  2,44)
+#
+# ⚠️ MAQUINA E SPAWNER DESCERAM DE 15·30·50·100 PARA 1·3·5·10. A razao 6:3:1
+# mora no PESO, entao dar o mesmo LOTE aos tres fazia o item de 4.000 cash cair
+# na mesma quantia do de 800 — e um lote de 15 do item n1 do Ranking de Apeloes
+# e mais do que um whale compra com 60 mil de cash.
+#
+# A escada de 20 ranks entrega 49 chaves desta crate. A 0,44625 de spawner por
+# chave isso eram 21,9 unidades so por subir os ranks uma vez. Agora sao 1,9.
+#
+# ⚠️ O ARMAZEM FICOU COM A ESCADA LARGA de proposito: e o limite barato e de
+# volume (a via do cacto pede ~5.000 na temporada) e tem teto fisico no plot.
+#
+# ⚠️ Os pesos NAO mudaram — 14,64 : 7,32 : 2,44 continua sendo 6:3:1 exato. A
+# crate VIP foi normalizada no mesmo dia e pelo mesmo motivo; mexeu numa, mexa
+# na outra.
 #
 # ⚠️ `chance` e PESO, nao porcentagem — Crate.java:100-105 normaliza por
 # totalChance. Somar 100 e so legibilidade (o azar entra por cima, ver no fim).
@@ -112,12 +128,12 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  lim-maquina-15:
+  lim-maquina-1:
     type: COMMAND
     chance: 4.5
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 15
+    amount: 1
     icon:
       material: INK_SACK
       data: 4
@@ -126,12 +142,12 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner-15:
+  lim-spawner-1:
     type: COMMAND
     chance: 1.5
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 15
+    amount: 1
     icon:
       material: INK_SACK
       data: 12
@@ -221,12 +237,12 @@ rewards:
       lore:
       - '&fLitros: &72.000L'
 
-  lim-maquina-30:
+  lim-maquina-3:
     type: COMMAND
     chance: 1.8
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 30
+    amount: 3
     icon:
       material: INK_SACK
       data: 4
@@ -264,12 +280,12 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  lim-spawner-30:
+  lim-spawner-3:
     type: COMMAND
     chance: 0.6
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 30
+    amount: 3
     icon:
       material: INK_SACK
       data: 12
@@ -311,12 +327,12 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  lim-maquina-50:
+  lim-maquina-5:
     type: COMMAND
     chance: 0.9
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 50
+    amount: 5
     icon:
       material: INK_SACK
       data: 4
@@ -338,12 +354,12 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  lim-spawner-50:
+  lim-spawner-5:
     type: COMMAND
     chance: 0.3
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 50
+    amount: 5
     icon:
       material: INK_SACK
       data: 12
@@ -407,12 +423,12 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  lim-maquina-100:
+  lim-maquina-10:
     type: COMMAND
     chance: 0.12
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 100
+    amount: 10
     icon:
       material: INK_SACK
       data: 4
@@ -421,12 +437,12 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner-100:
+  lim-spawner-10:
     type: COMMAND
     chance: 0.04
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 100
+    amount: 10
     icon:
       material: INK_SACK
       data: 12

@@ -72,12 +72,34 @@ key-item:
 # chegam perto do PIG_ZOMBIE (1.460). Era 25, que nao comprava nem o porco.
 #
 # ⚠️ Os tres limites sao repartidos por VALOR, na razao 6:3:1 — o cash shop
-# cobra 800 (armazem), 1.500 (maquina) e 4.000 (spawner). Sao QUATRO degraus
-# aqui, 5·15·30·50, com peso 50/30/15/5 (a basica usa tres, 1·3·5).
+# cobra 800 (armazem), 1.500 (maquina) e 4.000 (spawner). Sao QUATRO degraus,
+# contra os tres da crate basica:
 #
-#   armazem  5 · 15 · 30 · 50   pesos 3,6 · 2,16 · 1,08 · 0,36   (familia 7,2)
-#   maquina  5 · 15 · 30 · 50   pesos 1,8 · 1,08 · 0,54 · 0,18   (familia 3,6)
-#   spawner  5 · 15 · 30 · 50   pesos 0,6 · 0,36 · 0,18 · 0,06   (familia 1,2)
+#   armazem  5 · 15 · 30 · 50   pesos 6 · 2,4 · 1,2 · 0,6     (familia 10,2)
+#   maquina  1 ·  3 ·  5 · 10   pesos 3 · 1,2 · 0,6 · 0,3     (familia  5,1)
+#   spawner  1 ·  3 ·  5 · 10   pesos 1 · 0,4 · 0,2 · 0,1     (familia  1,7)
+#
+# ⚠️ MAQUINA E SPAWNER DESCERAM PARA 1·3·5·10 EM 07/08/2026. Os tres usavam a
+# escada larga, e para o spawner isso era demais: a razao 6:3:1 esta no PESO,
+# entao dar o mesmo LOTE aos tres multiplicava o item de 4.000 cash pelo mesmo
+# numero do item de 800.
+#
+# A conta que motivou: a Chave VIP e o premio dos 22 eventos (5 a 25 por
+# vitoria, ~3.960 na temporada). A 0,165 de spawner por chave, um jogador que
+# ganhasse 10% das rodadas tirava ~65 de limite de spawner de graca — contra
+# os 12 a 25 que um whale compra gastando 50 a 100 mil de cash. O item n1 do
+# Ranking de Apeloes saia mais barato para quem nao paga.
+#
+# Com 1·3·5·10 o EV cai de 0,165 para 0,0315 por chave (5,2x) e o total da
+# temporada, somando todos os canais, fica em ~27 — dentro da faixa do whale.
+#
+# ⚠️ O ARMAZEM FICOU COM A ESCADA LARGA de proposito. Ele e o limite barato e de
+# volume: a via do cacto precisa de ~5.000 dele na temporada e ele tem teto
+# fisico (o plot). Lote grande ali e correto; lote grande no spawner nao era.
+#
+# ⚠️ Os pesos NAO foram tocados — a razao 6:3:1 continua exata (10,2 : 5,1 :
+# 1,7). Se mexer num lote, mexa na RankUP junto: as duas foram normalizadas no
+# mesmo dia e pelo mesmo motivo.
 #
 # ⚠️ O degrau de cima de cada moeda fica ABAIXO de 3,999999 de proposito: esse
 # e o teto real do boost de robo (total 133,3333 x 3 / 100), e um peso 4 cravado
@@ -124,12 +146,12 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  lim-maquina-5:
+  lim-maquina-1:
     type: COMMAND
     chance: 3
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 5
+    amount: 1
     icon:
       material: INK_SACK
       data: 4
@@ -138,12 +160,12 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner-5:
+  lim-spawner-1:
     type: COMMAND
     chance: 1
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 5
+    amount: 1
     icon:
       material: INK_SACK
       data: 12
@@ -239,12 +261,12 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  lim-maquina-15:
+  lim-maquina-3:
     type: COMMAND
     chance: 1.2
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 15
+    amount: 3
     icon:
       material: INK_SACK
       data: 4
@@ -269,12 +291,12 @@ rewards:
       - ''
       - '&8 ▪ &fQuantia: &7x{amount}'
 
-  lim-spawner-15:
+  lim-spawner-3:
     type: COMMAND
     chance: 0.4
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 15
+    amount: 3
     icon:
       material: INK_SACK
       data: 12
@@ -329,12 +351,12 @@ rewards:
       lore:
       - '&fValor: &2∞{amount}'
 
-  lim-maquina-30:
+  lim-maquina-5:
     type: COMMAND
     chance: 0.6
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 30
+    amount: 5
     icon:
       material: INK_SACK
       data: 4
@@ -343,12 +365,12 @@ rewards:
       lore:
       - '&fValor: &9∞{amount}'
 
-  lim-spawner-30:
+  lim-spawner-5:
     type: COMMAND
     chance: 0.2
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 30
+    amount: 5
     icon:
       material: INK_SACK
       data: 12
@@ -401,12 +423,12 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  lim-maquina-50:
+  lim-maquina-10:
     type: COMMAND
     chance: 0.3
     display: '&9Limite de Máquinas'
     command: maquina givelimite {player} {amount} 1
-    amount: 50
+    amount: 10
     icon:
       material: INK_SACK
       data: 4
@@ -428,12 +450,12 @@ rewards:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  lim-spawner-50:
+  lim-spawner-10:
     type: COMMAND
     chance: 0.1
     display: '&bLimite de Spawners'
     command: spawner givelimite {player} {amount} 1
-    amount: 50
+    amount: 10
     icon:
       material: INK_SACK
       data: 12
