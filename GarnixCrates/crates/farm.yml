@@ -462,7 +462,10 @@ rewards:
   #
   #   crate VIP ...... cacto 0,15
   #   crate RankUP ... torre de 5 andares 0,35
-  #   aqui ........... cacto 0,05  ·  torre 0,10   (3x e 3,5x mais raros)
+  #   aqui ........... cacto 0,10  ·  torre 0,05   (1,5x e 7x mais raros)
+  #
+  # A torre vale mais que o cacto avulso — sao 5 andares prontos contra 1 bloco —
+  # entao ela e a mais rara das duas.
   #
   # ⚠️ E de proposito que sao mais raros que o jackpot desta crate, apesar de
   # valerem menos que ele. A via do cacto e reinvestimento COMPOSTO: quem
@@ -473,7 +476,7 @@ rewards:
   # da faixa comum sem escada — encolher ele nao quebra nenhuma razao declarada.
   cacto:
     type: ITEM
-    chance: 0.05
+    chance: 0.1
     display: '&aCacto'
     amount: 1
     item:
@@ -483,7 +486,7 @@ rewards:
 
   torre-cacto-5:
     type: COMMAND_ITEM
-    chance: 0.1
+    chance: 0.05
     display: '&aTorre de Cacto &8[5 Andares]'
     command: cactustower give {player} 5 {amount}
     amount: 1
