@@ -18,6 +18,9 @@ event:
   left-world: '&eVocê saiu do mundo do evento e foi retirado dele.'
   kicked: '&cVocê foi retirado do evento por &f{staff}&c.'
   already-joined: '&cVocê já está participando deste evento.'
+  # Vários eventos podem acontecer ao mesmo tempo, mas cada jogador só entra em um.
+  # Vale para a arena e para o camarote.
+  already-in-event: '&cVocê já está participando de outro evento.'
   join-closed: '&cAs entradas para este evento já foram encerradas.'
   join-full: '&cO evento já está lotado.'
   join-denied: '&cVocê não pode entrar neste evento agora.'
