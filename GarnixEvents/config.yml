@@ -6,6 +6,25 @@
 # Intervalo (minutos) de atualização dos rankings.
 ranking-refresh-minutes: 5
 
+# Vários eventos acontecem ao mesmo tempo, e todos são esperados no MESMO lobby. Com isto ligado,
+# duas plateias esperando eventos DIFERENTES não se veem, mesmo pisando nos mesmos blocos.
+#
+# Esconde só entre eventos diferentes. Quem não entrou em nada continua vendo todo mundo:
+#
+#   Sumô ↔ Sumô ................. se veem
+#   Sumô ↔ Spleef ............... não se veem
+#   Sumô ↔ quem não entrou ...... se veem
+#   quem não entrou ↔ idem ...... se veem
+#
+# É por isso que o lobby não fica vazio para quem chega, e que a staff enxerga tudo sem precisar de
+# permissão nenhuma: como só se chega no mundo dos eventos entrando, indo pro camarote ou esperando
+# no lobby — e os três vinculam —, quem está lá sem vínculo já é staff. De vanish também, já que o
+# vanish esconde a staff dos players e não os players da staff.
+#
+# Desligue (false) para todo mundo se ver como antes. Ninguém consegue bater em quem está em outro
+# evento de qualquer forma: isso é barrado no combate, não pela visibilidade.
+isolate-runs: true
+
 # Texto de %events_running% e %events_winner_<evento>% quando não há ninguém.
 placeholder-none: Nenhum
 
