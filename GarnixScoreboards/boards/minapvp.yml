@@ -1,0 +1,73 @@
+# Board do mundo da mina PvP.
+#
+# ⚠️ O RESET NÃO APARECE AQUI. O GarnixPvPMine existe com a regra "o reset da
+# mina é silencioso: não existe aviso de reset em lugar nenhum" (messages.yml
+# dele, primeira linha). O %pvpmine_next_reset% existe e funciona, mas colocar
+# ele numa board devolveria pela porta dos fundos o aviso que o plugin recusa
+# a dar pela porta da frente — o jogador passaria a parar de minerar aos 10
+# segundos em vez de ser pego pelo refill.
+#
+# ⚠️ 15 LINHAS É O TETO DO 1.8, e esta board usa as 15. Toda linha nova aqui
+# derruba uma de baixo em silêncio: as quatro do altar são condicionais, então
+# quando não há altar de pé sobram 11 e a folga é falsa. Se precisar de mais,
+# tire uma, não empurre.
+enabled: true
+priority: 0
+worlds: ['minapvp']
+permission: ''
+
+# ⚠️ 10 e não 20. O número que muda rápido aqui é a vida do altar durante um
+# raid, e meio segundo de atraso já é pouco perto do tempo entre dois hits.
+# É o dobro de renderizações por jogador, mas só neste mundo.
+update-ticks: 10
+
+title:
+  interval: 2
+  frames:
+  - '&f&lMINA PVP &8▪ &c%pvpmine_players%'
+  - '&c&lMINA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lMINA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lM&f&lINA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lM&c&lINA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lMI&f&lNA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lMI&c&lNA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lMIN&f&lA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lMIN&c&lA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lMINA &f&lPVP &8▪ &c%pvpmine_players%'
+  - '&4&lMINA &c&lPVP &8▪ &c%pvpmine_players%'
+  - '&c&lMINA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lMINA PVP &8▪ &c%pvpmine_players%'
+  - '&f&lMINA PVP &8▪ &c%pvpmine_players%'
+  - '&4&lMINA PVP &8▪ &c%pvpmine_players%'
+
+lines:
+- ''
+- ' &fNa mina: &c%pvpmine_players%'
+- ''
+
+- ' &4&lDOMINAÇÃO'
+- ' %pvpmine_state%'
+- ' %pvpmine_bar%'
+
+# Só para quem está de fato com o buff — o inimigo parado do lado lê 1 e a
+# linha some para ele. É o motivo do %pvpmine_multiplier% ser por jogador.
+- text: ' &fSeus ganhos: &a&lx%pvpmine_multiplier%'
+  condition: '%pvpmine_multiplier% > 1'
+
+# O bloco do altar inteiro sai da board quando não existe altar de pé.
+- text: ''
+  condition: '%pvpmine_altar_alive%'
+
+- text: ' &d&lALTAR'
+  condition: '%pvpmine_altar_alive%'
+
+- text: ' &4❤%pvpmine_altar_hp%'
+  condition: '%pvpmine_altar_alive%'
+
+- text: ' %pvpmine_altar_bar%'
+  condition: '%pvpmine_altar_alive%'
+
+- ''
+- ' &fCoins: &2$&a%currencies_coins%'
+- ''
+- '&eredegarnix.com'

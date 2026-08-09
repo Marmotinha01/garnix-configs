@@ -137,6 +137,24 @@ menus:
   - '&aEsquerdo &f+0.05% &8· &aShift+Esquerdo &f+1%'
   - '&cDireito &f-0.05% &8· &cShift+Direito &f-1%'
 
+# ── PLACEHOLDERS (%pvpmine_*%) ───────────────────────────────────────────────
+# Textos que a scoreboard não conseguiria montar sozinha: uma linha de board não
+# tem 'se', então o galho entre "ninguém dominando", "dominando" e "dominou"
+# acontece AQUI ou não acontece em lugar nenhum.
+#
+# {clan} sai como a TAG COLORIDA do clan e a cor dela vale até o próximo código —
+# reponha a sua logo depois, igual nos broadcasts.
+placeholders:
+  # %pvpmine_state% — um dos três, conforme o estado da dominação.
+  state-idle: '&cNinguém dominando'
+  state-claiming: '{clan} &f— &e{percent}%'
+  state-dominated: '{clan} &a— &l{time}'
+
+  # %pvpmine_altar_hp% e família, quando não existe altar de pé.
+  altar-none: '&8—'
+  # %pvpmine_next_reset% com reset.interval desligado.
+  reset-off: '&8—'
+
 labels:
   wand-name: '&aSeletor da Mina PvP'
   wand-lore:

@@ -19,3 +19,9 @@ commands:
     - ''
     - '  &4&lREGRAS &8▶ &7https://regras.redegarnix.com '
     - ''
+  arena:
+    name: arena
+    player-exec-cmd: warp arena
+  minapvp:
+    name: minapvp
+    player-exec-cmd: warp minapvp

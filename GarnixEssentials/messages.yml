@@ -91,6 +91,14 @@ heal:
   success: '&aSua vida foi restaurada.'
   success-other: '&aA vida de &f{player} &afoi restaurada.'
 
+# Reparar (/reparar, /repair, /fix)
+# Só conta o que estava DESGASTADO: item novo é ignorado, e é por isso que o
+# 'nothing' existe como frase separada em vez de um 'reparei 0 itens'.
+repair:
+  success: '&aVocê reparou &f{amount} &aitens com sucesso!'
+  success-single: '&aVocê reparou &f1 &aitem com sucesso!'
+  nothing: '&cVocê não tem nenhum item precisando de reparo.'
+
 # GameMode
 gamemode:
   success: '&aModo de jogo alterado para &f{mode}&a.'

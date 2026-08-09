@@ -153,6 +153,17 @@ altar:
     interval: 1s
   
   hologram:
+    # ⚠️ De quantos em quantos ticks a vida do holograma é redesenhada. Estava
+    # preso no tick de 1 segundo do altar junto com a auditoria do cristal, a
+    # regeneração e a gravação em disco — e por isso a actionbar já mostrava
+    # 5.999 enquanto o holograma ainda dizia 6.000 por até um segundo inteiro.
+    #
+    # 2 ticks = 10 redesenhos por segundo, mais rápido do que o olho separa. O
+    # resto continua de segundo em segundo: redesenhar é a metade barata, e ela
+    # só roda quando a vida realmente mudou. Máximo aceito: 20 (1 segundo), que
+    # é voltar ao problema.
+    refresh-ticks: 2
+
     # Relativo ao CRISTAL (já com altar.offset aplicado).
     offset:
       x: 0.0
@@ -258,6 +269,36 @@ status-hologram:
   - '&aDominada pelo clan &7[{clan}&7]&a!'
   - ''
   - '&fGanhos &a&ldobrados &fpor &c&l{time}&f!'
+
+# ── PLACEHOLDERS (%pvpmine_*%) ───────────────────────────────────────────────
+# Para a scoreboard do mundo da mina. Os TEXTOS ficam no messages.yml, em
+# 'placeholders:'; aqui mora só a barra, que é desenho e não frase.
+#
+#   %pvpmine_state%           linha pronta do estado da dominação
+#   %pvpmine_clan%            tag colorida de quem domina/está dominando
+#   %pvpmine_percent%         % da barra, sem o símbolo
+#   %pvpmine_bar%             a barra desenhada com o que está aqui embaixo
+#   %pvpmine_time%            quanto falta do buff de ganhos dobrados
+#   %pvpmine_multiplier%      1 ou 2 — o do JOGADOR que está lendo a board
+#   %pvpmine_players%         quantos estão dentro da região do WorldGuard
+#   %pvpmine_altar%           'Altar vivo' / 'Sem altar'
+#   %pvpmine_altar_hp%        vida atual (também _hp_suffix, _max_hp)
+#   %pvpmine_altar_percent%   % de vida do altar
+#   %pvpmine_altar_bar%       barra de vida do altar (usa altar.hologram.bar)
+#   %pvpmine_broken%          blocos quebrados desde o último reset
+#   %pvpmine_broken_percent%  quanto disso é da região, em %
+#   %pvpmine_next_reset%      quanto falta para o reset por tempo
+#
+# ⚠️ O %pvpmine_multiplier% é POR JOGADOR de propósito: ele responde 2 só para
+# quem é do clan que domina, e 1 para o inimigo parado do lado. Uma board que
+# mostrasse o multiplicador do dono para todo mundo prometeria ganho dobrado a
+# quem não está recebendo.
+placeholders:
+  bar:
+    chars: 10
+    char: '▮'
+    completed-color: '&a'
+    uncompleted-color: '&7'
 
 # ── RECOMPENSAS POR CHANCE (ao quebrar bloco) ────────────────────────────────
 # Cada recompensa é sorteada separadamente contra a própria chance — elas não
