@@ -1,0 +1,195 @@
+# GarnixPvPMine
+#
+# Mina do mapa PvP: blocos reais, picareta do próprio jogador, nada dropa.
+# Setup: /gamerule doTileDrops false → /mpvp setpos → setregion → fill
+#        → setaltar → setholo → rewards
+
+debug: false
+
+mine:
+  # 'percentage' é peso, não cota: 50/50 = metade da mina cada um.
+  # 'currencies' é o que UM bloco paga: '<moeda> <quantia>', quantas quiser.
+  blocks:
+    redstone-block:
+      material: REDSTONE_BLOCK
+      data: 0
+      percentage: 50
+      currencies:
+      - coins 15
+    redstone-ore:
+      material: REDSTONE_ORE
+      data: 0
+      percentage: 50
+      currencies:
+      - coins 8
+      - gemas 0.5
+
+reset:
+  # Vale o que vier primeiro. O gatilho que disparar reinicia os dois.
+  interval: 3m # vazio ou 0 desliga
+  broken-percentage: 40 # % da região quebrada; 0 desliga
+  check-interval-ticks: 20
+  
+  # Anti-lag de celular: quantos chunks são atualizados na tela por tick.
+  # Deixe em 1 se houver bedrock/pojav.
+  chunks-per-tick: 1
+  blocks-per-tick: 4096 # custo de servidor, pode ser folgado
+  full-chunk-threshold: 64 # mudanças num chunk para reenviar a seção inteira
+  
+  fill-on-startup: true
+  startup-delay-ticks: 100
+
+# ── DOMINAÇÃO ────────────────────────────────────────────────────────────────
+# Um clan sozinho na região do WorldGuard sobe a barra. Dois clans travam a
+# barra. Jogador sem clan não interfere.
+domination:
+  region: mine_pvp # id da região WG (o cuboid grande, com o PvP)
+  percent-per-interval: 1.0 # % por intervalo
+  interval-ticks: 20
+  contest-timeout: 3m # 2 clans por este tempo = dominação zerada
+  # Nenhum membro do clan que domina na região por este tempo = desistência, zera. 0 desliga.
+  abandon-timeout: 1m
+  altar-at-percent: 50 # % que faz o altar surgir
+  duration: 10m # duração dos ganhos dobrados
+  multiplier: 2.0 # ganhos e chances do clan dominante
+
+  # Onde o multiplier age nas recompensas por chance:
+  #   chance = cai o dobro de vezes (padrão)
+  #   amount = cai o dobro por vez
+  #   both   = os dois, o que na prática vira x4 — peça de propósito
+  #   none   = só as moedas dobram
+  reward-scaling: chance
+  broadcast-every-percent: 10 # de quantas em quantas % avisa no chat
+  save-interval: 30s # de quanto em quanto tempo o estado vai pro disco
+
+# ── ALTAR ────────────────────────────────────────────────────────────────────
+# Cristal do end com vida falsa. Só some quando alguém dá o último hit.
+altar:
+  max-health: 10000
+  # Dano final da arma (com enchants e crítico) × multiplier, nunca menor que min-damage.
+  damage-multiplier: 1.0
+  min-damage: 1.0
+  hit-cooldown-ms: 250 # intervalo mínimo entre hits do MESMO jogador; 0 desliga
+  save-interval: 30s # de quanto em quanto tempo a vida vai pro disco durante a luta
+
+  # % de vida que dispara broadcast ao ser atingida. Uma vez cada por altar
+  # (re-arma se ele regenerar acima). Lista vazia desliga.
+  broadcast-at-percent:
+  - 75
+  - 50
+  - 25
+  - 10
+
+  # Posição do cristal em relação ao /mpvp setaltar.
+  offset:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+
+  regen:
+    idle: 20s # sem apanhar por este tempo, começa a regenerar
+    amount: 100 # HP por passo
+    interval: 1s
+  
+  hologram:
+    # Relativo ao CRISTAL (já com altar.offset aplicado).
+    offset:
+      x: 0.0
+      y: 2.5
+      z: 0.0
+    lines:
+    - '&d&lALTAR'
+    - '&4❤{hp}'
+    - '{bar}'
+    bar:
+      chars: 20
+      char: '▮'
+      completed-color: '&a'
+      uncompleted-color: '&c'
+  
+  drops:
+    # Sorteia de min a max itens (inclusive): 3/5 = 3, 4 ou 5.
+    # Cada vaga é um sorteio ponderado pelas chances do menu.
+    min: 3
+    max: 5
+    allow-duplicates: true # false = itens diferentes no mesmo drop
+    default-chance: 10.0 # chance de um item recém-colocado no menu
+    chance-step: 1.0 # clique esquerdo/direito
+    chance-step-shift: 5.0 # com shift
+    scatter-strength: 0.25 # força do drop quando o inventário está cheio
+
+# ── HOLOGRAMA DE STATUS ──────────────────────────────────────────────────────
+# Fica onde você usou /mpvp setholo.
+status-hologram:
+  # Relativo ao /mpvp setholo.
+  offset:
+    x: 0.0
+    y: 0.0
+    z: 0.0
+
+  altar-alive: '&aAltar vivo'
+  altar-dead: '&cSem altar'
+  
+  lines-idle:
+  - '&e&lMINA PVP'
+  - '&cNenhum clan dominando.'
+  
+  lines-claiming:
+  - '&c&lMINA PVP'
+  - '&fO clan &7[{clan}&7] &eestá dominando &8(&c&l{percent}&c%&8)'
+  
+  lines-dominated:
+  - '&4&lMINA PVP'
+  - '&aDominada pelo clan &7[{clan}&7]&a!'
+  - ''
+  - '&fGanhos &a&ldobrados &fpor &c&l{time}&f!'
+
+# ── RECOMPENSAS POR CHANCE (ao quebrar bloco) ────────────────────────────────
+# Cada recompensa é sorteada separadamente contra a própria chance — elas não
+# disputam entre si e não precisam somar 100.
+#
+#   chance     % por bloco quebrado (aceita decimal)
+#   amount     quantidade, disponível como {amount} nos comandos e mensagens
+#   commands   rodados no console, {player} = quem quebrou
+#   cooldown   enquanto valer, a chance daquele jogador é zero (e é silencioso)
+#   blocks     limita a quais blocos de mine.blocks ela pode sair
+#   message / title / subtitle / sound   opcionais
+rewards:
+  chave-comum:
+    chance: 5.0
+    amount: 1
+    commands:
+    - crates givekey {player} comum {amount}
+    message: '&aVocê encontrou &f{amount}x Chave Comum &ana mina!'
+    sound: LEVEL_UP
+
+  chave-rara:
+    chance: 0.25
+    amount: 1
+    cooldown: 2m
+    commands:
+    - crates givekey {player} rara {amount}
+    message: '&6Você encontrou &e&l{amount}x Chave Rara &6na mina!'
+    title: '&6&lCHAVE RARA'
+    subtitle: '&7Você teve sorte na mina!'
+    title-fade-in: 5
+    title-stay: 40
+    title-fade-out: 10
+    sound: ENDERDRAGON_GROWL
+  
+  bonus-redstone:
+    chance: 1.0
+    amount: 500
+    blocks:
+    - redstone-block
+    commands:
+    - currencies give {player} coins {amount}
+    message: '&a+{amount} coins &7(bônus da mina)'
+
+# ── ACTIONBAR DO GANHO ───────────────────────────────────────────────────────
+# Mostrada a cada bloco quebrado. Cores e símbolo vêm do GarnixCurrencies.
+# Deixe 'message' vazio para desligar.
+actionbar:
+  message: '{rewards}'
+  entry: '{color}&l+&r{symbol_color}{symbol}{color}{value}'
+  separator: ' &8▏ '

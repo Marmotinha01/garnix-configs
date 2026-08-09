@@ -1,0 +1,144 @@
+# GarnixPvPMine — mensagens. Use & para cores.
+# O reset da mina é silencioso: não existe aviso de reset em lugar nenhum.
+# Listas vazias desligam o broadcast correspondente.
+
+general:
+  reloaded: '&aConfigurações recarregadas com sucesso.'
+  only-players: '&cApenas jogadores podem usar este comando.'
+
+selection:
+  pos1-set: '&aPos1 definida em &f{x}&a, &f{y}&a, &f{z}&a.'
+  pos2-set: '&aPos2 definida em &f{x}&a, &f{y}&a, &f{z}&a.'
+  no-positions: '&cDefina a &fpos1 &ce a &fpos2 &cantes.'
+  different-worlds: '&cAs duas posições precisam estar no mesmo mundo.'
+  region-set: '&aRegião definida &7(&f{blocks} &7blocos)&a. Use &f/mpvp fill&a.'
+  wand-received: '&aVocê recebeu o seletor da mina PvP.'
+  altar-set: '&aLocal do altar definido onde você está.'
+  hologram-set: '&aHolograma de status definido onde você está.'
+
+admin:
+  no-region: '&cRegião não definida. Use &f/mpvp setpos &ce &f/mpvp setregion&c.'
+  world-not-loaded: '&cO mundo da região salva não está carregado.'
+  no-blocks: '&cNenhum bloco válido em &fmine.blocks&c.'
+  already-running: '&cJá existe um reset em andamento.'
+  reset-started: '&aReset iniciado.'
+  fill-started: '&aPreenchimento iniciado.'
+  no-rewards: '&cNenhum item em &f/mpvp rewards &cainda.'
+  no-altar-location: '&cLocal do altar não definido. Use &f/mpvp setaltar&c.'
+  altar-spawned: '&aAltar invocado.'
+  altar-already-up: '&cJá existe um altar de pé.'
+  altar-removed: '&aAltar removido.'
+  altar-status: '&eAltar: {state}'
+  rewards-saved: '&aRecompensas salvas &7(&f{items} &7itens)&a.'
+  chance-updated: '&aChance: &f{chance}%'
+
+  status-idle: '&aparada'
+  status-running: '&een andamento &e({progress}%)'
+  status-timer-off: '&cdesligado'
+  status-domination-idle: '&cninguém dominando'
+  status-domination-claiming: '{clan} &fdominando &e({percent}%)'
+  status-domination-dominated: '{clan} &fdominou &a({time} restantes)'
+  status-altar-alive: '&avivo &f{hp}&8/&f{max_hp}'
+  status-altar-dead: '&cfora'
+  status: |-
+    &8&m--------------------------------
+    &4&lMINA PVP
+    &fMundo: &e{world}
+    &fÁrea: &e{min} &f→ &e{max} &8(&e{blocks} &fblocos&8)
+    &fComposição: &e{types} &fbloco(s) &8· &fLoot: &e{loot} &fitem(ns)
+    &fRecompensas por chance: &e{rewards}
+    &fQuebrados: &e{broken} &8(&e{broken_percent}%&8)
+    &fPróximo reset: &e{next_reset} &8· &fReset: {job}
+    &fDominação: {domination}
+    &fAltar: {altar}
+    &8&m--------------------------------
+
+# Broadcasts da dominação. {clan} {percent} {hp} {player} {duration} {multiplier}
+# {clan} é a TAG colorida do clan — a cor dela vale até o próximo código, então
+# reponha a cor logo depois. Lista vazia desliga o aviso.
+domination:
+  progress:
+  - ''
+  - '  &4&lMINA PVP &7(/minapvp)'
+  - '  {clan} &cestá dominando a Mina PVP! &8(&e&l{percent}&e%&8)'
+  - ''
+  - '  &fAo concluir terão ganhos e chances &a&ldobrados&f.'
+  - ''
+
+  progress-altar:
+  - ''
+  - '  &4&lMINA PVP &7(/minapvp)'
+  - '  {clan} &cestá dominando a Mina PVP! &8(&e&l{percent}&e%&8)'
+  - ''
+  - '  &fO altar permanece vivo com &4❤{hp}&f.'
+  - ''
+
+  altar-spawned:
+  - ''
+  - '  &d&lALTAR &7(/minapvp)'
+  - '  &fO altar surgiu com &4❤{hp} &fdurante a dominação do clan &7[{clan}&7]&f!'
+  - ''
+  - '  &eQualquer jogador pode atacá-lo.'
+  - ''
+
+  # Disparado ao cruzar cada % de altar.broadcast-at-percent.
+  # {threshold} é a % que acabou de cair.
+  altar-damaged:
+  - ''
+  - '  &d&lALTAR &7(/minapvp)'
+  - '  &fO altar caiu para &c&l{percent}&c% &8(&4❤{hp}&8)'
+  - ''
+  - '  &fÚltimo golpe de &e{player}&f.'
+  - ''
+
+  altar-killed:
+  - ''
+  - '  &d&lALTAR &7(/minapvp)'
+  - '  &e{player} &fdestruiu o altar e levou as &a&lrecompensas&f!'
+  - ''
+
+  completed:
+  - ''
+  - '  &a&lMINA PVP &7(/minapvp)'
+  - '  &fO clan &7[{clan}&7] &cdominou a Mina PVP!'
+  - ''
+  - '  &fGanhos e chances &a&ldobrados &fpor &c{duration}&f.'
+  - ''
+
+  contested:
+  - ''
+  - '  &c&lMINA PVP &7(/minapvp)'
+  - '  &fO clan &7[{clan}&7] &cfoi impedido de dominar por outro clan!'
+  - ''
+
+  # Nenhum membro do clan ficou na região por domination.abandon-timeout.
+  abandoned:
+  - ''
+  - '  &c&lMINA PVP &7(/minapvp)'
+  - '  &fO clan &7[{clan}&7] &cabandonou a dominação e perdeu os &e{percent}%&c!'
+  - ''
+
+# Actionbar enviada a quem bate no altar. Vazio desliga.
+# {damage} {hp} {max_hp} {percent} {bar}
+# Vida sai como 10.000; use {hp_suffix} / {max_hp_suffix} para a forma curta (10K).
+altar:
+  hit-actionbar: '&d&lALTAR &4❤{hp} &8(&c-{damage}&8)'
+
+menus:
+  rewards-title: 'Recompensas do Altar'
+  chances-title: 'Chances do Altar'
+  chance-lore:
+  - ''
+  - ' &fChance: &e{chance}%'
+  - ''
+  - '&aEsquerdo &f+1% &8· &aShift+Esquerdo &f+5%'
+  - '&cDireito &f-1% &8· &cShift+Direito &f-5%'
+
+labels:
+  wand-name: '&aSeletor da Mina PvP'
+  wand-lore:
+  - ''
+  - '&fClique &aesquerdo &fpara a &apos1&f.'
+  - '&fClique &cdireito &fpara a &cpos2&f.'
+  - ''
+  - '&fDepois use &e/mpvp setregion&f.'

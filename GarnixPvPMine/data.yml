@@ -1,0 +1,6 @@
+# Dados da mina PvP — preenchido automaticamente pelo plugin.
+# Definido por /minapvp setpos + /minapvp setregion; não edite à mão.
+
+region: minapvp:-21:31:29:18:71:68
+altar-location: minapvp:-0.5:72.0:49.5:0.0:0.0
+status-hologram: minapvp:-2.493811309002922:83.0625:24.487564376287118:0.7495441:89.75015
