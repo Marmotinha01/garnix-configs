@@ -158,7 +158,7 @@ placeholders:
   # Com '{clan} &8- &l{time}' isso é inevitável — a tag do clan tem tamanho
   # variável, então o ponto de corte muda de clan para clan. A saída foi dar
   # ao tempo a sua própria linha na board, curta e de uma cor só.
-  state-idle: '&cNinguém dominando'
+  state-idle: '&7Ninguém dominando'
   state-claiming: '{clan} &8- &e{percent}%'
   state-dominated: '{clan}'
 

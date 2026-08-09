@@ -255,14 +255,34 @@ status-hologram:
 
   altar-alive: '&aAltar vivo'
   altar-dead: '&cSem altar'
+
+  # Barra do {bar} das lines-* aqui embaixo — mesma ideia da do altar, que mora
+  # em altar.hologram.bar.
+  #
+  # ⚠️ O DESENHO É DAQUI, O NÚMERO NÃO. A porcentagem é a mesma que a scoreboard
+  # mostra (as duas chamam o mesmo método), mas a LARGURA é separada de
+  # propósito: aqui é um holograma flutuando no mundo, onde cabem 20 caracteres;
+  # lá é uma linha de scoreboard cortada em 16, códigos de cor inclusos. A
+  # largura da board mora em placeholders.bar, no fim do arquivo.
+  #
+  # Mexer numa não mexe na outra, e nenhuma das duas consegue mostrar uma
+  # porcentagem diferente da outra.
+  bar:
+    chars: 20
+    char: '▪'
+    completed-color: '&a'
+    uncompleted-color: '&c'
   
+  # Tokens das três listas: {clan} {percent} {bar} {time} {multiplier} {altar}
+  # Valem nas três — {bar} numa dominada sai cheia e numa parada sai vazia.
   lines-idle:
   - '&e&lMINA PVP'
   - '&cNenhum clan dominando.'
   
   lines-claiming:
   - '&c&lMINA PVP'
-  - '&fO clan &7[{clan}&7] &eestá dominando &8(&c&l{percent}&c%&8)'
+  - '&eO clan &7[{clan}&7] &eestá dominando! &8(&c&l{percent}&c%&8)'
+  - '{bar}'
   
   lines-dominated:
   - '&4&lMINA PVP'
@@ -277,7 +297,7 @@ status-hologram:
 #   %pvpmine_state%           linha pronta do estado da dominação
 #   %pvpmine_clan%            tag colorida de quem domina/está dominando
 #   %pvpmine_percent%         % da barra, sem o símbolo
-#   %pvpmine_bar%             a barra desenhada com o que está aqui embaixo
+#   %pvpmine_bar%             a barra da dominação, na largura daqui de baixo
 #   %pvpmine_time%            quanto falta do buff de ganhos dobrados
 #   %pvpmine_multiplier%      1 ou 2 — o do JOGADOR que está lendo a board
 #   %pvpmine_players%         quantos estão dentro da região do WorldGuard
@@ -294,11 +314,14 @@ status-hologram:
 # mostrasse o multiplicador do dono para todo mundo prometeria ganho dobrado a
 # quem não está recebendo.
 placeholders:
+  # Só a LARGURA da barra na scoreboard — o quanto ela está cheia é o mesmo
+  # número do {bar} do holograma (status-hologram.bar). Menor aqui porque a
+  # linha da board é cortada em 16 caracteres, códigos de cor contando.
   bar:
     chars: 10
     char: '▪'
     completed-color: '&a'
-    uncompleted-color: '&7'
+    uncompleted-color: '&c'
 
 # ── RECOMPENSAS POR CHANCE (ao quebrar bloco) ────────────────────────────────
 # Cada recompensa é sorteada separadamente contra a própria chance — elas não
