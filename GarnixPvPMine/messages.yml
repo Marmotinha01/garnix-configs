@@ -147,13 +147,13 @@ menus:
 placeholders:
   # %pvpmine_state% — um dos três, conforme o estado da dominação.
   state-idle: '&cNinguém dominando'
-  state-claiming: '{clan} &f— &e{percent}%'
-  state-dominated: '{clan} &a— &l{time}'
+  state-claiming: '{clan} &8- &e{percent}%'
+  state-dominated: '{clan} &8- &l{time}'
 
   # %pvpmine_altar_hp% e família, quando não existe altar de pé.
-  altar-none: '&8—'
+  altar-none: '&8-'
   # %pvpmine_next_reset% com reset.interval desligado.
-  reset-off: '&8—'
+  reset-off: '&8-'
 
 labels:
   wand-name: '&aSeletor da Mina PvP'
