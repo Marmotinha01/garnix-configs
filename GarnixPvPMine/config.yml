@@ -281,8 +281,8 @@ status-hologram:
   
   lines-claiming:
   - '&c&lMINA PVP'
-  - '&eO clan &7[{clan}&7] &eestá dominando! &8(&c&l{percent}&c%&8)'
-  - '{bar}'
+  - '&eO clan &7[{clan}&7] &eestá dominando!'
+  - '{bar} &8- &4&l{percent}&4%'
   
   lines-dominated:
   - '&4&lMINA PVP'
