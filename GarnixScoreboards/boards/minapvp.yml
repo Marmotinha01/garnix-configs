@@ -7,10 +7,19 @@
 # a dar pela porta da frente — o jogador passaria a parar de minerar aos 10
 # segundos em vez de ser pego pelo refill.
 #
-# ⚠️ 15 LINHAS É O TETO DO 1.8, e esta board usa as 15. Toda linha nova aqui
-# derruba uma de baixo em silêncio: as quatro do altar são condicionais, então
-# quando não há altar de pé sobram 11 e a folga é falsa. Se precisar de mais,
-# tire uma, não empurre.
+# ⚠️ 15 LINHAS É O TETO DO 1.8. Toda linha nova aqui derruba uma de baixo em
+# silêncio, e a folga que as condicionais dão é falsa — conte pelo pior caso,
+# não pelo que está na sua tela.
+#
+# ⚠️ CADA LINHA SAI EM DUAS METADES. O 1.8 manda uma linha como prefix (16
+# chars) + suffix (16), e o FastBoard corta no caractere 16 CONTANDO OS CÓDIGOS
+# DE COR. A metade de baixo é remontada com ChatColor.getLastColors(prefix),
+# que anda de trás para frente e PARA na primeira cor — formatação que veio
+# ANTES dessa cor não é reconstruída.
+#
+# Na prática: depois do último &cor de uma linha, evite &l/&n/&o. Se o corte
+# cair ali, a metade de baixo perde o negrito e a linha renderiza em dois
+# estilos no meio de uma palavra.
 enabled: true
 priority: 0
 worlds: ['minapvp']
@@ -42,17 +51,27 @@ title:
 
 lines:
 - ''
-- ' &fNa mina: &c%pvpmine_players%'
+- ' &fNa mina: &e%pvpmine_players%'
 - ''
 
-- ' &4&lDOMINAÇAO'
+- ' &c&lDOMINAÇAO'
 - ' %pvpmine_state%'
-- ' %pvpmine_bar%'
 
-# Só para quem está de fato com o buff — o inimigo parado do lado lê 1 e a
-# linha some para ele. É o motivo do %pvpmine_multiplier% ser por jogador.
-- text: ' &fSeus ganhos: &a&lx%pvpmine_multiplier%'
-  condition: '%pvpmine_multiplier% > 1'
+# A barra e o tempo são o MESMO lugar da board em dois momentos diferentes: a
+# barra enquanto sobe, o relógio depois que fechou. Nunca aparecem juntos —
+# uma barra cheia parada embaixo do tempo não informa nada, só ocupa linha.
+#
+# 'claiming' e não '!= dominated' de propósito: com ninguém dominando a barra
+# ficaria em 0%, e uma barra vazia é ruído, não informação.
+- text: ' %pvpmine_bar%'
+  condition: '%pvpmine_status% == claiming'
+
+# ⚠️ O tempo mora numa linha SÓ DELE por causa do corte de 16 caracteres do 1.8
+# (ver o comentário de placeholders: no messages.yml do GarnixPvPMine). Aqui
+# tudo depois do último código de cor é texto puro, então onde quer que o corte
+# caia as duas metades saem iguais.
+- text: ' &fDobro por &a%pvpmine_time%'
+  condition: '%pvpmine_status% == dominated'
 
 # O bloco do altar inteiro sai da board quando não existe altar de pé.
 - text: ''
@@ -62,9 +81,6 @@ lines:
   condition: '%pvpmine_altar_alive%'
 
 - text: ' &4❤%pvpmine_altar_hp%'
-  condition: '%pvpmine_altar_alive%'
-
-- text: ' %pvpmine_altar_bar%'
   condition: '%pvpmine_altar_alive%'
 
 - ''

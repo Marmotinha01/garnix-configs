@@ -146,9 +146,21 @@ menus:
 # reponha a sua logo depois, igual nos broadcasts.
 placeholders:
   # %pvpmine_state% — um dos três, conforme o estado da dominação.
+  #
+  # ⚠️ O TEMPO SAIU DAQUI. Uma linha de scoreboard no 1.8 é prefix (16 chars) +
+  # suffix (16), e o FastBoard corta no caractere 16 CONTANDO OS CÓDIGOS DE COR.
+  # A metade de baixo é remontada com ChatColor.getLastColors(prefix), que anda
+  # de trás para frente e PARA na primeira cor que encontra — então formatação
+  # que veio ANTES dessa cor não é reconstruída, e a linha renderiza em dois
+  # estilos diferentes no meio de uma palavra. Era esse o '&f&l9m' seguido de
+  # '&8e 54s': o corte caía dentro do tempo.
+  #
+  # Com '{clan} &8- &l{time}' isso é inevitável — a tag do clan tem tamanho
+  # variável, então o ponto de corte muda de clan para clan. A saída foi dar
+  # ao tempo a sua própria linha na board, curta e de uma cor só.
   state-idle: '&cNinguém dominando'
   state-claiming: '{clan} &8- &e{percent}%'
-  state-dominated: '{clan} &8- &l{time}'
+  state-dominated: '{clan}'
 
   # %pvpmine_altar_hp% e família, quando não existe altar de pé.
   altar-none: '&8-'

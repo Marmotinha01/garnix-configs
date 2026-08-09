@@ -175,7 +175,7 @@ altar:
     - '{bar}'
     bar:
       chars: 20
-      char: '▮'
+      char: '▪'
       completed-color: '&a'
       uncompleted-color: '&c'
   
@@ -296,7 +296,7 @@ status-hologram:
 placeholders:
   bar:
     chars: 10
-    char: '▮'
+    char: '▪'
     completed-color: '&a'
     uncompleted-color: '&7'
 
