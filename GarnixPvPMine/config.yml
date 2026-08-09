@@ -146,6 +146,58 @@ altar:
     x: 0.0
     y: 1.0
     z: 0.0
+  
+  # ── EMPURRÃO (anti-jogo do cristal) ────────────────────────────────────────
+  # ⚠️ ISTO NÃO É ENFEITE, É O QUE IMPEDE UM BUNKER GRÁTIS NO MEIO DA ARENA.
+  # O cristal do end é uma hitbox de 2x2x2, e no 1.8 quem decide em QUEM o hit
+  # bateu é o CLIENTE: ele traça uma reta do olho e reporta a primeira caixa que
+  # encontrar. Quem está dentro do cristal fica atrás dele de todos os ângulos —
+  # todo hit mirado nele é entregue ao altar e o cara não toma dano nenhum,
+  # enquanto bate normalmente. Não tem correção no servidor: o servidor nunca
+  # chega a ver o hit que foi comido. Só sobra manter a caixa vazia.
+  push:
+    enabled: true
+
+    # ⚠️ 1,6 NÃO É CHUTE. O cristal tem raio 1,0 de hitbox, o cliente ainda
+    # infla 0,1 na mira e o jogador tem 0,3 de meia-largura: 1,1 + 0,3 = 1,4 é
+    # onde as duas caixas ENCOSTAM. Em 1,6 o empurrão acontece 0,2 antes disso,
+    # então ninguém chega ao ponto de ficar imune — e ainda sobra 1 bloco livre
+    # até a superfície do cristal, bem dentro dos 3 de alcance do soco. Baixar
+    # para 1,4 ou menos devolve o anti-jogo; subir demais empurra quem só está
+    # batendo no altar.
+    radius: 1.6
+    # A altura da zona, a partir do Y do CRISTAL (já com o offset acima). Mais
+    # para baixo do que para cima porque o jogador tem 1,8 de altura: quem está
+    # 2 blocos abaixo ainda tem a cabeça dentro do cristal, quem está acima não.
+    below: 3.0
+    above: 1.5
+
+    # Força do tranco. 0,55 tira o jogador ~2 blocos; o lift é o pulinho que
+    # evita que ele raspe na borda do pedestal em vez de sair de cima dele.
+    strength: 0.55
+    lift: 0.35
+
+    # ⚠️ De quantos em quantos ticks a zona é varrida — é ISTO que decide quanto
+    # tempo alguém consegue ficar dentro do cristal. 2 = 10 varreduras por
+    # segundo, então nem um sprint atravessa a zona sem levar o tranco.
+    #
+    # ⚠️ É TASK PRÓPRIA, não PlayerMoveEvent, e não é preguiça: o anti-jogo é
+    # ficar PARADO, e quem para de andar para de disparar move event. O evento
+    # também não veria o cristal nascendo em cima de alguém nem o cara relogando
+    # de dentro dele — precisaria desta varredura do mesmo jeito. E move event é
+    # o evento mais quente do servidor (~20x por segundo POR JOGADOR, em todo
+    # mundo, tendo altar ou não); a varredura só custa quando existe altar.
+    #
+    # Sem altar de pé isto é um boolean e um return. Com altar, é um teste de
+    # cilindro por jogador do mundo da mina — três subtrações contra números já
+    # guardados. Máximo aceito: 20 (1 segundo), que já é lento demais.
+    check-ticks: 2
+
+    # ⚠️ Intervalo mínimo entre dois empurrões do MESMO jogador. Sem ele a
+    # varredura relançaria o jogador a cada 2 ticks enquanto ele ainda está
+    # voando para fora, e em vez de aterrissar longe ele ficaria PENDURADO no ar
+    # em cima do altar. 250ms é mais que o tempo de voo do tranco.
+    cooldown-ms: 250
 
   regen:
     idle: 20s # sem apanhar por este tempo, começa a regenerar

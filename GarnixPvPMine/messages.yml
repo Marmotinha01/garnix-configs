@@ -123,6 +123,9 @@ domination:
 # Vida sai como 10.000; use {hp_suffix} / {max_hp_suffix} para a forma curta (10K).
 altar:
   hit-actionbar: '&d&lALTAR &4❤{hp} &8(&c-{damage}&8)'
+  # Mostrada a quem toma o tranco por entrar no cristal. Sem ela o empurrão
+  # parece bug de servidor; com ela vira regra. Deixe vazio para desligar.
+  push-actionbar: '&c&lVocê não pode ficar dentro do altar!'
 
 menus:
   rewards-title: 'Recompensas do Altar'
