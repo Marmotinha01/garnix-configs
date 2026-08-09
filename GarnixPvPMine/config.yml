@@ -9,20 +9,39 @@ debug: false
 mine:
   # 'percentage' é peso, não cota: 50/50 = metade da mina cada um.
   # 'currencies' é o que UM bloco paga: '<moeda> <quantia>', quantas quiser.
+  #
+  # ⚠️ COMPOSIÇÃO ÚNICA, SÓ COINS. A mina é 100% REDSTONE_ORE de propósito: com
+  # um bloco só, a actionbar mostra sempre o mesmo número e o jogador nunca
+  # precisa escolher onde cavar — aqui a escolha é BRIGAR, não garimpar.
+  #
+  # ⚠️ GEMAS SAÍRAM. Gema é a moeda de profundidade da MINERAÇÃO (os 15
+  # encantes) e ela é linear no tempo jogado — uma segunda torneira sem gate
+  # de tier a inflaria direto. Quem quer gema minera na mina normal; aqui se
+  # ganha coins e LOOT.
+  #
+  # ⚠️ 10 COINS/BLOCO É O TRATAMENTO DA CRATE, NÃO O DA BANDA. Esta mina não
+  # tem gate de tier — o jogador do dia 1 e o do dia 20 quebram o mesmo bloco.
+  # Então o coin daqui só pode ser um empurrão de começo:
+  #
+  #   mina normal T1  1,13/bloco   → ~79.000 coins/h
+  #   mina PvP        10/bloco     → ~150.000 coins/h (15.000 blocos/h)
+  #   mina normal T2  4,62/bloco   → ~323.000 coins/h  ← já passa a PvP
+  #
+  # No dia 1 vale ~2x a mina normal, o que paga o risco de morrer. Do dia 2 em
+  # diante vira ruído, e é assim que tem que ser: a partir daí quem vem aqui
+  # vem pelas CHAVES, pelas CAIXAS e pelo ALTAR, não pelo coin.
+  #
+  # ⚠️ Não liste GLOWING_REDSTONE_ORE. Pisar ou bater no minério troca o id 73
+  # pelo 74 no mundo, e o MineBlocks já mapeia a variante acesa de volta para a
+  # apagada antes de precificar (MineBlocks:37). Uma entrada para o 74 só criaria
+  # um segundo bloco na composição.
   blocks:
-    redstone-block:
-      material: REDSTONE_BLOCK
-      data: 0
-      percentage: 50
-      currencies:
-      - coins 15
     redstone-ore:
       material: REDSTONE_ORE
       data: 0
-      percentage: 50
+      percentage: 100
       currencies:
-      - coins 8
-      - gemas 0.5
+      - coins 10
 
 reset:
   # Vale o que vier primeiro. O gatilho que disparar reinicia os dois.
@@ -44,7 +63,29 @@ reset:
 # barra. Jogador sem clan não interfere.
 domination:
   region: mine_pvp # id da região WG (o cuboid grande, com o PvP)
-  percent-per-interval: 1.0 # % por intervalo
+
+  # ⚠️ 0,25%/s = 1% a cada 4 segundos. A dominação inteira leva 6min40, e o
+  # altar nasce no meio dela, aos 3min20. Estava em 1,0 (100 segundos do zero
+  # ao fim) e isso quebrava três coisas de uma vez:
+  #
+  #   1. NINGUÉM CONSEGUIA REAGIR. O broadcast avisava e 50 segundos depois o
+  #      altar já estava de pé — não dá tempo de ver o chat, equipar e viajar.
+  #      Uma dominação tem que ser um convite para a briga, não um aviso do que
+  #      já aconteceu. 3min20 até o altar é uma janela de resposta de verdade.
+  #
+  #   2. CONTESTAR ERA MAIS LENTO QUE DOMINAR. O contest-timeout é 3m, então
+  #      derrubar a barra de alguém custava 180s enquanto tomar a mina do zero
+  #      custava 100s. A relação certa é a inversa — NEGAR tem que ser mais
+  #      barato que TOMAR, e com 400s de subida contra 180s de contestação ela
+  #      finalmente é.
+  #
+  #   3. O TROCO NÃO FECHAVA: 100 segundos de trabalho compravam 10 minutos de
+  #      ganhos dobrados (1:6). Agora são 400 segundos por 600 (1:1,5).
+  #
+  # ⚠️ O ritmo se mexe AQUI, não no interval-ticks. Este tick também é o que
+  # detecta contestação e abandono, conta o buff e redesenha o holograma — subir
+  # ele para 60 deixaria as quatro coisas 3x mais lentas para poupar dois ticks.
+  percent-per-interval: 0.25 # % por intervalo
   interval-ticks: 20
   contest-timeout: 3m # 2 clans por este tempo = dominação zerada
   # Nenhum membro do clan que domina na região por este tempo = desistência, zera. 0 desliga.
@@ -59,13 +100,33 @@ domination:
   #   both   = os dois, o que na prática vira x4 — peça de propósito
   #   none   = só as moedas dobram
   reward-scaling: chance
-  broadcast-every-percent: 10 # de quantas em quantas % avisa no chat
+
+  # ⚠️ 25 e não 10. O aviso é um bloco de 6 linhas: em 10 o chat levava nove
+  # blocos por dominação, e o que era para ser evento virava ruído de fundo que
+  # todo mundo aprende a ignorar. Em 25 a dominação inteira cabe em quatro
+  # avisos — 25%, o altar (que substitui a linha dos 50%), 75% e a conclusão.
+  broadcast-every-percent: 25 # de quantas em quantas % avisa no chat
   save-interval: 30s # de quanto em quanto tempo o estado vai pro disco
 
 # ── ALTAR ────────────────────────────────────────────────────────────────────
 # Cristal do end com vida falsa. Só some quando alguém dá o último hit.
 altar:
-  max-health: 10000
+  # ⚠️ 6.000 e não 10.000. A vida se lê em TEMPO DE CLIQUE, não em número: o
+  # hit-cooldown-ms de 250 trava todo mundo em 4 hits por segundo, então uma
+  # espada de diamante encantada faz ~30 por segundo e o teto de dano de um
+  # jogador é esse, não importa o equipamento.
+  #
+  #   10.000 → 5min30 solo · ~1min em grupo de 5
+  #    6.000 → 3min20 solo · ~40s em grupo de 5
+  #
+  # Os 3min20 solo não são acidente: é o mesmo tempo da subida até o altar
+  # aparecer. Quem dominou sozinho leva para matar o que levou para invocar.
+  #
+  # ⚠️ Baixar isto com um altar DE PÉ deixa ele acima de 100% — o `health`
+  # salvo continua 10.000 e o regen só desliga acima do teto, nunca desce
+  # (AltarManager:375). Depois do /mpvp reload, rode /mpvp altar remove e
+  # /mpvp altar spawn para ele renascer já no valor novo.
+  max-health: 6000
   # Dano final da arma (com enchants e crítico) × multiplier, nunca menor que min-damage.
   damage-multiplier: 1.0
   min-damage: 1.0
@@ -107,15 +168,69 @@ altar:
       completed-color: '&a'
       uncompleted-color: '&c'
   
+  # ⚠️ A TABELA DO ALTAR É MONTADA À MÃO em /mpvp rewards — os itens são itens
+  # de verdade, colocados no menu, e a chance de cada um vive no rewards.yml.
+  # A tabela abaixo é o que deve estar lá (peso soma 100, então peso = %):
+  #
+  #   faixa      peso   item                          por abate (4 vagas)
+  #   recheio    24     5x Chave Mineração            66,6%
+  #              20     3x Chave Bosses               59,0%
+  #              16     1x Caixa Recursos             50,2%
+  #   bom        12     1x Caixa Chaves               40,0%
+  #              10     1x Caixa Runas                34,4%
+  #               8     3x Chave VIP                  28,4%
+  #   raro        5     1x Caixa Boosters             18,5%
+  #               2     1x Chave RankUP                7,8%
+  #   épico       1,5   1x Caixa Máquinas              5,9%
+  #               1,45  1x Caixa Robôs                 5,7%
+  #   jackpot     0,05  1x Caixa Garnix                0,2%
+  #
+  # ⚠️ A CHAVE RANKUP É O ITEM SENSÍVEL DA TABELA. A crate dela é a única com
+  # volume de propósito baixo (~20 chaves por volta de prestígio) e a única com
+  # tabela deslocada para cima (60/30/8,5/1,45/0,05). Peso 2 aqui dá ~1,6 chave
+  # por dia com 20 altares diários. Se o altar começar a cair mais que isso,
+  # o peso dela é o PRIMEIRO a cortar — não o do jackpot.
+  #
+  # ⚠️ O RITMO DO ALTAR MANDA NA TABELA INTEIRA, e quem manda no ritmo é o CICLO
+  # DE DOMINAÇÃO, não a subida sozinha. Enquanto um clan está com o buff de 10
+  # minutos, `tickClaim` nem roda: ninguém sobe barra nenhuma e nenhum altar
+  # pode nascer. Então o ciclo mínimo entre dois altares é
+  #
+  #     subida até 50% + o resto até 100% + duration
+  #     3min20 + 3min20 + 10min ≈ 16min40  →  no máximo ~3,6 por hora
+  #
+  # Com a mina realmente disputada umas 8 horas por dia isso dá ~29 altares no
+  # teto teórico e ~20 na prática (contestação zera claim, clan abandona) — que
+  # é o número que a tabela acima assume.
+  #
+  # ⚠️ A VIDA DO ALTAR EMPURRA ESSE NÚMERO PARA CIMA. Com 10.000 o terceiro
+  # motivo da lista era "altar fica de pé sem ninguém matar", e um altar vivo
+  # bloqueia o próximo (spawn é no-op). Em 6.000 quase todo altar morre no
+  # mesmo dia em que nasce, então a prática encostou no teto: foi por isso que
+  # a conta saiu de ~15 para ~20.
+  #
+  # ⚠️ Se um dia isso passar de ~15/dia, o lever é `duration`, NÃO a subida. Os
+  # 10 minutos de buff são 60% do ciclo: dobrar a subida corta o altar em 20%,
+  # dobrar o buff corta em 40%. E dois altares nunca coexistem — `altar.spawn()`
+  # é no-op com um de pé, então uma dominação que rola com o altar anterior vivo
+  # simplesmente não gera outro.
   drops:
     # Sorteia de min a max itens (inclusive): 3/5 = 3, 4 ou 5.
     # Cada vaga é um sorteio ponderado pelas chances do menu.
     min: 3
     max: 5
+    # ⚠️ Fica LIGADO. Com 11 itens na mesa, repetir é raro e lê como "veio mais
+    # do bom". Desligar faria cada vaga renormalizar sobre o que sobrou, e a
+    # cauda da tabela (Robôs, Garnix) ficaria bem mais provável do que o peso diz.
     allow-duplicates: true # false = itens diferentes no mesmo drop
     default-chance: 10.0 # chance de um item recém-colocado no menu
-    chance-step: 1.0 # clique esquerdo/direito
-    chance-step-shift: 5.0 # com shift
+    # ⚠️ O passo fino é 0,05 porque a tabela tem peso quebrado (1,5 · 1,45 ·
+    # 0,05) e o menu clica de passo em passo a partir do default-chance. Se
+    # mudar aqui, mude menus.chance-lore no messages.yml junto — ela anuncia
+    # os passos ao admin. Para a montagem inicial é mais rápido colocar os 11
+    # itens, fechar o menu e escrever as chances direto no rewards.yml.
+    chance-step: 0.05 # clique esquerdo/direito
+    chance-step-shift: 1.0 # com shift
     scatter-strength: 0.25 # força do drop quando o inventário está cheio
 
 # ── HOLOGRAMA DE STATUS ──────────────────────────────────────────────────────
@@ -154,37 +269,87 @@ status-hologram:
 #   cooldown   enquanto valer, a chance daquele jogador é zero (e é silencioso)
 #   blocks     limita a quais blocos de mine.blocks ela pode sair
 #   message / title / subtitle / sound   opcionais
+#
+# ⚠️ A ESCADA É DECIMAL: 0,04 · 0,01 · 0,004 · 0,001. Cada degrau vale 1/4 do
+# anterior, então dá para mexer numa recompensa sem recalcular as outras.
+#
+# A unidade de leitura é UMA HORA DE MINA: ~15.000 blocos. A mina normal mede
+# 70.000/h, mas lá é picareta encantada e explosivo, e ninguém está atirando em
+# você. Aqui é picareta pura, com morte, reset e briga no meio.
+#
+#   chave-mineracao  0,04    →  6 por hora        (uma a cada ~10 min)
+#   chave-bosses     0,01    →  1,5 por hora      (uma a cada ~40 min)
+#   caixa-recursos   0,004   →  0,6 por hora      (uma a cada ~1h40)
+#   caixa-chaves     0,001   →  0,15 por hora     (uma a cada ~6h40)
+#
+# ⚠️ TUDO SAI COMO ITEM FÍSICO, de propósito — `givekey` e não `givevirtualkey`.
+# Chave e caixa no inventário são loot que se PERDE ao morrer, então matar
+# alguém na mina rende o que ele já tinha achado. É o que transforma "eu minero
+# no meu canto" em "eu tomo o que é dele". Se um dia isso virar virtual, a mina
+# deixa de ter motivo para o PvP existir.
+#
+# ⚠️ O COOLDOWN AQUI É TETO, NÃO DOSE. A dose é a `chance`; o cooldown só corta
+# a cauda de quem quebra rápido demais (5m = no máximo 12 caixas/h contra as 0,6
+# esperadas). Ele mora na memória e some quando o jogador sai — como ele quase
+# nunca morde, relogar não é atalho para nada. Se você quiser MENOS caixa,
+# baixe a chance; mexer no cooldown não muda a média, só o pico.
+#
+# ⚠️ Durante a dominação, `domination.reward-scaling: chance` dobra TODAS estas
+# chances por 10 minutos. É esse o prêmio de segurar a mina.
 rewards:
-  chave-comum:
-    chance: 5.0
+  chave-mineracao:
+    chance: 0.04
     amount: 1
     commands:
-    - crates givekey {player} comum {amount}
-    message: '&aVocê encontrou &f{amount}x Chave Comum &ana mina!'
-    sound: LEVEL_UP
-
-  chave-rara:
-    chance: 0.25
-    amount: 1
-    cooldown: 2m
-    commands:
-    - crates givekey {player} rara {amount}
-    message: '&6Você encontrou &e&l{amount}x Chave Rara &6na mina!'
-    title: '&6&lCHAVE RARA'
-    subtitle: '&7Você teve sorte na mina!'
+    - crates givevirtualkey mineracao {player} {amount}
+    message: '&fVocê recebeu &ex&l{amount} &eChave Mineração&f! &7(/crates)'
+    title: '&fVocê encontrou:'
+    subtitle: '&ex&l{amount} &eChave Mineração'
     title-fade-in: 5
     title-stay: 40
     title-fade-out: 10
-    sound: ENDERDRAGON_GROWL
-  
-  bonus-redstone:
-    chance: 1.0
-    amount: 500
-    blocks:
-    - redstone-block
+    sound: ORB_PICKUP
+
+  chave-bosses:
+    chance: 0.01
+    amount: 1
     commands:
-    - currencies give {player} coins {amount}
-    message: '&a+{amount} coins &7(bônus da mina)'
+    - crates givevirtualkey bosses {player} {amount}
+    message: '&fVocê encontrou &4x&l{amount} &4Chave Bosses&f! &7(/crates)'
+    title: '&fVocê encontrou:'
+    subtitle: '&4x&l{amount} &4Chave Bosses'
+    title-fade-in: 5
+    title-stay: 40
+    title-fade-out: 10
+    sound: ORB_PICKUP
+
+  caixa-recursos:
+    chance: 0.004
+    amount: 1
+    cooldown: 5m
+    commands:
+    - caixas give recursos {player} {amount}
+    message: '&fVocê encontrou &2x&l{amount} &2Caixa Recursos&f! &7(/crates)'
+    title: '&fVocê encontrou:'
+    subtitle: '&2x&l{amount} &2Caixa Recursos'
+    title-fade-in: 5
+    title-stay: 40
+    title-fade-out: 10
+    sound: ORB_PICKUP
+
+  caixa-chaves:
+    chance: 0.001
+    amount: 1
+    cooldown: 20m
+    commands:
+    - caixas give chaves {player} {amount}
+    message: '&fVocê encontrou &9x&l{amount} &9Caixa Chaves&f! &7(/crates)'
+    title: '&fVocê encontrou:'
+    subtitle: '&9x&l{amount} &9Caixa Chaves'
+    title-fade-in: 5
+    title-stay: 40
+    title-fade-out: 10
+    sound: ORB_PICKUP
 
 # ── ACTIONBAR DO GANHO ───────────────────────────────────────────────────────
 # Mostrada a cada bloco quebrado. Cores e símbolo vêm do GarnixCurrencies.

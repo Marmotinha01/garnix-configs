@@ -127,12 +127,15 @@ altar:
 menus:
   rewards-title: 'Recompensas do Altar'
   chances-title: 'Chances do Altar'
+  # Os passos anunciados aqui têm que bater com altar.drops.chance-step e
+  # chance-step-shift do config.yml — esta lore é o único lugar onde o admin
+  # lê quanto cada clique vale.
   chance-lore:
   - ''
   - ' &fChance: &e{chance}%'
   - ''
-  - '&aEsquerdo &f+1% &8· &aShift+Esquerdo &f+5%'
-  - '&cDireito &f-1% &8· &cShift+Direito &f-5%'
+  - '&aEsquerdo &f+0.05% &8· &aShift+Esquerdo &f+1%'
+  - '&cDireito &f-0.05% &8· &cShift+Direito &f-1%'
 
 labels:
   wand-name: '&aSeletor da Mina PvP'
