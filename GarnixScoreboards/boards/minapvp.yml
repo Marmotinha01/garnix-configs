@@ -1,11 +1,18 @@
 # Board do mundo da mina PvP.
 #
-# ⚠️ O RESET NÃO APARECE AQUI. O GarnixPvPMine existe com a regra "o reset da
-# mina é silencioso: não existe aviso de reset em lugar nenhum" (messages.yml
-# dele, primeira linha). O %pvpmine_next_reset% existe e funciona, mas colocar
-# ele numa board devolveria pela porta dos fundos o aviso que o plugin recusa
-# a dar pela porta da frente — o jogador passaria a parar de minerar aos 10
-# segundos em vez de ser pego pelo refill.
+# ⚠️ O CONTADOR DE RESET É SÓ O DO TEMPO. A mina reseta por DOIS gatilhos —
+# reset.interval (3m) e reset.broken-percentage (40% da região quebrada) — e o
+# %pvpmine_next_reset% enxerga só o primeiro. Numa mina cheia o segundo dispara
+# antes, e o contador vai estar marcando 1m30 quando o refill acontecer.
+#
+# Não tem conserto pelo lado da board: quando o gatilho é "quanto já quebraram",
+# não existe previsão, existe medição. Se o descompasso incomodar, o caminho é
+# desligar o broken-percentage e deixar a mina só no relógio — aí o número
+# passa a valer sempre.
+#
+# (Isto contraria a regra "o reset da mina é silencioso" do messages.yml do
+# GarnixPvPMine. Foi pedido de propósito, não descuido — se um dia o reset
+# voltar a ser surpresa, é esta linha que sai.)
 #
 # ⚠️ 15 LINHAS É O TETO DO 1.8. Toda linha nova aqui derruba uma de baixo em
 # silêncio, e a folga que as condicionais dão é falsa — conte pelo pior caso,
@@ -52,6 +59,7 @@ title:
 lines:
 - ''
 - ' &fNa mina: &e%pvpmine_players%'
+- ' &fReset em: &7%pvpmine_next_reset%'
 - ''
 
 - ' &c&lDOMINAÇAO'
