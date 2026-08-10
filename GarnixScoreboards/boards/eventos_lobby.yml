@@ -40,13 +40,13 @@ lines:
 - ' &fEvento: %events_running%'
 - ''
 
-- text: ' &fEntradas: &a%events_countdown%&7s'
+- text: ' &fEntradas: &a%events_countdown%s'
   condition: '%events_state% == joining'
 
-- text: ' &fInscritos: &b%events_players%'
+- text: ' &fParticipantes: &b%events_players%'
   condition: '%events_state% == joining'
 
-- text: ' &fComeça em: &a%events_countdown%&7s'
+- text: ' &fComeça em: &a%events_countdown%s'
   condition: '%events_state% == starting'
 
 - text: ' &fTempo: &b%events_elapsed%'
