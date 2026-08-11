@@ -1,33 +1,34 @@
-location: arenas:0.5:71.0:42.5:180.0:0.0
+location: minapvp:-2.5:82.0:11.5:0.0:0.0
+
 icon:
-  material: DIAMOND_CHESTPLATE
-  display: '&cArena'
+  material: REDSTONE_ORE
+  display: '&4Mina PVP'
   lore:
-  - '&7Enfrente outros jogadores'
-  - '&7e prove quem é o melhor.'
+  - '&7Domine, minere e enfrente'
+  - '&7outros jogadores com honra.'
   - ''
   - ' &8Acesso rápido:'
-  - ' &8▪ &e/arena'
+  - ' &8▪ &e/minapvp'
   - ''
   - '&4Clique para teleportar.'
   flags:
   - HIDE_ATTRIBUTES
 locked-icon:
   material: BARRIER
-  display: '&cArena'
+  display: '&4Mina PVP'
   lore:
-  - '&7Enfrente outros jogadores'
-  - '&7e prove quem é o melhor.'
+  - '&7Domine, minere e enfrente'
+  - '&7outros jogadores com honra.'
   - ''
   - ' &8Acesso rápido:'
-  - ' &8▪ &e/arena'
+  - ' &8▪ &e/minapvp'
   - ''
   - '&8 ▾ &cVocê não tem permissão. '
   - ''
 permission: ''
-slot: 15
+slot: 13
 messages:
-  success: '&aTeleportado para &cArena&a.'
+  success: '&aTeleportado para &4Mina PVP&a.'
   no-permission: '&cVocê não tem permissão para ir à warp &f{warp}&c.'
   title: ''
   subtitle: ''

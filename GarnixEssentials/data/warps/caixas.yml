@@ -1,13 +1,13 @@
 location: world:80.49783370393854:59.0:0.47957594083423594:-89.79497:-1.8000098
 icon:
-  material: CHEST
+  material: TRIPWIRE_HOOK
   display: '&aCaixas'
   lore:
   - '&7Abra as suas caixas e'
   - '&7receba itens especiais.'
   - ''
-  - '&aAcesso rápido:'
-  - '&8 ▪ &f/crates'
+  - ' &8Acesso rápido:'
+  - ' &8▪ &f/crates'
   - ''
   - '&aClique para teleportar.'
 locked-icon:
@@ -17,15 +17,15 @@ locked-icon:
   - '&7Abra as suas caixas e'
   - '&7receba itens especiais.'
   - ''
-  - '&cAcesso rápido:'
-  - '&8 ▪ &f/crates'
+  - ' &8Acesso rápido:'
+  - ' &8▪ &f/crates'
   - ''
   - '&8 ▾ &cVocê não tem permissão. '
   - ''
 permission: ''
-slot: 13
+slot: 11
 messages:
-  success: '&aTeleportado para a warp &f{warp}&a.'
+  success: '&aTeleportado para &aÁrea das Caixas&a.'
   no-permission: '&cVocê não tem permissão para ir à warp &f{warp}&c.'
   title: ''
   subtitle: ''
