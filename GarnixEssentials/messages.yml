@@ -370,11 +370,16 @@ chain:
 welcome:
   chat:
   - ''
-  - '  &aBem-vindo ao servidor, &f{player}&a.'
+  - '  &e&lRANKUP HEADS'
   - ''
-  actionbar: '&eBem-vindo, &f{player}&e.'
-  title: '&6Bem-vindo!'
-  subtitle: '&eDivirta-se, &f{player}&e!'
+  - '  &8▪ &fSite: &7rededegarnix.com'
+  - '  &8▪ &fDiscord: &7discord.gg/rededegarnix'
+  - ''
+  - '  &fBem-vindo ao servidor, &6{player}&f!'
+  - ''
+  actionbar: ''
+  title: '&e&lRANKUP HEADS'
+  subtitle: '&7Seja bem-vindo(a), &f{player}&7!'
 
 # Custom commands
 custom-commands:
