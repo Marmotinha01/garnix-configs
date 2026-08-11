@@ -25,10 +25,7 @@ icon:
   material: ENDER_CHEST
   display: '&dCaixas'
   lore:
-  - '&7O canal premium de skin,'
-  - '&7armadura e livro.'
-  - ''
-  - '&6Clique para acessar.'
+  - '&7Clique para acessar.'
 
 # Comando proprio da categoria. Existe para o botao de VOLTAR do preview de
 # caixa ter para onde levar: o /caixas ver abre o preview e o back-shop-command
@@ -55,7 +52,7 @@ products:
     - 'caixas give mineracao-ii {player} 1'
     item:
       material: ENDER_CHEST
-      display: '&eCaixa Mineração &f[Tier &lII&f]'
+      display: '&eCaixa Mineração [Tier &lII&e]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -70,7 +67,7 @@ products:
     - 'caixas give farm-ii {player} 1'
     item:
       material: ENDER_CHEST
-      display: '&aCaixa Farm &f[Tier &lII&f]'
+      display: '&aCaixa Farm [Tier &lII&a]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -85,7 +82,7 @@ products:
     - 'caixas give pesca-ii {player} 1'
     item:
       material: ENDER_CHEST
-      display: '&bCaixa Pesca &f[Tier &lII&f]'
+      display: '&bCaixa Pesca [Tier &lII&b]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -100,7 +97,7 @@ products:
     - 'caixas give skins-ii {player} 1'
     item:
       material: ENDER_CHEST
-      display: '&eCaixa Skins &f[Tier &lII&f]'
+      display: '&eCaixa Skins [Tier &lII&e]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -115,7 +112,7 @@ products:
     - 'caixas give bosses-ii {player} 1'
     item:
       material: ENDER_CHEST
-      display: '&4Caixa Bosses &f[Tier &lII&f]'
+      display: '&4Caixa Bosses [Tier &lII&4]'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
@@ -165,54 +162,3 @@ products:
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
-
-  # -- Linha 4: o topo, com a chave e o robo nas laterais ---------------------
-  chaves-rankup:
-    slot: 30
-    amount: 1
-    price: 150
-    broadcast: true
-    commands:
-    - 'crates givekey rankup {player} 25'
-    item:
-      material: TRIPWIRE_HOOK
-      glow: true
-      display: '&6Chave RankUP'
-      lore:
-      - '&7Consiga subindo de rank'
-      - '&7ao longo da sua jornada.'
-
-  caixa-garnix:
-    slot: 31
-    amount: 1
-    price: 18750
-    broadcast: true
-    right-command: 'caixas ver garnix shop'
-    commands:
-    - 'caixas give garnix {player} 1'
-    item:
-      material: ENDER_CHEST
-      display: '&6Caixa Garnix'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'
-
-  robo-mitico:
-    slot: 32
-    amount: 1
-    price: 6000
-    broadcast: true
-    commands:
-    - 'crates giverobot mitico {player} 1'
-    item:
-      texture: 665c54366f88fb3280b1c3fc500ce2b799c8dd327ab6d41c9bc959488f5cfd92
-      display: '&6Robô Mítico'
-      lore:
-      - '&7Abre as chaves por você e'
-      - '&7aumenta suas chances raras.'
-      - ''
-      - ' &8Informações: '
-      - ' &8▪ &fAbre chaves a cada &a&l2&as&f. '
-      - ''
-      - ' &fPrêmios abaixo de &c&l3&c% &fganham'
-      - ' &a+&l140&a% &fsobre a chance deles.'

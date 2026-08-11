@@ -21,18 +21,15 @@
 title: 'SHOP - Mineração'
 
 paginated: false
-rows: 3
-back-slot: 22
+rows: 4
+back-slot: 31
 
 icon:
   slot: 14
   material: DIAMOND_PICKAXE
   display: '&bMineração'
   lore:
-  - '&7O que quebra muito bloco'
-  - '&7da mina de uma vez só.'
-  - ''
-  - '&6Clique para acessar.'
+  - '&7Clique para acessar.'
   flags:
   - HIDE_ATTRIBUTES
 

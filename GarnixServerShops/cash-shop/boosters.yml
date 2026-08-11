@@ -12,18 +12,15 @@
 title: 'SHOP - Boosters'
 
 paginated: false
-rows: 3
-back-slot: 22
+rows: 4
+back-slot: 31
 
 icon:
   slot: 11
   material: BLAZE_POWDER
   display: '&6Boosters'
   lore:
-  - '&7O 3x de 1h, que quase'
-  - '&7nao sai jogando.'
-  - ''
-  - '&6Clique para acessar.'
+  - '&7Clique para acessar.'
 
 broadcast-message:
 - ''
@@ -38,7 +35,7 @@ products:
     price: 250
     broadcast: true
     commands:
-    - 'mina givebooster {player} coins 3 1h 1'
+    - 'mina givebooster {player} coins 2 30m 1'
     item:
       material: POTION
       data: 8201
@@ -49,8 +46,8 @@ products:
       - ''
       - ' &8Informações: '
       - ' &8▪ &fTipo: &aCoins '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &71h '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -60,7 +57,7 @@ products:
     price: 250
     broadcast: true
     commands:
-    - 'fazenda givebooster {player} coins 3 1h 1'
+    - 'fazenda givebooster {player} coins 2 30m 1'
     item:
       material: POTION
       data: 8227
@@ -71,8 +68,8 @@ products:
       - ''
       - ' &8Informações: '
       - ' &8▪ &fTipo: &aCoins '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &71h '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -82,7 +79,7 @@ products:
     price: 250
     broadcast: true
     commands:
-    - 'pesca givebooster {player} corais 3 1h 1'
+    - 'pesca givebooster {player} corais 2 30m 1'
     item:
       material: POTION
       data: 8203
@@ -93,8 +90,8 @@ products:
       - ''
       - ' &8Informações: '
       - ' &8▪ &fTipo: &3Corais '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &71h '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -104,7 +101,7 @@ products:
     price: 313
     broadcast: true
     commands:
-    - 'spawner givebooster {player} drops 3 1h 1'
+    - 'spawner givebooster {player} drops 2 30m 1'
     item:
       material: POTION
       data: 8230
@@ -115,8 +112,8 @@ products:
       - ''
       - ' &8Informações: '
       - ' &8▪ &fTipo: &aDrops '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &71h '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -126,7 +123,7 @@ products:
     price: 313
     broadcast: true
     commands:
-    - 'maquina givebooster {player} 3 1h 1'
+    - 'maquina givebooster {player} 2 30m 1'
     item:
       material: POTION
       data: 8237
@@ -137,8 +134,8 @@ products:
       - ''
       - ' &8Informações: '
       - ' &8▪ &fTipo: &aDrops '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &71h '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
       flags:
       - HIDE_POTION_EFFECTS
 
@@ -148,7 +145,7 @@ products:
     price: 313
     broadcast: true
     commands:
-    - 'armazem givebooster {player} 3 1h 1'
+    - 'armazem givebooster {player} 2 30m 1'
     item:
       material: POTION
       data: 8260
@@ -159,7 +156,7 @@ products:
       - ''
       - ' &8Informações: '
       - ' &8▪ &fTipo: &aVenda de Cactos '
-      - ' &8▪ &fBônus: &a3x '
-      - ' &8▪ &fDuração: &71h '
+      - ' &8▪ &fBônus: &a2x '
+      - ' &8▪ &fDuração: &730m '
       flags:
       - HIDE_POTION_EFFECTS

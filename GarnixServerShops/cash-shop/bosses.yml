@@ -19,18 +19,15 @@
 title: 'SHOP - Bosses'
 
 paginated: false
-rows: 3
-back-slot: 22
+rows: 4
+back-slot: 31
 
 icon:
   slot: 15
   material: DIAMOND_SWORD
   display: '&4Bosses'
   lore:
-  - '&7As matadoras logo abaixo'
-  - '&7da Hit-Kill.'
-  - ''
-  - '&6Clique para acessar.'
+  - '&7Clique para acessar.'
   flags:
   - HIDE_ATTRIBUTES
 
@@ -42,7 +39,7 @@ broadcast-message:
 products:
 
   matadora-ancestral:
-    slot: 12
+    slot: 11
     amount: 1
     price: 4000
     broadcast: true
@@ -78,7 +75,7 @@ products:
       - '&8 ▪ &fDano: &c4.000 '
 
   matadora-abissal:
-    slot: 14
+    slot: 15
     amount: 1
     price: 20000
     broadcast: true

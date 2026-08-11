@@ -19,7 +19,7 @@ coins-shop:
 categories-menu:
   cash:
     title: SHOP
-    rows: 5
+    rows: 3
   coins:
     title: Loja
     rows: 5

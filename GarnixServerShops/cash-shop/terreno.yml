@@ -29,10 +29,7 @@ icon:
   material: GRASS
   display: '&aTerreno'
   lore:
-  - '&7Capacidade, automação e'
-  - '&7construção no seu plot.'
-  - ''
-  - '&6Clique para acessar.'
+  - '&7Clique para acessar.'
 
 broadcast-message:
 - ''
@@ -40,29 +37,8 @@ broadcast-message:
 - ''
 
 products:
-
-  # -- Linha 2, trio da esquerda: automacao e construcao ----------------------
-  autosell:
-    slot: 10
-    amount: 1
-    price: 313
-    broadcast: true
-    commands:
-    - 'armazem giveautosell {player} 1'
-    item:
-      material: DIODE
-      data: 0
-      glow: true
-      display: '&6Venda Automática'
-      lore:
-      - '&7Venda os cactos guardados'
-      - '&7no armazém automaticamente.'
-      - ''
-      - '&8 ▪ &cFunciona apenas '
-      - '&8 ▪ &cem seus terrenos. '
-
   limpador-terreno:
-    slot: 11
+    slot: 10
     amount: 1
     price: 375
     broadcast: true
@@ -79,92 +55,42 @@ products:
       flags:
       - HIDE_ATTRIBUTES
 
-  torre-cacto:
-    slot: 12
+  torre-cacto-5:
+    slot: 14
     amount: 1
     price: 300
     broadcast: true
     commands:
-    - 'cactustower give {player} 4 1'
+    - 'cactustower give {player} 5 1'
     item:
       material: CACTUS
-      display: '&aTorre de Cacto &8[4 Andares]'
+      display: '&aTorre de Cacto &8[5 Andares]'
       lore:
       - '&7Levanta uma torre de cacto'
       - '&7pronta no seu terreno.'
-
-  # -- Linha 2, trio da direita: os tres limites ------------------------------
-  lim-armazem:
-    slot: 14
-    amount: 1
-    price: 800
-    broadcast: true
-    commands:
-    - 'armazem givelimititem {player} 500 1'
-    item:
-      material: INK_SACK
-      data: 2
-      glow: true
-      display: '&2Limite de Armazém'
-      lore:
-      - '&7Aumente a capacidade de'
-      - '&7estoque do seu terreno.'
-      - ''
-      - '&8 ▪ &fQuantia: &a500 '
-
-  lim-maquina:
+  torre-cacto-10:
     slot: 15
     amount: 1
-    price: 1500
+    price: 500
     broadcast: true
     commands:
-    - 'maquina givelimite {player} 1 1'
+    - 'cactustower give {player} 10 1'
     item:
-      material: INK_SACK
-      data: 4
-      glow: true
-      display: '&9Limite de Máquinas'
+      material: CACTUS
+      display: '&aTorre de Cacto &8[10 Andares]'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de máquinas.'
-      - ''
-      - '&8 ▪ &fQuantia: &91 '
-
-  lim-spawner:
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
+  torre-cacto-15:
     slot: 16
     amount: 1
-    price: 4000
+    price: 850
     broadcast: true
     commands:
-    - 'spawner givelimite {player} 1 1'
+    - 'cactustower give {player} 15 1'
     item:
-      material: INK_SACK
-      data: 12
-      glow: true
-      display: '&bLimite de Spawners'
+      material: CACTUS
+      display: '&aTorre de Cacto &8[15 Andares]'
       lore:
-      - '&7Aumente o seu poder de'
-      - '&7compra de spawners.'
-      - ''
-      - '&8 ▪ &fQuantia: &b1 '
-
-  # -- Linha 3: o premium da categoria, sozinho no centro ---------------------
-  maquina-cash:
-    slot: 22
-    amount: 1
-    price: 31250
-    broadcast: true
-    commands:
-    - 'maquina give {player} cash 1 1'
-    item:
-      texture: c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071
-      display: '&6Máquina de Cash'
-      lore:
-      - '&7Rende drops sozinha no'
-      - '&7terreno, dia e noite.'
-      - ''
-      - ' &8Informações: '
-      - ' &8▪ &fTipo: &6Cash '
-      - ' &8▪ &fQuantia: &6&l1 '
-      - ''
-      - '&6Coloque no seu terreno.'
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
