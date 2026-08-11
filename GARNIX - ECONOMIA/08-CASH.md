@@ -34,7 +34,7 @@ Daily supremo | 85/dia | 1.700 |
 Daily garnix (topo) | **120/dia** | 2.400 |
 Eventos | **10–40**, só num **subconjunto difícil** | +200–400 |
 Conquistas / marcos raros | 25–100, gate duro | variável |
-**Máquina de Cash** | **3–8/dia, limite 1 por conta** | 60–160 |
+**Máquina de Cash** | **2/dia por unidade**, sem teto por conta | 40 por unidade |
 `GarnixStoreActivation` | compras reais | — |
 
 ### Totais verificados no simulador
@@ -50,7 +50,9 @@ whale (site) | teto de exagero **500.000** |
 
 O free chega em 400, dentro da faixa de 300–500. ✅
 
-⚠️ **A Máquina de Cash é o item mais sensível do servidor.** A 5 cash/dia × 3 contas × 20 dias = 300, **quase o orçamento free inteiro**. Por isso o limite de **1 por conta** não é opcional — é o que impede a máquina de dobrar a economia de cash de quem tem 3 contas.
+⚠️ **O limite de 1 por conta foi cancelado em 11/08/2026.** Ele nunca foi pedido pelo dono, e a checagem mostrou que **não existe no plugin**: não há campo de teto por conta em `GarnixMachines/config.yml` nem nos arquivos de máquina. O que existe é a moeda `maquinaslimite`, que é poder de compra na **loja** de máquinas — e as especiais são todas `shop: false`, entrando por `/maquina give`.
+
+O único teto real é **1 bloco de máquina por terreno**, e o jogador tem vários terrenos. A máquina rende **2 cash/dia** por unidade (200 ciclos de 432s × 0,01), o que dá 40 na temporada — modesto o bastante para o teto não ser urgente. Se um dia virar problema, o botão é o `delay` em `GarnixMachines/machines/cash.yml`.
 
 ### Ordem dos dailies — corrigida
 
@@ -81,14 +83,18 @@ Upgrades de autosell do galpão | cash | **150–800/nível** (hoje 1.000–3.00
 
 ### Faixas de preço do cash-shop
 
+Reescritas em **11/08/2026** para o catálogo real de 32 produtos, em [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md).
+
 | Faixa | Preço | Quem alcança | Conteúdo |
 |---|---|---|---|
-**A** | 50–500 | **free chega** | consumíveis, 1 chave, cosmético, booster curto, fly |
-**B** | 500–3.000 | free dedicado chega em 1 item | **caixa II**, skin média, +1 limite, autosell |
-**C** | 3.000–20.000 | pagante | **booster 3× longo**, **combustível infinito**, máquinas especiais, `pilhagem 3` |
-**D** | 20.000–100.000 | whale | VIP, **matadora hk**, bundles de temporada |
+**A** | 150–500 | **free chega** | chaves rankup, boosters 3× 1h, torre de cacto, limpador, venda automática, explosivo 2×2 |
+**B** | 500–3.000 | free dedicado chega em 1 item | as **caixas II**, limite de armazém e de máquinas, explosivo 4×4 e 6×6, matadora Ancestral |
+**C** | 3.000–20.000 | pagante | caixa `caixas`, limite de spawner, explosivo 8×8, britadeira, robô mítico, matadora Rúnica e Abissal |
+**D** | 20.000+ | whale | **caixa garnix** (18.750), **máquina de cash** (31.250) |
 
-**Âncora que vale manter:** o `pacote-lendario` a **500 cash** do `cash-shop/example.yml` = exatamente uma temporada de grind free. É um preço deliberado e bom, e serve de régua para a fronteira entre A e B.
+⚠️ **VIP e matadora hit-kill saíram da faixa D** — os dois viraram exclusivos do site, por decisão do dono. O teto do cash-shop hoje é a Máquina de Cash a 31.250, e não mais os 100.000 do VIP Garnix.
+
+**A âncora mudou de lugar.** O `pacote-lendario` a 500 cash do `example.yml` de fábrica não existe no catálogo real. A régua entre A e B agora é a **Caixa Tier II a 1.125** — o item que um free dedicado alcança em um, guardando a temporada inteira.
 
 ---
 
@@ -111,20 +117,26 @@ CoinFlip | 10% **do lucro** |
 
 ## Paridade site ↔ in-game
 
-Todo produto do site tem rota in-game. A tabela completa com custo em horas fica em [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md), na Fase 7. O padrão:
+Todo produto pago tem rota in-game. A tabela completa, produto por produto, fica em [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md). O resumo:
 
-| Produto | Site | In-game |
+| Produto | Canal | In-game |
 |---|---|---|
-Combustível infinito | faixa C/D | jackpot da caixa `garnix`, ~0,006%/abertura |
-Booster 3× | faixa C, duração longa | jackpot, duração **máx. 1h** |
-Caixa II | faixa B | drop beeem raro |
-Skin de topo | faixa B/C | forja até a 7ª + caixa 8–10 |
-`spawnerslimite` | faixa C | corais com câmbio decrescente + dracmas |
-VIP | faixa D | `GarnixFragments` → `tag-vip` temporário |
+Combustível infinito | **só site**, R$ 59,90 | caixa `garnix`, **0,25%** |
+Matadora Hit-Kill | **só site**, R$ 44,90 | caixa `garnix`, **0,25%** |
+Skin de topo | **só site**, R$ 19,90 a via | caixa de via II, `skins-ii` e `garnix` (0,5%) — as 3 últimas **não são forjáveis** |
+VIP | **só site**, R$ 19,90 a 199,90 | papel na caixa `garnix` (1–3 dias) + 3 dias de Celestial na vinculação de Discord |
+Booster 3× | nos dois, 250–313 cash | caixa `boosters` e crates, duração **máx. 10m** |
+Caixa II | nos dois, 1.125 cash | crate da via e caixa `caixas` |
+`spawnerslimite` | **só cash-shop**, 4.000 | crate, boss e Caixa Recursos — **~27 na temporada** |
 **Armadura** | ❌ **nunca vendida** | só caixa |
 **`fortunate`** | ❌ **nunca vendido** | só gemas |
+**Livros** | ❌ **nunca vendidos** | crate e caixa de banda alta |
+
+⚠️ A linha antiga dizia `VIP → GarnixFragments → tag-vip`. **Isso não existe** — não há nada de VIP na loja de fragmentos. E o `spawnerslimite` não sai mais por corais: a rota é drop, desde 06/08/2026.
 
 O padrão: **o site vende velocidade e conveniência; o jogo vende as mesmas coisas por sorte ou por tempo.**
+
+**A exceção única:** o VIP Investidor não tem rota in-game nenhuma e não recebe `paper-icon`, por decisão do dono. Detalhado em [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md).
 
 ---
 
@@ -134,10 +146,10 @@ O padrão: **o site vende velocidade e conveniência; o jogo vende as mesmas coi
 |---|---|---|
 1 | Reescrever os 8 dailies | `GarnixDailyRewards/rewards/*.yml` |
 2 | **Reescrever os 21 eventos** — a maior correção de cash do projeto (5.000–15.000 → 10–40 num subconjunto) | `GarnixEvents/events/**/*.yml` |
-3 | Construir o cash-shop nas 4 faixas | `GarnixServerShops/cash-shop/` |
+3 | ✅ **Feito em 11/08/2026** — cash-shop construído: 5 categorias, 32 produtos | `GarnixServerShops/cash-shop/` |
 4 | Reprecificar os upgrades de autosell | `GarnixWarehouse/config.yml` |
-5 | Orçar a Máquina de Cash com limite de 1 por conta | `GarnixMachines/machines/` |
+5 | ❌ **Cancelado** — o limite de 1 por conta **não existe no plugin** e o dono não o pediu. O único teto real é 1 bloco de máquina por terreno, e o jogador tem vários terrenos | `GarnixMachines/machines/` |
 6 | Adicionar taxa em Duels e rake no bolão | `GarnixDuels/config.yml`, `events/chat/bolao.yml` |
-7 | Escrever a tabela de paridade | `04-PARIDADE-SITE.md` |
+7 | ✅ **Feito em 11/08/2026** — tabela reescrita para o catálogo real | `04-PARIDADE-SITE.md` |
 
 ⚠️ **Regra técnica que vale para todos:** cash é pequeno (10²–10⁵), então `cash add {player} <valor>` por comando é **seguro** — o problema de precisão de `int`/`double` só morde acima de 2,1×10⁹. Para payouts em **coins** escalados por tier, usar sempre `type: CURRENCY` nativo.

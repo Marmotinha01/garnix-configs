@@ -1,0 +1,170 @@
+# Cash Shop — Terreno.
+#
+# Substitui a antiga categoria "Limites" (11/08/2026). O recorte agora e por
+# LUGAR e nao por natureza: tudo aqui vive dentro do plot do jogador — o que
+# aumenta capacidade, o que automatiza e o que constroi.
+#
+# O `spawnerslimite` continua sendo o item nº 1 do Ranking de Apeloes: ele
+# multiplica a unica via SEM teto fisico, e por isso e o produto mais caro da
+# faixa C mesmo dividindo linha com limites bem mais baratos.
+#
+# ⚠️ Ele NAO tem mais rota in-game por compra: a loja da pesca vendia limite de
+# spawner e de maquina por corais, e os dois sairam em 06/08/2026 pela regua do
+# dono — "so itens uteis e que nao impactam de maneira forte na economia". Uma
+# via AFK de 24h nao pode financiar a via sem teto. O que sobrou de limite por
+# corais e o do ARMAZEM, que tem teto fisico (o plot).
+#
+# ⚠️ +25% em `autosell` e `limpador` — os dois estao no site tambem. Os tres
+# limites e a torre nao estao, entao ficam no preco base. A `maquina-cash` sai
+# de 25.000 base (R$ 24,90 no site) x 1,25.
+
+title: 'SHOP - Terreno'
+
+paginated: false
+rows: 4
+back-slot: 31
+
+icon:
+  slot: 13
+  material: GRASS
+  display: '&aTerreno'
+  lore:
+  - '&7Capacidade, automação e'
+  - '&7construção no seu plot.'
+  - ''
+  - '&6Clique para acessar.'
+
+broadcast-message:
+- ''
+- ' &6&lCASH SHOP &8- &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
+- ''
+
+products:
+
+  # -- Linha 2, trio da esquerda: automacao e construcao ----------------------
+  autosell:
+    slot: 10
+    amount: 1
+    price: 313
+    broadcast: true
+    commands:
+    - 'armazem giveautosell {player} 1'
+    item:
+      material: DIODE
+      data: 0
+      glow: true
+      display: '&6Venda Automática'
+      lore:
+      - '&7Venda os cactos guardados'
+      - '&7no armazém automaticamente.'
+      - ''
+      - '&8 ▪ &cFunciona apenas '
+      - '&8 ▪ &cem seus terrenos. '
+
+  limpador-terreno:
+    slot: 11
+    amount: 1
+    price: 375
+    broadcast: true
+    commands:
+    - 'clearplot give {player} 1'
+    item:
+      material: GOLD_SPADE
+      data: 0
+      glow: true
+      display: '&eLimpador de Terreno'
+      lore:
+      - '&7Limpa todos os blocos'
+      - '&7do seu terreno de uma vez.'
+      flags:
+      - HIDE_ATTRIBUTES
+
+  torre-cacto:
+    slot: 12
+    amount: 1
+    price: 300
+    broadcast: true
+    commands:
+    - 'cactustower give {player} 4 1'
+    item:
+      material: CACTUS
+      display: '&aTorre de Cacto &8[4 Andares]'
+      lore:
+      - '&7Levanta uma torre de cacto'
+      - '&7pronta no seu terreno.'
+
+  # -- Linha 2, trio da direita: os tres limites ------------------------------
+  lim-armazem:
+    slot: 14
+    amount: 1
+    price: 800
+    broadcast: true
+    commands:
+    - 'armazem givelimititem {player} 500 1'
+    item:
+      material: INK_SACK
+      data: 2
+      glow: true
+      display: '&2Limite de Armazém'
+      lore:
+      - '&7Aumente a capacidade de'
+      - '&7estoque do seu terreno.'
+      - ''
+      - '&8 ▪ &fQuantia: &a500 '
+
+  lim-maquina:
+    slot: 15
+    amount: 1
+    price: 1500
+    broadcast: true
+    commands:
+    - 'maquina givelimite {player} 1 1'
+    item:
+      material: INK_SACK
+      data: 4
+      glow: true
+      display: '&9Limite de Máquinas'
+      lore:
+      - '&7Aumente o seu poder de'
+      - '&7compra de máquinas.'
+      - ''
+      - '&8 ▪ &fQuantia: &91 '
+
+  lim-spawner:
+    slot: 16
+    amount: 1
+    price: 4000
+    broadcast: true
+    commands:
+    - 'spawner givelimite {player} 1 1'
+    item:
+      material: INK_SACK
+      data: 12
+      glow: true
+      display: '&bLimite de Spawners'
+      lore:
+      - '&7Aumente o seu poder de'
+      - '&7compra de spawners.'
+      - ''
+      - '&8 ▪ &fQuantia: &b1 '
+
+  # -- Linha 3: o premium da categoria, sozinho no centro ---------------------
+  maquina-cash:
+    slot: 22
+    amount: 1
+    price: 31250
+    broadcast: true
+    commands:
+    - 'maquina give {player} cash 1 1'
+    item:
+      texture: c3687e25c632bce8aa61e0d64c24e694c3eea629ea944f4cf30dcfb4fbce071
+      display: '&6Máquina de Cash'
+      lore:
+      - '&7Rende drops sozinha no'
+      - '&7terreno, dia e noite.'
+      - ''
+      - ' &8Informações: '
+      - ' &8▪ &fTipo: &6Cash '
+      - ' &8▪ &fQuantia: &6&l1 '
+      - ''
+      - '&6Coloque no seu terreno.'

@@ -1,0 +1,125 @@
+# Cash Shop — Mineração.
+#
+# Throughput da mina: o que quebra muito bloco de uma vez. A escada dos quatro
+# explosivos e depois a britadeira, que quebra a COLUNA inteira e por isso e o
+# maior throughput do jogo.
+#
+# ⚠️ A loja de fragmentos (`GarnixFragments/shop.yml`) para no 4x4, mas a rota
+# in-game do 6x6 e do 8x8 existe em outro lugar: os dois saem da caixa
+# `mineracao-ii` e da crate `mineracao`. A britadeira sai das duas caixas de
+# mineracao e da crate. Paridade fechada sem precisar mexer em loot.
+#
+# ⚠️ Os precos saem da proporcao da loja de fragmentos, nao de intuicao: a
+# britadeira custa la 1.000 eterna + 700 sagrada + 400 divina + 500 primal,
+# de longe o item mais caro daquele menu (a divina sozinha e 43% de toda a
+# renda de divina da temporada). Dai os 10.000, contra os 1.125 do 4x4.
+#
+# ⚠️ +25% em `bomba-4x4` (10x por R$ 8,90 no site), `bomba-6x6` (R$ 19,90),
+# `bomba-8x8` (R$ 39,90) e `britadeira` (R$ 7,90 avulsa). O 2x2 nao esta no
+# site e fica no preco base.
+
+title: 'SHOP - Mineração'
+
+paginated: false
+rows: 3
+back-slot: 22
+
+icon:
+  slot: 14
+  material: DIAMOND_PICKAXE
+  display: '&bMineração'
+  lore:
+  - '&7O que quebra muito bloco'
+  - '&7da mina de uma vez só.'
+  - ''
+  - '&6Clique para acessar.'
+  flags:
+  - HIDE_ATTRIBUTES
+
+broadcast-message:
+- ''
+- ' &6&lCASH SHOP &8- &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
+- ''
+
+products:
+
+  bomba-2x2:
+    slot: 11
+    amount: 1
+    price: 500
+    broadcast: true
+    commands:
+    - 'mina givebomb {player} 2x2 1'
+    item:
+      material: FIREBALL
+      display: '&4Explosivo'
+      lore:
+      - '&7Explode uma área inteira'
+      - '&7da mina de uma só vez.'
+      - ''
+      - '&8 ▪ &fÁrea: &42x2 '
+
+  bomba-4x4:
+    slot: 12
+    amount: 1
+    price: 1125
+    broadcast: true
+    commands:
+    - 'mina givebomb {player} 4x4 1'
+    item:
+      material: FIREBALL
+      display: '&4Explosivo'
+      lore:
+      - '&7Explode uma área inteira'
+      - '&7da mina de uma só vez.'
+      - ''
+      - '&8 ▪ &fÁrea: &44x4 '
+
+  bomba-6x6:
+    slot: 13
+    amount: 1
+    price: 2500
+    broadcast: true
+    commands:
+    - 'mina givebomb {player} 6x6 1'
+    item:
+      material: FIREBALL
+      display: '&4Explosivo'
+      lore:
+      - '&7Explode uma área inteira'
+      - '&7da mina de uma só vez.'
+      - ''
+      - '&8 ▪ &fÁrea: &46x6 '
+
+  bomba-8x8:
+    slot: 14
+    amount: 1
+    price: 5000
+    broadcast: true
+    commands:
+    - 'mina givebomb {player} 8x8 1'
+    item:
+      material: FIREBALL
+      display: '&4Explosivo'
+      lore:
+      - '&7Explode uma área inteira'
+      - '&7da mina de uma só vez.'
+      - ''
+      - '&8 ▪ &fÁrea: &48x8 '
+
+  britadeira:
+    slot: 15
+    amount: 1
+    price: 10000
+    broadcast: true
+    commands:
+    - 'mina givedrill {player} 1'
+    item:
+      material: HOPPER
+      glow: true
+      display: '&cBritadeira'
+      lore:
+      - '&7Quebra a coluna inteira'
+      - '&7de blocos abaixo dela.'
+      - ''
+      - '&8 ▪ &fÁrea: &c3x3 '

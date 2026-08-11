@@ -3,6 +3,11 @@
 # Faixa A. O in-game so tem 5m e 10m; o 3x de 1h e do site, por decisao
 # do dono. O tempo EMPILHA sem teto entre boosters de mesmo multiplicador,
 # entao comprar seis 1h vale exatamente seis horas — nada se perde.
+#
+# ⚠️ Precos com +25% desde 11/08/2026 (200 -> 250 e 250 -> 313). A regra vale
+# para TODO produto que existe nos dois canais: o site vende pelo preco base
+# (1.000 cash = R$ 1,00) e o cash-shop cobra o quarto a mais. Os boosters
+# entraram nela quando o "Pacote Booster" virou produto de site.
 
 title: 'SHOP - Boosters'
 
@@ -11,7 +16,7 @@ rows: 3
 back-slot: 22
 
 icon:
-  slot: 10
+  slot: 11
   material: BLAZE_POWDER
   display: '&6Boosters'
   lore:
@@ -22,7 +27,7 @@ icon:
 
 broadcast-message:
 - ''
-- ' &6&lSHOP &7{player} &fcomprou {item} &fpor {symbol_color}{symbol}{primary_color}{value}&f!'
+- ' &6&lCASH SHOP &8- &f{player} &eadquiriu &f{item} &epor {symbol_color}{symbol}{primary_color}{value} {currency}&e!'
 - ''
 
 products:
@@ -30,7 +35,7 @@ products:
   boost-mina:
     slot: 10
     amount: 1
-    price: 200
+    price: 250
     broadcast: true
     commands:
     - 'mina givebooster {player} coins 3 1h 1'
@@ -52,7 +57,7 @@ products:
   boost-fazenda:
     slot: 11
     amount: 1
-    price: 200
+    price: 250
     broadcast: true
     commands:
     - 'fazenda givebooster {player} coins 3 1h 1'
@@ -74,7 +79,7 @@ products:
   boost-pesca:
     slot: 12
     amount: 1
-    price: 200
+    price: 250
     broadcast: true
     commands:
     - 'pesca givebooster {player} corais 3 1h 1'
@@ -96,7 +101,7 @@ products:
   boost-spawner:
     slot: 14
     amount: 1
-    price: 250
+    price: 313
     broadcast: true
     commands:
     - 'spawner givebooster {player} drops 3 1h 1'
@@ -118,7 +123,7 @@ products:
   boost-maquina:
     slot: 15
     amount: 1
-    price: 250
+    price: 313
     broadcast: true
     commands:
     - 'maquina givebooster {player} 3 1h 1'
@@ -140,7 +145,7 @@ products:
   boost-armazem:
     slot: 16
     amount: 1
-    price: 250
+    price: 313
     broadcast: true
     commands:
     - 'armazem givebooster {player} 3 1h 1'

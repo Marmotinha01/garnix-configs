@@ -3,12 +3,22 @@
 # A caixa e o unico jeito de tirar ARMADURA do jogo — ela nunca e vendida
 # direta, por decisao do dono. Quem paga compra CHANCE, nao a peca. As
 # caixas II tambem saem in-game, beeem raro.
+#
+# ⚠️ Precos com +25% desde 11/08/2026: as oito caixas viraram produto de site
+# tambem, e a regra e que o site cobra o preco base (1.000 cash = R$ 1,00) e o
+# cash-shop cobra o quarto a mais. O `robo-mitico` e as `chaves-rankup` NAO
+# levam o acrescimo — o robo avulso saiu do site e a chave nunca esteve la.
+#
+# ⚠️ A `caixa-robos` a 1.250 nao e chute: com 35/32/22/9/2% em
+# `MysteryBoxes/boxes/robos.yml`, o valor esperado da abertura fica em ~870
+# cash contra o Robo Mitico avulso a 6.000. O preco aguenta ser a unica rota
+# de cash para o Mitico sem virar atalho mais barato que ele.
 
 title: 'SHOP - Caixas'
 
 paginated: false
-rows: 4
-back-slot: 31
+rows: 5
+back-slot: 40
 
 icon:
   slot: 12
@@ -34,10 +44,11 @@ broadcast-message:
 
 products:
 
+  # -- Linha 2: as cinco caixas de Tier II ------------------------------------
   caixa-mineracao:
-    slot: 10
+    slot: 11
     amount: 1
-    price: 900
+    price: 1125
     broadcast: true
     right-command: 'caixas ver mineracao-ii shop'
     commands:
@@ -50,9 +61,9 @@ products:
       - '&7guardou para você lá dentro.'
 
   caixa-farm:
-    slot: 11
+    slot: 12
     amount: 1
-    price: 900
+    price: 1125
     broadcast: true
     right-command: 'caixas ver farm-ii shop'
     commands:
@@ -65,9 +76,9 @@ products:
       - '&7guardou para você lá dentro.'
 
   caixa-pesca:
-    slot: 12
+    slot: 13
     amount: 1
-    price: 900
+    price: 1125
     broadcast: true
     right-command: 'caixas ver pesca-ii shop'
     commands:
@@ -79,8 +90,85 @@ products:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
-  chaves-rankup:
+  caixa-skins:
     slot: 14
+    amount: 1
+    price: 1750
+    broadcast: true
+    right-command: 'caixas ver skins-ii shop'
+    commands:
+    - 'caixas give skins-ii {player} 1'
+    item:
+      material: ENDER_CHEST
+      display: '&eCaixa Skins &f[Tier &lII&f]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-bosses:
+    slot: 15
+    amount: 1
+    price: 2250
+    broadcast: true
+    right-command: 'caixas ver bosses-ii shop'
+    commands:
+    - 'caixas give bosses-ii {player} 1'
+    item:
+      material: ENDER_CHEST
+      display: '&4Caixa Bosses &f[Tier &lII&f]'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  # -- Linha 3: as caixas que nao sao de via ----------------------------------
+  caixa-boosters:
+    slot: 21
+    amount: 1
+    price: 1250
+    broadcast: true
+    right-command: 'caixas ver boosters shop'
+    commands:
+    - 'caixas give boosters {player} 1'
+    item:
+      material: ENDER_CHEST
+      display: '&aCaixa Boosters'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-robos:
+    slot: 22
+    amount: 1
+    price: 1250
+    broadcast: true
+    right-command: 'caixas ver robos shop'
+    commands:
+    - 'caixas give robos {player} 1'
+    item:
+      material: ENDER_CHEST
+      display: '&cCaixa Robôs'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  caixa-caixas:
+    slot: 23
+    amount: 1
+    price: 3750
+    broadcast: true
+    right-command: 'caixas ver caixas shop'
+    commands:
+    - 'caixas give caixas {player} 1'
+    item:
+      material: ENDER_CHEST
+      display: '&dCaixa Caixas'
+      lore:
+      - '&7Abra e descubra o que a sorte'
+      - '&7guardou para você lá dentro.'
+
+  # -- Linha 4: o topo, com a chave e o robo nas laterais ---------------------
+  chaves-rankup:
+    slot: 30
     amount: 1
     price: 150
     broadcast: true
@@ -94,23 +182,23 @@ products:
       - '&7Consiga subindo de rank'
       - '&7ao longo da sua jornada.'
 
-  caixa-robos:
-    slot: 13
+  caixa-garnix:
+    slot: 31
     amount: 1
-    price: 1200
+    price: 18750
     broadcast: true
-    right-command: 'caixas ver robos shop'
+    right-command: 'caixas ver garnix shop'
     commands:
-    - 'caixas give robos {player} 1'
+    - 'caixas give garnix {player} 1'
     item:
       material: ENDER_CHEST
-      display: '&cCaixa Robôs'
+      display: '&6Caixa Garnix'
       lore:
       - '&7Abra e descubra o que a sorte'
       - '&7guardou para você lá dentro.'
 
   robo-mitico:
-    slot: 15
+    slot: 32
     amount: 1
     price: 6000
     broadcast: true
@@ -128,18 +216,3 @@ products:
       - ''
       - ' &fPrêmios abaixo de &c&l3&c% &fganham'
       - ' &a+&l140&a% &fsobre a chance deles.'
-
-  caixa-garnix:
-    slot: 16
-    amount: 1
-    price: 15000
-    broadcast: true
-    right-command: 'caixas ver garnix shop'
-    commands:
-    - 'caixas give garnix {player} 1'
-    item:
-      material: ENDER_CHEST
-      display: '&6Caixa Garnix'
-      lore:
-      - '&7Abra e descubra o que a sorte'
-      - '&7guardou para você lá dentro.'

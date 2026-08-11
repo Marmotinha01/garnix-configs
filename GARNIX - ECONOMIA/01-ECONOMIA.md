@@ -332,20 +332,28 @@ O coins-shop de 273 produtos é o exemplo do contrário — 208 deles custam `25
 Dailies VIP | 100–500/dia | **40 (celestial) → 120 (garnix)** |
 **21 eventos** | `cash add 5000–15000` | ⏸️ Fase 7. Cash só em subconjunto difícil, **10–40** |
 Conquistas / marcos raros | não existe | 25–100, gate duro |
-Máquina de Cash | não existe | **3–8/dia, limite de 1 por conta** |
+Máquina de Cash | não existe | **2/dia por unidade**, sem teto por conta |
 
 **Totais de temporada:** free ~400 · free vinculado ~550 · free vinculado e ativo em eventos ~750–1.100 · garnix ~2.500 · whale (site) teto de exagero 500.000.
 
 ### Faixas do cash-shop
 
+Construído em **11/08/2026**: 5 categorias (Boosters · Caixas · Terreno · Mineração · Bosses) e **32 produtos**. A tabela completa está em [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md).
+
 | Faixa | Preço | Alcance | Conteúdo |
 |---|---|---|---|
-A | 50–500 | free chega | consumíveis, 1 chave, cosmético, booster curto |
-B | 500–3.000 | free dedicado chega em 1 item | caixa II, skin média, +1 limite |
-C | 3.000–20.000 | pagante | booster 3× longo, combustível infinito, máquinas especiais |
-D | 20.000–100.000 | whale | VIP, bundles de temporada |
+A | 150–500 | free chega | chaves rankup, boosters 3× 1h, torre de cacto, limpador, venda automática, explosivo 2×2 |
+B | 500–3.000 | free dedicado chega em 1 item | as caixas II, limite de armazém e de máquinas, explosivo 4×4 e 6×6, matadora Ancestral |
+C | 3.000–20.000 | pagante | caixa `caixas`, limite de spawner, explosivo 8×8, britadeira, robô mítico, matadora Rúnica e Abissal |
+D | 20.000+ | whale | caixa garnix (18.750), máquina de cash (31.250) |
 
-**Âncora que vale manter:** o `pacote-lendario` a 500 cash do `cash-shop/example.yml` = exatamente uma temporada de grind free. É um preço deliberado e bom.
+⚠️ **VIP, combustível infinito e matadora hit-kill não estão em faixa nenhuma** — os três viraram exclusivos do site, por decisão do dono. O teto do cash-shop é a Máquina de Cash a 31.250.
+
+**A âncora mudou de lugar.** O `pacote-lendario` a 500 cash do `example.yml` de fábrica não existe no catálogo real; a régua entre A e B é a **Caixa Tier II a 1.125**.
+
+### O câmbio com o site
+
+**1.000 cash = R$ 1,00.** O site cobra o preço base, o cash-shop cobra **+25%** em tudo que existe nos dois canais, e os pacotes de cash dão bônus de volume (+5% a +40%). A derivação está em [04-PARIDADE-SITE.md](04-PARIDADE-SITE.md).
 
 ### Vínculo Discord
 
