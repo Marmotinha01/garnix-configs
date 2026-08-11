@@ -16,17 +16,17 @@ update-ticks: 20
 title:
   interval: 2
   frames:
-  - '&a&lMVP &8► &a%events_alive%'
-  - '&f&lMVP &8► &a%events_alive%'
-  - '&2&lMVP &8► &a%events_alive%'
-  - '&2&lM&a&lVP &8► &a%events_alive%'
-  - '&2&lM&f&lVP &8► &a%events_alive%'
-  - '&2&lMV&a&lP &8► &a%events_alive%'
-  - '&2&lMV&f&lP &8► &a%events_alive%'
-  - '&f&lMVP &8► &a%events_alive%'
-  - '&2&lMVP &8► &a%events_alive%'
-  - '&a&lMVP &8► &a%events_alive%'
-  - '&2&lMVP &8► &a%events_alive%'
+  - '&a&lMVP'
+  - '&f&lMVP'
+  - '&2&lMVP'
+  - '&2&lM&a&lVP'
+  - '&2&lM&f&lVP'
+  - '&2&lMV&a&lP'
+  - '&2&lMV&f&lP'
+  - '&f&lMVP'
+  - '&2&lMVP'
+  - '&a&lMVP'
+  - '&2&lMVP'
 
 lines:
 - ''

@@ -16,19 +16,19 @@ update-ticks: 20
 title:
   interval: 2
   frames:
-  - '&f&lSUMO &8► &a%events_alive%'
-  - '&e&lSUMO &8► &a%events_alive%'
-  - '&b&lSUMO &8► &a%events_alive%'
-  - '&b&lS&f&lUMO &8► &a%events_alive%'
-  - '&b&lS&e&lUMO &8► &a%events_alive%'
-  - '&b&lSU&f&lMO &8► &a%events_alive%'
-  - '&b&lSU&e&lMO &8► &a%events_alive%'
-  - '&b&lSUM&f&lO &8► &a%events_alive%'
-  - '&b&lSUM&e&lO &8► &a%events_alive%'
-  - '&e&lSUMO &8► &a%events_alive%'
-  - '&b&lSUMO &8► &a%events_alive%'
-  - '&f&lSUMO &8► &a%events_alive%'
-  - '&b&lSUMO &8► &a%events_alive%'
+  - '&f&lSUMO'
+  - '&e&lSUMO'
+  - '&b&lSUMO'
+  - '&b&lS&f&lUMO'
+  - '&b&lS&e&lUMO'
+  - '&b&lSU&f&lMO'
+  - '&b&lSU&e&lMO'
+  - '&b&lSUM&f&lO'
+  - '&b&lSUM&e&lO'
+  - '&e&lSUMO'
+  - '&b&lSUMO'
+  - '&f&lSUMO'
+  - '&b&lSUMO'
 
 lines:
 - ''
