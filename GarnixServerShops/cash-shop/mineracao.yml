@@ -43,7 +43,7 @@ products:
   bomba-2x2:
     slot: 11
     amount: 1
-    price: 500
+    price: 150
     broadcast: true
     commands:
     - 'mina givebomb {player} 2x2 1'
@@ -59,7 +59,7 @@ products:
   bomba-4x4:
     slot: 12
     amount: 1
-    price: 1125
+    price: 250
     broadcast: true
     commands:
     - 'mina givebomb {player} 4x4 1'
@@ -75,7 +75,7 @@ products:
   bomba-6x6:
     slot: 13
     amount: 1
-    price: 2500
+    price: 500
     broadcast: true
     commands:
     - 'mina givebomb {player} 6x6 1'
@@ -91,7 +91,7 @@ products:
   bomba-8x8:
     slot: 14
     amount: 1
-    price: 5000
+    price: 750
     broadcast: true
     commands:
     - 'mina givebomb {player} 8x8 1'
@@ -107,7 +107,7 @@ products:
   britadeira:
     slot: 15
     amount: 1
-    price: 10000
+    price: 1000
     broadcast: true
     commands:
     - 'mina givedrill {player} 1'

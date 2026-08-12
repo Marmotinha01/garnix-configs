@@ -4,7 +4,7 @@
 # do dono. O tempo EMPILHA sem teto entre boosters de mesmo multiplicador,
 # entao comprar seis 1h vale exatamente seis horas — nada se perde.
 #
-# ⚠️ Precos com +25% desde 11/08/2026 (200 -> 250 e 250 -> 313). A regra vale
+# ⚠️ Precos com +25% desde 11/08/2026 (200 -> 500 e 500 -> 313). A regra vale
 # para TODO produto que existe nos dois canais: o site vende pelo preco base
 # (1.000 cash = R$ 1,00) e o cash-shop cobra o quarto a mais. Os boosters
 # entraram nela quando o "Pacote Booster" virou produto de site.
@@ -32,8 +32,8 @@ products:
   boost-mina:
     slot: 10
     amount: 1
-    price: 250
-    broadcast: true
+    price: 500
+    broadcast: false
     commands:
     - 'mina givebooster {player} coins 2 30m 1'
     item:
@@ -54,8 +54,8 @@ products:
   boost-fazenda:
     slot: 11
     amount: 1
-    price: 250
-    broadcast: true
+    price: 500
+    broadcast: false
     commands:
     - 'fazenda givebooster {player} coins 2 30m 1'
     item:
@@ -76,8 +76,8 @@ products:
   boost-pesca:
     slot: 12
     amount: 1
-    price: 250
-    broadcast: true
+    price: 500
+    broadcast: false
     commands:
     - 'pesca givebooster {player} corais 2 30m 1'
     item:
@@ -98,8 +98,8 @@ products:
   boost-spawner:
     slot: 14
     amount: 1
-    price: 313
-    broadcast: true
+    price: 1000
+    broadcast: false
     commands:
     - 'spawner givebooster {player} drops 2 30m 1'
     item:
@@ -120,8 +120,8 @@ products:
   boost-maquina:
     slot: 15
     amount: 1
-    price: 313
-    broadcast: true
+    price: 1000
+    broadcast: false
     commands:
     - 'maquina givebooster {player} 2 30m 1'
     item:
@@ -143,7 +143,7 @@ products:
     slot: 16
     amount: 1
     price: 313
-    broadcast: true
+    broadcast: false
     commands:
     - 'armazem givebooster {player} 2 30m 1'
     item:

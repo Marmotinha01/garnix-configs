@@ -41,8 +41,8 @@ products:
   matadora-ancestral:
     slot: 11
     amount: 1
-    price: 4000
-    broadcast: true
+    price: 1500
+    broadcast: false
     commands:
     - 'boss give sword {player} ancestral 1'
     item:
@@ -59,8 +59,8 @@ products:
   matadora-runica:
     slot: 13
     amount: 1
-    price: 10000
-    broadcast: true
+    price: 5000
+    broadcast: false
     commands:
     - 'boss give sword {player} runica 1'
     item:
@@ -77,8 +77,8 @@ products:
   matadora-abissal:
     slot: 15
     amount: 1
-    price: 20000
-    broadcast: true
+    price: 15000
+    broadcast: false
     commands:
     - 'boss give sword {player} abissal 1'
     item:

@@ -40,7 +40,7 @@ products:
   limpador-terreno:
     slot: 10
     amount: 1
-    price: 375
+    price: 1000
     broadcast: true
     commands:
     - 'clearplot give {player} 1'
@@ -58,7 +58,7 @@ products:
   torre-cacto-5:
     slot: 14
     amount: 1
-    price: 300
+    price: 1000
     broadcast: true
     commands:
     - 'cactustower give {player} 5 1'
@@ -71,7 +71,7 @@ products:
   torre-cacto-10:
     slot: 15
     amount: 1
-    price: 500
+    price: 1500
     broadcast: true
     commands:
     - 'cactustower give {player} 10 1'
@@ -84,7 +84,7 @@ products:
   torre-cacto-15:
     slot: 16
     amount: 1
-    price: 850
+    price: 2500
     broadcast: true
     commands:
     - 'cactustower give {player} 15 1'

@@ -45,7 +45,7 @@ products:
   caixa-mineracao:
     slot: 11
     amount: 1
-    price: 1125
+    price: 1500
     broadcast: true
     right-command: 'caixas ver mineracao-ii shop'
     commands:
@@ -60,7 +60,7 @@ products:
   caixa-farm:
     slot: 12
     amount: 1
-    price: 1125
+    price: 1500
     broadcast: true
     right-command: 'caixas ver farm-ii shop'
     commands:
@@ -75,7 +75,7 @@ products:
   caixa-pesca:
     slot: 13
     amount: 1
-    price: 1125
+    price: 1500
     broadcast: true
     right-command: 'caixas ver pesca-ii shop'
     commands:
@@ -90,7 +90,7 @@ products:
   caixa-skins:
     slot: 14
     amount: 1
-    price: 1750
+    price: 2000
     broadcast: true
     right-command: 'caixas ver skins-ii shop'
     commands:
@@ -105,7 +105,7 @@ products:
   caixa-bosses:
     slot: 15
     amount: 1
-    price: 2250
+    price: 2000
     broadcast: true
     right-command: 'caixas ver bosses-ii shop'
     commands:
@@ -121,7 +121,7 @@ products:
   caixa-boosters:
     slot: 21
     amount: 1
-    price: 1250
+    price: 2000
     broadcast: true
     right-command: 'caixas ver boosters shop'
     commands:
@@ -136,7 +136,7 @@ products:
   caixa-robos:
     slot: 22
     amount: 1
-    price: 1250
+    price: 2000
     broadcast: true
     right-command: 'caixas ver robos shop'
     commands:
@@ -151,7 +151,7 @@ products:
   caixa-caixas:
     slot: 23
     amount: 1
-    price: 3750
+    price: 2000
     broadcast: true
     right-command: 'caixas ver caixas shop'
     commands:
