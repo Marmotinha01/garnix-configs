@@ -37,6 +37,9 @@ command:
   resetenchants-success: '&aEncantamentos de &f{player}&a resetados.'
   settype-usage: '&cUse: /fazenda settype <jogador> <tipo>'
   settype-success: '&aTipo de fazenda de &f{player}&a definido para &f{type}&a.'
+  setlevel-usage: '&cUse: /fazenda setlevel <jogador> <nível>'
+  setlevel-range: '&cNível deve ser entre &f0&c e &f{max}&c.'
+  setlevel-success: '&aNível de fazenda de &f{player}&a definido para &f{level}&a.'
   addcrops-usage: '&cUse: /fazenda addcrops <jogador> <quantidade>'
   addcrops-success: '&aAdicionadas &f{amount}&a colheitas para &f{player}&a.'
   inspect-usage: '&cUse: /fazenda inspecionar <jogador>'
@@ -166,4 +169,3 @@ levelup:
   - ''
   - '  &6&lGG! &7Você chegou ao nível máximo &6&l{level}&7 de fazenda.'
   - ''
-
