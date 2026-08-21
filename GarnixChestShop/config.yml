@@ -1,5 +1,9 @@
-# Cooldown de interação com lojas (ms)
-interaction-cooldown: 1000
+debug: false
+
+# Cooldown entre negociações (ms) — armado apenas por uma compra/venda concluída.
+# Clicar na placa para abrir o menu não tem delay nenhum: quando tinha, era o próprio
+# clique de abrir que barrava a compra feita em seguida.
+transaction-cooldown: 1000
 
 # Cooldown de anúncio de loja (segundos)
 announce-cooldown-seconds: 1800

@@ -1,5 +1,5 @@
 title: Avaliando Loja - {owner}
-rows: 3
+rows: 4
 
 positive-icon:
   slot: 11
@@ -24,7 +24,7 @@ negative-icon:
   - '&cClique para avaliar.'
 
 back-icon:
-  slot: 22
+  slot: 31
   texture: '7437346d8bda78d525d19f540a95e4e79daeda795cbc5a13256236312cf'
   display: '&eVoltar'
   lore:
